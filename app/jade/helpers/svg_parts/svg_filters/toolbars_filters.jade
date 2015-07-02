@@ -1,0 +1,12 @@
+linearGradient#toolbar-grad(x1="0" y1="0" x2="0" y2="1")
+	stop(style="stop-color:#166584" offset="0%")
+	stop(style="stop-color:#2092bf" offset="100%")
+
+filter#shadow(filterUnits="userSpaceOnUse" x="0" y="0" width="200" height="100")
+	feGaussianBlur(in="SourceAlpha" stdDeviation="6" result="blur")
+	feOffset(in="blur" dx="0" dy="1" result="offsetBlr")
+	feFlood(flood-color="rgba(0,0,0,.3)")
+	feComposite(operator="in" in2="offsetBlr" result="colBlur")
+	feMerge
+		feMergeNode(in="colBlur")
+		feMergeNode(in="SourceGraphic")

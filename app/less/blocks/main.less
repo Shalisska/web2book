@@ -1,0 +1,50 @@
+.container--main {
+	margin-bottom: (100px*@zoom);
+	padding: 0;
+	background: @bg-color;
+	border-radius: (30px*@zoom);
+	box-shadow: (0px*@zoom) (10px*@zoom) (13px*@zoom) (0px*@zoom) rgba(35, 31, 32, .26);
+	
+	@media (max-width: 479px) {
+		width: 480px;
+	}
+}
+
+
+@import url('action.less');
+@import url('popular.less');
+@import url('features.less');
+@import url('workmap.less');
+@import url('services.less');
+@import url('equipment.less');
+@import url('clients.less');
+@import url('news.less');
+@import url('contacts.less');
+@import url('toolbar.less');
+@import url('production/production-item.less');
+
+.slide-hide {display: none;}
+
+.slide-show {
+	@media(min-width: 992px) {
+		display: block;
+		animation: show .9s;
+		animation-fill-mode: forwards;
+	}
+
+	&-sm {
+		@media (min-width: 768px) and (max-width: 991px) {
+			display: block;
+			animation: show .9s;
+			animation-fill-mode: forwards;
+		}
+	}
+
+	&-xs {
+		@media (max-width: 767px) {
+			display: block;
+			animation: show .9s;
+			animation-fill-mode: forwards;
+		}
+	}
+}

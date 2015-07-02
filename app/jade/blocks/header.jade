@@ -1,0 +1,54 @@
+header.header
+	.container-fluid.header-container
+		.row
+			.col-md-8.col-sm-9
+				.header-logo
+					a.header-logo__link(href='#')
+						img(src="../images/logo-promo.png", alt="e-order")
+					.header-logo__slogan: img(src='../images/sprite/header-press.png', alt='Prepress-Press-Postpress')
+			.col-md-8.col-sm-7
+				p.header-presentation.text-center Цифровая и офсетная печать любых тиражей в самые короткие сроки
+			.col-sm-8.header-calling
+				p.header-phone.visible-sm +7 495 
+					span.header-phone--grand 223 9200
+				.header-call
+					a.header-call__handset(href='tel:+74952239200')
+					span.header-call__text.visible-sm Звонок за наш счет
+					span.header-call__text.hidden-sm +7 495
+						span.header-call__text--grand 223 9200
+				
+
+	nav.header-menu
+		+nav01 ([{
+			name: 'Акции!',
+			href: '#action',
+			special: 1
+		}, {
+			name: 'Продукция',
+			href: '#popular',
+			special: 0
+		}, {
+			name: 'О нас',
+			href: '#features',
+			special: 0
+		}, {
+			name: 'Как мы работаем',
+			href: '#workmap',
+			special: 0
+		}, {
+			name: 'Сервисы',
+			href: '#services',
+			special: 0
+		}, {
+			name: 'Оборудование',
+			href: '#equipment',
+			special: 0
+		}, {
+			name: 'Новости',
+			href: '#news',
+			special: 0
+		}, {
+			name: 'Контакты',
+			href: '#contacts',
+			special: 0
+		}])

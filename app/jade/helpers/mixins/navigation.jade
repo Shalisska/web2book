@@ -1,0 +1,46 @@
+mixin nav(items)
+	ul.nav.nav-justified
+		each item, i in items
+			if item.special === 1
+				if i === pageID
+					li.nav-item.nav-item--special.nav-item--active
+						a.nav-item__name.nav-item__name--active=item.name
+				else
+					li.nav-item.nav-item--special
+						a.nav-item__name(href=item.href)=item.name
+			else
+				if i === pageID
+					li.nav-item.nav-item--active
+						a.nav-item__name.nav-item__name--active=item.name
+				else
+					li.nav-item
+						a.nav-item__name(href=item.href)=item.name
+						
+mixin navFooter(items)
+	ul.nav
+		each item in items
+			li.nav-item
+				a.nav-item__name(href=item.href)=item.name
+				
+				
+mixin nav01(items)
+	nav.header-menu
+		
+				
+		.collapse.navbar-collapse#header-menu
+			ul.nav.nav-justified(role='navigation')
+				each item, i in items
+					if item.special === 1
+						if i === pageID
+							li.nav-item.nav-item--special.nav-item--active
+								a.nav-item__name.nav-item__name--active=item.name
+						else
+							li.nav-item.nav-item--special
+								a.nav-item__name(href=item.href)=item.name
+					else
+						if i === pageID
+							li.nav-item.nav-item--active
+								a.nav-item__name.nav-item__name--active=item.name
+						else
+							li.nav-item
+								a.nav-item__name(href=item.href)=item.name

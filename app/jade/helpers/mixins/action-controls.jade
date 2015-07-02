@@ -1,0 +1,13 @@
+mixin actionControls(items)
+	ul.action-controls.nav.nav-tabs#action_item
+		each item, i in items
+			if i === 0
+				li.active
+					block actionControls
+						a.action-controls__item(href='#action_item-'+item.id)
+							span.action-controls__item--pict: img(src='../images/action/action-' + item.id+'.png', alt=item.name)
+							span.action-controls__item--name=item.name
+			
+			else
+				li
+					block actionControls

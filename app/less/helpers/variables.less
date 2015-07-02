@@ -1,0 +1,312 @@
+@zoom: 0.75;
+@z: @zoom;
+@zoom1200: 0.9;
+@zoom1050--nav: 0.8;
+@zoom992: 0.7;
+
+//main
+@font-family: 'MyriadPro', 'Arial', sans-serif;
+@font-family-light: 'MyriadPro-Light', 'Arial', sans-serif;
+@font-family-bold: 'MyriadPro-Bold', 'Arial', sans-serif;
+@font-family-cond: 'MyriadPro-Cond', 'Arial', sans-serif;
+
+//title
+@bg-color--top: #f0efed;
+@bg-color--bottom: #e2e1df;
+@bg-title: linear-gradient(@bg-color--top, @bg-color--bottom);
+@color-title: #8b8987;
+@font-size-title: (36px*@zoom);
+@border-title: 1px solid #d1d1d1;
+
+//block
+@bg-block: #f0efed;
+
+//-----header-----
+@bg-header--extreme: #424242;
+@bg-header--middle: #515151;
+@bg-header: linear-gradient(@bg-header--extreme, @bg-header--middle, @bg-header--extreme);
+
+
+//presentation
+@font-size__header-pres: (36px*@zoom);
+@font-size__header-pres_992: 22px;
+@font-size__header-pres_900: 20px;
+@line-height__header-pres: (30px*@zoom);
+@color__header-pres:#bfbfbf;
+
+//header-slogan
+@font-size__header-slogan: 15px;
+@line-height__header-slogan: (30px*@zoom);
+@color__header-slogan: #bfbfbf;
+
+//phone
+@font-size__header-phone: (60px*@zoom);
+@font-size__header-phone--grand: (65px*@zoom);
+@font-size__header-phone_1200: (@font-size__header-phone*@zoom1200);
+@font-size__header-phone_992: 30px;
+@font-size__header-phone_992n: 30px;
+@font-size__header-phone_1200--grand: (@font-size__header-phone--grand*@zoom1200);
+@font-size__header-phone_992--grand: 31px;
+
+@color__header-phone: #818181;
+@color__header-phone--grand: white;
+@bg__header-phone-extreme: #535353;
+@bg__header-phone-middle:#6e6e6e;
+@bg__header-phone: linear-gradient(@bg__header-phone-extreme, @bg__header-phone-middle, @bg__header-phone-extreme);
+
+//call
+@font-size__header-call: (30px*@zoom);
+@font-size__header-call_992: 18px;
+@font-size__header-call_900: 16px;
+@font-size__header-call_992n: 15px;
+@color__header-call: white;
+
+//menu
+@bg-menu--top: #444443;
+@bg-menu--bottom: #323231;
+@bg-menu: linear-gradient(@bg-menu--top, @bg-menu--bottom);
+
+@bg-menu--top-hover: lighten(#444443, 30%);
+@bg-menu--bottom-hover: lighten(#323231, 30%);
+@bg-menu-hover: linear-gradient(@bg-menu--top-hover, @bg-menu--bottom-hover);
+
+@font-size__header-menu: (27px*@zoom);
+@font-size__header-menu_992: 15px;
+@font-size__header-menu_992n: 13px;
+@line-height__header-menu: (105px*@zoom);
+@color__header-menu: white;
+@color__header-menu-special: #e91212;
+
+//---------main-------
+@bg-color: #f0efed;
+
+//order
+
+//item
+@bg__action-order-item: #f9f9f9;
+@border__action-order-item: 2px solid #e1e1e1;
+@border__action-img: @border__action-order-item;
+
+//title
+@font-size__action-order-title: 59px;
+@color__action-order-title: #8a8a8a;
+
+//title--small
+@font-size__action-order-title--small: @font-size__action-order-title;
+@color__action-order-title--small: #d50000;
+
+//description
+@font-size__action-order-description: 22px;
+@color__action-order-description: #8a8a8a;
+
+//price-old
+@font-size__action-order-price: 45px;
+@color__action-order-price: #050505;
+
+//price-new
+@font-size__action-order-price--new: 68px;
+@color__action-order-price--new: #d50000;
+
+//order-controls
+@bg__action-order-controls: rgba(230, 230, 230, 0.3);
+@bg__action-order-controls--hover: rgba(255, 255, 255, 0.5);
+@bg__action-order-controls--active: white;
+@boder__action-order-controls--active: 1px solid #ccc;
+
+//order-btn
+@font-size__action-order-btn--small: 22px;
+@color__action-order-btn--small: #aaaaaa;
+@font-size__action-order-btn: 82px;
+@color__action-order-btn: #d50000;
+@border__action-order-btn: 2px solid #e1e1e1;
+@bg__action-order-btn: #f9f9f9;
+
+//timer
+@font-size__action-timer: 67px;
+@color__action-timer: #8a8a8a;
+
+//controls
+@font-size__action-controls: 16px;
+@color__action-controls: #818181;
+@color__action-controls--active: #24526d;
+@border__action-controls: 2px solid #c9c7c6;
+@border__action-controls--active: #eeeae7;
+@bg__action-controls-grad-0: linear-gradient(to top, rgba(148, 148, 148, 0.5), rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(148, 148, 148, 0.5));
+
+@bg__action-controls-grad: linear-gradient(to top, rgba(175, 174, 173, .5), rgba(228, 227, 227, .5) 40%, rgba(175, 174, 173, .5));
+@color-1: ((rgb(148, 148, 148) + rgb(201, 199, 198)) / 2); //=rgb(175, 174, 173)
+@color-2: ((rgb(255, 255, 255) + rgb(201, 199, 198)) / 2); //=rgb(228, 227, 227)
+
+@bg__action-controls-grad--active: linear-gradient(to top, rgba(202, 202, 202, .5), rgba(255, 255, 255, .5) 40%, rgba(202, 202, 202, .5));
+@color-1: ((rgb(148, 148, 148) + rgb(255, 255, 255)) / 2); //=rgb(202, 202, 202)
+@color-2: ((rgb(255, 255, 255) + rgb(255, 255, 255)) / 2); //=rgb(255, 255, 255)
+
+@bg__action-controls-grad--active-border: linear-gradient(to top, rgba(193, 191, 190, .5), rgba(247, 245, 243, .1) 40%, rgba(193, 191, 190, .5));
+@color-1: ((rgb(148, 148, 148) + rgb(238, 234, 231)) / 2); //=rgb(193, 191, 190)
+@color-2: ((rgb(255, 255, 255) + rgb(238, 234, 231)) / 2); //=rgb(247, 245, 243)
+//rgba(148, 148, 148, 0.5)
+//rgba(255, 255, 255, 0.3)
+//rgb(201, 199, 198)
+
+//slider
+@font-size__action-slider: 68px;
+@font-size__action-slider--big: 137px;
+@color__action-slider: #8b8987;
+@color__action-slider--hover: @color__features-title--middle;
+@font-size__popular-item-text: 27px;
+@bg__popular-item-text: rgba(255, 255, 255, .8);
+
+//---------features--------
+@font-size__features: 18px;
+@font-size__features--922: 16px;
+@color__features-title--light: #2092bf;
+@color__features-title--middle: #1b82ab;
+@color__features-title--dark: #186b8c;
+@color__features-text: #acacac;
+@bg__features-pict-01: #1e7ea5;
+@bg__features-pict-02: #2092bf;
+@bg__features-pict: radial-gradient(circle, @bg__features-pict-02, @bg__features-pict-01);
+@border__features-pict: 2px solid #f9f9f9;
+
+
+//----------workmap------
+@color__workmap: #186b8c;
+@font-size__workmap: 25px;
+@bg__workmap-img: @bg__features-pict;
+@border__workmap-img: @border__features-pict;
+
+//------------services--------
+@font-size__services-title: 25px;
+@color__services-title: #8b8987;
+@font-size__services-text: (36px*@zoom);
+@color__services-text: #1a7599;
+@bg__services-text: #f8f7f6;
+
+//-----------equipment-------
+@font-size__equipment: 23px;
+@color__equipment: #8b8987;
+@border__equipment: @border__action-order-item;
+
+//------------news----------
+//menu
+@font-size__news-menu: 27px;
+@color__news-menu: #5e5e5d;
+@bg__news-menu: #f7f7f5;
+@bg__news-menu--title: rgba(255, 255, 255, .85);
+
+//controls
+@news__controls-color: #f0efed;
+@news__controls: 20px solid @news__controls-color;
+@news__controls--1199: 15px;
+
+//item
+@font-size__news-item--title: 54px;
+@color__menu-item--title: black;
+
+@font-size__news-item: 27px;
+@color__menu-item: #595959;
+@line-height__menu-item: 1;
+
+@font-size__news-item--link: 27px;
+@color__menu-item--link: #247eb2;
+
+//---------contacts---------
+//info
+@font-size__contacts-info: 22px;
+@color__contacts-info: #166382;
+
+//map
+//controls
+@font-size__contacts-map--controls: 30px;
+@color__contacts-map: black;
+
+@font-size__contacts-map_path--main: 23px;
+@font-size__contacts-map_path: 13px;
+
+//socials
+@color__contacts-grad-out: rgba(69, 69, 69, 0.5);
+@color__contacts-grad-in: rgba(237, 237, 237, .2);
+@color_contacts-grad: radial-gradient(@color__contacts-grad-in, @color__contacts-grad-out);
+
+
+
+//-----------footer----------
+@bg-footer: #2f2f2f;
+@border-color: #484848;
+
+
+@font-size__footer: (20px*@zoom);
+@font-size__footer--small: (17px*@zoom);
+
+@color__footer--title: white;
+@color__footer: #e4e1dc;
+
+//socials
+@font-size__footer-socials: 13px;
+@color__footer-socials: #8d8d8d;
+
+//copyright
+@color__footer-copyright: #8d8d8d;
+
+//signature
+@font-size__footer-signature: (12px*@zoom);
+@color__footer-signature: #a8a8a8;
+
+//----shadows----
+//---header----
+//presentation
+@text-shadow__header-presentation: -(1px*@zoom) (1px*@zoom) (2px*@zoom) rgba(0, 0, 0, .35);
+@text-shadow__nav-item: 0 (2px*@zoom) (4px*@zoom) rgba(35, 31, 32, .35);
+@text-shadow__header-call: -(1px*@zoom) (2px*@zoom) (4px*@zoom) rgba(35, 31, 32, .35);
+@text-shadow__services: @text-shadow__nav-item;
+@text-shadow__equipment: @text-shadow__nav-item;
+@text-shadow__footer: 0 (1px*@zoom) (0px*@zoom) rgba(35, 31, 32, .35);
+@text-shadow__popular-all: -4px 4px 6px white;
+
+
+
+@box-shadow__header-call:
+	inset (1px*@zoom) -(2px*@zoom) (2px*@zoom) (1px*@zoom) rgba(0, 0, 0, 0.3),
+	inset (0px*@zoom) (3px*@zoom) (2px*@zoom) (1px*@zoom) rgba(0, 0, 0, 0.3),
+	inset -(4px*@zoom) (4px*@zoom) (3px*@zoom) -(1px*@zoom) rgba(255, 255, 255, 0.3),
+	-(14px*@zoom) (9px*@zoom) (43px*@zoom) (0px*@zoom) rgba(0, 0, 0, 0.35);
+@box-shadow__nav-item:
+	inset (2px*@zoom) (0px*@zoom) 0 0 #383837,
+	inset -(1px*@zoom) (0px*@zoom) 0 0 #535352;
+
+//--main--
+//--action--
+@box-shadow__action: 0 1px 3px 0 rgba(35, 31, 32, .5);
+@box-shadow__action--active: inset (0px*@zoom) -(4px*@zoom) (10px*@zoom) (0px*@zoom) rgba(35, 31, 32, .5);
+@box-shadow__action--bottom: 0 7px 11px 0 rgba(0, 0, 0, .25);
+@box-shadow__action-order-controls: inset 0 0 7px 1px rgba(204, 204, 204, 0.7);
+
+@box-shadow__popular: (0px*@zoom) (10px*@zoom) (59px*@zoom) 0 rgba(35, 31, 32, .23);
+@box-shadow__popular-item: @box-shadow__action;
+
+@box-shadow__features-pict: @box-shadow__popular;
+
+@box-shadow__workmap-img: @box-shadow__popular;
+
+@box-shadow__services: (0px*@zoom) (0px*@zoom) (16px*@zoom) 0 rgba(0, 0, 1, .30);
+
+@box-shadow__equipment: (0px*@zoom) (1px*@zoom) (4px*@zoom) 0 rgba(35, 31, 32, .5);
+
+
+//---contacts----
+@box-shadow__contacts: inset 0 -1px 2px 0 rgba(255, 255, 255, .8), inset 0 1px 2px 0 rgba(0, 0, 0, .3);
+@box-shadow__contacts--active: inset 0 1px 2px 0 rgba(255, 255, 255, .8), inset 0 -1px 2px 0 rgba(0, 0, 0, .3);
+
+@box-shadow__contacts-map: (0px*@zoom) (3px*@zoom) (10px*@zoom) (0px*@zoom) rgba(0, 0, 0, .35);
+
+//----------footer-----------------
+@box-shadow__footer: (0px*@zoom) (0px*@zoom) (100px*@zoom) (0px*@zoom) rgba(109, 102, 106, 0.8);
+
+//--------------------forms-------------------
+@bg__form-input: #dddddd;
+@font-size__form: (20px*@zoom);
+@color__form-placeholder: #9e9b9b;
+@bg__form-btn: #ca2c20;
+@color__form-btn: white;
+@box-shadow__form-input: inset (4px*@zoom) (4px*@zoom) (10px*@zoom) (0px*@zoom) rgba(0, 0, 0, 0.4);
+@box-shadow__form-btn--hover: 0 0 (5px*@zoom) 0 rgba(255, 255, 255, 0.6);

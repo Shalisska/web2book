@@ -1,0 +1,25 @@
+include ../helpers/variables
+include ../helpers/mixins
+
+doctype html
+html.no-svg(lang="ru")
+	head
+		
+		include ../blocks/head
+		block scripts_upper
+
+	body
+		include ../helpers/svg
+		include ../blocks/toolbars/toolbars-top
+		include ../blocks/toolbars/toolbars-right
+		include ../blocks/header2
+
+		main
+			.container.container--main(class=specClass)
+				block content
+
+		.footer-wrapper
+			include ../blocks/footer
+
+	include ../blocks/scripts
+	block scripts

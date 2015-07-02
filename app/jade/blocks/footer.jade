@@ -1,0 +1,87 @@
+footer.footer
+	.container-fluid
+		.container.footer-container
+			.row.footer--main
+				.footer-menu.col-sm-3.col-xs-7
+					p.title-footer.footer-menu__title Меню
+					.block-footer.footer-menu__block
+						+navFooter ([{
+							name: 'Акции!',
+							href: '/'
+						}, {
+							name: 'Продукция',
+							href: '/11'
+						}, {
+							name: 'О нас',
+							href: '/11'
+						}, {
+							name: 'Сервисы',
+							href: '/11'
+						}, {
+							name: 'Оборудование',
+							href: '/11'
+						}, {
+							name: 'Новости',
+							href: '/11'
+						}, {
+							name: 'F.A.Q.',
+							href: '/11'
+						}])
+
+				.footer-contacts.col-sm-5.col-xs-11.col-sm-push-12
+					p.title-footer.footer-contacts__title Контакты
+					.block-footer.footer-contacts__block
+						p.footer-contacts__item Телефон: +7 (495) 223-9200
+						p.footer-contacts__item E-mail: sale@eorder.ru
+						p.footer-contacts__item.footer-contacts__item--skype
+							+svg('0 0 52 52', 'icon-skype')
+							|sale.eorder
+						p.footer-contacts__item Адрес: Москва, 2-й Котляковский переулок, д.18
+					a.footer-contacts__sub-text Открыть карту
+				
+				
+				.col-sm-4.col-xs-6.col-sm-push-12
+					.footer-code: img(src='../images/footer-code.jpg', alt='Штрихкод')
+				
+				
+				.col-sm-12.col-sm-pull-9.col-xs-24
+					.row
+						include footer-forms
+
+			.row.footer--second
+				.col-sm-8.col-xs-7.footer-logo-block
+					a.footer-logo(href='#')
+						//-img(src='../images/sprite/footer-logo-promo.png', alt='Eorder promo')
+						+picture({
+						name: 'Eorder promo',
+						adress: '../images/logo/logo-footer@',
+						ext: 'png'
+					}, {
+							main: {
+								width: '138',
+								img: ['138', '207', '276', '414']
+							}
+						})
+
+				.col-sm-8.col-xs-10
+					.footer-press
+						+svg('0 0 504 72', 'prepress-press')
+						//-img(src='../images/sprite/footer-press.png', alt='Prepress-Press-Postpress')
+
+				.col-sm-8.col-xs-7
+					p.footer-socials
+						span.footer-socials__text Мы в социальных сетях
+						a.footer-socials__links.footer-socials__links--fb(href="")
+							+svg('0 0 39 39', 'icon-fb--footer')
+						a.footer-socials__links.footer-socials__links--lkd(href="")
+							+svg('0 0 39 39', 'icon-lkd--footer')
+						a.footer-socials__links.footer-socials__links--vk(href="")
+							+svg('0 0 39 39', 'icon-vk--footer')
+
+			p.footer-copyright
+				| &#169; 2014 
+				span.footer-copyright--name ЗАО "Новые печатные технологии". 
+				| Все права защищены.
+	
+	
+p.footer-signature Не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса Российской Федерации. Информация на сайте актуальна на: 23-11-14 19:00
