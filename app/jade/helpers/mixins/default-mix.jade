@@ -5,9 +5,7 @@ mixin objCreate(keys, vals)
 			if i === j
 				-obj='{'+key+': '+val+'}'
 				-arr.push(obj)
-				
-				
-				
+
 mixin textRow(items)
 	each item, i in items
 		=item
@@ -20,26 +18,6 @@ mixin actionDescText(items)
 		-var part=item.name + ': ' + item.value
 		-arr.push(part)
 	+textRow(arr)
-
-//mixin picture1(info, items)
-	picture
-		each item, i in items
-			if (i>0)
-				-var res = []
-				each pict in item.img
-					-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
-				-var med = '(' + item.val + '-width: ' + item.width + 'px)'
-				-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
-				source(media=med srcset=resourse)
-		-var item = items[0]
-		-var res = []
-		each pict, j in item.img
-			if (j === 0)
-				-res.push(info.adress + pict + '.' + info.ext)
-			else
-				-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
-		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
-		img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
 
 mixin picture(info, items)
 	picture
