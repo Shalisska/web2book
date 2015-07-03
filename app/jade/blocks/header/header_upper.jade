@@ -1,0 +1,34 @@
+mixin menu_named(name, del, items)
+	nav(class=name)
+		ul
+			each item in items
+				li(class=name + '-item'): a(class=name + del + item.class_name href=item.href)=item.name
+
+.header--upper
+	.header-contacts
+		p.header-contacts__name Контактный телефон:
+		p.header-contacts__phone (495)
+			span.header-contacts__phone--grand 223-92-00
+
+	.header-logo
+		img(src="../images/logo.png", alt="web2book")
+
+	+menu_named('header-autorization', '__', [{
+							class_name: 'search',
+							href: '/',
+							name: ''
+							}, {
+							class_name: 'profile',
+							href: '/',
+							name: 'Личный кабинет'
+							}, {
+							class_name: 'registration',
+							href: '/',
+							name: 'Регистрация'
+							}])
+	.header-menu-bar
+		include header_menu
+	
+		.header-cart
+			
+	
