@@ -365,6 +365,12 @@ th {
     opacity: 1;
   }
 }
+@font-face {
+  font-family: 'AvantGarde';
+  src: url('../fonts/AvantGardeGothicC-Book.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   margin: 0;
@@ -375,12 +381,10 @@ html {
   min-height: 100%;
 }
 body {
-  margin-bottom: 450px;
+  background: url(../images/bg-main.jpg);
 }
 .footer-wrapper {
-  position: absolute;
   width: 100%;
-  bottom: 0;
 }
 .svg-container {
   display: none;
@@ -391,4 +395,49 @@ body {
   footer {
     overflow: visible;
   }
+}
+.header {
+  margin: 5px auto 0;
+  padding-top: 27px;
+  max-width: 1150px;
+  background: url(../images/header/header_bg@1150.png) no-repeat center top;
+}
+.header--upper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1020px;
+  background: #d8dde0;
+  border-radius: 10px;
+  border-top: 3px solid #aab2b4;
+  box-shadow: inset 0px 1px 0 0 #e8ebec;
+}
+.header--upper:before,
+.header--upper:after {
+  content: '';
+  position: absolute;
+  top: -26px;
+  width: 90px;
+  height: 88px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 90px 88px;
+}
+.header--upper:before {
+  left: 30px;
+  background-image: url(../images/header/hook--left@90.png);
+}
+.header--upper:after {
+  right: 30px;
+  background-image: url(../images/header/hook--right@90.png);
+}
+.header-contacts,
+.header-logo,
+.header-autorization {
+  float: left;
+  width: 33.33333333%;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
 }

@@ -1,24 +1,34 @@
 mixin slider--offers(slider_name, items)
 	each item, i in items
 		if i===0
-			input(type='radio' name=slider_name id=slider_name + '--slide' + (i + 1) checked)
+			input(type='radio' name=slider_name id=slider_name + item.id checked)
 		else
-			input(type='radio' name=slider_name id=slider_name + '--slide' + (i + 1))
+			input(type='radio' name=slider_name id=slider_name + item.id)
+	
+	.offers-title
+		p.offers-title__text Мы предлагаем:
+			div(class=slider_name + '__controls')
+				each item, i in items
+					label(for=slider_name +'__controls--' + item.id)=item.name
 	
 	div(class=slider_name + '__box')
 		div(class=slider_name + '__inner')
 			each item in items
-				div(class=slider_name + '__item' + ' ' + slider_name + '__' + item)
-					img(src='../images/header/header_slide.png', alt='slide1')
+				div(class=slider_name + '__item' + ' ' + slider_name + '__' + item.id)
+					img(src='../images/offers/offers-' + item.id + '_comm.png', alt=item.id)
 	
-	div(class=slider_name + '__controls')
-		div(class=slider_name + '__controls--arrows')
-			a(class=slider_name + '__controls--left' href='/')
-			a(class=slider_name + '__controls--right' href='/')
+
 		
-		div(class=slider_name + '__controls--buttons')
-			each item, i in items
-				label(for=slider_name + '--slide' + (i + 1))
+		
 
 .offers
-	+slider--offers()
+	+slider--offers('offers-slider', [{
+												id: 'services',
+												name: 'Наши услуги'
+												}, {
+												id: 'products',
+												name: 'Наша продукция'
+												}, {
+												id: 'skreplenie',
+												name: 'Типы скрепелния'
+												}])

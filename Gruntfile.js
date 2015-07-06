@@ -178,11 +178,6 @@ module.exports = function (grunt) {
 				files: {
 					'app/css/style.css' : ['app/less/common.less']
 				}
-			},
-			bootstrapLess: {
-				files: {
-					'app/css/bootstrap-style.css' : ['app/less-bootstrap/bootstrap.less']
-				}
 			}
 		},
 		//автопрефиксер
@@ -192,9 +187,6 @@ module.exports = function (grunt) {
 			},
 			style: {
 				src: 'app/css/style.css'
-			},
-			bootstr: {
-				src: 'app/css/bootstrap-style.css'
 			}
 		},
 		//комбинирует медиа-выражения
@@ -460,10 +452,6 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'cmq',
 		'csscomb'
-	]);
-	grunt.registerTask('bootstrapLess', [
-		'less:bootstrapLess',
-		'autoprefixer:bootstr'
 	]);
 	
 	grunt.registerTask('replacing', [

@@ -1,38 +1,38 @@
 mixin nav(name, items)
-	-var class_name = name + '-item'
+	-var class_name = name + '__item'
 	nav(class=name)
 		ul
 			each item, i in items
 				if i === pageID
 					-var lvl = 1
 					if item.next
-						li(class=name + '-item' + ' ' + name + '-item--active')
-							a(class=(class_name + '__name' + ' ' + class_name + '__name--active') href=item.href)=item.name
+						li(class=class_name + ' ' + class_name + '--active')
+							a(class=(class_name + '-name' + ' ' + class_name + '-name--active') href=item.href)=item.name
 								span.menu-arrow >
 							+nav_inner(name, lvl, item.next)
 					else
 						li(class=class_name)
-							a(class=(class_name + '__name') href=item.href)=item.name
+							a(class=(class_name + '-name') href=item.href)=item.name
 				else
 					-var lvl = 1
 					if item.next
 						li(class=class_name)
-							a(class=(class_name + '__name') href=item.href)=item.name
+							a(class=(class_name + '-name') href=item.href)=item.name
 								span.menu-arrow >
 							+nav_inner(name, lvl, item.next)
 					else
 						li(class=class_name)
-							a(class=(class_name + '__name') href=item.href)=item.name
+							a(class=(class_name + '-name') href=item.href)=item.name
 
 mixin nav_inner(name, lvl, items)
 	ul(class = name + '_inner--lvl' + lvl)
 		each item in items
 			if item.next
 				-lvl = lvl + 1
-				li(class=(name + '-item'))
-					a(class=(name + '-item__name') href=item.href)=item.name
+				li(class=(name + '__item'))
+					a(class=(name + '__item-name') href=item.href)=item.name
 						span.menu-arrow >
 					+nav_inner(name, lvl, item.next)
 			else
-				li(class=(name + '-item'))
-					a(class=(name + '-item__name') href=item.href)=item.name
+				li(class=(name + '__item'))
+					a(class=(name + '__item-name') href=item.href)=item.name

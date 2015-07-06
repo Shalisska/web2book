@@ -1,0 +1,30 @@
+mixin teasers(items)
+	each item in items
+		a(class=('teasers__item teasers__item--' + item.id) href=item.href)=item.text
+			span.teasers__item-sub=item.sub
+			if item.id == 'consultation'
+				span.teasers__item-sub.teasers__item-sub--online=item.sub_online
+
+.teasers
+	+teasers([{
+					id: 'books',
+					href: '/',
+					text: 'Книги по требованию',
+					sub: 'От покупателя'
+				}, {
+					id: 'print',
+					href: '/',
+					text: 'Печать по требованию',
+					sub: '«Быстрая» печать'
+				}, {
+					id: 'questions',
+					href: '/',
+					text: 'Вопросы и ответы',
+					sub: 'Задайте вопрос'
+				}, {
+					id: 'consultation',
+					href: '/',
+					text: 'Online консультант',
+					sub: 'Не в сети',
+					sub_online: 'В сети'
+				}])

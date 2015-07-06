@@ -1,0 +1,47 @@
+.header {
+	margin: 5px auto 0;
+	padding-top: 27px;
+	max-width: 1150px;
+	background: url(../images/header/header_bg@1150.png) no-repeat center top;
+	
+	&--upper {
+		position: relative;
+		margin: 0 auto;
+		max-width: 1020px;
+		background: @bg__header;
+		border-radius: 10px;
+		border-top: 3px solid #aab2b4;
+		box-shadow: inset 0px 1px 0 0 #e8ebec;
+		
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top: -26px;
+			width: 90px;
+			height: 88px;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: 90px 88px;
+		}
+		
+		&:before {
+			left: 30px;
+			background-image: url(../images/header/hook--left@90.png);
+		}
+		
+		&:after {
+			right: 30px;
+			background-image: url(../images/header/hook--right@90.png);
+		}
+	}
+	
+	&-contacts,
+	&-logo,
+	&-autorization {
+		float: left;
+		width: (100% / 3);
+	}
+	
+
+}
+

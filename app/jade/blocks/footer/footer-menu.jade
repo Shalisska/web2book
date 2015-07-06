@@ -1,0 +1,113 @@
+mixin nav-footer(name, items)
+	-var class_name = name + '__item'
+	-var spec_class
+	nav(class=name)
+		ul
+			each item, i in items
+				if item.name == 'Личный кабинет'
+					-spec_class = class_name + '--profile'
+				else if item.name == 'На главную'
+					-spec_class = class_name + '--home'
+				else
+					-spec_class = ''
+				
+				li.footer__title(class=class_name + ' ' + spec_class)
+					a(class=(class_name + '-name') href=item.href)=item.name
+					if item.next
+						+nav_inner(name, item.next)
+
+mixin nav_inner(name, items)
+	ul(class = name + '_sub')
+		each item in items
+			li(class=(name + '__item'))
+				if item.name == 'Корзина'
+					a(class=(name + '__item-name') href=item.href)=item.name
+						| (
+						span(class=name + '__cart') 0
+						|)
+				else
+					a(class=(name + '__item-name') href=item.href)=item.name
+
+
+
++nav-footer('footer-menu', [{
+	name: 'Личный кабинет',
+	href: '/',
+	next: [{
+			name: 'Проекты',
+			href: '/'
+		}, {
+			name: 'Финансы',
+			href: '/'
+		}, {
+			name: 'Документы',
+			href: '/'
+		}, {
+			name: 'Аккаунт',
+			href: '/'
+		}, {
+			name: 'Корзина',
+			href: '/'
+		}]
+	}, {
+	name: 'На главную',
+	href: '/',
+	next: [{
+			name: 'О проекте',
+			href: '/'
+		}, {
+			name: 'Форум',
+			href: '/'
+		}, {
+			name: 'Как нас найти',
+			href: '/'
+		}, {
+			name: 'Написать нам',
+			href: '/'
+		}, {
+			name: 'Карта сайта',
+			href: '/'
+		}]
+	}, {
+	name: 'Онлайн издательство',
+	href: '/',
+	next: [{
+			name: 'Издать книгу',
+			href: '/'
+		}, {
+			name: 'Онлайн полиграфия',
+			href: '/'
+		}, {
+			name: 'Архив изданий',
+			href: '/'
+		}]
+	}, {
+	name: 'Оперативная печать',
+	href: '/',
+	next: [{
+			name: 'Продукция для записей',
+			href: '/'
+		}, {
+			name: 'Многолистовая продукция',
+			href: '/'
+		}, {
+			name: 'Корпоративная продукция',
+			href: '/'
+		}]
+	}, {
+	name: 'Калькулятор стоимости',
+	href: '/'
+	}, {
+	name: 'Полезно знать',
+	href: '/',
+	next: [{
+			name: 'Вопросы и ответы',
+			href: '/'
+		}, {
+			name: 'Энциклопедия',
+			href: '/'
+		}, {
+			name: 'Новости',
+			href: '/'
+		}]
+	}])

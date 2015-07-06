@@ -4,7 +4,6 @@
     <title>web2book</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap-style.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <script src="../scripts/libs/modernizr.custom.05259.js"></script>
     <script src="../scripts/libs/jquery-1.11.3.min.js"></script>
@@ -16,59 +15,61 @@
     </svg>
     <header class="header">
       <div class="header--upper">
-        <div class="header-contacts">
-          <p class="header-contacts__name">Контактный телефон:</p>
-          <p class="header-contacts__phone">(495)<span class="header-contacts__phone--grand">223-92-00</span></p>
+        <div class="header-row clearfix">
+          <div class="header-contacts">
+            <p class="header-contacts__name">Контактный телефон:</p>
+            <p class="header-contacts__phone">(495)<span class="header-contacts__phone--grand">223-92-00</span></p>
+          </div>
+          <div class="header-logo"><img src="../images/logo.png" alt="web2book"></div>
+                <nav class="header-autorization">
+                  <ul>
+                    <li class="header-autorization-item"><a href="/" class="header-autorization__search"></a></li>
+                    <li class="header-autorization-item"><a href="/" class="header-autorization__profile">Личный кабинет</a></li>
+                    <li class="header-autorization-item"><a href="/" class="header-autorization__registration">Регистрация</a></li>
+                  </ul>
+                </nav>
         </div>
-        <div class="header-logo"><img src="../images/logo.png" alt="web2book"></div>
-              <nav class="header-autorization">
-                <ul>
-                  <li class="header-autorization-item"><a href="/" class="header-autorization__search"></a></li>
-                  <li class="header-autorization-item"><a href="/" class="header-autorization__profile">Личный кабинет</a></li>
-                  <li class="header-autorization-item"><a href="/" class="header-autorization__registration">Регистрация</a></li>
-                </ul>
-              </nav>
         <div class="header-menu-bar">
           <nav class="header-menu">
             <ul>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">Каталог продукции</a></li>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">Онлайн издательство</a></li>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">Оперативная печать<span class="menu-arrow">></span></a>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">Каталог продукции</a></li>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">Онлайн издательство</a></li>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">Оперативная печать<span class="menu-arrow">></span></a>
                 <ul class="header-menu_inner--lvl1">
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Книга малыми тиражами</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Печать брошюр</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Корпоративная продукция<span class="menu-arrow">></span></a>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Корпоративная продукция<span class="menu-arrow">></span></a>
                     <ul class="header-menu_inner--lvl2">
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Фирменные бланки</a></li>
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Конверты</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Конверты</a></li>
                     </ul>
                   </li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Продукция для записей</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Многолистовая продукция</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
                 </ul>
               </li>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">Калькулятор стоимости</a></li>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">Полезно знать</a></li>
-              <li class="header-menu-item"><a href="/" class="header-menu-item__name">...<span class="menu-arrow">></span></a>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">Калькулятор стоимости</a></li>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">Полезно знать</a></li>
+              <li class="header-menu__item"><a href="/" class="header-menu__item-name">...<span class="menu-arrow">></span></a>
                 <ul class="header-menu_inner--lvl1">
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Контакты</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Печать брошюр</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Оперативная печать<span class="menu-arrow">></span></a>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Контакты</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Оперативная печать<span class="menu-arrow">></span></a>
                     <ul class="header-menu_inner--lvl2">
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Книга малыми тиражами</a></li>
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Печать брошюр</a></li>
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Корпоративная продукция<span class="menu-arrow">></span></a>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Корпоративная продукция<span class="menu-arrow">></span></a>
                         <ul class="header-menu_inner--lvl3">
-                          <li class="header-menu-item"><a href="/" class="header-menu-item__name">Фирменные бланки</a></li>
-                          <li class="header-menu-item"><a href="/" class="header-menu-item__name">Конверты</a></li>
+                          <li class="header-menu__item"><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
+                          <li class="header-menu__item"><a href="/" class="header-menu__item-name">Конверты</a></li>
                         </ul>
                       </li>
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Продукция для записей</a></li>
-                      <li class="header-menu-item"><a href="/" class="header-menu-item__name">Многолистовая продукция</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
+                      <li class="header-menu__item"><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
                     </ul>
                   </li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">О компании</a></li>
-                  <li class="header-menu-item"><a href="/" class="header-menu-item__name">Вакансии</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">О компании</a></li>
+                  <li class="header-menu__item"><a href="/" class="header-menu__item-name">Вакансии</a></li>
                 </ul>
               </li>
             </ul>
@@ -105,10 +106,177 @@
     </header>
     <main>
       <div class="container container--main">
-        <div class="offers"></div>
+        <div class="offers">
+                  <input type="radio" name="offers-slider" id="offers-sliderservices" checked>
+                  <input type="radio" name="offers-slider" id="offers-sliderproducts">
+                  <input type="radio" name="offers-slider" id="offers-sliderskreplenie">
+                  <div class="offers-title">
+                    <p class="offers-title__text">Мы предлагаем:
+                      <div class="offers-slider__controls">
+                        <label for="offers-slider__controls--services">Наши услуги</label>
+                        <label for="offers-slider__controls--products">Наша продукция</label>
+                        <label for="offers-slider__controls--skreplenie">Типы скрепелния</label>
+                      </div>
+                    </p>
+                  </div>
+                  <div class="offers-slider__box">
+                    <div class="offers-slider__inner">
+                      <div class="offers-slider__item offers-slider__services"><img src="../images/offers/offers-services_comm.png" alt="services"></div>
+                      <div class="offers-slider__item offers-slider__products"><img src="../images/offers/offers-products_comm.png" alt="products"></div>
+                      <div class="offers-slider__item offers-slider__skreplenie"><img src="../images/offers/offers-skreplenie_comm.png" alt="skreplenie"></div>
+                    </div>
+                  </div>
+        </div>
+        <div class="news">
+                  <div class="news-header">
+                    <div class="news-header__date"><span class="news-header__date--day">09</span><span class="news-header__date--month">сен</span></div>
+                    <h3 class="news-header__title">Офис компании Дениса Олейникова Prostoprint.com захватил УБОП</h3>
+                  </div>
+                  <div class="news-content">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</div>
+                  <div class="news-header">
+                    <div class="news-header__date"><span class="news-header__date--day">30</span><span class="news-header__date--month">авг</span></div>
+                    <h3 class="news-header__title">Первые в мире книги со спецэффектами</h3>
+                  </div>
+                  <div class="news-content">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</div>
+                  <div class="news-header">
+                    <div class="news-header__date"><span class="news-header__date--day">27</span><span class="news-header__date--month">авг</span></div>
+                    <h3 class="news-header__title">Женщины предпочитают ридеры, а мужчины больше любят планшеты</h3>
+                  </div>
+                  <div class="news-content">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</div><a href="/">Все новости</a>
+        </div>
+        <div class="main-content">
+          <div class="formates"><img src="../images/templates_comm.png" alt="formates"></div>
+          <div class="descriptions">
+                      <div class="descriptions__block">
+                        <h2 class="descriptions__title">Печать книг малым тиражом</h2>
+                        <p class="descriptions__text">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной малотиражной печати издать книгу сегодня по бюджету любому начинающему автору. Компания «Новые Печатные Технологии» с удовольствием готова посодействовать начинающим писателям, поэтам и авторам научных работ, если им необходимо напечатать книгу малым тиражом.</p>
+                        <p class="descriptions__text">Такая услуга может быть полезной в нескольких случаях. Печать книг малыми тиражами актуальна для молодых авторов в качестве «пробы пера». Для них это возможность увидеть свое произведение глазами читателя, облачить его в осязаемую форму. Авторам небольших сборников малотиражная полиграфия позволяет издавать подарочные издания в небольшом количестве экземпляров. Типография печатает книги малым тиражом, если речь идет об издании научно-практической литературы.</p>
+                      </div>
+                      <div class="descriptions__block">
+                        <h2 class="descriptions__title">Оперативная малотиражная полиграфия</h2>
+                        <p class="descriptions__text">Для нашей типографии малые тиражи – это особая область работы. Помимо печати книг типография предлагает оперативную малотиражную полиграфическую продукцию для нужд бизнеса. Благодаря работе с цифровым печатным оборудованием премиум-класса выполнение заказа возможно в самые кратчайшие сроки. Ассортимент малостраничной полиграфии для бизнеса включает визитные карточки, карманные и перекидные календари, брошюры и рекламные буклеты, флаеры для маркетинговых акций, POS-материалы, полиграфические бизнес-сувениры и любую печатную продукцию для фирменного стиля вашей компании.</p>
+                        <p class="descriptions__text">Наша типография выполнит заказ любой сложности, не экономя на качестве. Мы сделаем все, чтобы ваша задумка получила яркое воплощение!</p>
+                      </div>
+          </div>
+        </div>
+        <div class="teasers"><a href="/" class="teasers__item teasers__item--books">Книги по требованию<span class="teasers__item-sub">От покупателя</span></a><a href="/" class="teasers__item teasers__item--print">Печать по требованию<span class="teasers__item-sub">«Быстрая» печать</span></a><a href="/" class="teasers__item teasers__item--questions">Вопросы и ответы<span class="teasers__item-sub">Задайте вопрос</span></a><a href="/" class="teasers__item teasers__item--consultation">Online консультант<span class="teasers__item-sub">Не в сети</span><span class="teasers__item-sub teasers__item-sub--online">В сети</span></a>
+        </div>
       </div>
     </main>
-    <div class="footer-wrapper"></div>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <div class="footer-parts">
+                    <nav class="footer-menu">
+                      <ul>
+                        <li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name">Личный кабинет</a>
+                                    <ul class="footer-menu_sub">
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
+                                      </li>
+                                    </ul>
+                        </li>
+                        <li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name">На главную</a>
+                                    <ul class="footer-menu_sub">
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
+                                      </li>
+                                    </ul>
+                        </li>
+                        <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name">Онлайн издательство</a>
+                                    <ul class="footer-menu_sub">
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
+                                      </li>
+                                    </ul>
+                        </li>
+                        <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name">Оперативная печать</a>
+                                    <ul class="footer-menu_sub">
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
+                                      </li>
+                                    </ul>
+                        </li>
+                        <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name">Калькулятор стоимости</a>
+                        </li>
+                        <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name">Полезно знать</a>
+                                    <ul class="footer-menu_sub">
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
+                                      </li>
+                                      <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
+                                      </li>
+                                    </ul>
+                        </li>
+                      </ul>
+                    </nav>
+        </div>
+        <div class="footer-parts">
+          <div class="footer-phone">
+            <div class="footer__title">Телефон</div>
+            <p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span></p>
+          </div>
+          <div class="footer-pay">
+            <div class="footer__title">Принимаем к оплате</div>
+            <div class="footer__block"><a href="/" class="footer-pay__item footer-pay__item--maestro">
+                          <picture><img src="../images/footer/pay/maestro/maestro@64.png" width="64" srcset="../images/footer/pay/maestro/maestro@96.png 96w, ../images/footer/pay/maestro/maestro@128.png 128w, ../images/footer/pay/maestro/maestro@192.png 192w" alt="maestro"/>
+                          </picture></a><a href="/" class="footer-pay__item footer-pay__item--mastercard">
+                          <picture><img src="../images/footer/pay/mastercard/mastercard@64.png" width="64" srcset="../images/footer/pay/mastercard/mastercard@96.png 96w, ../images/footer/pay/mastercard/mastercard@128.png 128w, ../images/footer/pay/mastercard/mastercard@192.png 192w" alt="mastercard"/>
+                          </picture></a><a href="/" class="footer-pay__item footer-pay__item--visa">
+                          <picture><img src="../images/footer/pay/visa/visa@64.png" width="64" srcset="../images/footer/pay/visa/visa@96.png 96w, ../images/footer/pay/visa/visa@128.png 128w, ../images/footer/pay/visa/visa@192.png 192w" alt="visa"/>
+                          </picture></a><a href="/" class="footer-pay__item footer-pay__item--paypal">
+                          <picture><img src="../images/footer/pay/paypal/paypal@64.png" width="64" srcset="../images/footer/pay/paypal/paypal@96.png 96w, ../images/footer/pay/paypal/paypal@128.png 128w, ../images/footer/pay/paypal/paypal@192.png 192w" alt="paypal"/>
+                          </picture></a><a href="/" class="footer-pay__item footer-pay__item--webmoney">
+                          <picture><img src="../images/footer/pay/webmoney/webmoney@64.png" width="64" srcset="../images/footer/pay/webmoney/webmoney@96.png 96w, ../images/footer/pay/webmoney/webmoney@128.png 128w, ../images/footer/pay/webmoney/webmoney@192.png 192w" alt="webmoney"/>
+                          </picture></a><a href="/" class="footer-pay__item footer-pay__item--qiwi">
+                          <picture><img src="../images/footer/pay/qiwi/qiwi@64.png" width="64" srcset="../images/footer/pay/qiwi/qiwi@96.png 96w, ../images/footer/pay/qiwi/qiwi@128.png 128w, ../images/footer/pay/qiwi/qiwi@192.png 192w" alt="qiwi"/>
+                          </picture></a>
+            </div>
+          </div>
+          <div class="footer-contacts">
+            <div class="footer__title">Контакты</div>
+            <div class="footer__block">
+                        <p class="footer-contacts__item footer-contacts__item--company">ЗАО “Новые Печатные Технологии”
+                        </p>
+                        <p class="footer-contacts__item footer-contacts__item--adress">г. Москва 2-й Котляковский переулок, д.18
+                        </p>
+                        <p class="footer-contacts__item footer-contacts__item--phone">(495) 223-92-00
+                        </p>
+                        <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru">info@web2book.ru</a><a href="mailto: sale@web2book.ru">sale@web2book.ru</a>
+                        </p>
+            </div>
+          </div>
+          <div class="footer-qr">
+            <div class="footer__title">QR-код</div>
+            <div class="footer__block">
+              <picture><img src="../images/footer/qr-code/qr-code@88.jpg" width="88" srcset="../images/footer/qr-code/qr-code@132.jpg 132w, ../images/footer/qr-code/qr-code@176.jpg 176w, ../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
+      </footer>
+    </div>
   </body>
   <script src="../scripts/libs/bootstrap.js"></script>
   <script src="../scripts/common.js"></script>
