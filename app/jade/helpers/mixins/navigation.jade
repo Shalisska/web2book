@@ -1,38 +1,37 @@
 mixin nav(name, items)
+	-var spec_class_active
+	-var spec_class_next
 	-var class_name = name + '__item'
 	nav(class=name)
-		ul
+		ul.clearfix
 			each item, i in items
 				if i === pageID
-					-var lvl = 1
-					if item.next
-						li(class=class_name + ' ' + class_name + '--active')
-							a(class=(class_name + '-name' + ' ' + class_name + '-name--active') href=item.href)=item.name
-								span.menu-arrow >
-							+nav_inner(name, lvl, item.next)
-					else
-						li(class=class_name)
-							a(class=(class_name + '-name') href=item.href)=item.name
+					-spec_class_active = class_name + '--active'
 				else
-					-var lvl = 1
-					if item.next
-						li(class=class_name)
-							a(class=(class_name + '-name') href=item.href)=item.name
-								span.menu-arrow >
-							+nav_inner(name, lvl, item.next)
-					else
-						li(class=class_name)
-							a(class=(class_name + '-name') href=item.href)=item.name
+					-spec_class_active = ''
+				
+				-var lvl = 1
+				if item.next
+					-spec_class_next = class_name + '-name--next'
+					li(class=class_name + ' ' + spec_class_active)
+						a(class=(class_name + '-name' + ' ' + spec_class_next) href=item.href)!=item.name
+						+nav_inner(name, lvl, item.next)
+				else
+					-spec_class_next = ''
+					li(class=class_name + ' ' + spec_class_active)
+						a(class=(class_name + '-name' + ' ' + spec_class_next) href=item.href)!=item.name
 
 mixin nav_inner(name, lvl, items)
-	ul(class = name + '_inner--lvl' + lvl)
+	-var spec_class_next
+	ul(class = name + '_inner' + ' ' + name + '_inner--lvl' + lvl)
 		each item in items
 			if item.next
+				-spec_class_next = name + '__item-name--next'
 				-lvl = lvl + 1
 				li(class=(name + '__item'))
-					a(class=(name + '__item-name') href=item.href)=item.name
-						span.menu-arrow >
+					a(class=(name + '__item-name' + ' ' + spec_class_next) href=item.href)=item.name
 					+nav_inner(name, lvl, item.next)
 			else
+				-spec_class_next = ''
 				li(class=(name + '__item'))
-					a(class=(name + '__item-name') href=item.href)=item.name
+					a(class=(name + '__item-name' + ' ' + spec_class_next) href=item.href)=item.name

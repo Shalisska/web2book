@@ -12,6 +12,8 @@ html {
 body {
 	//margin-bottom: 450px;
 	background: url(../images/bg-main.jpg);
+	font-family: @font;
+	font-size: @size;
 }
 
 .footer-wrapper {
@@ -27,7 +29,9 @@ body {
 header,
 main,
 footer {
-	@media (max-width: 479px) {
-		overflow: visible;
-	}
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
 }

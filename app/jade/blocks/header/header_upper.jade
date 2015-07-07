@@ -1,6 +1,6 @@
 mixin menu_named(name, del, items)
 	nav(class=name)
-		ul
+		ul.clearfix
 			each item in items
 				li(class=name + '-item'): a(class=name + del + item.class_name href=item.href)=item.name
 
@@ -8,11 +8,11 @@ mixin menu_named(name, del, items)
 	.header-row.clearfix
 		.header-contacts
 			p.header-contacts__name Контактный телефон:
-			p.header-contacts__phone (495)
+			p.header-contacts__phone (495) 
 				span.header-contacts__phone--grand 223-92-00
 
 		.header-logo
-			img(src="../images/logo.png", alt="web2book")
+			a(href='#'): img(src="../images/logo.png", alt="web2book")
 
 		+menu_named('header-autorization', '__', [{
 								class_name: 'search',
