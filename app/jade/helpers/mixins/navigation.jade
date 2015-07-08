@@ -3,7 +3,7 @@ mixin nav(name, items)
 	-var spec_class_next
 	-var class_name = name + '__item'
 	nav(class=name)
-		ul.clearfix
+		ul.clearfix(class=name + '--lvl0')
 			each item, i in items
 				if i === pageID
 					-spec_class_active = class_name + '--active'
@@ -14,16 +14,16 @@ mixin nav(name, items)
 				if item.next
 					-spec_class_next = class_name + '--next'
 					li(class=class_name + ' ' + spec_class_active + ' ' + spec_class_next)
-						a(class=(class_name + '-name') href=item.href)!=item.name
+						a(class=(class_name + '-name') href=item.href): span!=item.name
 						+nav_inner(name, lvl, item.next)
 				else
 					-spec_class_next = ''
 					li(class=class_name + ' ' + spec_class_active + ' ' + spec_class_next)
-						a(class=(class_name + '-name') href=item.href)!=item.name
+						a(class=(class_name + '-name') href=item.href): span!=item.name
 
 mixin nav_inner(name, lvl, items)
 	-var spec_class_next
-	ul(class = name + '_inner' + ' ' + name + '_inner--lvl' + lvl)
+	ul(class = name + '_inner' + ' ' + name + '--lvl' + lvl)
 		each item in items
 			if item.next
 				-spec_class_next = name + '__item--next'
