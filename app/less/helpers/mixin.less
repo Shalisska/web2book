@@ -29,7 +29,10 @@
 	@translate_slide4: -60%;
 	@translate_slide5: -80%;
 
-	&__input#header-slider--@{item}:checked~&__controls label[for='header-slider--@{item}'] {background-image: url(../images/header/header-slider_controls--btn@30--active.png);}
+	&__input#header-slider--@{item}:checked~&__controls label[for='header-slider--@{item}'] {
+		background-image: url(../images/header/header-slider_controls--btn/header-slider_controls--btn--active@46.png);
+		background-position: center 2px;
+	}
 	
 	&__input#header-slider--@{item}:checked~&__box &__inner{
 		transform: translate(~"@{translate_@{item}}", 0);

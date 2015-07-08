@@ -499,22 +499,27 @@
 					width: 42px;
 					height: 99px;
 					background-size: 42px 99px;
+					
+					&:hover {
+						width: 52px;
+						background-size: 52px 99px;
+					}
 				}
 				
 				&-prev {
 					float: left;
-					background-image: url(../images/header/header-slider_controls--left.png);
+					background-image: url(../images/header/header-slider_controls--prev/header-slider_controls--prev@42.png);
 					
 					&:hover {
-						background-image: url(../images/header/header-slider_controls--left--hover.png);
+						background-image: url(../images/header/header-slider_controls--prev/header-slider_controls--prev--hover@52.png);
 					}
 				}
 				&-next {
 					float: right;
-					background-image: url(../images/header/header-slider_controls--right.png);
+					background-image: url(../images/header/header-slider_controls--next/header-slider_controls--next@42.png);
 					
 					&:hover {
-						background-image: url(../images/header/header-slider_controls--right--hover.png);
+						background-image: url(../images/header/header-slider_controls--next/header-slider_controls--next--hover@52.png);
 					}
 				}
 			}
@@ -525,10 +530,17 @@
 				
 				label {
 					display: inline-block;
-					width: 30px;
-					height: 18px;
-					background-size: 30px 18px;
-					background-image: url(../images/header/header-slider_controls--btn@30.png);
+					width: 32px;
+					height: 35px;
+					background-size: 46px 35px;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-image: url(../images/header/header-slider_controls--btn/header-slider_controls--btn@46.png);
+					cursor: pointer;
+					
+					&:hover {
+						background-image: url(../images/header/header-slider_controls--btn/header-slider_controls--btn--hover@46.png);
+					}
 				}
 			}
 		}
