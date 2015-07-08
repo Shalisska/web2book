@@ -12,26 +12,26 @@ mixin nav(name, items)
 				
 				-var lvl = 1
 				if item.next
-					-spec_class_next = class_name + '-name--next'
-					li(class=class_name + ' ' + spec_class_active)
-						a(class=(class_name + '-name' + ' ' + spec_class_next) href=item.href)!=item.name
+					-spec_class_next = class_name + '--next'
+					li(class=class_name + ' ' + spec_class_active + ' ' + spec_class_next)
+						a(class=(class_name + '-name') href=item.href)!=item.name
 						+nav_inner(name, lvl, item.next)
 				else
 					-spec_class_next = ''
-					li(class=class_name + ' ' + spec_class_active)
-						a(class=(class_name + '-name' + ' ' + spec_class_next) href=item.href)!=item.name
+					li(class=class_name + ' ' + spec_class_active + ' ' + spec_class_next)
+						a(class=(class_name + '-name') href=item.href)!=item.name
 
 mixin nav_inner(name, lvl, items)
 	-var spec_class_next
 	ul(class = name + '_inner' + ' ' + name + '_inner--lvl' + lvl)
 		each item in items
 			if item.next
-				-spec_class_next = name + '__item-name--next'
+				-spec_class_next = name + '__item--next'
 				-lvl = lvl + 1
-				li(class=(name + '__item'))
-					a(class=(name + '__item-name' + ' ' + spec_class_next) href=item.href)=item.name
+				li(class=name + '__item' + ' ' + spec_class_next)
+					a(class=(name + '__item-name') href=item.href)=item.name
 					+nav_inner(name, lvl, item.next)
 			else
 				-spec_class_next = ''
-				li(class=(name + '__item'))
-					a(class=(name + '__item-name' + ' ' + spec_class_next) href=item.href)=item.name
+				li(class=name + '__item' + ' ' + spec_class_next)
+					a(class=(name + '__item-name') href=item.href)=item.name
