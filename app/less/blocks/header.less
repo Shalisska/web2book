@@ -1,18 +1,55 @@
+.container--header {
+	width: 88.69%;
+	margin: 0 auto;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 3%;
+		left: 6%;
+		right: 6%;
+		bottom: 2%;
+		box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
+		z-index: -1;
+	}
+}
+
 .header {
+	position: relative;
 	margin: 5px auto 0;
 	padding-top: 27px;
 	max-width: 1150px;
 	background: url(../images/header/header_bg@1150.png) no-repeat center top;
+	background-size: 100% 100%;
+	
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		width: 46%;
+		bottom: 1%;
+		height: 30px;
+		box-shadow: 5px 15px 40px 5px rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+	
+	&:before {
+		left: 5%;
+		transform: skew(-40deg);
+	}
+	
+	&:after {
+		right: 5%;
+		transform: skew(40deg);
+	}
 	
 	&--upper {
 		position: relative;
-		margin: 0 auto;
+		margin-bottom: 25px;
 		padding: 5px;
-		max-width: 1020px;
 		background: @bg__header;
 		border-radius: 10px;
 		border-top: 3px solid #aab2b4;
-		box-shadow: inset 0px 1px 0 0 #e8ebec;
+		box-shadow: inset 0px 1px 0 0 #e8ebec, 0 7px 10px 1px rgba(0, 0, 0, 0.5);
 		
 		&:before, &:after {
 			content: '';
@@ -417,6 +454,86 @@
 				}
 			}
 		}
+	}
+	
+	&-slider {
+		position: relative;
+		
+		&__input {
+			display: none;
+		}
+		
+		&__box {
+			margin: 0 2%;
+			overflow: hidden;
+		}
+		
+		&__inner {
+			width: (100% * 5);
+			transition: transform 1s ease;
+		}
+		
+		&__item {
+			float: left;
+			width: (100% / 5);
+			text-align: center;
+		}
+		
+		&__controls {
+			background-position: center;
+			background-repeat: no-repeat;
+			
+			&--arrows,
+			&--buttons {
+				position: absolute;
+			}
+			
+			&--arrows {
+				left: 0;
+				right: 0;
+				top: 50%;
+				margin-top: -50px;
+				
+				& a {
+					display: block;
+					width: 42px;
+					height: 99px;
+					background-size: 42px 99px;
+				}
+				
+				&-prev {
+					float: left;
+					background-image: url(../images/header/header-slider_controls--left.png);
+					
+					&:hover {
+						background-image: url(../images/header/header-slider_controls--left--hover.png);
+					}
+				}
+				&-next {
+					float: right;
+					background-image: url(../images/header/header-slider_controls--right.png);
+					
+					&:hover {
+						background-image: url(../images/header/header-slider_controls--right--hover.png);
+					}
+				}
+			}
+			
+			&--buttons {
+				left: 1%;
+				bottom: 4%;
+				
+				label {
+					display: inline-block;
+					width: 30px;
+					height: 18px;
+					background-size: 30px 18px;
+					background-image: url(../images/header/header-slider_controls--btn@30.png);
+				}
+			}
+		}
+		
+		.generate-header__slider(5);
 	}
 }
 
