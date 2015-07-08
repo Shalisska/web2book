@@ -41,6 +41,25 @@
 	.generate-header__slider(@n, (@i + 1));
 }
 
+.generate-offers__slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		services,
+		products,
+		skreplenie;
+	@item: extract(@items, @i);
+	
+	&__input#offers-slider--@{item}:checked~.offers-title label[for='offers-slider--@{item}'] {
+		color: @color__offers-header--active;
+		background: url(../images/offers/offers-rect.png);
+	}
+	
+	&__input#offers-slider--@{item}:checked~&__box &__@{item} {
+		display: block;
+	}
+
+	.generate-offers__slider(@n, (@i + 1));
+}
+
 //----------------------------//
 .generate-contacs__item(@n, @i: 1) when (@i =< @n) {
 	@items:

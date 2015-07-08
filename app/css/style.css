@@ -409,7 +409,7 @@ body {
 }
 .header {
   position: relative;
-  margin: 5px auto 0;
+  margin: 5px auto 10px;
   padding-top: 27px;
   max-width: 1150px;
   background: url(../images/header/header_bg@1150.png) no-repeat center top;
@@ -885,6 +885,64 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .header-slider__input#header-slider--slide5:checked ~ .header-slider__box .header-slider__inner {
   -webkit-transform: translate(-80%, 0);
           transform: translate(-80%, 0);
+}
+.offers {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff linear-gradient(to right, rgba(0, 0, 0, 0.09) 0%, rgba(0, 0, 0, 0.03) 25%, rgba(0, 0, 0, 0.03) 75%, rgba(0, 0, 0, 0.09) 100%);
+  border-radius: 5px;
+}
+.offers-title {
+  padding-left: 20px;
+}
+.offers-title__text {
+  float: left;
+  width: 25%;
+  margin: 0;
+  font-size: 28px;
+  color: #2286cc;
+}
+.offers-slider__controls {
+  float: right;
+  width: 75%;
+  padding: 0 1.5% 0 1%;
+  text-align: justify;
+}
+.offers-slider__controls:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.offers-slider__controls label {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  color: #48505f;
+}
+.offers-slider__item {
+  display: none;
+}
+.offers-slider__input#offers-slider--services:checked ~ .offers-title label[for='offers-slider--services'] {
+  color: #ffffff;
+  background: url(../images/offers/offers-rect.png);
+}
+.offers-slider__input#offers-slider--services:checked ~ .offers-slider__box .offers-slider__services {
+  display: block;
+}
+.offers-slider__input#offers-slider--products:checked ~ .offers-title label[for='offers-slider--products'] {
+  color: #ffffff;
+  background: url(../images/offers/offers-rect.png);
+}
+.offers-slider__input#offers-slider--products:checked ~ .offers-slider__box .offers-slider__products {
+  display: block;
+}
+.offers-slider__input#offers-slider--skreplenie:checked ~ .offers-title label[for='offers-slider--skreplenie'] {
+  color: #ffffff;
+  background: url(../images/offers/offers-rect.png);
+}
+.offers-slider__input#offers-slider--skreplenie:checked ~ .offers-slider__box .offers-slider__skreplenie {
+  display: block;
 }
 .clearfix:after {
   content: '';
