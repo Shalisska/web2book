@@ -1,8 +1,8 @@
 mixin nav-footer(name, items)
 	-var class_name = name + '__item'
 	-var spec_class
-	nav(class=name)
-		ul
+	nav
+		ul(class=name)
 			each item, i in items
 				if item.name == 'Личный кабинет'
 					-spec_class = class_name + '--profile'
