@@ -1,9 +1,12 @@
 mixin teasers(items)
 	each item in items
 		a(class=('teasers__item teasers__item--' + item.id) href=item.href)=item.text
-			span.teasers__item-sub=item.sub
 			if item.id == 'consultation'
-				span.teasers__item-sub.teasers__item-sub--online=item.sub_online
+				span.teasers__item-sub.teasers__item-sub--online=item.sub
+				span.teasers__item-sub.teasers__item-sub--offline=item.sub_offline
+			else
+				span.teasers__item-sub=item.sub
+
 
 .teasers
 	+teasers([{
@@ -25,6 +28,6 @@ mixin teasers(items)
 					id: 'consultation',
 					href: '/',
 					text: 'Online консультант',
-					sub: 'Не в сети',
-					sub_online: 'В сети'
+					sub: 'В сети',
+					sub_offline: 'Не в сети'
 				}])

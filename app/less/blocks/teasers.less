@@ -1,0 +1,58 @@
+.generate-teasers-bg(@n, @i: 1) when (@i =< @n) {
+	@items:
+		books,
+		print,
+		questions,
+		consultation;
+	@item: extract(@items, @i);
+	
+	&--@{item} {
+		background-image: url('../images/teasers/@{item}/@{item}@90.jpg');
+	}
+	
+	.generate-teasers-bg(@n, (@i + 1));
+}
+
+
+.teasers {
+	text-align: center;
+	
+	&__item {
+		.reset-a();
+		display: inline-block;
+		width: 22%;
+		margin: 0 1%;
+		padding: 1.2% 2% 1.2% 9%;
+		text-align: left;
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: 1.43;
+		color: @color__teasers;
+		border: 1px solid #cccccc;
+		
+		.generate-teasers-bg(4);
+		
+		&:hover, &:active {
+			color: @color__teasers;
+		}
+		
+		&-sub {
+			display: block;
+			font-size: @size__teasers-small;
+			color: @color__teasers-small;
+			text-transform: none;
+			font-weight: normal;
+			line-height: 2;
+			
+			&--online {display: none;}
+			
+			&--offline {
+				color: @color__teasers-small--offline;
+			}
+		}
+	}
+}
+

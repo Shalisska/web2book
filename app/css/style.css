@@ -892,11 +892,12 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .container--main {
   max-width: 1000px;
+  padding-bottom: 3.93em;
   background: white;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
 }
 .main-content {
-  margin: 0 20px;
+  margin: 0 20px 3.93em;
 }
 .offers {
   position: relative;
@@ -1106,6 +1107,61 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .descriptions__text:last-of-type {
   margin-bottom: 0;
+}
+.teasers {
+  text-align: center;
+}
+.teasers__item {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 22%;
+  margin: 0 1%;
+  padding: 1.2% 2% 1.2% 9%;
+  text-align: left;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.43;
+  color: #399ee5;
+  border: 1px solid #cccccc;
+}
+.teasers__item:hover,
+.teasers__item:active {
+  text-decoration: none;
+  color: inherit;
+}
+.teasers__item--books {
+  background-image: url('../images/teasers/books/books@90.jpg');
+}
+.teasers__item--print {
+  background-image: url('../images/teasers/print/print@90.jpg');
+}
+.teasers__item--questions {
+  background-image: url('../images/teasers/questions/questions@90.jpg');
+}
+.teasers__item--consultation {
+  background-image: url('../images/teasers/consultation/consultation@90.jpg');
+}
+.teasers__item:hover,
+.teasers__item:active {
+  color: #399ee5;
+}
+.teasers__item-sub {
+  display: block;
+  font-size: 12px;
+  color: #333333;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 2;
+}
+.teasers__item-sub--online {
+  display: none;
+}
+.teasers__item-sub--offline {
+  color: #cc0000;
 }
 .clearfix:after {
   content: '';
