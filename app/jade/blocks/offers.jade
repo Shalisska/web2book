@@ -1,6 +1,8 @@
+include offers/slider
+
 mixin slider--offers(slider_name, items)
 	each item, i in items
-		if i===0
+		if i===1
 			input(class=slider_name + '__input' type='radio' name=slider_name id=slider_name + '--' + item.id checked)
 		else
 			input(class=slider_name + '__input' type='radio' name=slider_name id=slider_name + '--' + item.id)
@@ -14,8 +16,14 @@ mixin slider--offers(slider_name, items)
 	div(class=slider_name + '__box')
 		div(class=slider_name + '__inner')
 			each item in items
-				div(class=slider_name + '__item' + ' ' + slider_name + '__' + item.id)
-					img(src='../images/offers/offers-' + item.id + '_comm.png', alt=item.id)
+				div.clearfix(class=slider_name + '__item' + ' ' + 'offers-' + item.id)
+					case item.id
+						when 'services'
+							+services
+						when 'skreplenie'
+							+skreplenie
+						when 'products'
+							+products
 	
 
 		
@@ -30,5 +38,5 @@ mixin slider--offers(slider_name, items)
 												name: 'Наша продукция'
 												}, {
 												id: 'skreplenie',
-												name: 'Типы скрепелния'
+												name: 'Типы скрепления'
 												}])

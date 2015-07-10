@@ -13,6 +13,7 @@
     <svg width="0" height="0" class="svg-container">
       <defs></defs>
     </svg>
+    <!--.body-wrapper-->
     <header class="header">
       <div class="container--header">
         <div class="header--upper">
@@ -109,22 +110,155 @@
     <main>
       <div class="container container--main">
         <div class="offers">
-                  <input type="radio" name="offers-slider" id="offers-slider--services" checked class="offers-slider__input">
-                  <input type="radio" name="offers-slider" id="offers-slider--products" class="offers-slider__input">
+                  <input type="radio" name="offers-slider" id="offers-slider--services" class="offers-slider__input">
+                  <input type="radio" name="offers-slider" id="offers-slider--products" checked class="offers-slider__input">
                   <input type="radio" name="offers-slider" id="offers-slider--skreplenie" class="offers-slider__input">
                   <div class="offers-title clearfix">
                     <p class="offers-title__text">Мы предлагаем:</p>
                     <div class="offers-slider__controls">
                       <label for="offers-slider--services">Наши услуги</label>
                       <label for="offers-slider--products">Наша продукция</label>
-                      <label for="offers-slider--skreplenie">Типы скрепелния</label>
+                      <label for="offers-slider--skreplenie">Типы скрепления</label>
                     </div>
                   </div>
                   <div class="offers-slider__box">
                     <div class="offers-slider__inner">
-                      <div class="offers-slider__item offers-slider__services"><img src="../images/offers/offers-services_comm.png" alt="services"></div>
-                      <div class="offers-slider__item offers-slider__products"><img src="../images/offers/offers-products_comm.png" alt="products"></div>
-                      <div class="offers-slider__item offers-slider__skreplenie"><img src="../images/offers/offers-skreplenie_comm.png" alt="skreplenie"></div>
+                      <div class="clearfix offers-slider__item offers-services">
+                                        <div class="offers-item-slider offers-item-slider--services">
+                                          <div class="offers-item__box offers-services__box">
+                                            <div class="offers-item__inner clearfix offers-services__inner">
+                                              <div class="offers-item__item offers-services__item offers-services__value">
+                                                <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="value"></div>
+                                                <h3 class="offers-item__title">Калькулятор стоимости</h3>
+                                                <p class="offers-item__text">Рассчитайте стоимость печати</p>
+                                              </div>
+                                              <div class="offers-item__item offers-services__item offers-services__cover">
+                                                <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="cover"></div>
+                                                <h3 class="offers-item__title">Раскладка обложки</h3>
+                                                <p class="offers-item__text">Скачать технические шаблоны обложки</p>
+                                              </div>
+                                              <div class="offers-item__item offers-services__item offers-services__width">
+                                                <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="width"></div>
+                                                <h3 class="offers-item__title">Калькулятор толщины</h3>
+                                                <p class="offers-item__text">Толщина корешка при количестве полос</p>
+                                              </div>
+                                              <div class="offers-item__item offers-services__item offers-services__profile">
+                                                <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="profile"></div>
+                                                <h3 class="offers-item__title">Личный кабинет</h3>
+                                                <p class="offers-item__text">Работа с файлами и проектами</p>
+                                              </div>
+                                              <div class="offers-item__item offers-services__item offers-services__lib">
+                                                <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="lib"></div>
+                                                <h3 class="offers-item__title">Онлайн библиотека</h3>
+                                                <p class="offers-item__text">Публикуйте свои книги и получайте с них прибыль</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="offers-item__scroll offers-services__scroll">
+                                            <div class="offers-item__scroll_bar offers-services__scroll_bar">
+                                              <div class="offers-item__scroll_control offers-services__scroll_control"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                      </div>
+                      <div class="clearfix offers-slider__item offers-products">
+                                        <div class="offers-item-slider offers-item-slider--products">
+                                          <div class="offers-item__box offers-products__box">
+                                            <div class="offers-item__inner clearfix offers-products__inner">
+                                              <div class="offers-item__item offers-products__item offers-products__booklet">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="booklet"></div>
+                                                <h3 class="offers-item__title">Буклеты</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__notepad">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="notepad"></div>
+                                                <h3 class="offers-item__title">Блокноты</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__report">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="report"></div>
+                                                <h3 class="offers-item__title">Отчеты</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__album">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="album"></div>
+                                                <h3 class="offers-item__title">Альбомы</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__magazine">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="magazine"></div>
+                                                <h3 class="offers-item__title">Журналы</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__encyclopedia">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="encyclopedia"></div>
+                                                <h3 class="offers-item__title">Энциклопедии</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__catalog">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="catalog"></div>
+                                                <h3 class="offers-item__title">Каталоги</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-products__item offers-products__instruction">
+                                                <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="instruction"></div>
+                                                <h3 class="offers-item__title">Инструкции</h3>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="offers-item__scroll offers-products__scroll">
+                                            <div class="offers-item__scroll_bar offers-products__scroll_bar">
+                                              <div class="offers-item__scroll_control offers-products__scroll_control"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                <div class="offers-products__info">
+                                  <h4 class="offers-products__info-title">Печать по требованию</h4>
+                                  <p class="offers-products__info-text">Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...</p><a href="/" class="offers-products__info-more">Узнать больше</a>
+                                </div>
+                      </div>
+                      <div class="clearfix offers-slider__item offers-skreplenie">
+                                        <div class="offers-item-slider offers-item-slider--skreplenie">
+                                          <div class="offers-item__box offers-skreplenie__box">
+                                            <div class="offers-item__inner clearfix offers-skreplenie__inner">
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__spiral">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="spiral"></div>
+                                                <h3 class="offers-item__title">Spiral</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__twin_loop">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="twin_loop"></div>
+                                                <h3 class="offers-item__title">Twin Loop Wire</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__comb">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="comb"></div>
+                                                <h3 class="offers-item__title">Comb</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__ring">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="ring"></div>
+                                                <h3 class="offers-item__title">Ring</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__tape">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="tape"></div>
+                                                <h3 class="offers-item__title">Tape</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__velo">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="velo"></div>
+                                                <h3 class="offers-item__title">Velo</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__saddle">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="saddle"></div>
+                                                <h3 class="offers-item__title">Saddle Stitch</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__perfect">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="perfect"></div>
+                                                <h3 class="offers-item__title">Perfect</h3>
+                                              </div>
+                                              <div class="offers-item__item offers-skreplenie__item offers-skreplenie__stapled">
+                                                <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="stapled"></div>
+                                                <h3 class="offers-item__title">Stapled</h3>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="offers-item__scroll offers-skreplenie__scroll">
+                                            <div class="offers-item__scroll_bar offers-skreplenie__scroll_bar">
+                                              <div class="offers-item__scroll_control offers-skreplenie__scroll_control"></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                      </div>
                     </div>
                   </div>
         </div>

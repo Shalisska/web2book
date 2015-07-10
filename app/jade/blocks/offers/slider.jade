@@ -1,0 +1,100 @@
+mixin slider--offers_item(slider_name, img_width, items)
+	div.offers-item-slider(class='offers-item-slider--' + slider_name)
+		div.offers-item__box(class='offers-' + slider_name + '__box')
+			div.offers-item__inner.clearfix(class='offers-' + slider_name + '__inner')
+				each item in items
+					div.offers-item__item(class='offers-' + slider_name + '__item' + ' ' + 'offers-' + slider_name + '__' + item.id)
+						div.offers-item__img(class='offers-' + slider_name + '__img'): img(src='../images/offers/' + slider_name + '/offers-' + slider_name + '@' + img_width + '.png', alt=item.id)
+						h3.offers-item__title=item.title
+						if item.text
+							p.offers-item__text=item.text
+		div.offers-item__scroll(class='offers-' + slider_name + '__scroll')
+			div.offers-item__scroll_bar(class='offers-' + slider_name + '__scroll_bar')
+				div.offers-item__scroll_control(class='offers-' + slider_name + '__scroll_control')
+
+
+mixin products
+	+slider--offers_item('products' , '3200', [{
+		id: 'booklet',
+		title: 'Буклеты'
+	}, {
+		id: 'notepad',
+		title: 'Блокноты'
+	}, {
+		id: 'report',
+		title: 'Отчеты'
+	}, {
+		id: 'album',
+		title: 'Альбомы'
+	}, {
+		id: 'magazine',
+		title: 'Журналы'
+	}, {
+		id: 'encyclopedia',
+		title: 'Энциклопедии'
+	}, {
+		id: 'catalog',
+		title: 'Каталоги'
+	}, {
+		id: 'instruction',
+		title: 'Инструкции'
+	}])
+	
+	.offers-products__info
+		h4.offers-products__info-title Печать по требованию
+		p.offers-products__info-text.
+			Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...
+		a.offers-products__info-more(href='/') Узнать больше
+
+mixin skreplenie
+	+slider--offers_item('skreplenie' , '2432', [{
+		id: 'spiral',
+		title: 'Spiral'
+	}, {
+		id: 'twin_loop',
+		title: 'Twin Loop Wire'
+	}, {
+		id: 'comb',
+		title: 'Comb'
+	}, {
+		id: 'ring',
+		title: 'Ring'
+	}, {
+		id: 'tape',
+		title: 'Tape'
+	}, {
+		id: 'velo',
+		title: 'Velo'
+	}, {
+		id: 'saddle',
+		title: 'Saddle Stitch'
+	}, {
+		id: 'perfect',
+		title: 'Perfect'
+	}, {
+		id: 'stapled',
+		title: 'Stapled'
+	}])
+
+mixin services
+	+slider--offers_item('services', '2400', [{
+		id: 'value',
+		title: 'Калькулятор стоимости',
+		text: 'Рассчитайте стоимость печати'
+	}, {
+		id: 'cover',
+		title: 'Раскладка обложки',
+		text: 'Скачать технические шаблоны обложки'
+	}, {
+		id: 'width',
+		title: 'Калькулятор толщины',
+		text: 'Толщина корешка при количестве полос'
+	}, {
+		id: 'profile',
+		title: 'Личный кабинет',
+		text: 'Работа с файлами и проектами'
+	}, {
+		id: 'lib',
+		title: 'Онлайн библиотека',
+		text: 'Публикуйте свои книги и получайте с них прибыль'
+	}])
