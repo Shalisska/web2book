@@ -992,11 +992,9 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   background-size: 100% 49px;
   text-shadow: 0 1px 0 white;
 }
-.offers-slider__box {
-  height: 232px;
-}
 .offers-slider__item {
   display: none;
+  height: 232px;
 }
 .offers-slider__input#offers-slider--services:checked ~ .offers-title label[for='offers-slider--services'] {
   color: #ffffff;
@@ -1029,8 +1027,21 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   background: radial-gradient(7% 35% at -1%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(1.8% 60% at -1%, rgba(0, 0, 0, 0.35), transparent), radial-gradient(7% 35% at 101%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(1.8% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
   box-shadow: inset 6px 0 10px -10px rgba(0, 0, 0, 0.5), -35px 0 10px -35px rgba(255, 255, 255, 0.5), inset -6px 0 10px -10px rgba(0, 0, 0, 0.5), 35px 0 10px -35px rgba(255, 255, 255, 0.5);
 }
+.offers-item__inner--hover {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: 10;
+}
 .offers-item__item {
+  position: relative;
   float: left;
+}
+.offers-item__item--hover_wrapper {
+  opacity: 0;
+  background: linear-gradient(45deg, #838997 78%, transparent 78%), linear-gradient(-45deg, #838997 78%, transparent 78%);
+  border-radius: 5px;
+  padding: 20px 15px;
 }
 .offers-item__img {
   width: 100%;
@@ -1043,6 +1054,11 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   color: #454c5c;
   font-weight: normal;
 }
+.offers-item__title--hover {
+  padding: 0;
+  text-align: center;
+  color: white;
+}
 .offers-item__text {
   margin: 0;
   padding: 0 40px 0 20px;
@@ -1050,13 +1066,20 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   font-size: 12px;
   color: #333333;
 }
+.offers-item__text--hover {
+  padding: 0;
+  color: white;
+  font-size: 14px;
+}
 .offers-item__scroll {
   width: 96%;
   margin: 0 auto;
 }
 .offers-item__scroll_bar {
-  position: relative;
-  margin-top: 20px;
+  position: absolute;
+  left: 2%;
+  width: 96%;
+  bottom: 0;
   height: 5px;
   background: #dadada;
   border-radius: 3px;
@@ -1077,6 +1100,24 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .offers-services__item {
   width: 20%;
+}
+.offers-services__item:nth-child(1):after,
+.offers-services__item:nth-child(2):after,
+.offers-services__item:nth-child(3):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #c6c6c6;
+  top: 20%;
+  right: 2%;
+}
+.offers-services__item--hover:after {
+  display: none;
+}
+.offers-services__item--hover_wrapper {
+  width: 114%;
+  margin: 45% -7% 0;
 }
 .offers-services__img img {
   width: 1000%;
@@ -1247,6 +1288,10 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .offers-products__scroll {
   width: 93.75%;
+}
+.offers-products__scroll_bar {
+  left: 3.12%;
+  width: 93.76%;
 }
 .offers-products__info {
   float: right;
