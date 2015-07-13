@@ -356,9 +356,24 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
+		sprite:{
+			all: {
+				src: 'spec/*.png',
+				dest: 'spec/spritesheet.png',
+				destCss: 'app/less/helpers/sprites.less',
+				imgPath: '../images/sprite.png',
+				algorithm: 'top-down',
+				cssTemplate: function(data) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}' + data.strings;
+					
+					
+					return result;
+				}
+			}
+		}
 //		sprite: {
 //			normal: {
-//				src: 'spec/sprite/sprite@1/*.png',
+//				src: 'spec/*.png',
 //				destImg: 'spec/spritesheet@1.png',
 //				destCSS: 'spec/spritestyles@1.less',
 //				padding: 2
