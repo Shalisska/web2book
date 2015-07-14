@@ -1,0 +1,19 @@
+mixin slide1_block(name, item)
+	h4.header-slide1__title=item.title
+	ul.header-slide1__features
+		each elem in item.point
+			li.header-slide1__features_item=elem
+	a(href=item.btn.href).header-slide1__btn=item.btn.name
+		
+mixin slide1(name)
+	div.clearfix(class='header-' + name + '__content')
+		+slide1_block(name, {
+			title: 'Личный кабинет',
+			point: ['Покупка товара', 'Онлай редактор', 'Мониторинг заказов', 'Калькуляция', 'Поддержка всех систем'],
+			btn: {
+				name: 'Личный кабинет',
+				href: '/'
+			}
+		})
+	.header-slide1__img
+		img(src='../images/header/header_' + name + '@544.png', alt=name)

@@ -1,3 +1,5 @@
+include slider/slide1
+
 mixin slider(slider_name, items)
 	each item, i in items
 		if i===0
@@ -8,8 +10,12 @@ mixin slider(slider_name, items)
 	div(class=slider_name + '__box')
 		div.clearfix(class=slider_name + '__inner')
 			each item in items
-				div(class=slider_name + '__item' + ' ' + slider_name + '__' + item)
-					img(src='../images/header/header_slide.png', alt='slide1')
+				div(class=slider_name + '__item' + ' ' + 'header-' + item)
+					case item
+						when 'slide1'
+							+slide1(item)
+						default
+							img(src='../images/header/header_slide.png', alt='slide1')
 	
 	div(class=slider_name + '__controls')
 		div(class=slider_name + '__controls--arrows')
