@@ -357,99 +357,89 @@ module.exports = function (grunt) {
 			}
 		},
 		sprite:{
-			all: {
+			normal: {
 				src: 'spec/*.png',
 				dest: 'spec/spritesheet.png',
 				destCss: 'app/less/helpers/sprites.less',
 				imgPath: '../images/sprite.png',
 				algorithm: 'top-down',
 				cssTemplate: function(data) {
-					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}' + data.strings;
-					
-					
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}';
+					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+						result += '.sprite_icon-' + name_new + '{' +
+							'background-position: ' + data.items[i].px.offset_x + ' ' + data.items[i].px.offset_y + ';' +
+							'width: ' + data.items[i].px.width + ';' +
+							'height: ' + data.items[i].px.height + ';' +
+							'}\n'
+					}
+					return result;
+				}
+			},
+			large15: {
+				src: 'spec/sprite/sprite@1.5/*.png',
+				destImg: 'spec/spritesheet@1.5x.png',
+				destCSS: 'spec/spritestyles@1.5x.less',
+				padding: 3,
+				cssTemplate: function (data) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@1.5x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {\n';
+					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+						result += '.sprite_icon-' + name_new + '{' +
+							'background-position: ' + data.items[i].offset_x/1.5 + 'px ' + data.items[i].offset_y/1.5 + 'px;' +
+							'background-size: ' + data.items[i].total_width/1.5 + 'px ' + data.items[i].total_height/1.5 + 'px;' +
+							'width: ' + data.items[i].width/1.5 + 'px;' +
+							'height: ' + data.items[i].height/1.5 + 'px;' +
+							'}\n'
+					}
+					result += '}';
+					return result;
+				}
+			},
+			large2: {
+				src: 'spec/sprite/sprite@2/*.png',
+				destImg: 'spec/spritesheet@2x.png',
+				destCSS: 'spec/spritestyles@2x.less',
+				padding: 4,
+				cssTemplate: function (data) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@2x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {\n';
+					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+						result += '.sprite_icon-' + name_new + '{' +
+							'background-position: ' + data.items[i].offset_x/2 + 'px ' + data.items[i].offset_y/2 + 'px;' +
+							'background-size: ' + data.items[i].total_width/2 + 'px ' + data.items[i].total_height/2 + 'px;' +
+							'width: ' + data.items[i].width/2 + 'px;' +
+							'height: ' + data.items[i].height/2 + 'px;' +
+							'}\n'
+					}
+					result += '}';
+					return result;
+				}
+			},
+			large3: {
+				src: 'spec/sprite/sprite@3/*.png',
+				destImg: 'spec/spritesheet@3x.png',
+				destCSS: 'spec/spritestyles@3x.less',
+				padding: 6,
+				cssTemplate: function (date) {
+					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@3x.png); background-repeat: no-repeat;}';
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {\n';
+					for (var i = 0, ii = date.items.length; i < ii; i += 1) {
+						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+						result += '.sprite_icon-' + name_new + '{' +
+							'background-position: ' + date.items[i].offset_x/3 + 'px ' + date.items[i].offset_y/3 + 'px;' +
+							'background-size: ' + date.items[i].total_width/3 + 'px ' + date.items[i].total_height/3 + 'px;' +
+							'width: ' + date.items[i].width/3 + 'px;' +
+							'height: ' + date.items[i].height/3 + 'px;' +
+							'}\n'
+					}
+					result += '}';
 					return result;
 				}
 			}
 		}
-//		sprite: {
-//			normal: {
-//				src: 'spec/*.png',
-//				destImg: 'spec/spritesheet@1.png',
-//				destCSS: 'spec/spritestyles@1.less',
-//				padding: 2
-//				cssTemplate: function (params) {
-//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}';
-//					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
-//						result += '.sprite_icon-' + params.items[i].name + '{' +
-//							'background-position: ' + params.items[i].px.offset_x + ' ' + params.items[i].px.offset_y + ';' +
-//							'width: ' + params.items[i].px.width + ';' +
-//							'height: ' + params.items[i].px.height + ';' +
-//							'}\n'
-//					}
-//					return result;
-//				}
-//			}
-//			large15: {
-//				src: 'spec/sprite/sprite@1.5/*.png',
-//				destImg: 'spec/spritesheet@1.5x.png',
-//				destCSS: 'spec/spritestyles@1.5x.less',
-//				padding: 3,
-//				cssTemplate: function (params) {
-//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@1.5x.png); background-repeat: no-repeat;}';
-//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {\n';
-//					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
-//						result += '.sprite_icon-' + params.items[i].name + '{' +
-//							'background-position: ' + params.items[i].offset_x/1.5 + 'px ' + params.items[i].offset_y/1.5 + 'px;' +
-//							'background-size: ' + params.items[i].total_width/1.5 + 'px ' + params.items[i].total_height/1.5 + 'px;' +
-//							'width: ' + params.items[i].width/1.5 + 'px;' +
-//							'height: ' + params.items[i].height/1.5 + 'px;' +
-//							'}\n'
-//					}
-//					result += '}';
-//					return result;
-//				}
-//			},
-//			large2: {
-//				src: 'spec/sprite/sprite@2/*.png',
-//				destImg: 'spec/spritesheet@2x.png',
-//				destCSS: 'spec/spritestyles@2x.less',
-//				padding: 4,
-//				cssTemplate: function (params) {
-//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@2x.png); background-repeat: no-repeat;}';
-//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {\n';
-//					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
-//						result += '.sprite_icon-' + params.items[i].name + '{' +
-//							'background-position: ' + params.items[i].offset_x/2 + 'px ' + params.items[i].offset_y/2 + 'px;' +
-//							'background-size: ' + params.items[i].total_width/2 + 'px ' + params.items[i].total_height/2 + 'px;' +
-//							'width: ' + params.items[i].width/2 + 'px;' +
-//							'height: ' + params.items[i].height/2 + 'px;' +
-//							'}\n'
-//					}
-//					result += '}';
-//					return result;
-//				}
-//			},
-//			large3: {
-//				src: 'spec/sprite/sprite@3/*.png',
-//				destImg: 'spec/spritesheet@3x.png',
-//				destCSS: 'spec/spritestyles@3x.less',
-//				padding: 6,
-//				cssTemplate: function (params) {
-//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@3x.png); background-repeat: no-repeat;}';
-//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {\n';
-//					for (var i = 0, ii = params.items.length; i < ii; i += 1) {
-//						result += '.sprite_icon-' + params.items[i].name + '{' +
-//							'background-position: ' + params.items[i].offset_x/3 + 'px ' + params.items[i].offset_y/3 + 'px;' +
-//							'background-size: ' + params.items[i].total_width/3 + 'px ' + params.items[i].total_height/3 + 'px;' +
-//							'width: ' + params.items[i].width/3 + 'px;' +
-//							'height: ' + params.items[i].height/3 + 'px;' +
-//							'}\n'
-//					}
-//					result += '}';
-//					return result;
-//				}
-//			}
-//		}
 	});
 	
 	grunt.registerTask('default', [

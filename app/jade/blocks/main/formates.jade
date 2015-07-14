@@ -12,6 +12,9 @@ mixin slider--formates(slider_name, items)
 			label(for=slider_name +'--' + item.id)
 				img(src='../images/formates/formates-header@620.png', alt=item.id)
 				span=item.name
+		.formates-slider__controls_scroll
+			.formates-slider__controls_scroll-bar
+				.formates-slider__controls_scroll-control
 
 	div(class=slider_name + '__box')
 		div(class=slider_name + '__inner')
@@ -26,7 +29,6 @@ mixin slider--formates(slider_name, items)
 							+formates
 
 .formates
-	//-img(src="../images/templates_comm.png", alt="formates")
 	+slider--formates('formates-slider', [{
 		id: 'formates',
 		name: 'Форматы'
