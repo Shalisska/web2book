@@ -6,7 +6,7 @@ mixin slide1_block(name, item)
 	a(href=item.btn.href).header-slide1__btn=item.btn.name
 		
 mixin slide1(name)
-	div.clearfix(class='header-' + name + '__content')
+	div(class='header-' + name + '__content')
 		+slide1_block(name, {
 			title: 'Личный кабинет',
 			point: ['Покупка товара', 'Онлай редактор', 'Мониторинг заказов', 'Калькуляция', 'Поддержка всех систем'],

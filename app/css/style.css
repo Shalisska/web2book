@@ -366,9 +366,49 @@ th {
 }
 @font-face {
   font-family: 'AvantGarde';
-  src: url('../fonts/AvantGardeGothicC-Book.otf');
+  src: url('../fonts/AvantGardeGothicC/avantgardegothicc.otf');
   font-weight: normal;
   font-style: normal;
+}
+/* font-family: "ArialRegular"; */
+@font-face {
+  font-family: "ArialRegular";
+  src: url("../fonts/Arial/ArialRegular/ArialRegular.eot");
+  src: url("../fonts/Arial/ArialRegular/ArialRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/Arial/ArialRegular/ArialRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "ArialBold"; */
+@font-face {
+  font-family: "ArialBold";
+  src: url("../fonts/Arial/ArialBold/ArialBold.eot");
+  src: url("../fonts/Arial/ArialBold/ArialBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialBold/ArialBold.woff") format("woff"), url("../fonts/Arial/ArialBold/ArialBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "ArialItalic"; */
+@font-face {
+  font-family: "ArialItalic";
+  src: url("../fonts/Arial/ArialItalic/ArialItalic.eot");
+  src: url("../fonts/Arial/ArialItalic/ArialItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialItalic/ArialItalic.woff") format("woff"), url("../fonts/Arial/ArialItalic/ArialItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "ArialBlack"; */
+@font-face {
+  font-family: "ArialBlack";
+  src: url("../fonts/Arial/ArialBlack/ArialBlack.eot");
+  src: url("../fonts/Arial/ArialBlack/ArialBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialBlack/ArialBlack.woff") format("woff"), url("../fonts/Arial/ArialBlack/ArialBlack.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* font-family: "ArialBoldItalic"; */
+@font-face {
+  font-family: "ArialBoldItalic";
+  src: url("../fonts/Arial/ArialBoldItalic/ArialBoldItalic.eot");
+  src: url("../fonts/Arial/ArialBoldItalic/ArialBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialBoldItalic/ArialBoldItalic.woff") format("woff"), url("../fonts/Arial/ArialBoldItalic/ArialBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 html,
 body {
@@ -381,7 +421,7 @@ html {
 }
 body {
   background: url(../images/bg-main.jpg);
-  font-family: 'Arial', sans-serif;
+  font-family: 'ArialRegular', 'Arial', sans-serif;
   font-size: 14px;
 }
 main {
@@ -480,7 +520,6 @@ main {
 }
 .header-contacts {
   padding: 22px 35px 15px;
-  font-family: 'AvantGarde', 'Arial', sans-serif;
   color: #454c5c;
 }
 .header-contacts__name {
@@ -489,6 +528,7 @@ main {
 }
 .header-contacts__phone {
   margin: 0;
+  font-family: 'AvantGarde', 'Arial', sans-serif;
   font-size: 20px;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
@@ -726,7 +766,7 @@ ul.header-menu_inner .header-menu__item--next:hover > ul {
   padding-bottom: 10px;
   vertical-align: middle;
   line-height: 1.3;
-  font-weight: bold;
+  font-family: 'ArialBold', 'Arial', sans-serif;
 }
 .header-menu--lvl0 > .header-menu__item:last-child {
   width: 5%;
@@ -895,6 +935,76 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .header-slider__input#header-slider--slide5:checked ~ .header-slider__box .header-slider__inner {
   -webkit-transform: translate(-80%, 0);
           transform: translate(-80%, 0);
+}
+.header-slide1__content {
+  float: left;
+  width: 38%;
+  text-align: left;
+  color: white;
+  text-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+}
+.header-slide1__title {
+  margin: 0 0 0.2em;
+  font-family: 'AvantGarde', 'Arial', sans-serif;
+  font-size: 36px;
+  color: #9f0000;
+  font-weight: normal;
+  text-align: right;
+}
+.header-slide1__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 26%;
+  margin-bottom: 1.4em;
+}
+.header-slide1__features_item {
+  position: relative;
+  padding-left: 13.5%;
+  font-size: 18px;
+  line-height: 1.66666667;
+}
+.header-slide1__features_item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.3em;
+  width: 13.08%;
+  height: 150%;
+  background: url(../images/header/check@36.png) no-repeat center top;
+  background-size: 36px 45px;
+}
+.header-slide1__btn {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-left: 26%;
+  padding: 2% 10.5%;
+  font-size: 20px;
+  border-radius: 5px;
+  background: linear-gradient(#86d5fa, #46a6eb 74%, #57bff5);
+  box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.2), inset 23px 0 30px -20px rgba(75, 192, 250, 0.4), inset -23px 0 30px -20px rgba(75, 192, 250, 0.4), inset 0 1px 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 1px 0 #2a8acf, 0 1px 3px 0 rgba(0, 0, 0, 0.45);
+  text-shadow: 0 1px 0 rgba(29, 118, 183, 0.75);
+}
+.header-slide1__btn:hover,
+.header-slide1__btn:active,
+.header-slide1__btn:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.header-slide1__btn:hover,
+.header-slide1__btn:active {
+  background: linear-gradient(#a7dc2a, #57b41e 75%, #83d129);
+  text-shadow: 0 1px 0 #57b41e;
+}
+.header-slide1__img {
+  float: right;
+  width: 62%;
+  padding: 0 1.5%;
+}
+.header-slide1__img img {
+  width: 100%;
+  height: auto;
 }
 .container--main {
   position: relative;
@@ -1753,7 +1863,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   background-repeat: no-repeat;
   background-size: auto 100%;
   text-transform: uppercase;
-  font-weight: bold;
+  font-family: 'ArialBold', 'Arial', sans-serif;
   line-height: 1.43;
   color: #399ee5;
   border: 1px solid #cccccc;
@@ -1785,7 +1895,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   font-size: 12px;
   color: #333333;
   text-transform: none;
-  font-weight: normal;
+  font-family: 'ArialRegular', 'Arial', sans-serif;
   line-height: 2;
 }
 .teasers__item-sub--online {
@@ -1849,7 +1959,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .footer__title {
   margin-bottom: 0.3em;
   color: #9f0000;
-  font-weight: bold;
+  font-family: 'ArialBold', 'Arial', sans-serif;
 }
 .footer-menu {
   list-style: none;
@@ -1910,7 +2020,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   padding: 0;
   font-size: 12px;
   color: #022035;
-  font-weight: normal;
+  font-family: 'ArialRegular', 'Arial', sans-serif;
 }
 .footer-menu_sub .footer-menu__item {
   width: 100%;

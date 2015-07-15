@@ -10,7 +10,7 @@ mixin slider(slider_name, items)
 	div(class=slider_name + '__box')
 		div.clearfix(class=slider_name + '__inner')
 			each item in items
-				div(class=slider_name + '__item' + ' ' + 'header-' + item)
+				div.clearfix(class=slider_name + '__item' + ' ' + 'header-' + item)
 					case item
 						when 'slide1'
 							+slide1(item)
