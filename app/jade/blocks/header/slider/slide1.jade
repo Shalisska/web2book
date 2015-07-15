@@ -16,4 +16,18 @@ mixin slide1(name)
 			}
 		})
 	.header-slide1__img
-		img(src='../images/header/header_' + name + '@544.png', alt=name)
+		+picture({
+				name: name,
+				adress: '../images/header/header_slide1@',
+				ext: 'png'
+			}, {
+				main: {
+					width: '544',
+					img: ['544', '544', '544', '544']
+				},
+				other: [{
+					val: 'max',
+					width: '730',
+					img: ['380', '380', '380', '380']
+				}]
+			})

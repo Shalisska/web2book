@@ -18,7 +18,8 @@
 	position: relative;
 	margin: 5px auto 10px;
 	padding-top: 27px;
-	max-width: 1150px;
+	//max-width: 1150px;
+	width: 100%;
 	background: url(../images/header/header_bg@1150.png) no-repeat center top;
 	background-size: 100% 100%;
 	
@@ -52,6 +53,10 @@
 		border-top: 3px solid #aab2b4;
 		box-shadow: inset 0px 1px 0 0 #e8ebec, 0 7px 10px 1px rgba(0, 0, 0, 0.5);
 		
+		@media(max-width: 830px) {
+			margin-bottom: 15px;
+		}
+		
 		&:before, &:after {
 			content: '';
 			position: absolute;
@@ -74,11 +79,18 @@
 		}
 	}
 	
-	&-contacts,
-	&-logo,
-	&-autorization {
+	&-contacts {
 		float: left;
-		width: (100% / 3);
+		width: 39%;
+	}
+	&-logo {
+		float: left;
+		width: 22%;
+	}
+	
+	&-autorization {
+		float: right;
+		width: 39%;
 	}
 	
 	&-contacts {
@@ -110,12 +122,22 @@
 		padding-top: 1%;
 		display: block;
 		text-align: center;
+		
+		a {display: block;}
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 	
 	&-autorization {
 		padding-top: 45px;
 		padding-right: 5px;
 		text-align: right;
+		
+		@media(max-width: 960px) {
+			padding: 4% 4% 1% 0;
+		}
 		
 		ul {
 			display: inline-block;
@@ -126,6 +148,14 @@
 		
 		&-item {
 			float: left;
+			
+			@media(max-width: 960px) {
+				&:last-child {
+					float: none;
+					clear: both;
+					text-align: center;
+				}
+			}
 		
 			a {
 				@h: 30px;
@@ -142,6 +172,10 @@
 			background: url(../images/icon_search.png) no-repeat center;
 			background-size: 21px;
 			border-radius: 3px 1px 1px 3px;
+			
+			@media(max-width: 960px) {
+				border-radius: 3px 1px 1px 1px;
+			}
 		}
 		
 		&__profile {
@@ -151,6 +185,10 @@
 			background-size: 7px 12px;
 			text-decoration: none;
 			border-radius: 1px;
+			
+			@media(max-width: 960px) {
+				border-radius: 1px 3px 1px 1px;
+			}
 			
 			&:before, &:after {
 				content: '';
@@ -182,6 +220,10 @@
 		&__registration {
 			padding: 0 14px;
 			border-radius: 1px 3px 3px 1px;
+			
+			@media(max-width: 960px) {
+				border-radius: 1px 1px 3px 3px;
+			}
 		}
 	}
 	
@@ -477,7 +519,16 @@
 		&__item {
 			float: left;
 			width: (100% / 5);
+			height: 325px;
 			text-align: center;
+			
+			@media(max-width: 960px) {
+				height: 300px;
+			}
+			
+			@media(max-width: 830px) {
+				height: 260px;
+			}
 		}
 		
 		&__controls {

@@ -10,23 +10,30 @@ html {
 }
 
 body {
-	margin-bottom: 424px;
 	background: url(../images/bg-main.jpg);
 	font-family: @font;
 	font-size: @size;
 }
 
+.body-wrapper {
+	position: relative;
+	max-width: 1150px;
+	margin: 0 auto 424px;
+}
+
 main {
-	max-width: 1040px;
+	//max-width: 1040px;
+	width: 90.435%;
 	margin: 0 auto;
 }
 
 .footer-wrapper {
 	position: absolute;
-	max-width: 1040px;
+	//max-width: 1040px;
+	width: 90.435%;
 	left: 50%;
-	margin-left: -520px;
-	bottom: 0;
+	margin-left: -(90.435% / 2);
+	bottom: -424px;
 }
 
 .svg-container {
