@@ -33,7 +33,9 @@
 		}
 	}
 	
+	
 	&-slider {
+		//основной слайдер
 		&__input {
 			display: none;
 		}
@@ -76,6 +78,7 @@
 		&__box {
 		}
 		
+		//элемент внешнего слайдера
 		&__item {
 			display: none;
 			height: 232px;
@@ -84,7 +87,20 @@
 		.generate-offers__slider(3);
 	}
 	
+	//элементы внешнего слайдера
 	&-item {
+		
+		//внутренний слайдер
+		&-slider {
+			height: 100%;
+			position: relative;
+			
+			&--products {
+				float: left;
+				width: 64%;
+			}
+		}
+		
 		&__box {
 			padding: 0 2%;
 			margin: 0 auto;
@@ -101,20 +117,23 @@
 				35px 0 10px -35px rgba(255, 255, 255, 0.5);
 		}
 		
-		&__inner--hover {
+		//всплывающее описание элементов внутреннего слайдера, общее
+		&__inner--pops {
 			position: absolute;
-			top: 0%;
+			top: 55%;
 			left: 0;
 			z-index: 10;
 		}
 		
+		//элемент внутреннего слайдера
 		&__item {
 			position: relative;
 			float: left;
 			
-			&--hover {
+			//всплывающее описание отдельного элемента внутреннего слайдера, общее
+			&--pops {
+				//сам блок с описанием
 				&_wrapper {
-					opacity: 0;
 					background: linear-gradient(45deg, #838997 78%, transparent 78%), linear-gradient(-45deg, #838997 78%, transparent 78%);
 					border-radius: 5px;
 					padding: 20px 15px;
@@ -122,11 +141,13 @@
 			}
 		}
 		
+		//картинка внутреннего слайдера
 		&__img {
 			width: 100%;
 			overflow: hidden;
 		}
 		
+		//заголовок элемента
 		&__title {
 			margin: 0 0 0.4em;
 			padding: 0 20px;
@@ -134,13 +155,15 @@
 			color: @color__offers-title;
 			font-weight: normal;
 			
-			&--hover {
+			//заголовок всплывающего описания
+			&--pops {
 				padding: 0;
 				text-align: center;
 				color: white;
 			}
 		}
 
+		//текст элемента
 		&__text {
 			margin: 0;
 			padding: 0 40px 0 20px;
@@ -148,13 +171,15 @@
 			font-size: @size__offers-item;
 			color: @color__offers-text;
 			
-			&--hover {
+			//текст всплывающего описания
+			&--pops {
 				padding: 0;
 				color: white;
 				font-size: @size;
 			}
 		}
 		
+		//скролл
 		&__scroll {
 			width: 96%;
 			margin: 0 auto;
@@ -187,6 +212,7 @@
 		}
 	}
 	
+	//стили Наши услуги
 	&-services {
 		&__inner {
 			width: 125%;
@@ -207,7 +233,9 @@
 				right: 2%;
 			}
 			
-			&--hover {
+			//стили всплывающего описания Наши услуги
+			&--pops {
+				display: none;
 				
 				&:after {
 					display: none;
@@ -215,7 +243,7 @@
 				
 				&_wrapper {
 					width: 114%;
-					margin: 45% -7% 0;
+					margin: 0 -7%;
 				}
 			}
 		}
@@ -227,6 +255,7 @@
 		.generate-offers-services(5);
 	}
 	
+	//стили Типы скрепления
 	&-skreplenie {
 		&__inner {
 			width: 129.37%;
@@ -244,16 +273,7 @@
 		.generate-offers-skreplenie(9);
 	}
 	
-	&-item-slider {
-		height: 100%;
-		position: relative;
-	}
-	
-	&-item-slider--products {
-		float: left;
-		width: 64%;
-	}
-	
+	//стили Наша продукция
 	&-products {
 		&__box {
 			padding: 1.6% 3.12%;
@@ -288,6 +308,7 @@
 			}
 		}
 		
+		//текстовый блок Наша продукция
 		&__info {
 			float: right;
 			padding: 2%;

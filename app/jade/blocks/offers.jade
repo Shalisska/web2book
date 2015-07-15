@@ -1,5 +1,6 @@
 include offers/slider
 
+//-основной слайдер
 mixin slider--offers(slider_name, items)
 	each item, i in items
 		if i===0
@@ -31,12 +32,12 @@ mixin slider--offers(slider_name, items)
 
 .offers
 	+slider--offers('offers-slider', [{
-												id: 'services',
-												name: 'Наши услуги'
-												}, {
-												id: 'products',
-												name: 'Наша продукция'
-												}, {
-												id: 'skreplenie',
-												name: 'Типы скрепления'
-												}])
+						id: 'services',
+						name: 'Наши услуги'
+						}, {
+						id: 'products',
+						name: 'Наша продукция'
+						}, {
+						id: 'skreplenie',
+						name: 'Типы скрепления'
+						}])

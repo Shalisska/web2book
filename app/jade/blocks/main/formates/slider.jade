@@ -7,20 +7,20 @@ mixin slider--formates_item(slider_name, items)
 						div.formates-item__img(class='formates-' + slider_name + '__img'): img(src='../images/formates/format@4680.png', alt=item.id)
 						if item.text
 							p.formates-item__text=item.text
-			.formates-item__inner.formates-item__inner--hover.clearfix(class='formates-' + slider_name + '__inner' + ' ' + 'formates-' + slider_name + '__inner--hover')
+			.formates-item__inner.formates-item__inner--pops.clearfix(class='formates-' + slider_name + '__inner' + ' ' + 'formates-' + slider_name + '__inner--pops')
 				-each item in items
 					if item.hover
-						+slider--formates_item--hover(slider_name, item.id, item.hover)
+						+slider--formates_item--pops(slider_name, item.id, item.hover)
 
 		div.formates-item__scroll(class='formates-' + slider_name + '__scroll')
 			div.formates-item__scroll_bar(class='formates-' + slider_name + '__scroll_bar')
 				div.formates-item__scroll_control(class='formates-' + slider_name + '__scroll_control')
 
-mixin slider--formates_item--hover(slider_name, id, items)
-	div.formates-item__item.formates-item__item--hover(class='formates-' + slider_name + '__item' + ' ' + 'formates-' + slider_name + '__' + id + ' ' + 'formates-' + slider_name + '__item--hover' + ' ' + 'formates-' + slider_name + '__' + id + '--hover')
-		div.formates-item__item--hover_wrapper(class='formates-' + slider_name + '__item--hover_wrapper' + ' ' + 'formates-' + slider_name + '__' + id + '--hover_wrapper')
+mixin slider--formates_item--pops(slider_name, id, items)
+	div.formates-item__item.formates-item__item--pops(class='formates-' + slider_name + '__item' + ' ' + 'formates-' + slider_name + '__' + id + ' ' + 'formates-' + slider_name + '__item--pops' + ' ' + 'formates-' + slider_name + '__' + id + '--pops')
+		div.formates-item__item--pops_wrapper(class='formates-' + slider_name + '__item--pops_wrapper' + ' ' + 'formates-' + slider_name + '__' + id + '--pops_wrapper')
 			each item in items
-				p.formates-item__text.formates-item__text--hover=item
+				p.formates-item__text.formates-item__text--pops=item
 
 mixin formates
 	+slider--formates_item('formates', [{
@@ -30,7 +30,7 @@ mixin formates
 	}, {
 		id: 'a1',
 		text: 'А1 – 594Х841 мм',
-		hover: ['']
+		hover: ['А1 имеет размер 594Х841 мм.']
 	}, {
 		id: 'a2',
 		text: 'А2 – 420Х594 мм',

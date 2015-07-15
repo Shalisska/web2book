@@ -10,15 +10,15 @@ html.no-svg(lang="ru")
 
 	body
 		include ../helpers/svg
-		//.body-wrapper
-		include ../blocks/header
+		.body-wrapper
+			include ../blocks/header
 
-		main
-			.container.container--main(class=specClass)
-				block content
+			main
+				.container.container--main(class=specClass)
+					block content
 
-		.footer-wrapper
-			include ../blocks/footer
+			.footer-wrapper
+				include ../blocks/footer
 
 	include ../blocks/scripts
 	block scripts

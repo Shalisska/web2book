@@ -12,6 +12,7 @@
 		inset 0 1px 0 0 white,
 		0 1px 3px rgba(0, 0, 0, 0.3);
 	
+	//общий слайдер
 	&-slider {
 		&__input {display: none;}
 		
@@ -41,19 +42,6 @@
 				}
 				
 				&:hover span {border-bottom-color: #399ee5;}
-				
-//				&:after {
-//					display: none;
-//					content: '';
-//					position: absolute;
-//					bottom: -9px;
-//					margin-left: -20px;
-//					width: 40px;
-//					height: 31px;
-//					background: url('../images/formates/formates-slider-control@40.png') no-repeat center center;
-//					background-size: 40px 31px;
-//					z-index: 15;
-//				}
 			}
 			
 			&_scroll {
@@ -82,6 +70,7 @@
 			}
 		}
 		
+		//сам общий слайдер
 		&__box {
 			height: 82.8%;
 			padding: 8px 3px 5px;
@@ -134,6 +123,7 @@
 			}
 		}
 		
+		//элемент слайдера
 		&__item {
 			display: none;
 			height: 100%;
@@ -143,22 +133,76 @@
 	}
 	
 	&-item {
+		//внутренний сладер
 		&-slider {
 			position: relative;
 			height: 100%;
 			padding: 3px 28px 3px 22px;
 		}
 		
+		&__box {
+			height: 100%;
+			overflow: hidden;
+		}
+		
+		//всплывающее описание элементов внутреннего слайдера, общее
+		&__inner--pops {
+			position: absolute;
+			top: 0;
+			left: 71.25%;
+			width: 82.8%;
+			height: 377%;
+		}
+		
+		//элемент внутреннего слайдера
 		&__item {
 			padding: 5px 0;
 			border-bottom: 1px dashed #b2b2b2;
 			
 			&:last-child {border-bottom: none;}
+			
+			//всплывающее описание отдельного элемента внутреннего слайдера, общее
+			&--pops {
+				display: none;
+				position: relative;
+				height: 11.123%;
+				padding: 0;
+				border: none;
+				
+				//сам блок с описанием
+				&_wrapper {
+					position: absolute;
+					left: 0;
+					bottom: 50%;
+					margin-bottom: 40px;
+					z-index: 50;
+					background-color: white;
+					border-radius: 5px 5px 0 0;
+					border: 1px solid #bfbfbf;
+					border-bottom: 0;
+					box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.35);
+					
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: -40px;
+						left: -3%;
+						width: 106.5%;
+						height: 40px;
+						background: url(../images/formates/formates_cloud--bottom@254.png) no-repeat center top;
+						background-size: 100% 40px;
+					}
+				}
+			}
 		}
 		
 		&__text {
 			text-align: center;
 			margin: 0;
+			
+			&--pops {
+				padding: 7.9%;
+			}
 		}
 		
 		&__scroll {
@@ -186,22 +230,10 @@
 				border-radius: 2px;
 			}
 		}
-		
-		&__box {
-			height: 100%;
-			overflow: hidden;
-		}
-		
-		&__inner {}
 	}
 	
+	//элемент Форматы
 	&-formates {
-		&__inner {}
-		
-		&__item {
-		}
-		
-	
 		&__img {
 			width: 100%;
 
@@ -209,7 +241,6 @@
 				width: (1800%);
 			}
 		}
-
 		
 		.generate-formates__formates(9);
 	}
