@@ -19,8 +19,8 @@ mixin slider(slider_name, items)
 	
 	div(class=slider_name + '__controls')
 		div(class=slider_name + '__controls--arrows')
-			a(class=slider_name + '__controls--arrows-prev' href='/')
-			a(class=slider_name + '__controls--arrows-next' href='/')
+			a(class=slider_name + '__controls--arrows-prev' + ' sprite ' + 'sprite_icon-' + slider_name + '_controls--prev' href='/')
+			a(class=slider_name + '__controls--arrows-next'  + ' sprite ' + 'sprite_icon-' + slider_name + '_controls--next' href='/')
 		
 		div(class=slider_name + '__controls--buttons')
 			each item, i in items

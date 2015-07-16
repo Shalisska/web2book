@@ -17,7 +17,7 @@ var header_btn = {
 	img_dir: 'header/header-slider_controls--btn',
 	dest: [{
 		width: ['0'],
-		retina: { x1: '46', x15: '69', x2: '92', x3: '138'}
+		retina: 46
 	}]
 };
 	
@@ -25,7 +25,7 @@ var header_arrow = {
 	img_dir: 'header/sprite/reg',
 	dest: [{
 		width: ['0'],
-		retina: { x1: '42', x15: '63', x2: '84', x3: '126'}
+		retina: 42
 	}]
 };
 
@@ -33,16 +33,16 @@ var header_arrow_hover = {
 	img_dir: 'header/sprite/hover',
 	dest: [{
 		width: ['0'],
-		retina: { x1: '52', x15: '78', x2: '104', x3: '156'}
+		retina: 52
 	}]
 };
 
 function retina_cr(retina) {
   var arr = []
-  arr.push({size: '1', img_size: retina.x1});
-  arr.push({size: '1.5', img_size: retina.x15});
-  arr.push({size: '2', img_size: retina.x2});
-  arr.push({size: '3', img_size: retina.x3});
+  arr.push({size: '1', img_size: retina});
+  arr.push({size: '1.5', img_size: retina * 1.5});
+  arr.push({size: '2', img_size: retina * 2});
+  arr.push({size: '3', img_size: retina * 3});
   return arr;
 };
 
@@ -193,7 +193,7 @@ var my_sprite = {
 			var ret = ret_i;
 			
 			var tem = function(data) {
-				var result = '.sprite {display: inline-block; background-image: url(../images/spritesheet@' + ret + '.png); background-repeat: no-repeat;}';
+				var result = '';
 			
 				if (ret != 1) {
 					var media_opera;
@@ -210,22 +210,49 @@ var my_sprite = {
 							break
 						default:
 							break
-					};
+				};
 
-					result += '@media only screen and (-webkit-min-device-pixel-ratio: ' + ret + '), only screen and (min--moz-device-pixel-ratio: ' + ret + '), only screen and (-o-min-device-pixel-ratio: ' + media_opera + '), only screen and (min-device-pixel-ratio: ' + ret + '), only screen and (min-resolution: ' + media_dpi + 'dpi), only screen and (min-resolution: ' + ret + 'dppx) {\n';
-};
-					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
-						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-						result += '.sprite_icon-' + name_new + '{' +
+				result += '@media only screen and (-webkit-min-device-pixel-ratio: ' + ret + '), only screen and (min--moz-device-pixel-ratio: ' + ret + '), only screen and (-o-min-device-pixel-ratio: ' + media_opera + '), only screen and (min-device-pixel-ratio: ' + ret + '), only screen and (min-resolution: ' + media_dpi + 'dpi), only screen and (min-resolution: ' + ret + 'dppx) {\n';
+				};
+				
+				result += '.sprite {background-image: url(../images/spritesheet/spritesheet@' + ret + '.png);}'
+				
+				for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+					var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+					var name = [];
+					var hover = '--hover';
+					var active = '--active';
+					var header_slider_btn = {
+						name: 'header-slider_controls--btn',
+						vars: ['slide1', 'slide2', 'slide3', 'slide4', 'slide5']};
+					
+					if(name_new.slice(0, header_slider_btn.name.length) == name_new) {
+						for(var i = 0, ii = header_slider_btn.vars.length; i < ii; i += 1) {
+							var elem = header_slider_btn.vars[i];
+							var name_new = '.header-slider__input#header-slider--' + elem + ':checked ~ .header-slider__controls label[for="header-slider--' + elem + '"]';
+							name.push(name_new);
+						}
+					} else if(name_new.slice(name_new.length - hover.length) == hover) {
+						name_new = name_new.slice(0, (name_new.length - hover.length)) + ':hover';
+						name.push(name_new);
+					} else if(name_new.slice(name_new.length - active.length) == active) {
+						name_new = name_new.slice(0, (name_new.length - active.length)) + ':active';
+						name.push(name_new);
+					}
+					
+					for (var j = 0, jj = name.length; j < jj; j += 1) {
+						
+						
+						result += name_new[j] + '{' +
 							'background-position: ' + parseInt(data.items[i].offset_x)/ret + 'px ' + parseInt(data.items[i].offset_y)/ret + 'px;' +
 							'background-size: ' + parseInt(data.items[i].total_width)/ret + 'px ' + parseInt(data.items[i].total_height)/ret + 'px;' +
 							'width: ' + parseInt(data.items[i].width)/ret + 'px;' +
 							'height: ' + parseInt(data.items[i].height)/ret + 'px;' +
-							'}\n'
+							'}\n';
 					}
+				}
 				return result;
 			}
-			
 			return tem;
 		};
 
