@@ -905,6 +905,11 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
     height: 260px;
   }
 }
+@media (max-width: 550px) {
+  .header-slider__item {
+    height: 280px;
+  }
+}
 .header-slider__controls {
   background-position: center;
   background-repeat: no-repeat;

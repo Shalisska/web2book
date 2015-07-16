@@ -1,3 +1,5 @@
+//сортировка файлов для спрайта
+
 var sprite_files = [];
 
 function sprite_create() {
@@ -11,25 +13,27 @@ function in_array(value, array) {
   return false;
 };
 	
-var workmap = {
-	img_dir: 'workmap',
+var header_btn = {
+	img_dir: 'header/header-slider_controls--btn',
 	dest: [{
 		width: ['0'],
-		retina: { x1: '202', x15: '303', x2: '404', x3: '606'}
-	}, {
-		width: ['991'],
-		retina: { x1: '126', x15: '189', x2: '252', x3: '378'}
-	}, {
-		width: ['767'],
-		retina: { x1: '86', x15: '129', x2: '172', x3: '258'}
+		retina: { x1: '46', x15: '69', x2: '92', x3: '138'}
 	}]
 };
 	
-var action_controls = {
-	img_dir: 'sprite/action-order-controls',
+var header_arrow = {
+	img_dir: 'header/sprite/reg',
 	dest: [{
-		width: ['0', '991', '767'],
-		retina: { x1: '150', x15: '225', x2: '300', x3: '450'}
+		width: ['0'],
+		retina: { x1: '42', x15: '63', x2: '84', x3: '126'}
+	}]
+};
+
+var header_arrow_hover = {
+	img_dir: 'header/sprite/hover',
+	dest: [{
+		width: ['0'],
+		retina: { x1: '52', x15: '78', x2: '104', x3: '156'}
 	}]
 };
 
@@ -38,7 +42,7 @@ function retina_cr(retina) {
   arr.push({size: '1', img_size: retina.x1});
   arr.push({size: '1.5', img_size: retina.x15});
   arr.push({size: '2', img_size: retina.x2});
-  arr.push({size: '3', img_size: retina.x3});    
+  arr.push({size: '3', img_size: retina.x3});
   return arr;
 };
 
@@ -68,7 +72,7 @@ function dest_build(dir, dests) {
   var array = [];
   for (var k=0; k<dests.length; k++) {
     var dest = dests[k];
-    var item = retina_cr(dest.retina);    
+    var item = retina_cr(dest.retina);
 
     for(var j=0; j<dest.width.length; j++) {
       var width_r = dest.width[j];
@@ -159,13 +163,87 @@ function width_build(width, array) {
   return arr;
 };
 	
-var sprite_arr = [workmap, action_controls];
+var sprite_arr = [header_btn, header_arrow, header_arrow_hover];
 sprite_files = sprite_cr(sprite_arr);
 
 return sprite_files;
 };
 sprite_create();
-	
+
+//создание спрайтов
+var my_sprite = {
+  vars: {
+    name: 'retina',
+    retina: [1, 1.5, 2, 3]
+  },
+	obj_cr: function() {
+    var vars = this.vars;
+    var obj_gl = {};
+    
+    for(var i=0; i<vars.retina.length; i++) {
+      var obj ={};
+      
+      var retina_name = vars.retina[i];
+      if(vars.retina[i]%1 != 0) {
+        retina_name = vars.retina[i] * 10;
+      };
+      var obj_name = vars.name + retina_name;
+		
+		function templ(ret_i) {
+			var ret = ret_i;
+			
+			var tem = function(data) {
+				var result = '.sprite {display: inline-block; background-image: url(../images/spritesheet@' + ret + '.png); background-repeat: no-repeat;}';
+			
+				if (ret != 1) {
+					var media_opera;
+					var media_dpi = 96*ret;
+					switch (ret) {
+						case 1.5:
+							media_opera = '3/2';
+							break
+						case 2:
+							media_opera = '2/1';
+							break
+						case 3:
+							media_opera = '5/2';
+							break
+						default:
+							break
+					};
+
+					result += '@media only screen and (-webkit-min-device-pixel-ratio: ' + ret + '), only screen and (min--moz-device-pixel-ratio: ' + ret + '), only screen and (-o-min-device-pixel-ratio: ' + media_opera + '), only screen and (min-device-pixel-ratio: ' + ret + '), only screen and (min-resolution: ' + media_dpi + 'dpi), only screen and (min-resolution: ' + ret + 'dppx) {\n';
+};
+					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+						result += '.sprite_icon-' + name_new + '{' +
+							'background-position: ' + parseInt(data.items[i].offset_x)/ret + 'px ' + parseInt(data.items[i].offset_y)/ret + 'px;' +
+							'background-size: ' + parseInt(data.items[i].total_width)/ret + 'px ' + parseInt(data.items[i].total_height)/ret + 'px;' +
+							'width: ' + parseInt(data.items[i].width)/ret + 'px;' +
+							'height: ' + parseInt(data.items[i].height)/ret + 'px;' +
+							'}\n'
+					}
+				return result;
+			}
+			
+			return tem;
+		};
+
+		obj = {
+			src: 'spec/sprite/sprite@' + vars.retina[i] + '/*.png',
+			dest: 'spec/spritesheet@' + vars.retina[i] + '.png',
+			destCss: 'app/less/helpers/sprites@' + vars.retina[i] + '.less',
+			cssTemplate: templ(vars.retina[i])
+		};
+
+			obj_gl[obj_name] = obj;
+		}
+		return obj_gl;
+	}
+};
+var sprite_build = my_sprite.obj_cr();
+
+
 
 module.exports = function (grunt) {
 	
@@ -246,36 +324,36 @@ module.exports = function (grunt) {
 		},
 		//очистка папки проекта
 		clean: {
-			build: ['build']
-			//build_sprite: ['spec']
+			//build: ['build']
+			build_sprite: ['spec']
 		},
 		//копирование файлов в папку проекта
 		copy: {
-			build: {
-				files: [{
-					expand: true,
-					cwd: 'app/',
-					src: [
-						'css/**',
-						'images/**',
-						'scripts/**',
-						'fonts/**'
-					],
-					dest: 'build'
-				}]
-			},
-			//копирование только нужных html-файлов
-			build_html: {
-				files: [{
-					expand: true,
-					cwd: 'app/html/',
-					src:['*.html'],
-					dest: 'build'
-				}]
-			}
-//			build_sprite: {
-//				files: sprite_files
+//			build: {
+//				files: [{
+//					expand: true,
+//					cwd: 'app/',
+//					src: [
+//						'css/**',
+//						'images/**',
+//						'scripts/**',
+//						'fonts/**'
+//					],
+//					dest: 'build'
+//				}]
+//			},
+//			//копирование только нужных html-файлов
+//			build_html: {
+//				files: [{
+//					expand: true,
+//					cwd: 'app/html/',
+//					src:['*.html'],
+//					dest: 'build'
+//				}]
 //			}
+			build_sprite: {
+				files: sprite_files
+			}
 		},
 		//работа с jade-файлами
 		jade: {
@@ -356,90 +434,93 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		sprite:{
-			normal: {
-				src: 'spec/*.png',
-				dest: 'spec/spritesheet.png',
-				destCss: 'app/less/helpers/sprites.less',
-				imgPath: '../images/sprite.png',
-				algorithm: 'top-down',
-				cssTemplate: function(data) {
-					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet.png); background-repeat: no-repeat;}';
-					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
-						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-						result += '.sprite_icon-' + name_new + '{' +
-							'background-position: ' + data.items[i].px.offset_x + ' ' + data.items[i].px.offset_y + ';' +
-							'width: ' + data.items[i].px.width + ';' +
-							'height: ' + data.items[i].px.height + ';' +
-							'}\n'
-					}
-					return result;
-				}
-			},
-			large15: {
-				src: 'spec/sprite/sprite@1.5/*.png',
-				destImg: 'spec/spritesheet@1.5x.png',
-				destCSS: 'spec/spritestyles@1.5x.less',
-				padding: 3,
-				cssTemplate: function (data) {
-					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@1.5x.png); background-repeat: no-repeat;}';
-					result += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {\n';
-					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
-						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-						result += '.sprite_icon-' + name_new + '{' +
-							'background-position: ' + data.items[i].offset_x/1.5 + 'px ' + data.items[i].offset_y/1.5 + 'px;' +
-							'background-size: ' + data.items[i].total_width/1.5 + 'px ' + data.items[i].total_height/1.5 + 'px;' +
-							'width: ' + data.items[i].width/1.5 + 'px;' +
-							'height: ' + data.items[i].height/1.5 + 'px;' +
-							'}\n'
-					}
-					result += '}';
-					return result;
-				}
-			},
-			large2: {
-				src: 'spec/sprite/sprite@2/*.png',
-				destImg: 'spec/spritesheet@2x.png',
-				destCSS: 'spec/spritestyles@2x.less',
-				padding: 4,
-				cssTemplate: function (data) {
-					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@2x.png); background-repeat: no-repeat;}';
-					result += '@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {\n';
-					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
-						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-						result += '.sprite_icon-' + name_new + '{' +
-							'background-position: ' + data.items[i].offset_x/2 + 'px ' + data.items[i].offset_y/2 + 'px;' +
-							'background-size: ' + data.items[i].total_width/2 + 'px ' + data.items[i].total_height/2 + 'px;' +
-							'width: ' + data.items[i].width/2 + 'px;' +
-							'height: ' + data.items[i].height/2 + 'px;' +
-							'}\n'
-					}
-					result += '}';
-					return result;
-				}
-			},
-			large3: {
-				src: 'spec/sprite/sprite@3/*.png',
-				destImg: 'spec/spritesheet@3x.png',
-				destCSS: 'spec/spritestyles@3x.less',
-				padding: 6,
-				cssTemplate: function (date) {
-					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@3x.png); background-repeat: no-repeat;}';
-					result += '@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {\n';
-					for (var i = 0, ii = date.items.length; i < ii; i += 1) {
-						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-						result += '.sprite_icon-' + name_new + '{' +
-							'background-position: ' + date.items[i].offset_x/3 + 'px ' + date.items[i].offset_y/3 + 'px;' +
-							'background-size: ' + date.items[i].total_width/3 + 'px ' + date.items[i].total_height/3 + 'px;' +
-							'width: ' + date.items[i].width/3 + 'px;' +
-							'height: ' + date.items[i].height/3 + 'px;' +
-							'}\n'
-					}
-					result += '}';
-					return result;
-				}
-			}
-		}
+		sprite: sprite_build
+//		sprite: {
+//			normal: sprite_build
+//			normal: {
+//				ret: 1,
+//				src: 'spec/sprite/sprite@1/*.png',
+//				dest: 'spec/spritesheet@1.png',
+//				destCss: 'app/less/helpers/sprites@1.less',
+//				cssTemplate: function(data) {
+//					var ret = this.ret;
+//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@' + ret + '.png); background-repeat: no-repeat;}';
+//					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+//						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+//						result += '.sprite_icon-' + name_new + '{' +
+//							'background-position: ' + data.items[i].px.offset_x + ' ' + data.items[i].px.offset_y + ';' +
+//							'width: ' + data.items[i].px.width + ';' +
+//							'height: ' + data.items[i].px.height + ';' +
+//							'}\n'
+//					}
+//					return result;
+//				}
+//			}
+//		}
+//			large15: {
+//				src: 'spec/sprite/sprite@1.5/*.png',
+//				dest: 'spec/spritesheet@1.5.png',
+//				destCss: 'app/less/helpers/sprites@1.5.less',
+//				padding: 3,
+//				cssTemplate: function (data) {
+//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@1.5x.png); background-repeat: no-repeat;}';
+//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {\n';
+//					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+//						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+//						result += '.sprite_icon-' + name_new + '{' +
+//							'background-position: ' + data.items[i].offset_x/1.5 + 'px ' + data.items[i].offset_y/1.5 + 'px;' +
+//							'background-size: ' + data.items[i].total_width/1.5 + 'px ' + data.items[i].total_height/1.5 + 'px;' +
+//							'width: ' + data.items[i].width/1.5 + 'px;' +
+//							'height: ' + data.items[i].height/1.5 + 'px;' +
+//							'}\n'
+//					}
+//					result += '}';
+//					return result;
+//				}
+//			},
+//			large2: {
+//				src: 'spec/sprite/sprite@2/*.png',
+//				dest: 'spec/spritesheet@2.png',
+//				destCss: 'app/less/helpers/sprites@2.less',
+//				padding: 4,
+//				cssTemplate: function (data) {
+//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@2x.png); background-repeat: no-repeat;}';
+//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {\n';
+//					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+//						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+//						result += '.sprite_icon-' + name_new + '{' +
+//							'background-position: ' + data.items[i].offset_x/2 + 'px ' + data.items[i].offset_y/2 + 'px;' +
+//							'background-size: ' + data.items[i].total_width/2 + 'px ' + data.items[i].total_height/2 + 'px;' +
+//							'width: ' + data.items[i].width/2 + 'px;' +
+//							'height: ' + data.items[i].height/2 + 'px;' +
+//							'}\n'
+//					}
+//					result += '}';
+//					return result;
+//				}
+//			},
+//			large3: {
+//				src: 'spec/sprite/sprite@3/*.png',
+//				dest: 'spec/spritesheet@3.png',
+//				destCss: 'app/less/helpers/sprites@3.less',
+//				padding: 6,
+//				cssTemplate: function (data) {
+//					var result = '.sprite {display: inline-block; background-image: url(../img/spritesheet@3x.png); background-repeat: no-repeat;}';
+//					result += '@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {\n';
+//					for (var i = 0, ii = data.items.length; i < ii; i += 1) {
+//						var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
+//						result += '.sprite_icon-' + name_new + '{' +
+//							'background-position: ' + data.items[i].offset_x/3 + 'px ' + data.items[i].offset_y/3 + 'px;' +
+//							'background-size: ' + data.items[i].total_width/3 + 'px ' + data.items[i].total_height/3 + 'px;' +
+//							'width: ' + data.items[i].width/3 + 'px;' +
+//							'height: ' + data.items[i].height/3 + 'px;' +
+//							'}\n'
+//					}
+//					result += '}';
+//					return result;
+//				}
+//			}
+//		}
 	});
 	
 	grunt.registerTask('default', [
@@ -462,5 +543,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('replacing', [
 		'clean',
 		'copy'
+	]);
+	
+	grunt.registerTask('sprite_build', [
+		'sprite'
 	]);
 };

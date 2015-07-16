@@ -18,16 +18,26 @@ mixin slide1(name)
 	.header-slide1__img
 		+picture({
 				name: name,
-				adress: '../images/header/header_slide1@',
+				adress: '../images/header/header_slider/header_slide1@',
 				ext: 'png'
 			}, {
 				main: {
-					width: '544',
-					img: ['544', '544', '544', '544']
+					width: '560',
+					img: ['560', '840', '1120', '1680']
 				},
 				other: [{
 					val: 'max',
 					width: '730',
-					img: ['380', '380', '380', '380']
+					img: ['288', '432', '576', '864']
 				}]
 			})
+			
+//-{
+//-	val: 'max',
+//-	width: '960',
+//-	img: ['460', '690', '920', '1380']
+//-	}, {
+//-	val: 'max',
+//-	width: '768',
+//-	img: ['366', '549', '732', '1098']
+//-	}
