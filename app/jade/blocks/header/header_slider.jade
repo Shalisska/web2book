@@ -24,7 +24,7 @@ mixin slider(slider_name, items)
 		
 		div(class=slider_name + '__controls--buttons')
 			each item, i in items
-				label(for=slider_name + '--slide' + (i + 1))
+				label(class='sprite ' + 'sprite_icon-' + slider_name + '_controls--btn' for=slider_name + '--slide' + (i + 1))
 
 .header-slider
 	+slider('header-slider', ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'])

@@ -1,0 +1,49 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - 'imagemin'
+
+imagemin:
+    - 'imagemin'
+
+autoprefixer:
+    - 'autoprefixer'
+
+clean:
+    - 'clean'
+
+cmq:
+    - 'cmq'
+
+copy:
+    - 'copy'
+
+csscomb:
+    - 'csscomb'
+
+cssmin:
+    - 'cssmin'
+
+htmlmin:
+    - 'htmlmin'
+
+jade:
+    - 'jade'
+
+less:
+    - 'less'
+
+prettyfy:
+    - 'prettyfy'
+
+replace:
+    - 'replace'
+
+uglify:
+    - 'uglify'
+
+watch:
+    - 'watch'
+
+sprite:
+    - 'sprite'

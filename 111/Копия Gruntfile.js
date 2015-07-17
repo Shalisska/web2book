@@ -1,5 +1,4 @@
 //сортировка файлов для спрайта
-
 var sprite_files = [];
 
 function sprite_create() {
@@ -219,37 +218,37 @@ var my_sprite = {
 				
 				for (var i = 0, ii = data.items.length; i < ii; i += 1) {
 					var name_new = data.items[i].name.replace((/@[0-9]*/g), '');
-					var name = [];
+					var name = '.sprite_icon-' + name_new;
 					var hover = '--hover';
 					var active = '--active';
 					var header_slider_btn = {
-						name: 'header-slider_controls--btn',
+						name: 'header-slider_controls--btn--active',
 						vars: ['slide1', 'slide2', 'slide3', 'slide4', 'slide5']};
 					
-					if(name_new.slice(0, header_slider_btn.name.length) == name_new) {
-						for(var i = 0, ii = header_slider_btn.vars.length; i < ii; i += 1) {
-							var elem = header_slider_btn.vars[i];
-							var name_new = '.header-slider__input#header-slider--' + elem + ':checked ~ .header-slider__controls label[for="header-slider--' + elem + '"]';
-							name.push(name_new);
+					if(name_new == header_slider_btn.name) {
+						name_new = [];
+						for(var j = 0, jj = header_slider_btn.vars.length; j < jj; j += 1) {
+							var elem = header_slider_btn.vars[j];
+							var name_elem = '.header-slider__input#header-slider--' + elem
+							+ ':checked ~ .header-slider__controls label[for="header-slider--' + elem + '"]';
+							name_new.push(name_elem);
+						};
+						name = '' + name_new;
+					} else {
+						if(name_new.slice(name_new.length - hover.length) == hover) {
+							name_new = name_new.slice(0, (name_new.length - hover.length)) + ':hover';
+						} else if(name_new.slice(name_new.length - active.length) == active) {
+							name_new = name_new.slice(0, (name_new.length - active.length)) + ':active';
 						}
-					} else if(name_new.slice(name_new.length - hover.length) == hover) {
-						name_new = name_new.slice(0, (name_new.length - hover.length)) + ':hover';
-						name.push(name_new);
-					} else if(name_new.slice(name_new.length - active.length) == active) {
-						name_new = name_new.slice(0, (name_new.length - active.length)) + ':active';
-						name.push(name_new);
+						name = '.sprite_icon-' + name_new;
 					}
 					
-					for (var j = 0, jj = name.length; j < jj; j += 1) {
-						
-						
-						result += name_new[j] + '{' +
+						result += name + '{' +
 							'background-position: ' + parseInt(data.items[i].offset_x)/ret + 'px ' + parseInt(data.items[i].offset_y)/ret + 'px;' +
 							'background-size: ' + parseInt(data.items[i].total_width)/ret + 'px ' + parseInt(data.items[i].total_height)/ret + 'px;' +
 							'width: ' + parseInt(data.items[i].width)/ret + 'px;' +
 							'height: ' + parseInt(data.items[i].height)/ret + 'px;' +
 							'}\n';
-					}
 				}
 				return result;
 			}
