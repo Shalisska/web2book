@@ -1,0 +1,25 @@
+{
+  "name": "Web2book",
+  "dependencies": {
+    "time-grunt": "^1.2.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "load-grunt-config": "^0.17.2",
+    "grunt-autoprefixer": "~1.0",
+    "grunt-combine-media-queries": "~1.0",
+    "grunt-contrib-clean": "~0.6",
+    "grunt-contrib-copy": "~0.7",
+    "grunt-contrib-cssmin": "~0.10",
+    "grunt-contrib-htmlmin": "~0.3",
+    "grunt-contrib-imagemin": "~0.9",
+    "grunt-contrib-jade": "~0.14",
+    "grunt-contrib-less": "~0.12",
+    "grunt-contrib-uglify": "~0.6",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-csscomb": "~3.0",
+    "grunt-prettify": "~0.4",
+    "grunt-replace": "~0.8",
+    "grunt-spritesmith": "~4.7"
+  }
+}

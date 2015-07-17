@@ -1,0 +1,8 @@
+{
+	"default": [
+		"clean"
+	],
+	"clean": [
+		"clean"
+	]
+}
