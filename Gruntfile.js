@@ -274,6 +274,7 @@ var sprite_build = my_sprite.obj_cr();
 module.exports = function (grunt) {
 	
 	require('load-grunt-tasks')(grunt);
+
 	
 	grunt.initConfig({
 		//компиляция less
@@ -350,7 +351,7 @@ module.exports = function (grunt) {
 		},
 		//очистка папки проекта
 		clean: {
-			build: ['build'],
+			//build: ['build'],
 			build_sprite: ['spec1']
 		},
 		//копирование файлов в папку проекта
@@ -440,23 +441,36 @@ module.exports = function (grunt) {
 		},
 		//замена относительных адресов
 		replace: {
+//			build: {
+//				options: {
+//					patterns: [{
+//						match: /src="..\//g,
+//						replacement: 'src="'
+//					}, {
+//						match: /href="..\//g,
+//						replacement: 'href="'
+//					}, {
+//						match: /..\/images/g,
+//						replacement: 'images'
+//					}]
+//				},
+//				files: [{
+//					expand: true,
+//					flattern: true,
+//					src: ['build/*.html']
+//				}]
+//			}
 			build: {
 				options: {
 					patterns: [{
-						match: /src="..\//g,
-						replacement: 'src="'
-					}, {
-						match: /href="..\//g,
-						replacement: 'href="'
-					}, {
-						match: /..\/images/g,
-						replacement: 'images'
+						match: /\@/g,
+						replacement: '$'
 					}]
 				},
 				files: [{
 					expand: true,
 					flattern: true,
-					src: ['build/*.html']
+					src: ['app/stylus/helpers/variables.styl']
 				}]
 			}
 		},

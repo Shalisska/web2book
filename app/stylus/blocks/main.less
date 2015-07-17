@@ -1,0 +1,46 @@
+.container--main {
+	position: relative;
+	width: 96.16%;
+	padding-bottom: 3.93em;
+	background: white;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
+	
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		z-index: 10;
+		bottom: -2.8%;
+		background-repeat: no-repeat;
+	}
+	
+	&:before {
+		left: -1.5%;
+		width: 44px;
+		height: 52px;
+		background-size: 44px 52px;
+		background-image: url(../images/footer/icon_footer-clip--left.png);
+	}
+	
+	&:after {
+		right: -2%;
+		width: 47px;
+		height: 53px;
+		background-size: 47px 53px;
+		background-image: url(../images/footer/icon_footer-clip--right.png);
+	}
+}
+
+.main-content {
+	position: relative;
+	margin: 0 20px 3.93em;
+	overflow: hidden;
+}
+
+@import url('offers.less');
+@import url('news.less');
+@import url('formates.less');
+@import url('content.less');
+@import url('teasers.less');
+
+
+

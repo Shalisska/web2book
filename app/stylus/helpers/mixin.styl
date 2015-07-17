@@ -1,0 +1,114 @@
+reset-ul () {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+reset-a () {
+	text-decoration: none;
+	color: inherit;
+	
+	&:hover, &:active, &:visited {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+
+
+.generate-header__slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		slide1,
+		slide2,
+		slide3,
+		slide4,
+		slide5;
+	@item: extract(@items, @i);
+	
+	@translate_slide1: 0;
+	@translate_slide2: -20%;
+	@translate_slide3: -40%;
+	@translate_slide4: -60%;
+	@translate_slide5: -80%;
+
+	&__input#header-slider--@{item}:checked~&__controls label[for='header-slider--@{item}'] {
+		background-position: -92px -99px;
+	}
+	
+	&__input#header-slider--@{item}:checked~&__box &__inner{
+		transform: translate(~"@{translate_@{item}}", 0);
+	}
+
+	.generate-header__slider(@n, (@i + 1));
+}
+
+.generate-offers__slider(@n, @i: 1) when (@i =< @n) {
+	@items:
+		services,
+		products,
+		skreplenie;
+	@item: extract(@items, @i);
+	
+	&__input#offers-slider--@{item}:checked~.offers-title label[for='offers-slider--@{item}'] {
+		color: @color__offers-header--active;
+		background-image: url(../images/offers/offers-rect.png);
+		text-shadow: 0 1px 0 rgba(29, 118, 183, 0.75);
+	}
+	
+	&__input#offers-slider--@{item}:checked~&__box .offers-@{item} {
+		display: block;
+	}
+
+	.generate-offers__slider(@n, (@i + 1));
+}
+
+//----------------------------//
+.generate-contacs__item(@n, @i: 1) when (@i =< @n) {
+	@items:
+		phone,
+		mail,
+		skype,
+		adress;
+	@item: extract(@items, @i);
+	
+	@grad-phone: radial-gradient(#2093bf, #197295);
+	@grad-mail: radial-gradient(#166381, #114c64);
+	@grad-skype: radial-gradient(#39c7fe, #2c9bc5);
+	@grad-adress: radial-gradient(#7cc576, #60985b);
+
+	&--@{item}:before {
+		background-image: url('../images/contacts/icon_@{item}.svg'),~"@{grad-@{item}}";
+	}
+
+	.generate-contacs__item(@n, (@i + 1));
+}
+
+.generate-socials(@n, @i: 1) when (@i =< @n) {
+	@socials:
+		twitt,
+		vk,
+		fb,
+		odnoklassniki,
+		google;
+	@social: extract(@socials, @i);
+	
+	@color-twitt: #28c3ff;
+	@grad-twitt: radial-gradient(#25b4eb, #1b84ad);
+	@color-vk: #6996c7;
+	@grad-vk: radial-gradient(#5981aa, #476687);
+	@color-fb: #496194;
+	@grad-fb: radial-gradient(#435988, #324264);
+	@color-odnoklassniki: #ff9c43;
+	@grad-odnoklassniki: radial-gradient(#eb903e, #ad6a2d);
+	@color-google: #ff6d4a;
+	@grad-google: radial-gradient(#eb6444, #ad4a32);
+
+	&--@{social} {
+		background: ~"@{color-@{social}}";
+		
+		&:hover {
+		background: ~"@{grad-@{social}}";
+		}
+	}
+	.generate-socials(@n, (@i + 1));
+}
