@@ -170,28 +170,28 @@ return sprite_files;
 sprite_create();
 
 module.exports = {
-//	build: {
-//		files: [{
-//			expand: true,
-//			cwd: 'app/',
-//			src: [
-//				'css/**',
-//				'images/**',
-//				'scripts/**',
-//				'fonts/**'
-//			],
-//			dest: 'build'
-//		}]
-//	},
-//	//копирование только нужных html-файлов
-//	build_html: {
-//		files: [{
-//			expand: true,
-//			cwd: 'app/html/',
-//			src:['*.html'],
-//			dest: 'build'
-//		}]
-//	}
+	build: {
+		files: [{
+			expand: true,
+			cwd: 'app/',
+			src: [
+				'css/**',
+				'images/**',
+				'scripts/**',
+				'fonts/**'
+			],
+			dest: 'build'
+		}]
+	},
+	//копирование только нужных html-файлов
+	build_html: {
+		files: [{
+			expand: true,
+			cwd: 'app/html/',
+			src:['*.html'],
+			dest: 'build'
+		}]
+	},
 	build_sprite: {
 		files: sprite_files
 	}

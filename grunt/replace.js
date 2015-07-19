@@ -1,4 +1,3 @@
-//замена относительных адресов
 module.exports = {
 	build: {
 		options: {

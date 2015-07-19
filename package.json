@@ -20,6 +20,9 @@
     "grunt-spritesmith": "~4.7"
   },
   "devDependencies": {
-    "require-dir": "^0.3.0"
+    "grunt-concurrent": "^2.0.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-newer": "^1.1.1",
+    "grunt-notify": "^0.4.1"
   }
 }

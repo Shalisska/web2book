@@ -1,4 +1,3 @@
-//минимизатор JS
 module.exports = {
 	build: {
 		src: 'build/js/js.js',

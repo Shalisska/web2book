@@ -2,7 +2,7 @@ module.exports = {
 	//компилятор less и автопрефиксер
 	styles: {
 		files: ['app/less/**/*.less'],
-		tasks: ['less:style', 'autoprefixer'],
+		tasks: ['less:style', 'autoprefixer', 'notify:less'],
 		options: {
 			spawn: false
 		}
@@ -10,7 +10,7 @@ module.exports = {
 	//компилятор jade
 	jades: {
 		files: ['app/jade/**/*.jade'],
-		tasks: ['jade'],
+		tasks: ['jade', 'notify:jade'],
 		options: {
 			spawn: false
 		}
