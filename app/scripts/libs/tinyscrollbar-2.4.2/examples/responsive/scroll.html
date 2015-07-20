@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Tiny Scrollbar: A crossbrowser lightweight javascript/jQuery scrollbar.</title>
+
+        <meta charset="utf-8">
+        <meta name="description" content="A crossbrowser lightweight javascript/jQuery scrollbar." />
+
+        <link rel="stylesheet" href="tinyscrollbar.css" type="text/css" media="screen"/>
+    <script src="../../../jquery-1.11.3.min.js"></script>
+<!--        <script type="text/javascript" src="../../lib/jquery.tinyscrollbar.js"></script>-->
+<!--         build:js jquery.tinyscrollbar.js -->
+<!--        <script type="text/javascript" src="../../lib/jquery.tinyscrollbar.js"></script>-->
+        <!-- /build -->
+<!--
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                var $scrollbar = $("#scrollbar1");
+
+                $scrollbar.tinyscrollbar();
+            });
+        </script>
+-->
+   <style type="text/css">
+		/* Some lines are redudant. I just want to make sure its clear what is needed for a single instance. */
+
+
+/* scrollbar2 */
+#scrollbar2
+{
+    width:50%;
+    margin:0 auto 10px;
+}
+
+#scrollbar2 .viewport
+{
+    width:90%;
+    height:125px;
+	margin: 0 auto;
+    overflow:hidden;
+    position:relative;
+	background: yellow;
+}
+
+#scrollbar2 .overview
+{
+    list-style:none;
+    /*width:1416px;*/
+    padding:0;
+    margin:0;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+#scrollbar2 .overview img
+{
+    float:left;
+}
+
+#scrollbar2 .scrollbar
+{
+    background:black;
+    position:relative;
+    margin:0 10% 15px;
+    clear:both;
+    height:15px;
+	width: 80%;
+}
+
+#scrollbar2 .track
+{
+    background:black;
+    width:100%;
+    height:15px;
+    position:relative;
+}
+
+#scrollbar2 .thumb
+{
+    background:red;
+    height:25px;
+    cursor:pointer;
+    overflow:hidden;
+    position:absolute;
+    left:0;
+    top:-5px;
+}
+
+#scrollbar2 .thumb .end
+{
+    background:red;
+    overflow:hidden;
+    height:25px;
+    width:5px;
+}
+
+#scrollbar2 .disable
+{
+    display:none;
+}
+
+.noSelect
+{
+    user-select:none;
+    -o-user-select:none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+}
+
+	   .scroll_1 {width: 90%;}
+
+		</style>
+    </head>
+    <body>
+<div id="scrollbar2">
+<div class="viewport">
+		<div class="overview">
+			<img src="../../../../../images/offers/services/offers-services@1200.png" alt="image 2" />
+		</div>
+	</div>
+	<div class="scrollbar">
+		<div class="track">
+			<div class="thumb">
+<!--				<div class="end"></div>-->
+			</div>
+		</div>
+	</div>
+	
+<!--
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#scrollbar2").tinyscrollbar({ axis: 'x' });
+		});
+	</script>
+-->
+</div>
+    </body>
+</html>

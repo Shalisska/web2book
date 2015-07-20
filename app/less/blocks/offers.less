@@ -102,19 +102,59 @@
 		}
 		
 		&__box {
+			position: relative;
+			width: 100%;
+			height: 90%;
 			padding: 0 2%;
 			margin: 0 auto;
 			overflow: hidden;
-			background:
-				radial-gradient(7% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
-				radial-gradient(1.8% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
-				radial-gradient(7% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
-				radial-gradient(1.8% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
+//			background:
+//				radial-gradient(7% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
+//				radial-gradient(1.8% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
+//				radial-gradient(7% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
+//				radial-gradient(1.8% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
 			box-shadow:
-				inset 6px 0 10px -10px rgba(0, 0, 0, 0.5),
+//				inset 6px 0 10px -10px rgba(0, 0, 0, 0.5),
 				-35px 0 10px -35px rgba(255, 255, 255, 0.5),
-				inset -6px 0 10px -10px rgba(0, 0, 0, 0.5),
+//				inset -6px 0 10px -10px rgba(0, 0, 0, 0.5),
 				35px 0 10px -35px rgba(255, 255, 255, 0.5);
+			
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				width: 5%;
+				height: 100%;
+				top: 0;
+				z-index: 20;
+			}
+
+			&:before {
+				left: 0;
+				background-image:
+					radial-gradient(100% 35% at -5%, rgba(0, 0, 0, 0.13), transparent),
+					radial-gradient(15% 49% at -1%, rgba(0, 0, 0, 0.25), transparent),
+					linear-gradient(to right, rgb(233, 233, 233), transparent 30%);
+				box-shadow:
+					inset 5px 0 10px -10px rgba(0, 0, 0, 0.5);
+			}
+
+			&:after {
+				right: 0;
+				background-image:
+					radial-gradient(100% 35% at 105%, rgba(0, 0, 0, 0.13), transparent),
+					radial-gradient(15% 49% at 101%, rgba(0, 0, 0, 0.25), transparent),
+					linear-gradient(to left, rgb(233, 233, 233), transparent 30%);
+				box-shadow:
+					inset -5px 0 10px -10px rgba(0, 0, 0, 0.5);
+			}
+		}
+		
+		
+		
+		&__inner {
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 		
 		//всплывающее описание элементов внутреннего слайдера, общее
@@ -200,6 +240,7 @@
 				left: 30%;
 				width: 80px;
 				height: 11px;
+				cursor: pointer;
 				border-radius: 5px;
 				background: linear-gradient(to bottom, #6fcbf5, #46a6eb);
 				box-shadow:
@@ -207,7 +248,7 @@
 					inset 0 -1px 1px 0 rgba(51, 140, 204, 0.75),
 					0 0 0px 1px rgba(0, 0, 0, 0.2),
 					inset 0 0 2px 2px rgba(153, 255, 255, 0.3),
-					0 1px 3px 0px rgba(0, 0, 0, 0.4)
+					0 1px 3px 0px rgba(0, 0, 0, 0.4);
 			}
 		}
 	}
@@ -221,9 +262,7 @@
 		&__item {
 			width: 20%;
 			
-			&:nth-child(1):after,
-			&:nth-child(2):after,
-			&:nth-child(3):after {
+			&:not(:last-child):after {
 				content: '';
 				position: absolute;
 				width: 1px;
@@ -443,4 +482,15 @@
 	}
 
 	.generate-offers-products(@n, (@i + 1));
+}
+
+.no-js {
+	.offers-item__box {
+		overflow-x: scroll;
+		height: 100%;
+	}
+	
+	.offers-item__scroll {
+		display: none;
+	}
 }

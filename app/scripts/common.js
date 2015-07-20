@@ -1,3 +1,36 @@
+;$(document).ready(function() {
+	var sliders = [$('.offers-item-slider')];
+	for (var i = 0; i < sliders.length; i++) {
+		var slider = sliders[i];
+		slider.tinyscrollbar({
+				axis: "x"
+			,	trackSizePer: slider.children('.scrollbar').width() / slider.width()
+			,	thumbSize: 80
+		});
+	};
+});
+
+  var labels = $('.offers-slider__controls label');
+  var slider = $('.offers-item-slider');
+  
+  function scrollbar(slider) {
+    slider.tinyscrollbar({
+      axis: "x"
+      ,	trackSizePer: slider.children('.scrollbar').width() / slider.width()
+      ,	thumbSize: 80
+    });
+  };
+  
+  scrollbar(slider);
+  
+labels.click(function(event) {
+  var elem = $(this).attr('for');
+  
+  console.log(elem);
+  scrollbar(slider);
+});
+	
+
 //$(document).ready(function() {
 //	var controls = 'popular-slider__controls';
 //	var area = 'popular';
