@@ -9,7 +9,7 @@ mixin slider--offers_item(slider_name, img_width, items)
 						h3.offers-item__title=item.title
 						if item.text
 							p.offers-item__text=item.text
-			.offers-item__inner.offers-item__inner--pops.clearfix(class='offers-' + slider_name + '__inner' + ' ' + 'offers-' + slider_name + '__inner--pops')
+			.offers-item__inner.offers-item__inner--pops.clearfix.overview(class='offers-' + slider_name + '__inner' + ' ' + 'offers-' + slider_name + '__inner--pops')
 				-each item in items
 					if item.hover
 						+slider--offers_item--pops(slider_name, item.id, item.title, item.hover)

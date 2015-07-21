@@ -22,7 +22,8 @@
         ,   trackSize : false
         ,   thumbSize : false
         ,   thumbSizeMin : 20
-		,	trackSizePer: 1//my add, for %
+        ,	trackSizePer: false//my add, for %
+        ,	mainContainer: false//my add, for %
         }
     ;
 
@@ -53,6 +54,7 @@
         this._name = pluginName;
 
         var self = this
+        ,	$parent = this.options.mainContainer//my add for %
         ,   $viewport = $container.find(".viewport")
         ,   $overview = $container.find(".overview")
         ,   $scrollbar = $container.find(".scrollbar")
@@ -109,7 +111,8 @@
          * @type Number
          */
         this.trackSize = 0;
-		this.trackSizePer = 1;//my add for %
+		this.trackSizePer = false;//my add for %
+		this.mainContainer = false;//my add for %
 
         /**
          * The size of the track relative to the size of the content.
@@ -162,20 +165,32 @@
          * @param {Number|String} [scrollTo] Number in pixels or the values "relative" or "bottom". If you dont specify a parameter it will default to top
          */
         this.update = function(scrollTo) {
-            var sizeLabelCap = sizeLabel.charAt(0).toUpperCase() + sizeLabel.slice(1).toLowerCase();
+            var sizeLabelCap = sizeLabel.charAt(0).toUpperCase() + sizeLabel.slice(1).toLowerCase();//my add for %
+          
+			//my add for %
+          function sizing(num, size) {
+            if (num[(num.length - 1)] === '%') {
+              num = size * num.slice(0, -1) / 100;
+            } else {
+              num = parseInt(num.slice(0, -2));
+            }
+            return num;
+          };
+
+			if (this.options.trackSizePer) {
+                this.mainContainer = $parent[0]['offset'+ sizeLabelCap];
+                var containerSize = sizing($container.css(sizeLabel), this.mainContainer);
+                
+                this.viewportSize = sizing($viewport.css(sizeLabel), containerSize);
+                this.contentSize = sizing($overview.css(sizeLabel), this.viewportSize);
+                this.trackSize = Math.floor(containerSize * this.options.trackSizePer, 0);
+      } else {
             this.viewportSize = $viewport[0]['offset'+ sizeLabelCap];
             this.contentSize = $overview[0]['scroll'+ sizeLabelCap];
-            this.contentRatio = this.viewportSize / this.contentSize;
-			
-			//my add for %
-			var containerSize = $container[0]['offset'+ sizeLabelCap];
-			if (this.options.trackSizePer !== 1) {
-                this.trackSize = Math.floor(containerSize * this.options.trackSizePer, 0);
-              } else {
             this.trackSize = this.options.trackSize || this.viewportSize;
-              }
-			
-            //this.trackSize = this.options.trackSize || this.viewportSize;
+      }
+            
+            this.contentRatio = this.viewportSize / this.contentSize;
             this.thumbSize = Math.min(this.trackSize, Math.max(this.options.thumbSizeMin, (this.options.thumbSize || (this.trackSize * this.contentRatio))));
             this.trackRatio = (this.contentSize - this.viewportSize) / (this.trackSize - this.thumbSize);
             this.hasContentToSroll = this.contentRatio < 1;

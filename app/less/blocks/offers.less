@@ -92,6 +92,7 @@
 		
 		//внутренний слайдер
 		&-slider {
+			width: 100%;
 			height: 100%;
 			position: relative;
 			
@@ -316,11 +317,18 @@
 	&-products {
 		&__box {
 			padding: 1.6% 3.12%;
-			background:
-				radial-gradient(8% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
-				radial-gradient(2.2% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
-				radial-gradient(8% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
-				radial-gradient(2.2% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
+//			background:
+//				radial-gradient(8% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
+//				radial-gradient(2.2% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
+//				radial-gradient(8% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
+//				radial-gradient(2.2% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
+			
+			&:after {
+				background-image:
+					radial-gradient(100% 35% at 105%, rgba(0, 0, 0, 0.13), transparent),
+					radial-gradient(15% 49% at 101%, rgba(0, 0, 0, 0.25), transparent),
+					linear-gradient(to left, #F8F8F8, transparent 30%);
+			}
 		}
 		
 		&__inner {

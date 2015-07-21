@@ -1507,6 +1507,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   display: block;
 }
 .offers-item-slider {
+  width: 100%;
   height: 100%;
   position: relative;
 }
@@ -1739,7 +1740,9 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .offers-products__box {
   padding: 1.6% 3.12%;
-  background: radial-gradient(8% 35% at -1%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(2.2% 60% at -1%, rgba(0, 0, 0, 0.35), transparent), radial-gradient(8% 35% at 101%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(2.2% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
+}
+.offers-products__box:after {
+  background-image: radial-gradient(100% 35% at 105%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(15% 49% at 101%, rgba(0, 0, 0, 0.25), transparent), linear-gradient(to left, #f8f8f8, transparent 30%);
 }
 .offers-products__inner {
   width: 266.63%;

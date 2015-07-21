@@ -1,33 +1,26 @@
 ;$(document).ready(function() {
-	var sliders = [$('.offers-item-slider')];
-	for (var i = 0; i < sliders.length; i++) {
-		var slider = sliders[i];
-		slider.tinyscrollbar({
-				axis: "x"
-			,	trackSizePer: slider.children('.scrollbar').width() / slider.width()
-			,	thumbSize: 80
-		});
-	};
-});
 
-  var labels = $('.offers-slider__controls label');
-  var slider = $('.offers-item-slider');
+  var sliders = $('.offers-item-slider');
   
-  function scrollbar(slider) {
+  function sizing_track(num, size) {
+    if (num[(num.length - 1)] === '%') {
+       num = num.slice(0, -1) / 100;
+    } else {
+      num = num.slice(0, -2) / size.slice(0, -2);
+    }
+    return num;
+  }
+  
+  for(var i = 0; i < sliders.length; i++) {
+    var slider = $(sliders[i]);
+    
     slider.tinyscrollbar({
-      axis: "x"
-      ,	trackSizePer: slider.children('.scrollbar').width() / slider.width()
+        axis: "x"
+      ,	trackSizePer: sizing_track(slider.find('.scrollbar').css('width'), slider.css('width'))
       ,	thumbSize: 80
+      , mainContainer: $('.offers-slider__box')
     });
   };
-  
-  scrollbar(slider);
-  
-labels.click(function(event) {
-  var elem = $(this).attr('for');
-  
-  console.log(elem);
-  scrollbar(slider);
 });
 	
 
