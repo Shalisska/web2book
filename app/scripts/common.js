@@ -22,7 +22,37 @@
     });
   };
 });
-	
+
+
+var slide = $('.offers-item__item');
+
+slide.hover(function () {
+  var pattern = /([\w|-]*[^\b])/g;
+  var slide_class;
+  var slide_name;
+  
+  while ((res0 = pattern.exec($(this).attr('class'))) != null) {
+    var patt = /__([\w|-]*)/g;
+    var res1 = patt.exec(res0[0])[1];
+
+    if(res1 != 'item') {
+      slide_class = res0[0];
+      slide_name = res1;
+    }
+  }
+  
+  console.log(slide_class, slide_name);
+  
+  var pops_mask = '[\w|-]*__' + slide_name + '--pops';
+  
+  console.log(pops_mask);
+  
+  var pops = $('.offers-item__item--pops');
+  var pop_class = (pops.attr('class'));
+  
+  console.log(pop_class);
+  
+}, function () {});
 
 //$(document).ready(function() {
 //	var controls = 'popular-slider__controls';

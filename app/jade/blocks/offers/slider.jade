@@ -9,10 +9,10 @@ mixin slider--offers_item(slider_name, img_width, items)
 						h3.offers-item__title=item.title
 						if item.text
 							p.offers-item__text=item.text
-			.offers-item__inner.offers-item__inner--pops.clearfix.overview(class='offers-' + slider_name + '__inner' + ' ' + 'offers-' + slider_name + '__inner--pops')
-				-each item in items
-					if item.hover
-						+slider--offers_item--pops(slider_name, item.id, item.title, item.hover)
+		.offers-item__box--pops.clearfix(class='offers-' + slider_name + '__box--pops')
+			-each item in items
+				if item.hover
+					+slider--offers_item--pops(slider_name, item.id, item.title, item.hover)
 						
 		div.offers-item__scroll.scrollbar(class='offers-' + slider_name + '__scroll')
 			div.offers-item__scroll_bar.track(class='offers-' + slider_name + '__scroll_bar')
@@ -20,11 +20,10 @@ mixin slider--offers_item(slider_name, img_width, items)
 
 //-всплывающее описание
 mixin slider--offers_item--pops(slider_name, id, title, items)
-	.offers-item__item.offers-item__item--pops(class='offers-' + slider_name + '__item' + ' ' + 'offers-' + slider_name + '__' + id + ' ' + 'offers-' + slider_name + '__item--pops' + ' ' + 'offers-' + slider_name + '__' + id + '--pops')
-		div.offers-item__item--pops_wrapper(class='offers-' + slider_name + '__item--pops_wrapper' + ' ' + 'offers-' + slider_name + '__' + id + '--pops_wrapper')
-			p.offers-item__title.offers-item__title--pops=title
-			each item in items
-				p.offers-item__text.offers-item__text--pops=item
+	.offers-item__item--pops(class='offers-' + slider_name + '__item--pops' + ' ' + 'offers-' + slider_name + '__' + id + '--pops')
+		p.offers-item__title.offers-item__title--pops=title
+		each item in items
+			p.offers-item__text.offers-item__text--pops=item
 
 
 mixin products

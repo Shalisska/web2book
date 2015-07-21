@@ -148,22 +148,21 @@
 				box-shadow:
 					inset -5px 0 10px -10px rgba(0, 0, 0, 0.5);
 			}
+			
+		//всплывающее описание элементов внутреннего слайдера, общее
+			&--pops {
+				position: absolute;
+				width: 100%;
+				top: 55%;
+				left: 0;
+				z-index: 10;
+			}
 		}
-		
-		
 		
 		&__inner {
 			position: absolute;
 			top: 0;
 			left: 0;
-		}
-		
-		//всплывающее описание элементов внутреннего слайдера, общее
-		&__inner--pops {
-			position: absolute;
-			top: 55%;
-			left: 0;
-			z-index: 10;
 		}
 		
 		//элемент внутреннего слайдера
@@ -173,11 +172,25 @@
 			
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
 			&--pops {
-				//сам блок с описанием
-				&_wrapper {
-					background: linear-gradient(45deg, #838997 78%, transparent 78%), linear-gradient(-45deg, #838997 78%, transparent 78%);
-					border-radius: 5px;
-					padding: 20px 15px;
+				position: relative;
+				width: 300px;
+				display: none;
+				background: #838997;
+				border-radius: 0 0  5px 5px;
+				padding: 5px 15px 20px;
+				
+				&:before {
+					@h: 20px;
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: @h;
+					top: -@h;
+					left: 0;
+					border-radius: 5px 5px 0 0;
+					background:
+						linear-gradient(45deg, #838997 50%, transparent 50%),
+						linear-gradient(-45deg, #838997 50%, transparent 50%);
 				}
 			}
 		}
@@ -238,8 +251,6 @@
 			&_control {
 				position: absolute;
 				top: -3px;
-				left: 30%;
-				width: 80px;
 				height: 11px;
 				cursor: pointer;
 				border-radius: 5px;
@@ -270,22 +281,10 @@
 				height: 155px;
 				background-color: #c6c6c6;
 				top: 20%;
-				right: 2%;
+				right: 0;
 			}
 			
 			//стили всплывающего описания Наши услуги
-			&--pops {
-				display: none;
-				
-				&:after {
-					display: none;
-				}
-				
-				&_wrapper {
-					width: 114%;
-					margin: 0 -7%;
-				}
-			}
 		}
 		
 		&__img img {
