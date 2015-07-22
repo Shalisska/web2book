@@ -1,5 +1,4 @@
 ;$(document).ready(function() {
-
   var sliders = $('.offers-item-slider');
   
   function sizing_track(num, size) {
@@ -24,35 +23,65 @@
 });
 
 
+;$(document).ready(function() {
 var slide = $('.offers-item__item');
+var slide_name;
 
-slide.hover(function () {
+function search_class(item) {
+  var name;
   var pattern = /([\w|-]*[^\b])/g;
-  var slide_class;
-  var slide_name;
   
-  while ((res0 = pattern.exec($(this).attr('class'))) != null) {
+  while ((res0 = pattern.exec(item.attr('class'))) != null) {
     var patt = /__([\w|-]*)/g;
     var res1 = patt.exec(res0[0])[1];
 
     if(res1 != 'item') {
-      slide_class = res0[0];
-      slide_name = res1;
+      name = res0[0];
     }
   }
+  return name;
+}
+
+slide.hover(function () {  
+  slide_name = search_class($(this));    
+  var pops = $('.' + slide_name + '--pops');
   
-  console.log(slide_class, slide_name);
+  if(pops.length > 0) {
+    var per = 1.15;
+    var width = $(this).outerWidth();
+    var width_pops = width * per;
+    
+    pops.css('display', 'block').css('width', width_pops);
   
-  var pops_mask = '[\w|-]*__' + slide_name + '--pops';
+    var left = $(this).offset().left;
+    var left_pops = pops.offset().left;
+    var left_css = left - left_pops - width*((per-1)/2);
+    
+    width_gl = $('body').width();
+        
+    if ((left_pops+left_css) < 0) {
+      left_css = -left_pops;
+    } else if((width_pops + left - width*((per-1)/2)) > width_gl) {
+      left_css = width_gl - width_pops - left_pops;
+    }
+    
+    pops.css('left', left_css);
+    
+  }
   
-  console.log(pops_mask);
+}, function (event) {
+  slide_name = search_class($(this));    
+  var pops = $('.' + slide_name + '--pops');
   
-  var pops = $('.offers-item__item--pops');
-  var pop_class = (pops.attr('class'));
-  
-  console.log(pop_class);
-  
-}, function () {});
+    if ($(event.relatedTarget).attr('class') !== pops.attr('class')) {
+      pops.css('display', 'none').css('width', 0).css('left', 0);
+    } else {
+      pops.mouseleave(function() {
+        pops.css('display', 'none').css('width', 0).css('left', 0);
+      });
+    }
+});
+});
 
 //$(document).ready(function() {
 //	var controls = 'popular-slider__controls';

@@ -151,9 +151,7 @@
 			
 		//всплывающее описание элементов внутреннего слайдера, общее
 			&--pops {
-				position: absolute;
 				width: 100%;
-				top: 55%;
 				left: 0;
 				z-index: 10;
 			}
@@ -169,15 +167,17 @@
 		&__item {
 			position: relative;
 			float: left;
+			cursor: pointer;
 			
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
 			&--pops {
-				position: relative;
-				width: 300px;
+				position: absolute;
 				display: none;
+				top: 62%;
 				background: #838997;
 				border-radius: 0 0  5px 5px;
 				padding: 5px 15px 20px;
+				z-index: 25;
 				
 				&:before {
 					@h: 20px;

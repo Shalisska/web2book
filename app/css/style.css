@@ -1544,9 +1544,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   box-shadow: inset -5px 0 10px -10px rgba(0, 0, 0, 0.5);
 }
 .offers-item__box--pops {
-  position: absolute;
   width: 100%;
-  top: 55%;
   left: 0;
   z-index: 10;
 }
@@ -1558,14 +1556,16 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .offers-item__item {
   position: relative;
   float: left;
+  cursor: pointer;
 }
 .offers-item__item--pops {
-  position: relative;
-  width: 300px;
+  position: absolute;
   display: none;
+  top: 62%;
   background: #838997;
   border-radius: 0 0  5px 5px;
   padding: 5px 15px 20px;
+  z-index: 25;
 }
 .offers-item__item--pops:before {
   content: '';
