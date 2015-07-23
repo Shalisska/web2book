@@ -31,6 +31,7 @@ mixin nav_inner(name, lvl, items)
 				li(class=name + '__item' + ' ' + spec_class_next)
 					a(class=(name + '__item-name') href=item.href)=item.name
 					+nav_inner(name, lvl, item.next)
+				-lvl = lvl - 1
 			else
 				-spec_class_next = ''
 				li(class=name + '__item' + ' ' + spec_class_next)

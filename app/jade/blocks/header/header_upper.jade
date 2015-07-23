@@ -2,7 +2,7 @@ mixin menu_named(name, del, items)
 	nav(class=name)
 		ul.clearfix
 			each item in items
-				li(class=name + '-item'): a(class=name + del + item.class_name href=item.href)=item.name
+				li(class=name + '-item' + ' ' + name + '-item--' + item.class_name): a(class=name + del + item.class_name href=item.href)=item.name
 
 .header--upper
 	.header-row.clearfix
@@ -29,6 +29,8 @@ mixin menu_named(name, del, items)
 								}])
 
 	.header-menu-bar
+		.header-menu__open
+			button: span &#8943;
 		include header_menu
 	
 		.header-cart

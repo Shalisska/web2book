@@ -11,13 +11,13 @@
 	}
 	
 	&__content {
-		width: 40%;
+		//width: 40%;
 		text-align: left;
 		color: white;
 		text-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
 		
 		@media(max-width: 730px) {
-			width: 50%;
+			//width: 50%;
 		}
 		
 		@media(max-width: 550px) {
@@ -27,29 +27,33 @@
 	}
 	
 	&__title {
-		margin: 0 0 0.2em;
+		margin: 0 0 0.1em 6%;
 		font-family: @font__header-phone;
 		font-size: 2em;
 		color: #9f0000;
 		font-weight: normal;
-		text-align: right;
+		//text-align: right;
 		
 		@media(max-width: 730px) {
 			text-align: center;
+		}
+		
+		@media(max-width: 550px) {
+			margin-left: 0;
 		}
 	}
 	
 	&__features {
 		.reset-ul();
-		margin-left: 26%;
-		margin-bottom: 1.4em;
+		margin-left: 9%;//26%
+		margin-bottom: 1em;//1.4em
 		
 		@media(max-width: 660px) {
-			margin-left: 17%;
+			margin-left: 7%;
 		}
 		
 		@media(max-width: 550px) {
-			margin-left: 24%;
+			margin-left: 28%;
 			text-align: left;
 		}
 		
@@ -59,19 +63,27 @@
 		
 		&_item {
 			position: relative;
-			padding-left: 13.5%;
+			padding-left: 4.5%;//13.5%
 			font-size: 1em;
-			line-height: 1.5;
+			line-height: 1.7;//1.5
+			
+			@media(max-width: 660px) {
+			padding-left: 25px;
+		}
 			
 			&:before {
 				content: '';
 				position: absolute;
 				left: 0;
 				top: 0.3em;
-				width: 13.08%;
+				width: 4.042%;
 				height: 150%;
 				background: url(../images/header/check@36.png) no-repeat center top;
 				background-size: contain;
+				
+				@media(max-width: 660px) {
+					width: 25px;
+				}
 			}
 		}
 	}
@@ -79,8 +91,8 @@
 	&__btn {
 		.reset-a();
 		display: inline-block;
-		margin-left: 26%;
-		padding: 2% 10.5%;
+		margin-left: 9%;//26%
+		padding: 1% 4%;//2% 10.5%
 		font-size: 1.12em;
 		border-radius: 5px;
 		background: linear-gradient(#86d5fa, #46a6eb 74%, #57bff5);
@@ -94,11 +106,12 @@
 		text-shadow: 0 1px 0 rgba(29, 118, 183, 0.75);
 		
 		@media(max-width: 660px) {
-			margin-left: 17%;
+			margin-left: 7%;
 		}
 		
 		@media(max-width: 550px) {
 			margin-left: 0;
+			padding: 2% 10.5%;
 		}
 		
 		&:hover, &:active {
@@ -109,17 +122,18 @@
 	
 	&__img {
 		position: absolute;
-		right: 0;
+		right: 4%;
 		bottom: 0;
-		width: 60%;
-		padding: 0 1.5%;
+		width: 57%;//60%
+		padding: 0;//0 1.5%
 		
 		@media(max-width: 960px) {
 			bottom: 8%;
 		}
 		
 		@media(max-width: 730px) {
-			width: 50%;
+			width: 40%;
+			right: 10%;
 			bottom: 14%;
 		}
 		
