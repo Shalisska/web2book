@@ -42,16 +42,18 @@ function search_class(item) {
   return name;
 }
 
-slide.hover(function () {  
-  slide_name = search_class($(this));    
+slide.hover(function () {
+  slide_name = search_class($(this));
   var pops = $('.' + slide_name + '--pops');
+	
+	var top = $('.' + slide_name).find('.offers-item__img').height();
   
   if(pops.length > 0) {
     var per = 1.15;
     var width = $(this).outerWidth();
     var width_pops = width * per;
     
-    pops.css('display', 'block').css('width', width_pops);
+    pops.css('display', 'block').css('width', width_pops).css('top', top);
   
     var left = $(this).offset().left;
     var left_pops = pops.offset().left;

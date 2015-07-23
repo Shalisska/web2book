@@ -26,10 +26,16 @@
 		
 		&__text {
 			float: left;
-			width: 25%;
+			width: 27%;
 			margin: 0;
 			font-size: @size__offers-header-text;
 			color: @color__offers-header-text;
+			
+			@media(max-width: 960px) {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 0.5em;
+			}
 		}
 	}
 	
@@ -42,9 +48,9 @@
 		
 		&__controls {
 			float: right;
-			width: 72.5%;
+			width: 70.5%;
 			height: 40px;
-			margin: 0 1.5% 0 1%;
+			margin: 0 1.5% 0 0%;
 			padding-top: 1px;
 			text-align: justify;
 			background-color: #dee0e2;
@@ -54,6 +60,10 @@
 				inset 0 2px 3px 0 rgba(0, 0, 0, .25), 
 				0 1px 0 0 white;
 			
+			@media(max-width: 960px) {
+				width: 100%;
+			}
+			
 			&:after {
 				content: '';
 				display: inline-block;
@@ -61,9 +71,9 @@
 			}
 			
 			label {
-				display: inline-block;
+				float: left;
 				padding-bottom: 12px;
-				width: 32.9%;
+				width: (100% / 3);
 				text-align: center;
 				line-height: 37px;
 				font-size: @size__offers-header;
@@ -109,15 +119,8 @@
 			padding: 0 2%;
 			margin: 0 auto;
 			overflow: hidden;
-//			background:
-//				radial-gradient(7% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
-//				radial-gradient(1.8% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
-//				radial-gradient(7% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
-//				radial-gradient(1.8% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
 			box-shadow:
-//				inset 6px 0 10px -10px rgba(0, 0, 0, 0.5),
 				-35px 0 10px -35px rgba(255, 255, 255, 0.5),
-//				inset -6px 0 10px -10px rgba(0, 0, 0, 0.5),
 				35px 0 10px -35px rgba(255, 255, 255, 0.5);
 			
 			&:before, &:after {
@@ -168,6 +171,7 @@
 			position: relative;
 			float: left;
 			cursor: pointer;
+			text-align: center;
 			
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
 			&--pops {
@@ -185,7 +189,7 @@
 					position: absolute;
 					width: 100%;
 					height: @h;
-					top: -@h;
+					top: -(@h - 2px);
 					left: 0;
 					border-radius: 5px 5px 0 0;
 					background:
@@ -204,7 +208,7 @@
 		//заголовок элемента
 		&__title {
 			margin: 0 0 0.4em;
-			padding: 0 20px;
+			padding: 0 1em;
 			font-size: @size__offers-item--title;
 			color: @color__offers-title;
 			font-weight: normal;
@@ -220,7 +224,7 @@
 		//текст элемента
 		&__text {
 			margin: 0;
-			padding: 0 40px 0 20px;
+			padding: 0 1.5em;
 			line-height: 1.42;
 			font-size: @size__offers-item;
 			color: @color__offers-text;
