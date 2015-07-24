@@ -1999,7 +1999,6 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   position: relative;
   float: left;
   cursor: pointer;
-  text-align: center;
 }
 .offers-item__item--pops {
   position: absolute;
@@ -2072,7 +2071,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 1px 0 rgba(51, 140, 204, 0.75), 0 0 0px 1px rgba(0, 0, 0, 0.2), inset 0 0 2px 2px rgba(153, 255, 255, 0.3), 0 1px 3px 0px rgba(0, 0, 0, 0.4);
 }
 .offers-services__inner {
-  width: 125%;
+  width: 1200px;
 }
 .offers-services__item {
   width: 20%;
@@ -2120,7 +2119,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   margin-left: -900%;
 }
 .offers-skreplenie__inner {
-  width: 129.37%;
+  width: 1216px;
 }
 .offers-skreplenie__item {
   width: 11.11%;
@@ -2190,7 +2189,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   background-image: radial-gradient(100% 35% at 105%, rgba(0, 0, 0, 0.13), transparent), radial-gradient(15% 49% at 101%, rgba(0, 0, 0, 0.25), transparent), linear-gradient(to left, #f8f8f8, transparent 30%);
 }
 .offers-products__inner {
-  width: 266.63%;
+  width: 1600px;
 }
 .offers-products__item {
   width: 12.5%;
@@ -2256,20 +2255,33 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .offers-products__info {
   float: right;
-  padding: 2%;
+  position: relative;
+  padding: 1.1em 1.1em 3em;
   width: 35%;
+  height: 100%;
   text-align: right;
+  font-size: 'ArialRegular', 'Arial', sans-serif;
   background: white;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
+@media (max-width: 800px) {
+  .offers-products__info {
+    font-size: 12px;
+  }
+}
 .offers-products__info-title {
   margin: 0 0 0.9em;
   text-align: left;
-  font-size: 22px;
+  font-size: 1.57em;
   color: #2588cd;
   font-weight: normal;
+}
+@media (max-width: 800px) {
+  .offers-products__info-title {
+    margin-bottom: 0.5em;
+  }
 }
 .offers-products__info-text {
   margin: 0 0 1em 6.5%;
@@ -2279,8 +2291,10 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 }
 .offers-products__info-more {
   color: inherit;
-  position: relative;
-  font-size: 12px;
+  position: absolute;
+  right: 1.1em;
+  bottom: 1em;
+  font-size: 0.85em;
   color: #0066cc;
   text-decoration: none;
 }
@@ -2302,10 +2316,9 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   content: '⟶';
   display: inline-block;
   margin-left: 10px;
-  padding-top: 2px;
   font-size: 20px;
   vertical-align: top;
-  line-height: 12px;
+  line-height: 0.85em;
   color: #000000;
 }
 .offers-products__info-more:hover,
@@ -2378,7 +2391,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .news-header__date--day {
   margin-top: 1px;
   margin-bottom: -5px;
-  font-size: 22px;
+  font-size: 1.57em;
 }
 .news-header__date--month {
   font-size: 10px;

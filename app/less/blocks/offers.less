@@ -171,7 +171,6 @@
 			position: relative;
 			float: left;
 			cursor: pointer;
-			text-align: center;
 			
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
 			&--pops {
@@ -272,7 +271,7 @@
 	//стили Наши услуги
 	&-services {
 		&__inner {
-			width: 125%;
+			width: (2400px / 2);
 		}
 		
 		&__item {
@@ -301,7 +300,7 @@
 	//стили Типы скрепления
 	&-skreplenie {
 		&__inner {
-			width: 129.37%;
+			width: (2432px / 2);
 		}
 		
 		&__item {
@@ -320,11 +319,6 @@
 	&-products {
 		&__box {
 			padding: 1.6% 3.12%;
-//			background:
-//				radial-gradient(8% 35% at -1%, rgba(0, 0, 0, 0.13), transparent),
-//				radial-gradient(2.2% 60% at -1%, rgba(0, 0, 0, 0.35), transparent),
-//				radial-gradient(8% 35% at 101%, rgba(0, 0, 0, 0.13), transparent),
-//				radial-gradient(2.2% 60% at 101%, rgba(0, 0, 0, 0.35), transparent);
 			
 			&:after {
 				background-image:
@@ -335,7 +329,7 @@
 		}
 		
 		&__inner {
-			width: 266.63%;
+			width: (3200px / 2);
 		}
 		
 		&__item {
@@ -361,13 +355,20 @@
 		//текстовый блок Наша продукция
 		&__info {
 			float: right;
-			padding: 2%;
+			position: relative;
+			padding: 1.1em 1.1em 3em;
 			width: 35%;
+			height: 100%;
 			text-align: right;
+			font-size: @font;
 			background: white;
 			border-radius: 5px;
 			border: 1px solid #bdbdbd;
 			box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+			
+			@media(max-width: 800px) {
+				font-size: 12px;
+			}
 			
 			&-title {
 				margin: 0 0 0.9em;
@@ -375,6 +376,10 @@
 				font-size: @size__offers-products__title;
 				color: @color__offers-products__title;
 				font-weight: normal;
+				
+				@media(max-width: 800px) {
+					margin-bottom: 0.5em;
+				}
 			}
 			
 			&-text {
@@ -386,7 +391,9 @@
 			
 			&-more{
 				.reset-a();
-				position: relative;
+				position: absolute;
+				right: 1.1em;
+				bottom: 1em;
 				font-size: @size__offers-products__anchor;
 				color: @color__offers-products__anchor;
 				text-decoration: none;
@@ -404,7 +411,6 @@
 					content: '⟶';
 					display: inline-block;
 					margin-left: 10px;
-					padding-top: 2px;
 					font-size: 20px;
 					vertical-align: top;
 					line-height: @size__offers-products__anchor;
