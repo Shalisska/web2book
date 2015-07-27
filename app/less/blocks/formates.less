@@ -77,6 +77,7 @@
 			bottom: 0;
 			top: 125px;
 			left: 0;
+			width: 100%;
 			padding: 8px 3px 5px;
 			background:
 				linear-gradient(transparent 3%, #63c2f4 3%, #63c2f4 98%, transparent 98%),
@@ -145,21 +146,28 @@
 		}
 		
 		&__box {
+			position: relative;
 			height: 100%;
 			overflow: hidden;
+			
+			//всплывающее описание элементов внутреннего слайдера, общее
+			&--pops {
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+			}
 		}
 		
-		//всплывающее описание элементов внутреннего слайдера, общее
-		&__inner--pops {
+		&__inner {
 			position: absolute;
 			top: 0;
-			left: 71.25%;
-			width: 82.8%;
-			height: 377%;
+			left: 0;
 		}
 		
 		//элемент внутреннего слайдера
 		&__item {
+			overflow: hidden;
 			padding: 5px 0;
 			border-bottom: 1px dashed #b2b2b2;
 			
@@ -168,34 +176,37 @@
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
 			&--pops {
 				display: none;
-				position: relative;
-				height: 11.123%;
-				padding: 0;
-				border: none;
+				position: absolute;
+				width: 254px;
+				left: 0;
+				bottom: 50%;
+				margin-bottom: 40px;
+				z-index: 50;
+				background: url(../images/formates/formates_cloud--center@254.png) center;
+				background-repeat: repeat-y;
+				background-size: 100% auto;
 				
-				//сам блок с описанием
-				&_wrapper {
+				&:before, &:after {
+					content: '';
 					position: absolute;
-					left: 0;
-					bottom: 50%;
-					margin-bottom: 40px;
-					z-index: 50;
-					background-color: white;
-					border-radius: 5px 5px 0 0;
-					border: 1px solid #bfbfbf;
-					border-bottom: 0;
-					box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.35);
-					
-					&:after {
-						content: '';
-						position: absolute;
-						bottom: -40px;
-						left: -3%;
-						width: 106.5%;
-						height: 40px;
-						background: url(../images/formates/formates_cloud--bottom@254.png) no-repeat center top;
-						background-size: 100% 40px;
-					}
+					left: 50%;
+					margin-left: -(254px / 2);
+					width: 254px;
+					background-size: 100% 100%;
+				}
+				
+				&:before {
+					@h: 16px;
+					top: -@h;
+					height: @h;
+					background: url(../images/formates/formates_cloud--top@254.png) no-repeat center top;
+				}
+				
+				&:after {
+					@h: 41px;
+					bottom: -@h;
+					height: @h;
+					background: url(../images/formates/formates_cloud--bottom@254.png) no-repeat center top;
 				}
 			}
 		}
@@ -205,7 +216,9 @@
 			margin: 0;
 			
 			&--pops {
-				padding: 7.9%;
+				position: relative;
+				z-index: 20;
+				padding: 7.9% ;
 			}
 		}
 		

@@ -86,6 +86,20 @@ slide.hover(function () {
 });
 });
 
+//скроллинг formates
+;$(document).ready(function() {
+  var sliders = $('.formates-item-slider');
+
+  for(var i = 0; i < sliders.length; i++) {
+    var slider = $(sliders[i]);
+    slider.tinyscrollbar({
+        axis: "y"
+      ,	thumbSize: 120
+    });
+  };
+});
+
+
 //точки если текст не влезает
 $(document).ready(function() {
 	$(".offers-products__info").dotdotdot({
