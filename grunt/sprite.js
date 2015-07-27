@@ -1,6 +1,6 @@
 var images = {
     retina: [1, 1.5, 2, 3]
-  , width: ['', 960, 700]
+  , width: ['', '650']
   , spec_templ: [{
       name: 'header-slider_controls--btn--active'
     , template: function () {
@@ -160,8 +160,8 @@ function sprite_create(images) {
       
         var sprite = {
         src: 'spec/sprite' + w + '/sprite@' + r + '/*.png'
-      , dest: 'spec/spritesheet/spritesheet@' + r + 'w' + w + '.png'
-      , destCss: 'spec/less/sprite/sprites@' + r + 'w' + w + '.less'
+      , dest: 'app/images/spritesheet/spritesheet@' + r + 'w' + w + '.png'
+      , destCss: 'app/less/helpers/sprite/sprites@' + r + 'w' + w + '.less'
       , cssTemplate: template (w, r, images)
       };
 

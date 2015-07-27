@@ -15,8 +15,8 @@ function in_array(value, array) {
 var header_btn = {
 	img_dir: 'header/sprite/header-slider_controls--btn',
 	dest: [{
-		width: ['0'],
-		retina: 46
+		width: ['0', '650'],
+		retina: 32
 	}]
 };
 	
@@ -25,6 +25,9 @@ var header_arrow = {
 	dest: [{
 		width: ['0'],
 		retina: 42
+	}, {
+		width: ['650'],
+		retina: 34
 	}]
 };
 
@@ -33,6 +36,9 @@ var header_arrow_hover = {
 	dest: [{
 		width: ['0'],
 		retina: 52
+	}, {
+		width: ['650'],
+		retina: 42
 	}]
 };
 
