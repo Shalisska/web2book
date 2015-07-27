@@ -1,26 +1,31 @@
 .news {
 	position: relative;
 	margin: 0 20px 2.5em;
-	text-align: right;
+	text-align: justify;
 	border: 1px dashed #999999;
 	border-radius: 5px;
 	
 	&__block {
-		text-align: justify;
-		
-		&:after {
-			content: '';
-			display: inline-block;
-			width: 100%;
+		@media(max-width: 750px) {
+			padding: 20px 15px 5px;
 		}
 	}
 	
 	&__item {
 		position: relative;
-		display: inline-block;
-		padding: 20px 20px 0;
-		width: 33%;
+		float: left;
+		padding: 20px;
+		width: (100% / 3);
 		vertical-align: top;
+		
+		@media(max-width: 750px) {
+			width: 100%;
+			padding: 0 0 15px;
+			
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
 		
 		&:after {
 			content: '';
@@ -30,6 +35,10 @@
 			width: 1px;
 			height: 82%;
 			background: #cacaca;
+			
+			@media(max-width: 750px) {
+				display: none;
+			}
 		}
 		
 		&:last-of-type:after {
@@ -54,6 +63,11 @@
 				inset 0 0 5px 0 rgba(0, 0, 0, .1);
 			border-radius: 3px;
 			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+			
+			@media(max-width: 750px) {
+				top: 50%;
+				margin-top: -(@w / 2);
+			}
 			
 			&--day,
 			&--month {
@@ -84,6 +98,10 @@
 	
 	&-content {
 		color: @color__news-text;
+		
+		@media(max-width: 750px) {
+			display: none;
+		}
 
 		p {margin: 0;}
 	}

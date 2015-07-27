@@ -3,7 +3,7 @@ var images = {
   , width: ['', '650']
   , spec_templ: [{
       name: 'header-slider_controls--btn--active'
-    , template: function () {
+    , template: function (r, w) {
         var items = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
         var arr = [];
         items.forEach(function(item) {
@@ -16,19 +16,21 @@ var images = {
         return arr;
       }
     }, {
-      name: 'spec_slide'
-    , template: function () {
-        var items = ['slide1', 'slide2'];
-        var arr = [];
-        items.forEach(function(item) {
-          var name = '.special_rules_for_slide--' + item;
-          arr.push(name);
-        });
-
-        return arr;
+      name: 'hook--left'
+    , template: function (r, w) {
+        var name = '.header--upper:before';
+		var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
+		var res = name + bg + name;
+        return res;
       }
     }, {
-        name: 'spec_slide_simple--hover'
+      name: 'hook--right'
+    , template: function (r, w) {
+        var name = '.header--upper:after';
+        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
+		var res = name + bg + name;
+        return res;
+      }
     }]
 };
 
@@ -93,20 +95,20 @@ function template_media (w, r) {
   return res;
 };
 
-function template_body (data, templates, r) {
+function template_body (data, templates, r, w) {
   var res = '';
   var name;
   var width;
   
   for(var i = 0; i < data.length; i++) {
-    name = template_name(data[i].name, templates);
+    name = template_name(data[i].name, templates, r, w);
     width = template_width(data[i], r);
     res +=name + width;
   };
   return res;
 };
 
-function template_name(data, templates) {
+function template_name(data, templates, r, w) {
   var name;
   var spec_names = arr_create(templates);
   var item_name = data.replace((/@\w*/g), '');
@@ -115,7 +117,7 @@ function template_name(data, templates) {
 
   if (in_array_templ(item_name, spec_names, templates)) {
     var ind = spec_names.indexOf(item_name);
-    name = '' + templates[ind].template();
+    name = '' + templates[ind].template(r, w);
   } else {
     if(item_name.slice(item_name.length - hover.length) == hover) {
       item_name = item_name.slice(0, (item_name.length - hover.length)) + ':hover';
@@ -151,7 +153,11 @@ function sprite_create(images) {
       function template (w, r, images) {
         var templ = function(data) {
           var result = template_media (w, r);
-          result += template_body(data.items, images.spec_templ, r);
+          result += template_body(data.items, images.spec_templ, r, w);
+			if(r != 1) {
+				result += '}'
+			};
+			
           return result;
         };
         

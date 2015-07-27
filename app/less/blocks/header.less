@@ -31,6 +31,10 @@
 	background: url(../images/header/header_bg@1150.png) no-repeat center top;
 	background-size: 100% 100%;
 	
+	@media(max-width: 650px) {
+		padding-top: 21px;
+	}
+	
 	&:before, &:after {
 		content: '';
 		position: absolute;
@@ -113,21 +117,19 @@
 			content: '';
 			position: absolute;
 			top: -26px;
-			width: 90px;
-			height: 88px;
 			background-repeat: no-repeat;
-			background-position: center top;
-			background-size: 90px 88px;
+			
+			@media(max-width: 650px) {
+				top: -21px;
+			}
 		}
 		
 		&:before {
 			left: 30px;
-			background-image: url(../images/header/hook--left@90.png);
 		}
 		
 		&:after {
 			right: 30px;
-			background-image: url(../images/header/hook--right@90.png);
 		}
 	}
 	
@@ -1001,7 +1003,6 @@
 			&--arrows {
 				& a {
 					display: block;
-					height: 99px;
 					top: 50%;
 					margin-top: -50px;
 				}

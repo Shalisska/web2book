@@ -41,6 +41,17 @@ var header_arrow_hover = {
 		retina: 42
 	}]
 };
+	
+var header_hooks = {
+	img_dir: 'header/sprite/hooks',
+	dest: [{
+		width: ['0'],
+		retina: 90
+	}, {
+		width: ['650'],
+		retina: 70
+	}]
+};
 
 function retina_cr(retina) {
   var arr = []
@@ -168,7 +179,7 @@ function width_build(width, array) {
   return arr;
 };
 	
-var sprite_arr = [header_btn, header_arrow, header_arrow_hover];
+var sprite_arr = [header_btn, header_arrow, header_arrow_hover, header_hooks];
 sprite_files = sprite_cr(sprite_arr);
 
 return sprite_files;
