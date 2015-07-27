@@ -1,3 +1,3 @@
 module.exports = {
-	build_sprite: ['spec1']
+	build_sprite: ['spec']
 };
