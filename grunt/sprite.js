@@ -1,14 +1,63 @@
-var finish = {
-    src: 'spec1/sprite960/sprite@1/*.png'
-  , dest: 'spec1/sprite960/spritesheet@1/*.png'
-  , destCss: 'spec1/less/sprite/sprites@1w960.less'
-}
-
 var images = {
     retina: [1, 1.5, 2, 3]
-  , width: [960, 700]
-}
+  , width: ['', 960, 700]
+  , spec_templ: [{
+      name: 'header-slider_controls--btn--active'
+    , template: function () {
+        var items = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
+        var arr = [];
+        items.forEach(function(item) {
+          var name = '.header-slider__input#header-slider--' + item
+                  + ':checked ~ .header-slider__controls label[for="header-slider--'
+                  + item + '"]';
+          arr.push(name);
+        });
 
+        return arr;
+      }
+    }, {
+      name: 'spec_slide'
+    , template: function () {
+        var items = ['slide1', 'slide2'];
+        var arr = [];
+        items.forEach(function(item) {
+          var name = '.special_rules_for_slide--' + item;
+          arr.push(name);
+        });
+
+        return arr;
+      }
+    }, {
+        name: 'spec_slide_simple--hover'
+    }]
+};
+
+function arr_create(array) {
+  var arr = [];
+  array.forEach(function(item) {
+    arr.push(item.name);
+  });
+  return arr;
+};
+
+function in_array(what, where) {
+  for(var i=0; i<where.length; i++) {
+    if(what == where[i]) {
+      return true;
+    };
+  };
+  return false;
+};
+
+function in_array_templ(what, where, templates) {
+  if(in_array(what, where)) {
+    var ind = where.indexOf(what);
+    if(templates[ind].template) {
+      return true;
+    };
+  };
+  return false;
+};
 
 function template_media (w, r) {
   var res = '';
@@ -44,11 +93,51 @@ function template_media (w, r) {
   return res;
 };
 
-function template_name () {
+function template_body (data, templates, r) {
+  var res = '';
+  var name;
+  var width;
   
+  for(var i = 0; i < data.length; i++) {
+    name = template_name(data[i].name, templates);
+    width = template_width(data[i], r);
+    res +=name + width;
+  };
+  return res;
 };
 
+function template_name(data, templates) {
+  var name;
+  var spec_names = arr_create(templates);
+  var item_name = data.replace((/@\w*/g), '');
+  var hover = '--hover';
+  var active = '--active';
 
+  if (in_array_templ(item_name, spec_names, templates)) {
+    var ind = spec_names.indexOf(item_name);
+    name = '' + templates[ind].template();
+  } else {
+    if(item_name.slice(item_name.length - hover.length) == hover) {
+      item_name = item_name.slice(0, (item_name.length - hover.length)) + ':hover';
+    } else if(item_name.slice(item_name.length - active.length) == active) {
+      item_name = item_name.slice(0, (item_name.length - active.length)) + ':active';
+    }
+    name = '.sprite_icon-' + item_name;
+  };
+  return name;
+};
+
+function template_width(data, r) {
+  var width = '{' +
+        'background-position: ' + parseInt(data.offset_x)/r + 'px '
+          + parseInt(data.offset_y)/r + 'px; ' +
+        'background-size: ' + parseInt(data.total_width)/r + 'px '
+          + parseInt(data.total_height)/r + 'px; ' +
+        'width: ' + parseInt(data.width)/r + 'px; ' +
+        'height: ' + parseInt(data.height)/r + 'px;' +
+        '}\n';
+  return width;
+};
 
 function sprite_create(images) {
   var sprite_gl = {};
@@ -59,19 +148,21 @@ function sprite_create(images) {
         retina_name = r * 10;
       };
       
-      function template (w, r) {
+      function template (w, r, images) {
+        var templ = function(data) {
+          var result = template_media (w, r);
+          result += template_body(data.items, images.spec_templ, r);
+          return result;
+        };
         
-        var result = template_media (w, r);
-        
-        return result;
+        return templ;
       };
       
-      
         var sprite = {
-        src: 'spec1/sprite' + w + '/sprite@' + r + '/*.png'
-      , dest: 'spec1/spritesheet/spritesheet@' + r + 'w' + w + '/*.png'
-      , destCss: 'spec1/less/sprite/sprites@' + r + 'w' + w + '.less'
-      , cssTemplate: template (w, r)
+        src: 'spec/sprite' + w + '/sprite@' + r + '/*.png'
+      , dest: 'spec/spritesheet/spritesheet@' + r + 'w' + w + '.png'
+      , destCss: 'spec/less/sprite/sprites@' + r + 'w' + w + '.less'
+      , cssTemplate: template (w, r, images)
       };
 
       sprite_gl['sprite' + w + '_' + retina_name] = sprite;
@@ -81,107 +172,6 @@ function sprite_create(images) {
   return sprite_gl;
 };
 
-console.log(sprite_create(images));
+var sprite_build = sprite_create(images);
 
-
-//--------------------------------------//
-var finish = {
-    src: 'spec1/sprite960/sprite@1/*.png'
-  , dest: 'spec1/sprite960/spritesheet@1/*.png'
-  , destCss: 'spec1/less/sprite/sprites@1w960.less'
-}
-
-var data = ['header-slider_controls--btn--active@960',
-            'slider@100',
-            'slider--hover@400',
-            'slider--active@10',
-            'slider1@190',
-            'spec_slider_simple@140',
-            'spec_slide@140'
-           ];
-
-var images = {
-    retina: [1, 1.5, 2, 3]
-  , width: [960, 700]
-  , spec_templ: [{
-      name: 'header-slider_controls--btn--active'
-    , template: function () {
-        var items = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
-        var arr = [];
-        items.forEach(function(item) {
-          var name = '.header-slider__input#header-slider--' + item
-                  + ':checked ~ .header-slider__controls label[for="header-slider--'
-                  + item + '"]';
-          arr.push(name);
-        });
-
-        return arr;    
-      }
-    }, {
-      name: 'spec_slide'
-    , template: function () {
-        var items = ['slide1', 'slide2'];
-        var arr = [];
-        items.forEach(function(item) {
-          var name = '.special_rules_for_slide--' + item;
-          arr.push(name);
-        });
-
-        return arr;    
-      }
-    }]
-}
-
-function replacing(name, pattern) {
-  var names = [];
-  name.forEach(function(item) {
-    names.push(item.replace(pattern, ''));
-  });
-  return names;
-};
-
-function sorting(arr, mask) {
-  mask.forEach(function(el) {
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] == el.name) {
-        arr.splice(i, 1);
-      }
-    };
-  });
-  return arr;
-};
-
-
-function template_name (data, templates) {
-  var item_names = replacing(data, /@\w*/g);
-  item_names = sorting(item_names, templates);
-  
-  for(var i = 0; i < data.length; i++) {
-    var item_name = data[i].replace((/@\w*/g), '');
-    
-    var name = '.sprite_icon-' + item_name;
-    var hover = '--hover';
-    var active = '--active';
-    templates.forEach(function(templ) {
-      if (item_name == templ.name) {
-        name = '' + templ.template();
-        data.splice(i, 1);
-        //console.log(name);
-      } else {
-        if(item_name.slice(item_name.length - hover.length) == hover) {
-          item_name = item_name.slice(0, (item_name.length - hover.length)) + ':hover';
-        } else if(item_name.slice(item_name.length - active.length) == active) {
-          item_name = item_name.slice(0, (item_name.length - active.length)) + ':active';
-        }
-        name = '.sprite_icon-' + item_name;
-      }
-      
-      console.log(name);
-      
-    });
-    
-  };
-  console.log(data);
-};
-
-console.log(template_name(data, images.spec_templ));
+module.exports = sprite_build;

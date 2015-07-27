@@ -13,7 +13,7 @@ function in_array(value, array) {
 };
 	
 var header_btn = {
-	img_dir: 'header/header-slider_controls--btn',
+	img_dir: 'header/sprite/header-slider_controls--btn',
 	dest: [{
 		width: ['0'],
 		retina: 46
@@ -21,7 +21,7 @@ var header_btn = {
 };
 	
 var header_arrow = {
-	img_dir: 'header/sprite/reg',
+	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
 	dest: [{
 		width: ['0'],
 		retina: 42
@@ -29,7 +29,7 @@ var header_arrow = {
 };
 
 var header_arrow_hover = {
-	img_dir: 'header/sprite/hover',
+	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
 	dest: [{
 		width: ['0'],
 		retina: 52
