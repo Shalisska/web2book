@@ -87,17 +87,18 @@ slide.hover(function () {
 });
 
 //скроллинг formates
-;$(document).ready(function() {
-  var sliders = $('.formates-item-slider');
-
-  for(var i = 0; i < sliders.length; i++) {
-    var slider = $(sliders[i]);
-    slider.tinyscrollbar({
-        axis: "y"
-      ,	thumbSize: 120
-    });
-  };
-});
+//;$(document).ready(function() {
+//  var sliders = $('.formates-item-slider');
+//
+//  for(var i = 0; i < sliders.length; i++) {
+//    var slider = $(sliders[i]);
+//    slider.tinyscrollbar({
+//        axis: "y"
+//      ,	thumbSize: 120
+//		, mainContainer: $('.formates-slider__box')
+//    });
+//  };
+//});
 
 
 //точки если текст не влезает

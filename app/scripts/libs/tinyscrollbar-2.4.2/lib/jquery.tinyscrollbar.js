@@ -180,7 +180,6 @@
 			if (this.options.trackSizePer) {
                 this.mainContainer = $parent[0]['offset'+ sizeLabelCap];
                 var containerSize = sizing($container.css(sizeLabel), this.mainContainer);
-                
                 this.viewportSize = sizing($viewport.css(sizeLabel), containerSize);
                 this.contentSize = sizing($overview.css(sizeLabel), this.viewportSize);
                 this.trackSize = Math.floor(containerSize * this.options.trackSizePer, 0);
