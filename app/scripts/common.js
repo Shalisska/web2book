@@ -73,7 +73,7 @@ slide.hover(function () {
   }
   
 }, function (event) {
-  slide_name = search_class($(this));    
+  slide_name = search_class($(this));
   var pops = $('.' + slide_name + '--pops');
   
     if ($(event.relatedTarget).attr('class') !== pops.attr('class')) {
@@ -87,22 +87,103 @@ slide.hover(function () {
 });
 
 //скроллинг formates
-//;$(document).ready(function() {
-//  var sliders = $('.formates-item-slider');
-//
-//  for(var i = 0; i < sliders.length; i++) {
-//    var slider = $(sliders[i]);
-//    slider.tinyscrollbar({
-//        axis: "y"
-//      ,	thumbSize: 120
-//		, mainContainer: $('.formates-slider__box')
-//    });
-//  };
-//});
+;$(document).ready(function() {
+  var controls = $('.formates-slider__controls label');
+var sliders = $('.formates-item-slider');
+
+function scroll(slide) {
+  slide.tinyscrollbar({
+      axis: "y"
+    ,	thumbSize: 120
+  });
+  
+  var scrollbar = slide.data("plugin_tinyscrollbar")
+scrollbar.update();
+};
+
+function search(items) {
+  for(var i = 0; i < items.length; i++) {
+    var item = $(items[i]);
+    if(item.is(':visible')) {
+      return item;
+    };
+  };
+};
+
+scroll(search(sliders));
+
+controls.click(function() {
+  var mask = $(this).attr('for').replace(/[\w|-]*--([\w|-]*)/gi, '$1');
+
+  setTimeout(function() {
+    scroll($('.formates-item-slider--' + mask));
+  }, 1);
+});
+});
+
+;$(document).ready(function() {
+	var slides = $('.formates-item__item');
+	var close = $('.formates-item__item--pops-close');
+	var slide_name;
+
+	function search_class(item) {
+	  var name;
+	  var pattern = /([\w|-]*[^\b])/g;
+
+	  while ((res0 = pattern.exec(item.attr('class'))) != null) {
+		var patt = /__([\w|-]*)/g;
+		var res1 = patt.exec(res0[0])[1];
+
+		if(res1 != 'item') {
+		  name = res0[0];
+		}
+	  }
+	  return name;
+	}
+
+	slides.click(function() {
+	  slide_name = search_class($(this));
+	  var pops = $('.' + slide_name + '--pops');
+
+	  if(pops.length > 0) {
+		var slide_size = $(this).offset().top + $(this).outerHeight();
+		var pops_size = pops.parent().offset().top + pops.parent().outerHeight();
+
+		var delta = pops_size - slide_size;
+		var marg = ($(this).outerHeight()) / 100 * 55;
+
+		var size = delta + marg;
+		pops.addClass('show').css('bottom', size);  
+	  };
+	});
+
+	close.click(function(event) {
+	  event.preventDefault();
+	  $(this).parent().removeClass('show');
+	});
+
+	var pop = $('.formates-item__item--pops');
+
+	$(document).click(function(event) {
+	  if(!pop.is(event.target)
+		&& pop.has(event.target).length === 0
+		&& !slides.is(event.target)
+		&& slides.has(event.target).length === 0) {
+		  pop.removeClass('show');
+	  };
+	});
+
+	$(window).keydown(function(event) {
+	  if (event.keyCode==27
+		  && pop.hasClass('show')) {
+		pop.removeClass('show');
+	  }
+	});
+});
 
 
 //точки если текст не влезает
-$(document).ready(function() {
+;$(document).ready(function() {
 	$(".offers-products__info").dotdotdot({
 		watch: true,
 		after: 'a.offers-products__info-more'

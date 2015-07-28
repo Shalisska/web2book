@@ -3,7 +3,7 @@
 	top: 0;
 	bottom: 0;
 	left: 0;
-	width: 33%;
+	width: 310px;
 	background: linear-gradient(to top, #e1e1e1 97%, #f3f3f3);
 	border-radius: 5px;
 	border: 1px solid #b4b4b4;
@@ -114,7 +114,7 @@
 			}
 			
 			&:before {
-				top: 4px;
+				top: 2px;
 				border-radius: 3px 3px 0 0;
 				background: linear-gradient(rgba(240, 240, 240, 0.7) 45%, transparent);
 				box-shadow: inset 0 15px 20px -15px;
@@ -178,7 +178,7 @@
 				display: none;
 				position: absolute;
 				width: 254px;
-				left: 0;
+				left: -100px;
 				bottom: 50%;
 				margin-bottom: 40px;
 				z-index: 50;
@@ -207,6 +207,35 @@
 					bottom: -@h;
 					height: @h;
 					background: url(../images/formates/formates_cloud--bottom@254.png) no-repeat center top;
+				}
+				
+				&-close {
+					.reset-a();
+					position: absolute;
+					@w: 23px;
+					width: @w;
+					height: @w;
+					top: -22px;
+					right: -5px;
+					padding-left: 5px;
+					//padding-top: 1px;
+					line-height: 20px;
+					background: white;
+					color: #bf0000;
+					font-size: 14px;
+					font-family: 'Comic Sans MS';
+					text-transform: uppercase;
+					border: 1px solid #a9a9a9;
+					border-radius: 50%;
+					box-shadow: 0 0 5px 0 rgba(0, 0, 0, .65);
+					
+					&:visited {
+						color: #bf0000;
+					}
+					
+					&:hover, &:active {
+						color: #555;
+					}
 				}
 			}
 		}

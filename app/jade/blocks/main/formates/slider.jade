@@ -21,6 +21,7 @@ mixin slider--formates_item(slider_name, items)
 //-всплывающее описание
 mixin slider--formates_item--pops(slider_name, id, items)
 	.formates-item__item--pops(class='formates-' + slider_name + '__item--pops' + ' ' + 'formates-' + slider_name + '__' + id + '--pops')
+		a.formates-item__item--pops-close(href='#') x
 		each item in items
 				p.formates-item__text.formates-item__text--pops=item
 
