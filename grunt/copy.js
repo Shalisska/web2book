@@ -56,13 +56,13 @@ function in_array(value, array) {
 var sprite_arr = [{
 	img_dir: 'header/sprite/header-slider_controls--btn',
 	dest: [{
-		width: ['0', '650'],
+		width: ['0', '900', '650'],
 		retina: 32
 	}]
 }, {
 	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
 	dest: [{
-		width: ['0'],
+		width: ['0', '900'],
 		retina: 42
 	}, {
 		width: ['650'],
@@ -71,7 +71,7 @@ var sprite_arr = [{
 }, {
 	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
 	dest: [{
-		width: ['0'],
+		width: ['0', '900'],
 		retina: 52
 	}, {
 		width: ['650'],
@@ -80,7 +80,7 @@ var sprite_arr = [{
 }, {
 	img_dir: 'header/sprite/hooks',
 	dest: [{
-		width: ['0'],
+		width: ['0', '900'],
 		retina: 90
 	}, {
 		width: ['650'],
@@ -89,11 +89,26 @@ var sprite_arr = [{
 }, {
 	img_dir: 'formates/sprite',
 	dest: [{
+		width: ['0', '900', '650'],
+		retina: 40
+	}]
+}, {
+	img_dir: 'sprite/clips/clip-left',
+	dest: [{
 		width: ['0'],
-		retina: 40
+		retina: 44
 	}, {
-		width: ['650'],
-		retina: 40
+		width: ['900', '650'],
+		retina: 30
+	}]
+}, {
+	img_dir: 'sprite/clips/clip-right',
+	dest: [{
+		width: ['0'],
+		retina: 46
+	}, {
+		width: ['900', '650'],
+		retina: 32
 	}]
 }];
 

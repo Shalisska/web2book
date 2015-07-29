@@ -1,7 +1,7 @@
 mixin nav-footer(name, items)
 	-var class_name = name + '__item'
 	-var spec_class
-	nav
+	nav.footer-menu__block
 		ul(class=name)
 			each item, i in items
 				if item.name == 'Личный кабинет'
@@ -28,7 +28,14 @@ mixin nav_inner(name, items)
 				else
 					a(class=(name + '__item-name') href=item.href)=item.name
 
-
+mixin footer-contacts(items)
+	each item in items
+		p.footer-contacts__item(class='footer-contacts__item--' + item.id)
+			if item.id == 'mail'
+				each text in item.text
+					a(href='mailto: ' + text)=text
+			else
+				=item.text
 
 +nav-footer('footer-menu', [{
 	name: 'Личный кабинет',
@@ -111,3 +118,20 @@ mixin nav_inner(name, items)
 			href: '/'
 		}]
 	}])
+
+.footer-contacts
+	.footer__title Контакты
+	.footer__block
+		+footer-contacts([{
+			id: 'company',
+			text: 'ЗАО “Новые Печатные Технологии”'
+		}, {
+			id: 'adress',
+			text: 'г. Москва 2-й Котляковский переулок, д.18'
+		}, {
+			id: 'phone',
+			text: '(495) 223-92-00'
+		}, {
+			id: 'mail',
+			text: ['info@web2book.ru', 'sale@web2book.ru']
+		}])

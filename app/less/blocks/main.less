@@ -5,28 +5,32 @@
 	background: white;
 	box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
 	
+	@media(max-width: 470px) {
+		width: 100%;
+	}
+	
 	&:before, &:after {
 		content: '';
 		position: absolute;
 		z-index: 10;
 		bottom: -2.8%;
 		background-repeat: no-repeat;
+		
+		@media(max-width: 470px) {
+			display: none;
+		}
 	}
 	
 	&:before {
-		left: -1.5%;
-		width: 44px;
-		height: 52px;
-		background-size: 44px 52px;
-		background-image: url(../images/footer/icon_footer-clip--left.png);
+		left: -15.5px;//-1.5%;
 	}
 	
 	&:after {
-		right: -2%;
-		width: 47px;
-		height: 53px;
-		background-size: 47px 53px;
-		background-image: url(../images/footer/icon_footer-clip--right.png);
+		right: -19.5px;//-2%;
+	}
+	
+	@media(max-width: 1070px) {
+		&:before, &:after {bottom: -2%;}
 	}
 }
 

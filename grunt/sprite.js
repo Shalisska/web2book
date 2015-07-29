@@ -1,6 +1,6 @@
 var images = {
     retina: [1, 1.5, 2, 3]
-  , width: ['', '650']
+  , width: ['', '900', '650']
   , spec_templ: [{
       name: 'header-slider_controls--btn--active'
     , template: function (r, w) {
@@ -27,6 +27,22 @@ var images = {
       name: 'hook--right'
     , template: function (r, w) {
         var name = '.header--upper:after';
+        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
+		var res = name + bg + name;
+        return res;
+      }
+    }, {
+      name: 'footer-clip--left'
+    , template: function (r, w) {
+        var name = '.container--main:before';
+        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
+		var res = name + bg + name;
+        return res;
+      }
+    }, {
+      name: 'footer-clip--right'
+    , template: function (r, w) {
+        var name = '.container--main:after';
         var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
 		var res = name + bg + name;
         return res;

@@ -39,39 +39,18 @@ mixin picture(info, items)
 		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
 		img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
 
-mixin picture1(info, items)
-	picture
-		if (items.other)
-			each item in items.other
-				-var res = []
-				each pict in item.img
-					-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
-				-var med = '(' + item.val + '-width: ' + item.width + 'px)'
-				-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
-				source(media=med srcset=resourse)
-		
-		-var item = items.main
-		-var res = []
-		each pict, j in item.img
-			if (j === 0)
-				-res.push(info.adress + pict + '.' + info.ext)
-			else
-				-res.push(info.adress + pict + '.' + info.ext + ' ' + pict + 'w')
-		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
-		img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
-
 //-+picture({
 //-		name: name,
 //-		adress: '../images/header/header_slider/header_slide1@',
 //-		ext: 'png'
 //-	}, {
 //-		main: {
-//-			width: '560',
-//-			img: ['560', '840', '1120', '1680']
+//-			width: 560,
+//-			img: 560
 //-		},
 //-		other: [{
 //-			val: 'max',
-//-			width: '730',
-//-			img: ['288', '432', '576', '864']
+//-			width: 730,
+//-			img: 288
 //-		}]
 //-	})

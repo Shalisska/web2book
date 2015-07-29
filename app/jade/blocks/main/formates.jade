@@ -10,7 +10,6 @@ mixin slider--formates(slider_name, items)
 	div.clearfix(class=slider_name + '__controls')
 		each item, i in items
 			label(for=slider_name +'--' + item.id)
-				//img(src='../images/formates/formates-header@620.png', alt=item.id)
 				+picture({
 					name: item.id,
 					adress: '../images/formates/formates-header/formates-header@',

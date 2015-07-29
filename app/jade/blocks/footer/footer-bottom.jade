@@ -1,17 +1,23 @@
 mixin footer-pay(items)
-	each item in items
-		-var adr = '../images/footer/pay/' + item.id + '/' + item.id + '@'
+	each item, i in items
 		a.footer-pay__item(class=('footer-pay__item--' + item.id) href=item.href)
 			+picture({
 				name: item.id,
-				adress: adr,
+				adress: '../images/footer/pay/footer-pay@',
 				ext: 'png'
 			}, {
 				main: {
-					width: 64,
-					img: 64
-				}
+					width: 768,
+					img: 768
+				},
+				other: [{
+					val: 'max',
+					width: 650,
+					img: 540
+				}]
 			})
+		if (i === 2)
+			.footer-pay__item-row
 
 mixin footer-contacts(items)
 	each item in items

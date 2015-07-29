@@ -18,13 +18,45 @@ body {
 .body-wrapper {
 	position: relative;
 	max-width: 1150px;
-	margin: 0 auto 424px;
+	margin: 0 auto 420px;
+	
+	@media(max-width: 1070px) {
+		margin-bottom: 480px;
+	}
+	
+	@media(max-width: 750px) {
+		margin-bottom: 380px;
+	}
+	
+	@media(max-width: 650px) {
+		margin-bottom: 400px;
+	}
+	
+	@media(max-width: 600px) {
+		margin-bottom: 380px;
+	}
+	
+	@media(max-width: 470px) {
+		margin-bottom: 420px;
+	}
+	
+	@media(max-width: 370px) {
+		margin-bottom: 440px;
+	}
+	
+	@media(max-width: 300px) {
+		margin-bottom: 460px;
+	}
 }
 
 main {
 	//max-width: 1040px;
 	width: 90.435%;
 	margin: 0 auto;
+	
+	@media(max-width: 470px) {
+		width: 100%;
+	}
 }
 
 .footer-wrapper {
@@ -33,7 +65,38 @@ main {
 	width: 90.435%;
 	left: 50%;
 	margin-left: -(90.435% / 2);
-	bottom: -424px;
+	bottom: -420px;
+	
+	@media(max-width: 1070px) {
+		bottom: -480px;
+	}
+	
+	@media(max-width: 750px) {
+		bottom: -380px;
+	}
+	
+	@media(max-width: 650px) {
+		bottom: -400px;
+	}
+	
+	@media(max-width: 600px) {
+		bottom: -380px;
+	}
+	
+	@media(max-width: 470px) {
+		bottom: -420px;
+		width: 100%;
+		left: 0;
+		margin-left: 0;
+	}
+	
+	@media(max-width: 370px) {
+		bottom: -440px;
+	}
+	
+	@media(max-width: 300px) {
+		bottom: -460px;
+	}
 }
 
 .svg-container {
