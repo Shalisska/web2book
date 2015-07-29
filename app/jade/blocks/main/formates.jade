@@ -10,11 +10,21 @@ mixin slider--formates(slider_name, items)
 	div.clearfix(class=slider_name + '__controls')
 		each item, i in items
 			label(for=slider_name +'--' + item.id)
-				img(src='../images/formates/formates-header@620.png', alt=item.id)
+				//img(src='../images/formates/formates-header@620.png', alt=item.id)
+				+picture({
+					name: item.id,
+					adress: '../images/formates/formates-header/formates-header@',
+					ext: 'png'
+				}, {
+					main: {
+						width: 620,
+						img: 620
+					}
+				})
 				span=item.name
 		.formates-slider__controls_scroll
 			.formates-slider__controls_scroll-bar
-				.formates-slider__controls_scroll-control
+				.formates-slider__controls_scroll-control.sprite.sprite_icon-formates-slider-control
 
 	div(class=slider_name + '__box')
 		div(class=slider_name + '__inner')

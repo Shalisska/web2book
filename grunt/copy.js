@@ -12,15 +12,54 @@ function in_array(value, array) {
   return false;
 };
 	
-var header_btn = {
+//var header_btn = {
+//	img_dir: 'header/sprite/header-slider_controls--btn',
+//	dest: [{
+//		width: ['0', '650'],
+//		retina: 32
+//	}]
+//};
+//	
+//var header_arrow = {
+//	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
+//	dest: [{
+//		width: ['0'],
+//		retina: 42
+//	}, {
+//		width: ['650'],
+//		retina: 34
+//	}]
+//};
+//
+//var header_arrow_hover = {
+//	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
+//	dest: [{
+//		width: ['0'],
+//		retina: 52
+//	}, {
+//		width: ['650'],
+//		retina: 42
+//	}]
+//};
+//	
+//var header_hooks = {
+//	img_dir: 'header/sprite/hooks',
+//	dest: [{
+//		width: ['0'],
+//		retina: 90
+//	}, {
+//		width: ['650'],
+//		retina: 70
+//	}]
+//};
+	
+var sprite_arr = [{
 	img_dir: 'header/sprite/header-slider_controls--btn',
 	dest: [{
 		width: ['0', '650'],
 		retina: 32
 	}]
-};
-	
-var header_arrow = {
+}, {
 	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
 	dest: [{
 		width: ['0'],
@@ -29,9 +68,7 @@ var header_arrow = {
 		width: ['650'],
 		retina: 34
 	}]
-};
-
-var header_arrow_hover = {
+}, {
 	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
 	dest: [{
 		width: ['0'],
@@ -40,9 +77,7 @@ var header_arrow_hover = {
 		width: ['650'],
 		retina: 42
 	}]
-};
-	
-var header_hooks = {
+}, {
 	img_dir: 'header/sprite/hooks',
 	dest: [{
 		width: ['0'],
@@ -51,7 +86,16 @@ var header_hooks = {
 		width: ['650'],
 		retina: 70
 	}]
-};
+}, {
+	img_dir: 'formates/sprite',
+	dest: [{
+		width: ['0'],
+		retina: 40
+	}, {
+		width: ['650'],
+		retina: 40
+	}]
+}];
 
 function retina_cr(retina) {
   var arr = []
@@ -179,7 +223,6 @@ function width_build(width, array) {
   return arr;
 };
 	
-var sprite_arr = [header_btn, header_arrow, header_arrow_hover, header_hooks];
 sprite_files = sprite_cr(sprite_arr);
 
 return sprite_files;

@@ -12,6 +12,10 @@
 	.generate-footer-contacts(@n, (@i + 1));
 }
 
+//breakpoints
+@break1: 1070px;
+@break2: 900px;
+@break3: 750px;
 
 .footer {
 	position: relative;
@@ -53,8 +57,22 @@
 		border-radius: 5px;
 		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 		
+		&:first-of-type {
+			@media(max-width: @break2) {
+				padding: 2.5% 3% 0;
+			}
+		}
+		
 		&:last-of-type {
 			margin-bottom: 28px;
+			
+			@media(max-width: @break1) {
+				padding-bottom: 85px;
+			}
+			
+			@media(max-width: @break3) {
+				padding-bottom: 150px;
+			}
 			
 			&:before {
 				content: '';
@@ -78,6 +96,10 @@
 		margin-bottom: 0.3em;
 		color: @color__footer-title;
 		font-family: @font-bold;
+		
+		@media(max-width: @break1) {
+			font-size: 13px;
+		}
 	}
 	
 	&-menu {
@@ -114,11 +136,14 @@
 				@w: 11px;
 				width: @w;
 				height: @w;
-				top: 50%;
-				margin-top: -6px;
+				top: 3px;
 				left: -15%;
 				background-repeat: no-repeat;
 				background-position: center;
+				
+				@media(max-width: @break1) {
+					left: -14px;
+				}
 			}
 			
 			&--profile>a:before {
@@ -158,6 +183,14 @@
 	&-phone {
 		width: 23%;
 		
+		@media(max-width: @break1) {
+			width: 36%;
+		}
+		
+		@media(max-width: @break3) {
+			width: 50%;
+		}
+		
 		&__block {margin: 0;}
 		
 		&__number {
@@ -195,14 +228,30 @@
 				position: absolute;
 				left: 11px;
 				bottom: 0;
-				width: 72%;
+				width: 102px;
 				border-bottom: 1px dashed @color__footer-text;
+				
+				@media(max-width: @break1) {
+					left: 12px;
+				}
 			}
 		}
 	}
 	
 	&-pay {
 		width: 27%;
+		
+		@media(max-width: @break1) {
+			position: absolute;
+			bottom: 0;
+			left: 6%;
+			width: 100%;
+		}
+		
+		@media(max-width: @break3) {
+			width: 230px;
+			bottom: 10px;
+		}
 		
 		&__item {
 			display: inline-block;
@@ -228,6 +277,14 @@
 	
 	&-contacts {
 		width: 40%;
+		
+		@media(max-width: @break1) {
+			width: 54%;
+		}
+		
+		@media(max-width: @break3) {
+			width: 50%;
+		}
 		
 		&__item {
 			margin: 0 0;
@@ -263,6 +320,19 @@
 	
 	&-qr {
 		width: 10%;
+		
+		@media(max-width: @break3) {
+			position: absolute;
+			right: 6%;
+			bottom: 35px;
+			width: 88px;
+		}
+		
+		img {
+			max-width: 88px;
+			width: 100%;
+			height: auto;
+		}
 	}
 	
 	&-copyright {

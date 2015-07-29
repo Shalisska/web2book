@@ -1,6 +1,20 @@
+//breakpoints
+@break1: 950px;
+@break2: 650px;
+
 .descriptions {
 	margin-left: 330px;
 	padding-right: 2.1%;
+	font-size: @font;
+	
+	@media(max-width: @break1) {
+		margin-left: 210px;
+		font-size: 12px;
+	}
+	
+	@media(max-width: @break2) {
+		margin-left: 0px;
+	}
 	
 	&__block {
 		margin-bottom: 2.3em;

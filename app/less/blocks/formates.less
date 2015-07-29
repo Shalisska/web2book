@@ -1,3 +1,7 @@
+//breakpoints
+@break1: 950px;
+@break2: 650px;
+
 .formates {
 	position: absolute;
 	top: 0;
@@ -11,6 +15,14 @@
 		inset 0 1px 0 0 white,
 		0 1px 3px rgba(0, 0, 0, 0.3);
 	
+	@media(max-width: @break1) {
+		width: 200px;
+	}
+	
+	@media(max-width: @break2) {
+		display: none;
+	}
+	
 	//общий слайдер
 	&-slider {
 		&__input {display: none;}
@@ -21,12 +33,18 @@
 			height: 105px;
 			z-index: 15;
 			
+			@media(max-width: @break1) {
+				height: 70px;
+			}
+			
 			label {
 				float: left;
 				width: (100% / 3);
+				padding-bottom: 1px;
 				overflow: hidden;
 				text-align: center;
 				color: #454c5c;
+				cursor: pointer;
 				
 				&:hover {
 					color: #399ee5;
@@ -35,11 +53,19 @@
 				img {
 					margin-bottom: 15px;
 					width: 600%;
+					
+					@media(max-width: @break1) {
+						margin-bottom: 5px;
+					}
 				}
 				
 				span {
 					font-size: 18px;
 					border-bottom: 1px dashed #454c5c;
+					
+					@media(max-width: @break1) {
+						font-size: 13px;
+					}
 				}
 				
 				&:hover span {border-bottom-color: #399ee5;}
@@ -50,6 +76,10 @@
 				bottom: -8px;
 				left: 3.5%;
 				width: 93%;
+				
+				@media(max-width: @break1) {
+					bottom: -11px;
+				}
 				
 				&-bar {
 					width: 100%;
@@ -63,10 +93,16 @@
 					position: absolute;
 					top: -25px;
 					margin-left: -20px;
-					width: 40px;
-					height: 31px;
-					background: url('../images/formates/formates-slider-control@40.png') no-repeat center center;
-					background-size: 40px 31px;
+					
+					@media(max-width: @break1) {
+						@per: 0.75;
+						top: -19px;
+						width: (40px * @per);
+						height: (31px * @per);
+						margin-left: -15px;
+						background-size: (222px * @per) (218px * @per);
+						background-position: (0px * @per) (-187px * @per);
+					}
 				}
 			}
 		}
@@ -87,6 +123,10 @@
 			border-radius: 3px;
 			border: 1px solid #47ace1;
 			box-shadow: 0 -1px 1px 0px rgba(0, 0, 0, 0.2);
+			
+			@media(max-width: @break1) {
+				top: 93px;
+			}
 		}
 		
 		&__inner {
@@ -161,6 +201,7 @@
 		
 		&__inner {
 			position: absolute;
+			width: 100%;
 			top: 0;
 			left: 0;
 		}
@@ -182,9 +223,15 @@
 				bottom: 50%;
 				margin-bottom: 40px;
 				z-index: 50;
-				background: url(../images/formates/formates_cloud--center@254.png) center;
+				background-position: center;
 				background-repeat: repeat-y;
 				background-size: 100% auto;
+				
+				.retina('../images/formates/clouds/formates_cloud--center@', 254, 'png');
+				
+				@media(max-width: @break1) {
+					left: -70px;
+				}
 				
 				&:before, &:after {
 					content: '';
@@ -193,20 +240,22 @@
 					margin-left: -(254px / 2);
 					width: 254px;
 					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					background-position: center top;
 				}
 				
 				&:before {
 					@h: 16px;
 					top: -@h;
 					height: @h;
-					background: url(../images/formates/formates_cloud--top@254.png) no-repeat center top;
+					.retina('../images/formates/clouds/formates_cloud--top@', 254, 'png');
 				}
 				
 				&:after {
 					@h: 41px;
 					bottom: -@h;
 					height: @h;
-					background: url(../images/formates/formates_cloud--bottom@254.png) no-repeat center top;
+					.retina('../images/formates/clouds/formates_cloud--bottom@', 254, 'png');
 				}
 				
 				&-close {
@@ -218,7 +267,6 @@
 					top: -22px;
 					right: -5px;
 					padding-left: 5px;
-					//padding-top: 1px;
 					line-height: 20px;
 					background: white;
 					color: #bf0000;
@@ -244,10 +292,14 @@
 			text-align: center;
 			margin: 0;
 			
+			@media(max-width: @break1) {
+				font-size: 12px;
+			}
+			
 			&--pops {
 				position: relative;
 				z-index: 20;
-				padding: 7.9% ;
+				padding: 4% 7.9% ;
 			}
 		}
 		
@@ -290,6 +342,32 @@
 		
 		.generate-formates__formates(9);
 	}
+	
+	//элемент Paper
+	&-paper {
+		&__img {
+			width: 100%;
+
+			img {
+				width: (1800%);
+			}
+		}
+		
+		.generate-formates__formates(9);
+	}
+	
+	//элемент Templates
+	&-templates {
+		&__img {
+			width: 100%;
+
+			img {
+				width: (1800%);
+			}
+		}
+		
+		.generate-formates__formates(9);
+	}
 }
 
 .generate-formates__slider(@n, @i: 1) when (@i =< @n) {
@@ -303,7 +381,6 @@
 	@hover: -(100% * @n) + @margin;
 	
 	@controls: 15% + (35% * (@i - 1));
-	//@pointer: 18% + (32% * (@i - 1));
 	
 	&__controls label[for='formates-slider--@{item}'] img {
 		margin-left: @margin;
@@ -315,14 +392,14 @@
 	
 	&__input#formates-slider--@{item}:checked~.formates-slider__controls label[for='formates-slider--@{item}'] {
 		color: #399ee5;
-		
-//		&:after {
-//			display: block;
-//		}
 	
 		img{
 			margin-bottom: 0;
 			margin-left: @hover;
+			
+			@media(max-width: @break1) {
+				margin-bottom: -5px;
+			}
 		}
 		
 		span {
@@ -337,10 +414,6 @@
 	&__input#formates-slider--@{item}:checked~&__box .formates-@{item} {
 		display: block;
 	}
-	
-//	&__controls label[for='formates-slider--@{item}']:after {
-//		left: @pointer;
-//	}
 
 	.generate-formates__slider(@n, (@i + 1));
 }

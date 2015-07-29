@@ -5,7 +5,18 @@ mixin slider--formates_item(slider_name, items)
 			div.formates-item__inner.clearfix.overview(class='formates-' + slider_name + '__inner')
 				each item in items
 					div.formates-item__item(class='formates-' + slider_name + '__item' + ' ' + 'formates-' + slider_name + '__' + item.id)
-						div.formates-item__img(class='formates-' + slider_name + '__img'): img(src='../images/formates/format@4680.png', alt=item.id)
+						div.formates-item__img(class='formates-' + slider_name + '__img')
+							//-img(src='../images/formates/format@4680.png', alt=item.id)
+							+picture({
+								name: item.id,
+								adress: '../images/formates/formates/format@',
+								ext: 'png'
+							}, {
+								main: {
+									width: 4680,
+									img: 4680
+								}
+							})
 						if item.text
 							p.formates-item__text=item.text
 							
