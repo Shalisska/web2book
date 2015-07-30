@@ -2,9 +2,12 @@ mixin menu_named(name, del, items)
 	nav(class=name)
 		ul.clearfix
 			each item in items
-				li(class=name + '-item' + ' ' + name + '-item--' + item.class_name): a(class=name + del + item.class_name href=item.href)=item.name
+				-var icon = ''
+				if(item.class_name == 'profile')
+					-icon = 'sprite_icon-lock'
+				li(class=name + '-item' + ' ' + name + '-item--' + item.class_name): a(class=name + del + item.class_name + ' ' + icon href=item.href)=item.name
 
-.header--upper
+.header--upper.sprite_icon-hook--left.sprite_icon-hook--right
 	.header-row.clearfix
 		.header-contacts
 			p.header-contacts__name Контактный телефон:
@@ -12,7 +15,22 @@ mixin menu_named(name, del, items)
 				span.header-contacts__phone--grand 223-92-00
 
 		.header-logo
-			a(href='#'): img(src="../images/logo.png", alt="web2book")
+			a(href='#')
+				+picture({
+					name: 'web2book',
+					adress: '../images/logo/logo@',
+					ext: 'png'
+				}, {
+					main: {
+						width: 210,
+						img: 210
+					},
+					other: [{
+						val: 'max',
+						width: 460,
+						img: 152
+					}]
+				})
 
 		+menu_named('header-autorization', '__', [{
 								class_name: 'search',

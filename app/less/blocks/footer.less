@@ -1,18 +1,5 @@
-.generate-footer-contacts(@n, @i: 1) when (@i =< @n) {
-	@items:
-		company,
-		adress,
-		phone;
-	@item: extract(@items, @i);
-	
-	&--@{item}:before {
-		background-image: url('../images/icon_@{item}.png');
-	}
-	
-	.generate-footer-contacts(@n, (@i + 1));
-}
-
-//breakpoints
+.footer {
+	//breakpoints
 @break1: 1070px;
 @break2: 900px;
 @break3: 750px;
@@ -20,8 +7,7 @@
 @break5: 600px;
 @break6: 470px;
 @break7: 350px;
-
-.footer {
+	
 	position: relative;
 	width: 96.16%;
 	margin: 0 auto;
@@ -177,24 +163,13 @@
 			&--home>a:before {
 				content: '';
 				position: absolute;
-				@w: 11px;
-				width: @w;
-				height: @w;
 				top: 3px;
 				left: -15%;
 				background-repeat: no-repeat;
-				background-position: center;
 				
 				@media(max-width: @break1) {
 					left: -14px;
 				}
-			}
-			
-			&--profile>a:before {
-				background-image: url(../images/icon_lock--red.png);
-			}
-			&--home>a:before {
-				background-image: url(../images/icon_home.png);
 			}
 		}
 		
@@ -296,10 +271,6 @@
 				content: '';
 				display: inline-block;
 				margin-right: 7px;
-				width: 6px;
-				height: 11px;
-				background: url(../images/icon_mobile.png) no-repeat center;
-				background-size: 6px 11px;
 			}
 			
 			&:after {
@@ -394,22 +365,12 @@
 			&--mail a:before {
 				content: '';
 				display: inline-block;
-				width: 12px;
-				height: 12px;
 				margin-right: 5px;
 				background-repeat: no-repeat;
-				background-position: center;
-				background-size: contain;
 			}
-			
-			.generate-footer-contacts(3);
 			
 			&--mail a {
 				.reset-a();
-				
-				&:before {
-					background-image: url('../images/icon_mail.png');
-				}
 				
 				&:first-child {
 					margin-right: 22px;

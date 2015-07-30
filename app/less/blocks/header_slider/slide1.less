@@ -11,14 +11,9 @@
 	}
 	
 	&__content {
-		//width: 40%;
 		text-align: left;
 		color: white;
 		text-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
-		
-		@media(max-width: 730px) {
-			//width: 50%;
-		}
 		
 		@media(max-width: 550px) {
 			width: 100%;
@@ -32,7 +27,6 @@
 		font-size: 2em;
 		color: #9f0000;
 		font-weight: normal;
-		//text-align: right;
 		
 		@media(max-width: 730px) {
 			text-align: center;
@@ -68,7 +62,7 @@
 			line-height: 1.7;//1.5
 			
 			@media(max-width: 660px) {
-			padding-left: 25px;
+			padding-left: 26px;
 		}
 			
 			&:before {
@@ -78,11 +72,14 @@
 				top: 0.3em;
 				width: 4.042%;
 				height: 150%;
-				background: url(../images/header/check@36.png) no-repeat center top;
+				background-repeat: no-repeat;
+				background-position: center top;
 				background-size: contain;
+				.retina('../images/header/check/check@', 36, png);
 				
 				@media(max-width: 660px) {
-					width: 25px;
+					width: 26px;
+					.retina('../images/header/check/check@', 26, png);
 				}
 			}
 		}

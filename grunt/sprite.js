@@ -1,6 +1,6 @@
 var images = {
     retina: [1, 1.5, 2, 3]
-  , width: ['', '900', '650']
+  , width: ['', '950', '900', '650']
   , spec_templ: [{
       name: 'header-slider_controls--btn--active'
     , template: function (r, w) {
@@ -17,36 +17,40 @@ var images = {
       }
     }, {
       name: 'hook--left'
-    , template: function (r, w) {
-        var name = '.header--upper:before';
-		var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
-		var res = name + bg + name;
-        return res;
-      }
+    , class: 'before'
     }, {
       name: 'hook--right'
-    , template: function (r, w) {
-        var name = '.header--upper:after';
-        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
-		var res = name + bg + name;
-        return res;
-      }
+    , class: 'after'
     }, {
       name: 'footer-clip--left'
-    , template: function (r, w) {
-        var name = '.container--main:before';
-        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
-		var res = name + bg + name;
-        return res;
-      }
+    , class: 'before'
     }, {
       name: 'footer-clip--right'
-    , template: function (r, w) {
-        var name = '.container--main:after';
-        var bg = '{background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
-		var res = name + bg + name;
-        return res;
-      }
+    , class: 'after'
+    }, {
+      name: 'lock'
+	, class: 'before'
+    }, {
+      name: 'lock--red'
+	, class: 'before'
+    }, {
+      name: 'home'
+	, class: 'before'
+    }, {
+      name: 'mobile'
+	, class: 'before'
+    }, {
+      name: 'company'
+	, class: 'before'
+    }, {
+      name: 'adress'
+	, class: 'before'
+    }, {
+      name: 'phone'
+	, class: 'before'
+    }, {
+      name: 'mail'
+	, class: 'before'
     }]
 };
 
@@ -71,6 +75,16 @@ function in_array_templ(what, where, templates) {
   if(in_array(what, where)) {
     var ind = where.indexOf(what);
     if(templates[ind].template) {
+      return true;
+    };
+  };
+  return false;
+};
+
+function in_array_class(what, where, templates) {
+  if(in_array(what, where)) {
+    var ind = where.indexOf(what);
+    if(templates[ind].class) {
       return true;
     };
   };
@@ -105,8 +119,10 @@ function template_media (w, r) {
     + media_dpi + 'dpi), only screen and (min-resolution: ' 
     + r + 'dppx) {\n';
   };
+	
+	res += '@sprite-bg: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);\n';
 
-  res += '.sprite {background-image: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);}'
+  res += '.sprite {background-image: @sprite-bg;}'
 
   return res;
 };
@@ -142,11 +158,19 @@ function template_name(data, templates, r, w) {
     }
     name = '.sprite_icon-' + item_name;
   };
+	
+	if (in_array_class(item_name, spec_names, templates)) {
+		var ind = spec_names.indexOf(item_name);
+		name = name + ':' + templates[ind].class +
+			'{background-image: @sprite-bg;';
+	} else {
+		name = name + '{';
+	};
   return name;
 };
 
 function template_width(data, r) {
-  var width = '{' +
+  var width =
         'background-position: ' + parseInt(data.offset_x)/r + 'px '
           + parseInt(data.offset_y)/r + 'px; ' +
         'background-size: ' + parseInt(data.total_width)/r + 'px '

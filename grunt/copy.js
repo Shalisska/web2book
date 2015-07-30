@@ -1,9 +1,108 @@
-//сортировка файлов для спрайта
-var sprite_files = [];
+var retina_size = [1, 1.5, 2, 3];
 
-function sprite_create() {
-var width_arr = [];
-var dest_arr = [];
+var sprite_arr = [{
+	img_dir: 'header/sprite/header-slider_controls--btn',
+	dest: [{
+		width: 0,
+		retina: 32
+	}]
+}, {
+	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
+	dest: [{
+		width: 0,
+		retina: 42
+	}, {
+		width: 650,
+		retina: 34
+	}]
+}, {
+	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
+	dest: [{
+		width: 0,
+		retina: 52
+	}, {
+		width: 650,
+		retina: 42
+	}]
+}, {
+	img_dir: 'header/sprite/hooks',
+	dest: [{
+		width: 0,
+		retina: 90
+	}, {
+		width: 650,
+		retina: 70
+	}]
+}, {
+	img_dir: 'formates/sprite',
+	dest: [{
+		width: 0,
+		retina: 40
+	}, {
+		width: 950,
+		retina: 30
+	}]
+}, {
+	img_dir: 'sprite/clips/clip-left',
+	dest: [{
+		width: 0,
+		retina: 44
+	}, {
+		width: 900,
+		retina: 30
+	}]
+}, {
+	img_dir: 'sprite/clips/clip-right',
+	dest: [{
+		width: 0,
+		retina: 46
+	}, {
+		width: 900,
+		retina: 32
+	}]
+}, {
+	img_dir: 'sprite/adress',
+	dest: [{
+		width: 0,
+		retina: 8
+	}]
+}, {
+	img_dir: 'sprite/company',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
+}, {
+	img_dir: 'sprite/home',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
+}, {
+	img_dir: 'sprite/lock',
+	dest: [{
+		width: 0,
+		retina: 8
+	}]
+}, {
+	img_dir: 'sprite/mail',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
+}, {
+	img_dir: 'sprite/mobile',
+	dest: [{
+		width: 0,
+		retina: 6
+	}]
+}, {
+	img_dir: 'sprite/phone',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
+}];
 
 function in_array(value, array) {
   for(var i = 0; i < array.length; i++) {
@@ -11,238 +110,172 @@ function in_array(value, array) {
   }
   return false;
 };
-	
-//var header_btn = {
-//	img_dir: 'header/sprite/header-slider_controls--btn',
-//	dest: [{
-//		width: ['0', '650'],
-//		retina: 32
-//	}]
-//};
-//	
-//var header_arrow = {
-//	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
-//	dest: [{
-//		width: ['0'],
-//		retina: 42
-//	}, {
-//		width: ['650'],
-//		retina: 34
-//	}]
-//};
-//
-//var header_arrow_hover = {
-//	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
-//	dest: [{
-//		width: ['0'],
-//		retina: 52
-//	}, {
-//		width: ['650'],
-//		retina: 42
-//	}]
-//};
-//	
-//var header_hooks = {
-//	img_dir: 'header/sprite/hooks',
-//	dest: [{
-//		width: ['0'],
-//		retina: 90
-//	}, {
-//		width: ['650'],
-//		retina: 70
-//	}]
-//};
-	
-var sprite_arr = [{
-	img_dir: 'header/sprite/header-slider_controls--btn',
-	dest: [{
-		width: ['0', '900', '650'],
-		retina: 32
-	}]
-}, {
-	img_dir: 'header/sprite/header-slider_controls--arrows--reg',
-	dest: [{
-		width: ['0', '900'],
-		retina: 42
-	}, {
-		width: ['650'],
-		retina: 34
-	}]
-}, {
-	img_dir: 'header/sprite/header-slider_controls--arrows--hover',
-	dest: [{
-		width: ['0', '900'],
-		retina: 52
-	}, {
-		width: ['650'],
-		retina: 42
-	}]
-}, {
-	img_dir: 'header/sprite/hooks',
-	dest: [{
-		width: ['0', '900'],
-		retina: 90
-	}, {
-		width: ['650'],
-		retina: 70
-	}]
-}, {
-	img_dir: 'formates/sprite',
-	dest: [{
-		width: ['0', '900', '650'],
-		retina: 40
-	}]
-}, {
-	img_dir: 'sprite/clips/clip-left',
-	dest: [{
-		width: ['0'],
-		retina: 44
-	}, {
-		width: ['900', '650'],
-		retina: 30
-	}]
-}, {
-	img_dir: 'sprite/clips/clip-right',
-	dest: [{
-		width: ['0'],
-		retina: 46
-	}, {
-		width: ['900', '650'],
-		retina: 32
-	}]
-}];
 
+//объект с ретиной и размерами картинки
 function retina_cr(retina) {
   var arr = []
-  arr.push({size: '1', img_size: retina});
-  arr.push({size: '1.5', img_size: retina * 1.5});
-  arr.push({size: '2', img_size: retina * 2});
-  arr.push({size: '3', img_size: retina * 3});
+  retina_size.forEach(function(ret) {
+    arr.push({size: ret, img_size: retina * ret});
+  });
   return arr;
 };
 
-
-function dest_cr(dir, width, retina) {  
-  var width_r;
-  
-  if(width == 0) {
-    width_r = '';
-  } else {
-    width_r = width;
-  }
-  
-  var src = dir + '/**/*@' + retina.img_size + '.png';
-  var dest = 'spec/sprite' + width_r + '/sprite@' + retina.size;
-  
-  if(!(in_array(dest, dest_arr))) {
-    dest_arr.push(dest);
-  }
-  
-  return {src: src, dest: dest};
+//базовый объект с папкой и адресом
+function elem_cr(retina, size, dir) {
+    var obj = {
+    retina: retina,
+    src: dir + '/**/*@' + size + '.png'
+  };  
+  return obj;
 };
 
-
-
-function dest_build(dir, dests) {
-  var array = [];
-  for (var k=0; k<dests.length; k++) {
-    var dest = dests[k];
-    var item = retina_cr(dest.retina);
-
-    for(var j=0; j<dest.width.length; j++) {
-      var width_r = dest.width[j];
-      var arr = [];
-
-      if(!(in_array(width_r, width_arr))) {
-        width_arr.push(width_r);
-      }
-
-      for(var i=0; i<item.length; i++) {
-        arr.push(dest_cr(dir, width_r, item[i]));
-      }
-
-      var obj = {width: width_r, arr: arr};
-      array.push(obj);
-    }
-  }
-  return array;
+//объекты по данным элемента dest и значением width
+function dest_cr_elem(width, retina, dir) {
+  var retina_obj = retina_cr(retina);
+  var arr = [];
+  retina_obj.forEach(function(ret) {
+    arr.push(elem_cr(ret.size, ret.img_size, dir));
+  });
+  return {width: width, elems: arr};
 };
 
-function width_cr(array) {
-  var a = [];
-  for(var i=0; i<array.length; i++) {
-    a = a.concat(array[i]);
-  }
-  return a;
+//объекты по данным dest
+function dest_cr(dests, dir) {
+  var arr = [];
+  dests.forEach(function(dest) {
+    arr.push(dest_cr_elem(dest.width, dest.retina, dir));
+  });
+  return arr;
 };
 
-function sprite_cr (arr) {
-  var spr_arr = [];
-  var arr_main = [];
+//объекты по данным спрайта
+function obj_cr(items) {
+  var arr = [];
+  items.forEach(function(item) {
+    arr.push(dest_cr(item.dest, item.img_dir));
+  });
+  return arr;
+};
+
+// Функции сортировки массива по убыванию
+function sDecrease(i, ii) {
+ if (i > ii)
+ return -1;
+ else if (i < ii)
+ return 1;
+ else
+ return 0;
+}
+
+//создание массива c width
+function width_cr(items) {
+  var arr = [];
+  items.forEach(function(item) {
+    item.forEach(function(elem) {
+      var width = elem.width;
+      if(!in_array(width, arr)) {
+        arr.push(width);
+      };
+    });
+  });
+  arr.sort(sDecrease);
+  return arr;
+};
+
+//массив из ширин элемента
+function obj_width(items) {
+  var arr = [];
+  items.forEach(function(item) {
+    arr.push(item.width);
+  });
+  return arr;
+};
+
+//добавление объектов со всеми ширинами
+function sort(array, items) {
+  var items_width = obj_width(items);
   
-  for (var i=0; i<arr.length; i++) {
-    var elem = arr[i];
-    
-    spr_arr.push(dest_build(elem.img_dir, elem.dest));
-  };
-  
-  var spr_array = width_cr(spr_arr);
-  var w_build = width_build(width_arr, spr_array);
-  
-  for(var i=0; i<dest_arr.length; i++) {
-    var arr_stek = [];
-    for(var j=0; j<w_build.length; j++) {
-      var stek = w_build[j];
-      for(var l=0; l<stek.length; l++) {
-        if(stek[l].dest == dest_arr[i]) {
-          arr_stek.push(stek[l]);
-        }
+  for (var i = 0; i < array.length; i++) {
+    if(!in_array(array[i], items_width)) {
+      if (i == 0) {
+        items.forEach(function(item) {
+          if(item.width == 0) {
+            items.push({width: array[i], elems: item.elems});
+          };
+        });
+      } else {
+        items.forEach(function(item) {
+          if(item.width == array[i - 1]) {
+            items.push({width: array[i], elems: item.elems});
+          };
+        });
       };
     };
     
-    var obj_src = [];
-    var obj_src_r = [];
-    for(var m=0; m<arr_stek.length; m++) {
-      obj_src.push(arr_stek[m].src);
-    };
-    
-    var obj_sprite = {
-      expand: true,
-      cwd: 'app/images/',
-      src: obj_src,
-      dest: dest_arr[i],
-      flatten: true
-    };
-    
-    arr_main.push(obj_sprite);
   };
-  return arr_main
   
+  return items;
 };
 
-function width_build(width, array) {
-  var arr = [];
+//сортировка массивов по значению width
+function obj_sorting(sprite) {
+  var array = [];
+  var obj_arr = obj_cr(sprite);
+  var width_arr = width_cr(obj_arr);
+  var obj_array = [];
   
-  for(var i=0; i<width.length; i++) {
-    var arr_w = [];
-    var w = width[i];
+  obj_arr.forEach(function(obj) {
+    obj_array.push(sort(width_arr, obj));
+  });
     
-    for(var j=0; j<array.length; j++) {
-      var ar = array[j];
-      if(w == ar.width) {
-        arr_w = arr_w.concat(ar.arr);
-      }
-    }
-    arr.push(arr_w);
-  }
-  return arr;
+  width_arr.forEach(function(width) {
+    var arr = [];
+    obj_array.forEach(function(object) {
+      object.forEach(function(obj) {
+        if(width == obj.width) {
+          arr = arr.concat(obj.elems);
+        };
+      });
+    });
+    array.push({width: width, elems: arr});
+  });
+  
+  return array;
 };
-	
-sprite_files = sprite_cr(sprite_arr);
 
-return sprite_files;
+//создание спрайта
+function sprite_cr(items) {
+  var array = [];
+  items.forEach(function(item) {
+    retina_size.forEach(function(ret) {
+      var arr = [];
+      item.elems.forEach(function(elem) {
+        if(elem.retina == ret) {
+          arr.push(elem.src);
+        };
+      });
+      
+      var width = item.width;
+      
+      if (width == 0) {
+        width = '';
+      };
+      
+      var obj_sprite = {
+        expand: true,
+        cwd: 'app/images/',
+        src: arr,
+        dest: 'spec/sprite' + width + '/sprite@' + ret,
+        flatten: true
+      };
+      
+      array = array.concat(obj_sprite);
+    });
+  });
+  return array;
 };
-sprite_create();
+
+var sprite_files = sprite_cr(obj_sorting(sprite_arr));
 
 module.exports = {
 	build: {

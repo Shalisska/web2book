@@ -20,11 +20,16 @@ mixin footer-pay(items)
 			.footer-pay__item-row
 
 mixin footer-contacts(items)
+	-var icon
 	each item in items
-		p.footer-contacts__item(class='footer-contacts__item--' + item.id)
+		if item.id != 'mail'
+			-icon = ' sprite_icon-' + item.id
+		else
+			-icon = ''
+		p.footer-contacts__item(class='footer-contacts__item--' + item.id + icon)
 			if item.id == 'mail'
 				each text in item.text
-					a(href='mailto: ' + text)=text
+					a(class = 'sprite_icon-' + item.id href='mailto: ' + text)=text
 			else
 				=item.text
 
@@ -35,7 +40,7 @@ mixin footer-contacts(items)
 		span.footer-phone__number
 			| (495)
 			strong 223-92-00
-		a.footer-phone__recall(href='/') Перезвоните мне
+		a.footer-phone__recall.sprite_icon-mobile(href='/') Перезвоните мне
 
 .footer-pay
 	.footer__title Принимаем к оплате

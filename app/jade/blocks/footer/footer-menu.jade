@@ -1,18 +1,22 @@
 mixin nav-footer(name, items)
 	-var class_name = name + '__item'
 	-var spec_class
+	-var icon
 	nav.footer-menu__block
 		ul(class=name)
 			each item, i in items
 				if item.name == 'Личный кабинет'
 					-spec_class = class_name + '--profile'
+					-icon = 'sprite_icon-lock--red'
 				else if item.name == 'На главную'
 					-spec_class = class_name + '--home'
+					-icon = 'sprite_icon-home'
 				else
 					-spec_class = ''
+					-icon = ''
 				
 				li.footer__title(class=class_name + ' ' + spec_class)
-					a(class=(class_name + '-name') href=item.href)=item.name
+					a(class=class_name + '-name' + ' ' + icon href=item.href)=item.name
 					if item.next
 						+nav_inner(name, item.next)
 
