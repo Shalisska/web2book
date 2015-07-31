@@ -13,8 +13,12 @@ html.no-svg(lang="ru")
 			include ../blocks/header
 
 			main(class=specClass)
-				.container.container--main
-					block content
+				.container.container--main.clearfix
+					.column--central
+						block content
+					aside.column--right
+						block right-sidebar
+					block content-bottom
 
 			.footer-wrapper
 				include ../blocks/footer

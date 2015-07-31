@@ -2,9 +2,13 @@ extends ../layouts/default
 
 block variables
 	-var pageID = a
+	-var pageClass = 'body-index'
 	-var specClass = 'sprite_icon-footer-clip--left sprite_icon-footer-clip--right'
 
 block scripts_upper
+
+block header
+	include ../blocks/header/header_slider
 
 block content
 	include ../blocks/offers
@@ -14,3 +18,4 @@ block content
 
 
 block scripts
+	script(src="../scripts/scrolls-index.js")

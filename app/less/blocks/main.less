@@ -12,48 +12,6 @@
 	@media(max-width: 450px) {
 		padding-bottom: 25px;
 	}
-	
-	&:before, &:after {
-		content: '';
-		position: absolute;
-		z-index: 10;
-		bottom: -2.8%;
-		background-repeat: no-repeat;
-		
-		@media(max-width: 470px) {
-			display: none;
-		}
-	}
-	
-	&:before {
-		left: -15.5px;//-1.5%;
-	}
-	
-	&:after {
-		right: -19.5px;//-2%;
-	}
-	
-	@media(max-width: 1070px) {
-		&:before, &:after {bottom: -2%;}
-	}
-	
-	@media(max-width: 900px) {
-		&:before, &:after {bottom: -1.4%;}
-		&:before {left: -12px;}
-		&:after {right: -14px;}
-	}
-	
-	@media(max-width: 750px) {
-		&:before, &:after {bottom: -0.4%;}
-	}
-	
-	@media(max-width: 650px) {
-		&:before, &:after {bottom: -0.7%;}
-	}
-	
-	@media(max-width: 600px) {
-		&:before, &:after {bottom: -1.4%;}
-	}
 }
 
 .main-content {
@@ -68,5 +26,5 @@
 @import url('content.less');
 @import url('teasers.less');
 
-
+@import url('calculator/calculator.less');
 

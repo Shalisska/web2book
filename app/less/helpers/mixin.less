@@ -15,22 +15,22 @@
 }
 
 .retina(@img-url, @img-size, @img-ext: 'png') {
-	@size: @img-size;
-	background-image: url('@{img-url}@{size}.@{img-ext}');
+	@ret-size: @img-size;
+	background-image: url('@{img-url}@{ret-size}.@{img-ext}');
 	
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
-		@size: (@img-size * 1.5);
-	background-image: url('@{img-url}@{size}.@{img-ext}');
+		@ret-size: (@img-size * 1.5);
+	background-image: url('@{img-url}@{ret-size}.@{img-ext}');
 	}
 	
 	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-		@size: (@img-size * 2);
-	background-image: url('@{img-url}@{size}.@{img-ext}');
+		@ret-size: (@img-size * 2);
+	background-image: url('@{img-url}@{ret-size}.@{img-ext}');
 	}
 	
 	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
-		@size: (@img-size * 3);
-	background-image: url('@{img-url}@{size}.@{img-ext}');
+		@ret-size: (@img-size * 3);
+	background-image: url('@{img-url}@{ret-size}.@{img-ext}');
 	}
 }
 

@@ -1,0 +1,114 @@
+.body-index {
+	.container--header {
+		width: 88.69%;
+		
+		@media(max-width: 470px) {
+			width: 100%;
+		}
+	
+		&:before {
+			content: '';
+			position: absolute;
+			top: 3%;
+			left: 6%;
+			right: 6%;
+			bottom: 2%;
+			box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 1);
+			z-index: -1;
+
+			@media(max-width: 470px) {
+				display: none;
+			}
+		}
+	}
+	
+	.header {
+		margin-top: 5px;
+		padding-top: 27px;
+		background-size: 100% 100%;
+		.retina('../images/header/header_bg/header_bg--index/header_bg@', 1150, 'png');
+
+		@media(max-width: 768px) {
+			.retina('../images/header/header_bg/header_bg--index/header_bg@', 754, 'png');
+		}
+		
+		@media(max-width: 650px) {
+			padding-top: 21px;
+		}
+		
+		@media(max-width: 470px) {
+			background-image: linear-gradient(#46a6eb, #86d5fa, #46a6eb);
+			margin-top: 0;
+			padding-top: 15px;
+			z-index: 30;
+			margin-bottom: 30px;
+			padding-bottom: 15px;
+			box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.2), inset 23px 0 30px -20px rgba(75, 192, 250, 0.4), inset -23px 0 30px -20px rgba(75, 192, 250, 0.4), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.65), inset 0 1px 1px 0 #2a8acf, 0 1px 3px 0 rgba(0, 0, 0, 0.45);
+			border-radius: 10px;
+		}
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			width: 46%;
+			bottom: 1%;
+			height: 30px;
+			box-shadow: 5px 15px 40px 5px rgba(0, 0, 0, 0.5);
+			z-index: -1;
+
+			@media(max-width: 470px) {
+				display: none;
+			}
+		}
+
+		&:before {
+			left: 5.3%;
+			transform: skew(-40deg);
+
+			@media(max-width: 855px) {
+				left: 5.5%;
+			}
+
+			@media(max-width: 700px) {
+				left: 5.9%;
+			}
+
+			@media(max-width: 600px) {
+				left: 6.3%;
+			}
+
+			@media(max-width: 500px) {
+				left: 6.9%;
+			}
+
+			@media(max-width: 400px) {
+				left: 7.8%;
+			}
+		}
+
+		&:after {
+			right: 5.1%;
+			transform: skew(40deg);
+
+			@media(max-width: 855px) {
+				right: 5.4%;
+			}
+
+			@media(max-width: 700px) {
+				right: 5.8%;
+			}
+
+			@media(max-width: 600px) {
+				right: 6.2%;
+			}
+
+			@media(max-width: 500px) {
+				right: 6.7%;
+			}
+
+			@media(max-width: 400px) {
+				right: 7.4%;
+			}
+		}
+	}
+}
