@@ -113,10 +113,12 @@
 		white-space: nowrap;
 		padding: 7px 17px 0 20px;
 		height: 36px;
-		background: url(../images/news-bg.png) no-repeat center top;
+		background-repeat: no-repeat;
+		background-position: center top;
 		background-size: 100% 36px;
 		font-family: @font__news-all;
 		font-size: @size__news-all;
 		color: @color__news-all;
+		.retina('../images/news/news-bg@', 98, 'png');
 	}
 }

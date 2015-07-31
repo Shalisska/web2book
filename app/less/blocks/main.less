@@ -9,6 +9,10 @@
 		width: 100%;
 	}
 	
+	@media(max-width: 450px) {
+		padding-bottom: 25px;
+	}
+	
 	&:before, &:after {
 		content: '';
 		position: absolute;
@@ -31,6 +35,24 @@
 	
 	@media(max-width: 1070px) {
 		&:before, &:after {bottom: -2%;}
+	}
+	
+	@media(max-width: 900px) {
+		&:before, &:after {bottom: -1.4%;}
+		&:before {left: -12px;}
+		&:after {right: -14px;}
+	}
+	
+	@media(max-width: 750px) {
+		&:before, &:after {bottom: -0.4%;}
+	}
+	
+	@media(max-width: 650px) {
+		&:before, &:after {bottom: -0.7%;}
+	}
+	
+	@media(max-width: 600px) {
+		&:before, &:after {bottom: -1.4%;}
 	}
 }
 

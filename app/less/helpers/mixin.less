@@ -14,7 +14,7 @@
 	}
 }
 
-.retina(@img-url, @img-size, @img-ext) {
+.retina(@img-url, @img-size, @img-ext: 'png') {
 	@size: @img-size;
 	background-image: url('@{img-url}@{size}.@{img-ext}');
 	
@@ -65,8 +65,12 @@
 	
 	&__input#offers-slider--@{item}:checked~.offers-title label[for='offers-slider--@{item}'] {
 		color: @color__offers-header--active;
-		background-image: url(../images/offers/offers-rect.png);
 		text-shadow: 0 1px 0 rgba(29, 118, 183, 0.75);
+		.retina('../images/offers/rect/offers-rect@', 234, 'png');
+		
+		@media(max-width: 480px) {
+			.retina('../images/offers/rect/offers-rect@', 128, 'png');
+		}
 	}
 	
 	&__input#offers-slider--@{item}:checked~&__box .offers-@{item} {

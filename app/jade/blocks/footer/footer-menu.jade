@@ -33,11 +33,16 @@ mixin nav_inner(name, items)
 					a(class=(name + '__item-name') href=item.href)=item.name
 
 mixin footer-contacts(items)
+	-var icon
 	each item in items
-		p.footer-contacts__item(class='footer-contacts__item--' + item.id)
+		if item.id != 'mail'
+			-icon = ' sprite_icon-' + item.id
+		else
+			-icon = ''
+		p.footer-contacts__item(class='footer-contacts__item--' + item.id + icon)
 			if item.id == 'mail'
 				each text in item.text
-					a(href='mailto: ' + text)=text
+					a(class = 'sprite_icon-' + item.id href='mailto: ' + text)=text
 			else
 				=item.text
 

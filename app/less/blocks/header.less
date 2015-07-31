@@ -35,8 +35,15 @@
 	margin: 5px auto 10px;
 	padding-top: 27px;
 	width: 100%;
-	background: url(../images/header/header_bg@1150.png) no-repeat center top;
+	background-repeat: no-repeat;
+	background-position: center top;
 	background-size: 100% 100%;
+	.retina('../images/header/header_bg/header_bg@', 1150, 'png');
+	
+	@media(max-width: 768px) {
+		.retina('../images/header/header_bg/header_bg@', 754, 'png');
+	}
+	
 	
 	@media(max-width: 650px) {
 		padding-top: 21px;

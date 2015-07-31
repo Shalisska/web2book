@@ -7,7 +7,7 @@
 	@item: extract(@items, @i);
 	
 	&--@{item} {
-		background-image: url('../images/teasers/@{item}/@{item}@90.jpg');
+		.retina('../images/teasers/@{item}/@{item}@', 90, 'jpg');
 	}
 	
 	.generate-teasers-bg(@n, (@i + 1));
@@ -17,12 +17,16 @@
 .teasers {
 	text-align: center;
 	
+	@media(max-width:790px) {
+		color: white;
+	}
+	
 	&__item {
 		.reset-a();
 		display: inline-block;
 		width: 22%;
-		margin: 0 1%;
-		padding: 1.2% 2% 1.2% 9%;
+		margin-right: 2%;
+		padding: 1.2% 1% 1.2% 9%;
 		text-align: left;
 		background-position: left center;
 		background-repeat: no-repeat;
@@ -35,8 +39,65 @@
 		
 		.generate-teasers-bg(4);
 		
+		@media(max-width: 1050px) {
+			margin-right: 1%;
+			width: 23%;
+		}
+		
+		@media(max-width: 998px) {
+			margin-right: 10px;
+			width: 190px;
+			padding: 10px 5px 5px 80px;
+		}
+		
+		@media(max-width: 950px) {
+			width: 180px;
+			padding-left: 70px;
+			font-size: 12px;
+			margin-right: 5px;
+		}
+		
+		@media(max-width: 900px) {
+			font-size: 10px;
+			width: 160px;
+			height: 60px;
+			vertical-align: middle;
+			padding-top: 5px;
+			padding-left: 60px;
+		}
+		
+		@media(max-width: 790px) {
+			margin-right: 1%;
+			padding-left: 5px;
+			width: 20%;
+			text-align: center;
+			background-image: linear-gradient(#86d5fa 0%, #46a6eb 74%, #57bff5 100%);
+			box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5), inset 0px -1px 0px 0px #2a8acf, inset 0px 0px 0px 2px rgba(255, 255, 255, 0.2), inset 4px 0px 1px -1px rgba(75, 192, 250, 0.4), inset -4px 0px 1px -1px rgba(75, 192, 250, 0.4);
+			border: none;
+			border-radius: 10px;
+			text-shadow: 0 1px 0px #359de6;
+		}
+		
+		@media(max-width: 600px) {width: 23%;}
+		
+		@media(max-width: 450px) {
+			width: 100%;
+			height: auto;
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
 		&:hover, &:active {
 			color: @color__teasers;
+			
+			@media(max-width: 790px) {
+				background-image: linear-gradient((#86d5fa + 20) 0%, (#46a6eb + 20) 74%, (#57bff5 + 20) 100%);
+				color: white;
+			}
 		}
 		
 		&-sub {
@@ -46,6 +107,11 @@
 			text-transform: none;
 			font-family: @font;
 			line-height: 2;
+			white-space: nowrap;
+			
+			@media(max-width: 900px) {
+				font-size: inherit;
+			}
 			
 			&--online {display: none;}
 			
