@@ -1,0 +1,90 @@
+.calc-opener-mix(@n, @i: 1) when (@i =< @n) {
+	@items:
+		print,
+		cover,
+		block,
+		inset,
+		replication;
+	@item: extract(@items, @i);
+	
+	input#@{item}-open:checked~.@{item} {
+		display: block;
+	}
+
+	input#@{item}-open:checked~label[for='@{item}-open'] .@{item}-open__on {
+		display: none;
+	}
+
+	input#@{item}-open:checked~label[for='@{item}-open'] .@{item}-open__off {
+		display: block;
+	}
+	
+	.calc-opener-mix(@n, (@i + 1));
+}
+
+//put to .calculator__switcher
+.calc-switcher(@id) {
+	&-inputs {
+		display: none;
+	}
+	
+	&-labels {
+		background: gray;
+		
+		label {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			opacity: 0;
+			border-radius: 50%;
+		}
+	}
+	
+	input[id='@{id}-off']:checked~&-labels label[for='@{id}-off'] {
+		background: blue;
+		opacity: 1;
+	}
+
+	input[id='@{id}-on']:checked~&-labels {
+		background: white;
+		opacity: 1;
+	}
+
+	input[id='@{id}-on']:checked~&-labels label[for='@{id}-on'] {
+		background: blue;
+		opacity: 1;
+	}
+}
+
+.calculator {
+	&__section {
+		position: relative;
+		
+		&-opener {
+			&_input {display: none;}
+			&_label {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				text-align: center;
+				
+				&--on {display: block;}
+				&--off {display: none;}
+			}
+		}
+	}
+	
+	&__block {
+		display: none;
+	}
+	
+	
+	
+	.calc-opener-mix(5);
+	
+	&__switcher {
+		.calc-switcher('cover');
+		.calc-switcher('inset');
+	}
+}

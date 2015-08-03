@@ -5816,34 +5816,122 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .teasers__item-sub--offline {
   color: #cc0000;
 }
-.calculator-types {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
-.calculator-types__controls {
+.calculator__section {
   position: relative;
 }
-.calculator-types__controls-item {
-  position: relative;
-  float: left;
-  width: 14.28571429%;
-  display: hidden;
-  cursor: pointer;
+.calculator__section-opener_input {
+  display: none;
 }
-.calculator-types__controls-item_img {
-  overflow-x: hidden;
-}
-.calculator-types__controls-item_img img {
-  width: 700%;
-  height: auto;
-}
-.calculator-types__controls-item_name {
+.calculator__section-opener_label {
   position: absolute;
-  left: 0;
-  bottom: 50px;
   width: 100%;
+  left: 0;
+  bottom: 0;
   text-align: center;
+}
+.calculator__section-opener_label--on {
+  display: block;
+}
+.calculator__section-opener_label--off {
+  display: none;
+}
+.calculator__block {
+  display: none;
+}
+.calculator input#print-open:checked ~ .print {
+  display: block;
+}
+.calculator input#print-open:checked ~ label[for='print-open'] .print-open__on {
+  display: none;
+}
+.calculator input#print-open:checked ~ label[for='print-open'] .print-open__off {
+  display: block;
+}
+.calculator input#cover-open:checked ~ .cover {
+  display: block;
+}
+.calculator input#cover-open:checked ~ label[for='cover-open'] .cover-open__on {
+  display: none;
+}
+.calculator input#cover-open:checked ~ label[for='cover-open'] .cover-open__off {
+  display: block;
+}
+.calculator input#block-open:checked ~ .block {
+  display: block;
+}
+.calculator input#block-open:checked ~ label[for='block-open'] .block-open__on {
+  display: none;
+}
+.calculator input#block-open:checked ~ label[for='block-open'] .block-open__off {
+  display: block;
+}
+.calculator input#inset-open:checked ~ .inset {
+  display: block;
+}
+.calculator input#inset-open:checked ~ label[for='inset-open'] .inset-open__on {
+  display: none;
+}
+.calculator input#inset-open:checked ~ label[for='inset-open'] .inset-open__off {
+  display: block;
+}
+.calculator input#replication-open:checked ~ .replication {
+  display: block;
+}
+.calculator input#replication-open:checked ~ label[for='replication-open'] .replication-open__on {
+  display: none;
+}
+.calculator input#replication-open:checked ~ label[for='replication-open'] .replication-open__off {
+  display: block;
+}
+.calculator__switcher-inputs {
+  display: none;
+}
+.calculator__switcher-labels {
+  background: gray;
+}
+.calculator__switcher-labels label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  border-radius: 50%;
+}
+input[id='cover-off']:checked ~ .calculator__switcher-labels label[for='cover-off'] {
+  background: blue;
+  opacity: 1;
+}
+input[id='cover-on']:checked ~ .calculator__switcher-labels {
+  background: white;
+  opacity: 1;
+}
+input[id='cover-on']:checked ~ .calculator__switcher-labels label[for='cover-on'] {
+  background: blue;
+  opacity: 1;
+}
+.calculator__switcher-inputs {
+  display: none;
+}
+.calculator__switcher-labels {
+  background: gray;
+}
+.calculator__switcher-labels label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  border-radius: 50%;
+}
+input[id='inset-off']:checked ~ .calculator__switcher-labels label[for='inset-off'] {
+  background: blue;
+  opacity: 1;
+}
+input[id='inset-on']:checked ~ .calculator__switcher-labels {
+  background: white;
+  opacity: 1;
+}
+input[id='inset-on']:checked ~ .calculator__switcher-labels label[for='inset-on'] {
+  background: blue;
+  opacity: 1;
 }
 .footer {
   position: relative;

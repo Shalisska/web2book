@@ -1,0 +1,9 @@
+block calc_variables
+
+input(type='checkbox' class=calc_class checked)
+label(for=calc_class)
+
+h2.calculator-block__title(class=calc_class + '__title')=calc_title
+
+.calculator-block__content(class=calc_class + '__content')
+	block calc_content

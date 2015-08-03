@@ -1,0 +1,29 @@
+mixin print_bond(block_name, items)
+	each item, i in items
+		if(i === 0)
+			input(type='radio' name=block_name id=block_name + '--' + item.id class=block_name value=item.val checked)
+		else
+			input(type='radio' name=block_name id=block_name + '--' + item.id class=block_name value=item.val)
+			
+	div.clearfix(class=block_name + '__vals' + ' ' + 'calculator__scrollbar')
+		each item in items
+			label(for=block_name + '--' + item.id class='calculator__thumb' + ' ' + block_name + '__item' + ' ' + block_name + '__item--' + item.id)
+				span(class=block_name + '__item-name--sub')=item.sub
+				span(class=block_name + '__item-img')
+					img(src='', alt=item.name)
+				span(class=block_name + '__item-name')=item.name
+
+
+
+mixin bond
+	+print_bond('print-bond', [{
+		id: 'pur',
+		val: 'pur',
+		name: 'PUR',
+		sub: 'max 180º'
+	}, {
+		id: 'eva',
+		val: 'eva',
+		name: 'EVA',
+		sub: 'max 120º'
+	}])

@@ -1,0 +1,43 @@
+include print/size
+include print/orient
+include print/bond
+include print/pages
+
+
+
+mixin calc_print(items)
+	each item in items
+		div(class='print-' + item.id)
+			.calculator-block__title--inner(class='print-' + item.id + '__title')=item.name
+			div(class='print-' + item.id + '__block')
+				case item.id
+					when 'size'
+						+size
+					when 'orient'
+						+orient
+					when 'bond'
+						+bond
+					when 'pages'
+						+pages
+
+extends block-templates
+
+block calc_variables
+	-var calc_title = 'Опции печати'
+	-var calc_class = 'print'
+
+block calc_content
+	+calc_print([{
+		id: 'size',
+		name: 'Размер'
+	}, {
+		id: 'orient',
+		name: 'Ориентация'
+	}, {
+		id: 'bond',
+		name: 'Типы скрепления'
+	}, {
+		id: 'pages',
+		name: 'Страницы'
+	}])
+			

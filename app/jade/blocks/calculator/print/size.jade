@@ -1,0 +1,38 @@
+mixin print_size(block_name, items)
+	each item, i in items
+		if(i === 0)
+			input(type='radio' name=block_name id=block_name + '--' + item.id class=block_name value=item.val checked)
+		else
+			input(type='radio' name=block_name id=block_name + '--' + item.id class=block_name value=item.val)
+			
+	div.clearfix(class=block_name + '__vals' + ' ' + 'calculator__scrollbar')
+		each item in items
+			label(for=block_name + '--' + item.id class='calculator__thumb' + ' ' + block_name + '__item' + ' ' + block_name + '__item--' + item.id)
+				span(class=block_name + '__item-name')=item.name
+				span(class=block_name + '__item-name--sub')=item.sub
+				span(class=block_name + '__item-img')
+					img(src='', alt=item.name)
+
+
+mixin size
+	+print_size('print-size', [{
+		id: 'a4',
+		name: 'A4',
+		val: '210х297',
+		sub: '210х297 мм'
+	}, {
+		id: 'a5',
+		name: 'A5',
+		val: '205х148',
+		sub: '205х148 мм'
+	}, {
+		id: 'a6',
+		name: 'A6',
+		val: '105х148',
+		sub: '105х148 мм'
+	}, {
+		id: 'other',
+		name: 'Другой',
+		val: '210х297',
+		sub: '210х297 мм'
+	}])

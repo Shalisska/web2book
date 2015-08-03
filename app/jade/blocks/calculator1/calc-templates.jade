@@ -1,0 +1,24 @@
+mixin calc_switcher(id)
+	.calculator__switcher(class='calculator__switcher--' + id)
+		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off')
+		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' checked)
+		
+		.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
+			label(for=id + '-off')
+			label(for=id + '-on')
+		
+		if (id != 'cover' || id != 'inset')
+		.calculator__switcher-img(class='calculator__switcher-img--' + id)
+			img.calculator__switcher-img--off(src='', alt='')
+			img.calculator__switcher-img--on(src='', alt='')
+
+mixin calc_scroller(id, items)
+		each item, i in items
+			if i===0
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val checked)
+			else
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val)
+		
+		.calculator__scroller-labels(class=id + '-labels')
+			each item in items
+				label(for=id + '-' + item.id)=item.name

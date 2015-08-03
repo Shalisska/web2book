@@ -1,0 +1,35 @@
+mixin print_size(name, items)
+	.calculator__item.calculator__scroller(class=name)
+		+calc_scroller(name, items)
+		div(class=name + '-desc')
+			each item in items
+				div(class=name + '-desc__item')
+					span(class=name + '-desc__item-text')=item.desc
+					img(class=name + '-desc__item-img' src='' alt=item.name)
+
+
+
+
+
+mixin size(name)
+	+print_size(name, [{
+		id: 'a4',
+		name: 'A4',
+		val: '210х297',
+		desc: '210х297 mm'
+	}, {
+		id: 'a5',
+		name: 'A5',
+		val: '205х148',
+		desc: '205х148 mm'
+	}, {
+		id: 'a6',
+		name: 'A6',
+		val: '105х148',
+		desc: '105х148 mm'
+	}, {
+		id: 'other',
+		name: 'Другой',
+		val: '210х297',
+		desc: '210х297 mm'
+	}])
