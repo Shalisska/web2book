@@ -177,66 +177,215 @@
                                   </div>
                                 </div>
               </fieldset>
-              <fieldset class="calculator-block print">
-                <input type="checkbox" checked class="print">
-                <label for="print"></label>
-                <h2 class="calculator-block__title print__title">Опции печати</h2>
-                <div class="calculator-block__content print__content">
-                                  <div class="print-size">
-                                    <div class="calculator-block__title--inner print-size__title">Размер</div>
-                                    <div class="print-size__block">
-                                                                      <input type="radio" name="print-size" id="print-size--a4" value="210х297" checked class="print-size">
-                                                                      <input type="radio" name="print-size" id="print-size--a5" value="205х148" class="print-size">
-                                                                      <input type="radio" name="print-size" id="print-size--a6" value="105х148" class="print-size">
-                                                                      <input type="radio" name="print-size" id="print-size--other" value="210х297" class="print-size">
-                                                                      <div class="clearfix print-size__vals calculator__scrollbar">
-                                                                        <label for="print-size--a4" class="calculator__thumb print-size__item print-size__item--a4"><span class="print-size__item-name">A4</span><span class="print-size__item-name--sub">210х297 мм</span><span class="print-size__item-img"><img src="" alt="A4"></span></label>
-                                                                        <label for="print-size--a5" class="calculator__thumb print-size__item print-size__item--a5"><span class="print-size__item-name">A5</span><span class="print-size__item-name--sub">205х148 мм</span><span class="print-size__item-img"><img src="" alt="A5"></span></label>
-                                                                        <label for="print-size--a6" class="calculator__thumb print-size__item print-size__item--a6"><span class="print-size__item-name">A6</span><span class="print-size__item-name--sub">105х148 мм</span><span class="print-size__item-img"><img src="" alt="A6"></span></label>
-                                                                        <label for="print-size--other" class="calculator__thumb print-size__item print-size__item--other"><span class="print-size__item-name">Другой</span><span class="print-size__item-name--sub">210х297 мм</span><span class="print-size__item-img"><img src="" alt="Другой"></span></label>
-                                                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="print-orient">
-                                    <div class="calculator-block__title--inner print-orient__title">Ориентация</div>
-                                    <div class="print-orient__block">
-                                                                      <input type="radio" name="print-orient" id="print-orient--book" value="book" checked class="print-orient">
-                                                                      <input type="radio" name="print-orient" id="print-orient--album" value="album" class="print-orient">
-                                                                      <div class="clearfix print-orient__vals calculator__scrollbar">
-                                                                        <label for="print-orient--book" class="calculator__thumb print-orient__item print-orient__item--book"><span class="print-orient__item-img"><img src="" alt="Книжная"></span><span class="print-orient__item-name">Книжная</span></label>
-                                                                        <label for="print-orient--album" class="calculator__thumb print-orient__item print-orient__item--album"><span class="print-orient__item-img"><img src="" alt="Альбомная"></span><span class="print-orient__item-name">Альбомная</span></label>
-                                                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="print-bond">
-                                    <div class="calculator-block__title--inner print-bond__title">Типы скрепления</div>
-                                    <div class="print-bond__block">
-                                                                      <input type="radio" name="print-bond" id="print-bond--pur" value="pur" checked class="print-bond">
-                                                                      <input type="radio" name="print-bond" id="print-bond--eva" value="eva" class="print-bond">
-                                                                      <div class="clearfix print-bond__vals calculator__scrollbar">
-                                                                        <label for="print-bond--pur" class="calculator__thumb print-bond__item print-bond__item--pur"><span class="print-bond__item-name--sub">max 180º</span><span class="print-bond__item-img"><img src="" alt="PUR"></span><span class="print-bond__item-name">PUR</span></label>
-                                                                        <label for="print-bond--eva" class="calculator__thumb print-bond__item print-bond__item--eva"><span class="print-bond__item-name--sub">max 120º</span><span class="print-bond__item-img"><img src="" alt="EVA"></span><span class="print-bond__item-name">EVA</span></label>
-                                                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="print-pages">
-                                    <div class="calculator-block__title--inner print-pages__title">Страницы</div>
-                                    <div class="print-pages__block">
-                                                      <input type="checkbox" id="pages-selector" class="pages-selector">
-                                                      <label for="pages-selector">Выбор</label>
-                                                      <div class="print-pages__block-wrapper">
-                                                                        <input type="radio" name="print-pages" id="print-pages--" value="" checked class="print-pages">
-                                                                        <div class="clearfix print-pages__selector calculator__selector">
-                                                                          <label for="print-pages--"></label>
-                                                                        </div>
-                                                                        <div class="print-pages__box">
-                                                                          <div class="print-pages__item print-pages__item--"><img src="" alt="" class="print-pages__item-img"></div>
-                                                                        </div>
+                          <fieldset class="calculator__section print">
+                            <input type="checkbox" id="print-open" checked class="calculator__section-opener_input">
+                            <label for="print-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on print-open__on">Подробнее</span><span class="calculator__section-opener_label--off print-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Опции печати</h2>
+                            </div>
+                            <div class="calculator__block print">
+                                                      <div class="calculator__block--inner print-size">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Размер</h3>
+                                                        </div>
+                                                                                <div class="calculator__item calculator__scroller print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a4" value="210х297" checked class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a5" value="205х148" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a6" value="105х148" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-other" value="210х297" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                </div>
+                                                                                <div class="calculator__scroller-labels print_size-labels">
+                                                                                  <label for="print_size-a4">A4</label>
+                                                                                  <label for="print_size-a5">A5</label>
+                                                                                  <label for="print_size-a6">A6</label>
+                                                                                  <label for="print_size-other">Другой</label>
+                                                                                </div>
+                                                                                <div class="print_size-desc">
+                                                                                  <div class="print_size-desc__item"><span class="print_size-desc__item-text">210х297 mm</span><img src="" alt="A4" class="print_size-desc__item-img"></div>
+                                                                                  <div class="print_size-desc__item"><span class="print_size-desc__item-text">205х148 mm</span><img src="" alt="A5" class="print_size-desc__item-img"></div>
+                                                                                  <div class="print_size-desc__item"><span class="print_size-desc__item-text">105х148 mm</span><img src="" alt="A6" class="print_size-desc__item-img"></div>
+                                                                                  <div class="print_size-desc__item"><span class="print_size-desc__item-text">210х297 mm</span><img src="" alt="Другой" class="print_size-desc__item-img"></div>
+                                                                                </div>
                                                       </div>
-                                    </div>
-                                  </div>
-                </div>
-              </fieldset>
+                                                      <div class="calculator__block--inner print-orient">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Ориентация</h3>
+                                                        </div>
+                                                                                <div class="calculator__item calculator__scroller print_orient">
+                                                                                  <input type="radio" name="print_orient" id="print_orient-book" value="book" checked class="calculator__scroller-inputs calculator__scroller-inputs--print_orient">
+                                                                                  <input type="radio" name="print_orient" id="print_orient-album" value="album" class="calculator__scroller-inputs calculator__scroller-inputs--print_orient">
+                                                                                  <div class="print_orient-desc">
+                                                                                    <div class="print_orient-desc__item"><img src="" alt="Книжная" class="print_orient-desc__item-img"></div>
+                                                                                    <div class="print_orient-desc__item"><img src="" alt="Альбомная" class="print_orient-desc__item-img"></div>
+                                                                                  </div>
+                                                                                  <div class="calculator__scroller-labels print_orient-labels">
+                                                                                    <label for="print_orient-book">Книжная</label>
+                                                                                    <label for="print_orient-album">Альбомная</label>
+                                                                                  </div>
+                                                                                </div>
+                                                      </div>
+                                                      <div class="calculator__block--inner print-bond">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Типы скрепления</h3>
+                                                        </div>
+                                                                                <div class="calculator__item calculator__scroller print_bond">
+                                                                                  <input type="radio" name="print_bond" id="print_bond-pur" value="pur" checked class="calculator__scroller-inputs calculator__scroller-inputs--print_bond">
+                                                                                  <input type="radio" name="print_bond" id="print_bond-eva" value="eva" class="calculator__scroller-inputs calculator__scroller-inputs--print_bond">
+                                                                                  <div class="print_bond-desc">
+                                                                                    <div class="print_bond-desc__item"><span class="print_bond-desc__item-text">max 180º</span><img src="" alt="PUR" class="print_bond-desc__item-img"></div>
+                                                                                    <div class="print_bond-desc__item"><span class="print_bond-desc__item-text">max 120º</span><img src="" alt="EVA" class="print_bond-desc__item-img"></div>
+                                                                                  </div>
+                                                                                  <div class="calculator__scroller-labels print_bond-labels">
+                                                                                    <label for="print_bond-pur">PUR<a href="#" class="print_bond_pops--pur">?<span>PUR — полиуретановый клей. Обладает настолько высокой эластичностью, что позволяет раскрыть книгу на 180º без повреждения переплёта</span></a></label>
+                                                                                    <label for="print_bond-eva">EVA<a href="#" class="print_bond_pops--eva">?<span></span></a></label>
+                                                                                  </div>
+                                                                                </div>
+                                                      </div>
+                                                      <div class="calculator__block--inner print-pages">
+                                                        <input type="checkbox" id="print_pages-selector">
+                                                        <input type="radio" name="print_pages" id="print_pages-pages_1" value="pages_var_1" checked class="calculator__selector-inputs calculator__selector-inputs--print_pages">
+                                                        <input type="radio" name="print_pages" id="print_pages-pages_2" value="pages_var_2" class="calculator__selector-inputs calculator__selector-inputs--print_pages">
+                                                        <input type="radio" name="print_pages" id="print_pages-pages_3" value="pages_var_3" class="calculator__selector-inputs calculator__selector-inputs--print_pages">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Страницы</h3>
+                                                          <label for="print_pages-selector">Выбор ></label>
+                                                          <div class="calculator__selector-labels print_pages-labels">
+                                                            <label for="print_pages-pages_1">pages_var_1</label>
+                                                            <label for="print_pages-pages_2">pages_var_2</label>
+                                                            <label for="print_pages-pages_3">pages_var_3</label>
+                                                          </div>
+                                                        </div>
+                                                                                <div class="calculator__item calculator__selector print_pages">
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_1">
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--face print_pages-desc__img--pages_1"><img src="" alt="Лицевая сторона">
+                                                                                      <figcaption>Лицевая сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--reverse print_pages-desc__img--pages_1"><img src="" alt="Оборотная сторона">
+                                                                                      <figcaption>Оборотная сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <p class="print_pages-desc__text print_pages-desc__text--pages_1">4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.</p>
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_1">
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_1">
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="calculator__item calculator__selector print_pages">
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_2">
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_2">
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--face print_pages-desc__img--pages_2"><img src="" alt="Лицевая сторона">
+                                                                                      <figcaption>Лицевая сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--reverse print_pages-desc__img--pages_2"><img src="" alt="Оборотная сторона">
+                                                                                      <figcaption>Оборотная сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <p class="print_pages-desc__text print_pages-desc__text--pages_2">4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.</p>
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_2">
+                                                                                  </div>
+                                                                                </div>
+                                                                                <div class="calculator__item calculator__selector print_pages">
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_3">
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_3">
+                                                                                  </div>
+                                                                                  <div class="print_pages-desc print_pages-desc--pages_3">
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--face print_pages-desc__img--pages_3"><img src="" alt="Лицевая сторона">
+                                                                                      <figcaption>Лицевая сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <figure class="print_pages-desc__img print_pages-desc__img--reverse print_pages-desc__img--pages_3"><img src="" alt="Оборотная сторона">
+                                                                                      <figcaption>Оборотная сторона</figcaption>
+                                                                                    </figure>
+                                                                                    <p class="print_pages-desc__text print_pages-desc__text--pages_3">4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.</p>
+                                                                                  </div>
+                                                                                </div>
+                                                      </div>
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section cover">
+                            <input type="checkbox" id="cover-open" checked class="calculator__section-opener_input">
+                            <label for="cover-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on cover-open__on">Подробнее</span><span class="calculator__section-opener_label--off cover-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Обложка</h2>
+                                          <div class="calculator__switcher calculator__switcher--cover">
+                                            <input type="radio" name="cover" id="cover-off" class="calculator__switcher-inputs calculator__switcher-inputs--cover">
+                                            <input type="radio" name="cover" id="cover-on" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover">
+                                            <div class="calculator__switcher-labels calculator__switcher-labels--cover">
+                                              <label for="cover-off"></label>
+                                              <label for="cover-on"></label>
+                                            </div>
+                                            <div class="calculator__switcher-img calculator__switcher-img--cover"><img src="" alt="" class="calculator__switcher-img--off"><img src="" alt="" class="calculator__switcher-img--on"></div>
+                                          </div>
+                            </div>
+                            <div class="calculator__block cover">
+                                                      <div class="calculator__block--inner cover-cover">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Обложка</h3>
+                                                        </div>
+                                                        <p>cover_cover</p>
+                                                        <!--+cover(cover_name)-->
+                                                      </div>
+                                                      <div class="calculator__block--inner cover-paper">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Бумага</h3>
+                                                        </div>
+                                                        <!--+paper(mix_name)-->
+                                                      </div>
+                                                      <div class="calculator__block--inner cover-effects">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Эффекты нанесения</h3>
+                                                        </div>
+                                                        <!--+effects(mix_name)-->
+                                                      </div>
+                                                      <div class="calculator__block--inner cover-decoration">
+                                                        <div class="calculator__header--inner">
+                                                          <h3 class="calculator__title--inner">Отделка</h3>
+                                                        </div>
+                                                        <!--+decoration(mix_name)-->
+                                                        
+                                                      </div>
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section block">
+                            <input type="checkbox" id="block-open" checked class="calculator__section-opener_input">
+                            <label for="block-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on block-open__on">Подробнее</span><span class="calculator__section-opener_label--off block-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Блок</h2>
+                            </div>
+                            <div class="calculator__block block">
+                              <!--+block(item.id)-->
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section inset">
+                            <input type="checkbox" id="inset-open" checked class="calculator__section-opener_input">
+                            <label for="inset-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on inset-open__on">Подробнее</span><span class="calculator__section-opener_label--off inset-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Вставка</h2>
+                                          <div class="calculator__switcher calculator__switcher--inset">
+                                            <input type="radio" name="inset" id="inset-off" class="calculator__switcher-inputs calculator__switcher-inputs--inset">
+                                            <input type="radio" name="inset" id="inset-on" checked class="calculator__switcher-inputs calculator__switcher-inputs--inset">
+                                            <div class="calculator__switcher-labels calculator__switcher-labels--inset">
+                                              <label for="inset-off"></label>
+                                              <label for="inset-on"></label>
+                                            </div>
+                                            <div class="calculator__switcher-img calculator__switcher-img--inset"><img src="" alt="" class="calculator__switcher-img--off"><img src="" alt="" class="calculator__switcher-img--on"></div>
+                                          </div>
+                            </div>
+                            <div class="calculator__block inset">
+                              <!--+inset(item.id)-->
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section replication">
+                            <input type="checkbox" id="replication-open" checked class="calculator__section-opener_input">
+                            <label for="replication-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on replication-open__on">Подробнее</span><span class="calculator__section-opener_label--off replication-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Тиражирование</h2>
+                            </div>
+                            <div class="calculator__block replication">
+                              <!--+replication(item.id)-->
+                            </div>
+                          </fieldset>
             </form>
           </div>
           <aside class="column--right">

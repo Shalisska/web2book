@@ -5816,6 +5816,35 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .teasers__item-sub--offline {
   color: #cc0000;
 }
+.calculator-types {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.calculator-types__controls {
+  position: relative;
+}
+.calculator-types__controls-item {
+  position: relative;
+  float: left;
+  width: 14.28571429%;
+  display: hidden;
+  cursor: pointer;
+}
+.calculator-types__controls-item_img {
+  overflow-x: hidden;
+}
+.calculator-types__controls-item_img img {
+  width: 700%;
+  height: auto;
+}
+.calculator-types__controls-item_name {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+}
 .calculator__section {
   position: relative;
 }

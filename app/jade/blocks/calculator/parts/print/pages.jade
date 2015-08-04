@@ -1,0 +1,46 @@
+//-инпуты находятся в хедере блока, тут только картинки с описанием
+
+mixin print_pages(name, id, items)
+	.calculator__item.calculator__selector(class=name)
+		each item in items
+			div(class=name + '-desc' + ' ' + name + '-desc--' + id)
+				if id == item.id
+					each img in item.img
+						figure(class=name + '-desc__img' + ' ' + name + '-desc__img--' + img.src + ' ' + name + '-desc__img--' + id)
+							img(src='' alt=img.name)
+							figcaption=img.name
+					p(class=name + '-desc__text' + ' ' + name + '-desc__text--' + id)=item.desc
+
+
+mixin pages(name, id)
+	+print_pages(name, id, [{
+		id: 'pages_1',
+		img: [{
+			name: 'Лицевая сторона',
+			src: 'face',
+		}, {
+			name: 'Оборотная сторона',
+			src: 'reverse',
+		}],
+		desc: '4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.'
+	}, {
+		id: 'pages_2',
+		img: [{
+			name: 'Лицевая сторона',
+			src: 'face',
+		}, {
+			name: 'Оборотная сторона',
+			src: 'reverse',
+		}],
+		desc: '4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.'
+	}, {
+		id: 'pages_3',
+		img: [{
+			name: 'Лицевая сторона',
+			src: 'face',
+		}, {
+			name: 'Оборотная сторона',
+			src: 'reverse',
+		}],
+		desc: '4 - х страничная печать обычно используется в брошюрировании и элементах фирменного стиля.'
+	}])

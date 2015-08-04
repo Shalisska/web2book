@@ -55,36 +55,3 @@
 		opacity: 1;
 	}
 }
-
-.calculator {
-	&__section {
-		position: relative;
-		
-		&-opener {
-			&_input {display: none;}
-			&_label {
-				position: absolute;
-				width: 100%;
-				left: 0;
-				bottom: 0;
-				text-align: center;
-				
-				&--on {display: block;}
-				&--off {display: none;}
-			}
-		}
-	}
-	
-	&__block {
-		display: none;
-	}
-	
-	
-	
-	.calc-opener-mix(5);
-	
-	&__switcher {
-		.calc-switcher('cover');
-		.calc-switcher('inset');
-	}
-}

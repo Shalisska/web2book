@@ -1,0 +1,39 @@
+include cover/cover
+include cover/paper
+include cover/effects
+include cover/decoration
+
+
+mixin calc_cover(name, items)
+	each item in items
+		-var cover_name = name + '_' + item.id
+		.calculator__block--inner(class=name + '-' + item.id)
+			.calculator__header--inner
+				h3.calculator__title--inner=item.name
+			
+			case item.id
+				when 'cover'
+					p=cover_name
+					+cover(cover_name)
+				when 'paper'
+					//+paper(mix_name)
+				when 'effects'
+					//+effects(mix_name)
+				when 'decoration'
+					//+decoration(mix_name)
+
+
+mixin cover(name)
+	+calc_cover(name, [{
+		id: 'cover',
+		name: 'Обложка'
+	}, {
+		id: 'paper',
+		name: 'Бумага'
+	}, {
+		id: 'effects',
+		name: 'Эффекты нанесения'
+	}, {
+		id: 'decoration',
+		name: 'Отделка'
+	}])

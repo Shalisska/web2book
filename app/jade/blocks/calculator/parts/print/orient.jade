@@ -1,0 +1,33 @@
+mixin print_orient(name, items)
+	.calculator__item.calculator__scroller(class=name)
+		each item, i in items
+			if i===0
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
+			else
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
+
+		div(class=name + '-desc')
+			each item in items
+				div(class=name + '-desc__item')
+					img(class=name + '-desc__item-img' src='' alt=item.name)
+
+		.calculator__scroller-labels(class=name + '-labels')
+			each item in items
+				label(for=name + '-' + item.id)=item.name
+			
+	
+
+
+
+
+
+mixin orient(name)
+	+print_orient(name, [{
+		id: 'book',
+		val: 'book',
+		name: 'Книжная'
+	}, {
+		id: 'album',
+		val: 'album',
+		name: 'Альбомная'
+	}])

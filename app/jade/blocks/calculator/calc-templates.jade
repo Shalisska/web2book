@@ -13,12 +13,12 @@ mixin calc_switcher(id)
 			img.calculator__switcher-img--on(src='', alt='')
 
 mixin calc_scroller(id, items)
-		each item, i in items
-			if i===0
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val checked)
-			else
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val)
-		
-		.calculator__scroller-labels(class=id + '-labels')
-			each item in items
-				label(for=id + '-' + item.id)=item.name
+	each item, i in items
+		if i===0
+			input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val checked)
+		else
+			input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + id type='radio' name=id id=id + '-' + item.id value=item.val)
+
+	.calculator__scroller-labels(class=id + '-labels')
+		each item in items
+			label(for=id + '-' + item.id)=item.name
