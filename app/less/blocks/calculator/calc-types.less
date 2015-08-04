@@ -1,21 +1,49 @@
-.calculator-types {
-		margin: 0;
-		border: 0;
-		padding: 0;
+.calculator-types-img(@n, @i: 1) when (@i =< @n) {
+	@items:
+		softcover2,
+		softcover1,
+		softcover,
+		spring,
+		strap,
+		strap1,
+		strap2;
+	@item: extract(@items, @i);
 	
-	input[type='radio'] {}
+	@margin: -(100%*(@i - 1));
+	
+	&--@{item} img {
+		margin-left: @margin;
+	}
+	
+	.calculator-types-img(@n, (@i + 1));
+}
+
+.calculator-types {
+	position: relative;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	
+	input[type='radio'] {display: none;}
 	&__controls {
+		.reset-ul();
 		position: relative;
 		
 		&-item {
 			position: relative;
 			float: left;
 			width: (100% / 7);
-			display: hidden;
 			cursor: pointer;
 			
+			label {
+				display: block;
+			}
+			
 			&_img {
+				display: block;
 				overflow-x: hidden;
+				
+				.calculator-types-img(7);
 				
 				img {
 					width: 700%;
@@ -28,7 +56,27 @@
 				bottom: 50px;
 				width: 100%;
 				text-align: center;
+				font-size: 16px;
+				color: #4c4c4c;
 			}
 		}
+	}
+	
+	&__title {
+		position: absolute;
+		left: 2.5%;
+		bottom: -4px;
+		width: 95%;
+		height: 49px;
+		margin: 0;
+		line-height: 2.3;
+		text-align: center;
+		color: white;
+		font-size: 26px;
+		text-shadow: 0 1px 0 #3795d3;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 240px 49px;
+		.retina('../images/calculator/types/bg/calculator-types-bg@', 240);
 	}
 }

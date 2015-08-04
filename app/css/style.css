@@ -2883,9 +2883,16 @@ main:after {
 .column--central {
   width: 74%;
   margin-right: 2%;
+  padding-left: 2%;
 }
 .column--right {
   width: 24%;
+  padding-right: 2%;
+}
+.title--main {
+  font-size: 28px;
+  color: #4c4c4c;
+  font-weight: normal;
 }
 .container--header {
   width: 98%;
@@ -5817,22 +5824,53 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   color: #cc0000;
 }
 .calculator-types {
+  position: relative;
   margin: 0;
   border: 0;
   padding: 0;
 }
+.calculator-types input[type='radio'] {
+  display: none;
+}
 .calculator-types__controls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
 .calculator-types__controls-item {
   position: relative;
   float: left;
   width: 14.28571429%;
-  display: hidden;
   cursor: pointer;
 }
+.calculator-types__controls-item label {
+  display: block;
+}
 .calculator-types__controls-item_img {
+  display: block;
   overflow-x: hidden;
+}
+.calculator-types__controls-item_img--softcover2 img {
+  margin-left: 0%;
+}
+.calculator-types__controls-item_img--softcover1 img {
+  margin-left: -100%;
+}
+.calculator-types__controls-item_img--softcover img {
+  margin-left: -200%;
+}
+.calculator-types__controls-item_img--spring img {
+  margin-left: -300%;
+}
+.calculator-types__controls-item_img--strap img {
+  margin-left: -400%;
+}
+.calculator-types__controls-item_img--strap1 img {
+  margin-left: -500%;
+}
+.calculator-types__controls-item_img--strap2 img {
+  margin-left: -600%;
 }
 .calculator-types__controls-item_img img {
   width: 700%;
@@ -5844,9 +5882,49 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
   bottom: 50px;
   width: 100%;
   text-align: center;
+  font-size: 16px;
+  color: #4c4c4c;
+}
+.calculator-types__title {
+  position: absolute;
+  left: 2.5%;
+  bottom: -4px;
+  width: 95%;
+  height: 49px;
+  margin: 0;
+  line-height: 2.3;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  text-shadow: 0 1px 0 #3795d3;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 240px 49px;
+  background-image: url('../images/calculator/types/bg/calculator-types-bg@240.png');
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  .calculator-types__title {
+    background-image: url('../images/calculator/types/bg/calculator-types-bg@360.png');
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .calculator-types__title {
+    background-image: url('../images/calculator/types/bg/calculator-types-bg@480.png');
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+  .calculator-types__title {
+    background-image: url('../images/calculator/types/bg/calculator-types-bg@720.png');
+  }
 }
 .calculator__section {
   position: relative;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  border-top: 4px solid #50aae6;
+  border-bottom: 4px solid #50aae6;
 }
 .calculator__section-opener_input {
   display: none;
@@ -5864,7 +5942,32 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .calculator__section-opener_label--off {
   display: none;
 }
+.calculator__header {
+  padding: 1% 3%;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.calculator__title {
+  margin: 0;
+  font-size: 24px;
+  color: #4c4c4c;
+  font-weight: normal;
+}
+.calculator__title--inner {
+  margin: 0.4em 0;
+  color: #990000;
+  font-size: 18px;
+  font-weight: normal;
+}
 .calculator__block {
+  display: none;
+  padding: 0 3%;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background: #f0f0f0;
+}
+.calculator__block input[type='radio'],
+.calculator__block input[type='checkbox'] {
   display: none;
 }
 .calculator input#print-open:checked ~ .print {

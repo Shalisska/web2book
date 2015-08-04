@@ -7,6 +7,12 @@
 .calculator {
 	&__section {
 		position: relative;
+		width: 95%;
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		border-top: 4px solid #50aae6;
+		border-bottom: 4px solid #50aae6;
 		
 		&-opener {
 			&_input {display: none;}
@@ -23,8 +29,37 @@
 		}
 	}
 	
+	&__header {
+		padding: 1% 3%;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+	}
+	
+	&__title {
+		margin: 0;
+		font-size: 24px;
+		color: #4c4c4c;
+		font-weight: normal;
+		
+		&--inner {
+			margin: 0.4em 0;
+			color: #990000;
+			font-size: 18px;
+			font-weight: normal;
+		}
+	}
+	
 	&__block {
 		display: none;
+		padding: 0 3%;
+		border: 1px solid #ccc;
+		border-bottom: none;
+		background: #f0f0f0;
+		
+		input[type='radio'],
+		input[type='checkbox'] {
+			display: none;
+		}
 	}
 	
 	
