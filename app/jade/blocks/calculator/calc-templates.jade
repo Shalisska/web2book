@@ -2,6 +2,7 @@ mixin calc_switcher(id, item)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
 
+	p.calculator__switcher-name=item.name
 	.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
 		label(for=id + '-off')
 		label(for=id + '-on')
@@ -32,3 +33,12 @@ mixin calc_ruler(id, items, num)
 		.calculator__ruler-types
 			span.calculator__ruler-type.calculator__ruler-type--offset Офсетная
 			span.calculator__ruler-type.calculator__ruler-type--coated Мелованная
+
+mixin calc_counter(id, val)
+	button.calculator__counter-btn.calculator__counter-minus(class='calculator__counter-minus--' + id) -
+	
+	input.calculator__counter-input(class='calculator__counter-input--' + id type='text' name=id value=val)
+	
+	button.calculator__counter-btn.calculator__counter-plus(class='calculator__counter-plus--' + id) +
+	
+	span.calculator__counter-measure шт

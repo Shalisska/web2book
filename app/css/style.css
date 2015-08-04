@@ -5903,15 +5903,6 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .calculator input#inset-open:checked ~ label[for='inset-open'] .inset-open__off {
   display: block;
 }
-.calculator input#replication-open:checked ~ .replication {
-  display: block;
-}
-.calculator input#replication-open:checked ~ label[for='replication-open'] .replication-open__on {
-  display: none;
-}
-.calculator input#replication-open:checked ~ label[for='replication-open'] .replication-open__off {
-  display: block;
-}
 .calculator__switcher-inputs {
   display: none;
 }

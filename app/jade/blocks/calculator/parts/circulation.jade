@@ -1,0 +1,36 @@
+mixin calc_circulation(name, items)
+	each item in items
+		-var mix_name = name + '_' + item.id
+		-var spec_class
+		if item.counter
+			-spec_class = ' ' + name + '-' + item.id + '--' + 'counter'
+		else
+			-spec_class = ''
+		.calculator__block--inner(class=name + '-' + item.id + spec_class)
+			.calculator__header--inner
+				h3.calculator__title--inner=item.name
+		
+		case item.id
+			when 'total'
+				+circulation_total(item.id)
+			when 'copies'
+				+circulation_copies(item.id)
+
+mixin circulation_total(name)
+	.calculator__item.calculator__total(class=name)
+		span.calculator__total-value 312
+
+mixin circulation_copies(name)
+	.calculator__item.calculator__counter(class=name)
+		+calc_counter(name, 50000)
+
+
+mixin circulation(name)
+	+calc_circulation(name, [{
+		id: 'total',
+		name: 'Общее количество полос'
+	}, {
+		id: 'copies',
+		name: 'Тираж',
+		counter: 1
+	}])

@@ -1,0 +1,22 @@
+mixin block_color_inner(name, item)
+	.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
+			+calc_switcher(name, item)
+			.calculator__switcher-img(class='calculator__switcher-img--' + name)
+				img.calculator__switcher-img--off(src=item.off.src alt=item.off.alt)
+				img.calculator__switcher-img--on(src=item.on.src alt=item.on.alt)
+
+mixin block_color(name)
+	+block_color_inner(name, {
+		id: 'block_color',
+		name: 'Цветной',
+		off: {
+			val: 'b_w',
+			src: '',
+			alt: 'Черно-белый'
+		},
+		on: {
+			val: 'colored',
+			src: '',
+			alt: 'Цветной'
+		}
+	})

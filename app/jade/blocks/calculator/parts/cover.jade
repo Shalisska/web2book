@@ -14,7 +14,8 @@ mixin calc_cover(name, items)
 			
 			case item.id
 				when 'cover'
-					+cover_inner(mix_name)
+					+cover_vals(mix_name)
+					+cover_color(mix_name)
 				when 'paper'
 					+paper(mix_name)
 				when 'effects'

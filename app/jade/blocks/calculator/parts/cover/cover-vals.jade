@@ -1,47 +1,25 @@
-mixin cover_cover(name, obj)
-	.calculator__item-box
-		.calculator__item.calculator__scroller(class='calculator__scroller--' + name)
-			each item, i in obj.scroller
-				if i===0
-					input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
-				else
-					input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
-			
-			ul.calculator__scroller-items(class=name + '-items')
-				each item in obj.scroller
-					li.calculator__scroller-item(class=name + '-item')
-						img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
-						label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
-		
-		.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
-			+calc_switcher(name, obj.switcher)
-			.calculator__switcher-img(class='calculator__switcher-img--' + name)
-				img.calculator__switcher-img--off(src=obj.switcher.off.src alt=obj.switcher.off.alt)
-				img.calculator__switcher-img--on(src=obj.switcher.on.src alt=obj.switcher.on.alt)
+mixin cover_cover_vals(name, items)
+	.calculator__item.calculator__scroller(class='calculator__scroller--' + name)
+		each item, i in items
+			if i===0
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
+			else
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
 
-mixin cover_inner(name)
-	+cover_cover(name, {
-		scroller: [{
-			id: '4p',
-			val: 4,
-			name: '4 страницы'
-		}, {
-			id: '6p',
-			val: 6,
-			name: '6 страниц'
-		}],
-		switcher: {
-			id: '',
-			name: '',
-			off: {
-				val: 'b_w',
-				src: '',
-				alt: 'Черно-белая'
-			},
-			on: {
-				val: 'colored',
-				src: '',
-				alt: 'Цветная'
-			}
-		}
-	})
+		ul.calculator__scroller-items(class=name + '-items')
+			each item in items
+				li.calculator__scroller-item(class=name + '-item')
+					img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
+					label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
+
+
+mixin cover_vals(name)
+	+cover_cover_vals(name, [{
+		id: '4p',
+		val: 4,
+		name: '4 страницы'
+	}, {
+		id: '6p',
+		val: 6,
+		name: '6 страниц'
+	}])

@@ -1,0 +1,41 @@
+include block/color
+include block/paper
+include block/lines
+
+
+mixin calc_block(name, items)
+	each item in items
+		-var mix_name = name + '_' + item.id
+		-var count
+		if item.counter
+			-count = ' ' + name + '-' + item.id + '--' + 'counter'
+		else
+			-count = ''
+		.calculator__block--inner(class=name + '-' + item.id + count)
+			.calculator__header--inner
+				h3.calculator__title--inner=item.name
+					if item.id == 'lines'
+						span.calculator__title--inner_sub=item.sub
+			
+			case item.id
+				when 'color'
+					+block_color(mix_name)
+				when 'paper'
+					+block_paper(mix_name)
+				when 'lines'
+					+lines(mix_name)
+
+
+mixin block(name)
+	+calc_block(name, [{
+		id: 'color',
+		name: ''
+	}, {
+		id: 'paper',
+		name: 'Бумага'
+	}, {
+		id: 'lines',
+		name: 'Количество полос',
+		sub: 'страниц',
+		counter: 1
+	}])
