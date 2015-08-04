@@ -1,2 +1,38 @@
+mixin cover_decoration(name, items)
+	.calculator__item.calculator__scroller(class=name)
+		each item, i in items
+			if i===0
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
+			else
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
+
+	ul.calculator__scroller-items(class=name + '-items')
+		each item in items
+			li.calculator__scroller-item(class=name + '-item')
+				img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
+				label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
+				span.calculator__scroller-text(class=name + '-text')=item.desc
+
+
 mixin decoration(name)
-	p=name
+	+cover_decoration(name, [{
+		id: 'glossy',
+		name: 'Глянцевый ламинат',
+		val: 'glossy',
+		desc: 'Глянцевое ламинирование'
+	}, {
+		id: 'matte',
+		name: 'Матовый ламинат',
+		val: 'matte',
+		desc: 'Матовое ламинирование'
+	}, {
+		id: 'uv',
+		name: 'УФ лак',
+		val: 'uv',
+		desc: 'Ультрафиолетовое лакирование'
+	}, {
+		id: 'wd',
+		name: 'ВД лак',
+		val: 'wd',
+		desc: 'Вододисперсионное лакирование'
+	}])

@@ -18,7 +18,8 @@ mixin calc(items)
 				h2.calculator__title=item.name
 			
 				if (item.id == 'cover' || item.id == 'inset')
-					+calc_switcher(item.id)
+					.calculator__switcher(class='calculator__switcher--' + item.id)
+						+calc_switcher(item.id, item)
 					
 			.calculator__block(class=item.id)
 				case item.id
@@ -42,13 +43,25 @@ form.form--calculator.calculator(action='#' method='post' name='caculator')
 		name: 'Опции печати'
 	}, {
 		id: 'cover',
-		name: 'Обложка'
+		name: 'Обложка',
+		off: {
+			val: 'no-cover'
+		},
+		on: {
+			val: 'cover'
+		}
 	}, {
 		id: 'block',
 		name: 'Блок'
 	}, {
 		id: 'inset',
-		name: 'Вставка'
+		name: 'Вставка',
+		off: {
+			val: 'no-inset'
+		},
+		on: {
+			val: 'inset'
+		}
 	}, {
 		id: 'replication',
 		name: 'Тиражирование'

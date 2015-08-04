@@ -6,16 +6,11 @@ mixin print_orient(name, items)
 			else
 				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
 
-		div(class=name + '-desc')
+		ul.calculator__scroller-items(class=name + '-items')
 			each item in items
-				div(class=name + '-desc__item')
-					img(class=name + '-desc__item-img' src='' alt=item.name)
-
-		.calculator__scroller-labels(class=name + '-labels')
-			each item in items
-				label(for=name + '-' + item.id)=item.name
-			
-	
+				li.calculator__scroller-item(class=name + '-item')
+					img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
+					label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
 
 
 

@@ -1,2 +1,39 @@
+mixin cover_effects(name, obj)
+	.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
+		+calc_switcher(name, obj.convex)
+		+calc_switcher(name, obj.stamping)
+		.calculator__switcher-img(class='calculator__switcher-img--' + name)
+			img.calculator__switcher-img--off(src=obj.convex.off.src alt=obj.convex.off.alt)
+			img.calculator__switcher-img--on(src=obj.convex.on.src alt=obj.convex.on.alt)
+
 mixin effects(name)
-	p=name
+	+cover_effects(name, {
+		convex: {
+			id: 'convex',
+			name: 'Конгрев',
+			off: {
+				val: 'no-convex',
+				src: '',
+				alt: 'Без конгрева'
+			},
+			on: {
+				val: 'convex',
+				src: '',
+				alt: 'Конгрев'
+			}
+		},
+		stamping: {
+			id: 'stamping',
+			name: 'Тиснение',
+			off: {
+				val: 'no-stamping',
+				src: '',
+				alt: 'Без тиснения'
+			},
+			on: {
+				val: 'stamping',
+				src: '',
+				alt: 'Тиснение'
+			}
+		}
+	})

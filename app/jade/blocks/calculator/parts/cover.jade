@@ -1,4 +1,5 @@
-include cover/cover
+include cover/cover-vals
+include cover/cover-color
 include cover/paper
 include cover/effects
 include cover/decoration
@@ -6,21 +7,20 @@ include cover/decoration
 
 mixin calc_cover(name, items)
 	each item in items
-		-var cover_name = name + '_' + item.id
+		-var mix_name = name + '_' + item.id
 		.calculator__block--inner(class=name + '-' + item.id)
 			.calculator__header--inner
 				h3.calculator__title--inner=item.name
 			
 			case item.id
 				when 'cover'
-					p=cover_name
-					+cover(cover_name)
+					+cover_inner(mix_name)
 				when 'paper'
-					//+paper(mix_name)
+					+paper(mix_name)
 				when 'effects'
-					//+effects(mix_name)
+					+effects(mix_name)
 				when 'decoration'
-					//+decoration(mix_name)
+					+decoration(mix_name)
 
 
 mixin cover(name)

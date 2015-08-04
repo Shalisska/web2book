@@ -21,9 +21,9 @@ mixin calc_print(name, items)
 				h3.calculator__title--inner=item.name
 				if (item.id == 'pages')
 					label(for=mix_name + '-selector') Выбор >
-					.calculator__selector-labels(class=mix_name + '-labels')
+					ul.calculator__selector-labels(class=mix_name + '-labels')
 						each elem in item.vars
-							label(for=mix_name + '-' + elem.id)=elem.name
+							li: label(for=mix_name + '-' + elem.id)=elem.name
 			
 			case item.id
 				when 'size'

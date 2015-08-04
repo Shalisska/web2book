@@ -6,15 +6,12 @@ mixin print_size(name, items)
 			else
 				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
 
-	.calculator__scroller-labels(class=name + '-labels')
+	ul.calculator__scroller-items(class=name + '-items')
 		each item in items
-			label(for=name + '-' + item.id)=item.name
-			
-	div(class=name + '-desc')
-		each item in items
-			div(class=name + '-desc__item')
-				span(class=name + '-desc__item-text')=item.desc
-				img(class=name + '-desc__item-img' src='' alt=item.name)
+			li.calculator__scroller-item(class=name + '-item')
+				label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
+				span.calculator__scroller-text(class=name + '-text')=item.desc
+				img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
 
 
 

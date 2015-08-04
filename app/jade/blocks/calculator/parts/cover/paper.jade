@@ -1,2 +1,6 @@
+mixin cover_paper(name, items)
+	.calculator__item.calculator__ruler(class= 'calculator__ruler--' + name)
+		+calc_ruler(name, items, 3)
+
 mixin paper(name)
-	p=name
+	+cover_paper(name, [70, 80, 130, 150, 170, 200, 250, 300])

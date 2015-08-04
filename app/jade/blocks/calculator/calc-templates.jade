@@ -1,16 +1,10 @@
-mixin calc_switcher(id)
-	.calculator__switcher(class='calculator__switcher--' + id)
-		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off')
-		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' checked)
-		
-		.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
-			label(for=id + '-off')
-			label(for=id + '-on')
-		
-		if (id != 'cover' || id != 'inset')
-		.calculator__switcher-img(class='calculator__switcher-img--' + id)
-			img.calculator__switcher-img--off(src='', alt='')
-			img.calculator__switcher-img--on(src='', alt='')
+mixin calc_switcher(id, item)
+	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
+	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
+
+	.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
+		label(for=id + '-off')
+		label(for=id + '-on')
 
 mixin calc_scroller(id, items)
 	each item, i in items
@@ -22,3 +16,19 @@ mixin calc_scroller(id, items)
 	.calculator__scroller-labels(class=id + '-labels')
 		each item in items
 			label(for=id + '-' + item.id)=item.name
+
+mixin calc_ruler(id, items, num)
+	each item, i in items
+		if i===num
+			input.calculator__ruler-inputs(class='calculator__ruler-inputs--' + id type='radio' name=id id=id + '-' + item value=item checked)
+		else
+			input.calculator__ruler-inputs(class='calculator__ruler-inputs--' + id type='radio' name=id id=id + '-' + item value=item)
+		
+	ul.calculator__ruler-labels(class=id + '-labels')
+		each item in items
+			li: label(for=id + '-' + item)=item
+		span.calculator__ruler-measure г/м
+			span.square 2
+		.calculator__ruler-types
+			span.calculator__ruler-type.calculator__ruler-type--offset Офсетная
+			span.calculator__ruler-type.calculator__ruler-type--coated Мелованная
