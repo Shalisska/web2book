@@ -8,7 +8,7 @@ include cover/decoration
 mixin calc_cover(name, items)
 	each item in items
 		-var mix_name = name + '_' + item.id
-		.calculator__block--inner(class=name + '-' + item.id)
+		.calculator__block--inner(class=name + '_' + item.id + '-block')
 			.calculator__header--inner
 				h3.calculator__title--inner=item.name
 			

@@ -11,7 +11,7 @@ mixin calc_inset(name, items)
 			-count = ' ' + name + '-' + item.id + '--' + 'counter'
 		else
 			-count = ''
-		.calculator__block--inner(class=name + '-' + item.id + count)
+		.calculator__block--inner(class=name + '_' + item.id + '-block' + count)
 			.calculator__header--inner
 				h3.calculator__title--inner=item.name
 					if item.id == 'lines'

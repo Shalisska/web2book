@@ -7,7 +7,16 @@ mixin print_pages(name, id, items)
 				if id == item.id
 					each img in item.img
 						figure(class=name + '-desc__img' + ' ' + name + '-desc__img--' + img.src + ' ' + name + '-desc__img--' + id)
-							img(src='' alt=img.name)
+							+picture({
+								name: img.name,
+								adress: '../images/calculator/' + name + '/' + name + '@',
+								ext: 'png'
+							}, {
+								main: {
+									width: 328,
+									img: 328
+								}
+							})
 							figcaption=img.name
 					p(class=name + '-desc__text' + ' ' + name + '-desc__text--' + id)=item.desc
 

@@ -6,7 +6,7 @@ mixin calc_circulation(name, items)
 			-spec_class = ' ' + name + '-' + item.id + '--' + 'counter'
 		else
 			-spec_class = ''
-		.calculator__block--inner(class=name + '-' + item.id + spec_class)
+		.calculator__block--inner(class=name + '_' + item.id + '-block' + spec_class)
 			.calculator__header--inner
 				h3.calculator__title--inner=item.name
 		

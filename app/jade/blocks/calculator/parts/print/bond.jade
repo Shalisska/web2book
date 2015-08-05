@@ -5,14 +5,26 @@ mixin print_bond(name, items)
 				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
 			else
 				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
-
-		ul.calculator__scroller-items(class=name + '-items')
+		
+		ul.calculator__scroller-items.clearfix(class=name + '-items')
 			each item in items
-				li.calculator__scroller-item(class=name + '-item')
+				li.calculator__scroller-item(class=name + '-item' + ' ' + name + '-item--' + item.id)
 					span.calculator__scroller-text(class=name + '-text')=item.desc
-					img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
-					label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
-						a(class=name + '_pops--' + item.id href='#') ?
+					.calculator__scroller-img(class=name + '-img' + ' ' + name + '-img--' + item.id)
+							+picture({
+								name: item.name,
+								adress: '../images/calculator/' + name + '/' + name + '@',
+								ext: 'png'
+							}, {
+								main: {
+									width: 608,
+									img: 608
+								}
+							})
+					.calculator__scroller-label-wrapper(class=name + '-label-wrapper')
+						label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)
+					span.calculator__scroller-name(class=name + '-name')=item.name
+						a(class=name + '_pops' + ' ' + name + '_pops--' + item.id href='#') ?
 							span=item.pop
 
 
