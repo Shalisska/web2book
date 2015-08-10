@@ -22,36 +22,58 @@
 }
 
 //put to .calculator__switcher
-.calc-switcher(@id) {
-	&-inputs {
-		display: none;
-	}
-	
-	&-labels {
-		background: gray;
-		
-		label {
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			opacity: 0;
-			border-radius: 50%;
-		}
-	}
-	
+//for .cover and .inset
+.calc-switcher-gl(@id) {
 	input[id='@{id}-off']:checked~&-labels label[for='@{id}-off'] {
-		background: blue;
 		opacity: 1;
 	}
 
 	input[id='@{id}-on']:checked~&-labels {
-		background: white;
-		opacity: 1;
+		background: linear-gradient(#86d5fa, #7abfed 99%);
+		box-shadow:
+			inset 0 2px 1px -1px rgba(0, 0, 0, 0.85),
+			inset -1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 0 0px 5px 0 rgba(0, 0, 0, 0.2),
+			inset 0 0px 7px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 	}
 
 	input[id='@{id}-on']:checked~&-labels label[for='@{id}-on'] {
-		background: blue;
 		opacity: 1;
+	}
+}
+
+//put to .calculator__switcher
+//for others
+.calc-switcher(@id) {
+	input[id='@{id}-off']:checked~&-box label[for='@{id}-off'] {
+		opacity: 1;
+	}
+	
+	input[id='@{id}-on']:checked~&-box label[for='@{id}-on'] {
+		opacity: 1;
+	}
+
+	input[id='@{id}-on']:checked~&-box &-labels {
+		background: linear-gradient(#86d5fa, #7abfed 99%);
+		box-shadow:
+			inset 0 2px 1px -1px rgba(0, 0, 0, 0.85),
+			inset -1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 0 0px 5px 0 rgba(0, 0, 0, 0.2),
+			inset 0 0px 7px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+	}
+	
+	input[id='@{id}-off']:checked~&-img &-img_off {
+		display: block;
+	}
+	
+	input[id='@{id}-on']:checked~&-img &-img_on {
+		display: block;
 	}
 }
 
@@ -149,4 +171,21 @@
 	&--@{item}:hover span {display: block;}
 
 	.bond_pops-gener(@n, (@i + 1));
+}
+
+//put to .calculator__ruler
+.calc-ruler(@n) {
+	&-labels {
+		&:before {
+			width: (100% - (100% / @n));
+			left: (100% / @n) / 2;
+		}
+		
+		li {width: (100% / @n);}
+	}
+	
+	&-types {
+		width: (100% - (100% / @n));
+		left: (100% / @n) / 2;
+	}
 }

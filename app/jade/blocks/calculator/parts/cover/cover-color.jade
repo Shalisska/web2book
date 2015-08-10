@@ -1,9 +1,29 @@
 mixin cover_cover_color(name, item)
-	.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
+	.calculator__item.calculator__switcher(class=name + ' ' + name + '-color')
 			+calc_switcher(name, item)
-			.calculator__switcher-img(class='calculator__switcher-img--' + name)
-				img.calculator__switcher-img--off(src=item.off.src alt=item.off.alt)
-				img.calculator__switcher-img--on(src=item.on.src alt=item.on.alt)
+			.calculator__switcher-img(class=name + '-items')
+				+picture({
+					name: item.off.name,
+					class: 'calculator__switcher-img_off ' + name + '-img--switcher',
+					adress: '../images/calculator/' + name + '/color/' + name + '-color@',
+					ext: 'png'
+				}, {
+					main: {
+						width: 496,
+						img: 496
+					}
+				})
+				+picture({
+					name: item.on.name,
+					class: 'calculator__switcher-img_on ' + name + '-img--switcher',
+					adress: '../images/calculator/' + name + '/color/' + name + '-color@',
+					ext: 'png'
+				}, {
+					main: {
+						width: 496,
+						img: 496
+					}
+				})
 
 mixin cover_color(name)
 	+cover_cover_color(name, {
@@ -11,12 +31,10 @@ mixin cover_color(name)
 		name: 'Цветная',
 		off: {
 			val: 'b_w',
-			src: '',
-			alt: 'Черно-белая'
+			name: 'Черно-белая'
 		},
 		on: {
 			val: 'colored',
-			src: '',
-			alt: 'Цветная'
+			name: 'Цветная'
 		}
 	})

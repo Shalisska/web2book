@@ -1,16 +1,28 @@
 mixin cover_cover_vals(name, items)
-	.calculator__item.calculator__scroller(class='calculator__scroller--' + name)
+	.calculator__item.calculator__scroller(class=name + ' ' + name + '-vals')
 		each item, i in items
 			if i===0
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val checked)
 			else
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
+				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val)
 
-		ul.calculator__scroller-items(class=name + '-items')
+		ul.calculator__scroller-items.clearfix(class=name + '-items')
 			each item in items
-				li.calculator__scroller-item(class=name + '-item')
-					img.calculator__scroller-img(class=name + '-img' src='' alt=item.name)
-					label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)=item.name
+				li.calculator__scroller-item.clearfix(class=name + '-item' + ' ' + name + '-item--' + item.id)
+					.calculator__scroller-img(class=name + '-img' + ' ' + name + '-img--' + item.id)
+							+picture({
+								name: item.name,
+								adress: '../images/calculator/' + name + '/vals/' + name + '-vals@',
+								ext: 'png'
+							}, {
+								main: {
+									width: 648,
+									img: 648
+								}
+							})
+					.calculator__scroller-label-wrapper(class=name + '-label-wrapper' + ' ' + name + '-label-wrapper--' + item.id)
+						label.calculator__scroller-label(class=name + '-label' + ' ' + name + '-label--' + item.id for=name + '-' + item.id)
+					span.calculator__scroller-name(class=name + '-name' + ' ' + name + '-name--' + item.id)=item.name
 
 
 mixin cover_vals(name)

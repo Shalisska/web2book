@@ -37,7 +37,11 @@ mixin picture(info, items)
 		each ret in retina
 			-res.push(info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
 		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
-		img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
+		
+		if info.class
+			img(class=info.class src=res[0] width=item.width, srcset=resourse, alt=info.name)
+		else
+			img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
 
 //-+picture({
 //-		name: name,

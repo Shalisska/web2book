@@ -49,6 +49,7 @@
 	}
 	
 	&__title {
+		display: inline-block;
 		margin: 0;
 		font-size: 24px;
 		color: #4c4c4c;
@@ -64,7 +65,7 @@
 	
 	&__block {
 		display: none;
-		padding: 0 3% 1px;
+		padding: 5px 3% 1px;
 		border: 1px solid #ccc;
 		border-bottom: none;
 		background: #f0f0f0;
@@ -82,8 +83,95 @@
 	.calc-opener-mix(4);
 	
 	&__switcher {
-		.calc-switcher('cover');
-		.calc-switcher('inset');
+		&-inputs {
+			display: none;
+		}
+		
+		&-box {
+			line-height: 20px;
+			
+			&--cover_cover {
+				position: absolute;
+				top: -40px;
+				left: 0;
+			}
+		}
+		
+		&-name {
+			display: inline-block;
+			margin: 0;
+			vertical-align: middle;
+		}
+
+		&-labels {
+			position: relative;
+			display: inline-block;
+			margin-left: 10px;
+			width: 48px;
+			height: 20px;
+			vertical-align: middle;
+			background: linear-gradient(#999, #ccc);
+			border-radius: (20px / 2);
+			box-shadow:
+				inset 0 2px 1px -1px rgba(0, 0, 0, 0.85),
+				inset -1px -2px 0px -1px rgba(255, 255, 255, 1),
+				inset 1px -2px 0px -1px rgba(255, 255, 255, 1),
+				inset 0 0px 7px 0 rgba(0, 0, 0, 0.3),
+				inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+
+			label {
+				float: left;
+				width: 50%;
+				height: 100%;
+				opacity: 0;
+				cursor: pointer;
+				
+				&:before {
+					content: '';
+					position: absolute;
+					@w: 16px;
+					top: 50%;
+					margin-top: -(@w / 2 + 1px);
+					width: @w;
+					height: @w;
+					background: linear-gradient(#86d5fa, #46a6eb);
+					border-radius: 50%;
+					box-shadow:
+						inset 0 2px 1px -1px rgba(204, 238, 255, 1),
+						inset 0 -2px 1px -1px rgba(36, 138, 211, 1),
+						inset 0 0 1px 0px #61bdf2,
+						inset 0 0 2px 1px rgba(153, 255, 255, 0.2),
+						0 0 1px 0 rgba(42, 82, 103, 0.3),
+						0 1px 2px 0 rgba(0, 0, 0, 0.3);
+				}
+				
+				&:first-child:before {left: 2px;}
+				
+				&:last-child:before {right: 2px;}
+			}
+		}
+		
+		&-img {
+			width: 100%;
+			overflow: hidden;
+			
+			img {
+				display: none;
+				width: 200%;
+				height: auto;
+			}
+			
+			&_on {margin-left: -100%;}
+		}
+		
+		&--cover, &--inset {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		
+		.calc-switcher-gl('cover');
+		.calc-switcher-gl('inset');
+		.calc-switcher('cover_cover');
 	}
 	
 	&__scroller {
@@ -164,6 +252,77 @@
 		
 		@print_bond: pur, eva;
 		.calc-scroller(print_bond, @print_bond, 2);
+		
+		@cover_cover-vals: 4p, 6p;
+		.calc-scroller(cover_cover, @cover_cover-vals, 2);
+	}
+	
+	&__ruler {
+		&-labels {
+			.reset-ul();
+			position: relative;
+			margin-right: 30px;
+			height: 80px;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				height: 4px;
+				bottom: 35px;
+				background: linear-gradient(#868686, #c5c5c5);
+				border-radius: 2px;
+				box-shadow:
+					inset 0 1px 0 0 #666,
+					inset 0 -1px 0 0 white;
+				z-index: 1;
+			}
+			
+			li {
+				position: relative;
+				float: left;
+				
+				&:before {
+					content: '';
+					position: absolute;
+					height: 9px;
+					bottom: 19px;
+					left: 50%;
+					margin-left: -1px;
+					border-left: 1px solid #b0b0b0;
+					border-right: 1px solid white;
+				}
+				
+				&:first-of-type:before, &:last-of-type:before {
+						height: (9px * 2 + 4px);
+						bottom: 6px;
+				}
+			}
+			
+			label {
+				display: block;
+				width: 100%;
+				height: 60px;
+				text-align: center;
+				cursor: pointer;
+			}
+		}
+		
+		&-measure {
+			position: absolute;
+			right: -30px;
+		}
+		
+		&-types {
+			position: absolute;
+			bottom: 0;
+		}
+		
+		&-type {
+			&--offset {float: left;}
+			&--coated {float: right;}
+		}
+		
+		.calc-ruler(8);
 	}
 	
 	.print {
@@ -357,6 +516,88 @@
 			
 			@print_pages: pages_1, pages_2, pages_3;
 			.calc-selector(print_pages, @print_pages, 3);
+		}
+	}
+	
+	.cover {
+		&_cover {
+			width: 45%;
+			
+			&-vals {float: left;}
+			&-color {
+				float: right;
+				position: relative;
+			}
+			
+			&-block {
+				&:after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+			}
+			
+			&-items {
+				width: 92%;
+				margin-left: 8%;
+			}
+			
+			&-item {
+				position: relative;
+				width: 100%;
+			}
+			
+			&-img {
+				margin-left: 0;
+				width: 65%;
+				
+				&--switcher {margin-top: 5%;}
+			}
+			
+			&-label {
+				position: absolute;
+				left: 50%;
+				margin-left: -12px;
+				
+				&-wrapper {
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					width: (100% - 65%);
+					background-size: 12px;
+					background-position: center;
+				}
+				
+				&--4p {
+					top: 50%;
+					margin-top: -7px;
+				}
+				
+				&--6p {
+					bottom: 50%;
+					margin-bottom: -7px;
+				}
+			}
+			
+			&-item:first-child .cover_cover-label-wrapper {.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--top@', 12);}
+			
+			&-item:last-child .cover_cover-label-wrapper {.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--bottom@', 12);}
+			
+			&-name {
+				position: absolute;
+				width: (100% - 65%);
+				right: 0;
+				
+				&--4p {top: 5px;}
+				&--6p {bottom: 5px;}
+			}
+		}
+		
+		&_paper {
+			&-block {
+				width: 50%;
+			}
 		}
 	}
 }

@@ -3,10 +3,15 @@ mixin calc_switcher(id, item)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
 
 	if (id != 'cover') && (id != 'inset')
-		p.calculator__switcher-name=item.name
-	.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
-		label(for=id + '-off')
-		label(for=id + '-on')
+		.calculator__switcher-box(class='calculator__switcher-box--' + id)
+			p.calculator__switcher-name=item.name
+			.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
+				label(for=id + '-off')
+				label(for=id + '-on')
+	else
+		.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
+			label(for=id + '-off')
+			label(for=id + '-on')
 
 mixin calc_scroller(id, items)
 	each item, i in items
@@ -26,12 +31,12 @@ mixin calc_ruler(id, items, num)
 		else
 			input.calculator__ruler-inputs(class='calculator__ruler-inputs--' + id type='radio' name=id id=id + '-' + item value=item)
 		
-	ul.calculator__ruler-labels(class=id + '-labels')
+	ul.calculator__ruler-labels.clearfix(class=id + '-labels')
 		each item in items
 			li: label(for=id + '-' + item)=item
 		span.calculator__ruler-measure г/м
-			span.square 2
-		.calculator__ruler-types
+			sup.square 2
+		.calculator__ruler-types.clearfix
 			span.calculator__ruler-type.calculator__ruler-type--offset Офсетная
 			span.calculator__ruler-type.calculator__ruler-type--coated Мелованная
 
