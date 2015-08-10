@@ -8,20 +8,29 @@
 	&__section {
 		position: relative;
 		width: 95%;
-		margin: 0 auto;
+		margin: 0 auto 42px;
 		padding: 0;
 		border: none;
 		border-top: 4px solid #50aae6;
-		border-bottom: 4px solid #50aae6;
 		
 		&-opener {
 			&_input {display: none;}
+			
 			&_label {
 				position: absolute;
 				width: 100%;
+				height: 31px;
 				left: 0;
-				bottom: 0;
+				bottom: -31px;
 				text-align: center;
+				color: white;
+				line-height: 1.6;
+				background-repeat: no-repeat;
+				background-position: center -4px;
+				background-size: 100px 31px;
+				border-top: 4px solid #50aae6;
+				cursor: pointer;
+				.retina('../images/calculator/form_open-label/form_open-label@', 100);
 				
 				&--on {display: block;}
 				&--off {display: none;}
@@ -55,7 +64,7 @@
 	
 	&__block {
 		display: none;
-		padding: 0 3%;
+		padding: 0 3% 1px;
 		border: 1px solid #ccc;
 		border-bottom: none;
 		background: #f0f0f0;
@@ -182,7 +191,61 @@
 			&-img {height: 57px;}
 			
 			&_pops {
-				span {display: none;}
+				.reset-a();
+				position: relative;
+				display: inline-block;
+				margin-left: 10px;
+				margin-top: -5px;
+				@w: 16px;
+				width: @w;
+				height: @w;
+				line-height: @w;
+				vertical-align: middle;
+				background-image: linear-gradient(#bcc7cc, #879399);
+				font-family: @font-bold;
+				font-size: 11px;
+				color: white;
+				text-shadow: 0 1px 0 #bcc7cc;
+				border-radius: 50%;
+				box-shadow:
+					inset 0 2px 1px -1px #a1adb2,
+					inset 0 -2px 1px -1px #697880,
+					inset 0 0 1px 0px #859299,
+					inset 0 0 1px 2px rgba(255, 255, 255, 0.25),
+					0 0px 1px 0 rgba(0, 0, 0, 0.4);
+				
+				&:hover, &:active {color: white;}
+				
+				span {
+					position: absolute;
+					display: none;
+					right: -10px;
+					top: 200%;
+					padding: 0.8em;
+					width: 270px;
+					background: white;
+					font-family: @font-italic;
+					font-size: 12px;
+					color: #808080;
+					text-shadow: none;
+					border: 1px solid #51aeed;
+					z-index: 5;
+					
+					&:before {
+						content: '';
+						position: absolute;
+						top: -6px;
+						right: 12px;
+						width: 10px;
+						height: 10px;
+						background: linear-gradient(to right bottom, white 55%, transparent 55%);
+						border-left: 1px solid #51aeed;
+						border-top: 1px solid #51aeed;
+						transform: rotate(45deg);
+					}
+				}
+				
+				.bond_pops-gener(2);
 			}
 		}
 		
@@ -263,12 +326,37 @@
 				}
 			}
 			
-			&-inputs--main:checked~.calculator__header--inner .print_pages-labels {
-				display: block;
+			&__item {
+				display: none;
+			}
+			
+			&__img {
+				float: left;
+				margin: 0;
+				margin-right: 2%;
+				width: (56% / 2);
+				overflow: hidden;
+				text-align: center;
+				
+				img {
+					width: 200%;
+					height: auto;
+				}
+				
+				&--reverse img {margin-left: -100%;}
+			}
+			
+			&__text {
+				float: right;
+				width: 38%;
+				margin: 0;
+				font-family: @font-italic;
+				font-size: 12px;
+				color: #808080;
 			}
 			
 			@print_pages: pages_1, pages_2, pages_3;
-			.calc-selector-generate(print_pages, @print_pages, 3);
+			.calc-selector(print_pages, @print_pages, 3);
 		}
 	}
 }

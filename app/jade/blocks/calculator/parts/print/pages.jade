@@ -1,24 +1,23 @@
 //-инпуты находятся в хедере блока, тут только картинки с описанием
 
 mixin print_pages(name, id, items)
-	.calculator__item.calculator__selector(class=name)
+	.clearfix(class=name + '__item' + ' ' + name + '__item--' + id)
 		each item in items
-			div(class=name + '-desc' + ' ' + name + '-desc--' + id)
-				if id == item.id
-					each img in item.img
-						figure(class=name + '-desc__img' + ' ' + name + '-desc__img--' + img.src + ' ' + name + '-desc__img--' + id)
-							+picture({
-								name: img.name,
-								adress: '../images/calculator/' + name + '/' + name + '@',
-								ext: 'png'
-							}, {
-								main: {
-									width: 328,
-									img: 328
-								}
-							})
-							figcaption=img.name
-					p(class=name + '-desc__text' + ' ' + name + '-desc__text--' + id)=item.desc
+			if id == item.id
+				each img in item.img
+					figure(class=name + '__img' + ' ' + name + '__img--' + img.src + ' ' + name + '__img--' + id)
+						+picture({
+							name: img.name,
+							adress: '../images/calculator/' + name + '/' + name + '@',
+							ext: 'png'
+						}, {
+							main: {
+								width: 328,
+								img: 328
+							}
+						})
+						figcaption(class=name + '__img-name')=img.name
+				p(class=name + '__text' + ' ' + name + '-desc__text--' + id)=item.desc
 
 
 mixin pages(name, id)

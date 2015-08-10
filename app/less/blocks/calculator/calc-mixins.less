@@ -120,15 +120,33 @@
 			inset -1px -2px 1px -1px rgba(255, 255, 255, 1),
 			inset 1px -2px 1px -1px rgba(255, 255, 255, 1),
 			inset 0 0px 5px 0 rgba(0, 0, 0, 0.3),
-			inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);}
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+	}
+
+&-inputs#@{id}-@{item}:checked~.@{id} .@{id}__item--@{item} {
+	display: block;
+}
 	
 	.calc-selector-generate(@id, @items, @n, (@i + 1));
 }
 
 //put to .print_pages
 //@id: print_pages
-.calc-selector() {
-	&-inputs--main:checked~&-labels {
+.calc-selector(@id, @items, @n) {
+	&-inputs--main:checked~.calculator__header--inner .print_pages-labels {
 		display: block;
 	}
+	
+	.calc-selector-generate(print_pages, @print_pages, 3);
+}
+
+.bond_pops-gener(@n, @i: 1) when (@i =< @n) {
+	@items:
+		pur,
+		eva;
+	@item: extract(@items, @i);
+	
+	&--@{item}:hover span {display: block;}
+
+	.bond_pops-gener(@n, (@i + 1));
 }

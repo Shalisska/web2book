@@ -33,8 +33,9 @@ mixin calc_print(name, items)
 				when 'bond'
 					+bond(mix_name)
 				when 'pages'
-					each elem in item.vars
-						+pages(mix_name, elem.id)
+					.calculator__item.calculator__selector(class=mix_name)
+						each elem in item.vars
+							+pages(mix_name, elem.id)
 
 
 mixin print(name)

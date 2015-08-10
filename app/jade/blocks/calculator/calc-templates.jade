@@ -2,7 +2,8 @@ mixin calc_switcher(id, item)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
 
-	p.calculator__switcher-name=item.name
+	if (id != 'cover') && (id != 'inset')
+		p.calculator__switcher-name=item.name
 	.calculator__switcher-labels(class='calculator__switcher-labels--' + id)
 		label(for=id + '-off')
 		label(for=id + '-on')
