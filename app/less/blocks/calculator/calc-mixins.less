@@ -46,6 +46,30 @@
 }
 
 //put to .calculator__switcher
+//for cover_effects
+.calc-switcher_cover_effects(@id) {
+	input[id='@{id}-off']:checked~.cover_effects__switcher-container label[for='@{id}-off'] {
+		opacity: 1;
+	}
+	
+	input[id='@{id}-on']:checked~.cover_effects__switcher-container label[for='@{id}-on'] {
+		opacity: 1;
+	}
+
+	input[id='@{id}-on']:checked~.cover_effects__switcher-container &-box--@{id} &-labels {
+		background: linear-gradient(#86d5fa, #7abfed 99%);
+		box-shadow:
+			inset 0 2px 1px -1px rgba(0, 0, 0, 0.85),
+			inset -1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 1px -2px 0px -1px rgba(255, 255, 255, 1),
+			inset 0 0px 5px 0 rgba(0, 0, 0, 0.2),
+			inset 0 0px 7px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.3),
+			inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+
+//put to .calculator__switcher
 //for others
 .calc-switcher(@id) {
 	input[id='@{id}-off']:checked~&-box label[for='@{id}-off'] {
@@ -56,7 +80,7 @@
 		opacity: 1;
 	}
 
-	input[id='@{id}-on']:checked~&-box &-labels {
+	input[id='@{id}-on']:checked~&-box--@{id} &-labels {
 		background: linear-gradient(#86d5fa, #7abfed 99%);
 		box-shadow:
 			inset 0 2px 1px -1px rgba(0, 0, 0, 0.85),
@@ -173,8 +197,37 @@
 	.bond_pops-gener(@n, (@i + 1));
 }
 
+//ruler generation
+.calc-ruler-generate(@id, @items, @n, @i: 1) when (@i =< @n) {
+	@item: extract(@items, @i);
+	
+	input#@{id}-@{item}:checked~&-labels label[for='@{id}-@{item}']:after {display: block;}
+	
+	input#@{id}-@{item}:checked~&-labels label[for='@{id}-@{item}'] span {
+		color: black;
+		background-color: white;
+		border-color: #51aeed;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			width: 7px;
+			height: 7px;
+			left: 50%;
+			margin-left: -4.5px;
+			bottom: -5px;
+			background: linear-gradient(to top right, white 60%, transparent 60%);
+			border-left: 1px solid #51aeed;
+			border-bottom: 1px solid #51aeed;
+			transform: rotate(-45deg);
+		}
+	}
+	
+	.calc-ruler-generate(@id, @items, @n, (@i + 1));
+}
+
 //put to .calculator__ruler
-.calc-ruler(@n) {
+.calc-ruler(@id, @items, @n) {
 	&-labels {
 		&:before {
 			width: (100% - (100% / @n));
@@ -188,4 +241,6 @@
 		width: (100% - (100% / @n));
 		left: (100% / @n) / 2;
 	}
+	
+	.calc-ruler-generate(@id, @items, @n);
 }

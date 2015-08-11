@@ -138,27 +138,27 @@ function template_media (path, name, w, r) {
     + r + 'dppx) {\n';
   };
 	
-	res += '@sprite-bg: url(../images/' + path + r + 'w' + w + '.png);\n';
+	res += '@' + name + '-bg: url(../images/' + path + r + 'w' + w + '.png);\n';
 
-  res += '.' + name + '{background-image: @sprite-bg;}'
+  res += '.' + name + '{background-image: @' + name + '-bg;}'
 
   return res;
 };
 
-function template_body (data, templates, r, w) {
+function template_body (sprite_name, data, templates, r, w) {
   var res = '';
   var name;
   var width;
   
   for(var i = 0; i < data.length; i++) {
-    name = template_name(data[i].name, templates, r, w);
+    name = template_name(sprite_name, data[i].name, templates, r, w);
     width = template_width(data[i], r);
     res +=name + width;
   };
   return res;
 };
 
-function template_name(data, templates, r, w) {
+function template_name(sprite_name, data, templates, r, w) {
   var name;
   var spec_names = arr_create(templates);
   var item_name = data.replace((/@\w*/g), '');
@@ -180,7 +180,7 @@ function template_name(data, templates, r, w) {
 	if (in_array_class(item_name, spec_names, templates)) {
 		var ind = spec_names.indexOf(item_name);
 		name = name + ':' + templates[ind].class +
-			'{background-image: @sprite-bg;';
+			'{background-image: @' + sprite_name + '-bg;';
 	} else {
 		name = name + '{';
 	};
@@ -211,7 +211,7 @@ function sprite_create(images) {
       function template (w, r, images) {
         var templ = function(data) {
           var result = template_media (images.files, images.sprite_name, w, r);
-          result += template_body(data.items, images.spec_templ, r, w);
+          result += template_body(images.sprite_name, data.items, images.spec_templ, r, w);
 			if(r != 1) {
 				result += '}'
 			};

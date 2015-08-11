@@ -20,7 +20,10 @@ mixin calc(items)
 			
 				if (item.id == 'cover' || item.id == 'inset')
 					.calculator__switcher(class='calculator__switcher--' + item.id)
-						+calc_switcher(item.id, item)
+						+calc_switcher([{
+							id: item.id,
+							obj: item
+						}])
 					
 			.calculator__block(class=item.id)
 				case item.id

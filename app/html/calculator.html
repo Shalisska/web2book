@@ -110,6 +110,22 @@
       <main class="sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
         <div class="container container--main clearfix">
           <div class="column--central">
+            <!--mixin calc_switcher(id, item)
+            if (typeof(id) == 'object')
+            	
+            input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
+            input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
+            
+            if (id != 'cover') && (id != 'inset')
+            	.calculator__switcher-box(class='calculator__switcher-box--' + id)
+            		p.calculator__switcher-name=item.name
+            		block switch_labels
+            			.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
+            				label(for=id + '-off')
+            				label(for=id + '-on')
+            else
+            	block switch_labels
+            -->
             <h1 class="title--main">Калькулятор стоимости печати</h1>
             <form action="#" method="post" name="caculator" class="form--calculator calculator">
               <fieldset class="calculator-types">
@@ -277,7 +293,7 @@
                                                         <input type="radio" name="print_pages" id="print_pages-pages_3" value="pages_var_3" class="calculator__selector-inputs print_pages-inputs">
                                                         <div class="calculator__header--inner">
                                                           <h3 class="calculator__title--inner">Страницы</h3>
-                                                          <label for="print_pages-selector" class="print_pages-labels--main">Выбор</label>
+                                                          <label for="print_pages-selector" class="sprite_icon-print-arrow print_pages-labels--main">Выбор</label>
                                                           <ul class="calculator__selector-labels print_pages-labels">
                                                             <li>
                                                               <label for="print_pages-pages_1">pages_var_1</label>
@@ -410,28 +426,28 @@
                                                                                               <input type="radio" name="cover_paper" id="cover_paper-300" value="300" class="calculator__ruler-inputs calculator__ruler-inputs--cover_paper">
                                                                                               <ul class="calculator__ruler-labels clearfix cover_paper-labels">
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-70">70</label>
+                                                                                                  <label for="cover_paper-70" class="sprite_icon-ruler-thumb"><span>70</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-80">80</label>
+                                                                                                  <label for="cover_paper-80" class="sprite_icon-ruler-thumb"><span>80</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-130">130</label>
+                                                                                                  <label for="cover_paper-130" class="sprite_icon-ruler-thumb"><span>130</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-150">150</label>
+                                                                                                  <label for="cover_paper-150" class="sprite_icon-ruler-thumb"><span>150</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-170">170</label>
+                                                                                                  <label for="cover_paper-170" class="sprite_icon-ruler-thumb"><span>170</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-200">200</label>
+                                                                                                  <label for="cover_paper-200" class="sprite_icon-ruler-thumb"><span>200</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-250">250</label>
+                                                                                                  <label for="cover_paper-250" class="sprite_icon-ruler-thumb"><span>250</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="cover_paper-300">300</label>
+                                                                                                  <label for="cover_paper-300" class="sprite_icon-ruler-thumb"><span>300</span></label>
                                                                                                 </li><span class="calculator__ruler-measure">г/м<sup class="square">2</sup></span>
                                                                                                 <div class="calculator__ruler-types clearfix"><span class="calculator__ruler-type calculator__ruler-type--offset">Офсетная</span><span class="calculator__ruler-type calculator__ruler-type--coated">Мелованная</span></div>
                                                                                               </ul>
@@ -441,26 +457,31 @@
                                                         <div class="calculator__header--inner">
                                                           <h3 class="calculator__title--inner">Эффекты нанесения</h3>
                                                         </div>
-                                                                                <div class="calculator__item calculator__switcher calculator__switcher--cover_effects">
-                                                                                              <input type="radio" name="cover_effects" id="cover_effects-off" val="no-convex" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects">
-                                                                                              <input type="radio" name="cover_effects" id="cover_effects-on" val="convex" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects">
-                                                                                              <div class="calculator__switcher-box calculator__switcher-box--cover_effects">
-                                                                                                <p class="calculator__switcher-name">Конгрев</p>
-                                                                                                <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects">
-                                                                                                  <label for="cover_effects-off"></label>
-                                                                                                  <label for="cover_effects-on"></label>
+                                                                                <div class="calculator__item calculator__switcher clearfix cover_effects">
+                                                                                              <input type="radio" name="cover_effects--convex" id="cover_effects--convex-off" val="no-convex" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--convex">
+                                                                                              <input type="radio" name="cover_effects--convex" id="cover_effects--convex-on" val="convex" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--convex">
+                                                                                              <input type="radio" name="cover_effects--stamping" id="cover_effects--stamping-off" val="no-stamping" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--stamping">
+                                                                                              <input type="radio" name="cover_effects--stamping" id="cover_effects--stamping-on" val="stamping" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--stamping">
+                                                                                              <div class="cover_effects__switcher-container">
+                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects--convex">
+                                                                                                  <p class="calculator__switcher-name">Конгрев</p>
+                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects--convex">
+                                                                                                    <label for="cover_effects--convex-off"></label>
+                                                                                                    <label for="cover_effects--convex-on"></label>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects--stamping">
+                                                                                                  <p class="calculator__switcher-name">Тиснение</p>
+                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects--stamping">
+                                                                                                    <label for="cover_effects--stamping-off"></label>
+                                                                                                    <label for="cover_effects--stamping-on"></label>
+                                                                                                  </div>
                                                                                                 </div>
                                                                                               </div>
-                                                                                              <input type="radio" name="cover_effects" id="cover_effects-off" val="no-stamping" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects">
-                                                                                              <input type="radio" name="cover_effects" id="cover_effects-on" val="stamping" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects">
-                                                                                              <div class="calculator__switcher-box calculator__switcher-box--cover_effects">
-                                                                                                <p class="calculator__switcher-name">Тиснение</p>
-                                                                                                <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects">
-                                                                                                  <label for="cover_effects-off"></label>
-                                                                                                  <label for="cover_effects-on"></label>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                  <div class="calculator__switcher-img calculator__switcher-img--cover_effects"><img src="" alt="Без конгрева" class="calculator__switcher-img--off"><img src="" alt="Конгрев" class="calculator__switcher-img--on"></div>
+                                                                                  <div class="calculator__switcher-img cover_effects-items">
+                                                                                    <picture><img src="../images/calculator/cover_effects/cover_effects@128.png 128w" width="128" srcset="../images/calculator/cover_effects/cover_effects@192.png 192w, ../images/calculator/cover_effects/cover_effects@256.png 256w, ../images/calculator/cover_effects/cover_effects@384.png 384w" alt="Эффекты нанесения"/>
+                                                                                    </picture>
+                                                                                  </div>
                                                                                 </div>
                                                       </div>
                                                       <div class="calculator__block--inner cover_decoration-block">
@@ -472,21 +493,45 @@
                                                                                   <input type="radio" name="cover_decoration" id="cover_decoration-matte" value="matte" class="calculator__scroller-inputs calculator__scroller-inputs--cover_decoration">
                                                                                   <input type="radio" name="cover_decoration" id="cover_decoration-uv" value="uv" class="calculator__scroller-inputs calculator__scroller-inputs--cover_decoration">
                                                                                   <input type="radio" name="cover_decoration" id="cover_decoration-wd" value="wd" class="calculator__scroller-inputs calculator__scroller-inputs--cover_decoration">
+                                                                                  <ul class="calculator__scroller-items clearfix cover_decoration-items">
+                                                                                    <li class="calculator__scroller-item cover_decoration-item cover_decoration-item--glossy">
+                                                                                      <div class="calculator__scroller-img cover_decoration-img cover_decoration-img--glossy">
+                                                                                        <picture><img src="../images/calculator/cover_decoration/cover_decoration@1312.png 1312w" width="1312" srcset="../images/calculator/cover_decoration/cover_decoration@1968.png 1968w, ../images/calculator/cover_decoration/cover_decoration@2624.png 2624w, ../images/calculator/cover_decoration/cover_decoration@3936.png 3936w" alt="Глянцевый ламинат"/>
+                                                                                        </picture>
+                                                                                      </div>
+                                                                                      <div class="calculator__scroller-label-wrapper cover_decoration-label-wrapper">
+                                                                                        <label for="cover_decoration-glossy" class="calculator__scroller-label cover_decoration-label"></label>
+                                                                                      </div><span class="calculator__scroller-name cover_decoration-name">Глянцевый ламинат</span><span class="calculator__scroller-text cover_decoration-text">Глянцевое ламинирование</span>
+                                                                                    </li>
+                                                                                    <li class="calculator__scroller-item cover_decoration-item cover_decoration-item--matte">
+                                                                                      <div class="calculator__scroller-img cover_decoration-img cover_decoration-img--matte">
+                                                                                        <picture><img src="../images/calculator/cover_decoration/cover_decoration@1312.png 1312w" width="1312" srcset="../images/calculator/cover_decoration/cover_decoration@1968.png 1968w, ../images/calculator/cover_decoration/cover_decoration@2624.png 2624w, ../images/calculator/cover_decoration/cover_decoration@3936.png 3936w" alt="Матовый ламинат"/>
+                                                                                        </picture>
+                                                                                      </div>
+                                                                                      <div class="calculator__scroller-label-wrapper cover_decoration-label-wrapper">
+                                                                                        <label for="cover_decoration-matte" class="calculator__scroller-label cover_decoration-label"></label>
+                                                                                      </div><span class="calculator__scroller-name cover_decoration-name">Матовый ламинат</span><span class="calculator__scroller-text cover_decoration-text">Матовое ламинирование</span>
+                                                                                    </li>
+                                                                                    <li class="calculator__scroller-item cover_decoration-item cover_decoration-item--uv">
+                                                                                      <div class="calculator__scroller-img cover_decoration-img cover_decoration-img--uv">
+                                                                                        <picture><img src="../images/calculator/cover_decoration/cover_decoration@1312.png 1312w" width="1312" srcset="../images/calculator/cover_decoration/cover_decoration@1968.png 1968w, ../images/calculator/cover_decoration/cover_decoration@2624.png 2624w, ../images/calculator/cover_decoration/cover_decoration@3936.png 3936w" alt="УФ лак"/>
+                                                                                        </picture>
+                                                                                      </div>
+                                                                                      <div class="calculator__scroller-label-wrapper cover_decoration-label-wrapper">
+                                                                                        <label for="cover_decoration-uv" class="calculator__scroller-label cover_decoration-label"></label>
+                                                                                      </div><span class="calculator__scroller-name cover_decoration-name">УФ лак</span><span class="calculator__scroller-text cover_decoration-text">Ультрафиолетовое лакирование</span>
+                                                                                    </li>
+                                                                                    <li class="calculator__scroller-item cover_decoration-item cover_decoration-item--wd">
+                                                                                      <div class="calculator__scroller-img cover_decoration-img cover_decoration-img--wd">
+                                                                                        <picture><img src="../images/calculator/cover_decoration/cover_decoration@1312.png 1312w" width="1312" srcset="../images/calculator/cover_decoration/cover_decoration@1968.png 1968w, ../images/calculator/cover_decoration/cover_decoration@2624.png 2624w, ../images/calculator/cover_decoration/cover_decoration@3936.png 3936w" alt="ВД лак"/>
+                                                                                        </picture>
+                                                                                      </div>
+                                                                                      <div class="calculator__scroller-label-wrapper cover_decoration-label-wrapper">
+                                                                                        <label for="cover_decoration-wd" class="calculator__scroller-label cover_decoration-label"></label>
+                                                                                      </div><span class="calculator__scroller-name cover_decoration-name">ВД лак</span><span class="calculator__scroller-text cover_decoration-text">Вододисперсионное лакирование</span>
+                                                                                    </li>
+                                                                                  </ul>
                                                                                 </div>
-                                                                                <ul class="calculator__scroller-items cover_decoration-items">
-                                                                                  <li class="calculator__scroller-item cover_decoration-item"><img src="" alt="Глянцевый ламинат" class="calculator__scroller-img cover_decoration-img">
-                                                                                    <label for="cover_decoration-glossy" class="calculator__scroller-label cover_decoration-label">Глянцевый ламинат</label><span class="calculator__scroller-text cover_decoration-text">Глянцевое ламинирование</span>
-                                                                                  </li>
-                                                                                  <li class="calculator__scroller-item cover_decoration-item"><img src="" alt="Матовый ламинат" class="calculator__scroller-img cover_decoration-img">
-                                                                                    <label for="cover_decoration-matte" class="calculator__scroller-label cover_decoration-label">Матовый ламинат</label><span class="calculator__scroller-text cover_decoration-text">Матовое ламинирование</span>
-                                                                                  </li>
-                                                                                  <li class="calculator__scroller-item cover_decoration-item"><img src="" alt="УФ лак" class="calculator__scroller-img cover_decoration-img">
-                                                                                    <label for="cover_decoration-uv" class="calculator__scroller-label cover_decoration-label">УФ лак</label><span class="calculator__scroller-text cover_decoration-text">Ультрафиолетовое лакирование</span>
-                                                                                  </li>
-                                                                                  <li class="calculator__scroller-item cover_decoration-item"><img src="" alt="ВД лак" class="calculator__scroller-img cover_decoration-img">
-                                                                                    <label for="cover_decoration-wd" class="calculator__scroller-label cover_decoration-label">ВД лак</label><span class="calculator__scroller-text cover_decoration-text">Вододисперсионное лакирование</span>
-                                                                                  </li>
-                                                                                </ul>
                                                       </div>
                             </div>
                           </fieldset>
@@ -501,7 +546,7 @@
                                                         <div class="calculator__header--inner">
                                                           <h3 class="calculator__title--inner"></h3>
                                                         </div>
-                                                                                <div class="calculator__item calculator__switcher calculator__switcher--block_color">
+                                                                                <div class="calculator__item calculator__switcher block_color">
                                                                                               <input type="radio" name="block_color" id="block_color-off" val="b_w" class="calculator__switcher-inputs calculator__switcher-inputs--block_color">
                                                                                               <input type="radio" name="block_color" id="block_color-on" val="colored" checked class="calculator__switcher-inputs calculator__switcher-inputs--block_color">
                                                                                               <div class="calculator__switcher-box calculator__switcher-box--block_color">
@@ -511,7 +556,12 @@
                                                                                                   <label for="block_color-on"></label>
                                                                                                 </div>
                                                                                               </div>
-                                                                                  <div class="calculator__switcher-img calculator__switcher-img--block_color"><img src="" alt="Черно-белый" class="calculator__switcher-img--off"><img src="" alt="Цветной" class="calculator__switcher-img--on"></div>
+                                                                                  <div class="calculator__switcher-img block_color-items">
+                                                                                    <picture><img src="../images/calculator/block_color/block_color@494.png 494w" width="494" srcset="../images/calculator/block_color/block_color@741.png 741w, ../images/calculator/block_color/block_color@988.png 988w, ../images/calculator/block_color/block_color@1482.png 1482w" class="calculator__switcher-img_off block_color-img--switcher"/>
+                                                                                    </picture>
+                                                                                    <picture><img src="../images/calculator/block_color/block_color@494.png 494w" width="494" srcset="../images/calculator/block_color/block_color@741.png 741w, ../images/calculator/block_color/block_color@988.png 988w, ../images/calculator/block_color/block_color@1482.png 1482w" class="calculator__switcher-img_on block_color-img--switcher"/>
+                                                                                    </picture>
+                                                                                  </div>
                                                                                 </div>
                                                       </div>
                                                       <div class="calculator__block--inner block_paper-block">
@@ -529,28 +579,28 @@
                                                                                               <input type="radio" name="block_paper" id="block_paper-300" value="300" class="calculator__ruler-inputs calculator__ruler-inputs--block_paper">
                                                                                               <ul class="calculator__ruler-labels clearfix block_paper-labels">
                                                                                                 <li>
-                                                                                                  <label for="block_paper-70">70</label>
+                                                                                                  <label for="block_paper-70" class="sprite_icon-ruler-thumb"><span>70</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-80">80</label>
+                                                                                                  <label for="block_paper-80" class="sprite_icon-ruler-thumb"><span>80</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-130">130</label>
+                                                                                                  <label for="block_paper-130" class="sprite_icon-ruler-thumb"><span>130</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-150">150</label>
+                                                                                                  <label for="block_paper-150" class="sprite_icon-ruler-thumb"><span>150</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-170">170</label>
+                                                                                                  <label for="block_paper-170" class="sprite_icon-ruler-thumb"><span>170</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-200">200</label>
+                                                                                                  <label for="block_paper-200" class="sprite_icon-ruler-thumb"><span>200</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-250">250</label>
+                                                                                                  <label for="block_paper-250" class="sprite_icon-ruler-thumb"><span>250</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="block_paper-300">300</label>
+                                                                                                  <label for="block_paper-300" class="sprite_icon-ruler-thumb"><span>300</span></label>
                                                                                                 </li><span class="calculator__ruler-measure">г/м<sup class="square">2</sup></span>
                                                                                                 <div class="calculator__ruler-types clearfix"><span class="calculator__ruler-type calculator__ruler-type--offset">Офсетная</span><span class="calculator__ruler-type calculator__ruler-type--coated">Мелованная</span></div>
                                                                                               </ul>
@@ -615,28 +665,28 @@
                                                                                               <input type="radio" name="inset_paper" id="inset_paper-300" value="300" class="calculator__ruler-inputs calculator__ruler-inputs--inset_paper">
                                                                                               <ul class="calculator__ruler-labels clearfix inset_paper-labels">
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-70">70</label>
+                                                                                                  <label for="inset_paper-70" class="sprite_icon-ruler-thumb"><span>70</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-80">80</label>
+                                                                                                  <label for="inset_paper-80" class="sprite_icon-ruler-thumb"><span>80</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-130">130</label>
+                                                                                                  <label for="inset_paper-130" class="sprite_icon-ruler-thumb"><span>130</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-150">150</label>
+                                                                                                  <label for="inset_paper-150" class="sprite_icon-ruler-thumb"><span>150</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-170">170</label>
+                                                                                                  <label for="inset_paper-170" class="sprite_icon-ruler-thumb"><span>170</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-200">200</label>
+                                                                                                  <label for="inset_paper-200" class="sprite_icon-ruler-thumb"><span>200</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-250">250</label>
+                                                                                                  <label for="inset_paper-250" class="sprite_icon-ruler-thumb"><span>250</span></label>
                                                                                                 </li>
                                                                                                 <li>
-                                                                                                  <label for="inset_paper-300">300</label>
+                                                                                                  <label for="inset_paper-300" class="sprite_icon-ruler-thumb"><span>300</span></label>
                                                                                                 </li><span class="calculator__ruler-measure">г/м<sup class="square">2</sup></span>
                                                                                                 <div class="calculator__ruler-types clearfix"><span class="calculator__ruler-type calculator__ruler-type--offset">Офсетная</span><span class="calculator__ruler-type calculator__ruler-type--coated">Мелованная</span></div>
                                                                                               </ul>

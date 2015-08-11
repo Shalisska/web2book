@@ -4,13 +4,13 @@ var sprite_calc_arr = [{
 	img_dir: 'calculator/print_pages/sprite',
 	dest: [{
 		width: 0,
-		retina: 32
+		retina: 16
 	}]
 }, {
 	img_dir: 'calculator/sprite/ruler-thumb',
 	dest: [{
 		width: 0,
-		retina: 32
+		retina: 18
 	}]
 }];
 

@@ -1,17 +1,41 @@
-mixin calc_switcher(id, item)
+mixin calc_switcher(items)
+	each item in items
+		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + item.id type='radio' name=item.id id=item.id + '-off' val=item.obj.off.val)
+		input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + item.id type='radio' name=item.id id=item.id + '-on' val=item.obj.on.val checked)
+
+	if (items.length > 1)
+		div(class=items[0].name_main + '__switcher-container')
+			block switch_box
+				each item in items
+					if (item.id != 'cover') && (item.id != 'inset')
+						.calculator__switcher-box(class='calculator__switcher-box--' + item.id)
+							p.calculator__switcher-name=item.obj.name
+							block switch_labels1
+								.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + item.id)
+									label(for=item.id + '-off')
+									label(for=item.id + '-on')
+					else
+						block switch_labels1
+	else
+		block switch_box
+
+//--------------
+//mixin calc_switcher(id, item)
+	if (typeof(id) == 'object')
+		
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
 	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
 
 	if (id != 'cover') && (id != 'inset')
 		.calculator__switcher-box(class='calculator__switcher-box--' + id)
 			p.calculator__switcher-name=item.name
-			.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
-				label(for=id + '-off')
-				label(for=id + '-on')
+			block switch_labels
+				.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
+					label(for=id + '-off')
+					label(for=id + '-on')
 	else
-		.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
-			label(for=id + '-off')
-			label(for=id + '-on')
+		block switch_labels
+//-------------
 
 mixin calc_scroller(id, items)
 	each item, i in items
@@ -33,7 +57,8 @@ mixin calc_ruler(id, items, num)
 		
 	ul.calculator__ruler-labels.clearfix(class=id + '-labels')
 		each item in items
-			li: label(for=id + '-' + item)=item
+			li: label.sprite_icon-ruler-thumb(for=id + '-' + item)
+				span=item
 		span.calculator__ruler-measure г/м
 			sup.square 2
 		.calculator__ruler-types.clearfix

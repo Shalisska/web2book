@@ -1,6 +1,9 @@
 mixin inset_color_inner(name, item)
 	.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
-			+calc_switcher(name, item)
+			+calc_switcher([{
+				id: name,
+				obj: item
+			}])
 			.calculator__switcher-img(class='calculator__switcher-img--' + name)
 				img.calculator__switcher-img--off(src=item.off.src alt=item.off.alt)
 				img.calculator__switcher-img--on(src=item.on.src alt=item.on.alt)

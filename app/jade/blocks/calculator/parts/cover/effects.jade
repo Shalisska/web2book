@@ -1,10 +1,25 @@
 mixin cover_effects(name, obj)
-	.calculator__item.calculator__switcher(class='calculator__switcher--' + name)
-		+calc_switcher(name, obj.convex)
-		+calc_switcher(name, obj.stamping)
-		.calculator__switcher-img(class='calculator__switcher-img--' + name)
-			img.calculator__switcher-img--off(src=obj.convex.off.src alt=obj.convex.off.alt)
-			img.calculator__switcher-img--on(src=obj.convex.on.src alt=obj.convex.on.alt)
+	.calculator__item.calculator__switcher.clearfix(class=name)
+		+calc_switcher([{
+			name_main: name,
+			id: name + '--convex',
+			obj: obj.convex
+		}, {
+			name_main: name,
+			id: name + '--stamping',
+			obj: obj.stamping
+		}])
+		.calculator__switcher-img(class=name + '-items')
+			+picture({
+				name: 'Эффекты нанесения',
+				adress: '../images/calculator/' + name + '/' + name + '@',
+				ext: 'png'
+			}, {
+				main: {
+					width: 128,
+					img: 128
+				}
+			})
 
 mixin effects(name)
 	+cover_effects(name, {
