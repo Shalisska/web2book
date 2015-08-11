@@ -1,5 +1,19 @@
 var retina_size = [1, 1.5, 2, 3];
 
+var sprite_calc_arr = [{
+	img_dir: 'calculator/print_pages/sprite',
+	dest: [{
+		width: 0,
+		retina: 32
+	}]
+}, {
+	img_dir: 'calculator/sprite/ruler-thumb',
+	dest: [{
+		width: 0,
+		retina: 32
+	}]
+}];
+
 var sprite_arr = [{
 	img_dir: 'header/sprite/header-slider_controls--btn',
 	dest: [{
@@ -276,6 +290,7 @@ function sprite_cr(items) {
 };
 
 var sprite_files = sprite_cr(obj_sorting(sprite_arr));
+var sprite_calc_copy = sprite_cr(obj_sorting(sprite_calc_arr));
 
 module.exports = {
 	build: {
@@ -302,5 +317,8 @@ module.exports = {
 	},
 	build_sprite: {
 		files: sprite_files
+	},
+	sprite_calc: {
+		files: sprite_calc_copy
 	}
 };

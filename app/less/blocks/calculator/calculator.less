@@ -263,6 +263,7 @@
 			position: relative;
 			margin-right: 30px;
 			height: 80px;
+			color: #808080;
 			
 			&:before {
 				content: '';
@@ -304,12 +305,17 @@
 				height: 60px;
 				text-align: center;
 				cursor: pointer;
+				
+				&:before {
+					
+				}
 			}
 		}
 		
 		&-measure {
 			position: absolute;
 			right: -30px;
+			top: 33px;
 		}
 		
 		&-types {
@@ -319,7 +325,11 @@
 		
 		&-type {
 			&--offset {float: left;}
-			&--coated {float: right;}
+			
+			&--coated {
+				float: right;
+				color: black;
+			}
 		}
 		
 		.calc-ruler(8);

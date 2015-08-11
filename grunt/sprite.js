@@ -1,6 +1,24 @@
+var images_calc = {
+    retina: [1, 1.5, 2, 3]
+  , width: ['']
+  , files: 'spritesheet/sprite_calc/spritesheet@'
+  , files_css: 'sprite/sprite_calc/sprites@'
+  , sprite_name: 'sprite_calc'
+  , spec_templ: [{
+      name: 'print-arrow'
+    , class: 'after'
+    }, {
+      name: 'ruler-thumb'
+    , class: 'after'
+    }]
+};
+
 var images = {
     retina: [1, 1.5, 2, 3]
   , width: ['', '950', '900', '650']
+  , files: 'spritesheet/spritesheet@'
+  , files_css: 'sprite/sprites@'
+  , sprite_name: 'sprite'
   , spec_templ: [{
       name: 'header-slider_controls--btn--active'
     , template: function (r, w) {
@@ -91,7 +109,7 @@ function in_array_class(what, where, templates) {
   return false;
 };
 
-function template_media (w, r) {
+function template_media (path, name, w, r) {
   var res = '';
 
   if (r != 1) {
@@ -120,9 +138,9 @@ function template_media (w, r) {
     + r + 'dppx) {\n';
   };
 	
-	res += '@sprite-bg: url(../images/spritesheet/spritesheet@' + r + 'w' + w + '.png);\n';
+	res += '@sprite-bg: url(../images/' + path + r + 'w' + w + '.png);\n';
 
-  res += '.sprite {background-image: @sprite-bg;}'
+  res += '.' + name + '{background-image: @sprite-bg;}'
 
   return res;
 };
@@ -192,7 +210,7 @@ function sprite_create(images) {
       
       function template (w, r, images) {
         var templ = function(data) {
-          var result = template_media (w, r);
+          var result = template_media (images.files, images.sprite_name, w, r);
           result += template_body(data.items, images.spec_templ, r, w);
 			if(r != 1) {
 				result += '}'
@@ -206,8 +224,8 @@ function sprite_create(images) {
       
         var sprite = {
         src: 'spec/sprite' + w + '/sprite@' + r + '/*.png'
-      , dest: 'app/images/spritesheet/spritesheet@' + r + 'w' + w + '.png'
-      , destCss: 'app/less/helpers/sprite/sprites@' + r + 'w' + w + '.less'
+      , dest: 'app/images/' + images.files + r + 'w' + w + '.png'
+      , destCss: 'app/less/helpers/' + images.files_css + r + 'w' + w + '.less'
       , cssTemplate: template (w, r, images)
       };
 
@@ -219,5 +237,6 @@ function sprite_create(images) {
 };
 
 var sprite_build = sprite_create(images);
+var sprite_calc = sprite_create(images_calc);
 
-module.exports = sprite_build;
+module.exports = sprite_calc;

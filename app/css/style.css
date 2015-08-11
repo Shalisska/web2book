@@ -6386,6 +6386,7 @@ input#cover_cover-6p:checked ~ .calculator__scroller-items label[for='cover_cove
   position: relative;
   margin-right: 30px;
   height: 80px;
+  color: #808080;
 }
 .calculator__ruler-labels:before {
   content: '';
@@ -6426,6 +6427,7 @@ input#cover_cover-6p:checked ~ .calculator__scroller-items label[for='cover_cove
 .calculator__ruler-measure {
   position: absolute;
   right: -30px;
+  top: 33px;
 }
 .calculator__ruler-types {
   position: absolute;
@@ -6436,6 +6438,7 @@ input#cover_cover-6p:checked ~ .calculator__scroller-items label[for='cover_cove
 }
 .calculator__ruler-type--coated {
   float: right;
+  color: black;
 }
 .calculator__ruler-labels:before {
   width: 87.5%;
