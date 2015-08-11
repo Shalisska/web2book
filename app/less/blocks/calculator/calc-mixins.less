@@ -6,7 +6,10 @@
 		inset;
 	@item: extract(@items, @i);
 	
-	input#@{item}-open:checked~.@{item} {
+	.@{item} {border-bottom: none;}
+	.calculator__block--@{item} {display: none;}
+	
+	input#@{item}-open:checked~.calculator__block--@{item} {
 		display: block;
 	}
 

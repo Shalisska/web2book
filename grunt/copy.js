@@ -12,6 +12,12 @@ var sprite_calc_arr = [{
 		width: 0,
 		retina: 18
 	}]
+}, , {
+	img_dir: 'calculator/sprite/counter-arrow',
+	dest: [{
+		width: 0,
+		retina: 18
+	}]
 }];
 
 var sprite_arr = [{

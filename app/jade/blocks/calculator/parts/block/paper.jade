@@ -1,5 +1,5 @@
 mixin block_paper_inner(name, items)
-	.calculator__item.calculator__ruler(class= 'calculator__ruler--' + name)
+	.calculator__item.calculator__ruler(class=name)
 		+calc_ruler(name, items, 3)
 
 mixin block_paper(name)

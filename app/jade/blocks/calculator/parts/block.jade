@@ -8,12 +8,12 @@ mixin calc_block(name, items)
 		-var mix_name = name + '_' + item.id
 		-var count
 		if item.counter
-			-count = ' ' + name + '-' + item.id + '--' + 'counter'
+			-count = ' ' + 'calculator__counter-header'
 		else
 			-count = ''
-		.calculator__block--inner(class=name + '_' + item.id + '-block' + count)
-			.calculator__header--inner
-				h3.calculator__title--inner=item.name
+		.calculator__block--inner(class=name + '_' + item.id + '-block')
+			.calculator__header--inner(class=name + '_' + item.id + '-header' + count)
+				h3.calculator__title--inner(class=name + '_' + item.id + '-title')=item.name
 					if item.id == 'lines'
 						span.calculator__title--inner_sub=item.sub
 			
@@ -36,6 +36,6 @@ mixin block(name)
 	}, {
 		id: 'lines',
 		name: 'Количество полос',
-		sub: 'страниц',
+		sub: ' (страниц)',
 		counter: 1
 	}])

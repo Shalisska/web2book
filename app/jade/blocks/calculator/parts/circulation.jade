@@ -1,20 +1,20 @@
 mixin calc_circulation(name, items)
 	each item in items
 		-var mix_name = name + '_' + item.id
-		-var spec_class
+		-var count
 		if item.counter
-			-spec_class = ' ' + name + '-' + item.id + '--' + 'counter'
+			-count = ' ' + 'calculator__counter-header'
 		else
-			-spec_class = ''
-		.calculator__block--inner(class=name + '_' + item.id + '-block' + spec_class)
-			.calculator__header--inner
-				h3.calculator__title--inner=item.name
+			-count = ''
+		.calculator__block--inner(class=mix_name + '-block')
+			.calculator__header--inner(class=mix_name + '-header' + count)
+				h3.calculator__title--inner(class=mix_name + '-title')=item.name
 		
-		case item.id
-			when 'total'
-				+circulation_total(item.id)
-			when 'copies'
-				+circulation_copies(item.id)
+			case item.id
+				when 'total'
+					+circulation_total(mix_name)
+				when 'copies'
+					+circulation_copies(mix_name)
 
 mixin circulation_total(name)
 	.calculator__item.calculator__total(class=name)

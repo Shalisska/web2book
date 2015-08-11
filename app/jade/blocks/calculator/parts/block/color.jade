@@ -1,32 +1,32 @@
 mixin block_color_inner(name, item)
 	.calculator__item.calculator__switcher(class=name)
-			+calc_switcher([{
-				id: name,
-				obj: item
-			}])
-			.calculator__switcher-img(class=name + '-items')
-				+picture({
-					name: item.off.name,
-					class: 'calculator__switcher-img_off ' + name + '-img--switcher',
-					adress: '../images/calculator/' + name + '/' + name + '@',
-					ext: 'png'
-				}, {
-					main: {
-						width: 494,
-						img: 494
-					}
-				})
-				+picture({
-					name: item.on.name,
-					class: 'calculator__switcher-img_on ' + name + '-img--switcher',
-					adress: '../images/calculator/' + name + '/' + name + '@',
-					ext: 'png'
-				}, {
-					main: {
-						width: 494,
-						img: 494
-					}
-				})
+		+calc_switcher([{
+			id: name,
+			obj: item
+		}])
+		.calculator__switcher-img(class=name + '-items')
+			+picture({
+				name: item.off.name,
+				class: 'calculator__switcher-img_off ' + name + '-img--switcher',
+				adress: '../images/calculator/' + name + '/' + name + '@',
+				ext: 'png'
+			}, {
+				main: {
+					width: 494,
+					img: 494
+				}
+			})
+			+picture({
+				name: item.on.name,
+				class: 'calculator__switcher-img_on ' + name + '-img--switcher',
+				adress: '../images/calculator/' + name + '/' + name + '@',
+				ext: 'png'
+			}, {
+				main: {
+					width: 494,
+					img: 494
+				}
+			})
 
 mixin block_color(name)
 	+block_color_inner(name, {

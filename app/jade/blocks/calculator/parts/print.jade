@@ -7,7 +7,7 @@ include print/pages
 mixin calc_print(name, items)
 	each item in items
 		-var mix_name = name + '_' + item.id
-		.calculator__block--inner(class=name + '_' + item.id + '-block')
+		.calculator__block--inner(class=mix_name + '-block')
 			if (item.id == 'pages')
 				input(class=mix_name + '-inputs--main' type='checkbox' id=mix_name + '-selector')
 				
@@ -17,8 +17,8 @@ mixin calc_print(name, items)
 					else
 						input.calculator__selector-inputs(class=mix_name + '-inputs' type='radio' name=mix_name id=mix_name + '-' + elem.id value=elem.val)
 				
-			.calculator__header--inner
-				h3.calculator__title--inner=item.name
+			.calculator__header--inner(class=mix_name + '-header')
+				h3.calculator__title--inner(class=mix_name + '-title')=item.name
 				if (item.id == 'pages')
 					label.sprite_icon-print-arrow(class=mix_name + '-labels--main' for=mix_name + '-selector') Выбор
 					ul.calculator__selector-labels(class=mix_name + '-labels')

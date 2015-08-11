@@ -12,6 +12,7 @@
 		padding: 0;
 		border: none;
 		border-top: 4px solid #50aae6;
+		border-bottom: 4px solid #50aae6;
 		
 		&-opener {
 			&_input {display: none;}
@@ -60,15 +61,21 @@
 			color: #990000;
 			font-size: 18px;
 			font-weight: normal;
+			
+			&_sub {
+				color: #808080;
+				font-size: 14px;
+			}
 		}
 	}
 	
 	&__block {
-		display: none;
 		padding: 5px 3% 1px;
 		border: 1px solid #ccc;
 		border-bottom: none;
 		background: #f0f0f0;
+		
+		&--circulation {padding-top: 20px;}
 		
 		&--inner {
 			margin-bottom: 30px;
@@ -105,6 +112,8 @@
 					clear: both;
 				}
 			}
+			
+			&--block_color, &--inset_color {margin-bottom: 2.8em;}
 		}
 		
 		&-name {
@@ -191,6 +200,7 @@
 		.calc-switcher_cover_effects(cover_effects--convex);
 		.calc-switcher_cover_effects(cover_effects--stamping);
 		.calc-switcher(block_color);
+		.calc-switcher(inset_color);
 	}
 	
 	&__scroller {
@@ -280,7 +290,6 @@
 	}
 	
 	&__ruler {
-		
 		&-labels {
 			.reset-ul();
 			position: relative;
@@ -370,8 +379,64 @@
 			}
 		}
 		
-		@cover_paper: 70, 80, 130, 150, 170, 200, 250, 300;
-		.calc-ruler(cover_paper, @cover_paper, 8);
+		@paper: 70, 80, 130, 150, 170, 200, 250, 300;
+		.calc-ruler(cover_paper, @paper, 8);
+		.calc-ruler(block_paper, @paper, 8);
+		.calc-ruler(inset_paper, @paper, 8);
+	}
+	
+	&__counter {
+		position: relative;
+		float: right;
+		width: 50%;
+		
+		&-header {
+			float: left;
+			width: 50%;
+		}
+		
+		&-btn {
+			position: absolute;
+			width: 30px;
+			height: 37px;
+			top: 50%;
+			margin-top: -(37px / 2);
+			border: none;
+			background: none;
+			outline: none;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -9px;
+			}
+		}
+		
+		&-minus {left: 0;}
+		
+		&-plus {right: 20px;}
+		
+		&-input {
+			margin: 0 50px 0 30px;
+			
+			input {
+				width: 100%;
+				padding: 0.3em 0.3em 0.2em;
+				text-align: right;
+				font-size: 18px;
+				border: 1px solid #999;
+			}
+		}
+		
+		&-measure {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -8px;
+			color: #808080;
+		}
 	}
 	
 	.print {
@@ -676,6 +741,126 @@
 				font-size: 12px;
 				color: #808080;
 				line-height: 1.4;
+			}
+		}
+	}
+	
+	.block {
+		&_color {
+			&-block {
+				float: left;
+				width: 45%;
+			}
+			
+			&-items {
+				margin-left: 10%;
+				width: 90%;
+			}
+		}
+		
+		&_paper {
+			&-block {
+				float: right;
+				width: 45%;
+				margin-top: 10px;
+				margin-bottom: 50px;
+			}
+		}
+		
+		&_lines {
+			margin-top: 4px;
+			
+			&-block {
+				float: right;
+				width: 45%;
+				
+				&:after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+			}
+			
+			&-title {margin: 0;}
+		}
+	}
+	
+	.inset {
+		&_color {
+			&-block {
+				float: left;
+				width: 45%;
+			}
+			
+			&-items {
+				margin-left: 10%;
+				width: 90%;
+			}
+		}
+		
+		&_paper {
+			&-block {
+				float: right;
+				width: 45%;
+				margin-top: 10px;
+				margin-bottom: 50px;
+			}
+		}
+		
+		&_vals {
+			margin-top: 4px;
+			
+			&-block {
+				float: right;
+				width: 45%;
+				
+				&:after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+			}
+			
+			&-title {margin: 0;}
+		}
+	}
+	
+	.circulation {
+		&_total {
+			float: right;
+			width: 30%;
+			background-color: #51aeed;
+			color: white;
+			font-size: 36px;
+			text-align: center;
+			
+			&-block {
+				position: relative;
+				float: left;
+				width: 45%;
+				
+				&:after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+			}
+			
+			&-header {
+				float: left;
+				width: 70%;
+			}
+			
+			&-title {
+				margin: 0;
+				color: #4c4c4c;
+			}
+		}
+		
+		&_copies {
+			&-block {
+				float: right;
+				width: 45%;
 			}
 		}
 	}

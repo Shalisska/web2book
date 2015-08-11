@@ -66,10 +66,11 @@ mixin calc_ruler(id, items, num)
 			span.calculator__ruler-type.calculator__ruler-type--coated Мелованная
 
 mixin calc_counter(id, val)
-	button.calculator__counter-btn.calculator__counter-minus(class='calculator__counter-minus--' + id) -
+	button.calculator__counter-btn.calculator__counter-minus.sprite_icon-counter-arrow--left(class='calculator__counter-minus--' + id)
 	
-	input.calculator__counter-input(class='calculator__counter-input--' + id type='text' name=id value=val)
+	.calculator__counter-input(class='calculator__counter-input--' + id)
+		input(type='text' name=id value=val)
 	
-	button.calculator__counter-btn.calculator__counter-plus(class='calculator__counter-plus--' + id) +
+	button.calculator__counter-btn.calculator__counter-plus.sprite_icon-counter-arrow--right(class='calculator__counter-plus--' + id)
 	
 	span.calculator__counter-measure шт

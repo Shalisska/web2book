@@ -10,6 +10,12 @@ var images_calc = {
     }, {
       name: 'ruler-thumb'
     , class: 'after'
+    }, {
+      name: 'counter-arrow--left'
+    , class: 'before'
+    }, {
+      name: 'counter-arrow--right'
+    , class: 'before'
     }]
 };
 

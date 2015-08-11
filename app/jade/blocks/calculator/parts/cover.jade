@@ -9,8 +9,8 @@ mixin calc_cover(name, items)
 	each item in items
 		-var mix_name = name + '_' + item.id
 		.calculator__block--inner(class=name + '_' + item.id + '-block')
-			.calculator__header--inner
-				h3.calculator__title--inner=item.name
+			.calculator__header--inner(class=name + '_' + item.id + '-header')
+				h3.calculator__title--inner(class=name + '_' + item.id + '-title')=item.name
 			
 			case item.id
 				when 'cover'

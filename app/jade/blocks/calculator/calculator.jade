@@ -5,6 +5,7 @@ include parts/cover
 include parts/block
 include parts/inset
 include parts/circulation
+include parts/results
 
 mixin calc(items)
 	each item in items
@@ -25,7 +26,7 @@ mixin calc(items)
 							obj: item
 						}])
 					
-			.calculator__block(class=item.id)
+			.calculator__block.clearfix(class='calculator__block--' + item.id)
 				case item.id
 					when 'print'
 						+print(item.id)
