@@ -12,9 +12,9 @@ mixin print_size(name, items)
 					.calculator__scroller-label-wrapper(class=name + '-label-wrapper')
 						label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)
 					span.calculator__scroller-name(class=name + '-name')=item.name
-					span.calculator__scroller-text(class=name + '-text')=item.desc
-					
 					if item.id != 'other'
+						span.calculator__scroller-text(class=name + '-text')=item.desc
+						
 						.calculator__scroller-img(class=name + '-img' + ' ' + name + '-img--' + item.id)
 							+picture({
 								name: item.name,
@@ -26,9 +26,28 @@ mixin print_size(name, items)
 									img: 852
 								}
 							})
+					
 					else
-						div(class=name + '--' + item.id)
-							img(src='../images/calculator/print_size/print_size--other.png' alt=item.name)
+						+print_other(('print_' + item.id), ['vert', 'goriz'])
+//							img(src='../images/calculator/print_size/print_size--other.png' alt=item.name)
+
+mixin print_other(name, items)
+	.calculator__scroller-text(class='print_size-text' + ' ' + name + '__inputs')
+		each item, i in items
+			-var value = 184.2
+			-var span = 'x'
+			if i == 1
+				-value = 238.6
+				-span = 'mm'
+			input(class=name + '__input' + ' ' + name + '__input--' + item type='text' value=value id=name + '__' + item)
+			span=span
+
+	div(class='print_size--other' + ' ' + name)
+		div(class=name + '__page')
+		each item in items
+			div(class=name + '__scroller' + ' ' + name + '__scroller--' + item)
+				div(class=name + '__scroller-line' + ' ' + name + '__scroller-line--' + item)
+				div(class=name + '__scroller-thumb' + ' ' + name + '__scroller-thumb--' + item)
 
 
 

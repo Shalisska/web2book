@@ -1,0 +1,26 @@
+mixin calc_result(name, items)
+	each item in items
+		.calculator__block--inner(class=name + '_' + item.id + '-block')
+			if item.name
+				.calculator__header--inner(class=name + '_' + item.id + '-header')
+					h3.calculator__title--inner(class=name + '_' + item.id + '-title')=item.name
+			
+			if item.id == 'send'
+				+result_send(name, {
+					text: 'После заполнения обязательных полей или авторизации результаты расчёта стоимости будут отправлены на указанный e-mail'
+				})
+
+mixin result_send(name, item)
+	p(class=name + '__text')=item.text
+	button(class=name + '__btn' type='submit') Рассчитать
+
+
+
+
+mixin result(name)
+	+calc_result(name, [{
+		id: 'data',
+		name: 'Персональные данные'
+	}, {
+		id: 'send'
+	}])

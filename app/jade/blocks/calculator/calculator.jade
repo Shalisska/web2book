@@ -6,12 +6,16 @@ include parts/block
 include parts/inset
 include parts/circulation
 include parts/results
+include parts/blog
 
 mixin calc(items)
 	each item in items
 		fieldset.calculator__section(class=item.id)
-			if item.id != 'circulation'
-				input.calculator__section-opener_input(type='checkbox' id=item.id + '-open' checked)
+			if item.id != 'circulation' && item.id != 'autorization' && item.id != 'result'
+				if item.id == 'blog'
+					input.calculator__section-opener_input(type='checkbox' id=item.id + '-open')
+				else
+					input.calculator__section-opener_input(type='checkbox' id=item.id + '-open' checked)
 				label.calculator__section-opener_label(for=item.id + '-open')
 					span.calculator__section-opener_label--on(class=item.id + '-open__on') Подробнее
 					span.calculator__section-opener_label--off(class=item.id + '-open__off') Свернуть
@@ -38,6 +42,12 @@ mixin calc(items)
 						+inset(item.id)
 					when 'circulation'
 						+circulation(item.id)
+					when 'autorization'
+						+autorization(item.id)
+					when 'result'
+						+result(item.id)
+					when 'blog'
+						+blog(item.id)
 
 h1.title--main Калькулятор стоимости печати
 form.form--calculator.calculator(action='#' method='post' name='caculator')
@@ -70,4 +80,13 @@ form.form--calculator.calculator(action='#' method='post' name='caculator')
 	}, {
 		id: 'circulation',
 		name: 'Тиражирование'
+	}, {
+		id: 'autorization',
+		name: 'Авторизация'
+	}, {
+		id: 'result',
+		name: 'Результаты расчета'
+	}, {
+		id: 'blog',
+		name: 'Блог'
 	}])

@@ -126,6 +126,7 @@
             else
             	block switch_labels
             -->
+            <!--							img(src='../images/calculator/print_size/print_size--other.png' alt=item.name)-->
             <h1 class="title--main">Калькулятор стоимости печати</h1>
             <form action="#" method="post" name="caculator" class="form--calculator calculator">
               <fieldset class="calculator-types">
@@ -222,8 +223,22 @@
                                                                                     <li class="calculator__scroller-item print_size-item print_size-item--other">
                                                                                       <div class="calculator__scroller-label-wrapper print_size-label-wrapper">
                                                                                         <label for="print_size-other" class="calculator__scroller-label print_size-label"></label>
-                                                                                      </div><span class="calculator__scroller-name print_size-name">Другой</span><span class="calculator__scroller-text print_size-text">210х297 mm</span>
-                                                                                      <div class="print_size--other"><img src="../images/calculator/print_size/print_size--other.png" alt="Другой"></div>
+                                                                                      </div><span class="calculator__scroller-name print_size-name">Другой</span>
+                                                                                                  <div class="calculator__scroller-text print_size-text print_other__inputs">
+                                                                                                    <input type="text" value="184.2" id="print_other__vert" class="print_other__input print_other__input--vert"><span>x</span>
+                                                                                                    <input type="text" value="238.6" id="print_other__goriz" class="print_other__input print_other__input--goriz"><span>mm</span>
+                                                                                                  </div>
+                                                                                                  <div class="print_size--other print_other">
+                                                                                                    <div class="print_other__page"></div>
+                                                                                                    <div class="print_other__scroller print_other__scroller--vert">
+                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--vert"></div>
+                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--vert"></div>
+                                                                                                    </div>
+                                                                                                    <div class="print_other__scroller print_other__scroller--goriz">
+                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--goriz"></div>
+                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--goriz"></div>
+                                                                                                    </div>
+                                                                                                  </div>
                                                                                     </li>
                                                                                   </ul>
                                                                                 </div>
@@ -736,6 +751,87 @@
                                                                                   <button class="calculator__counter-btn calculator__counter-plus sprite_icon-counter-arrow--right calculator__counter-plus--circulation_copies"></button><span class="calculator__counter-measure">шт</span>
                                                                     </div>
                                                       </div>
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section autorization">
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Авторизация</h2>
+                            </div>
+                            <div class="calculator__block clearfix calculator__block--autorization">
+                                                      <div class="calculator__block--inner autorization_data-block">
+                                                        <div class="calculator__header--inner autorization_data-header">
+                                                          <h3 class="calculator__title--inner autorization_data-title">Персональные данные</h3>
+                                                        </div>
+                                                                    <div class="autorization__field clearfix autorization__field--name">
+                                                                      <label for="autorization-name" class="autorization__label autorization__label--name">Имя:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="autorization__inputs autorization__inputs--name">
+                                                                        <input type="text" id="autorization-name" name="autorization-name" placeholder="Александр Папандреу" required>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="autorization__field clearfix autorization__field--email">
+                                                                      <label for="autorization-email" class="autorization__label autorization__label--email">E-mail:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="autorization__inputs autorization__inputs--email">
+                                                                        <input type="email" id="autorization-email" name="autorization-email" placeholder="order@web2book.ru" required><span class="sprite_icon-form_attention autorization__label--email_check">e-mail не существует</span>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="autorization__field clearfix autorization__field--organization">
+                                                                      <label for="autorization-organization" class="autorization__label autorization__label--organization">Компания:</label>
+                                                                      <div class="autorization__inputs autorization__inputs--organization">
+                                                                        <input type="text" id="autorization-organization" name="autorization-organization" placeholder="Компания">
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="autorization__field clearfix autorization__field--tel">
+                                                                      <label for="autorization-tel" class="autorization__label autorization__label--tel">Телефон:</label>
+                                                                      <div class="autorization__inputs autorization__inputs--tel"><span>+7 (</span>
+                                                                        <input type="text" id="autorization-tel_1" name="autorization-tel_1" placeholder="963" pattern="[0-9]{3}"><span>)</span>
+                                                                        <input type="text" id="autorization-tel_2" name="autorization-tel_2" placeholder="1234093" pattern="[0-9]{7}">
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="autorization__field clearfix autorization__field--captcha">
+                                                                      <label for="autorization-captcha" class="autorization__label autorization__label--captcha">Введите текст с картинки:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="autorization__inputs autorization__inputs--captcha">
+                                                                        <div class="clearfix autorization__captcha">
+                                                                          <div class="autorization__captcha-img">
+                                                                            <picture><img src="../images/calculator/autorization/captcha/captcha@90.jpg 90w" width="90" srcset="../images/calculator/autorization/captcha/captcha@135.jpg 135w, ../images/calculator/autorization/captcha/captcha@180.jpg 180w, ../images/calculator/autorization/captcha/captcha@270.jpg 270w" alt="captcha"/>
+                                                                            </picture>
+                                                                          </div><a href="#" class="sprite_icon-captcha_refresh autorization__captcha-refresh">Обновить</a>
+                                                                        </div>
+                                                                        <input type="text" id="autorization-captcha" name="autorization-captcha" placeholder="C4RPC" required class="autorization__captcha-input">
+                                                                      </div>
+                                                                    </div>
+                                                                    <p class="autorization__hint"><span class="autorization__label--required">*</span>— Обязательные поля</p>
+                                                      </div>
+                                                      <div class="calculator__block--inner autorization_send-block">
+                                                                    <p class="autorization__text">После заполнения обязательных полей или авторизации результаты расчёта стоимости будут отправлены на указанный e-mail</p>
+                                                                    <button type="submit" class="autorization__btn">Отправить рассчет</button>
+                                                                    <p class="autorization__sign">Цены действительны в течение 30 дней с момента расчёта. Последнее обновление: 11 мая 2011</p>
+                                                      </div>
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section result">
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Результаты расчета</h2>
+                            </div>
+                            <div class="calculator__block clearfix calculator__block--result">
+                                                      <div class="calculator__block--inner result_data-block">
+                                                        <div class="calculator__header--inner result_data-header">
+                                                          <h3 class="calculator__title--inner result_data-title">Персональные данные</h3>
+                                                        </div>
+                                                      </div>
+                                                      <div class="calculator__block--inner result_send-block">
+                                                                    <p class="result__text">После заполнения обязательных полей или авторизации результаты расчёта стоимости будут отправлены на указанный e-mail</p>
+                                                                    <button type="submit" class="result__btn">Рассчитать</button>
+                                                      </div>
+                            </div>
+                          </fieldset>
+                          <fieldset class="calculator__section blog">
+                            <input type="checkbox" id="blog-open" class="calculator__section-opener_input">
+                            <label for="blog-open" class="calculator__section-opener_label"><span class="calculator__section-opener_label--on blog-open__on">Подробнее</span><span class="calculator__section-opener_label--off blog-open__off">Свернуть</span></label>
+                            <div class="calculator__header">
+                              <h2 class="calculator__title">Блог</h2>
+                            </div>
+                            <div class="calculator__block clearfix calculator__block--blog">
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quaerat voluptatibus quo quam iste accusamus odit quos repellat nostrum, eos incidunt voluptates eligendi ab saepe corporis enim deleniti velit quas.</p>
                             </div>
                           </fieldset>
             </form>

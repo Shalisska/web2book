@@ -16,6 +16,12 @@ var images_calc = {
     }, {
       name: 'counter-arrow--right'
     , class: 'before'
+    }, {
+      name: 'form_attention'
+    , class: 'before'
+    }, {
+      name: 'captcha_refresh'
+    , class: 'before'
     }]
 };
 
@@ -186,7 +192,7 @@ function template_name(sprite_name, data, templates, r, w) {
 	if (in_array_class(item_name, spec_names, templates)) {
 		var ind = spec_names.indexOf(item_name);
 		name = name + ':' + templates[ind].class +
-			'{background-image: @' + sprite_name + '-bg;';
+			'{content: ""; ' + 'background-image: @' + sprite_name + '-bg; ';
 	} else {
 		name = name + '{';
 	};
