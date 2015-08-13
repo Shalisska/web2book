@@ -8648,3 +8648,35 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
 .hide {
   display: none;
 }
+.container {
+  margin: 20px auto;
+  padding: 40px 0;
+  width: 90%;
+  border: 1px solid red;
+}
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.carousel:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.carousel li {
+  float: left;
+  height: 150px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+}
+.carousel li div {
+  box-sizing: border-box;
+  height: 100%;
+  background: rgba(128, 0, 128, 0.5);
+  color: white;
+  border: 2px solid indigo;
+}

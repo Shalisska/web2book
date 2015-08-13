@@ -1,0 +1,37 @@
+@n: 10;
+
+.container {
+  margin: 20px auto;
+  padding: 40px 0;
+  width: 90%;
+  border: 1px solid red;
+}
+
+.carousel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  li {
+    float: left;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 1s ease;
+    
+    div {
+      box-sizing: border-box;
+      height: 100%;
+      background: rgba(128, 0, 128, 0.5);
+      color: white;
+      border: 2px solid indigo;
+    }
+  }
+}
