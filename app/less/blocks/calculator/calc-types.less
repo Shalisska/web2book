@@ -25,6 +25,13 @@
 	padding: 0;
 	
 	input[type='radio'] {display: none;}
+	
+	&__carousel {
+		padding-top: 7%;
+		width: 120%;
+		margin: 0 -10%;
+	}
+	
 	&__controls {
 		.reset-ul();
 		position: relative;
@@ -32,11 +39,14 @@
 		&-item {
 			position: relative;
 			float: left;
-			width: (100% / 7);
+			//width: (100% / 7);
 			cursor: pointer;
+			box-sizing: border-box;
+			transition: transform 1s ease;
 			
 			label {
 				display: block;
+				cursor: pointer;
 			}
 			
 			&_img {
@@ -53,7 +63,7 @@
 			&_name {
 				position: absolute;
 				left: 0;
-				bottom: 50px;
+				bottom: 80px;
 				width: 100%;
 				text-align: center;
 				font-size: 16px;

@@ -5,22 +5,23 @@ mixin calculator-types(form_name, items)
 		else
 			input(type='radio' class=form_name + '__input' name=form_name id=form_name + '--' + item.id)
 	
-	ul.clearfix(class=form_name + '__controls')
-		each item in items
-			li(class=form_name + '__controls-item')
-				label(for=form_name + '--' + item.id)
-					span(class=form_name + '__controls-item_img' + ' ' + form_name + '__controls-item_img--' + item.id)
-						+picture({
-							name: item.name,
-							adress: '../images/calculator/types/menu/calculator-types@',
-							ext: 'png'
-						}, {
-							main: {
-								width: 700,
-								img: 700
-							}
-						})
-					span(class=form_name + '__controls-item_name')=item.name
+	div(class=form_name + '__carousel')
+		ul.clearfix(class=form_name + '__controls')
+			each item in items
+				li(class=form_name + '__controls-item')
+					label(for=form_name + '--' + item.id)
+						span(class=form_name + '__controls-item_img' + ' ' + form_name + '__controls-item_img--' + item.id)
+							+picture({
+								name: item.name,
+								adress: '../images/calculator/types/menu/calculator-types@',
+								ext: 'png'
+							}, {
+								main: {
+									width: 700,
+									img: 700
+								}
+							})
+						span(class=form_name + '__controls-item_name')=item.name
 	
 	h2(class=form_name + '__title') Типы продукции
 

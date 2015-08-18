@@ -126,7 +126,11 @@
             else
             	block switch_labels
             -->
-            <!--							img(src='../images/calculator/print_size/print_size--other.png' alt=item.name)-->
+            <!--.print_size
+            +print_other('print_other', ['height', 'width'])
+            
+            
+            -->
             <h1 class="title--main">Калькулятор стоимости печати</h1>
             <form action="#" method="post" name="caculator" class="form--calculator calculator">
               <fieldset class="calculator-types">
@@ -137,43 +141,45 @@
                                 <input type="radio" name="calculator-types" id="calculator-types--strap" class="calculator-types__input">
                                 <input type="radio" name="calculator-types" id="calculator-types--strap1" class="calculator-types__input">
                                 <input type="radio" name="calculator-types" id="calculator-types--strap2" class="calculator-types__input">
-                                <ul class="clearfix calculator-types__controls">
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--softcover2"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover2">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--softcover1"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover1">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--softcover"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--spring"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--spring">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Пружина"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Пружина</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--strap"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--strap1"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap1">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
-                                  </li>
-                                  <li class="calculator-types__controls-item">
-                                    <label for="calculator-types--strap2"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap2">
-                                        <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
-                                        </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
-                                  </li>
-                                </ul>
+                                <div class="calculator-types__carousel">
+                                  <ul class="clearfix calculator-types__controls">
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--softcover2"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover2">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--softcover1"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover1">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--softcover"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--softcover">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Мягкий переплет"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Мягкий переплет</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--spring"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--spring">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Пружина"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Пружина</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--strap"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--strap1"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap1">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
+                                    </li>
+                                    <li class="calculator-types__controls-item">
+                                      <label for="calculator-types--strap2"><span class="calculator-types__controls-item_img calculator-types__controls-item_img--strap2">
+                                          <picture><img src="../images/calculator/types/menu/calculator-types@700.png 700w" width="700" srcset="../images/calculator/types/menu/calculator-types@1050.png 1050w, ../images/calculator/types/menu/calculator-types@1400.png 1400w, ../images/calculator/types/menu/calculator-types@2100.png 2100w" alt="Скоба"/>
+                                          </picture></span><span class="calculator-types__controls-item_name">Скоба</span></label>
+                                    </li>
+                                  </ul>
+                                </div>
                                 <h2 class="calculator-types__title">Типы продукции</h2>
               </fieldset>
                           <fieldset class="calculator__section print">
@@ -188,10 +194,10 @@
                                                           <h3 class="calculator__title--inner print_size-title">Размер</h3>
                                                         </div>
                                                                                 <div class="calculator__item calculator__scroller print_size">
-                                                                                  <input type="radio" name="print_size" id="print_size-a4" value="210х297" checked class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
-                                                                                  <input type="radio" name="print_size" id="print_size-a5" value="205х148" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
-                                                                                  <input type="radio" name="print_size" id="print_size-a6" value="105х148" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
-                                                                                  <input type="radio" name="print_size" id="print_size-other" value="210х297" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a4" value="a4" checked class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a5" value="a5" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-a6" value="a6" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
+                                                                                  <input type="radio" name="print_size" id="print_size-other" value="other" class="calculator__scroller-inputs calculator__scroller-inputs--print_size">
                                                                                   <ul class="calculator__scroller-items clearfix print_size-items">
                                                                                     <li class="calculator__scroller-item print_size-item print_size-item--a4">
                                                                                       <div class="calculator__scroller-label-wrapper print_size-label-wrapper">
@@ -225,18 +231,18 @@
                                                                                         <label for="print_size-other" class="calculator__scroller-label print_size-label"></label>
                                                                                       </div><span class="calculator__scroller-name print_size-name">Другой</span>
                                                                                                   <div class="calculator__scroller-text print_size-text print_other__inputs">
-                                                                                                    <input type="text" value="184.2" id="print_other__vert" class="print_other__input print_other__input--vert"><span>x</span>
-                                                                                                    <input type="text" value="238.6" id="print_other__goriz" class="print_other__input print_other__input--goriz"><span>mm</span>
+                                                                                                    <input type="text" value="184.2" id="print_other__width" class="print_other__input print_other__input--width"><span>x</span>
+                                                                                                    <input type="text" value="238.6" id="print_other__height" class="print_other__input print_other__input--height"><span>mm</span>
                                                                                                   </div>
                                                                                                   <div class="print_size--other print_other">
                                                                                                     <div class="print_other__page"></div>
-                                                                                                    <div class="print_other__scroller print_other__scroller--vert">
-                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--vert"></div>
-                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--vert"></div>
+                                                                                                    <div class="print_other__scroller print_other__scroller--width">
+                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--width"></div>
+                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--width"></div>
                                                                                                     </div>
-                                                                                                    <div class="print_other__scroller print_other__scroller--goriz">
-                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--goriz"></div>
-                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--goriz"></div>
+                                                                                                    <div class="print_other__scroller print_other__scroller--height">
+                                                                                                      <div class="print_other__scroller-line print_other__scroller-line--height"></div>
+                                                                                                      <div class="print_other__scroller-thumb print_other__scroller-thumb--height"></div>
                                                                                                     </div>
                                                                                                   </div>
                                                                                     </li>
@@ -980,4 +986,6 @@
   </body>
   <script src="../scripts/libs/bootstrap.js"></script>
   <script src="../scripts/common.js"></script>
+  <script src="../scripts/carousel.js"></script>
+  <script src="../scripts/calc_page_scroll.js"></script>
 </html>

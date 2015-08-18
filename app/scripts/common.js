@@ -177,3 +177,79 @@ slide.hover(function () {
 //		});
 //	};
 //});
+
+;$(document).ready(function() {
+function clicking (name) {
+  var items = $('.' + name + '-item');
+  var item = items.children(':not(.' + name + '-label-wrapper)');
+
+  item.click(function() {
+    var $this = $(this);
+    $this.parent().children('.' + name + '-label-wrapper').children('label').click();
+  });
+};
+
+clicking('calculator__scroller');
+});
+
+;$(document).ready(function() {
+	var vert = $('.print_other__input--height');
+var goriz = $('.print_other__input--width');
+function ranging(item, range) {
+  item.change(function () {
+    if ($(this).val() < range[0]) {
+      $(this).val(range[0]);
+      allert_message($(this), range[0], 'меньше');
+    } else if ($(this).val() > range[1]) {
+      $(this).val(range[1]);
+      allert_message($(this), range[1], 'больше');
+    };
+  });
+};
+ranging(vert, [
+  148,
+  297
+]);
+ranging(goriz, [
+  105,
+  210
+]);
+function allert_message(elem, rang, text) {
+  var allert_div = 'print_other__input--allert';
+  elem.parent().append('<div class=' + allert_div + '>Значение поля не должно быть ' + text + ' ' + rang + '</div>');
+  $('.' + allert_div).css({
+    'position': 'absolute',
+    'color': 'red',
+    'width': '200%',
+    'top': '0',
+    'left': '-50%',
+    'background': 'white',
+    'border': '1px solid red'
+  });
+  $(window).keydown(function (event) {
+    if (event.keyCode == 27) {
+      $('.' + allert_div).remove();
+    }
+  });
+  setTimeout(function () {
+    $('.' + allert_div).remove();
+  }, 2100);
+};
+});
+
+
+
+$(document).ready(function() {
+	$('.print_other').mySlider({
+		min: 105,
+		max: 210,
+		class_name: 'print_other'
+	});
+	
+	$('.print_other').mySlider({
+		min: 148,
+		max: 297,
+		class_name: 'print_other',
+		width: false
+	});
+});

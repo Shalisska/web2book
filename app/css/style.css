@@ -6046,6 +6046,11 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .calculator-types input[type='radio'] {
   display: none;
 }
+.calculator-types__carousel {
+  padding-top: 7%;
+  width: 120%;
+  margin: 0 -10%;
+}
 .calculator-types__controls {
   list-style: none;
   margin: 0;
@@ -6055,11 +6060,14 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .calculator-types__controls-item {
   position: relative;
   float: left;
-  width: 14.28571429%;
   cursor: pointer;
+  box-sizing: border-box;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
 }
 .calculator-types__controls-item label {
   display: block;
+  cursor: pointer;
 }
 .calculator-types__controls-item_img {
   display: block;
@@ -6093,7 +6101,7 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .calculator-types__controls-item_name {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 80px;
   width: 100%;
   text-align: center;
   font-size: 16px;
@@ -6561,6 +6569,7 @@ input[id='inset_color-on']:checked ~ .calculator__switcher-img .calculator__swit
 .calculator__scroller-text {
   display: block;
   line-height: 1.85;
+  cursor: pointer;
 }
 .calculator__scroller-text {
   margin-bottom: 1em;
@@ -6569,6 +6578,7 @@ input[id='inset_color-on']:checked ~ .calculator__switcher-img .calculator__swit
 .calculator__scroller-img {
   overflow: hidden;
   margin: 0 auto;
+  cursor: pointer;
 }
 .calculator__scroller-img img {
   height: auto;
@@ -7504,7 +7514,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   position: absolute;
   border-radius: 2px;
 }
-.calculator .print_other__scroller--vert {
+.calculator .print_other__scroller--height {
   top: 1px;
   bottom: 15%;
   left: 19%;
@@ -7512,7 +7522,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   background: linear-gradient(to right, #868686, #c5c5c5);
   box-shadow: inset 1px 0px 0 0 #666666, inset -1px 0px 0 0 #ffffff;
 }
-.calculator .print_other__scroller--goriz {
+.calculator .print_other__scroller--width {
   right: 1px;
   left: 35.72%;
   bottom: 0;
@@ -7524,14 +7534,14 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   position: absolute;
   border-radius: 1px;
 }
-.calculator .print_other__scroller-line--vert {
+.calculator .print_other__scroller-line--height {
   top: 50px;
   bottom: 1px;
   left: 1px;
   width: 2px;
   background: linear-gradient(to right, #86d6fa, #439edf);
 }
-.calculator .print_other__scroller-line--goriz {
+.calculator .print_other__scroller-line--width {
   left: 1px;
   right: 50px;
   top: 1px;
@@ -7542,19 +7552,20 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   position: absolute;
   border-radius: 2px;
   box-shadow: inset 1.7px 2px 1px -1px rgba(255, 255, 255, 0.65), inset -1.7px -2px 1px -1px rgba(42, 138, 207, 0.75), inset 0 0 0 2px rgba(153, 255, 255, 0.2), 1.5px 2.6px 5px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
-.calculator .print_other__scroller-thumb--vert {
+.calculator .print_other__scroller-thumb--height {
   left: 50%;
   margin-left: -11px;
-  top: 20px;
+  top: 44px;
   width: 22px;
   height: 12px;
   background: linear-gradient(#6fcbf5, #46a6eb);
 }
-.calculator .print_other__scroller-thumb--goriz {
+.calculator .print_other__scroller-thumb--width {
   top: 50%;
   margin-top: -11px;
-  left: 20px;
+  right: 44px;
   width: 12px;
   height: 22px;
   background: linear-gradient(to right, #6fcbf5, #46a6eb);
@@ -8647,36 +8658,4 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
 }
 .hide {
   display: none;
-}
-.container {
-  margin: 20px auto;
-  padding: 40px 0;
-  width: 90%;
-  border: 1px solid red;
-}
-.carousel {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.carousel:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.carousel li {
-  float: left;
-  height: 150px;
-  padding: 10px;
-  text-align: center;
-  box-sizing: border-box;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-}
-.carousel li div {
-  box-sizing: border-box;
-  height: 100%;
-  background: rgba(128, 0, 128, 0.5);
-  color: white;
-  border: 2px solid indigo;
 }
