@@ -2982,14 +2982,14 @@ main {
   left: 0.3%;
 }
 .footer-wrapper:after {
-  right: -0.3%;
+  right: -0.1%;
 }
 @media (max-width: 960px) {
   .footer-wrapper:before {
     left: 0.1%;
   }
   .footer-wrapper:after {
-    right: -0.4%;
+    right: -0.3%;
   }
 }
 @media (max-width: 900px) {
@@ -2997,7 +2997,7 @@ main {
     left: 0.6%;
   }
   .footer-wrapper:after {
-    right: 0.3%;
+    right: 0.4%;
   }
 }
 @media (max-width: 850px) {
@@ -3005,7 +3005,7 @@ main {
     left: 0.4%;
   }
   .footer-wrapper:after {
-    right: 0%;
+    right: 0.2%;
   }
 }
 @media (max-width: 730px) {
@@ -3021,7 +3021,7 @@ main {
     left: -0.2%;
   }
   .footer-wrapper:after {
-    right: -0.6%;
+    right: -0.5%;
   }
 }
 @media (max-width: 600px) {
@@ -3035,7 +3035,7 @@ main {
     left: -0.5%;
   }
   .footer-wrapper:after {
-    right: -0.9%;
+    right: -0.7%;
   }
 }
 @media (max-width: 520px) {
@@ -3073,6 +3073,71 @@ main {
     width: 100%;
     left: 0;
     margin-left: 0;
+  }
+}
+.body-index .footer-wrapper:before {
+  left: 0.3%;
+}
+.body-index .footer-wrapper:after {
+  right: -0.3%;
+}
+@media (max-width: 960px) {
+  .body-index .footer-wrapper:before {
+    left: 0.1%;
+  }
+  .body-index .footer-wrapper:after {
+    right: -0.4%;
+  }
+}
+@media (max-width: 900px) {
+  .body-index .footer-wrapper:before {
+    left: 0.6%;
+  }
+  .body-index .footer-wrapper:after {
+    right: 0.3%;
+  }
+}
+@media (max-width: 850px) {
+  .body-index .footer-wrapper:before {
+    left: 0.4%;
+  }
+  .body-index .footer-wrapper:after {
+    right: -0.1%;
+  }
+}
+@media (max-width: 730px) {
+  .body-index .footer-wrapper:before {
+    left: 0.2%;
+  }
+  .body-index .footer-wrapper:after {
+    right: -0.3%;
+  }
+}
+@media (max-width: 650px) {
+  .body-index .footer-wrapper:before {
+    left: -0.2%;
+  }
+  .body-index .footer-wrapper:after {
+    right: -0.6%;
+  }
+}
+@media (max-width: 600px) {
+  .body-index .footer-wrapper:before,
+  .body-index .footer-wrapper:after {
+    top: -4%;
+  }
+}
+@media (max-width: 560px) {
+  .body-index .footer-wrapper:before {
+    left: -0.5%;
+  }
+  .body-index .footer-wrapper:after {
+    right: -0.9%;
+  }
+}
+@media (max-width: 520px) {
+  .body-index .footer-wrapper:after {
+    right: -1.2%;
   }
 }
 .column--central,
