@@ -53,16 +53,17 @@ mixin autorization_data(name, items)
 			-type=item.type
 		
 		.autorization__field.clearfix(class='autorization__field--' + item.id)
-			label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '-' + item.id)=item.name + ':'
+			label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '_' + item.id)=item.name + ':'
 				if item.required
 					span(class=name + '__label--required') *
 				
 			case item.id
 				when 'tel'
 					div(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+						input(type='hidden' id=name + '_' + item.id name=name + '_' + item.id)
 						span +7 (
 						each elem, i in item.data
-							input(type=type id=name + '-' + elem.id name=name + '-' + elem.id placeholder=elem.text pattern=elem.pattern)
+							input(type=type id=name + '_' + elem.id placeholder=elem.text pattern=elem.pattern)
 							if (i == 0)
 								span )
 
@@ -82,14 +83,14 @@ mixin autorization_data(name, items)
 								})
 							a.sprite_icon-captcha_refresh(class=name + '__' + item.id + '-refresh' href='#') Обновить
 							
-						input(class=name + '__' + item.id + '-input' type=type id=name + '-' + item.id name=name + '-' + item.id placeholder=item.text required)
+						input(class=name + '__' + item.id + '-input' type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text required)
 
 				default
 					div(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
 						if item.required
-							input(type=type id=name + '-' + item.id name=name + '-' + item.id placeholder=item.text required)
+							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text required)
 						else
-							input(type=type id=name + '-' + item.id name=name + '-' + item.id placeholder=item.text)
+							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text)
 
 						if item.id == 'email'
 							span.sprite_icon-form_attention(class=name + '__label--email_check') e-mail не существует

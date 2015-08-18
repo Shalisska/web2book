@@ -38,7 +38,7 @@ mixin print_other(name, items)
 			if i == 1
 				-value = 238.6
 				-span = 'mm'
-			input(class=name + '__input' + ' ' + name + '__input--' + item type='text' value=value id=name + '__' + item)
+			input(class=name + '__input' + ' ' + name + '__input--' + item type='text' value=value id=name + '__' + item name=name + '-' + item)
 			span=span
 
 	div(class='print_size--other' + ' ' + name)
@@ -47,10 +47,6 @@ mixin print_other(name, items)
 			div(class=name + '__scroller' + ' ' + name + '__scroller--' + item)
 				div(class=name + '__scroller-line' + ' ' + name + '__scroller-line--' + item)
 				div(class=name + '__scroller-thumb' + ' ' + name + '__scroller-thumb--' + item)
-
-
-//.print_size
-	+print_other('print_other', ['height', 'width'])
 
 
 mixin size(name)

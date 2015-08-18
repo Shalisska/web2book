@@ -1,7 +1,7 @@
 mixin cover_cover_color(name, item)
 	.calculator__item.calculator__switcher(class=name + ' ' + name + '-color')
 			+calc_switcher([{
-				id: name,
+				id: name + '-color',
 				obj: item
 			}])
 			.calculator__switcher-img(class=name + '-items')

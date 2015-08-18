@@ -19,24 +19,6 @@ mixin calc_switcher(items)
 	else
 		block switch_box
 
-//--------------
-//mixin calc_switcher(id, item)
-	if (typeof(id) == 'object')
-		
-	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
-	input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
-
-	if (id != 'cover') && (id != 'inset')
-		.calculator__switcher-box(class='calculator__switcher-box--' + id)
-			p.calculator__switcher-name=item.name
-			block switch_labels
-				.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
-					label(for=id + '-off')
-					label(for=id + '-on')
-	else
-		block switch_labels
-//-------------
-
 mixin calc_scroller(id, items)
 	each item, i in items
 		if i===0

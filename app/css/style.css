@@ -6409,39 +6409,39 @@ input[id='inset-on']:checked ~ .calculator__switcher-labels {
 input[id='inset-on']:checked ~ .calculator__switcher-labels label[for='inset-on'] {
   opacity: 1;
 }
-input[id='cover_cover-off']:checked ~ .calculator__switcher-box label[for='cover_cover-off'] {
+input[id='cover_cover-color-off']:checked ~ .calculator__switcher-box label[for='cover_cover-color-off'] {
   opacity: 1;
 }
-input[id='cover_cover-on']:checked ~ .calculator__switcher-box label[for='cover_cover-on'] {
+input[id='cover_cover-color-on']:checked ~ .calculator__switcher-box label[for='cover_cover-color-on'] {
   opacity: 1;
 }
-input[id='cover_cover-on']:checked ~ .calculator__switcher-box--cover_cover .calculator__switcher-labels {
+input[id='cover_cover-color-on']:checked ~ .calculator__switcher-box--cover_cover-color .calculator__switcher-labels {
   background: linear-gradient(#86d5fa, #7abfed 99%);
   box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.85), inset -1px -2px 0px -1px #ffffff, inset 1px -2px 0px -1px #ffffff, inset 0 0px 5px 0 rgba(0, 0, 0, 0.2), inset 0 0px 7px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
-input[id='cover_cover-off']:checked ~ .calculator__switcher-img .calculator__switcher-img_off {
+input[id='cover_cover-color-off']:checked ~ .calculator__switcher-img .calculator__switcher-img_off {
   display: block;
 }
-input[id='cover_cover-on']:checked ~ .calculator__switcher-img .calculator__switcher-img_on {
+input[id='cover_cover-color-on']:checked ~ .calculator__switcher-img .calculator__switcher-img_on {
   display: block;
 }
-.calculator__switcher input[id='cover_effects--convex-off']:checked ~ .cover_effects__switcher-container label[for='cover_effects--convex-off'] {
+.calculator__switcher input[id='cover_effects-convex-off']:checked ~ .cover_effects__switcher-container label[for='cover_effects-convex-off'] {
   opacity: 1;
 }
-.calculator__switcher input[id='cover_effects--convex-on']:checked ~ .cover_effects__switcher-container label[for='cover_effects--convex-on'] {
+.calculator__switcher input[id='cover_effects-convex-on']:checked ~ .cover_effects__switcher-container label[for='cover_effects-convex-on'] {
   opacity: 1;
 }
-input[id='cover_effects--convex-on']:checked ~ .cover_effects__switcher-container .calculator__switcher-box--cover_effects--convex .calculator__switcher-labels {
+input[id='cover_effects-convex-on']:checked ~ .cover_effects__switcher-container .calculator__switcher-box--cover_effects-convex .calculator__switcher-labels {
   background: linear-gradient(#86d5fa, #7abfed 99%);
   box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.85), inset -1px -2px 0px -1px #ffffff, inset 1px -2px 0px -1px #ffffff, inset 0 0px 5px 0 rgba(0, 0, 0, 0.2), inset 0 0px 7px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
-.calculator__switcher input[id='cover_effects--stamping-off']:checked ~ .cover_effects__switcher-container label[for='cover_effects--stamping-off'] {
+.calculator__switcher input[id='cover_effects-stamping-off']:checked ~ .cover_effects__switcher-container label[for='cover_effects-stamping-off'] {
   opacity: 1;
 }
-.calculator__switcher input[id='cover_effects--stamping-on']:checked ~ .cover_effects__switcher-container label[for='cover_effects--stamping-on'] {
+.calculator__switcher input[id='cover_effects-stamping-on']:checked ~ .cover_effects__switcher-container label[for='cover_effects-stamping-on'] {
   opacity: 1;
 }
-input[id='cover_effects--stamping-on']:checked ~ .cover_effects__switcher-container .calculator__switcher-box--cover_effects--stamping .calculator__switcher-labels {
+input[id='cover_effects-stamping-on']:checked ~ .cover_effects__switcher-container .calculator__switcher-box--cover_effects-stamping .calculator__switcher-labels {
   background: linear-gradient(#86d5fa, #7abfed 99%);
   box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.85), inset -1px -2px 0px -1px #ffffff, inset 1px -2px 0px -1px #ffffff, inset 0 0px 5px 0 rgba(0, 0, 0, 0.2), inset 0 0px 7px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
 }
@@ -8028,7 +8028,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   position: relative;
   padding-left: 55px;
 }
-.calculator .autorization__inputs--tel input:first-of-type {
+.calculator .autorization__inputs--tel input#autorization_tel_1 {
   position: absolute;
   width: 37px;
   top: 0;

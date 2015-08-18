@@ -1,9 +1,9 @@
 mixin calculator-types(form_name, items)
 	each item, i in items
 		if i===3
-			input(type='radio' class=form_name + '__input' name=form_name id=form_name + '--' + item.id checked)
+			input(type='radio' class=form_name + '__input' name=form_name id=form_name + '--' + item.id value=item.id checked)
 		else
-			input(type='radio' class=form_name + '__input' name=form_name id=form_name + '--' + item.id)
+			input(type='radio' class=form_name + '__input' name=form_name id=form_name + '--' + item.id value=item.id)
 	
 	div(class=form_name + '__carousel')
 		ul.clearfix(class=form_name + '__controls')

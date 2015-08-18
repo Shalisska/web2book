@@ -110,37 +110,16 @@
       <main class="sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
         <div class="container container--main clearfix">
           <div class="column--central">
-            <!--mixin calc_switcher(id, item)
-            if (typeof(id) == 'object')
-            	
-            input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-off' val=item.off.val)
-            input.calculator__switcher-inputs(class='calculator__switcher-inputs--' + id type='radio' name=id id=id + '-on' val=item.on.val checked)
-            
-            if (id != 'cover') && (id != 'inset')
-            	.calculator__switcher-box(class='calculator__switcher-box--' + id)
-            		p.calculator__switcher-name=item.name
-            		block switch_labels
-            			.calculator__switcher-labels.clearfix(class='calculator__switcher-labels--' + id)
-            				label(for=id + '-off')
-            				label(for=id + '-on')
-            else
-            	block switch_labels
-            -->
-            <!--.print_size
-            +print_other('print_other', ['height', 'width'])
-            
-            
-            -->
             <h1 class="title--main">Калькулятор стоимости печати</h1>
             <form action="#" method="post" name="caculator" class="form--calculator calculator">
               <fieldset class="calculator-types">
-                                <input type="radio" name="calculator-types" id="calculator-types--softcover2" class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--softcover1" class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--softcover" class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--spring" checked class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--strap" class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--strap1" class="calculator-types__input">
-                                <input type="radio" name="calculator-types" id="calculator-types--strap2" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--softcover2" value="softcover2" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--softcover1" value="softcover1" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--softcover" value="softcover" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--spring" value="spring" checked class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--strap" value="strap" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--strap1" value="strap1" class="calculator-types__input">
+                                <input type="radio" name="calculator-types" id="calculator-types--strap2" value="strap2" class="calculator-types__input">
                                 <div class="calculator-types__carousel">
                                   <ul class="clearfix calculator-types__controls">
                                     <li class="calculator-types__controls-item">
@@ -231,8 +210,8 @@
                                                                                         <label for="print_size-other" class="calculator__scroller-label print_size-label"></label>
                                                                                       </div><span class="calculator__scroller-name print_size-name">Другой</span>
                                                                                                   <div class="calculator__scroller-text print_size-text print_other__inputs">
-                                                                                                    <input type="text" value="184.2" id="print_other__width" class="print_other__input print_other__input--width"><span>x</span>
-                                                                                                    <input type="text" value="238.6" id="print_other__height" class="print_other__input print_other__input--height"><span>mm</span>
+                                                                                                    <input type="text" value="184.2" id="print_other__width" name="print_other-width" class="print_other__input print_other__input--width"><span>x</span>
+                                                                                                    <input type="text" value="238.6" id="print_other__height" name="print_other-height" class="print_other__input print_other__input--height"><span>mm</span>
                                                                                                   </div>
                                                                                                   <div class="print_size--other print_other">
                                                                                                     <div class="print_other__page"></div>
@@ -415,13 +394,13 @@
                                                                                   </ul>
                                                                                 </div>
                                                                                 <div class="calculator__item calculator__switcher cover_cover cover_cover-color">
-                                                                                              <input type="radio" name="cover_cover" id="cover_cover-off" val="b_w" class="calculator__switcher-inputs calculator__switcher-inputs--cover_cover">
-                                                                                              <input type="radio" name="cover_cover" id="cover_cover-on" val="colored" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_cover">
-                                                                                              <div class="calculator__switcher-box calculator__switcher-box--cover_cover">
+                                                                                              <input type="radio" name="cover_cover-color" id="cover_cover-color-off" val="b_w" class="calculator__switcher-inputs calculator__switcher-inputs--cover_cover-color">
+                                                                                              <input type="radio" name="cover_cover-color" id="cover_cover-color-on" val="colored" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_cover-color">
+                                                                                              <div class="calculator__switcher-box calculator__switcher-box--cover_cover-color">
                                                                                                 <p class="calculator__switcher-name">Цветная</p>
-                                                                                                <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_cover">
-                                                                                                  <label for="cover_cover-off"></label>
-                                                                                                  <label for="cover_cover-on"></label>
+                                                                                                <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_cover-color">
+                                                                                                  <label for="cover_cover-color-off"></label>
+                                                                                                  <label for="cover_cover-color-on"></label>
                                                                                                 </div>
                                                                                               </div>
                                                                                   <div class="calculator__switcher-img cover_cover-items">
@@ -479,23 +458,23 @@
                                                           <h3 class="calculator__title--inner cover_effects-title">Эффекты нанесения</h3>
                                                         </div>
                                                                                 <div class="calculator__item calculator__switcher clearfix cover_effects">
-                                                                                              <input type="radio" name="cover_effects--convex" id="cover_effects--convex-off" val="no-convex" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--convex">
-                                                                                              <input type="radio" name="cover_effects--convex" id="cover_effects--convex-on" val="convex" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--convex">
-                                                                                              <input type="radio" name="cover_effects--stamping" id="cover_effects--stamping-off" val="no-stamping" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--stamping">
-                                                                                              <input type="radio" name="cover_effects--stamping" id="cover_effects--stamping-on" val="stamping" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects--stamping">
+                                                                                              <input type="radio" name="cover_effects-convex" id="cover_effects-convex-off" val="no-convex" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects-convex">
+                                                                                              <input type="radio" name="cover_effects-convex" id="cover_effects-convex-on" val="convex" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects-convex">
+                                                                                              <input type="radio" name="cover_effects-stamping" id="cover_effects-stamping-off" val="no-stamping" class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects-stamping">
+                                                                                              <input type="radio" name="cover_effects-stamping" id="cover_effects-stamping-on" val="stamping" checked class="calculator__switcher-inputs calculator__switcher-inputs--cover_effects-stamping">
                                                                                               <div class="cover_effects__switcher-container">
-                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects--convex">
+                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects-convex">
                                                                                                   <p class="calculator__switcher-name">Конгрев</p>
-                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects--convex">
-                                                                                                    <label for="cover_effects--convex-off"></label>
-                                                                                                    <label for="cover_effects--convex-on"></label>
+                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects-convex">
+                                                                                                    <label for="cover_effects-convex-off"></label>
+                                                                                                    <label for="cover_effects-convex-on"></label>
                                                                                                   </div>
                                                                                                 </div>
-                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects--stamping">
+                                                                                                <div class="calculator__switcher-box calculator__switcher-box--cover_effects-stamping">
                                                                                                   <p class="calculator__switcher-name">Тиснение</p>
-                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects--stamping">
-                                                                                                    <label for="cover_effects--stamping-off"></label>
-                                                                                                    <label for="cover_effects--stamping-on"></label>
+                                                                                                  <div class="calculator__switcher-labels clearfix calculator__switcher-labels--cover_effects-stamping">
+                                                                                                    <label for="cover_effects-stamping-off"></label>
+                                                                                                    <label for="cover_effects-stamping-on"></label>
                                                                                                   </div>
                                                                                                 </div>
                                                                                               </div>
@@ -769,32 +748,33 @@
                                                           <h3 class="calculator__title--inner autorization_data-title">Персональные данные</h3>
                                                         </div>
                                                                     <div class="autorization__field clearfix autorization__field--name">
-                                                                      <label for="autorization-name" class="autorization__label autorization__label--name">Имя:<span class="autorization__label--required">*</span></label>
+                                                                      <label for="autorization_name" class="autorization__label autorization__label--name">Имя:<span class="autorization__label--required">*</span></label>
                                                                       <div class="autorization__inputs autorization__inputs--name">
-                                                                        <input type="text" id="autorization-name" name="autorization-name" placeholder="Александр Папандреу" required>
+                                                                        <input type="text" id="autorization_name" name="autorization_name" placeholder="Александр Папандреу" required>
                                                                       </div>
                                                                     </div>
                                                                     <div class="autorization__field clearfix autorization__field--email">
-                                                                      <label for="autorization-email" class="autorization__label autorization__label--email">E-mail:<span class="autorization__label--required">*</span></label>
+                                                                      <label for="autorization_email" class="autorization__label autorization__label--email">E-mail:<span class="autorization__label--required">*</span></label>
                                                                       <div class="autorization__inputs autorization__inputs--email">
-                                                                        <input type="email" id="autorization-email" name="autorization-email" placeholder="order@web2book.ru" required><span class="sprite_icon-form_attention autorization__label--email_check">e-mail не существует</span>
+                                                                        <input type="email" id="autorization_email" name="autorization_email" placeholder="order@web2book.ru" required><span class="sprite_icon-form_attention autorization__label--email_check">e-mail не существует</span>
                                                                       </div>
                                                                     </div>
                                                                     <div class="autorization__field clearfix autorization__field--organization">
-                                                                      <label for="autorization-organization" class="autorization__label autorization__label--organization">Компания:</label>
+                                                                      <label for="autorization_organization" class="autorization__label autorization__label--organization">Компания:</label>
                                                                       <div class="autorization__inputs autorization__inputs--organization">
-                                                                        <input type="text" id="autorization-organization" name="autorization-organization" placeholder="Компания">
+                                                                        <input type="text" id="autorization_organization" name="autorization_organization" placeholder="Компания">
                                                                       </div>
                                                                     </div>
                                                                     <div class="autorization__field clearfix autorization__field--tel">
-                                                                      <label for="autorization-tel" class="autorization__label autorization__label--tel">Телефон:</label>
-                                                                      <div class="autorization__inputs autorization__inputs--tel"><span>+7 (</span>
-                                                                        <input type="text" id="autorization-tel_1" name="autorization-tel_1" placeholder="963" pattern="[0-9]{3}"><span>)</span>
-                                                                        <input type="text" id="autorization-tel_2" name="autorization-tel_2" placeholder="1234093" pattern="[0-9]{7}">
+                                                                      <label for="autorization_tel" class="autorization__label autorization__label--tel">Телефон:</label>
+                                                                      <div class="autorization__inputs autorization__inputs--tel">
+                                                                        <input type="hidden" id="autorization_tel" name="autorization_tel"><span>+7 (</span>
+                                                                        <input type="text" id="autorization_tel_1" placeholder="963" pattern="[0-9]{3}"><span>)</span>
+                                                                        <input type="text" id="autorization_tel_2" placeholder="1234093" pattern="[0-9]{7}">
                                                                       </div>
                                                                     </div>
                                                                     <div class="autorization__field clearfix autorization__field--captcha">
-                                                                      <label for="autorization-captcha" class="autorization__label autorization__label--captcha">Введите текст с картинки:<span class="autorization__label--required">*</span></label>
+                                                                      <label for="autorization_captcha" class="autorization__label autorization__label--captcha">Введите текст с картинки:<span class="autorization__label--required">*</span></label>
                                                                       <div class="autorization__inputs autorization__inputs--captcha">
                                                                         <div class="clearfix autorization__captcha">
                                                                           <div class="autorization__captcha-img">
@@ -802,7 +782,7 @@
                                                                             </picture>
                                                                           </div><a href="#" class="sprite_icon-captcha_refresh autorization__captcha-refresh">Обновить</a>
                                                                         </div>
-                                                                        <input type="text" id="autorization-captcha" name="autorization-captcha" placeholder="C4RPC" required class="autorization__captcha-input">
+                                                                        <input type="text" id="autorization_captcha" name="autorization_captcha" placeholder="C4RPC" required class="autorization__captcha-input">
                                                                       </div>
                                                                     </div>
                                                                     <p class="autorization__hint"><span class="autorization__label--required">*</span>— Обязательные поля</p>
@@ -984,8 +964,8 @@
       </div>
     </div>
   </body>
-  <script src="../scripts/libs/bootstrap.js"></script>
   <script src="../scripts/common.js"></script>
   <script src="../scripts/carousel.js"></script>
   <script src="../scripts/calc_page_scroll.js"></script>
+  <script src="../scripts/counter.js"></script>
 </html>

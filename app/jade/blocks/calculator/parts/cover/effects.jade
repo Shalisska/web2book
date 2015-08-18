@@ -2,11 +2,11 @@ mixin cover_effects(name, obj)
 	.calculator__item.calculator__switcher.clearfix(class=name)
 		+calc_switcher([{
 			name_main: name,
-			id: name + '--convex',
+			id: name + '-convex',
 			obj: obj.convex
 		}, {
 			name_main: name,
-			id: name + '--stamping',
+			id: name + '-stamping',
 			obj: obj.stamping
 		}])
 		.calculator__switcher-img(class=name + '-items')
