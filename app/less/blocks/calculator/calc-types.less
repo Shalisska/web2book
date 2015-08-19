@@ -23,6 +23,7 @@
 	margin: 0;
 	border: 0;
 	padding: 0;
+	padding-bottom: 20px;
 	
 	input[type='radio'] {display: none;}
 	
@@ -63,7 +64,7 @@
 			&_name {
 				position: absolute;
 				left: 0;
-				bottom: 80px;
+				bottom: 25%;
 				width: 100%;
 				text-align: center;
 				font-size: 16px;
@@ -88,5 +89,10 @@
 		background-position: center bottom;
 		background-size: 240px 49px;
 		.retina('../images/calculator/types/bg/calculator-types-bg@', 240);
+		
+		@media(max-width: 590px) {
+			font-size: 20px;
+			line-height: 2.8;
+		}
 	}
 }
