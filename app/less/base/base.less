@@ -18,6 +18,24 @@ body {
 	.retina('../images/bg-main/bg-main@', 240, 'jpg');
 }
 
+.scrollTop {
+	display: none;
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	padding: 0.5em;
+	background-color: firebrick;
+	color: white;
+	text-decoration: none;
+	
+	&:hover {
+		background: red;
+		text-decoration: underline;
+	}
+	
+	&:active, &:visited {color: white;}
+}
+
 .body-wrapper {
 	min-height: 100%;
 	position: relative;
@@ -194,11 +212,15 @@ main {
 	width: (100% - 24% - 2%);
 	margin-right: 2%;
 	padding-left: 2%;
+	
+	@media(max-width: 768px) {width: 100%;}
 }
 
 .column--right {
 	width: 24%;
 	padding-right: 2%;
+	
+	@media(max-width: 768px) {display: none;}
 }
 
 .title {

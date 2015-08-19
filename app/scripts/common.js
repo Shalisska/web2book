@@ -1,3 +1,35 @@
+jQuery(document).ready(function($){
+
+	/**
+	 * Кнопка наверх на jQuery. 
+	 * Автор: Тимур Камаев, wp-kama.ru
+	 * version 2.0
+	 */
+//	$('<style>'+
+//		'.scrollTop{ display:none; z-index:9999; position:fixed;'+
+//			'bottom:10px; left:48%; width:50px; height:70px;'+
+//			'background:url(http://site.ru/путь_до_файла.png) 0 0 no-repeat; }' +
+//		'.scrollTop:hover{ background-position:0 -76px;}'
+//	+'</style>').appendTo('body');
+	var
+	speed = 500,
+	$scrollTop = $('.scrollTop');
+
+	$scrollTop.click(function(e){
+		e.preventDefault();
+
+		$( 'html:not(:animated),body:not(:animated)' ).animate({ scrollTop: 0}, speed );
+	});
+
+	//появление
+	function show_scrollTop(){
+		( $(window).scrollTop() > 300 ) ? $scrollTop.fadeIn(600) : $scrollTop.fadeOut(600);
+	}
+	$(window).scroll( function(){ show_scrollTop(); } );
+	show_scrollTop();
+
+});
+
 ////скроллинг offers
 //;$(document).ready(function() {
 //  var sliders = $('.offers-item-slider');
