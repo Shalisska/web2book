@@ -236,11 +236,24 @@
 			background-size: 164px;
 			background-position: center;
 			.retina('../images/calculator/scroll/calculator_scroll--center@', 164);
+			
+//			@media(max-width: 480px) {
+//				.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);
+//				background-size: 12px;
+//			}
 		}
 		
-		&-item:first-child &-label-wrapper {.retina('../images/calculator/scroll/calculator_scroll--left@', 164);}
+		&-item:first-child &-label-wrapper {
+			.retina('../images/calculator/scroll/calculator_scroll--left@', 164);
+			
+//			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+		}
 
-		&-item:last-child &-label-wrapper {.retina('../images/calculator/scroll/calculator_scroll--right@', 164);}
+		&-item:last-child &-label-wrapper {
+			.retina('../images/calculator/scroll/calculator_scroll--right@', 164);
+		
+//			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+		}
 		
 		&-label {
 			position: relative;
@@ -639,7 +652,7 @@
 				width: 60%;
 				height: 97px;
 				
-				@media(max-width: 590px) {height: 77px;}
+				@media(max-width: 590px) {height: 69px;}
 			}
 		}
 		
@@ -662,7 +675,7 @@
 				vertical-align: middle;
 				background-image: linear-gradient(#bcc7cc, #879399);
 				font-family: @font-bold;
-				font-size: 0.78em;
+				font-size: 11px;
 				color: white;
 				text-decoration: none;
 				text-shadow: 0 1px 0 #bcc7cc;

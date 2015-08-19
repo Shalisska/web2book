@@ -7692,7 +7692,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
 }
 @media (max-width: 590px) {
   .calculator .print_orient-img {
-    height: 77px;
+    height: 69px;
   }
 }
 .calculator .print_bond-img {
@@ -7714,7 +7714,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   vertical-align: middle;
   background-image: linear-gradient(#bcc7cc, #879399);
   font-family: 'ArialBold', 'Arial', sans-serif;
-  font-size: 0.78em;
+  font-size: 11px;
   color: white;
   text-decoration: none;
   text-shadow: 0 1px 0 #bcc7cc;
