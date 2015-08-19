@@ -7,7 +7,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: 'app/jade/pages/',
-			src: ['*.jade'],
+			src: ['*.jade', '**/*.jade'],
 			dest: 'app/html/',
 			ext: '.html',
 			extDot: 'last'

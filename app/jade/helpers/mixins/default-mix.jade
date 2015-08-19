@@ -1,3 +1,8 @@
+mixin filesPath(files)
+	while files > 0
+		-filesPath = filesPath + '../'
+		-files = files - 1
+
 mixin objCreate(keys, vals)
 	-var arr = []
 	each key, i in keys
@@ -27,7 +32,7 @@ mixin picture(info, items)
 				-var res = []
 				-var img = []
 				each ret in retina
-					-res.push(info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
+					-res.push(filesPath + info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
 				-var med = '(' + item.val + '-width: ' + item.width + 'px)'
 				-var resourse = res[0] + ', ' + res[1] + ', ' + res[2] + ', ' + res[3]
 				source(media=med srcset=resourse)
@@ -35,7 +40,7 @@ mixin picture(info, items)
 		-var item = items.main
 		-var res = []
 		each ret in retina
-			-res.push(info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
+			-res.push(filesPath + info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
 		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
 		
 		if info.class
