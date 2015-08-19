@@ -81,6 +81,7 @@
 	}
 	
 	&__block {
+		position: relative;
 		padding: 0.36em 3% 1px;
 		border: 1px solid #ccc;
 		border-bottom: none;
@@ -120,6 +121,8 @@
 			}
 			
 			&--cover_effects {
+				&-convex, &-stamping {position: relative;}
+				
 				&-convex {margin-bottom: 0.5em;}
 				
 				&-convex:after, &-stamping:after {
@@ -129,7 +132,11 @@
 				}
 			}
 			
-			&--block_color, &--inset_color {margin-bottom: 2.8em;}
+			&--block_color, &--inset_color {
+				margin-bottom: 2.8em;
+				
+				@media(max-width: 480px) {margin-bottom: 0;}
+			}
 		}
 		
 		&-name {
@@ -157,6 +164,12 @@
 			&--cover_effects {
 				&-convex, &-stamping {
 					float: right;
+					
+					@media(max-width: 480px) {
+						position: absolute;
+						top: 0;
+						left: 70px;
+					}
 				}
 			}
 
@@ -196,6 +209,8 @@
 			width: 100%;
 			overflow: hidden;
 			
+			@media(max-width: 480px) {display: none;}
+			
 			img {
 				display: none;
 				width: 200%;
@@ -228,6 +243,13 @@
 		&-item {
 			float: left;
 			text-align: center;
+			
+			@media(max-width: 480px) {
+				position: relative;
+				margin-bottom: 0.7em;
+				padding-left: 30px;
+				text-align: left;
+			}
 		}
 		
 		&-label-wrapper {
@@ -237,22 +259,28 @@
 			background-position: center;
 			.retina('../images/calculator/scroll/calculator_scroll--center@', 164);
 			
-//			@media(max-width: 480px) {
-//				.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);
-//				background-size: 12px;
-//			}
+			@media(max-width: 480px) {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -12px;
+				width: 30px;
+				vertical-align: middle;
+				.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);
+				background-size: 12px;
+			}
 		}
 		
 		&-item:first-child &-label-wrapper {
 			.retina('../images/calculator/scroll/calculator_scroll--left@', 164);
 			
-//			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
 		}
 
 		&-item:last-child &-label-wrapper {
 			.retina('../images/calculator/scroll/calculator_scroll--right@', 164);
 		
-//			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+			@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
 		}
 		
 		&-label {
@@ -289,17 +317,31 @@
 			display: block;
 			line-height: 1.85;
 			cursor: pointer;
+			
+			@media(max-width: 480px) {
+				display: inline-block;
+				vertical-align: middle;
+			}
 		}
 		
 		&-text {
 			margin-bottom: 1em;
 			color: #808080;
+			
+			@media(max-width: 480px) {
+				margin-bottom: 0;
+				margin-left: 0.5em;
+			}
 		}
 		
 		&-img {
 			overflow: hidden;
 			margin: 0 auto;
 			cursor: pointer;
+			
+			@media(max-width: 480px) {
+				display: none;
+			}
 			
 			img {height: auto;}
 		}
@@ -523,6 +565,8 @@
 				right: 0;
 				top: 0;
 				bottom: 0;
+				
+				@media(max-width: 480px) {position: relative;}
 			}
 			
 			&-img {width: 90%;}
@@ -534,6 +578,8 @@
 			right: 0;
 			bottom: 0;
 			top: 88px;
+			
+			@media(max-width: 480px) {display: none;}
 			
 			@media(max-width: 980px) {
 				top: 80px;
@@ -556,6 +602,22 @@
 				padding: 0.3em 0.2em;
 				color: black;
 				border: 1px solid #999;
+				
+				&--allert {
+					display: none;
+					position: absolute;
+					color: red;
+					width: 200%;
+					top: 0;
+					left: -50%;
+					background: white;
+					border: 1px solid red;
+					
+					@media(max-width: 480px) {
+						width: 57%;
+						left: 43%;
+					}
+				}
 			}
 			
 			&__page {
@@ -663,6 +725,10 @@
 				@media(max-width: 590px) {height: 40px;}
 			}
 			
+			&-text {
+				@media(max-width: 480px) {display: none;}
+			}
+			
 			&_pops {
 				position: relative;
 				display: inline-block;
@@ -672,6 +738,7 @@
 				width: @w;
 				height: @w;
 				line-height: @w;
+				text-align: center;
 				vertical-align: middle;
 				background-image: linear-gradient(#bcc7cc, #879399);
 				font-family: @font-bold;
@@ -838,10 +905,23 @@
 		&_cover {
 			width: (97% / 2);
 			
-			&-vals {float: left;}
+			@media(max-width: 480px) {width: 100%;}
+			
+			&-vals {
+				float: left;
+			
+				@media(max-width: 480px) {margin-top: 20px;}
+			}
+			
 			&-color {
 				float: right;
 				position: relative;
+				
+				@media(max-width: 480px) {
+					position: absolute;
+					top: 20px;
+					left: 0.5%;
+				}
 			}
 			
 			&-block {
@@ -860,12 +940,16 @@
 					top: 3.25em;
 					bottom: 0;
 				}
+				
+				@media(max-width: 480px) {position: static;}
 			}
 			
 			&-items {
 				width: 92%;
 				height: 100%;
 				margin-left: 8%;
+				
+				@media(max-width: 480px) {margin-left: 0;}
 			}
 			
 			&-item {
@@ -886,6 +970,8 @@
 				left: 50%;
 				margin-left: -12px;
 				
+				@media(max-width: 480px) {position: relative;}
+				
 				&-wrapper {
 					position: absolute;
 					right: 0;
@@ -896,27 +982,47 @@
 					background-position: center;
 					
 					@media(max-width: 590px) {background-size: 12px auto;}
+					
+					@media(max-width: 480px) {
+						left: 0;
+						top: 50%;
+						width: 30px;
+					}
 				}
 				
 				&--4p {
 					top: 50%;
 					margin-top: -7px;
+					
+					@media(max-width: 480px) {margin-top: 0;}
 				}
 				
 				&--6p {
 					bottom: 50%;
 					margin-bottom: -7px;
+					
+					@media(max-width: 480px) {margin-bottom: 0;}
 				}
 			}
 			
-			&-item:first-child .cover_cover-label-wrapper {.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--top@', 12);}
+			&-item:first-child .cover_cover-label-wrapper {
+				.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--top@', 12);
+				
+				@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+			}
 			
-			&-item:last-child .cover_cover-label-wrapper {.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--bottom@', 12);}
+			&-item:last-child .cover_cover-label-wrapper {
+				.retina('../images/calculator/scroll/vertical/calculator_scroll-vert--bottom@', 12);
+				
+				@media(max-width: 480px) {.retina('../images/calculator/scroll/point/calculator_scroll--point@', 12);}
+			}
 			
 			&-name {
 				position: absolute;
 				width: 50%;
 				right: -6%;
+				
+				@media(max-width: 480px) {position: static;}
 				
 				&--4p {top: 5px;}
 				&--6p {bottom: 5px;}
@@ -926,17 +1032,31 @@
 		&_paper-block, &_effects-block {width: (97% / 2);}
 		
 		&_paper {
-			&-block {float: left;}
+			&-block {
+				float: left;
+				
+				@media(max-width: 480px) {width: 100%;}
+			}
 		}
 		
 		&_effects {
-			&-block {float: right;}
+			&-block {
+				float: right;
+				
+				@media(max-width: 480px) {
+					position: absolute;
+					top: 0.36em;
+					right: 0;
+				}
+			}
 			
 			&__switcher-container {
 				float: right;
 				width: 50%;
 				
 				@media(max-width: 590px) {width: 55%;}
+				
+				@media(max-width: 480px) {width: 100%;}
 			}
 			
 			&-items {
@@ -961,6 +1081,12 @@
 				font-size: 0.85em;
 				color: #808080;
 				line-height: 1.4;
+				
+				@media(max-width: 480px) {
+					display: inline-block;
+					width: auto;
+					padding-left: 0.5em;
+				}
 			}
 		}
 	}
@@ -969,13 +1095,30 @@
 		&_color-block, &_paper-block, &_lines-block {
 			width: 45%;
 		
-			@media(max-width: 980px) {
-				width: (97% / 2);
+			@media(max-width: 980px) {width: (97% / 2);}
+		}
+		
+		&_paper-block {
+			float: right;
+			
+			@media(max-width: 480px) {width: 100%;}
+		}
+		
+		&_lines-block {
+			float: right;
+			
+			@media(max-width: 480px) {
+				float: left;
+				width: 70%;
 			}
 		}
 		
 		&_color {
-			&-block {float: left;}
+			&-block {
+				float: left;
+				
+				@media(max-width: 480px) {margin-bottom: 1em;}
+			}
 			
 			&-items {
 				margin-left: 10%;
@@ -985,7 +1128,6 @@
 		
 		&_paper {
 			&-block {
-				float: right;
 				margin-top: 0.72em;
 				margin-bottom: 3.57em;
 			}
@@ -995,8 +1137,6 @@
 			margin-top: 0.29em;
 			
 			&-block {
-				float: right;
-				
 				&:after {
 					content: '';
 					display: table;
@@ -1017,8 +1157,27 @@
 			}
 		}
 		
+		&_paper-block {
+			float: right;
+			
+			@media(max-width: 480px) {width: 100%;}
+		}
+		
+		&_vals-block {
+			float: right;
+			
+			@media(max-width: 480px) {
+				float: left;
+				width: 70%;
+			}
+		}
+		
 		&_color {
-			&-block {float: left;}
+			&-block {
+				float: left;
+				
+				@media(max-width: 480px) {margin-bottom: 1em;}
+			}
 			
 			&-items {
 				margin-left: 10%;
@@ -1028,7 +1187,6 @@
 		
 		&_paper {
 			&-block {
-				float: right;
 				margin-top: 0.72em;
 				margin-bottom: 3.57em;
 			}
@@ -1038,8 +1196,6 @@
 			margin-top: 0.29em;
 			
 			&-block {
-				float: right;
-				
 				&:after {
 					content: '';
 					display: table;
@@ -1047,7 +1203,12 @@
 				}
 			}
 			
-			&-title {margin: 0;}
+			&-title {
+				margin: 0;
+				
+				
+				@media(max-width: 480px) {margin: 0.4em 0 1em;}
+			}
 		}
 	}
 	
@@ -1055,9 +1216,9 @@
 		&_total-block, &_copies-block {
 			width: 45%;
 		
-			@media(max-width: 980px) {
-				width: (97% / 2);
-			}
+			@media(max-width: 980px) {width: (97% / 2);}
+			
+			@media(max-width: 480px) {width: 75%;}
 		}
 		
 		&_total {
@@ -1087,6 +1248,8 @@
 			&-title {
 				margin: 0;
 				color: #4c4c4c;
+				
+				@media(max-width: 480px) {margin: 0.5em 0 1em;}
 			}
 		}
 		
@@ -1094,7 +1257,11 @@
 			@media(max-width: 768px) {
 				width: 60%;
 			}
-			&-block {float: right;}
+			&-block {
+				float: right;
+				
+				@media(max-width: 480px) {float: left;}
+			}
 			
 			&-header {
 				@media(max-width: 768px) {
@@ -1113,9 +1280,9 @@
 			width: 55%;
 		}
 		
-//		@media(max-width: 590px) {
-//			width: 100%;
-//		}
+		@media(max-width: 480px) {
+			width: 100%;
+		}
 	}
 	[class$='_send-block'] {
 		float: right;
@@ -1124,9 +1291,9 @@
 			width: 40%;
 		}
 		
-//		@media(max-width: 590px) {
-//			width: 100%;
-//		}
+		@media(max-width: 480px) {
+			width: 100%;
+		}
 	}
 	
 	.autorization {
@@ -1252,6 +1419,11 @@
 		&__text {
 			margin-top: 3.9em;
 			margin-bottom: 5.7em;
+			
+			@media(max-width: 480px) {
+				margin-top: 2em;
+				margin-bottom: 2.5em;
+			}
 		}
 		
 		&__sign {

@@ -247,24 +247,22 @@ ranging(goriz, [
   210
 ]);
 function allert_message(elem, rang, text) {
-  var allert_div = 'print_other__input--allert';
-  elem.parent().append('<div class=' + allert_div + '>Значение поля не должно быть ' + text + ' ' + rang + '</div>');
-  $('.' + allert_div).css({
-    'position': 'absolute',
-    'color': 'red',
-    'width': '200%',
-    'top': '0',
-    'left': '-50%',
-    'background': 'white',
-    'border': '1px solid red'
+  var allert_div = $('.print_other__input--allert');
+  allert_div.html('Значение поля не должно быть ' + text + ' ' + rang);
+  allert_div.css({
+    'display': 'block'
   });
   $(window).keydown(function (event) {
     if (event.keyCode == 27) {
-      $('.' + allert_div).remove();
+      allert_div.css({
+		'display': 'none'
+	  });
     }
   });
   setTimeout(function () {
-    $('.' + allert_div).remove();
+    allert_div.css({
+		'display': 'none'
+	  });
   }, 2100);
 };
 });

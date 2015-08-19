@@ -152,6 +152,8 @@
 .calc-scroller(@id, @items, @n) {
 	.@{id}-item {
 		width: (100% / @n);
+		
+		@media(max-width: 480px) {width: 100%;}
 	}
 
 	.calc-scroller-img(@id, @n);
