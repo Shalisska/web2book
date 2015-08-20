@@ -2,7 +2,7 @@ include ../helpers/variables
 include ../helpers/mixins
 
 -var filesPath = ''
-+filesPath(files)
++filesPath(pageID)
 
 doctype html
 html.no-svg(lang="ru")
@@ -16,6 +16,7 @@ html.no-svg(lang="ru")
 			include ../blocks/header
 
 			main(class=specClass)
+				+breadcrumbs(siteTree)
 				.container.container--main
 					block content
 

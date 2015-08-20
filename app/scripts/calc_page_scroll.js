@@ -133,3 +133,18 @@
 		});
 	};
 })(jQuery);
+
+;$(document).ready(function() {
+	$('.print_other').mySlider({
+		min: 105,
+		max: 210,
+		class_name: 'print_other'
+	});
+	
+	$('.print_other').mySlider({
+		min: 148,
+		max: 297,
+		class_name: 'print_other',
+		width: false
+	});
+});

@@ -1,7 +1,9 @@
-mixin filesPath(files)
-	while files > 0
-		-filesPath = filesPath + '../'
-		-files = files - 1
+mixin filesPath(pageID)
+	if pageID[0] != 0
+		-var arrID = pageID.slice(0, pageID.length)
+		while arrID.length > 0
+			-filesPath = filesPath + '../'
+			-arrID.length = arrID.length - 1
 
 mixin objCreate(keys, vals)
 	-var arr = []

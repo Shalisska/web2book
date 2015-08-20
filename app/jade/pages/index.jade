@@ -1,8 +1,7 @@
 extends ../layouts/default
 
 block variables
-	-var files = 0
-	-var pageID = a
+	-var pageID = [0]
 	-var pageClass = 'body-index'
 	-var specClass = ''
 
@@ -12,9 +11,7 @@ block header
 	include ../blocks/header/header_slider
 
 block content
-	include ../blocks/offers
-	include ../blocks/news
-	include ../blocks/main
+	include ../blocks/index/index
 	include ../blocks/teasers
 
 

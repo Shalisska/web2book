@@ -76,3 +76,18 @@
 		});
 	};
 })(jQuery);
+
+;$(document).ready(function() {
+	$('.block_lines').myCounter({
+		min: 1
+	});
+	
+	$('.inset_vals').myCounter({
+		min: 0
+	});
+	
+	$('.circulation_copies').myCounter({
+		min: 100,
+		step: 10
+	});
+});

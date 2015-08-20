@@ -269,39 +269,13 @@ function allert_message(elem, rang, text) {
 
 
 
-;$(document).ready(function() {
-	$('.print_other').mySlider({
-		min: 105,
-		max: 210,
-		class_name: 'print_other'
-	});
-	
-	$('.print_other').mySlider({
-		min: 148,
-		max: 297,
-		class_name: 'print_other',
-		width: false
-	});
-});
 
-;$(document).ready(function() {
-	$('.block_lines').myCounter({
-		min: 1
-	});
-	
-	$('.inset_vals').myCounter({
-		min: 0
-	});
-	
-	$('.circulation_copies').myCounter({
-		min: 100,
-		step: 10
-	});
-});
+
+
 
 ;$(document).ready(function() {
 	var lines =$('.calculator__counter-input--block_lines').children('input');
-var insets = $('.calculator__counter-input--inset_vals').children('input');
+	var insets = $('.calculator__counter-input--inset_vals').children('input');
 
 var res = parseInt(lines.val()) + parseInt(insets.val());
 $('.calculator__total-value').html(res);

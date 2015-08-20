@@ -1,15 +1,14 @@
 extends ../../layouts/right-column
 
 block variables
-	-var files = 1
-	-var pageID = a
+	-var pageID = [3]
 	-var pageClass = 'body-calculator'
 	-var specClass = 'sprite_icon-footer-clip--left sprite_icon-footer-clip--right'
 
 block scripts_upper
 
 block content
-	include ../../blocks/calculator/calculator
+	include ../../blocks/rapid_print/rapid_print
 
 block right-sidebar
 
@@ -18,6 +17,3 @@ block content-bottom
 
 
 block scripts
-	script(src="../../scripts/carousel.js")
-	script(src="../../scripts/calc_page_scroll.js")
-	script(src="../../scripts/counter.js")

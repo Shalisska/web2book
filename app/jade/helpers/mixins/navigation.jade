@@ -5,7 +5,7 @@ mixin nav(name, items)
 	nav(class=name)
 		ul.clearfix(class=name + '--lvl0')
 			each item, i in items
-				if i === pageID
+				if (i + 1) === pageID[0]
 					-spec_class_active = class_name + '--active'
 				else
 					-spec_class_active = ''
@@ -36,3 +36,19 @@ mixin nav_inner(name, lvl, items)
 				-spec_class_next = ''
 				li(class=name + '__item' + ' ' + spec_class_next)
 					a(class=(name + '__item-name') href=item.href)=item.name
+
+mixin breadcrumbs(items)
+	if pageID[0] != 0
+		-var arrID = pageID.slice(0, pageID.length)
+		-var elems = items.slice(0, items.length)
+		-var arr = []
+		each id in arrID
+			-var item = elems[id - 1]
+			-arr.push(item)
+			-elems = item.next
+		ul.breadcrumbs.clearfix
+			li.breadcrumbs__item
+					a(href='#')
+			each item in arr
+				li.breadcrumbs__item
+					a(href='#')=item.name
