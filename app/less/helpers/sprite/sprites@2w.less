@@ -1,9 +1,9 @@
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 @sprite-bg: url(../images/spritesheet/spritesheet@2w.png);
-.sprite {background-image: @sprite-bg;}.sprite_icon-adress:before{background-image: @sprite-bg;background-position: -212px -126px; background-size: 268px 187px; width: 8px; height: 12px;}
-.sprite_icon-company:before{background-image: @sprite-bg;background-position: -254px -128px; background-size: 268px 187px; width: 12px; height: 11px;}
-.sprite_icon-footer-clip--left:before{background-image: @sprite-bg;background-position: -222px -52px; background-size: 268px 187px; width: 44px; height: 52px;}
-.sprite_icon-footer-clip--right:after{background-image: @sprite-bg;background-position: -222px 0px; background-size: 268px 187px; width: 46px; height: 52px;}
+.sprite{background-image: @sprite-bg;}.sprite_icon-adress:before{content: ""; background-image: @sprite-bg; background-position: -212px -126px; background-size: 268px 187px; width: 8px; height: 12px;}
+.sprite_icon-company:before{content: ""; background-image: @sprite-bg; background-position: -158px -88px; background-size: 268px 187px; width: 12px; height: 11px;}
+.sprite_icon-footer-clip--left:before{content: ""; background-image: @sprite-bg; background-position: -222px -52px; background-size: 268px 187px; width: 44px; height: 52px;}
+.sprite_icon-footer-clip--right:after{content: ""; background-image: @sprite-bg; background-position: -222px 0px; background-size: 268px 187px; width: 46px; height: 52px;}
 .sprite_icon-formates-slider-control{background-position: -222px -147px; background-size: 268px 187px; width: 40px; height: 31px;}
 .header-slider__input#header-slider--slide1:checked ~ .header-slider__controls label[for="header-slider--slide1"],.header-slider__input#header-slider--slide2:checked ~ .header-slider__controls label[for="header-slider--slide2"],.header-slider__input#header-slider--slide3:checked ~ .header-slider__controls label[for="header-slider--slide3"],.header-slider__input#header-slider--slide4:checked ~ .header-slider__controls label[for="header-slider--slide4"],.header-slider__input#header-slider--slide5:checked ~ .header-slider__controls label[for="header-slider--slide5"]{background-position: -180px -142px; background-size: 268px 187px; width: 32px; height: 35px;}
 .sprite_icon-header-slider_controls--btn:hover{background-position: -222px -104px; background-size: 268px 187px; width: 32px; height: 43px;}
@@ -12,12 +12,14 @@
 .sprite_icon-header-slider_controls--next{background-position: -104px -88px; background-size: 268px 187px; width: 42px; height: 99px;}
 .sprite_icon-header-slider_controls--prev:hover{background-position: 0px -88px; background-size: 268px 187px; width: 52px; height: 99px;}
 .sprite_icon-header-slider_controls--prev{background-position: -180px 0px; background-size: 268px 187px; width: 42px; height: 99px;}
-.sprite_icon-home:before{background-image: @sprite-bg;background-position: -254px -104px; background-size: 268px 187px; width: 12px; height: 12px;}
-.sprite_icon-hook--left:before{background-image: @sprite-bg;background-position: 0px 0px; background-size: 268px 187px; width: 90px; height: 88px;}
-.sprite_icon-hook--right:after{background-image: @sprite-bg;background-position: -90px 0px; background-size: 268px 187px; width: 90px; height: 88px;}
-.sprite_icon-lock--red:before{background-image: @sprite-bg;background-position: -212px -113px; background-size: 268px 187px; width: 8px; height: 13px;}
-.sprite_icon-lock:before{background-image: @sprite-bg;background-position: -212px -99px; background-size: 268px 187px; width: 8px; height: 14px;}
-.sprite_icon-mail:before{background-image: @sprite-bg;background-position: -222px -178px; background-size: 268px 187px; width: 12px; height: 9px;}
-.sprite_icon-mobile:before{background-image: @sprite-bg;background-position: -262px -147px; background-size: 268px 187px; width: 6px; height: 11px;}
-.sprite_icon-phone:before{background-image: @sprite-bg;background-position: -254px -116px; background-size: 268px 187px; width: 12px; height: 12px;}
+.sprite_icon-home--blue:before{content: ""; background-image: @sprite-bg; background-position: -146px -88px; background-size: 268px 187px; width: 12px; height: 11px;}
+.sprite_icon-home--blue:hover:before{background-position: -254px -128px; background-size: 268px 187px; width: 12px; height: 11px;}
+.sprite_icon-home:before{content: ""; background-image: @sprite-bg; background-position: -254px -116px; background-size: 268px 187px; width: 12px; height: 12px;}
+.sprite_icon-hook--left:before{content: ""; background-image: @sprite-bg; background-position: 0px 0px; background-size: 268px 187px; width: 90px; height: 88px;}
+.sprite_icon-hook--right:after{content: ""; background-image: @sprite-bg; background-position: -90px 0px; background-size: 268px 187px; width: 90px; height: 88px;}
+.sprite_icon-lock--red:before{content: ""; background-image: @sprite-bg; background-position: -212px -113px; background-size: 268px 187px; width: 8px; height: 13px;}
+.sprite_icon-lock:before{content: ""; background-image: @sprite-bg; background-position: -212px -99px; background-size: 268px 187px; width: 8px; height: 14px;}
+.sprite_icon-mail:before{content: ""; background-image: @sprite-bg; background-position: -222px -178px; background-size: 268px 187px; width: 12px; height: 9px;}
+.sprite_icon-mobile:before{content: ""; background-image: @sprite-bg; background-position: -262px -147px; background-size: 268px 187px; width: 6px; height: 11px;}
+.sprite_icon-phone:before{content: ""; background-image: @sprite-bg; background-position: -254px -104px; background-size: 268px 187px; width: 12px; height: 12px;}
 }

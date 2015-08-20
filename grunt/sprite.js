@@ -67,6 +67,15 @@ var images = {
       name: 'home'
 	, class: 'before'
     }, {
+      name: 'home--blue'
+	, class: 'before'
+    }, {
+      name: 'home--white'
+    , template: function (r, w) {
+        var name = '.sprite_icon-home--blue:hover:before'
+        return name;
+      }
+    }, {
       name: 'mobile'
 	, class: 'before'
     }, {

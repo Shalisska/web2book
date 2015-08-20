@@ -184,6 +184,7 @@ th {
   background-image: url(../images/spritesheet/spritesheet@1w.png);
 }
 .sprite_icon-adress:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -212px -126px;
   background-size: 268px 187px;
@@ -191,13 +192,15 @@ th {
   height: 12px;
 }
 .sprite_icon-company:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
-  background-position: -254px -128px;
+  background-position: -158px -88px;
   background-size: 268px 187px;
   width: 12px;
   height: 11px;
 }
 .sprite_icon-footer-clip--left:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -222px -52px;
   background-size: 268px 187px;
@@ -205,6 +208,7 @@ th {
   height: 52px;
 }
 .sprite_icon-footer-clip--right:after {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -222px 0px;
   background-size: 268px 187px;
@@ -263,14 +267,30 @@ th {
   width: 42px;
   height: 99px;
 }
-.sprite_icon-home:before {
+.sprite_icon-home--blue:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
-  background-position: -254px -104px;
+  background-position: -146px -88px;
+  background-size: 268px 187px;
+  width: 12px;
+  height: 11px;
+}
+.sprite_icon-home--blue:hover:before {
+  background-position: -254px -128px;
+  background-size: 268px 187px;
+  width: 12px;
+  height: 11px;
+}
+.sprite_icon-home:before {
+  content: "";
+  background-image: url(../images/spritesheet/spritesheet@1w.png);
+  background-position: -254px -116px;
   background-size: 268px 187px;
   width: 12px;
   height: 12px;
 }
 .sprite_icon-hook--left:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: 0px 0px;
   background-size: 268px 187px;
@@ -278,6 +298,7 @@ th {
   height: 88px;
 }
 .sprite_icon-hook--right:after {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -90px 0px;
   background-size: 268px 187px;
@@ -285,6 +306,7 @@ th {
   height: 88px;
 }
 .sprite_icon-lock--red:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -212px -113px;
   background-size: 268px 187px;
@@ -292,6 +314,7 @@ th {
   height: 13px;
 }
 .sprite_icon-lock:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -212px -99px;
   background-size: 268px 187px;
@@ -299,6 +322,7 @@ th {
   height: 14px;
 }
 .sprite_icon-mail:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -222px -178px;
   background-size: 268px 187px;
@@ -306,6 +330,7 @@ th {
   height: 9px;
 }
 .sprite_icon-mobile:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
   background-position: -262px -147px;
   background-size: 268px 187px;
@@ -313,8 +338,9 @@ th {
   height: 11px;
 }
 .sprite_icon-phone:before {
+  content: "";
   background-image: url(../images/spritesheet/spritesheet@1w.png);
-  background-position: -254px -116px;
+  background-position: -254px -104px;
   background-size: 268px 187px;
   width: 12px;
   height: 12px;
@@ -324,6 +350,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -254px -126.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -331,13 +358,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
-    background-position: -204px -166px;
+    background-position: -162px -88px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 11.333333333333334px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: 0px -186.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -345,6 +374,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -104px -88px;
     background-size: 264px 238.66666666666666px;
@@ -403,14 +433,30 @@ th {
     width: 42px;
     height: 99.33333333333333px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
-    background-position: -180px -166px;
+    background-position: -150px -88px;
+    background-size: 264px 238.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -204px -166px;
+    background-size: 264px 238.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1.5w.png);
+    background-position: -192px -166px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: 0px 0px;
     background-size: 264px 238.66666666666666px;
@@ -418,6 +464,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -90px 0px;
     background-size: 264px 238.66666666666666px;
@@ -425,6 +472,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -254px -113.33333333px;
     background-size: 264px 238.66666666666666px;
@@ -432,6 +480,7 @@ th {
     height: 13.333333333333334px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -254px -99.33333333px;
     background-size: 264px 238.66666666666666px;
@@ -439,13 +488,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
-    background-position: -150px -88px;
+    background-position: -150px -99.33333333px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 9.333333333333334px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
     background-position: -254px -142.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -453,8 +504,9 @@ th {
     height: 11.333333333333334px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w.png);
-    background-position: -192px -166px;
+    background-position: -180px -166px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 12px;
@@ -465,6 +517,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@2w.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -212px -126px;
     background-size: 268px 187px;
@@ -472,13 +525,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
-    background-position: -254px -128px;
+    background-position: -158px -88px;
     background-size: 268px 187px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -222px -52px;
     background-size: 268px 187px;
@@ -486,6 +541,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -222px 0px;
     background-size: 268px 187px;
@@ -544,14 +600,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
-    background-position: -254px -104px;
+    background-position: -146px -88px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -254px -128px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@2w.png);
+    background-position: -254px -116px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: 0px 0px;
     background-size: 268px 187px;
@@ -559,6 +631,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -90px 0px;
     background-size: 268px 187px;
@@ -566,6 +639,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -212px -113px;
     background-size: 268px 187px;
@@ -573,6 +647,7 @@ th {
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -212px -99px;
     background-size: 268px 187px;
@@ -580,6 +655,7 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -222px -178px;
     background-size: 268px 187px;
@@ -587,6 +663,7 @@ th {
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
     background-position: -262px -147px;
     background-size: 268px 187px;
@@ -594,8 +671,9 @@ th {
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w.png);
-    background-position: -254px -116px;
+    background-position: -254px -104px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
@@ -606,6 +684,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@3w.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -212px -126px;
     background-size: 268px 187px;
@@ -613,13 +692,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
-    background-position: -254px -128px;
+    background-position: -158px -88px;
     background-size: 268px 187px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -222px -52px;
     background-size: 268px 187px;
@@ -627,6 +708,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -222px 0px;
     background-size: 268px 187px;
@@ -685,14 +767,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
-    background-position: -254px -104px;
+    background-position: -146px -88px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -254px -128px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@3w.png);
+    background-position: -254px -116px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: 0px 0px;
     background-size: 268px 187px;
@@ -700,6 +798,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -90px 0px;
     background-size: 268px 187px;
@@ -707,6 +806,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -212px -113px;
     background-size: 268px 187px;
@@ -714,6 +814,7 @@ th {
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -212px -99px;
     background-size: 268px 187px;
@@ -721,6 +822,7 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -222px -178px;
     background-size: 268px 187px;
@@ -728,6 +830,7 @@ th {
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
     background-position: -262px -147px;
     background-size: 268px 187px;
@@ -735,8 +838,9 @@ th {
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w.png);
-    background-position: -254px -116px;
+    background-position: -254px -104px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
@@ -747,20 +851,23 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -170px;
+    background-position: -212px -126px;
     background-size: 268px 187px;
     width: 8px;
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -128px;
+    background-position: -254px -158px;
     background-size: 268px 187px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
     background-position: -222px -52px;
     background-size: 268px 187px;
@@ -768,6 +875,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
     background-position: -222px 0px;
     background-size: 268px 187px;
@@ -826,14 +934,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -104px;
+    background-position: -254px -147px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -254px -128px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1w950.png);
+    background-position: -254px -116px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
     background-position: 0px 0px;
     background-size: 268px 187px;
@@ -841,6 +965,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
     background-position: -90px 0px;
     background-size: 268px 187px;
@@ -848,36 +973,41 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -212px -99px;
+    background-position: -212px -113px;
     background-size: 268px 187px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -147px;
+    background-position: -212px -99px;
     background-size: 268px 187px;
     width: 8px;
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -161px;
+    background-position: -254px -169px;
     background-size: 268px 187px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -262px -147px;
+    background-position: -210px -142px;
     background-size: 268px 187px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w950.png);
-    background-position: -254px -116px;
+    background-position: -254px -104px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
@@ -888,6 +1018,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -254px -126.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -895,13 +1026,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
-    background-position: -210px -146.66666667px;
+    background-position: -204px -158px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 11.333333333333334px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: 0px -186.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -909,6 +1042,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -104px -88px;
     background-size: 264px 238.66666666666666px;
@@ -967,14 +1101,30 @@ th {
     width: 42px;
     height: 99.33333333333333px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
-    background-position: -210px -134.66666667px;
+    background-position: -192px -158px;
+    background-size: 264px 238.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -210px -146.66666667px;
+    background-size: 264px 238.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
+    background-position: -180px -158px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: 0px 0px;
     background-size: 264px 238.66666666666666px;
@@ -982,6 +1132,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -90px 0px;
     background-size: 264px 238.66666666666666px;
@@ -989,6 +1140,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -254px -113.33333333px;
     background-size: 264px 238.66666666666666px;
@@ -996,6 +1148,7 @@ th {
     height: 13.333333333333334px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -254px -99.33333333px;
     background-size: 264px 238.66666666666666px;
@@ -1003,13 +1156,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
-    background-position: -192px -158px;
+    background-position: -180px -170px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 9.333333333333334px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
     background-position: -254px -142.66666667px;
     background-size: 264px 238.66666666666666px;
@@ -1017,8 +1172,9 @@ th {
     height: 11.333333333333334px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w950.png);
-    background-position: -180px -158px;
+    background-position: -210px -134.66666667px;
     background-size: 264px 238.66666666666666px;
     width: 12px;
     height: 12px;
@@ -1029,20 +1185,23 @@ th {
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -170px;
+    background-position: -212px -126px;
     background-size: 268px 187px;
     width: 8px;
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -128px;
+    background-position: -254px -158px;
     background-size: 268px 187px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
     background-position: -222px -52px;
     background-size: 268px 187px;
@@ -1050,6 +1209,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
     background-position: -222px 0px;
     background-size: 268px 187px;
@@ -1108,14 +1268,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -104px;
+    background-position: -254px -147px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -254px -128px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@2w950.png);
+    background-position: -254px -116px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
     background-position: 0px 0px;
     background-size: 268px 187px;
@@ -1123,6 +1299,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
     background-position: -90px 0px;
     background-size: 268px 187px;
@@ -1130,36 +1307,41 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -212px -99px;
+    background-position: -212px -113px;
     background-size: 268px 187px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -147px;
+    background-position: -212px -99px;
     background-size: 268px 187px;
     width: 8px;
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -161px;
+    background-position: -254px -169px;
     background-size: 268px 187px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -262px -147px;
+    background-position: -210px -142px;
     background-size: 268px 187px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w950.png);
-    background-position: -254px -116px;
+    background-position: -254px -104px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
@@ -1170,20 +1352,23 @@ th {
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -170px;
+    background-position: -212px -126px;
     background-size: 268px 187px;
     width: 8px;
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -128px;
+    background-position: -254px -158px;
     background-size: 268px 187px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
     background-position: -222px -52px;
     background-size: 268px 187px;
@@ -1191,6 +1376,7 @@ th {
     height: 52px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
     background-position: -222px 0px;
     background-size: 268px 187px;
@@ -1249,14 +1435,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -104px;
+    background-position: -254px -147px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -254px -128px;
+    background-size: 268px 187px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@3w950.png);
+    background-position: -254px -116px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
     background-position: 0px 0px;
     background-size: 268px 187px;
@@ -1264,6 +1466,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
     background-position: -90px 0px;
     background-size: 268px 187px;
@@ -1271,36 +1474,41 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -212px -99px;
+    background-position: -212px -113px;
     background-size: 268px 187px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -147px;
+    background-position: -212px -99px;
     background-size: 268px 187px;
     width: 8px;
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -161px;
+    background-position: -254px -169px;
     background-size: 268px 187px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -262px -147px;
+    background-position: -210px -142px;
     background-size: 268px 187px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w950.png);
-    background-position: -254px -116px;
+    background-position: -254px -104px;
     background-size: 268px 187px;
     width: 12px;
     height: 12px;
@@ -1311,6 +1519,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -212px -126px;
     background-size: 222px 222px;
@@ -1318,13 +1527,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
-    background-position: -54px -187px;
+    background-position: -78px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: 0px -187px;
     background-size: 222px 222px;
@@ -1332,6 +1543,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -146px -88px;
     background-size: 222px 222px;
@@ -1390,14 +1602,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
-    background-position: -30px -187px;
+    background-position: -66px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -54px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1w900.png);
+    background-position: -42px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: 0px 0px;
     background-size: 222px 222px;
@@ -1405,6 +1633,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -90px 0px;
     background-size: 222px 222px;
@@ -1412,6 +1641,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -212px -113px;
     background-size: 222px 222px;
@@ -1419,6 +1649,7 @@ th {
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -212px -99px;
     background-size: 222px 222px;
@@ -1426,13 +1657,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
-    background-position: -66px -187px;
+    background-position: -90px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
     background-position: -212px -142px;
     background-size: 222px 222px;
@@ -1440,8 +1673,9 @@ th {
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w900.png);
-    background-position: -42px -187px;
+    background-position: -30px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
@@ -1452,6 +1686,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -254px -126.66666667px;
     background-size: 264px 186.66666666666666px;
@@ -1459,13 +1694,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
-    background-position: -204px -170.66666667px;
+    background-position: -164px -99.33333333px;
     background-size: 264px 186.66666666666666px;
     width: 12px;
     height: 11.333333333333334px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -104px -88px;
     background-size: 264px 186.66666666666666px;
@@ -1473,6 +1710,7 @@ th {
     height: 35.333333333333336px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -180px -99.33333333px;
     background-size: 264px 186.66666666666666px;
@@ -1531,14 +1769,30 @@ th {
     width: 42px;
     height: 99.33333333333333px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
-    background-position: -180px -170.66666667px;
+    background-position: -164px -88px;
+    background-size: 264px 186.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -204px -170.66666667px;
+    background-size: 264px 186.66666666666666px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
+    background-position: -192px -170.66666667px;
     background-size: 264px 186.66666666666666px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: 0px 0px;
     background-size: 264px 186.66666666666666px;
@@ -1546,6 +1800,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -90px 0px;
     background-size: 264px 186.66666666666666px;
@@ -1553,6 +1808,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -254px -113.33333333px;
     background-size: 264px 186.66666666666666px;
@@ -1560,6 +1816,7 @@ th {
     height: 13.333333333333334px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -254px -99.33333333px;
     background-size: 264px 186.66666666666666px;
@@ -1567,13 +1824,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
-    background-position: -164px -88px;
+    background-position: -134px -111.33333333px;
     background-size: 264px 186.66666666666666px;
     width: 12px;
     height: 9.333333333333334px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
     background-position: -254px -142.66666667px;
     background-size: 264px 186.66666666666666px;
@@ -1581,8 +1840,9 @@ th {
     height: 11.333333333333334px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w900.png);
-    background-position: -192px -170.66666667px;
+    background-position: -180px -170.66666667px;
     background-size: 264px 186.66666666666666px;
     width: 12px;
     height: 12px;
@@ -1593,6 +1853,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -212px -126px;
     background-size: 222px 222px;
@@ -1600,13 +1861,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
-    background-position: -54px -187px;
+    background-position: -78px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: 0px -187px;
     background-size: 222px 222px;
@@ -1614,6 +1877,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -146px -88px;
     background-size: 222px 222px;
@@ -1672,14 +1936,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
-    background-position: -30px -187px;
+    background-position: -66px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -54px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@2w900.png);
+    background-position: -42px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: 0px 0px;
     background-size: 222px 222px;
@@ -1687,6 +1967,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -90px 0px;
     background-size: 222px 222px;
@@ -1694,6 +1975,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -212px -113px;
     background-size: 222px 222px;
@@ -1701,6 +1983,7 @@ th {
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -212px -99px;
     background-size: 222px 222px;
@@ -1708,13 +1991,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
-    background-position: -66px -187px;
+    background-position: -90px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
     background-position: -212px -142px;
     background-size: 222px 222px;
@@ -1722,8 +2007,9 @@ th {
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w900.png);
-    background-position: -42px -187px;
+    background-position: -30px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
@@ -1734,6 +2020,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -212px -126px;
     background-size: 222px 222px;
@@ -1741,13 +2028,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
-    background-position: -54px -187px;
+    background-position: -78px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: 0px -187px;
     background-size: 222px 222px;
@@ -1755,6 +2044,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -146px -88px;
     background-size: 222px 222px;
@@ -1813,14 +2103,30 @@ th {
     width: 42px;
     height: 99px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
-    background-position: -30px -187px;
+    background-position: -66px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -54px -187px;
+    background-size: 222px 222px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@3w900.png);
+    background-position: -42px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: 0px 0px;
     background-size: 222px 222px;
@@ -1828,6 +2134,7 @@ th {
     height: 88px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -90px 0px;
     background-size: 222px 222px;
@@ -1835,6 +2142,7 @@ th {
     height: 88px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -212px -113px;
     background-size: 222px 222px;
@@ -1842,6 +2150,7 @@ th {
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -212px -99px;
     background-size: 222px 222px;
@@ -1849,13 +2158,15 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
-    background-position: -66px -187px;
+    background-position: -90px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
     background-position: -212px -142px;
     background-size: 222px 222px;
@@ -1863,8 +2174,9 @@ th {
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w900.png);
-    background-position: -42px -187px;
+    background-position: -30px -187px;
     background-size: 222px 222px;
     width: 12px;
     height: 12px;
@@ -1875,6 +2187,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: -164px -123px;
     background-size: 206px 183px;
@@ -1882,13 +2195,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -174px -137px;
+    background-position: -140px -135px;
     background-size: 206px 183px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: 0px -148px;
     background-size: 206px 183px;
@@ -1896,6 +2211,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: -174px -43px;
     background-size: 206px 183px;
@@ -1954,14 +2270,30 @@ th {
     width: 34px;
     height: 80px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -140px -123px;
+    background-position: -186px -137px;
+    background-size: 206px 183px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -174px -137px;
+    background-size: 206px 183px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1w650.png);
+    background-position: -152px -123px;
     background-size: 206px 183px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: 0px 0px;
     background-size: 206px 183px;
@@ -1969,6 +2301,7 @@ th {
     height: 68px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: -70px 0px;
     background-size: 206px 183px;
@@ -1976,13 +2309,15 @@ th {
     height: 68px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -140px -135px;
+    background-position: -126px -68px;
     background-size: 206px 183px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
     background-position: -118px -68px;
     background-size: 206px 183px;
@@ -1990,22 +2325,25 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -186px -137px;
+    background-position: -152px -135px;
     background-size: 206px 183px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -148px -135px;
+    background-position: -198px -137px;
     background-size: 206px 183px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1w650.png);
-    background-position: -152px -123px;
+    background-position: -140px -123px;
     background-size: 206px 183px;
     width: 12px;
     height: 12px;
@@ -2016,6 +2354,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: -164px -123.33333333px;
     background-size: 206px 184px;
@@ -2023,13 +2362,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -140px -135.33333333px;
+    background-position: -118px -68.66666667px;
     background-size: 206px 184px;
     width: 12px;
     height: 11.333333333333334px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: 0px -148.66666667px;
     background-size: 206px 184px;
@@ -2037,6 +2378,7 @@ th {
     height: 35.333333333333336px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: -174px -43.33333333px;
     background-size: 206px 184px;
@@ -2095,14 +2437,30 @@ th {
     width: 34px;
     height: 80px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -140px -123.33333333px;
+    background-position: -152px -135.33333333px;
+    background-size: 206px 184px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -140px -135.33333333px;
+    background-size: 206px 184px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
+    background-position: -152px -123.33333333px;
     background-size: 206px 184px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: 0px 0px;
     background-size: 206px 184px;
@@ -2110,6 +2468,7 @@ th {
     height: 68.66666666666667px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: -70px 0px;
     background-size: 206px 184px;
@@ -2117,20 +2476,23 @@ th {
     height: 68.66666666666667px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -126px -68.66666667px;
+    background-position: -126px -80px;
     background-size: 206px 184px;
     width: 8px;
     height: 13.333333333333334px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -118px -68.66666667px;
+    background-position: -118px -80px;
     background-size: 206px 184px;
     width: 8px;
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
     background-position: -174px -138px;
     background-size: 206px 184px;
@@ -2138,15 +2500,17 @@ th {
     height: 9.333333333333334px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -152px -135.33333333px;
+    background-position: -164px -135.33333333px;
     background-size: 206px 184px;
     width: 6px;
     height: 11.333333333333334px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@1.5w650.png);
-    background-position: -152px -123.33333333px;
+    background-position: -140px -123.33333333px;
     background-size: 206px 184px;
     width: 12px;
     height: 12px;
@@ -2157,6 +2521,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: -164px -123px;
     background-size: 206px 183.5px;
@@ -2164,13 +2529,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -174px -137.5px;
+    background-position: -140px -135px;
     background-size: 206px 183.5px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: 0px -148.5px;
     background-size: 206px 183.5px;
@@ -2178,6 +2545,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: -174px -43px;
     background-size: 206px 183.5px;
@@ -2236,14 +2604,30 @@ th {
     width: 34px;
     height: 80px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -140px -123px;
+    background-position: -186px -137.5px;
+    background-size: 206px 183.5px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -174px -137.5px;
+    background-size: 206px 183.5px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@2w650.png);
+    background-position: -152px -123px;
     background-size: 206px 183.5px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: 0px 0px;
     background-size: 206px 183.5px;
@@ -2251,6 +2635,7 @@ th {
     height: 68.5px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: -70px 0px;
     background-size: 206px 183.5px;
@@ -2258,13 +2643,15 @@ th {
     height: 68.5px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -140px -135px;
+    background-position: -126px -68.5px;
     background-size: 206px 183.5px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
     background-position: -118px -68.5px;
     background-size: 206px 183.5px;
@@ -2272,22 +2659,25 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -186px -137.5px;
+    background-position: -152px -135px;
     background-size: 206px 183.5px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -148px -135px;
+    background-position: -198px -137.5px;
     background-size: 206px 183.5px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@2w650.png);
-    background-position: -152px -123px;
+    background-position: -140px -123px;
     background-size: 206px 183.5px;
     width: 12px;
     height: 12px;
@@ -2298,6 +2688,7 @@ th {
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
   }
   .sprite_icon-adress:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: -164px -123px;
     background-size: 206px 183.33333333333334px;
@@ -2305,13 +2696,15 @@ th {
     height: 12px;
   }
   .sprite_icon-company:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -174px -137px;
+    background-position: -140px -135px;
     background-size: 206px 183.33333333333334px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-footer-clip--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: 0px -148.33333333px;
     background-size: 206px 183.33333333333334px;
@@ -2319,6 +2712,7 @@ th {
     height: 35px;
   }
   .sprite_icon-footer-clip--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: -174px -43px;
     background-size: 206px 183.33333333333334px;
@@ -2377,14 +2771,30 @@ th {
     width: 34px;
     height: 80px;
   }
-  .sprite_icon-home:before {
+  .sprite_icon-home--blue:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -140px -123px;
+    background-position: -186px -137px;
+    background-size: 206px 183.33333333333334px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home--blue:hover:before {
+    background-position: -174px -137px;
+    background-size: 206px 183.33333333333334px;
+    width: 12px;
+    height: 11px;
+  }
+  .sprite_icon-home:before {
+    content: "";
+    background-image: url(../images/spritesheet/spritesheet@3w650.png);
+    background-position: -152px -123px;
     background-size: 206px 183.33333333333334px;
     width: 12px;
     height: 12px;
   }
   .sprite_icon-hook--left:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: 0px 0px;
     background-size: 206px 183.33333333333334px;
@@ -2392,6 +2802,7 @@ th {
     height: 68.33333333333333px;
   }
   .sprite_icon-hook--right:after {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: -70px 0px;
     background-size: 206px 183.33333333333334px;
@@ -2399,13 +2810,15 @@ th {
     height: 68.33333333333333px;
   }
   .sprite_icon-lock--red:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -140px -135px;
+    background-position: -126px -68.33333333px;
     background-size: 206px 183.33333333333334px;
     width: 8px;
     height: 13px;
   }
   .sprite_icon-lock:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
     background-position: -118px -68.33333333px;
     background-size: 206px 183.33333333333334px;
@@ -2413,22 +2826,25 @@ th {
     height: 14px;
   }
   .sprite_icon-mail:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -186px -137px;
+    background-position: -152px -135px;
     background-size: 206px 183.33333333333334px;
     width: 12px;
     height: 9px;
   }
   .sprite_icon-mobile:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -148px -135px;
+    background-position: -198px -137px;
     background-size: 206px 183.33333333333334px;
     width: 6px;
     height: 11px;
   }
   .sprite_icon-phone:before {
+    content: "";
     background-image: url(../images/spritesheet/spritesheet@3w650.png);
-    background-position: -152px -123px;
+    background-position: -140px -123px;
     background-size: 206px 183.33333333333334px;
     width: 12px;
     height: 12px;
@@ -3133,7 +3549,6 @@ main {
 .column--central {
   width: 74%;
   margin-right: 2%;
-  padding-left: 2%;
 }
 @media (max-width: 768px) {
   .column--central {
@@ -3142,7 +3557,6 @@ main {
 }
 .column--right {
   width: 24%;
-  padding-right: 2%;
 }
 @media (max-width: 768px) {
   .column--right {
@@ -4463,8 +4877,10 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
 .container--main {
   position: relative;
   width: 96.16%;
+  padding: 2%;
   padding-bottom: 3.93em;
   background: white;
+  border-radius: 5px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 470px) {
@@ -4477,10 +4893,141 @@ ul.header-menu--lvl1 > .header-menu__item:last-child {
     padding-bottom: 25px;
   }
 }
+.body-index .container--main {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
 .main-content {
   position: relative;
   margin: 0 20px 3.93em;
   overflow: hidden;
+}
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs__item a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: block;
+  font-size: 12px;
+}
+.breadcrumbs__item a:hover,
+.breadcrumbs__item a:active,
+.breadcrumbs__item a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumbs__item a span {
+  position: absolute;
+  top: 50%;
+  margin-top: -12.5px;
+  right: 15px;
+  font-size: 25px;
+  line-height: 1;
+  -webkit-transform: scale(0.7, 1) rotate(-90deg);
+          transform: scale(0.7, 1) rotate(-90deg);
+}
+.breadcrumbs__item--next {
+  position: relative;
+}
+.breadcrumbs > .breadcrumbs__item {
+  float: left;
+  color: #2d7ebb;
+}
+.breadcrumbs > .breadcrumbs__item > a {
+  height: 2em;
+  padding: 0 2.68em 0 0.84em;
+  line-height: 2;
+  background: #d8dde0;
+}
+.breadcrumbs > .breadcrumbs__item > a:after {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: -1em;
+  width: 1em;
+  height: 1em;
+  background-image: linear-gradient(30deg, transparent 66%, #ffffff 68%, #ffffff 71%, #d8dde0 73%), linear-gradient(-30deg, #d8dde0 29%, #ffffff 31%, #ffffff 34%, transparent 36%);
+  -webkit-transform: scaleY(2);
+          transform: scaleY(2);
+}
+.breadcrumbs > .breadcrumbs__item:first-child a {
+  position: relative;
+  width: 30px;
+  border-radius: 3px 0 0 3px;
+  padding-left: 0;
+}
+.breadcrumbs > .breadcrumbs__item:first-child a:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -5.5px;
+  left: 0.6em;
+}
+.breadcrumbs > .breadcrumbs__item:first-child a:after {
+  display: none;
+}
+.breadcrumbs > .breadcrumbs__item:last-child > a {
+  padding-right: 1.68em;
+  border-radius: 0 3px 3px 0;
+}
+.breadcrumbs > .breadcrumbs__item:last-child > a span {
+  right: 5px;
+}
+.breadcrumbs > .breadcrumbs__item:hover,
+.breadcrumbs > .breadcrumbs__item:last-child {
+  color: #ffffff;
+}
+.breadcrumbs > .breadcrumbs__item:hover > a,
+.breadcrumbs > .breadcrumbs__item:last-child > a {
+  background: #9ba3a8;
+}
+.breadcrumbs > .breadcrumbs__item:hover > a:after,
+.breadcrumbs > .breadcrumbs__item:last-child > a:after {
+  background-image: linear-gradient(30deg, transparent 66%, #ffffff 68%, #ffffff 71%, #9ba3a8 73%), linear-gradient(-30deg, #9ba3a8 29%, #ffffff 31%, #ffffff 34%, transparent 36%);
+}
+.breadcrumbs_inner {
+  position: absolute;
+  top: 100%;
+  left: -0.8em;
+  min-width: 106%;
+  padding: 5px;
+  background: #9ba3a8;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.breadcrumbs_inner .breadcrumbs__item {
+  padding: 5px;
+  box-shadow: inset 3px 0px 3px -3px rgba(13, 88, 140, 0.75), inset -3px 0px 3px -3px rgba(13, 88, 140, 0.75), inset 3px 0px 3px -3px rgba(39, 135, 201, 0.3), inset -3px 0px 3px -3px rgba(39, 135, 201, 0.3);
+}
+.breadcrumbs_inner .breadcrumbs__item:first-child {
+  box-shadow: inset 0px 2px 3px 0px rgba(13, 88, 140, 0.75), inset 3px 0px 3px -3px rgba(39, 135, 201, 0.3), inset 0px 3px 3px -3px rgba(39, 135, 201, 0.3), inset -3px 0px 3px -3px rgba(39, 135, 201, 0.3);
+}
+.breadcrumbs_inner .breadcrumbs__item:last-child {
+  border-radius: 0 0 5px 5px;
+  box-shadow: inset 3px 0px 3px -3px rgba(13, 88, 140, 0.75), inset -3px 0px 3px -3px rgba(13, 88, 140, 0.75), inset 3px 0px 3px -3px rgba(39, 135, 201, 0.3), inset 0px -3px 3px -3px rgba(39, 135, 201, 0.3), inset -3px 0px 3px -3px rgba(39, 135, 201, 0.3), 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+}
+.breadcrumbs_inner .breadcrumbs__item a {
+  padding: 0.83em 1.25em 1.16em 1.25em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.breadcrumbs--lvl1 > .breadcrumbs__item,
+.breadcrumbs--lvl3 > .breadcrumbs__item {
+  background: #2787c9;
+}
+.breadcrumbs--lvl1 > .breadcrumbs__item:hover > a,
+.breadcrumbs--lvl3 > .breadcrumbs__item:hover > a {
+  background: #23618c;
+}
+.breadcrumbs--lvl2 > .breadcrumbs__item {
+  background: #23618c;
+}
+.breadcrumbs--lvl2 > .breadcrumbs__item:hover > a {
+  background: #2787c9;
 }
 .offers {
   position: relative;

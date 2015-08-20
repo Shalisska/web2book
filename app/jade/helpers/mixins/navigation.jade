@@ -48,7 +48,17 @@ mixin breadcrumbs(items)
 			-elems = item.next
 		ul.breadcrumbs.clearfix
 			li.breadcrumbs__item
-					a(href='#')
-			each item in arr
-				li.breadcrumbs__item
-					a(href='#')=item.name
+				a.sprite_icon-home--blue(href='#')
+			each item, i in arr
+				-var lvl = 1
+				if i === arr.length - 1 && item.next
+					li.breadcrumbs__item.breadcrumbs__item--next
+						a(href='#')=item.name
+							span ⌵
+						+nav_inner('breadcrumbs', lvl, item.next)
+				else
+					li.breadcrumbs__item
+						a(href='#')=item.name
+							span ⌵
+					
+					
