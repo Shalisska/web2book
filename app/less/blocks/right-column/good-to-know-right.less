@@ -1,0 +1,56 @@
+.good_to_know-right {
+	position: relative;
+	padding: 0.4em 1.2em;
+	
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		left: -1.35715em;
+		right: -1.4286em;
+	}
+	
+	&:before {
+		top: -0.4286em;
+		bottom: -1.64285em;
+		background-repeat: no-repeat;
+		background-position: center top, center bottom;
+		background-image:
+			url(../images/sticker/sticker--top@284.png),
+			url(../images/sticker/sticker--bottom@284.png);
+		background-size: 100% 54px, 100% 82px;
+	}
+	
+	&:after {
+		top: 3.2143em;
+		bottom: 3.85715em;
+		background-repeat: repeat-y;
+		background-position: center;
+		background-image: url(../images/sticker/sticker--center@284.png);
+		background-size: 100% 1px;
+	}
+	
+	&__title, &__text {
+		position: relative;
+		z-index: 5;
+	}
+	
+	&__title {
+		font-size: 18px;
+		color: #454c5c;
+	}
+	
+	&__text {font-size: 12px;}
+	
+	&__term {
+		color: #06c;
+		font-family: @font-bold;
+	}
+	
+	&__definition {color: #333;}
+	
+	&__more {
+		color: #06c;
+		font-size: 11px;
+		font-family: 'Tahoma', 'Arial', sans-serif;
+	}
+}

@@ -79,23 +79,6 @@
 				
 				span {right: 5px;}
 			}
-			
-			&:hover {
-				&:before {
-					content: '';
-					position: absolute;
-					width: 106%;
-					background-color: #9BA3A8;
-					height: 5px;
-					left: -0.7em;
-					bottom: -3px;
-					z-index: 5;
-				}
-				
-				span {transform: scale(1, 0.7);}
-				
-				&>ul {display: block;}
-			}
 		}
 		
 		&:hover,
@@ -113,6 +96,23 @@
 				
 				span {text-shadow: none;}
 			}
+		}
+		
+		&--next:hover {
+			&:before {
+				content: '';
+				position: absolute;
+				width: 106%;
+				background-color: #9BA3A8;
+				height: 5px;
+				left: -0.7em;
+				bottom: -3px;
+				z-index: 5;
+			}
+
+			span {transform: scale(1, 0.7);}
+
+			&>ul {display: block;}
 		}
 	}
 	

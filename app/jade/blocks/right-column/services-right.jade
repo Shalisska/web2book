@@ -1,0 +1,10 @@
+include ../index/variables
+
+mixin services-right(name, items)
+	.offers(class=name)
+		each item in items.slice(0, items.length - 1)
+			.clearfix(class = 'offers-services__' + item.id + ' ' + name + '__item' + ' ' + name + '__' + item.id)
+				.offers-services__img(class = name + '__img'): img(src=filesPath + '../images/offers/services/offers-services@2400.png' alt=item.id)
+				p(class = name + '__title')=item.title
+
++services-right('services-right', services)

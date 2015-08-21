@@ -1,3 +1,7 @@
+mixin itemBuild(variable, item)
+	each elem in item
+		-variable.push(elem)
+
 mixin filesPath(pageID)
 	if pageID[0] != 0
 		-var arrID = pageID.slice(0, pageID.length)
