@@ -23,19 +23,19 @@ mixin nav(name, items)
 
 mixin nav_inner(name, lvl, items)
 	-var spec_class_next
-	ul(class = name + '_inner' + ' ' + name + '--lvl' + lvl)
+	ul(class ='menu_inner' + ' ' + 'menu_inner--lvl' + lvl + ' ' + name + '_inner' + ' ' + name + '--lvl' + lvl)
 		each item in items
 			if item.next
-				-spec_class_next = name + '__item--next'
+				-spec_class_next = name + '__item--next' + ' ' + 'menu_inner__item--next'
 				-lvl = lvl + 1
-				li(class=name + '__item' + ' ' + spec_class_next)
-					a(class=(name + '__item-name') href=item.href)=item.name
+				li(class=name + '__item' + ' ' + 'menu_inner__item' + ' ' + name + '_inner__item' + ' ' + spec_class_next)
+					a(class=(name + '__item-name' + ' ' + 'menu_inner__item-name' + ' ' + name + '_inner__item-name') href=item.href)=item.name
 					+nav_inner(name, lvl, item.next)
 				-lvl = lvl - 1
 			else
 				-spec_class_next = ''
-				li(class=name + '__item' + ' ' + spec_class_next)
-					a(class=(name + '__item-name') href=item.href)=item.name
+				li(class=name + '__item' + ' ' + 'menu_inner__item' + ' ' + name + '_inner__item' + ' ' + spec_class_next)
+					a(class=(name + '__item-name' + ' ' + 'menu_inner__item-name' + ' ' + name + '_inner__item-name') href=item.href)=item.name
 
 mixin breadcrumbs(items)
 	if pageID[0] != 0
@@ -61,4 +61,23 @@ mixin breadcrumbs(items)
 						a(href='#')=item.name
 							span ⌵
 					
-					
+mixin right_menu(name, menu)
+	-var items = menu[pageID[0] - 1]
+	-var spec_class_next
+	-var class_name = name + '__item'
+	
+	p.right-menu__title=items.name
+	ul.clearfix(class=name + ' ' + name + '--lvl1' + ' ' + 'menu_inner' + ' ' + 'menu_inner--lvl1')
+		if items.next
+			each item, i in items.next
+				-var lvl = 2
+				if item.next
+					-spec_class_next = class_name + '--next'
+					li(class=class_name + ' ' + 'menu_inner__item' + ' ' + spec_class_next + ' ' + 'menu_inner__item--next')
+						a(class=class_name + '-name' + ' ' + 'menu_inner__item-name' href=item.href): span!=item.name
+						+nav_inner(name, lvl, item.next)
+				else
+					-spec_class_next = ''
+					li(class=class_name + ' ' + 'menu_inner__item' + ' ' + spec_class_next + ' ' + 'menu_inner__item--next')
+						a(class=class_name + '-name' + ' ' + 'menu_inner__item-name' href=item.href): span!=item.name
+
