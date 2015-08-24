@@ -1,10 +1,11 @@
 mixin news(items)
+	-var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек']
 	each item in items
 		.news__item
 			.news-header
 				.news-header__date
 					span.news-header__date--day=item.date.day
-					span.news-header__date--month=item.date.month
+					span.news-header__date--month=months[item.date.month - 1]
 				a(href='/').news-header__title=item.title
 			.news-content
 				p=item.news
@@ -12,26 +13,5 @@ mixin news(items)
 
 .news
 	.news__block.clearfix
-		+news([{
-					date: {
-							day: '09',
-							month: 'сен'
-						},
-					title: 'Офис компании Дениса Олейникова Prostoprint.com захватил УБОП',
-					news: 'От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...'
-					}, {
-					date: {
-							day: '30',
-							month: 'авг'
-						},
-					title: 'Первые в мире книги со спецэффектами',
-					news: 'От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...'
-					}, {
-					date: {
-							day: '27',
-							month: 'авг'
-						},
-					title: 'Женщины предпочитают ридеры, а мужчины больше любят планшеты',
-					news: 'От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...'
-					}])
+		+news(news)
 	a.news__all(href='/') Все новости

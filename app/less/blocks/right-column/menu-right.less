@@ -1,14 +1,11 @@
 .right-menu {
-	@size__title: 16px;
-	@size__lvl2: 12px;
 	@bg_block: @bg__header;
 	@color__title: #2787c9;
 	@color__menu: white;
 	
 	position: relative;
 	box-shadow: none;
-	
-	
+	font-size: 1em;
 	
 	&, &_inner {background: @bg_block;}
 	
@@ -21,9 +18,14 @@
 		position: relative;
 		margin-bottom: 30px;
 		background: @bg_block;
+		font-size: 14px;
 		border-radius: 10px;
 		border-top: 2px solid #aab2b4;
 		box-shadow: inset 0px 1px 0 0 #e8ebec;
+		
+		@media(max-width: 980px) {
+			font-size: 12px;
+		}
 		
 		&:after {
 			content: '';
@@ -48,8 +50,9 @@
 	}
 	
 	&__title {
+		padding: 0 0.4em;
 		text-align: center;
-		font-size: @size__title;
+		font-size: 1.14em;
 		font-family: @font-bold;
 		color: @color__title;
 		text-shadow: 0 1px 0 white;
@@ -62,6 +65,9 @@
 			.reset-a();
 			display: block;
 			position: relative;
+			padding-top: 0.7em;
+			padding-bottom: 1em;
+			white-space: normal;
 		}
 		
 		&--next {
@@ -107,9 +113,13 @@
 		position: relative;
 		right: 0;
 		padding: 0;
-		font-size: @size__lvl2;
+		font-size: 12px;
 		background: none;
 		box-shadow: none;
+		
+		@media(max-width: 980px) {
+			font-size: 1em;
+		}
 		
 		&>.right-menu__item {
 			box-shadow: none;
@@ -118,5 +128,12 @@
 		}
 	}
 	
-	&--lvl3 {font-size: 14px;}
+	&--lvl3 {
+		font-size: 14px;
+		.right-menu__item-name {white-space: nowrap;}
+		
+		@media(max-width: 980px) {
+			font-size: 1em;
+		}
+	}
 }

@@ -1,0 +1,19 @@
+mixin news-right(items)
+	each item in items
+		-var month = '.' + item.date.month
+		if (item.date.month < 10)
+			-month = '.0' + item.date.month
+		.news__item.news-right__item
+			.news-header.news-right-header
+				.news-header__date.news-right-header__date
+					span.news-header__date--day.news-right-header__date--day=item.date.day
+					span.news-header__date--month.news-right-header__date--month=month
+				a(href='/').news-header__title.news-right-header__title=item.title
+			.news-content.news-right-content
+				p=item.news
+
+
+.news.news-right
+	.news__block.news-right__block.clearfix
+		+news-right(news)
+	a.news__all.news-right__all(href='/') Все новости
