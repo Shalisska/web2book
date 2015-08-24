@@ -1,0 +1,34 @@
+include ../helpers/variables
+include ../helpers/mixins
+
+-var filesPath = ''
++filesPath(pageID)
+
+doctype html
+html.no-svg(lang="ru")
+	head
+		include ../blocks/head
+		block scripts_upper
+
+	body
+		include ../helpers/svg
+		.body-wrapper(class=pageClass)
+			include ../blocks/header
+
+			main(class=specClass)
+				.container.container--main.clearfix
+					block content-top
+					aside.column--left
+						//include ../blocks/right-column/right-column
+						block left-sidebar
+					.column--central
+						block content
+					block content-bottom
+
+			.footer-wrapper.sprite_icon-footer-clip--left.sprite_icon-footer-clip--right
+				include ../blocks/footer
+		
+		a.scrollTop(href='#') Наверх
+
+	include ../blocks/scripts
+	block scripts

@@ -1,8 +1,8 @@
-//breakpoints
+.descriptions {
+	//breakpoints
 @break1: 950px;
 @break2: 650px;
-
-.descriptions {
+	
 	margin-left: 330px;
 	padding-right: 2.1%;
 	font-size: @font;
@@ -12,32 +12,21 @@
 		font-size: 12px;
 	}
 	
-	@media(max-width: @break2) {
-		margin-left: 0px;
-	}
+	@media(max-width: @break2) {margin-left: 0px;}
 	
 	&__block {
 		margin-bottom: 2.3em;
 		
-		&:last-of-type {
-			margin-bottom: 0;
-		}
+		&:last-of-type {margin-bottom: 0;}
 	}
 	
-	&__title {
-		margin: 0 0 1em 1%;
-		font-size: @size__main-title;
-		color: @color__main-title;
-		font-weight: normal;
-	}
+	&__title {margin: 0 0 1em 1%;}
 	
 	&__text {
 		margin: 0 0 1em 4.5%;
 		line-height: 1.5;
 		color: @color__main-text;
 		
-		&:last-of-type {
-			margin-bottom: 0;
-		}
+		&:last-of-type {margin-bottom: 0;}
 	}
 }

@@ -20,10 +20,31 @@
 		bottom: -23px;
 		background-repeat: no-repeat;
 		background-position: center top, center bottom;
+		background-size: 100% 54px, 100% 82px;
 		background-image:
 			url(../images/sticker/sticker--top@284.png),
 			url(../images/sticker/sticker--bottom@284.png);
-		background-size: 100% 54px, 100% 82px;
+	
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+			
+		background-image:
+			url(../images/sticker/sticker--top@426.png),
+			url(../images/sticker/sticker--bottom@426.png);
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+			
+		background-image:
+			url(../images/sticker/sticker--top@568.png),
+			url(../images/sticker/sticker--bottom@568.png);
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+			
+		background-image:
+			url(../images/sticker/sticker--top@852.png),
+			url(../images/sticker/sticker--bottom@852.png);
+		}
 	}
 	
 	&:after {
@@ -31,8 +52,8 @@
 		bottom: 59px;
 		background-repeat: repeat-y;
 		background-position: center;
-		background-image: url(../images/sticker/sticker--center@284.png);
 		background-size: 100% 1px;
+		.retina('../images/sticker/sticker--center@', 284);
 	}
 	
 	&__title, &__text {

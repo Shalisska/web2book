@@ -8,17 +8,17 @@ mixin slider--offers_item(slider_name, img_width, items)
 				each item in items
 					div.offers-item__item(class='offers-' + slider_name + '__item' + ' ' + 'offers-' + slider_name + '__' + item.id)
 						div.offers-item__img(class='offers-' + slider_name + '__img')
-							img(src='../images/offers/' + slider_name + '/offers-' + slider_name + '@' + img_width + '.png', alt=item.id)
-						//-	+picture({
-						//-		name: item.id,
-						//-		adress: '../images/offers/' + slider_name + '/offers-' + slider_name + '@',
-						//-		ext: 'png'
-						//-	}, {
-						//-		main: {
-						//-			width: img_width,
-						//-			img: img_width
-						//-		}
-						//-	})
+							//-img(src='../images/offers/' + slider_name + '/offers-' + slider_name + '@' + img_width + '.png', alt=item.id)
+							+picture({
+								name: item.id,
+								adress: '../images/offers/' + slider_name + '/offers-' + slider_name + '@',
+								ext: 'png'
+							}, {
+								main: {
+									width: img_width,
+									img: img_width
+								}
+							})
 						h3.offers-item__title=item.title
 						if item.text
 							p.offers-item__text=item.text

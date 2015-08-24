@@ -1,7 +1,7 @@
 mixin main-text(items)
 	each item, i in items
 		.descriptions__block
-			h2.descriptions__title=item.title
+			h2.title--h2.descriptions__title=item.title
 			each text in item.text
 				p.descriptions__text=text
 

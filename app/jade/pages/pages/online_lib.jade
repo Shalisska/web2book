@@ -1,0 +1,28 @@
+extends ../../layouts/online_lib
+
+block variables
+	-var pageID = [1]
+	-var pageClass = 'online-lib'
+	-var specClass = 'sprite_icon-footer-clip--left sprite_icon-footer-clip--right'
+
+block scripts_upper
+
+block left-sidebar
+
+block content-top
+	include ../../blocks/index/offers
+
+
+
+block content
+	include ../../blocks/online_lib/online_lib
+
+
+
+
+
+
+block scripts
+	script(src="../../scripts/carousel.js")
+	script(src="../../scripts/calc_page_scroll.js")
+	script(src="../../scripts/counter.js")

@@ -1,0 +1,16 @@
+mixin titles(name, items)
+	if pageID[0] != 0
+		-var arrID = pageID.slice(0, pageID.length)
+		-var elems = items.slice(0, items.length)
+		-var arr = []
+		each id in arrID
+			-var item = elems[id - 1]
+			-arr.push(item)
+			-elems = item.next
+		
+		if arr.length > 0
+			h1.title--h1(class = name + '__title--h1')=arr[0].name
+			if arr.length > 1
+				h2.title--h2(class = name + '__title--h2')=arr[1].name
+					//each item in arr.slice(2, arr.length)
+						h3.title--h3(class = name + '__title--h3')=item.name
