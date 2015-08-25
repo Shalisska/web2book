@@ -47,7 +47,9 @@
   };
 };
 
-scroll(search(sliders));
+	if(sliders.length > 0) {
+		scroll(search(sliders));
+	}
 	
 	controls.click(function() {
   var mask = $(this).attr('for').replace(/[\w|-]*--([\w|-]*)/gi, '$1');

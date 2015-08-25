@@ -157,17 +157,42 @@ main {
 	}
 }
 
+.container--main {
+	position: relative;
+	width: 96.16%;
+	padding-bottom: 3.93em;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
+	
+	@media(max-width: 470px) {
+		width: 100%;
+	}
+	
+	@media(max-width: 450px) {
+		padding-bottom: 25px;
+	}
+}
+
+.main-content {
+	position: relative;
+	margin: 0 20px 3.93em;
+	overflow: hidden;
+}
+
 .column--central, .column--right {float: left;}
 
 .column--central {
 	width: (100% - 24% - 2%);
 	margin-right: 2%;
+	padding: 2% 0 0 2%;
 	
 	@media(max-width: 768px) {width: 100%;}
 }
 
 .column--right {
 	width: 24%;
+	padding: 2% 2% 0 0;
 	
 	@media(max-width: 768px) {display: none;}
 }
