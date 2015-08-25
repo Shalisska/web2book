@@ -52,14 +52,14 @@ mixin autorization_data(name, items)
 		if item.type
 			-type=item.type
 		
-		.autorization__field.clearfix(class='autorization__field--' + item.id)
-			label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '_' + item.id)=item.name + ':'
+		.form__field.autorization__field.clearfix(class='autorization__field--' + item.id)
+			label.form__label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '_' + item.id)=item.name + ':'
 				if item.required
 					span(class=name + '__label--required') *
 				
 			case item.id
 				when 'tel'
-					div(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+					div.form__inputs.form__inputs--tel(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
 						input(type='hidden' id=name + '_' + item.id name=name + '_' + item.id)
 						span +7 (
 						each elem, i in item.data
@@ -68,7 +68,7 @@ mixin autorization_data(name, items)
 								span )
 
 				when 'captcha'
-					div(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+					div.form__inputs(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
 						div.clearfix(class=name + '__' + item.id)
 							div(class=name + '__' + item.id + '-img')
 								+picture({
@@ -86,7 +86,7 @@ mixin autorization_data(name, items)
 						input(class=name + '__' + item.id + '-input' type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text required)
 
 				default
-					div(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+					div.form__inputs(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
 						if item.required
 							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text required)
 						else
@@ -102,7 +102,7 @@ mixin autorization_data(name, items)
 
 mixin autorization_send(name, item)
 	p(class=name + '__text')=item.text
-	button(class=name + '__btn' type='submit') Отправить рассчет
+	button.form__btn(class=name + '__btn' type='submit') Отправить рассчет
 	p(class=name + '__sign')=item.sign
 
 

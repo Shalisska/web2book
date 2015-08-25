@@ -1,0 +1,73 @@
+mixin personal_data(name, items)
+	each item in items
+		-var type = 'text'
+		if item.type
+			-type=item.type
+		
+		.form__field.clearfix(class=name + '__field' + ' ' + name + '__field--' + item.id)
+			label.form__label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '_' + item.id)=item.name + ':'
+				
+			case item.id
+				when 'tel'
+					div.form__inputs.form__inputs--tel(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+						input(type='hidden' id=name + '_' + item.id name=name + '_' + item.id)
+						span +7 (
+						each elem, i in item.data
+							input(type=type id=name + '_' + elem.id placeholder=elem.text pattern=elem.pattern)
+							if (i == 0)
+								span )
+
+				default
+					div.form__inputs(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+						if item.required
+							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text required)
+						else
+							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text)
+
+form(class=pageClass + '-personal' action='#' method='post' name='personal')
+	+personal_data(pageClass + '-personal', [{
+						id: 'login',
+						name: 'Логин',
+						text: 'IWCcompany'
+					}, {
+						id: 'email',
+						name: 'E-mail',
+						type: 'email',
+						text: 'iwc@gmail.com'
+					}, {
+						id: 'surname',
+						name: 'Фамилия',
+						text: 'Хмельнов'
+					}, {
+						id: 'name',
+						name: 'Имя',
+						text: 'Эдуард'
+					}, {
+						id: 'patronymic',
+						name: 'Отчество',
+						text: 'Зигмундович'
+					}, {
+						name: 'Телефон',
+						id: 'tel',
+						data: [{
+							id: 'tel_1',
+							pattern: '[0-9]{3}',
+							text: 920
+						}, {
+							id: 'tel_2',
+							pattern: '[0-9]{3}-[0-9]{2}-[0-9]{2}',
+							text: '591-34-63'
+						}]
+					}])
+	p(class=pageClass + '-personal__title') Изменение пароля
+		+personal_data(pageClass + '-personal', [{
+						id: 'new_pass',
+						name: 'Новый пароль'
+					}, {
+						id: 'repeat_pass',
+						name: 'Повторите',
+						required: 1
+					}])
+	button.form__btn(class=pageClass + '__btn' type='submit') Сохранить изменения
+
+

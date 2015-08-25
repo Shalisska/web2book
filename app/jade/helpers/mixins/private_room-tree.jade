@@ -1,0 +1,22 @@
+-var private_room_tree = []
++itemBuild(private_room_tree, [{
+	name: 'Личный кабинет',
+	id: 'private_room',
+	next: [{
+		name: 'Профиль клиента',
+		id: 'profile',
+		next: [{
+			name: 'Персональные данные',
+			id: 'personal'
+		}, {
+			name: 'Реквизиты юр. и физ. лица',
+			id: 'details'
+		}]
+	}, {
+		name: 'Управление файлами',
+		id: 'files'
+	}, {
+		name: 'Создание, редактирование проекта',
+		id: 'project'
+	}]
+}])

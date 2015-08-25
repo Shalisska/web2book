@@ -16,9 +16,14 @@ html.no-svg(lang="ru")
 			include ../blocks/header
 
 			main(class=specClass)
-				+breadcrumbs(siteTree)
-				.container.container--main
-					block content
+				.container.container--main.clearfix
+					block content-top
+					aside.column--left
+						//include ../blocks/right-column/right-column
+						block left-sidebar
+					.column--central.column--central-left
+						block content
+					block content-bottom
 
 			.footer-wrapper.sprite_icon-footer-clip--left.sprite_icon-footer-clip--right
 				include ../blocks/footer

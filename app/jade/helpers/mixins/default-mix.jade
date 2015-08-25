@@ -45,8 +45,11 @@ mixin picture(info, items)
 		
 		-var item = items.main
 		-var res = []
+		-var img = item.width
+		if item.img
+			-img = item.img
 		each ret in retina
-			-res.push(filesPath + info.adress + (item.img * ret) + '.' + info.ext + ' ' + (item.img * ret) + 'w')
+			-res.push(filesPath + info.adress + (img * ret) + '.' + info.ext + ' ' + (img * ret) + 'w')
 		-var resourse = res[1] + ', ' + res[2] + ', ' + res[3]
 		
 		if info.class
@@ -55,17 +58,17 @@ mixin picture(info, items)
 			img(src=res[0] width=item.width, srcset=resourse, alt=info.name)
 
 //-+picture({
-//-		name: name,
-//-		adress: '../images/header/header_slider/header_slide1@',
-//-		ext: 'png'
-//-	}, {
-//-		main: {
-//-			width: 560,
-//-			img: 560
-//-		},
-//-		other: [{
-//-			val: 'max',
-//-			width: 730,
-//-			img: 288
-//-		}]
-//-	})
+//-	name: name,
+//-	adress: '../images/header/header_slider/header_slide1@',
+//-	ext: 'png'
+//-}, {
+//-	main: {
+//-		width: 560,
+//-		img: 560
+//-	},
+//-	other: [{
+//-		val: 'max',
+//-		width: 730,
+//-		img: 288
+//-	}]
+//-})

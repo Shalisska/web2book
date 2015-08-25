@@ -1,0 +1,18 @@
+header.clearfix(class = pageClass + '__header')
+	div(class = pageClass + '__header-logo')
+		a(class = pageClass + '__header-logo__img' href='#')
+			+picture({
+				name: 'Online libruary',
+				adress: '../images/online-lib/logo/online-lib-logo@',
+				ext: 'png'
+			}, {
+				main: {
+					width: 66
+				}
+			})
+		p(class = pageClass + '__header-logo__text')
+			span(class = pageClass + '__header-logo__text--main') Онлайн библиотека
+			span(class = pageClass + '__header-logo__text--sub') Web2Book technology
+	
+	div(class = pageClass + '__header-right-side')
+		img(src='../../images/online-lib/common/header-right.png', alt='')

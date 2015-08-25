@@ -12,12 +12,12 @@ html.no-svg(lang="ru")
 
 	body
 		include ../helpers/svg
-		.body-wrapper(class=pageClass)
+		.body-wrapper(class='body-' + pageClass)
 			include ../blocks/header
 
 			main(class=specClass)
 				.container.container--main.clearfix
-					.column--central
+					.column--central.column--central-right
 						+breadcrumbs(siteTree)
 						block content
 					aside.column--right

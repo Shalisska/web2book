@@ -28,16 +28,28 @@ mixin slider--offers(slider_name, items)
 	
 
 		
-		
 
-.offers
-	+slider--offers('offers-slider', [{
-						id: 'services',
-						name: 'Наши услуги'
-						}, {
-						id: 'products',
-						name: 'Наша продукция'
-						}, {
-						id: 'skreplenie',
-						name: 'Типы скрепления'
-						}])
+if pageID[0] != 0
+	.offers(class = 'offers--' + pageClass)
+		+slider--offers('offers-slider', [{
+							id: 'services',
+							name: 'Наши услуги'
+							}, {
+							id: 'products',
+							name: 'Наша продукция'
+							}, {
+							id: 'skreplenie',
+							name: 'Типы скрепления'
+							}])
+else
+	.offers
+		+slider--offers('offers-slider', [{
+							id: 'services',
+							name: 'Наши услуги'
+							}, {
+							id: 'products',
+							name: 'Наша продукция'
+							}, {
+							id: 'skreplenie',
+							name: 'Типы скрепления'
+							}])

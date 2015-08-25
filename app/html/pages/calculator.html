@@ -117,9 +117,9 @@
           </div>
         </div>
       </header>
-      <main class="sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
+      <main>
         <div class="container container--main clearfix">
-          <div class="column--central">
+          <div class="column--central column--central-right">
             <ul class="breadcrumbs clearfix">
               <li class="breadcrumbs__item"><a href="#" class="sprite_icon-home--blue"></a></li>
               <li class="breadcrumbs__item"><a href="#">Калькулятор стоимости</a></li>
@@ -763,35 +763,35 @@
                                                         <div class="calculator__header--inner autorization_data-header">
                                                           <h3 class="calculator__title--inner autorization_data-title">Персональные данные</h3>
                                                         </div>
-                                                                    <div class="autorization__field clearfix autorization__field--name">
-                                                                      <label for="autorization_name" class="autorization__label autorization__label--name">Имя:<span class="autorization__label--required">*</span></label>
-                                                                      <div class="autorization__inputs autorization__inputs--name">
+                                                                    <div class="form__field autorization__field clearfix autorization__field--name">
+                                                                      <label for="autorization_name" class="form__label autorization__label autorization__label--name">Имя:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="form__inputs autorization__inputs autorization__inputs--name">
                                                                         <input type="text" id="autorization_name" name="autorization_name" placeholder="Александр Папандреу" required>
                                                                       </div>
                                                                     </div>
-                                                                    <div class="autorization__field clearfix autorization__field--email">
-                                                                      <label for="autorization_email" class="autorization__label autorization__label--email">E-mail:<span class="autorization__label--required">*</span></label>
-                                                                      <div class="autorization__inputs autorization__inputs--email">
+                                                                    <div class="form__field autorization__field clearfix autorization__field--email">
+                                                                      <label for="autorization_email" class="form__label autorization__label autorization__label--email">E-mail:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="form__inputs autorization__inputs autorization__inputs--email">
                                                                         <input type="email" id="autorization_email" name="autorization_email" placeholder="order@web2book.ru" required><span class="sprite_icon-form_attention autorization__label--email_check">e-mail не существует</span>
                                                                       </div>
                                                                     </div>
-                                                                    <div class="autorization__field clearfix autorization__field--organization">
-                                                                      <label for="autorization_organization" class="autorization__label autorization__label--organization">Компания:</label>
-                                                                      <div class="autorization__inputs autorization__inputs--organization">
+                                                                    <div class="form__field autorization__field clearfix autorization__field--organization">
+                                                                      <label for="autorization_organization" class="form__label autorization__label autorization__label--organization">Компания:</label>
+                                                                      <div class="form__inputs autorization__inputs autorization__inputs--organization">
                                                                         <input type="text" id="autorization_organization" name="autorization_organization" placeholder="Компания">
                                                                       </div>
                                                                     </div>
-                                                                    <div class="autorization__field clearfix autorization__field--tel">
-                                                                      <label for="autorization_tel" class="autorization__label autorization__label--tel">Телефон:</label>
-                                                                      <div class="autorization__inputs autorization__inputs--tel">
+                                                                    <div class="form__field autorization__field clearfix autorization__field--tel">
+                                                                      <label for="autorization_tel" class="form__label autorization__label autorization__label--tel">Телефон:</label>
+                                                                      <div class="form__inputs form__inputs--tel autorization__inputs autorization__inputs--tel">
                                                                         <input type="hidden" id="autorization_tel" name="autorization_tel"><span>+7 (</span>
                                                                         <input type="text" id="autorization_tel_1" placeholder="963" pattern="[0-9]{3}"><span>)</span>
                                                                         <input type="text" id="autorization_tel_2" placeholder="1234093" pattern="[0-9]{7}">
                                                                       </div>
                                                                     </div>
-                                                                    <div class="autorization__field clearfix autorization__field--captcha">
-                                                                      <label for="autorization_captcha" class="autorization__label autorization__label--captcha">Введите текст с картинки:<span class="autorization__label--required">*</span></label>
-                                                                      <div class="autorization__inputs autorization__inputs--captcha">
+                                                                    <div class="form__field autorization__field clearfix autorization__field--captcha">
+                                                                      <label for="autorization_captcha" class="form__label autorization__label autorization__label--captcha">Введите текст с картинки:<span class="autorization__label--required">*</span></label>
+                                                                      <div class="form__inputs autorization__inputs autorization__inputs--captcha">
                                                                         <div class="clearfix autorization__captcha">
                                                                           <div class="autorization__captcha-img">
                                                                             <picture><img src="../../images/calculator/autorization/captcha/captcha@90.jpg 90w" width="90" srcset="../../images/calculator/autorization/captcha/captcha@135.jpg 135w, ../../images/calculator/autorization/captcha/captcha@180.jpg 180w, ../../images/calculator/autorization/captcha/captcha@270.jpg 270w" alt="captcha"/>
@@ -805,7 +805,7 @@
                                                       </div>
                                                       <div class="calculator__block--inner autorization_send-block">
                                                                     <p class="autorization__text">После заполнения обязательных полей или авторизации результаты расчёта стоимости будут отправлены на указанный e-mail</p>
-                                                                    <button type="submit" class="autorization__btn">Отправить рассчет</button>
+                                                                    <button type="submit" class="form__btn autorization__btn">Отправить рассчет</button>
                                                                     <p class="autorization__sign">Цены действительны в течение 30 дней с момента расчёта. Последнее обновление: 11 мая 2011</p>
                                                       </div>
                             </div>
@@ -822,7 +822,7 @@
                                                       </div>
                                                       <div class="calculator__block--inner result_send-block">
                                                                     <p class="result__text">После заполнения обязательных полей или авторизации результаты расчёта стоимости будут отправлены на указанный e-mail</p>
-                                                                    <button type="submit" class="result__btn">Рассчитать</button>
+                                                                    <button type="submit" class="form__btn result__btn">Рассчитать</button>
                                                       </div>
                             </div>
                           </fieldset>

@@ -181,12 +181,14 @@
 			position: absolute;
 			top: 0;
 			left: 0;
+			height: 100%;
 		}
 		
 		//элемент внутреннего слайдера
 		&__item {
 			position: relative;
 			float: left;
+			height: 100%;
 			cursor: pointer;
 			
 			//всплывающее описание отдельного элемента внутреннего слайдера, общее
@@ -288,7 +290,7 @@
 	//стили Наши услуги
 	&-services {
 		&__inner {
-			width: (2400px / 2);
+			width: 120%;
 		}
 		
 		&__item {
@@ -298,7 +300,7 @@
 				content: '';
 				position: absolute;
 				width: 1px;
-				height: 155px;
+				height: 75%;
 				background-color: #c6c6c6;
 				top: 20%;
 				right: 0;
@@ -317,7 +319,7 @@
 	//стили Типы скрепления
 	&-skreplenie {
 		&__inner {
-			width: (2432px / 2);
+			width: 122%;
 		}
 		
 		&__item {
@@ -346,7 +348,7 @@
 		}
 		
 		&__inner {
-			width: (3200px / 2);
+			width: 262.5%
 		}
 		
 		&__item {
@@ -526,5 +528,61 @@
 	
 	.offers-item__scroll {
 		display: none;
+	}
+}
+
+.offers--online-lib {
+	.offers {
+		&-slider {
+			&__item {height: 130px;}
+		}
+		
+		&-item {
+			&__img {margin: 0 auto;}
+			&-slider--products {width: 100%;}
+		}
+		
+		&-services {
+			&__inner {width: 175%;}
+			&__item {padding-top: 1%;}
+			
+			&__img {
+				position: absolute;
+				width: 65%;
+				top: 0;
+				left: -12%;
+			}
+			
+			.offers-item {
+				&__title, &__text {
+					margin-left: 35%;
+
+					&--pops {margin-left: 0;}
+				}
+			}
+		}
+		
+		&-products {
+			&__box {
+				padding: 0 2%;
+				
+				&:after {
+					background-image:
+						radial-gradient(100% 35% at 105%, rgba(0, 0, 0, 0.13), transparent),
+						radial-gradient(15% 49% at 101%, rgba(0, 0, 0, 0.25), transparent),
+						linear-gradient(to left, rgb(233, 233, 233), transparent 30%);
+				}
+			}
+			
+			&__scroll {width: 96%;}
+			&__inner {width: 120%;}
+			&__img {width: 75%;}
+			&__info {display: none;}
+		}
+		
+		&-skreplenie {
+			&__inner {width: 113%;}
+			&__img {width: 60%;}
+		}
 	}
 }

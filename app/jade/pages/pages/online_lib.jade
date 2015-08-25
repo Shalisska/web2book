@@ -1,16 +1,19 @@
-extends ../../layouts/online_lib
+extends ../../layouts/online-lib
 
 block variables
 	-var pageID = [1]
 	-var pageClass = 'online-lib'
-	-var specClass = 'sprite_icon-footer-clip--left sprite_icon-footer-clip--right'
+	-var specClass = 'online-lib__main'
 
 block scripts_upper
 
-block left-sidebar
-
 block content-top
 	include ../../blocks/index/offers
+	include ../../blocks/online_lib/header
+
+
+block left-sidebar
+	include ../../blocks/online_lib/left-column
 
 
 
