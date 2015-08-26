@@ -1,9 +1,9 @@
-var images_calc = {
+var images_form = {
     retina: [1, 1.5, 2, 3]
   , width: ['']
-  , files: 'spritesheet/sprite_calc/spritesheet@'
-  , files_css: 'sprite/sprite_calc/sprites@'
-  , sprite_name: 'sprite_calc'
+  , files: 'spritesheet/sprite_form/spritesheet@'
+  , files_css: 'sprite/sprite_form/sprites@'
+  , sprite_name: 'sprite_form'
   , spec_templ: [{
       name: 'print-arrow'
     , class: 'after'
@@ -258,6 +258,6 @@ function sprite_create(images) {
 };
 
 var sprite_build = sprite_create(images);
-var sprite_calc = sprite_create(images_calc);
+var sprite_form = sprite_create(images_form);
 
-module.exports = sprite_calc;
+module.exports = sprite_form;

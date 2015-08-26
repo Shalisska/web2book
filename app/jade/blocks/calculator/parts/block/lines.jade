@@ -1,3 +1,4 @@
 mixin lines(name)
-	.calculator__item.calculator__counter.clearfix(class=name)
-		+calc_counter(name, 312)
+	-var itemName = pageClass + '__counter'
+	.calculator__item.form__counter.clearfix(class=itemName + ' ' + name)
+		+form_counter(itemName, name, 312)

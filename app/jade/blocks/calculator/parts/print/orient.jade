@@ -1,28 +1,28 @@
 mixin print_orient(name, items)
-	.calculator__item.calculator__scroller(class=name)
+	-var itemName = pageClass + '__scroller'
+	.calculator__item.form__scroller(class=itemName + ' ' + name)
 		each item, i in items
 			if i===0
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
+				input.form__scroller-inputs(class=itemName + '-inputs' + ' ' + itemName + '-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val checked)
 			else
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
+				input.form__scroller-inputs(class=itemName + '-inputs' + ' ' + itemName + '-inputs--' + name type='radio' name=name id=name + '-' + item.id value=item.val)
 
-		ul.calculator__scroller-items.clearfix(class=name + '-items')
+		ul.form__scroller-items.clearfix(class=itemName + '-items' + ' ' + name + '-items')
 			each item in items
-				li.calculator__scroller-item(class=name + '-item' + ' ' + name + '-item--' + item.id)
-					.calculator__scroller-img(class=name + '-img' + ' ' + name + '-img--' + item.id)
+				li.form__scroller-item(class=itemName + '-item' + ' ' + name + '-item' + ' ' + name + '-item--' + item.id)
+					.form__scroller-img(class=itemName + '-img' + ' ' + name + '-img' + ' ' + name + '-img--' + item.id)
 							+picture({
 								name: item.name,
 								adress: '../images/calculator/' + name + '/' + name + '@',
 								ext: 'png'
 							}, {
 								main: {
-									width: 364,
-									img: 364
+									width: 364
 								}
 							})
-					.calculator__scroller-label-wrapper(class=name + '-label-wrapper')
-						label.calculator__scroller-label(class=name + '-label' for=name + '-' + item.id)
-					span.calculator__scroller-name(class=name + '-name')=item.name
+					.form__scroller-label-wrapper(class=itemName + '-label-wrapper' + ' ' + name + '-label-wrapper')
+						label.form__scroller-label(class=itemName + '-label' + ' ' + name + '-label' for=name + '-' + item.id)
+					span.form__scroller-name(class=itemName + '-name' + ' ' + name + '-name')=item.name
 
 
 

@@ -54,9 +54,9 @@ module.exports = function (grunt) {
 		'sprite'
 	]);
 	
-	grunt.registerTask('sprite_calc', [
-		'clean:sprite_calc',
-		'copy:sprite_calc',
+	grunt.registerTask('sprite_form', [
+		'clean:sprite_form',
+		'copy:sprite_form',
 		'sprite'
 	]);
 };

@@ -1,0 +1,142 @@
+.private_room {
+	&-header {
+		&-items {float: right;}
+		
+		&__menu {
+			clear: both;
+			
+			&-part {
+				.reset-ul();
+			}
+			
+			&--top {border-bottom: 3px solid #57bff5;}
+			
+			&--bottom {
+				padding: 0.5em;
+				background: #41454d;
+			}
+			
+			&-item {
+				float: left;
+				
+				&_name {
+					.reset-a();
+					position: relative;
+					display: block;
+					text-transform: uppercase;
+					font-family: @font-bold;
+					cursor: pointer;
+					
+					&--top {
+						padding: 0.9em 1.4em 0.5em;
+						
+						&:after {
+							content: '';
+							position: absolute;
+							left: 1.4em;
+							right: 1.4em;
+							bottom: 0.3em;
+							border-bottom: 1px dashed #5b5a5a;
+						}
+					}
+					
+					&--bottom {
+						padding: 0.7em 1.4em;
+						border-radius: 4px;
+					}
+				}
+				
+				&--top {
+					color: #6b7180;
+					
+					&--active {
+						position: relative;
+						color: white;
+						
+						&:after {
+							content: '';
+							position: absolute;
+							background: #41454d;
+							left: 50%;
+							margin-left: -0.25em;
+							bottom: -0.5em;
+							width: 0.5em;
+							height: 0.5em;
+							transform: rotate(45deg);
+						}
+						
+						a {
+							background: linear-gradient(to top, #57bff5 35%, #46a6eb);
+							border-radius: 6px 6px 0 0;
+							border: 1px solid #57bff5;
+							
+							&:after {display: none;}
+						}
+					}
+				}
+				
+				&--bottom {
+					margin-right: 0.5em;
+					color: white;
+					
+					&:hover, &:active, &--active {
+						color: #41454d;
+						
+						a {
+							background: white;
+							box-shadow: inset 0 1px 0 0 #e5e5e6;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	&-page_controls {
+		padding: 35px 0 50px;
+		color: white;
+	}
+	
+	&-page__btn {
+		.reset-a();
+		width: 140px;
+		height: 41px;
+		font-size: 24px;
+		line-height: 37px;
+		vertical-align: middle;
+		
+		&--next {
+			float: right;
+			padding-left: 30px;
+		}
+	}
+	
+	&-personal {
+		padding: 2.86em 1.43em 0;
+		border: 1px solid #ccc;
+		border-top: none;
+		border-radius: 0 0 7px 7px;
+		
+		&__form {
+			border-bottom: 2px solid #ccc;
+			padding-bottom: 6.43em;
+		}
+		
+		&__label {
+			width: 11.64em;
+			margin-right: 1em;
+		}
+		
+		&__inputs {width: 13.92em;}
+		
+		&__btn {
+			margin-top: 1.5em;
+			margin-left: 6.32em;
+		}
+		
+		&__title {
+			margin-top: 1.2em;
+			margin-bottom: 0.3em;
+		}
+	}
+}

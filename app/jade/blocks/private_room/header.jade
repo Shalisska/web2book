@@ -2,29 +2,29 @@ mixin private_room_menu(name)
 	-var tree = private_room_tree[0]
 	-var top = pageID[1] - 1
 	-var active
-	ul(class = name + '-part' + ' ' + name + '--top')
+	ul.clearfix(class = name + '-part' + ' ' + name + '--top')
 		each item, i in tree.next
 			if i === top
-				-active = ' ' + name + '-item_top--active'
+				-active = ' ' + name + '-item--top--active'
 			else
 				-active = ''
-			li(class = name + '-item' + ' ' + name + '-item_top' + active)
-				a(class = name + '-item_name' + ' ' + name + '-item-name_top')=item.name
+			li(class = name + '-item' + ' ' + name + '-item--top' + active)
+				a(class = name + '-item_name' + ' ' + name + '-item_name--top')=item.name
 	
 	each item, i in tree.next
 		if i === top && item.next
-			ul(class = name + '-part' + ' ' + name + '--bottom')
+			ul.clearfix(class = name + '-part' + ' ' + name + '--bottom')
 				each elem, j in item.next
 					if j === pageID[2] - 1
-						-active = ' ' + name + '-item_bottom--active'
+						-active = ' ' + name + '-item--bottom--active'
 					else
 						-active = ''
-					li(class = name + '-item' + ' ' + name + '-item_bottom' + active)
-						a(class = name + '-item_name' + ' ' + name + '-item-name_bottom')=elem.name
+					li(class = name + '-item' + ' ' + name + '-item--bottom' + active)
+						a(class = name + '-item_name' + ' ' + name + '-item_name--bottom')=elem.name
 
 
 header(class = pageClass + '-header')
 	div(class = pageClass + '-header-items')
 		img(src=filesPath + '../images/private_room/common/header-disk.png')
 	nav(class = pageClass + '-header__menu')
-		+private_room_menu(pageClass)
+		+private_room_menu(pageClass + '-header__menu')

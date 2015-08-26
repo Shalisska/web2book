@@ -1,6 +1,7 @@
 mixin block_paper_inner(name, items)
-	.calculator__item.calculator__ruler(class=name)
-		+calc_ruler(name, items, 3)
+	-var itemName = pageClass + '__ruler'
+	.calculator__item.form__ruler(class=itemName + ' ' + name)
+		+form_ruler(itemName, name, items, 3)
 
 mixin block_paper(name)
 	+block_paper_inner(name, [70, 80, 130, 150, 170, 200, 250, 300])

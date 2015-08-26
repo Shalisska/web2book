@@ -24,8 +24,8 @@ mixin calc(items)
 				h2.calculator__title=item.name
 			
 				if (item.id == 'cover' || item.id == 'inset')
-					.calculator__switcher(class='calculator__switcher--' + item.id)
-						+calc_switcher([{
+					.form__switcher(class=pageClass + '__switcher' + ' ' + pageClass + '__switcher--' + item.id)
+						+form_switcher(pageClass + '__switcher',[{
 							id: item.id,
 							obj: item
 						}])

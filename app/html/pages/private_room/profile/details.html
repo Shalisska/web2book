@@ -4,12 +4,12 @@
     <title>web2book</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/style.css" rel="stylesheet">
-    <script src="../../scripts/libs/modernizr.custom.05259.js"></script>
-    <script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
-    <script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
-    <script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
-    <script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
+    <link href="../../../../css/style.css" rel="stylesheet">
+    <script src="../../../../scripts/libs/modernizr.custom.05259.js"></script>
+    <script src="../../../../scripts/libs/jquery-1.11.3.min.js"></script>
+    <script src="../../../../scripts/libs/jquery.viewportchecker.min.js"></script>
+    <script src="../../../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
+    <script src="../../../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
   </head>
   <body>
     <svg width="0" height="0" class="svg-container">
@@ -26,7 +26,7 @@
               </div>
               <div class="header-logo"><a href="#">
                   <picture>
-                    <source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w"/><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book"/>
+                    <source media="(max-width: 460px)" srcset="../../../../images/logo/logo@152.png 152w, ../../../../images/logo/logo@228.png 228w, ../../../../images/logo/logo@304.png 304w, ../../../../images/logo/logo@456.png 456w"/><img src="../../../../images/logo/logo@210.png 210w" width="210" srcset="../../../../images/logo/logo@315.png 315w, ../../../../images/logo/logo@420.png 420w, ../../../../images/logo/logo@630.png 630w" alt="web2book"/>
                   </picture></a></div>
                         <nav class="header-autorization">
                           <ul class="clearfix">
@@ -121,29 +121,81 @@
         <div class="container container--main container--private_room">
           <ul class="breadcrumbs clearfix">
             <li class="breadcrumbs__item"><a href="#" class="sprite_icon-home--blue"></a></li>
-            <li class="breadcrumbs__item breadcrumbs__item--next"><a href="#">Личный кабинет<span>⌵</span></a>
-              <ul class="menu_inner menu_inner--lvl1 breadcrumbs_inner breadcrumbs--lvl1">
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Профиль клиента</a>
-                  <ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Персональные данные</a></li>
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Реквизиты юр. и физ. лица</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Управление файлами</a></li>
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Создание, редактирование проекта</a></li>
-              </ul>
-            </li>
+            <li class="breadcrumbs__item"><a href="#">Личный кабинет<span>⌵</span></a></li>
+            <li class="breadcrumbs__item"><a href="#">Профиль клиента<span>⌵</span></a></li>
+            <li class="breadcrumbs__item"><a href="#">Реквизиты юр. и физ. лица</a></li>
           </ul>
           <header class="private_room-header">
-            <div class="private_room-header-items"><img src="../../images/private_room/common/header-disk.png"></div>
+            <div class="private_room-header-items"><img src="../../../../images/private_room/common/header-disk.png"></div>
             <nav class="private_room-header__menu">
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
+                        <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Персональные данные</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Реквизиты юр. и физ. лица</a></li>
+                        </ul>
             </nav>
           </header>
+          <div class="private_room-personal">
+            <form action="#" method="post" name="personal" class="private_room-personal__form">
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--login">
+                          <label for="private_room-personal_login" class="form__label private_room-personal__label private_room-personal__label--login">Логин:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--login">
+                            <input type="text" id="private_room-personal_login" name="private_room-personal_login" placeholder="IWCcompany">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--email">
+                          <label for="private_room-personal_email" class="form__label private_room-personal__label private_room-personal__label--email">E-mail:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--email">
+                            <input type="email" id="private_room-personal_email" name="private_room-personal_email" placeholder="iwc@gmail.com">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--surname">
+                          <label for="private_room-personal_surname" class="form__label private_room-personal__label private_room-personal__label--surname">Фамилия:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--surname">
+                            <input type="text" id="private_room-personal_surname" name="private_room-personal_surname" placeholder="Хмельнов">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--name">
+                          <label for="private_room-personal_name" class="form__label private_room-personal__label private_room-personal__label--name">Имя:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--name">
+                            <input type="text" id="private_room-personal_name" name="private_room-personal_name" placeholder="Эдуард">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--patronymic">
+                          <label for="private_room-personal_patronymic" class="form__label private_room-personal__label private_room-personal__label--patronymic">Отчество:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--patronymic">
+                            <input type="text" id="private_room-personal_patronymic" name="private_room-personal_patronymic" placeholder="Зигмундович">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--tel">
+                          <label for="private_room-personal_tel" class="form__label private_room-personal__label private_room-personal__label--tel">Телефон:</label>
+                          <div class="form__inputs form__inputs--tel private_room-personal__inputs private_room-personal__inputs--tel">
+                            <input type="hidden" id="private_room-personal_tel" name="private_room-personal_tel"><span>+7 (</span>
+                            <input type="text" id="private_room-personal_tel_1" placeholder="920" pattern="[0-9]{3}"><span>)</span>
+                            <input type="text" id="private_room-personal_tel_2" placeholder="591-34-63" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                          </div>
+                        </div>
+              <p class="title--h3 private_room-personal__title">Изменение пароля</p>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--new_pass">
+                          <label for="private_room-personal_new_pass" class="form__label private_room-personal__label private_room-personal__label--new_pass">Новый пароль:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--new_pass">
+                            <input type="text" id="private_room-personal_new_pass" name="private_room-personal_new_pass">
+                          </div>
+                        </div>
+                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--repeat_pass">
+                          <label for="private_room-personal_repeat_pass" class="form__label private_room-personal__label private_room-personal__label--repeat_pass">Повторите:</label>
+                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--repeat_pass">
+                            <input type="text" id="private_room-personal_repeat_pass" name="private_room-personal_repeat_pass" required>
+                          </div>
+                        </div>
+              <button type="submit" class="form__btn private_room-personal__btn">Сохранить изменения</button>
+            </form>
+            <div class="private_room-page_controls clearfix"><a href="#" class="private_room-page__btn private_room-page__btn--next sprite_form sprite_icon-private_room_arrow--next">Далее</a></div>
+          </div>
         </div>
       </main>
       <div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
@@ -236,23 +288,23 @@
               <div class="footer__title">Принимаем к оплате</div>
               <div class="footer__block"><a href="/" class="footer-pay__item footer-pay__item--maestro">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro"/>
                               </picture></a><a href="/" class="footer-pay__item footer-pay__item--mastercard">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard"/>
                               </picture></a><a href="/" class="footer-pay__item footer-pay__item--visa">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa"/>
                               </picture></a>
                             <div class="footer-pay__item-row"></div><a href="/" class="footer-pay__item footer-pay__item--paypal">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal"/>
                               </picture></a><a href="/" class="footer-pay__item footer-pay__item--webmoney">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney"/>
                               </picture></a><a href="/" class="footer-pay__item footer-pay__item--qiwi">
                               <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi"/>
+                                <source media="(max-width: 650px)" srcset="../../../../images/footer/pay/footer-pay@540.png 540w, ../../../../images/footer/pay/footer-pay@810.png 810w, ../../../../images/footer/pay/footer-pay@1080.png 1080w, ../../../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../../../images/footer/pay/footer-pay@1152.png 1152w, ../../../../images/footer/pay/footer-pay@1536.png 1536w, ../../../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi"/>
                               </picture></a>
               </div>
             </div>
@@ -272,7 +324,7 @@
             <div class="footer-qr">
               <div class="footer__title">QR-код</div>
               <div class="footer__block">
-                <picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
+                <picture><img src="../../../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../../../images/footer/qr-code/qr-code@132.jpg 132w, ../../../../images/footer/qr-code/qr-code@176.jpg 176w, ../../../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
                 </picture>
               </div>
             </div>
@@ -282,5 +334,5 @@
       </div>
     </div><a href="#" class="scrollTop">Наверх</a>
   </body>
-  <script src="../../scripts/common.js"></script>
+  <script src="../../../../scripts/common.js"></script>
 </html>

@@ -1,6 +1,7 @@
 mixin cover_effects(name, obj)
-	.calculator__item.calculator__switcher.clearfix(class=name)
-		+calc_switcher([{
+	-var itemName = pageClass + '__switcher'
+	.calculator__item.form__switcher.clearfix(class=itemName + ' ' + name)
+		+form_switcher(itemName, [{
 			name_main: name,
 			id: name + '-convex',
 			obj: obj.convex
@@ -9,15 +10,14 @@ mixin cover_effects(name, obj)
 			id: name + '-stamping',
 			obj: obj.stamping
 		}])
-		.calculator__switcher-img(class=name + '-items')
+		.form__switcher-img(class=itemName + '-img' + ' ' + name + '-items')
 			+picture({
 				name: 'Эффекты нанесения',
 				adress: '../images/calculator/' + name + '/' + name + '@',
 				ext: 'png'
 			}, {
 				main: {
-					width: 128,
-					img: 128
+					width: 128
 				}
 			})
 

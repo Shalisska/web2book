@@ -1,28 +1,40 @@
 var retina_size = [1, 1.5, 2, 3];
 
-var sprite_calc_arr = [{
-	img_dir: 'calculator/print_pages/sprite',
+var sprite_form_arr = [{
+	img_dir: 'form/sprite/print-arrow',
 	dest: [{
 		width: 0,
 		retina: 16
 	}]
 }, {
-	img_dir: 'calculator/sprite/ruler-thumb',
+	img_dir: 'form/sprite/ruler-thumb',
 	dest: [{
 		width: 0,
 		retina: 18
 	}]
 }, {
-	img_dir: 'calculator/sprite/counter-arrow',
+	img_dir: 'form/sprite/counter-arrow',
 	dest: [{
 		width: 0,
 		retina: 18
 	}]
 }, {
-	img_dir: 'calculator/autorization/sprite',
+	img_dir: 'form/sprite/captcha_refresh',
 	dest: [{
 		width: 0,
 		retina: 12
+	}]
+}, {
+	img_dir: 'form/sprite/form_attention',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
+}, {
+	img_dir: 'form/sprite/private_room_arrows',
+	dest: [{
+		width: 0,
+		retina: 140
 	}]
 }];
 
@@ -302,7 +314,7 @@ function sprite_cr(items) {
 };
 
 var sprite_files = sprite_cr(obj_sorting(sprite_arr));
-var sprite_calc_copy = sprite_cr(obj_sorting(sprite_calc_arr));
+var sprite_form_copy = sprite_cr(obj_sorting(sprite_form_arr));
 
 module.exports = {
 	build: {
@@ -330,7 +342,7 @@ module.exports = {
 	build_sprite: {
 		files: sprite_files
 	},
-	sprite_calc: {
-		files: sprite_calc_copy
+	sprite_form: {
+		files: sprite_form_copy
 	}
 };

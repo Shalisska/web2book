@@ -21,8 +21,8 @@ mixin circulation_total(name)
 		span.calculator__total-value 312
 
 mixin circulation_copies(name)
-	.calculator__item.calculator__counter(class=name)
-		+calc_counter(name, 50000)
+	.calculator__item.form__counter(class=pageClass + '__counter' + ' ' + name)
+		+form_counter(pageClass + '__counter', name, 50000)
 
 
 mixin circulation(name)

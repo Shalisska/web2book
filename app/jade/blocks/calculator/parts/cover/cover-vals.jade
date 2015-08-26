@@ -1,28 +1,28 @@
 mixin cover_cover_vals(name, items)
-	.calculator__item.calculator__scroller(class=name + ' ' + name + '-vals')
+	-var itemName = pageClass + '__scroller'
+	.calculator__item.form__scroller(class=itemName + ' ' + name + ' ' + name + '-vals')
 		each item, i in items
 			if i===0
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val checked)
+				input.form__scroller-inputs(class=itemName + '-inputs' + ' ' + itemName + '-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val checked)
 			else
-				input.calculator__scroller-inputs(class='calculator__scroller-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val)
+				input.form__scroller-inputs(class=itemName + '-inputs' + ' ' + itemName + '-inputs--' + name type='radio' name=name + '-vals' id=name + '-' + item.id value=item.val)
 
-		ul.calculator__scroller-items.clearfix(class=name + '-items')
+		ul.form__scroller-items.clearfix(class=itemName + '-items' + ' ' + name + '-items')
 			each item in items
-				li.calculator__scroller-item.clearfix(class=name + '-item' + ' ' + name + '-item--' + item.id)
-					.calculator__scroller-img(class=name + '-img' + ' ' + name + '-img--' + item.id)
+				li.form__scroller-item(class=itemName + '-item' + ' ' + name + '-item' + ' ' + name + '-item--' + item.id)
+					.form__scroller-img(class=itemName + '-img' + ' ' + name + '-img' + ' ' + name + '-img--' + item.id)
 							+picture({
 								name: item.name,
 								adress: '../images/calculator/' + name + '/vals/' + name + '-vals@',
 								ext: 'png'
 							}, {
 								main: {
-									width: 688,
-									img: 688
+									width: 688
 								}
 							})
-					.calculator__scroller-label-wrapper(class=name + '-label-wrapper' + ' ' + name + '-label-wrapper--' + item.id)
-						label.calculator__scroller-label(class=name + '-label' + ' ' + name + '-label--' + item.id for=name + '-' + item.id)
-					span.calculator__scroller-name(class=name + '-name' + ' ' + name + '-name--' + item.id)=item.name
+					.form__scroller-label-wrapper(class=itemName + '-label-wrapper' + ' ' + name + '-label-wrapper' + ' ' + name + '-label-wrapper--' + item.id)
+						label.form__scroller-label(class=itemName + '-label' + ' ' + name + '-label' + ' ' + name + '-label--' + item.id for=name + '-' + item.id)
+					span.form__scroller-name(class=itemName + '-name' + ' ' + name + '-name' + ' ' + name + '-name--' + item.id)=item.name
 
 
 mixin cover_vals(name)
