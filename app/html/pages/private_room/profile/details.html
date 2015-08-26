@@ -139,62 +139,91 @@
                         </ul>
             </nav>
           </header>
-          <div class="private_room-personal">
-            <form action="#" method="post" name="personal" class="private_room-personal__form">
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--login">
-                          <label for="private_room-personal_login" class="form__label private_room-personal__label private_room-personal__label--login">Логин:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--login">
-                            <input type="text" id="private_room-personal_login" name="private_room-personal_login" placeholder="IWCcompany">
+          <div class="private_room-profile private_room-profile--details">
+            <form action="#" method="post" name="details" class="private_room-profile__form private_room-profile__form--details">
+              <fieldset class="private_room-profile__form-part private_room-profile__form-part--details">
+                <p class="title--h3 private_room-profile__title private_room-profile__title--details">Общие данные контрагента</p>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--name_full">
+                            <label for="private_room-profile_name_full" class="form__label private_room-profile__label private_room-profile__label--name_full">Полное наименование:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--name_full">
+                              <input type="text" id="private_room-profile_name_full" name="private_room-profile_name_full" placeholder="IWCcompany">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--email">
-                          <label for="private_room-personal_email" class="form__label private_room-personal__label private_room-personal__label--email">E-mail:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--email">
-                            <input type="email" id="private_room-personal_email" name="private_room-personal_email" placeholder="iwc@gmail.com">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--name">
+                            <label for="private_room-profile_name" class="form__label private_room-profile__label private_room-profile__label--name">Краткое наименование:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--name">
+                              <input type="text" id="private_room-profile_name" name="private_room-profile_name" placeholder="IWC">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--surname">
-                          <label for="private_room-personal_surname" class="form__label private_room-personal__label private_room-personal__label--surname">Фамилия:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--surname">
-                            <input type="text" id="private_room-personal_surname" name="private_room-personal_surname" placeholder="Хмельнов">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--inn">
+                            <label for="private_room-profile_inn" class="form__label private_room-profile__label private_room-profile__label--inn">ИНН:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--inn">
+                              <input type="text" id="private_room-profile_inn" name="private_room-profile_inn" placeholder="456988 863232 944">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--name">
-                          <label for="private_room-personal_name" class="form__label private_room-personal__label private_room-personal__label--name">Имя:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--name">
-                            <input type="text" id="private_room-personal_name" name="private_room-personal_name" placeholder="Эдуард">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--kpp">
+                            <label for="private_room-profile_kpp" class="form__label private_room-profile__label private_room-profile__label--kpp">КПП:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--kpp">
+                              <input type="text" id="private_room-profile_kpp" name="private_room-profile_kpp" placeholder="6513218421">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--patronymic">
-                          <label for="private_room-personal_patronymic" class="form__label private_room-personal__label private_room-personal__label--patronymic">Отчество:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--patronymic">
-                            <input type="text" id="private_room-personal_patronymic" name="private_room-personal_patronymic" placeholder="Зигмундович">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--okpo">
+                            <label for="private_room-profile_okpo" class="form__label private_room-profile__label private_room-profile__label--okpo">Код по ОКПО:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--okpo">
+                              <input type="text" id="private_room-profile_okpo" name="private_room-profile_okpo" placeholder="564653266846">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--tel">
-                          <label for="private_room-personal_tel" class="form__label private_room-personal__label private_room-personal__label--tel">Телефон:</label>
-                          <div class="form__inputs form__inputs--tel private_room-personal__inputs private_room-personal__inputs--tel">
-                            <input type="hidden" id="private_room-personal_tel" name="private_room-personal_tel"><span>+7 (</span>
-                            <input type="text" id="private_room-personal_tel_1" placeholder="920" pattern="[0-9]{3}"><span>)</span>
-                            <input type="text" id="private_room-personal_tel_2" placeholder="591-34-63" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--adress_reg">
+                            <label for="private_room-profile_adress_reg" class="form__label private_room-profile__label private_room-profile__label--adress_reg">Юридический адрес:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--adress_reg">
+                              <input type="text" id="private_room-profile_adress_reg" name="private_room-profile_adress_reg" placeholder="г. Москва, 2-й Котляковcкий и тд и тп">
+                            </div>
                           </div>
-                        </div>
-              <p class="title--h3 private_room-personal__title">Изменение пароля</p>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--new_pass">
-                          <label for="private_room-personal_new_pass" class="form__label private_room-personal__label private_room-personal__label--new_pass">Новый пароль:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--new_pass">
-                            <input type="text" id="private_room-personal_new_pass" name="private_room-personal_new_pass">
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--adress_fact">
+                            <label for="private_room-profile_adress_fact" class="form__label private_room-profile__label private_room-profile__label--adress_fact">Фактический адрес:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--adress_fact">
+                              <input type="text" id="private_room-profile_adress_fact" name="private_room-profile_adress_fact" placeholder="г.Москва ул. Котляковская ул. Котляковская ул. Котляковская ул. Котляковская">
+                            </div>
                           </div>
-                        </div>
-                        <div class="form__field clearfix private_room-personal__field private_room-personal__field--repeat_pass">
-                          <label for="private_room-personal_repeat_pass" class="form__label private_room-personal__label private_room-personal__label--repeat_pass">Повторите:</label>
-                          <div class="form__inputs private_room-personal__inputs private_room-personal__inputs--repeat_pass">
-                            <input type="text" id="private_room-personal_repeat_pass" name="private_room-personal_repeat_pass" required>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--tel">
+                            <label for="private_room-profile_tel" class="form__label private_room-profile__label private_room-profile__label--tel">Телефон:</label>
+                            <div class="form__inputs form__inputs--tel private_room-profile__inputs private_room-profile__inputs--tel">
+                              <input type="hidden" id="private_room-profile_tel" name="private_room-profile_tel"><span>+7 (</span>
+                              <input type="text" id="private_room-profile_tel_1" placeholder="495" pattern="[0-9]{3}"><span>)</span>
+                              <input type="text" id="private_room-profile_tel_2" placeholder="276-45-98" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                            </div>
                           </div>
-                        </div>
-              <button type="submit" class="form__btn private_room-personal__btn">Сохранить изменения</button>
+              </fieldset>
+              <fieldset class="private_room-profile__form-part private_room-profile__form-part--details">
+                <p class="private_room-profile__point private_room-profile__point--details">Основной банковский счет</p>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--account">
+                            <label for="private_room-profile_account" class="form__label private_room-profile__label private_room-profile__label--account">Номер счета:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--account">
+                              <input type="text" id="private_room-profile_account" name="private_room-profile_account" placeholder="74513389554225">
+                            </div>
+                          </div>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--bank_name">
+                            <label for="private_room-profile_bank_name" class="form__label private_room-profile__label private_room-profile__label--bank_name">Наименование банка:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--bank_name">
+                              <input type="text" id="private_room-profile_bank_name" name="private_room-profile_bank_name" placeholder="Сбербанк">
+                            </div>
+                          </div>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--bank_bik">
+                            <label for="private_room-profile_bank_bik" class="form__label private_room-profile__label private_room-profile__label--bank_bik">БИК банка:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--bank_bik">
+                              <input type="text" id="private_room-profile_bank_bik" name="private_room-profile_bank_bik" placeholder="42238733613331313">
+                            </div>
+                          </div>
+                          <div class="form__field clearfix private_room-profile__field private_room-profile__field--account_corr">
+                            <label for="private_room-profile_account_corr" class="form__label private_room-profile__label private_room-profile__label--account_corr">Корю счет банка:</label>
+                            <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--account_corr">
+                              <input type="text" id="private_room-profile_account_corr" name="private_room-profile_account_corr" placeholder="3213589832615">
+                            </div>
+                          </div>
+              </fieldset>
+              <button type="submit" class="form__btn private_room-profile__btn">Сохранить изменения</button>
             </form>
-            <div class="private_room-page_controls clearfix"><a href="#" class="private_room-page__btn private_room-page__btn--next sprite_form sprite_icon-private_room_arrow--next">Далее</a></div>
+            <div class="private_room-page_controls clearfix"><a href="#" class="private_room-page__btn private_room-page__btn--prev sprite_form sprite_icon-private_room_arrow--prev">Назад</a></div>
           </div>
         </div>
       </main>

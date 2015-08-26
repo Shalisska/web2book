@@ -24,54 +24,76 @@ mixin personal_data(name, items)
 						else
 							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text)
 
-div(class=pageClass + '-personal')
-	form(class=pageClass + '-personal__form' action='#' method='post' name='personal')
-		+personal_data(pageClass + '-personal', [{
-							id: 'login',
-							name: 'Логин',
-							text: 'IWCcompany'
-						}, {
-							id: 'email',
-							name: 'E-mail',
-							type: 'email',
-							text: 'iwc@gmail.com'
-						}, {
-							id: 'surname',
-							name: 'Фамилия',
-							text: 'Хмельнов'
-						}, {
-							id: 'name',
-							name: 'Имя',
-							text: 'Эдуард'
-						}, {
-							id: 'patronymic',
-							name: 'Отчество',
-							text: 'Зигмундович'
-						}, {
-							name: 'Телефон',
-							id: 'tel',
-							data: [{
-								id: 'tel_1',
-								pattern: '[0-9]{3}',
-								text: 920
+div(class=pageClass + '-profile' + ' ' +pageClass + '-profile--details')
+	form(class=pageClass + '-profile__form' + ' ' + pageClass + '-profile__form--details' action='#' method='post' name='details')
+		fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--details')
+			p.title--h3(class=pageClass + '-profile__title' + ' ' + pageClass + '-profile__title--details') Общие данные контрагента
+			+personal_data(pageClass + '-profile', [{
+								id: 'name_full',
+								name: 'Полное наименование',
+								text: 'IWCcompany'
 							}, {
-								id: 'tel_2',
-								pattern: '[0-9]{3}-[0-9]{2}-[0-9]{2}',
-								text: '591-34-63'
-							}]
-						}])
-		p.title--h3(class=pageClass + '-personal__title') Изменение пароля
-		+personal_data(pageClass + '-personal', [{
-						id: 'new_pass',
-						name: 'Новый пароль'
-					}, {
-						id: 'repeat_pass',
-						name: 'Повторите',
-						required: 1
-					}])
-		button.form__btn(class=pageClass + '-personal__btn' type='submit') Сохранить изменения
+								id: 'name',
+								name: 'Краткое наименование',
+								text: 'IWC'
+							}, {
+								id: 'inn',
+								name: 'ИНН',
+								type: 'text',
+								pattern: '[0-9]{6} [0-9]{6} [0-9]{3}',
+								text: '456988 863232 944'
+							}, {
+								id: 'kpp',
+								name: 'КПП',
+								text: '6513218421'
+							}, {
+								id: 'okpo',
+								name: 'Код по ОКПО',
+								text: '564653266846'
+							}, {
+								id: 'adress_reg',
+								name: 'Юридический адрес',
+								text: 'г. Москва, 2-й Котляковcкий и тд и тп'
+							}, {
+								id: 'adress_fact',
+								name: 'Фактический адрес',
+								text: 'г.Москва ул. Котляковская ул. Котляковская ул. Котляковская ул. Котляковская'
+							}, {
+								name: 'Телефон',
+								id: 'tel',
+								data: [{
+									id: 'tel_1',
+									pattern: '[0-9]{3}',
+									text: 495
+								}, {
+									id: 'tel_2',
+									pattern: '[0-9]{3}-[0-9]{2}-[0-9]{2}',
+									text: '276-45-98'
+								}]
+							}])
+							
+		fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--details')
+			p(class=pageClass + '-profile__point' + ' ' + pageClass + '-profile__point--details') Основной банковский счет
+			+personal_data(pageClass + '-profile', [{
+								id: 'account',
+								name: 'Номер счета',
+								text: '74513389554225'
+							}, {
+								id: 'bank_name',
+								name: 'Наименование банка',
+								text: 'Сбербанк'
+							}, {
+								id: 'bank_bik',
+								name: 'БИК банка',
+								text: '42238733613331313'
+							}, {
+								id: 'account_corr',
+								name: 'Корю счет банка',
+								text: '3213589832615'
+							}])
+		button.form__btn(class=pageClass + '-profile__btn' type='submit') Сохранить изменения
 	
 	.private_room-page_controls.clearfix
-		a.private_room-page__btn.private_room-page__btn--next.sprite_form.sprite_icon-private_room_arrow--next(href='#') Далее
+		a.private_room-page__btn.private_room-page__btn--prev.sprite_form.sprite_icon-private_room_arrow--prev(href='#') Назад
 
 
