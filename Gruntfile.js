@@ -59,4 +59,10 @@ module.exports = function (grunt) {
 		'copy:sprite_form',
 		'sprite'
 	]);
+	
+	grunt.registerTask('sprite_private', [
+		'clean:sprite_private',
+		'copy:sprite_private',
+		'sprite'
+	]);
 };

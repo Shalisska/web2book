@@ -24,57 +24,53 @@ mixin personal_data(name, items)
 						else
 							input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text)
 
-div(class=pageClass + '-profile' + ' ' +pageClass + '-profile--personal')
-	form(class=pageClass + '-profile__form' + ' ' + pageClass + '-profile__form--personal' action='#' method='post' name='personal')
-		fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--personal')
-			+personal_data(pageClass + '-profile', [{
-								id: 'login',
-								name: 'Логин',
-								text: 'IWCcompany'
-							}, {
-								id: 'email',
-								name: 'E-mail',
-								type: 'email',
-								text: 'iwc@gmail.com'
-							}, {
-								id: 'surname',
-								name: 'Фамилия',
-								text: 'Хмельнов'
-							}, {
-								id: 'name',
-								name: 'Имя',
-								text: 'Эдуард'
-							}, {
-								id: 'patronymic',
-								name: 'Отчество',
-								text: 'Зигмундович'
-							}, {
-								name: 'Телефон',
-								id: 'tel',
-								data: [{
-									id: 'tel_1',
-									pattern: '[0-9]{3}',
-									text: 920
-								}, {
-									id: 'tel_2',
-									pattern: '[0-9]{3}-[0-9]{2}-[0-9]{2}',
-									text: '591-34-63'
-								}]
-							}])
-		
-		fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--personal')
-			p.title--h3(class=pageClass + '-profile__title' + ' ' + pageClass + '-profile__title--personal') Изменение пароля
-			+personal_data(pageClass + '-profile', [{
-							id: 'new_pass',
-							name: 'Новый пароль'
+form(class=pageClass + '-profile__form' + ' ' + pageClass + '-profile__form--personal' action='#' method='post' name='personal')
+	fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--personal')
+		+personal_data(pageClass + '-profile', [{
+							id: 'login',
+							name: 'Логин',
+							text: 'IWCcompany'
 						}, {
-							id: 'repeat_pass',
-							name: 'Повторите',
-							required: 1
+							id: 'email',
+							name: 'E-mail',
+							type: 'email',
+							text: 'iwc@gmail.com'
+						}, {
+							id: 'surname',
+							name: 'Фамилия',
+							text: 'Хмельнов'
+						}, {
+							id: 'name',
+							name: 'Имя',
+							text: 'Эдуард'
+						}, {
+							id: 'patronymic',
+							name: 'Отчество',
+							text: 'Зигмундович'
+						}, {
+							name: 'Телефон',
+							id: 'tel',
+							data: [{
+								id: 'tel_1',
+								pattern: '[0-9]{3}',
+								text: 920
+							}, {
+								id: 'tel_2',
+								pattern: '[0-9]{3}-[0-9]{2}-[0-9]{2}',
+								text: '591-34-63'
+							}]
 						}])
-		button.form__btn(class=pageClass + '-profile__btn' type='submit') Сохранить изменения
-	
-	.private_room-page_controls.clearfix
-		a.private_room-page__btn.private_room-page__btn--next.sprite_form.sprite_icon-private_room_arrow--next(href='#') Далее
+
+	fieldset(class=pageClass + '-profile__form-part' + ' ' + pageClass + '-profile__form-part--personal')
+		p.title--h3(class=pageClass + '-profile__title' + ' ' + pageClass + '-profile__title--personal') Изменение пароля
+		+personal_data(pageClass + '-profile', [{
+						id: 'new_pass',
+						name: 'Новый пароль'
+					}, {
+						id: 'repeat_pass',
+						name: 'Повторите',
+						required: 1
+					}])
+	button.form__btn(class=pageClass + '-profile__btn' type='submit') Сохранить изменения
 
 

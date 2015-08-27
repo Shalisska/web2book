@@ -1,3 +1,24 @@
+var images_private = {
+    retina: [1, 1.5, 2, 3]
+  , width: ['']
+  , files: 'spritesheet/sprite_private_room/spritesheet@'
+  , files_css: 'sprite/sprite_private_room/sprites@'
+  , sprite_name: 'sprite_private_room'
+  , spec_templ: [{
+      name: 'arrow--down'
+    , class: 'before'
+    }, {
+      name: 'download_cloud'
+    , class: 'before'
+    }, {
+      name: 'download_load'
+    , class: 'before'
+    }, {
+      name: 'windows'
+    , class: 'before'
+    }]
+};
+
 var images_form = {
     retina: [1, 1.5, 2, 3]
   , width: ['']
@@ -259,5 +280,6 @@ function sprite_create(images) {
 
 var sprite_build = sprite_create(images);
 var sprite_form = sprite_create(images_form);
+var sprite_private = sprite_create(images_private);
 
-module.exports = sprite_form;
+module.exports = sprite_private;

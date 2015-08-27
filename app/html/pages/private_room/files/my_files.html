@@ -122,83 +122,119 @@
           <ul class="breadcrumbs clearfix">
             <li class="breadcrumbs__item"><a href="#" class="sprite_icon-home--blue"></a></li>
             <li class="breadcrumbs__item"><a href="#">Личный кабинет<span>⌵</span></a></li>
-            <li class="breadcrumbs__item"><a href="#">Профиль клиента<span>⌵</span></a></li>
-            <li class="breadcrumbs__item"><a href="#">Персональные данные</a></li>
+            <li class="breadcrumbs__item"><a href="#">Управление файлами<span>⌵</span></a></li>
+            <li class="breadcrumbs__item"><a href="#">Мои файлы</a></li>
           </ul>
           <header class="private_room-header">
             <div class="private_room-header-items"><img src="../../../../images/private_room/common/header-disk.png"></div>
             <nav class="private_room-header__menu">
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Персональные данные</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Реквизиты юр. и физ. лица</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Мои файлы</a></li>
                         </ul>
             </nav>
           </header>
-          <div class="private_room private_room--personal">
-            <form action="#" method="post" name="personal" class="private_room-profile__form private_room-profile__form--personal">
-              <fieldset class="private_room-profile__form-part private_room-profile__form-part--personal">
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--login">
-                              <label for="private_room-profile_login" class="form__label private_room-profile__label private_room-profile__label--login">Логин:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--login">
-                                <input type="text" id="private_room-profile_login" name="private_room-profile_login" placeholder="IWCcompany">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--email">
-                              <label for="private_room-profile_email" class="form__label private_room-profile__label private_room-profile__label--email">E-mail:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--email">
-                                <input type="email" id="private_room-profile_email" name="private_room-profile_email" placeholder="iwc@gmail.com">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--surname">
-                              <label for="private_room-profile_surname" class="form__label private_room-profile__label private_room-profile__label--surname">Фамилия:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--surname">
-                                <input type="text" id="private_room-profile_surname" name="private_room-profile_surname" placeholder="Хмельнов">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--name">
-                              <label for="private_room-profile_name" class="form__label private_room-profile__label private_room-profile__label--name">Имя:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--name">
-                                <input type="text" id="private_room-profile_name" name="private_room-profile_name" placeholder="Эдуард">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--patronymic">
-                              <label for="private_room-profile_patronymic" class="form__label private_room-profile__label private_room-profile__label--patronymic">Отчество:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--patronymic">
-                                <input type="text" id="private_room-profile_patronymic" name="private_room-profile_patronymic" placeholder="Зигмундович">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--tel">
-                              <label for="private_room-profile_tel" class="form__label private_room-profile__label private_room-profile__label--tel">Телефон:</label>
-                              <div class="form__inputs form__inputs--tel private_room-profile__inputs private_room-profile__inputs--tel">
-                                <input type="hidden" id="private_room-profile_tel" name="private_room-profile_tel"><span>+7 (</span>
-                                <input type="text" id="private_room-profile_tel_1" placeholder="920" pattern="[0-9]{3}"><span>)</span>
-                                <input type="text" id="private_room-profile_tel_2" placeholder="591-34-63" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                              </div>
-                            </div>
-              </fieldset>
-              <fieldset class="private_room-profile__form-part private_room-profile__form-part--personal">
-                <p class="title--h3 private_room-profile__title private_room-profile__title--personal">Изменение пароля</p>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--new_pass">
-                              <label for="private_room-profile_new_pass" class="form__label private_room-profile__label private_room-profile__label--new_pass">Новый пароль:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--new_pass">
-                                <input type="text" id="private_room-profile_new_pass" name="private_room-profile_new_pass">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--repeat_pass">
-                              <label for="private_room-profile_repeat_pass" class="form__label private_room-profile__label private_room-profile__label--repeat_pass">Повторите:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--repeat_pass">
-                                <input type="text" id="private_room-profile_repeat_pass" name="private_room-profile_repeat_pass" required>
-                              </div>
-                            </div>
-              </fieldset>
-              <button type="submit" class="form__btn private_room-profile__btn">Сохранить изменения</button>
-            </form>
-            <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-personal">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-personal">Далее</a></div>
+          <div class="private_room private_room--my_files">
+            <div class="my_files-upload">
+                          <p class="title--h3 my_files-upload__title">Загрузка</p>
+                          <div class="clearfix my_files-upload__header">
+                            <p class="my_files-upload__header-item my_files-upload__header-item-name">Название</p>
+                            <p class="my_files-upload__header-item my_files-upload__header-item-size">Размер</p>
+                            <p class="my_files-upload__header-item my_files-upload__header-item-type">Тип</p>
+                            <p class="my_files-upload__header-item my_files-upload__header-item-status">Состояние</p>
+                            <p class="my_files-upload__header-item my_files-upload__header-item-delete">Удаление</p>
+                          </div>
+                          <div class="clearfix my_files-upload__items">
+                            <div class="my_files-upload__item my_files-upload__item-name">103(1)</div>
+                            <div class="my_files-upload__item my_files-upload__item-size">7 KB</div>
+                            <div class="my_files-upload__item my_files-upload__item-type">gif</div>
+                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
+                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
+                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
+                                          </div>
+                                        </div>
+                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                          </div>
+                          <div class="clearfix my_files-upload__items">
+                            <div class="my_files-upload__item my_files-upload__item-name">buffer_1</div>
+                            <div class="my_files-upload__item my_files-upload__item-size">6 KB</div>
+                            <div class="my_files-upload__item my_files-upload__item-type">zip</div>
+                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
+                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
+                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
+                                          </div>
+                                        </div>
+                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                          </div>
+                          <div class="clearfix my_files-upload__items">
+                            <div class="my_files-upload__item my_files-upload__item-name">Chrysanthemum</div>
+                            <div class="my_files-upload__item my_files-upload__item-size">879 KB</div>
+                            <div class="my_files-upload__item my_files-upload__item-type">jpg</div>
+                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
+                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
+                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
+                                          </div>
+                                        </div>
+                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                          </div>
+                          <div class="clearfix my_files-upload__items">
+                            <div class="my_files-upload__item my_files-upload__item-name">FireShot Screen Capture</div>
+                            <div class="my_files-upload__item my_files-upload__item-size">329 KB</div>
+                            <div class="my_files-upload__item my_files-upload__item-type">png</div>
+                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
+                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
+                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
+                                          </div>
+                                        </div>
+                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                          </div>
+            </div>
+            <div class="clearfix my_files-download">
+              <div class="my_files-download-add">
+                <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_cloud my_files-download-add__btn-cloud">Добавить файл</a>
+                  <label for="cloud_open" class="sprite_icon-arrow--down my_files-download-add__btn-cloud-select">
+                    <input type="checkbox" id="cloud_open">
+                    <ul class="clearfix my_files-download__cloud-selector">
+                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                      <div class="my_files-download__cloud-selector__img">
+                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Icloud"/>
+                                        </picture>
+                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
+                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                      <div class="my_files-download__cloud-selector__img">
+                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Google drive"/>
+                                        </picture>
+                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
+                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                      <div class="my_files-download__cloud-selector__img">
+                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Dropbox"/>
+                                        </picture>
+                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
+                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                      <div class="my_files-download__cloud-selector__img">
+                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Ubuntu one"/>
+                                        </picture>
+                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
+                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                      <div class="my_files-download__cloud-selector__img">
+                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Яндекс диск"/>
+                                        </picture>
+                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
+                    </ul>
+                  </label>
+                </div>
+                <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_load my_files-download-add__btn-load">Загрузить файл</a></div>
+              </div>
+              <div class="my_files-download-drop"></div>
+              <div class="my_files-download-drivers">
+                <p class="my_files-download-drivers__text">Скачать драйвер для:</p><a href="#" class="form__btn sprite_icon-windows my_files-download-drivers__btn my_files-download-drivers__btn--win">Windows</a>
+              </div>
+            </div>
+            <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-my_files">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-my_files">Далее</a></div>
           </div>
         </div>
       </main>

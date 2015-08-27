@@ -4,6 +4,14 @@ include ../helpers/mixins
 -var filesPath = ''
 +filesPath(pageID)
 
+-var pageSub = ''
+-var pageBtn_prev = ''
+-var pageBtn_next = ''
+if pageSubclass
+	-pageSub = ' ' + pageClass + '--' + pageSubclass
+	-pageBtn_prev = ' ' + pageClass + '-page__btn--prev-' + pageSubclass
+	-pageBtn_next = ' ' + pageClass + '-page__btn--next-' + pageSubclass
+
 doctype html
 html.no-svg(lang="ru")
 	head
@@ -20,7 +28,11 @@ html.no-svg(lang="ru")
 					+breadcrumbs(private_room_tree)
 					include ../blocks/private_room/header
 					
-					block content
+					div(class=pageClass + pageSub)
+						block content
+						.clearfix(class=pageClass + '-page_controls')
+							a.sprite_form.sprite_icon-private_room_arrow--prev(class=pageClass + '-page__btn' + ' ' + pageClass + '-page__btn--prev' + pageBtn_prev href='#') Назад
+							a.sprite_form.sprite_icon-private_room_arrow--next(class=pageClass + '-page__btn' + ' ' + pageClass + '-page__btn--next' + pageBtn_next href='#') Далее
 
 			.footer-wrapper.sprite_icon-footer-clip--left.sprite_icon-footer-clip--right
 				include ../blocks/footer

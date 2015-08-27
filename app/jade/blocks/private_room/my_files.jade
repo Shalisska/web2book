@@ -1,0 +1,128 @@
+-var actualClass = pageSubclass
+
+mixin upload(name, data)
+	-var title_arr = []
+	p.title--h3(class=name + '__title') Загрузка
+	.clearfix(class=name + '__header')
+		each item in data.header
+			p(class=name + '__header-item' + ' ' + name + '__header-item-' + item.id)=item.name
+			-title_arr.push(item.id)
+	each item in data.items
+		.clearfix(class=name + '__items')
+			each elem, i in item
+				case i
+					when 'status'
+						+upload_status((name + '__item' + ' ' + name + '__item-' + i), name + '__' + i, elem)
+					default
+						div(class=name + '__item' + ' ' + name + '__item-' + i)=elem
+			div(class=name + '__item' + ' ' + name + '__item-delete')
+				span.sprite_private_room.sprite_icon-delete
+
+mixin upload_status(parent_name, name, item)
+	-var status = ''
+	-var text = ''
+	case item
+		when 0
+			-status = '--loading'
+			-text = 'Состояние'
+		when 1
+			-status = '--end'
+			-text = 'Загрузка завершена'
+	
+	div(class=parent_name + ' ' + name + ' ' + name + status)
+		div(class=name + '-bar' + ' ' + name + '-bar' + status)
+			span(class=name + '-text' + ' ' + name + '-text' + status)=text
+			div(class=name + '-fill' + ' ' + name + '-fill' + status)
+
+mixin cloud_selector(name, items)
+	each item in items
+		li(class=name + '__item')
+			a(class=name + '__name' href=item.href)
+				div(class=name + '__img')
+					+picture({
+						name: item.name,
+						adress: '../images/private_room/download_disks/download_disks@',
+						ext: 'png'
+					}, {
+						main: {
+							width: 350
+						}
+					})
+				span(class=name + '__name-text')
+
+div(class=actualClass + '-upload')
+	+upload(actualClass + '-upload', {
+		header: [{
+			id: 'name',
+			name: 'Название'
+		}, {
+			id: 'size',
+			name: 'Размер'
+		}, {
+			id: 'type',
+			name: 'Тип'
+		}, {
+			id: 'status',
+			name: 'Состояние'
+		}, {
+			id: 'delete',
+			name: 'Удаление'
+		}],
+		items: [{
+			name: '103(1)',
+			size: '7 KB',
+			type: 'gif',
+			status: 0
+		}, {
+			name: 'buffer_1',
+			size: '6 KB',
+			type: 'zip',
+			status: 1
+		}, {
+			name: 'Chrysanthemum',
+			size: '879 KB',
+			type: 'jpg',
+			status: 0
+		}, {
+			name: 'FireShot Screen Capture',
+			size: '329 KB',
+			type: 'png',
+			status: 1
+		}]
+	})
+
+.clearfix(class=actualClass + '-download')
+	div(class=actualClass + '-download-add')
+		.clearfix(class=actualClass + '-download-add__btn')
+			a.sprite_icon-download_cloud(class=actualClass + '-download-add__btn-cloud' href='#') Добавить файл
+			label.sprite_icon-arrow--down(class=actualClass + '-download-add__btn-cloud-select' for='cloud_open')
+				input(type='checkbox' id='cloud_open')
+				ul.clearfix(class=actualClass + '-download__cloud-selector')
+					+cloud_selector(actualClass + '-download__cloud-selector', [{
+						id: 'icloud',
+						name: 'Icloud',
+						href: '#'
+					}, {
+						id: 'google',
+						name: 'Google drive',
+						href: '#'
+					}, {
+						id: 'dropbox',
+						name: 'Dropbox',
+						href: '#'
+					}, {
+						id: 'ubuntu',
+						name: 'Ubuntu one',
+						href: '#'
+					}, {
+						id: 'yandex',
+						name: 'Яндекс диск',
+						href: '#'
+					}])
+					
+		.clearfix(class=actualClass + '-download-add__btn')
+			a.sprite_icon-download_load(class=actualClass + '-download-add__btn-load' href='#') Загрузить файл
+	div(class=actualClass + '-download-drop')
+	div(class=actualClass + '-download-drivers')
+		p(class=actualClass + '-download-drivers__text') Скачать драйвер для:
+		a.form__btn.sprite_icon-windows(class=actualClass + '-download-drivers__btn' + ' ' + actualClass + '-download-drivers__btn--win' href='#') Windows

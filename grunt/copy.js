@@ -1,5 +1,19 @@
 var retina_size = [1, 1.5, 2, 3];
 
+var sprite_private_arr = [{
+	img_dir: 'private_room/sprite/16px',
+	dest: [{
+		width: 0,
+		retina: 16
+	}]
+}, {
+	img_dir: 'private_room/sprite/windows',
+	dest: [{
+		width: 0,
+		retina: 24
+	}]
+}];
+
 var sprite_form_arr = [{
 	img_dir: 'form/sprite/print-arrow',
 	dest: [{
@@ -315,6 +329,7 @@ function sprite_cr(items) {
 
 var sprite_files = sprite_cr(obj_sorting(sprite_arr));
 var sprite_form_copy = sprite_cr(obj_sorting(sprite_form_arr));
+var sprite_private_copy = sprite_cr(obj_sorting(sprite_private_arr));
 
 module.exports = {
 	build: {
@@ -344,5 +359,8 @@ module.exports = {
 	},
 	sprite_form: {
 		files: sprite_form_copy
+	},
+	sprite_private: {
+		files: sprite_private_copy
 	}
 };
