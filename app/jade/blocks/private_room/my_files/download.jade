@@ -38,7 +38,7 @@ mixin cloud_selector(name, items)
 	each item in items
 		li(class=name + '__item')
 			a(class=name + '__name' href=item.href)
-				div(class=name + '__img')
+				div(class=name + '__img' + ' ' + name + '__img--' + item.id)
 					+picture({
 						name: item.name,
 						adress: '../images/private_room/download_disks/download_disks@',
@@ -48,7 +48,7 @@ mixin cloud_selector(name, items)
 							width: 350
 						}
 					})
-				span(class=name + '__name-text')
+				span(class=name + '__name-text')=item.name
 
 div(class=actualClass + '-upload')
 	+upload(actualClass + '-upload', {
@@ -123,6 +123,7 @@ div(class=actualClass + '-upload')
 		.clearfix(class=actualClass + '-download-add__btn')
 			a.sprite_icon-download_load(class=actualClass + '-download-add__btn-load' href='#') Загрузить файл
 	div(class=actualClass + '-download-drop')
+		p(class=actualClass + '-download-drop__text') Перетащите курсором мыши файлы для загрузки в эту область
 	div(class=actualClass + '-download-drivers')
 		p(class=actualClass + '-download-drivers__text') Скачать драйвер для:
 		a.form__btn.sprite_icon-windows(class=actualClass + '-download-drivers__btn' + ' ' + actualClass + '-download-drivers__btn--win' href='#') Windows

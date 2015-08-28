@@ -139,101 +139,156 @@
             </nav>
           </header>
           <div class="private_room private_room--my_files">
-            <div class="my_files-upload">
-                          <p class="title--h3 my_files-upload__title">Загрузка</p>
-                          <div class="clearfix my_files-upload__header">
-                            <p class="my_files-upload__header-item my_files-upload__header-item-name">Название</p>
-                            <p class="my_files-upload__header-item my_files-upload__header-item-size">Размер</p>
-                            <p class="my_files-upload__header-item my_files-upload__header-item-type">Тип</p>
-                            <p class="my_files-upload__header-item my_files-upload__header-item-status">Состояние</p>
-                            <p class="my_files-upload__header-item my_files-upload__header-item-delete">Удаление</p>
-                          </div>
-                          <div class="clearfix my_files-upload__items">
-                            <div class="my_files-upload__item my_files-upload__item-name">103(1)</div>
-                            <div class="my_files-upload__item my_files-upload__item-size">7 KB</div>
-                            <div class="my_files-upload__item my_files-upload__item-type">gif</div>
-                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
-                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
-                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
+                                                <input id="my_files-loaded" type="radio" name="my_files-menu__inputs" checked class="my_files-menu__inputs">
+                                                <input id="my_files-working" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
+                                                <input id="my_files-processing" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
+                                                <input id="my_files-split" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
+                                                <input id="my_files-approved" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
+                                    <input id="my_files__check-all" type="checkbox">
+                                    <input id="my_files__expand--on" type="radio" name="my_files__expand" checked>
+                                    <input id="my_files__expand--off" type="radio" name="my_files__expand">
+                                    <header class="my_files-header">
+                                      <div class="my_files-upload">
+                                                      <p class="title--h3 my_files-upload__title">Загрузка</p>
+                                                      <div class="clearfix my_files-upload__header">
+                                                        <p class="my_files-upload__header-item my_files-upload__header-item-name">Название</p>
+                                                        <p class="my_files-upload__header-item my_files-upload__header-item-size">Размер</p>
+                                                        <p class="my_files-upload__header-item my_files-upload__header-item-type">Тип</p>
+                                                        <p class="my_files-upload__header-item my_files-upload__header-item-status">Состояние</p>
+                                                        <p class="my_files-upload__header-item my_files-upload__header-item-delete">Удаление</p>
+                                                      </div>
+                                                      <div class="clearfix my_files-upload__items">
+                                                        <div class="my_files-upload__item my_files-upload__item-name">103(1)</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-size">7 KB</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-type">gif</div>
+                                                                      <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
+                                                                        <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
+                                                                          <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
+                                                                        </div>
+                                                                      </div>
+                                                        <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                                                      </div>
+                                                      <div class="clearfix my_files-upload__items">
+                                                        <div class="my_files-upload__item my_files-upload__item-name">buffer_1</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-size">6 KB</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-type">zip</div>
+                                                                      <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
+                                                                        <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
+                                                                          <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
+                                                                        </div>
+                                                                      </div>
+                                                        <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                                                      </div>
+                                                      <div class="clearfix my_files-upload__items">
+                                                        <div class="my_files-upload__item my_files-upload__item-name">Chrysanthemum</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-size">879 KB</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-type">jpg</div>
+                                                                      <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
+                                                                        <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
+                                                                          <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
+                                                                        </div>
+                                                                      </div>
+                                                        <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                                                      </div>
+                                                      <div class="clearfix my_files-upload__items">
+                                                        <div class="my_files-upload__item my_files-upload__item-name">FireShot Screen Capture</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-size">329 KB</div>
+                                                        <div class="my_files-upload__item my_files-upload__item-type">png</div>
+                                                                      <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
+                                                                        <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
+                                                                          <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
+                                                                        </div>
+                                                                      </div>
+                                                        <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
+                                                      </div>
+                                      </div>
+                                      <div class="clearfix my_files-download">
+                                        <div class="my_files-download-add">
+                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_cloud my_files-download-add__btn-cloud">Добавить файл</a>
+                                            <label for="cloud_open" class="sprite_icon-arrow--down my_files-download-add__btn-cloud-select">
+                                              <input type="checkbox" id="cloud_open">
+                                              <ul class="clearfix my_files-download__cloud-selector">
+                                                              <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                                                  <div class="my_files-download__cloud-selector__img my_files-download__cloud-selector__img--icloud">
+                                                                    <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Icloud"/>
+                                                                    </picture>
+                                                                  </div><span class="my_files-download__cloud-selector__name-text">Icloud</span></a></li>
+                                                              <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                                                  <div class="my_files-download__cloud-selector__img my_files-download__cloud-selector__img--google">
+                                                                    <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Google drive"/>
+                                                                    </picture>
+                                                                  </div><span class="my_files-download__cloud-selector__name-text">Google drive</span></a></li>
+                                                              <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                                                  <div class="my_files-download__cloud-selector__img my_files-download__cloud-selector__img--dropbox">
+                                                                    <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Dropbox"/>
+                                                                    </picture>
+                                                                  </div><span class="my_files-download__cloud-selector__name-text">Dropbox</span></a></li>
+                                                              <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                                                  <div class="my_files-download__cloud-selector__img my_files-download__cloud-selector__img--ubuntu">
+                                                                    <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Ubuntu one"/>
+                                                                    </picture>
+                                                                  </div><span class="my_files-download__cloud-selector__name-text">Ubuntu one</span></a></li>
+                                                              <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
+                                                                  <div class="my_files-download__cloud-selector__img my_files-download__cloud-selector__img--yandex">
+                                                                    <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Яндекс диск"/>
+                                                                    </picture>
+                                                                  </div><span class="my_files-download__cloud-selector__name-text">Яндекс диск</span></a></li>
+                                              </ul>
+                                            </label>
                                           </div>
+                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_load my_files-download-add__btn-load">Загрузить файл</a></div>
                                         </div>
-                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
-                          </div>
-                          <div class="clearfix my_files-upload__items">
-                            <div class="my_files-upload__item my_files-upload__item-name">buffer_1</div>
-                            <div class="my_files-upload__item my_files-upload__item-size">6 KB</div>
-                            <div class="my_files-upload__item my_files-upload__item-type">zip</div>
-                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
-                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
-                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
+                                        <div class="my_files-download-drop">
+                                          <p class="my_files-download-drop__text">Перетащите курсором мыши файлы для загрузки в эту область</p>
+                                        </div>
+                                        <div class="my_files-download-drivers">
+                                          <p class="my_files-download-drivers__text">Скачать драйвер для:</p><a href="#" class="form__btn sprite_icon-windows my_files-download-drivers__btn my_files-download-drivers__btn--win">Windows</a>
+                                        </div>
+                                      </div>
+                                                  <ul class="clearfix my_files-menu private_room-header__menu-part private_room-header__menu--top">
+                                                    <li class="my_files-menu__item my_files-menu__item--loaded private_room-header__menu-item private_room-header__menu-item--top">
+                                                      <label for="my_files-loaded" class="my_files-menu__name my_files-menu__name--loaded private_room-header__menu-item_name private_room-header__menu-item_name--top">Загруженные</label>
+                                                    </li>
+                                                    <li class="my_files-menu__item my_files-menu__item--working private_room-header__menu-item private_room-header__menu-item--top">
+                                                      <label for="my_files-working" class="my_files-menu__name my_files-menu__name--working private_room-header__menu-item_name private_room-header__menu-item_name--top">Файлы для работы</label>
+                                                    </li>
+                                                    <li class="my_files-menu__item my_files-menu__item--processing private_room-header__menu-item private_room-header__menu-item--top">
+                                                      <label for="my_files-processing" class="my_files-menu__name my_files-menu__name--processing private_room-header__menu-item_name private_room-header__menu-item_name--top">Файлы в обработке</label><span class="my_files-menu__name-top my_files-menu__name-top--processing">2</span>
+                                                    </li>
+                                                    <li class="my_files-menu__item my_files-menu__item--split private_room-header__menu-item private_room-header__menu-item--top">
+                                                      <label for="my_files-split" class="my_files-menu__name my_files-menu__name--split private_room-header__menu-item_name private_room-header__menu-item_name--top">Разбитые файлы</label>
+                                                    </li>
+                                                    <li class="my_files-menu__item my_files-menu__item--approved private_room-header__menu-item private_room-header__menu-item--top">
+                                                      <label for="my_files-approved" class="my_files-menu__name my_files-menu__name--approved private_room-header__menu-item_name private_room-header__menu-item_name--top">Утвержденные</label>
+                                                    </li>
+                                                  </ul>
+                                      <div class="my_files-refresh">
+                                        <p class="my_files-refresh__info">При появлениий знака<span></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="my_files-refresh__btn">Обновить список</a>
+                                      </div>
+                                      <div class="my_files-actions">
+                                        <div class="clearfix my_files-actions__check">
+                                          <label for="my_files__check-all" class="my_files-actions__check-all">Выделить все</label>
+                                          <label for="my_files__expand--on" class="my_files-actions__expand my_files-actions__expand--on"></label>
+                                          <label for="my_files__expand--off" class="my_files-actions__expand my_files-actions__expand--off"></label>
+                                        </div>
+                                        <ul class="clearfix my_files-actions__menu">
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a class="my_files-actions__menu-item my_files-actions__menu-item--archive"></a>
+                                                      </li>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a class="my_files-actions__menu-item my_files-actions__menu-item--basket"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--clean"></a>
+                                                      </li>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a class="my_files-actions__menu-item my_files-actions__menu-item--add"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--remove"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--rename"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--copy"></a>
+                                                      </li>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a class="my_files-actions__menu-item my_files-actions__menu-item--clipboard"></a>
+                                                      </li>
+                                        </ul>
+                                        <div class="my_files-actions__search">
+                                          <div class="my_files-actions__search-input">
+                                            <input placeholder="Поиск">
                                           </div>
+                                          <button class="my_files-actions__search-btn"></button>
                                         </div>
-                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
-                          </div>
-                          <div class="clearfix my_files-upload__items">
-                            <div class="my_files-upload__item my_files-upload__item-name">Chrysanthemum</div>
-                            <div class="my_files-upload__item my_files-upload__item-size">879 KB</div>
-                            <div class="my_files-upload__item my_files-upload__item-type">jpg</div>
-                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--loading">
-                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--loading"><span class="my_files-upload__status-text my_files-upload__status-text--loading">Состояние</span>
-                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--loading"></div>
-                                          </div>
-                                        </div>
-                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
-                          </div>
-                          <div class="clearfix my_files-upload__items">
-                            <div class="my_files-upload__item my_files-upload__item-name">FireShot Screen Capture</div>
-                            <div class="my_files-upload__item my_files-upload__item-size">329 KB</div>
-                            <div class="my_files-upload__item my_files-upload__item-type">png</div>
-                                        <div class="my_files-upload__item my_files-upload__item-status my_files-upload__status my_files-upload__status--end">
-                                          <div class="my_files-upload__status-bar my_files-upload__status-bar--end"><span class="my_files-upload__status-text my_files-upload__status-text--end">Загрузка завершена</span>
-                                            <div class="my_files-upload__status-fill my_files-upload__status-fill--end"></div>
-                                          </div>
-                                        </div>
-                            <div class="my_files-upload__item my_files-upload__item-delete"><span class="sprite_private_room sprite_icon-delete"></span></div>
-                          </div>
-            </div>
-            <div class="clearfix my_files-download">
-              <div class="my_files-download-add">
-                <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_cloud my_files-download-add__btn-cloud">Добавить файл</a>
-                  <label for="cloud_open" class="sprite_icon-arrow--down my_files-download-add__btn-cloud-select">
-                    <input type="checkbox" id="cloud_open">
-                    <ul class="clearfix my_files-download__cloud-selector">
-                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
-                                      <div class="my_files-download__cloud-selector__img">
-                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Icloud"/>
-                                        </picture>
-                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
-                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
-                                      <div class="my_files-download__cloud-selector__img">
-                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Google drive"/>
-                                        </picture>
-                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
-                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
-                                      <div class="my_files-download__cloud-selector__img">
-                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Dropbox"/>
-                                        </picture>
-                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
-                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
-                                      <div class="my_files-download__cloud-selector__img">
-                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Ubuntu one"/>
-                                        </picture>
-                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
-                                  <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
-                                      <div class="my_files-download__cloud-selector__img">
-                                        <picture><img src="../../../../images/private_room/download_disks/download_disks@350.png 350w" width="350" srcset="../../../../images/private_room/download_disks/download_disks@525.png 525w, ../../../../images/private_room/download_disks/download_disks@700.png 700w, ../../../../images/private_room/download_disks/download_disks@1050.png 1050w" alt="Яндекс диск"/>
-                                        </picture>
-                                      </div><span class="my_files-download__cloud-selector__name-text"></span></a></li>
-                    </ul>
-                  </label>
-                </div>
-                <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_load my_files-download-add__btn-load">Загрузить файл</a></div>
-              </div>
-              <div class="my_files-download-drop"></div>
-              <div class="my_files-download-drivers">
-                <p class="my_files-download-drivers__text">Скачать драйвер для:</p><a href="#" class="form__btn sprite_icon-windows my_files-download-drivers__btn my_files-download-drivers__btn--win">Windows</a>
-              </div>
-            </div>
+                                      </div>
+                                    </header>
             <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-my_files">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-my_files">Далее</a></div>
           </div>
         </div>

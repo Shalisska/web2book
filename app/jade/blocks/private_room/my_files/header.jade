@@ -1,0 +1,88 @@
+-var actualClass = pageSubclass
+
+mixin my_files_menu_inp(name, items)
+	each item, i in items
+		if i === 0
+			input(class=name + '__inputs' id=actualClass + '-' + item.id type='radio' name=name + '__inputs' checked)
+		else
+			input(class=name + '__inputs' id=actualClass + '-' + item.id type='radio' name=name + '__inputs')
+
+mixin my_files_menu(name, items)
+	ul.clearfix(class=name + ' ' + 'private_room-header__menu-part private_room-header__menu--top')
+		each item in items
+			li(class=name + '__item' + ' ' + name + '__item--' + item.id + ' ' + 'private_room-header__menu-item private_room-header__menu-item--top')
+				label(class=name + '__name' + ' ' + name + '__name--' + item.id + ' ' + 'private_room-header__menu-item_name private_room-header__menu-item_name--top' for=actualClass + '-' + item.id)=item.name
+				if item.new
+					span(class=name + '__name-top' + ' ' + name + '__name-top--' + item.id)=item.new
+
+mixin my_files_action_menu(name, items)
+	each item in items
+		li.clearfix(class=name + '-items' + ' ' + name + '-items--' + item.id)
+			each elem in item.items
+				a(class=name + '-item' + ' ' + name + '-item--' + elem.id)
+
+mixin my_files_header(actualClass, items)
+	+my_files_menu_inp(actualClass + '-menu', items)
+	input(id=actualClass + '__check-all' type='checkbox')
+	input(id=actualClass + '__expand--on' type='radio' name=actualClass + '__expand' checked)
+	input(id=actualClass + '__expand--off' type='radio' name=actualClass + '__expand')
+
+	header(class=actualClass + '-header')
+		include download
+		+my_files_menu(actualClass + '-menu', items)
+		
+		div(class=actualClass + '-refresh')
+			p(class=actualClass + '-refresh__info')
+				|При появлениий знака
+				span
+				|, вы можете перейти по этому файлу к его рабочему разделу
+			a(class=actualClass + '-refresh__btn') Обновить список
+		
+		div(class=actualClass + '-actions')
+			.clearfix(class=actualClass + '-actions__check')
+				label(class=actualClass + '-actions__check-all' for=actualClass + '__check-all') Выделить все
+				label(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--on' for=actualClass + '__expand--on')
+				label(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--off' for=actualClass + '__expand--off')
+			
+			ul.clearfix(class=actualClass + '-actions__menu')
+				+my_files_action_menu(actualClass + '-actions__menu', [{
+					id: 'archive',
+					items: [{
+						id: 'archive',
+						hint: 'В архив'
+					}]
+				}, {
+					id: 'cleaning',
+					items: [{
+						id: 'basket',
+						hint: 'В корзину'
+					}, {
+						id: 'clean',
+						hint: 'Очистить'
+					}]
+				}, {
+					id: 'files',
+					items: [{
+						id: 'add',
+						hint: 'Добавить'
+					}, {
+						id: 'remove',
+						hint: 'Переместить'
+					}, {
+						id: 'rename',
+						hint: 'Переименовать'
+					}, {
+						id: 'copy',
+						hint: 'Копировать'
+					}]
+				}, {
+					id: 'clipboard',
+					items: [{
+						id: 'clipboard',
+						hint: 'Добавить в буфер обмена'
+					}]
+				}])
+			div(class=actualClass + '-actions__search')
+				div(class=actualClass + '-actions__search-input')
+					input(placeholder='Поиск')
+				button(class=actualClass + '-actions__search-btn')

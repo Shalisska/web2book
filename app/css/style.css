@@ -10332,6 +10332,9 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   width: 100%;
   margin-bottom: 3em;
 }
+.my_files-upload__title {
+  margin-top: 0;
+}
 .my_files-upload__header-item,
 .my_files-upload__item {
   float: left;
@@ -10451,14 +10454,13 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
 .my_files-upload__status-fill--end {
   display: none;
 }
-.my_files-download-add,
-.my_files-download-drop,
-.my_files-download-drivers {
-  float: left;
-  width: 20%;
+.my_files-download {
+  position: relative;
+  margin-bottom: 3.2em;
 }
-.my_files-download-drop {
-  width: 60%;
+.my_files-download-add {
+  float: left;
+  width: 12.2em;
 }
 .my_files-download-add__btn {
   position: relative;
@@ -10478,7 +10480,8 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   background: linear-gradient(to top, #c2c2c2, #ebebeb);
   border-radius: 2px;
   border: 1px solid #9e9e9e;
-  box-shadow: 0 0 2px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 .my_files-download-add__btn-cloud:hover,
 .my_files-download-add__btn-cloud-select:hover,
@@ -10528,6 +10531,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   width: 29px;
   background: linear-gradient(to top, #a9a9a9, #d5d5d5);
   border-radius: 0 2px 2px 0;
+  cursor: pointer;
 }
 .my_files-download-add__btn-cloud-select:hover,
 .my_files-download-add__btn-cloud-select:active {
@@ -10538,8 +10542,182 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   left: 50%;
   margin-left: -8px;
 }
+.my_files-download-add__btn-cloud-select:hover > ul {
+  display: block;
+}
 .my_files-download-add__btn-cloud-select input#cloud_open {
   display: none;
+}
+.my_files-download-add__btn-cloud-select input#cloud_open:checked ~ ul {
+  display: block;
+}
+.my_files-download__cloud-selector {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: -31.3em;
+  top: -1em;
+  width: 30em;
+  padding: 0.42em;
+  text-align: center;
+  background: linear-gradient(to top, #c2c2c2, #ebebeb);
+  border-radius: 2px;
+  border: 1px solid #9e9e9e;
+  box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5);
+  z-index: 5;
+}
+.my_files-download__cloud-selector:before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: -6.2px;
+  background: linear-gradient(to right top, #d9d9d9, #e0e0e0);
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #9e9e9e;
+  border-top: 1px solid #9e9e9e;
+  box-shadow: inset 2px 0 2px -2px rgba(255, 255, 255, 0.5), inset 0px 2px 2px -2px rgba(255, 255, 255, 0.5);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.my_files-download__cloud-selector__item {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 7.3em;
+}
+.my_files-download__cloud-selector__name {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  padding: 0 0.4em 0.4em;
+  border-radius: 2px;
+}
+.my_files-download__cloud-selector__name:hover,
+.my_files-download__cloud-selector__name:active,
+.my_files-download__cloud-selector__name:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.my_files-download__cloud-selector__name:hover {
+  background: #97bee2;
+}
+.my_files-download__cloud-selector__name-text {
+  display: inline-block;
+  padding: 0 0.6em;
+}
+.my_files-download__cloud-selector__img {
+  overflow: hidden;
+  margin-bottom: 0.4em;
+}
+.my_files-download__cloud-selector__img img {
+  width: 500%;
+  height: auto;
+}
+.my_files-download__cloud-selector__img--icloud img {
+  margin-left: 0%;
+}
+.my_files-download__cloud-selector__img img {
+  width: 500%;
+  height: auto;
+}
+.my_files-download__cloud-selector__img--google img {
+  margin-left: -100%;
+}
+.my_files-download__cloud-selector__img img {
+  width: 500%;
+  height: auto;
+}
+.my_files-download__cloud-selector__img--dropbox img {
+  margin-left: -200%;
+}
+.my_files-download__cloud-selector__img img {
+  width: 500%;
+  height: auto;
+}
+.my_files-download__cloud-selector__img--ubuntu img {
+  margin-left: -300%;
+}
+.my_files-download__cloud-selector__img img {
+  width: 500%;
+  height: auto;
+}
+.my_files-download__cloud-selector__img--yandex img {
+  margin-left: -400%;
+}
+.my_files-download-drop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12.2em;
+  right: 11em;
+  margin: 0 2%;
+  background-color: #f0f2f5;
+  background-repeat: no-repeat;
+  background-position: 13% center;
+  background-size: 74px auto;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-image: url('../images/private_room/drags_bg/drags_bg@74.png');
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  .my_files-download-drop {
+    background-image: url('../images/private_room/drags_bg/drags_bg@111.png');
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .my_files-download-drop {
+    background-image: url('../images/private_room/drags_bg/drags_bg@148.png');
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+  .my_files-download-drop {
+    background-image: url('../images/private_room/drags_bg/drags_bg@222.png');
+  }
+}
+.my_files-download-drop__text {
+  height: 100%;
+  margin: 4% 9% 0 32%;
+  line-height: 1.45;
+  font-size: 1.28em;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+.my_files-download-drivers {
+  float: right;
+  width: 10.4em;
+  margin-right: 0.6em;
+}
+.my_files-download-drivers__text {
+  color: #303540;
+}
+.my_files-download-drivers__btn {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  font-size: 1.43em;
+  padding: 0.5em 0.2em 0.6em 45px;
+  margin-left: 0;
+  color: white;
+}
+.my_files-download-drivers__btn:hover,
+.my_files-download-drivers__btn:active,
+.my_files-download-drivers__btn:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.my_files-download-drivers__btn:hover,
+.my_files-download-drivers__btn:active {
+  color: white;
+}
+.my_files-download-drivers__btn:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  left: 0.5em;
 }
 .footer {
   position: relative;
