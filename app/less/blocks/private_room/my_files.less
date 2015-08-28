@@ -120,6 +120,28 @@
 		}
 	}
 	
+	&__btn--gray {
+		.reset-a();
+		position: relative;
+		display: block;
+		padding: 1em 0.5em;
+		font-size: 0.85em;
+		background: linear-gradient(to top, #c2c2c2, #ebebeb);
+		color: #303540;
+		border-radius: 2px;
+		border: 1px solid #9e9e9e;
+		box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, .5);
+		text-shadow: 0 1px 0 rgba(255, 255, 255, .75);
+
+		&:hover, &:active {
+			background: linear-gradient(to top, #c2c2c2, #ebebeb - 63%);
+			border-color: #616161;
+			box-shadow:
+				inset 0 2px 2px 0 rgba(0, 0, 0, .5),
+				inset 0 0px 3px 0 rgba(0, 0, 0, .3);
+		}
+	}
+	
 	&-download {
 		position: relative;
 		margin-bottom: 3.2em;
@@ -131,28 +153,9 @@
 			&__btn {
 				position: relative;
 				margin: 0.72em auto;
-				color: #303540;
 				
 				&-cloud, &-cloud-select, &-load {
-					.reset-a();
-					position: relative;
-					display: block;
-					padding: 1em 0.5em;
 					padding-left: 25%;
-					font-size: 0.85em;
-					background: linear-gradient(to top, #c2c2c2, #ebebeb);
-					border-radius: 2px;
-					border: 1px solid #9e9e9e;
-					box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, .5);
-					text-shadow: 0 1px 0 rgba(255, 255, 255, .75);
-					
-					&:hover, &:active {
-						background: linear-gradient(to top, #c2c2c2, #ebebeb - 63%);
-						border-color: #616161;
-						box-shadow:
-							inset 0 2px 2px 0 rgba(0, 0, 0, .5),
-							inset 0 0px 3px 0 rgba(0, 0, 0, .3);
-					}
 					
 					&:before {
 						position: absolute;
@@ -309,6 +312,82 @@
 			}
 		}
 	}
+	
+	.my_files_menu(5);
+	
+	&-menu {
+		.reset-ul();
+		border-bottom: 3px solid #57bff5;
+		
+		&__item {
+			float: left;
+			margin-right: 0.61%;
+			color: #6b7180;
+			
+			&:last-child {margin-right: 0;}
+		}
+		
+		&__name {
+			display: block;
+			position: relative;
+			padding: 0.9em 1.4em 0.5em;
+			background-color: #f0f2f5;
+			text-transform: uppercase;
+			font-family: @font-bold;
+			color: #6b7180;
+			border: 1px solid #ccc;
+			border-bottom: none;
+			border-radius: 6px 6px 0 0;
+			cursor: pointer;
+			
+			&-top {
+				@w: 18px;
+				position: absolute;
+				top: 1px;
+				right: 2px;
+				width: @w;
+				height: @w;
+				line-height: @w;
+				background: #c53417;
+				font-family: @font;
+				text-align: center;
+				color: white;
+				border-radius: 50%;
+			}
+		}
+	}
+	
+	&-refresh {
+		background: #f0f2f5;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		
+		&__info {
+			float: left;
+			margin-top: 0.7em;
+			margin-left: 1.7em;
+			margin-bottom: 0;
+			
+			span {
+				vertical-align: middle;
+				margin: 0 0.1em 0 0.3em;
+			}
+		}
+		
+		&__btn {
+			float: right;
+			width: 13em;
+			padding: 0.4em 0.5em 0.4em 3em;
+			margin: 1.1em 1.2em;
+			
+			&:before {
+				position: absolute;
+				top: 50%;
+				margin-top: -8px;
+				left: 0.8em;
+			}
+		}
+	}
 }
 
 .cloud_drives(@n, @i: 1) when (@i =< @n) {
@@ -330,4 +409,23 @@
 	&--@{item} img {margin-left: @margin;}
 	
 	.cloud_drives(@n, (@i + 1));
+}
+
+.my_files_menu(@n, @i: 1) when (@i =< @n) {
+	@items:
+		loaded,
+		working,
+		processing,
+		split,
+		approved;
+	@item: extract(@items, @i);
+	
+	input#my_files-@{item}:checked~&-header label[for='my_files-@{item}'] {
+		color: white;
+		background: linear-gradient(to top, #57bff5 35%, #46a6eb);
+		border: 1px solid #57bff5;
+		border-bottom: none;
+	}
+	
+	.my_files_menu(@n, (@i + 1));
 }

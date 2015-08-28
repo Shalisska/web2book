@@ -12,6 +12,12 @@ var sprite_private_arr = [{
 		width: 0,
 		retina: 24
 	}]
+}, {
+	img_dir: 'private_room/sprite/to_workflow',
+	dest: [{
+		width: 0,
+		retina: 22
+	}]
 }];
 
 var sprite_form_arr = [{

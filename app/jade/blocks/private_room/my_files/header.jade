@@ -8,18 +8,18 @@ mixin my_files_menu_inp(name, items)
 			input(class=name + '__inputs' id=actualClass + '-' + item.id type='radio' name=name + '__inputs')
 
 mixin my_files_menu(name, items)
-	ul.clearfix(class=name + ' ' + 'private_room-header__menu-part private_room-header__menu--top')
+	ul.clearfix(class=name)
 		each item in items
-			li(class=name + '__item' + ' ' + name + '__item--' + item.id + ' ' + 'private_room-header__menu-item private_room-header__menu-item--top')
-				label(class=name + '__name' + ' ' + name + '__name--' + item.id + ' ' + 'private_room-header__menu-item_name private_room-header__menu-item_name--top' for=actualClass + '-' + item.id)=item.name
-				if item.new
-					span(class=name + '__name-top' + ' ' + name + '__name-top--' + item.id)=item.new
+			li(class=name + '__item' + ' ' + name + '__item--' + item.id)
+				label(class=name + '__name' + ' ' + name + '__name--' + item.id for=actualClass + '-' + item.id)=item.name
+					if item.new
+						span(class=name + '__name-top' + ' ' + name + '__name-top--' + item.id)=item.new
 
 mixin my_files_action_menu(name, items)
 	each item in items
 		li.clearfix(class=name + '-items' + ' ' + name + '-items--' + item.id)
 			each elem in item.items
-				a(class=name + '-item' + ' ' + name + '-item--' + elem.id)
+				a(class=name + '-item' + ' ' + name + '-item--' + elem.id title=elem.hint)
 
 mixin my_files_header(actualClass, items)
 	+my_files_menu_inp(actualClass + '-menu', items)
@@ -31,12 +31,12 @@ mixin my_files_header(actualClass, items)
 		include download
 		+my_files_menu(actualClass + '-menu', items)
 		
-		div(class=actualClass + '-refresh')
+		.clearfix(class=actualClass + '-refresh')
 			p(class=actualClass + '-refresh__info')
 				|При появлениий знака
-				span
+				span.sprite_private_room.sprite_icon-to_workflow
 				|, вы можете перейти по этому файлу к его рабочему разделу
-			a(class=actualClass + '-refresh__btn') Обновить список
+			a.sprite_icon-files_refresh(class=actualClass + '-refresh__btn' + ' ' + actualClass + '__btn--gray') Обновить список
 		
 		div(class=actualClass + '-actions')
 			.clearfix(class=actualClass + '-actions__check')

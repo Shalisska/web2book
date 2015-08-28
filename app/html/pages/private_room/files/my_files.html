@@ -204,8 +204,8 @@
                                       </div>
                                       <div class="clearfix my_files-download">
                                         <div class="my_files-download-add">
-                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_cloud my_files-download-add__btn-cloud">Добавить файл</a>
-                                            <label for="cloud_open" class="sprite_icon-arrow--down my_files-download-add__btn-cloud-select">
+                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_cloud my_files-download-add__btn-cloud my_files__btn--gray">Добавить файл</a>
+                                            <label for="cloud_open" class="sprite_icon-arrow--down my_files-download-add__btn-cloud-select my_files__btn--gray">
                                               <input type="checkbox" id="cloud_open">
                                               <ul class="clearfix my_files-download__cloud-selector">
                                                               <li class="my_files-download__cloud-selector__item"><a href="#" class="my_files-download__cloud-selector__name">
@@ -236,7 +236,7 @@
                                               </ul>
                                             </label>
                                           </div>
-                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_load my_files-download-add__btn-load">Загрузить файл</a></div>
+                                          <div class="clearfix my_files-download-add__btn"><a href="#" class="sprite_icon-download_load my_files-download-add__btn-load my_files__btn--gray">Загрузить файл</a></div>
                                         </div>
                                         <div class="my_files-download-drop">
                                           <p class="my_files-download-drop__text">Перетащите курсором мыши файлы для загрузки в эту область</p>
@@ -245,25 +245,25 @@
                                           <p class="my_files-download-drivers__text">Скачать драйвер для:</p><a href="#" class="form__btn sprite_icon-windows my_files-download-drivers__btn my_files-download-drivers__btn--win">Windows</a>
                                         </div>
                                       </div>
-                                                  <ul class="clearfix my_files-menu private_room-header__menu-part private_room-header__menu--top">
-                                                    <li class="my_files-menu__item my_files-menu__item--loaded private_room-header__menu-item private_room-header__menu-item--top">
-                                                      <label for="my_files-loaded" class="my_files-menu__name my_files-menu__name--loaded private_room-header__menu-item_name private_room-header__menu-item_name--top">Загруженные</label>
+                                                  <ul class="clearfix my_files-menu">
+                                                    <li class="my_files-menu__item my_files-menu__item--loaded">
+                                                      <label for="my_files-loaded" class="my_files-menu__name my_files-menu__name--loaded">Загруженные</label>
                                                     </li>
-                                                    <li class="my_files-menu__item my_files-menu__item--working private_room-header__menu-item private_room-header__menu-item--top">
-                                                      <label for="my_files-working" class="my_files-menu__name my_files-menu__name--working private_room-header__menu-item_name private_room-header__menu-item_name--top">Файлы для работы</label>
+                                                    <li class="my_files-menu__item my_files-menu__item--working">
+                                                      <label for="my_files-working" class="my_files-menu__name my_files-menu__name--working">Файлы для работы</label>
                                                     </li>
-                                                    <li class="my_files-menu__item my_files-menu__item--processing private_room-header__menu-item private_room-header__menu-item--top">
-                                                      <label for="my_files-processing" class="my_files-menu__name my_files-menu__name--processing private_room-header__menu-item_name private_room-header__menu-item_name--top">Файлы в обработке</label><span class="my_files-menu__name-top my_files-menu__name-top--processing">2</span>
+                                                    <li class="my_files-menu__item my_files-menu__item--processing">
+                                                      <label for="my_files-processing" class="my_files-menu__name my_files-menu__name--processing">Файлы в обработке<span class="my_files-menu__name-top my_files-menu__name-top--processing">2</span></label>
                                                     </li>
-                                                    <li class="my_files-menu__item my_files-menu__item--split private_room-header__menu-item private_room-header__menu-item--top">
-                                                      <label for="my_files-split" class="my_files-menu__name my_files-menu__name--split private_room-header__menu-item_name private_room-header__menu-item_name--top">Разбитые файлы</label>
+                                                    <li class="my_files-menu__item my_files-menu__item--split">
+                                                      <label for="my_files-split" class="my_files-menu__name my_files-menu__name--split">Разбитые файлы</label>
                                                     </li>
-                                                    <li class="my_files-menu__item my_files-menu__item--approved private_room-header__menu-item private_room-header__menu-item--top">
-                                                      <label for="my_files-approved" class="my_files-menu__name my_files-menu__name--approved private_room-header__menu-item_name private_room-header__menu-item_name--top">Утвержденные</label>
+                                                    <li class="my_files-menu__item my_files-menu__item--approved">
+                                                      <label for="my_files-approved" class="my_files-menu__name my_files-menu__name--approved">Утвержденные</label>
                                                     </li>
                                                   </ul>
-                                      <div class="my_files-refresh">
-                                        <p class="my_files-refresh__info">При появлениий знака<span></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="my_files-refresh__btn">Обновить список</a>
+                                      <div class="clearfix my_files-refresh">
+                                        <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
                                       </div>
                                       <div class="my_files-actions">
                                         <div class="clearfix my_files-actions__check">
@@ -272,13 +272,13 @@
                                           <label for="my_files__expand--off" class="my_files-actions__expand my_files-actions__expand--off"></label>
                                         </div>
                                         <ul class="clearfix my_files-actions__menu">
-                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a class="my_files-actions__menu-item my_files-actions__menu-item--archive"></a>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="my_files-actions__menu-item my_files-actions__menu-item--archive"></a>
                                                       </li>
-                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a class="my_files-actions__menu-item my_files-actions__menu-item--basket"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--clean"></a>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="my_files-actions__menu-item my_files-actions__menu-item--basket"></a><a title="Очистить" class="my_files-actions__menu-item my_files-actions__menu-item--clean"></a>
                                                       </li>
-                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a class="my_files-actions__menu-item my_files-actions__menu-item--add"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--remove"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--rename"></a><a class="my_files-actions__menu-item my_files-actions__menu-item--copy"></a>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="my_files-actions__menu-item my_files-actions__menu-item--add"></a><a title="Переместить" class="my_files-actions__menu-item my_files-actions__menu-item--remove"></a><a title="Переименовать" class="my_files-actions__menu-item my_files-actions__menu-item--rename"></a><a title="Копировать" class="my_files-actions__menu-item my_files-actions__menu-item--copy"></a>
                                                       </li>
-                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a class="my_files-actions__menu-item my_files-actions__menu-item--clipboard"></a>
+                                                      <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="my_files-actions__menu-item my_files-actions__menu-item--clipboard"></a>
                                                       </li>
                                         </ul>
                                         <div class="my_files-actions__search">

@@ -94,8 +94,8 @@ div(class=actualClass + '-upload')
 .clearfix(class=actualClass + '-download')
 	div(class=actualClass + '-download-add')
 		.clearfix(class=actualClass + '-download-add__btn')
-			a.sprite_icon-download_cloud(class=actualClass + '-download-add__btn-cloud' href='#') Добавить файл
-			label.sprite_icon-arrow--down(class=actualClass + '-download-add__btn-cloud-select' for='cloud_open')
+			a.sprite_icon-download_cloud(class=actualClass + '-download-add__btn-cloud' + ' ' + actualClass + '__btn--gray' href='#') Добавить файл
+			label.sprite_icon-arrow--down(class=actualClass + '-download-add__btn-cloud-select' + ' ' + actualClass + '__btn--gray' for='cloud_open')
 				input(type='checkbox' id='cloud_open')
 				ul.clearfix(class=actualClass + '-download__cloud-selector')
 					+cloud_selector(actualClass + '-download__cloud-selector', [{
@@ -121,7 +121,7 @@ div(class=actualClass + '-upload')
 					}])
 					
 		.clearfix(class=actualClass + '-download-add__btn')
-			a.sprite_icon-download_load(class=actualClass + '-download-add__btn-load' href='#') Загрузить файл
+			a.sprite_icon-download_load(class=actualClass + '-download-add__btn-load' + ' ' + actualClass + '__btn--gray' href='#') Загрузить файл
 	div(class=actualClass + '-download-drop')
 		p(class=actualClass + '-download-drop__text') Перетащите курсором мыши файлы для загрузки в эту область
 	div(class=actualClass + '-download-drivers')

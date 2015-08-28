@@ -16,6 +16,9 @@ var images_private = {
     }, {
       name: 'windows'
     , class: 'before'
+    }, {
+      name: 'files_refresh'
+    , class: 'before'
     }]
 };
 
