@@ -3167,55 +3167,129 @@ th {
 .sprite_private_room {
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
 }
+.sprite_icon-add {
+  background-position: -38px 0px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-archive {
+  background-position: -76px -54px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
 .sprite_icon-arrow--down:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -46px -32px;
-  background-size: 62px 43px;
+  background-position: -114px -97px;
+  background-size: 138px 108px;
   width: 16px;
   height: 9px;
 }
+.sprite_icon-basket {
+  background-position: 0px -27px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after {
+  background-position: -82px -81px;
+  background-size: 138px 108px;
+  width: 14px;
+  height: 13px;
+}
+.sprite_icon-clean {
+  background-position: -76px 0px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-clipboard {
+  background-position: 0px 0px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-copy {
+  background-position: 0px -54px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
 .sprite_icon-delete {
-  background-position: 0px -26px;
-  background-size: 62px 43px;
+  background-position: -114px -48px;
+  background-size: 138px 108px;
   width: 16px;
   height: 17px;
 }
 .sprite_icon-download_cloud:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -16px -26px;
-  background-size: 62px 43px;
+  background-position: -66px -81px;
+  background-size: 138px 108px;
   width: 16px;
   height: 16px;
 }
 .sprite_icon-download_load:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -46px 0px;
-  background-size: 62px 43px;
+  background-position: -114px -65px;
+  background-size: 138px 108px;
   width: 16px;
   height: 16px;
+}
+.sprite_icon-expand_off {
+  background-position: 0px -81px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-expand_on {
+  background-position: -38px -54px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
 }
 .sprite_icon-files_refresh:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -46px -16px;
-  background-size: 62px 43px;
+  background-position: -114px -81px;
+  background-size: 138px 108px;
   width: 16px;
   height: 16px;
 }
+.sprite_icon-my_files_search:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -38px -81px;
+  background-size: 138px 108px;
+  width: 28px;
+  height: 23px;
+}
+.sprite_icon-remove {
+  background-position: -38px -27px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-rename {
+  background-position: -76px -27px;
+  background-size: 138px 108px;
+  width: 38px;
+  height: 27px;
+}
 .sprite_icon-to_workflow {
-  background-position: -24px 0px;
-  background-size: 62px 43px;
+  background-position: -114px -26px;
+  background-size: 138px 108px;
   width: 22px;
   height: 22px;
 }
 .sprite_icon-windows:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: 0px 0px;
-  background-size: 62px 43px;
+  background-position: -114px 0px;
+  background-size: 138px 108px;
   width: 24px;
   height: 26px;
 }
@@ -3223,55 +3297,129 @@ th {
   .sprite_private_room {
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
   }
+  .sprite_icon-add {
+    background-position: -38px 0px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-archive {
+    background-position: -76px -54.66666667px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -46px -32px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px -97.33333333px;
+    background-size: 138px 109.33333333333333px;
     width: 16px;
     height: 9.333333333333334px;
   }
+  .sprite_icon-basket {
+    background-position: 0px -27.33333333px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after {
+    background-position: -82px -82px;
+    background-size: 138px 109.33333333333333px;
+    width: 14px;
+    height: 13.333333333333334px;
+  }
+  .sprite_icon-clean {
+    background-position: -76px 0px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-clipboard {
+    background-position: 0px 0px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-copy {
+    background-position: 0px -54.66666667px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
   .sprite_icon-delete {
-    background-position: 0px -26px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px -48px;
+    background-size: 138px 109.33333333333333px;
     width: 16px;
     height: 17.333333333333332px;
   }
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -16px -26px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -66px -82px;
+    background-size: 138px 109.33333333333333px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -46px 0px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px -65.33333333px;
+    background-size: 138px 109.33333333333333px;
     width: 16px;
     height: 16px;
+  }
+  .sprite_icon-expand_off {
+    background-position: 0px -82px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-expand_on {
+    background-position: -38px -54.66666667px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -46px -16px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px -81.33333333px;
+    background-size: 138px 109.33333333333333px;
     width: 16px;
     height: 16px;
   }
+  .sprite_icon-my_files_search:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -38px -82px;
+    background-size: 138px 109.33333333333333px;
+    width: 28px;
+    height: 23.333333333333332px;
+  }
+  .sprite_icon-remove {
+    background-position: -38px -27.33333333px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-rename {
+    background-position: -76px -27.33333333px;
+    background-size: 138px 109.33333333333333px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
   .sprite_icon-to_workflow {
-    background-position: -24px 0px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px -26px;
+    background-size: 138px 109.33333333333333px;
     width: 22px;
     height: 22px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: 0px 0px;
-    background-size: 62px 43.333333333333336px;
+    background-position: -114px 0px;
+    background-size: 138px 109.33333333333333px;
     width: 24px;
     height: 26px;
   }
@@ -3280,55 +3428,129 @@ th {
   .sprite_private_room {
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
   }
+  .sprite_icon-add {
+    background-position: -38px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-archive {
+    background-position: -76px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -46px -32px;
-    background-size: 62px 43px;
+    background-position: -114px -97px;
+    background-size: 138px 108px;
     width: 16px;
     height: 9px;
   }
+  .sprite_icon-basket {
+    background-position: 0px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after {
+    background-position: -82px -81px;
+    background-size: 138px 108px;
+    width: 14px;
+    height: 13px;
+  }
+  .sprite_icon-clean {
+    background-position: -76px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-clipboard {
+    background-position: 0px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-copy {
+    background-position: 0px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-delete {
-    background-position: 0px -26px;
-    background-size: 62px 43px;
+    background-position: -114px -48px;
+    background-size: 138px 108px;
     width: 16px;
     height: 17px;
   }
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -16px -26px;
-    background-size: 62px 43px;
+    background-position: -66px -81px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -46px 0px;
-    background-size: 62px 43px;
+    background-position: -114px -65px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
+  }
+  .sprite_icon-expand_off {
+    background-position: 0px -81px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-expand_on {
+    background-position: -38px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -46px -16px;
-    background-size: 62px 43px;
+    background-position: -114px -81px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
   }
+  .sprite_icon-my_files_search:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -38px -81px;
+    background-size: 138px 108px;
+    width: 28px;
+    height: 23px;
+  }
+  .sprite_icon-remove {
+    background-position: -38px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-rename {
+    background-position: -76px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-to_workflow {
-    background-position: -24px 0px;
-    background-size: 62px 43px;
+    background-position: -114px -26px;
+    background-size: 138px 108px;
     width: 22px;
     height: 22px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: 0px 0px;
-    background-size: 62px 43px;
+    background-position: -114px 0px;
+    background-size: 138px 108px;
     width: 24px;
     height: 26px;
   }
@@ -3337,55 +3559,129 @@ th {
   .sprite_private_room {
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
   }
+  .sprite_icon-add {
+    background-position: -38px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-archive {
+    background-position: -76px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -46px -32px;
-    background-size: 62px 43px;
+    background-position: -114px -97px;
+    background-size: 138px 108px;
     width: 16px;
     height: 9px;
   }
+  .sprite_icon-basket {
+    background-position: 0px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after {
+    background-position: -82px -81px;
+    background-size: 138px 108px;
+    width: 14px;
+    height: 13px;
+  }
+  .sprite_icon-clean {
+    background-position: -76px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-clipboard {
+    background-position: 0px 0px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-copy {
+    background-position: 0px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-delete {
-    background-position: 0px -26px;
-    background-size: 62px 43px;
+    background-position: -114px -48px;
+    background-size: 138px 108px;
     width: 16px;
     height: 17px;
   }
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -16px -26px;
-    background-size: 62px 43px;
+    background-position: -66px -81px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -46px 0px;
-    background-size: 62px 43px;
+    background-position: -114px -65px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
+  }
+  .sprite_icon-expand_off {
+    background-position: 0px -81px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-expand_on {
+    background-position: -38px -54px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -46px -16px;
-    background-size: 62px 43px;
+    background-position: -114px -81px;
+    background-size: 138px 108px;
     width: 16px;
     height: 16px;
   }
+  .sprite_icon-my_files_search:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -38px -81px;
+    background-size: 138px 108px;
+    width: 28px;
+    height: 23px;
+  }
+  .sprite_icon-remove {
+    background-position: -38px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-rename {
+    background-position: -76px -27px;
+    background-size: 138px 108px;
+    width: 38px;
+    height: 27px;
+  }
   .sprite_icon-to_workflow {
-    background-position: -24px 0px;
-    background-size: 62px 43px;
+    background-position: -114px -26px;
+    background-size: 138px 108px;
     width: 22px;
     height: 22px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: 0px 0px;
-    background-size: 62px 43px;
+    background-position: -114px 0px;
+    background-size: 138px 108px;
     width: 24px;
     height: 26px;
   }
@@ -10849,6 +11145,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   margin-top: 0.7em;
   margin-left: 1.7em;
   margin-bottom: 0;
+  color: #333;
 }
 .my_files-refresh__info span {
   vertical-align: middle;
@@ -10859,12 +11156,156 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   width: 13em;
   padding: 0.4em 0.5em 0.4em 3em;
   margin: 1.1em 1.2em;
+  cursor: pointer;
 }
 .my_files-refresh__btn:before {
   position: absolute;
   top: 50%;
   margin-top: -8px;
   left: 0.8em;
+}
+.my_files-actions {
+  padding: 0.6em;
+  background: #f0f2f5;
+  font-size: 0.86em;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.my_files-actions__checking {
+  float: left;
+}
+.my_files-actions__checking label {
+  vertical-align: middle;
+}
+.my_files-actions__manage {
+  float: right;
+}
+.my_files-actions__check-all {
+  position: relative;
+  padding-left: 2em;
+  margin-right: 0.5em;
+}
+.my_files-actions__check-all:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  background-color: white;
+  border: 1px solid #8f9090;
+  cursor: pointer;
+}
+.my_files-actions__check-all:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  cursor: pointer;
+}
+.my_files-actions__expand {
+  cursor: pointer;
+}
+.my_files-actions__expand:hover,
+.my_files-actions__expand:active {
+  background-color: #3e9ade;
+}
+.my_files-actions__menu {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.my_files-actions__menu-items {
+  position: relative;
+  float: left;
+  padding: 0 0.5em;
+}
+.my_files-actions__menu-items:before {
+  content: '';
+  position: absolute;
+  right: -0.5px;
+  top: 10%;
+  width: 1px;
+  height: 80%;
+  background: #ccc;
+}
+.my_files-actions__menu-items:last-child:before {
+  display: none;
+}
+.my_files-actions__menu-item {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.my_files-actions__menu-item:hover,
+.my_files-actions__menu-item:active,
+.my_files-actions__menu-item:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.my_files-actions__menu-item:hover,
+.my_files-actions__menu-item:active {
+  background-color: #3e9ade;
+}
+.my_files-actions__search {
+  float: right;
+  padding: 0.1em 0;
+  width: 16.8em;
+}
+.my_files-actions__search-input {
+  position: relative;
+}
+.my_files-actions__search-input input {
+  width: 100%;
+  padding: 0.21em 26px 0.21em 0.5em;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.my_files-actions__search-input input:focus {
+  outline: none;
+}
+.my_files-actions__search-input input::-webkit-input-placeholder {
+  padding-left: 2.9em;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.my_files-actions__search-input input::-moz-placeholder {
+  padding-left: 2.9em;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.my_files-actions__search-input input:-moz-placeholder {
+  padding-left: 2.9em;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.my_files-actions__search-input input:-ms-input-placeholder {
+  padding-left: 2.9em;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.my_files-actions__search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.my_files-actions__search-btn:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -11.5px;
+  left: 50%;
+  margin-left: -14px;
 }
 .footer {
   position: relative;

@@ -18,6 +18,24 @@ var sprite_private_arr = [{
 		width: 0,
 		retina: 22
 	}]
+}, {
+	img_dir: 'private_room/sprite/checked',
+	dest: [{
+		width: 0,
+		retina: 14
+	}]
+}, {
+	img_dir: 'private_room/sprite/file_manage',
+	dest: [{
+		width: 0,
+		retina: 38
+	}]
+}, {
+	img_dir: 'private_room/sprite/search',
+	dest: [{
+		width: 0,
+		retina: 28
+	}]
 }];
 
 var sprite_form_arr = [{

@@ -19,6 +19,16 @@ var images_private = {
     }, {
       name: 'files_refresh'
     , class: 'before'
+    }, {
+      name: 'my_files_search'
+    , class: 'before'
+    }, {
+      name: 'checked'
+    , template: function (r, w) {
+          var name = '.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after';
+		
+        return name;
+      }
     }]
 };
 

@@ -367,6 +367,7 @@
 			margin-top: 0.7em;
 			margin-left: 1.7em;
 			margin-bottom: 0;
+			color: #333;
 			
 			span {
 				vertical-align: middle;
@@ -379,12 +380,155 @@
 			width: 13em;
 			padding: 0.4em 0.5em 0.4em 3em;
 			margin: 1.1em 1.2em;
+			cursor: pointer;
 			
 			&:before {
 				position: absolute;
 				top: 50%;
 				margin-top: -8px;
 				left: 0.8em;
+			}
+		}
+	}
+	
+	&-actions {
+		padding: 0.6em;
+		background: #f0f2f5;
+		font-size: 0.86em;
+		color: #333;
+		border: 1px solid #ccc;
+		
+		&__checking {
+			float: left;
+			
+			label {vertical-align: middle;}
+		}
+		&__manage {float: right;}
+		
+		&__check-all {
+			position: relative;
+			padding-left: 2em;
+			margin-right: 0.5em;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				margin-top: -7px;
+				left: 0;
+				@w: 11px;
+				width: @w;
+				height: @w;
+				background-color: white;
+				border: 1px solid #8f9090;
+				cursor: pointer;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -7px;
+				background-image: @sprite_private_room-bg;
+				cursor: pointer;
+			}
+		}
+		
+		&__expand {
+			cursor: pointer;
+			&:hover, &:active {background-color: #3e9ade;}
+		}
+		
+		&__menu {
+			float: left;
+			.reset-ul();
+			
+			&-items {
+				position: relative;
+				float: left;
+				padding: 0 0.5em;
+				
+				&:before {
+					content: '';
+					position: absolute;
+					right: -0.5px;
+					top: 10%;
+					width: 1px;
+					height: 80%;
+					background: #ccc;
+				}
+				
+				&:last-child:before {display: none;}
+			}
+			
+			&-item {
+				.reset-a();
+				display: block;
+				float: left;
+				cursor: pointer;
+				
+				&:hover, &:active {background-color: #3e9ade;}
+			}
+		}
+		
+		&__search {
+			float: right;
+			padding: 0.1em 0;
+			width: 16.8em;
+			
+			&-input {
+				position: relative;
+			
+				input {
+					width: 100%;
+					padding: 0.21em 26px 0.21em 0.5em;
+
+					&:focus {outline: none;}
+
+					&::-webkit-input-placeholder {
+						padding-left: 2.9em;
+						font-family: @font-italic;
+						color: #808080;
+					}
+
+					&::-moz-placeholder {
+						padding-left: 2.9em;
+						font-family: @font-italic;
+						color: #808080;
+					}/* Firefox 19+ */
+
+					&:-moz-placeholder {
+						padding-left: 2.9em;
+						font-family: @font-italic;
+						color: #808080;
+					}/* Firefox 18- */
+
+					&:-ms-input-placeholder {
+						padding-left: 2.9em;
+						font-family: @font-italic;
+						color: #808080;
+					}
+				}
+			}
+			
+			&-btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				width: 28px;
+				background: transparent;
+				border: none;
+				outline: none;
+				
+				&:before {
+					position: absolute;
+					top: 50%;
+					margin-top: -11.5px;
+					left: 50%;
+					margin-left: -14px;
+				}
 			}
 		}
 	}

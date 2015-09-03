@@ -19,7 +19,7 @@ mixin my_files_action_menu(name, items)
 	each item in items
 		li.clearfix(class=name + '-items' + ' ' + name + '-items--' + item.id)
 			each elem in item.items
-				a(class=name + '-item' + ' ' + name + '-item--' + elem.id title=elem.hint)
+				a.sprite_private_room(class=name + '-item' + ' ' + name + '-item--' + elem.id + ' ' + 'sprite_icon-' + elem.id title=elem.hint)
 
 mixin my_files_header(actualClass, items)
 	+my_files_menu_inp(actualClass + '-menu', items)
@@ -38,51 +38,52 @@ mixin my_files_header(actualClass, items)
 				|, вы можете перейти по этому файлу к его рабочему разделу
 			a.sprite_icon-files_refresh(class=actualClass + '-refresh__btn' + ' ' + actualClass + '__btn--gray') Обновить список
 		
-		div(class=actualClass + '-actions')
-			.clearfix(class=actualClass + '-actions__check')
+		.clearfix(class=actualClass + '-actions')
+			.clearfix(class=actualClass + '-actions__checking')
 				label(class=actualClass + '-actions__check-all' for=actualClass + '__check-all') Выделить все
-				label(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--on' for=actualClass + '__expand--on')
-				label(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--off' for=actualClass + '__expand--off')
+				label.sprite_private_room.sprite_icon-expand_on(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--on' for=actualClass + '__expand--on')
+				label.sprite_private_room.sprite_icon-expand_off(class=actualClass + '-actions__expand' + ' ' + actualClass + '-actions__expand--off' for=actualClass + '__expand--off')
 			
-			ul.clearfix(class=actualClass + '-actions__menu')
-				+my_files_action_menu(actualClass + '-actions__menu', [{
-					id: 'archive',
-					items: [{
+			.clearfix(class=actualClass + '-actions__manage')
+				ul.clearfix(class=actualClass + '-actions__menu')
+					+my_files_action_menu(actualClass + '-actions__menu', [{
 						id: 'archive',
-						hint: 'В архив'
-					}]
-				}, {
-					id: 'cleaning',
-					items: [{
-						id: 'basket',
-						hint: 'В корзину'
+						items: [{
+							id: 'archive',
+							hint: 'В архив'
+						}]
 					}, {
-						id: 'clean',
-						hint: 'Очистить'
-					}]
-				}, {
-					id: 'files',
-					items: [{
-						id: 'add',
-						hint: 'Добавить'
+						id: 'cleaning',
+						items: [{
+							id: 'basket',
+							hint: 'В корзину'
+						}, {
+							id: 'clean',
+							hint: 'Очистить'
+						}]
 					}, {
-						id: 'remove',
-						hint: 'Переместить'
+						id: 'files',
+						items: [{
+							id: 'add',
+							hint: 'Добавить'
+						}, {
+							id: 'remove',
+							hint: 'Переместить'
+						}, {
+							id: 'rename',
+							hint: 'Переименовать'
+						}, {
+							id: 'copy',
+							hint: 'Копировать'
+						}]
 					}, {
-						id: 'rename',
-						hint: 'Переименовать'
-					}, {
-						id: 'copy',
-						hint: 'Копировать'
-					}]
-				}, {
-					id: 'clipboard',
-					items: [{
 						id: 'clipboard',
-						hint: 'Добавить в буфер обмена'
-					}]
-				}])
-			div(class=actualClass + '-actions__search')
-				div(class=actualClass + '-actions__search-input')
-					input(placeholder='Поиск')
-				button(class=actualClass + '-actions__search-btn')
+						items: [{
+							id: 'clipboard',
+							hint: 'Добавить в буфер обмена'
+						}]
+					}])
+				div(class=actualClass + '-actions__search')
+					div(class=actualClass + '-actions__search-input')
+						input(placeholder='Поиск')
+						button.sprite_icon-my_files_search(class=actualClass + '-actions__search-btn')
