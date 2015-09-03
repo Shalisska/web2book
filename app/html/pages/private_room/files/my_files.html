@@ -267,7 +267,7 @@
                                       </div>
                                       <div class="clearfix my_files-actions">
                                         <div class="clearfix my_files-actions__checking">
-                                          <label for="my_files__check-all" class="my_files-actions__check-all">Выделить все</label>
+                                          <label for="my_files__check-all" class="my_files-actions__check-all my_files__check">Выделить все</label>
                                           <label for="my_files__expand--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
                                           <label for="my_files__expand--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
                                         </div>
@@ -293,123 +293,107 @@
                                     </header>
                         <ul class="my_files-table my_files-docs">
                                       <li class="clearfix my_files-table__header my_files-docs__header ">
+                                        <div class="my_files-table__header-item my_files-docs__header-item  my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item  my_files-docs__header-item-name">Название</p>
                                         <p class="my_files-table__header-item my_files-docs__header-item  my_files-docs__header-item-size">Размер</p>
                                         <p class="my_files-table__header-item my_files-docs__header-item  my_files-docs__header-item-manage">Действия / Статусы</p>
                                       </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items  my_files-docs__items--file">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" id="files_check-for_print">
-                                                      </label>
-                                                    </div>
                                                     <input type="checkbox" id="file_opener--for_print" class="my_files-docs__item-file_opener-input">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
-                                                      <label for="file_opener--for_print"></label>
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" id="files_check-for_print">
+                                                      <label for="files_check-for_print" class="my_files__check"></label>
                                                     </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Для печати
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
+                                                      <label for="file_opener--for_print"></label>Для печати
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-size">
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-manage">
                                                     </div>
-                                                    <ul class="my_files-table_sub my_files-docs_sub">
-                                                                  <li class="clearfix my_files-table_sub__items my_files-docs_sub__items  my_files-docs_sub__items--file">
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-check">
-                                                                      <label>
-                                                                        <input type="checkbox" id="files_check-my_books">
-                                                                      </label>
+                                                                <ul class="my_files-table my_files-docs my_files-docs_sub">
+                                                                  <li class="clearfix my_files-table__items my_files-docs__items  my_files-docs__items--file">
+                                                                    <input type="checkbox" id="file_opener--my_books" class="my_files-docs__item-file_opener-input">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-check my_files-docs_sub__item-check  my_files__checkbox">
+                                                                      <input type="checkbox" id="files_check-my_books">
+                                                                      <label for="files_check-my_books" class="my_files__check"></label>
                                                                     </div>
-                                                                    <input type="checkbox" id="file_opener--my_books" class="my_files-docs_sub__item-file_opener-input">
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-file_opener">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-name my_files-docs_sub__item-name ">Мои книги
                                                                       <label for="file_opener--my_books"></label>
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-name">Мои книги
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-size my_files-docs_sub__item-size ">
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-size">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-manage my_files-docs_sub__item-manage ">manage
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-manage">
-                                                                    </div>
-                                                                    <ul class="my_files-table_sub_sub my_files-docs_sub_sub">
-                                                                                  <li class="clearfix my_files-table_sub_sub__items my_files-docs_sub_sub__items ">
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-check">
-                                                                                      <label>
+                                                                    <ul class="my_files-table my_files-docs">
+                                                                                  <ul class="my_files-table my_files-docs my_files-docs_sub">
+                                                                                    <li class="clearfix my_files-table__items my_files-docs__items ">
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-check my_files-docs_sub__item-check  my_files__checkbox">
                                                                                         <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.pdf">
-                                                                                      </label>
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-file_opener">
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-name">The_roof_is_on_fire_you_fat_beaches.pdf
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-size">
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-manage">
-                                                                                    </div>
-                                                                                  </li>
+                                                                                        <label for="files_check-the_roof_is_on_fire_you_fat_beaches.pdf" class="my_files__check"></label>
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-name my_files-docs_sub__item-name ">The_roof_is_on_fire_you_fat_beaches.pdf
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-size my_files-docs_sub__item-size ">
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-manage my_files-docs_sub__item-manage ">manage
+                                                                                      </div>
+                                                                                    </li>
+                                                                                  </ul>
                                                                     </ul>
                                                                   </li>
-                                                    </ul>
+                                                                </ul>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items  my_files-docs__items--file">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" id="files_check-outline">
-                                                      </label>
-                                                    </div>
                                                     <input type="checkbox" id="file_opener--outline" class="my_files-docs__item-file_opener-input">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
-                                                      <label for="file_opener--outline"></label>
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" id="files_check-outline">
+                                                      <label for="files_check-outline" class="my_files__check"></label>
                                                     </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Наброски
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
+                                                      <label for="file_opener--outline"></label>Наброски
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-size">
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-manage">
                                                     </div>
-                                                    <ul class="my_files-table_sub my_files-docs_sub">
-                                                                  <li class="clearfix my_files-table_sub__items my_files-docs_sub__items  my_files-docs_sub__items--file">
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-check">
-                                                                      <label>
-                                                                        <input type="checkbox" id="files_check-smth_else">
-                                                                      </label>
+                                                                <ul class="my_files-table my_files-docs my_files-docs_sub">
+                                                                  <li class="clearfix my_files-table__items my_files-docs__items  my_files-docs__items--file">
+                                                                    <input type="checkbox" id="file_opener--smth_else" class="my_files-docs__item-file_opener-input">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-check my_files-docs_sub__item-check  my_files__checkbox">
+                                                                      <input type="checkbox" id="files_check-smth_else">
+                                                                      <label for="files_check-smth_else" class="my_files__check"></label>
                                                                     </div>
-                                                                    <input type="checkbox" id="file_opener--smth_else" class="my_files-docs_sub__item-file_opener-input">
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-file_opener">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-name my_files-docs_sub__item-name ">Smth else
                                                                       <label for="file_opener--smth_else"></label>
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-name">Smth else
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-size my_files-docs_sub__item-size ">
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-size">
+                                                                    <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-manage my_files-docs_sub__item-manage ">manage
                                                                     </div>
-                                                                    <div class="my_files-table_sub__item my_files-docs_sub__item  my_files-docs_sub__item-manage">
-                                                                    </div>
-                                                                    <ul class="my_files-table_sub_sub my_files-docs_sub_sub">
-                                                                                  <li class="clearfix my_files-table_sub_sub__items my_files-docs_sub_sub__items ">
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-check">
-                                                                                      <label>
+                                                                    <ul class="my_files-table my_files-docs">
+                                                                                  <ul class="my_files-table my_files-docs my_files-docs_sub">
+                                                                                    <li class="clearfix my_files-table__items my_files-docs__items ">
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-check my_files-docs_sub__item-check  my_files__checkbox">
                                                                                         <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf">
-                                                                                      </label>
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-file_opener">
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-name">The_roof_is_on_fire.pdf
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-size">
-                                                                                    </div>
-                                                                                    <div class="my_files-table_sub_sub__item my_files-docs_sub_sub__item  my_files-docs_sub_sub__item-manage">
-                                                                                    </div>
-                                                                                  </li>
+                                                                                        <label for="files_check-the_roof_is_on_fire.pdf" class="my_files__check"></label>
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-name my_files-docs_sub__item-name ">The_roof_is_on_fire.pdf
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-size my_files-docs_sub__item-size ">
+                                                                                      </div>
+                                                                                      <div class="my_files-table__item my_files-docs__item my_files-docs_sub__item my_files-docs__item-manage my_files-docs_sub__item-manage ">manage
+                                                                                      </div>
+                                                                                    </li>
+                                                                                  </ul>
                                                                     </ul>
                                                                   </li>
-                                                    </ul>
+                                                                </ul>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg">
+                                                      <label for="files_check-12_obezyan.jpeg" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">12_obezyan.jpeg
                                                     </div>
@@ -419,12 +403,9 @@
                                                     </div>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-petrovich.png">
+                                                      <label for="files_check-petrovich.png" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Petrovich.png
                                                     </div>
@@ -434,12 +415,9 @@
                                                     </div>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf">
+                                                      <label for="files_check-r2-d2.pdf" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">r2-d2.pdf
                                                     </div>
@@ -449,12 +427,9 @@
                                                     </div>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt">
+                                                      <label for="files_check-kniga_12.33.txt" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Kniga_12.33.txt
                                                     </div>
@@ -464,12 +439,9 @@
                                                     </div>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf">
+                                                      <label for="files_check-pitomnik.pdf" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Pitomnik.pdf
                                                     </div>
@@ -479,12 +451,9 @@
                                                     </div>
                                                   </li>
                                                   <li class="clearfix my_files-table__items my_files-docs__items ">
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check">
-                                                      <label>
-                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx">
-                                                      </label>
-                                                    </div>
-                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-file_opener">
+                                                    <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
+                                                      <input type="checkbox" name="files_check" id="files_check-ochumet.docx">
+                                                      <label for="files_check-ochumet.docx" class="my_files__check"></label>
                                                     </div>
                                                     <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">Ochumet.docx
                                                     </div>

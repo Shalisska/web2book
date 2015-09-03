@@ -1,6 +1,8 @@
 mixin my_files_table(name_total, name, data)
 	-var title_arr = []
 	li.clearfix(class=class_name([name_total, name], '__header'))
+		div(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-check')
+		-title_arr.push('check')
 		each item in data.header
 			p(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-' + item.id)=item.name
 			-title_arr.push(item.id)
@@ -12,34 +14,77 @@ mixin my_files_table_inner(name_total, name, items, title_arr)
 		if item.file
 			-file_class = ' ' + name + '__items--file'
 		li.clearfix(class=class_name([name_total, name], '__items') + file_class)
-			div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-check')
-				label
-					if item.file
-						input(type='checkbox' id='files_check-' + item.id)
-					else
-						input(type='checkbox' name='files_check' id='files_check-' + item.id)
 			
 			if item.file
 				input(class=name + '__item-file_opener-input' type='checkbox' id='file_opener--' + item.id)
-			div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-file_opener')
-				if item.file
-					label(for='file_opener--' + item.id)
 			
 			each title in title_arr
-				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title)
+				-var check_class = ''
+				if title == 'check'
+					-check_class = ' my_files__checkbox'
+				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + check_class)
 					case title
+						when 'check'
+							if item.file
+								input(type='checkbox' id='files_check-' + item.id)
+							else
+								input(type='checkbox' name='files_check' id='files_check-' + item.id)
+							label.my_files__check(for='files_check-' + item.id)
+						
 						when 'name'
+							if item.file
+								label(for='file_opener--' + item.id)
 							-var type = '.' + item.type
 							if item.type == 'file'
 								-type = ''
 							=item.name + type
+						
 						when 'size'
 							=item.size
 						when 'manage'
 							=''
 			if item.file
-				ul(class=name_total + '_sub' + ' ' + name + '_sub')
-					+my_files_table_inner(name_total + '_sub', name + '_sub', item.file, title_arr)
+				-var lvl = 1
+				+my_files_table_inner_sub(name_total, name, item.file, title_arr, lvl)
+
+mixin my_files_table_inner_sub(name_total, name, items, title_arr, lvl)
+	ul(class=name_total + ' ' + name + ' ' + name + '_sub')
+		each item in items
+			-var file_class = ''
+			if item.file
+				-file_class = ' ' + name + '__items--file'
+			li.clearfix(class=class_name([name_total, name], '__items') + file_class)
+
+				if item.file
+					input(class=name + '__item-file_opener-input' type='checkbox' id='file_opener--' + item.id)
+
+				each title in title_arr
+					-var check_class = ''
+					if title == 'check'
+						-check_class = ' my_files__checkbox'
+					div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + check_class)
+						case title
+							when 'check'
+								if item.file
+									input(type='checkbox' id='files_check-' + item.id)
+								else
+									input(type='checkbox' name='files_check' id='files_check-' + item.id)
+								label.my_files__check(for='files_check-' + item.id)
+							when 'name'
+								-var type = '.' + item.type
+								if item.type == 'file'
+									-type = ''
+								=item.name + type
+								if item.file
+									label(for='file_opener--' + item.id)
+							
+							when 'size'
+								=item.size
+							when 'manage'
+								='manage'
+				if item.file
+					ul(class=name_total + ' ' + name)
+						+my_files_table_inner_sub(name_total, name, item.file, title_arr)
 
 ul(class=actualClass + '-table' + ' ' + actualClass + '-docs')
 	+my_files_table(actualClass + '-table', actualClass + '-docs', {

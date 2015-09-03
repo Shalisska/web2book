@@ -25,9 +25,10 @@ var images_private = {
     }, {
       name: 'checked'
     , template: function (r, w) {
-          var name = '.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after';
+			var name1 = '.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after';
+			var name2 = '.my_files__checkbox>input[type="checkbox"]:checked ~ label:after';
 		
-        return name;
+        return [name1, name2];
       }
     }]
 };
