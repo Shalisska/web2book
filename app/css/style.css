@@ -10682,119 +10682,118 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   margin-right: 0.3em;
   color: #399ee5;
 }
-.my_files-upload {
+.my_files-table {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  margin-bottom: 3em;
 }
-.my_files-upload__title {
-  margin-top: 0;
-}
-.my_files-upload__header-item,
-.my_files-upload__item {
+.my_files-table__header-item,
+.my_files-table__item {
   float: left;
   text-align: center;
 }
-.my_files-upload__header-item-name,
-.my_files-upload__item-name {
+.my_files-table__header-item-name,
+.my_files-table__item-name {
   width: 40%;
   padding-left: 5%;
   text-align: left;
 }
-.my_files-upload__header-item-size,
-.my_files-upload__item-size {
+.my_files-table__header-item-size,
+.my_files-table__item-size {
   width: 10%;
 }
-.my_files-upload__header-item-type,
-.my_files-upload__item-type {
+.my_files-table__header-item-type,
+.my_files-table__item-type {
   width: 10%;
 }
-.my_files-upload__header-item-status,
-.my_files-upload__item-status {
+.my_files-table__header-item-status,
+.my_files-table__item-status {
   width: 30%;
 }
-.my_files-upload__header-item-delete,
-.my_files-upload__item-delete {
+.my_files-table__header-item-delete,
+.my_files-table__item-delete {
   width: 10%;
 }
-.my_files-upload__header {
+.my_files-table__header {
   font-family: 'Tahoma', 'Arial', sans-serif;
   font-size: 0.79em;
   color: #808080;
   border: 1px solid #ccc;
 }
-.my_files-upload__header-item {
+.my_files-table__header-item {
   margin: 1.3em 0;
 }
-.my_files-upload__items {
+.my_files-table__items {
   position: relative;
   font-size: 0.86em;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.my_files-upload__items:nth-of-type(2) {
+.my_files-table__items:nth-of-type(2) {
   border-top: 1px solid #b8b8b8;
 }
-.my_files-upload__items:last-of-type {
+.my_files-table__items:last-of-type {
   border-bottom: 1px solid #b8b8b8;
 }
-.my_files-upload__items:nth-of-type(2n) {
+.my_files-table__items:nth-of-type(2n) {
   background: #e1e3e6;
 }
-.my_files-upload__items:nth-of-type(2n+1) {
+.my_files-table__items:nth-of-type(2n+1) {
   background: #f0f2f5;
 }
-.my_files-upload__item {
+.my_files-table__item {
   padding-top: 0.9em;
   padding-bottom: 0.9em;
 }
-.my_files-upload__item-delete {
+.my_files-table__item-delete {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   cursor: pointer;
 }
-.my_files-upload__item-delete span {
+.my_files-table__item-delete span {
   position: absolute;
   top: 50%;
   margin-top: -8px;
   left: 50%;
   margin-left: -8px;
 }
-.my_files-upload__item-delete span:hover {
+.my_files-table__item-delete span:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-.my_files-upload__status {
+.my_files-table__status {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 10%;
 }
-.my_files-upload__status-bar {
+.my_files-table__status-bar {
   position: relative;
   width: 80%;
   margin: 0 auto;
   height: 17px;
 }
-.my_files-upload__status-bar--loading {
+.my_files-table__status-bar--loading {
   border: 1px solid #4c4c4c;
   border-image: linear-gradient(to top, #ffffff, #a5a5a5 77%, #4c4c4c) 1 stretch;
   box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 5px 0 rgba(0, 0, 0, 0.3);
 }
-.my_files-upload__status-text {
+.my_files-table__status-text {
   position: relative;
   z-index: 5;
 }
-.my_files-upload__status-text--loading {
+.my_files-table__status-text--loading {
   font-family: 'Tahoma', 'Arial', sans-serif;
   font-size: 0.92em;
   color: white;
 }
-.my_files-upload__status-text--end {
+.my_files-table__status-text--end {
   font-size: 1.16em;
 }
-.my_files-upload__status-fill {
+.my_files-table__status-fill {
   position: absolute;
   left: 0;
   right: 30%;
@@ -10805,7 +10804,7 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   background-size: 13px 100%;
   box-shadow: inset 4px 0 3px -3px rgba(255, 255, 255, 0.75), inset -4px 0 3px -3px rgba(255, 255, 255, 0.75), 1px 1px 0 0 rgba(0, 0, 0, 0.2);
 }
-.my_files-upload__status-fill--end {
+.my_files-table__status-fill--end {
   display: none;
 }
 .my_files__btn--gray {
@@ -11306,6 +11305,131 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   margin-top: -11.5px;
   left: 50%;
   margin-left: -14px;
+}
+.my_files-upload {
+  margin-bottom: 3em;
+}
+.my_files-upload__title {
+  margin-top: 0;
+}
+.my_files-upload__header-item,
+.my_files-upload__item {
+  float: left;
+  text-align: center;
+}
+.my_files-upload__header-item-name,
+.my_files-upload__item-name {
+  width: 40%;
+  padding-left: 5%;
+  text-align: left;
+}
+.my_files-upload__header-item-size,
+.my_files-upload__item-size {
+  width: 10%;
+}
+.my_files-upload__header-item-type,
+.my_files-upload__item-type {
+  width: 10%;
+}
+.my_files-upload__header-item-status,
+.my_files-upload__item-status {
+  width: 30%;
+}
+.my_files-upload__header-item-delete,
+.my_files-upload__item-delete {
+  width: 10%;
+}
+.my_files-upload__header {
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  font-size: 0.79em;
+  color: #808080;
+  border: 1px solid #ccc;
+}
+.my_files-upload__header-item {
+  margin: 1.3em 0;
+}
+.my_files-upload__items {
+  position: relative;
+  font-size: 0.86em;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.my_files-upload__items:nth-of-type(2) {
+  border-top: 1px solid #b8b8b8;
+}
+.my_files-upload__items:last-of-type {
+  border-bottom: 1px solid #b8b8b8;
+}
+.my_files-upload__items:nth-of-type(2n) {
+  background: #e1e3e6;
+}
+.my_files-upload__items:nth-of-type(2n+1) {
+  background: #f0f2f5;
+}
+.my_files-upload__item {
+  padding-top: 0.9em;
+  padding-bottom: 0.9em;
+}
+.my_files-upload__item-delete {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.my_files-upload__item-delete span {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -8px;
+}
+.my_files-upload__item-delete span:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.my_files-upload__status {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+}
+.my_files-upload__status-bar {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 17px;
+}
+.my_files-upload__status-bar--loading {
+  border: 1px solid #4c4c4c;
+  border-image: linear-gradient(to top, #ffffff, #a5a5a5 77%, #4c4c4c) 1 stretch;
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.3), inset 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+.my_files-upload__status-text {
+  position: relative;
+  z-index: 5;
+}
+.my_files-upload__status-text--loading {
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  font-size: 0.92em;
+  color: white;
+}
+.my_files-upload__status-text--end {
+  font-size: 1.16em;
+}
+.my_files-upload__status-fill {
+  position: absolute;
+  left: 0;
+  right: 30%;
+  top: 0;
+  bottom: 1px;
+  background-color: #4ca6e6;
+  background-image: linear-gradient(120deg, transparent 0px, transparent 33%, rgba(130, 193, 238, 0.5) 33%, rgba(130, 193, 238, 0.5) 65%, transparent 65%, transparent 99%, rgba(130, 193, 238, 0.5) 99%), linear-gradient(to top, #64c1e8, #388bbf 33%, #6dccf1);
+  background-size: 13px 100%;
+  box-shadow: inset 4px 0 3px -3px rgba(255, 255, 255, 0.75), inset -4px 0 3px -3px rgba(255, 255, 255, 0.75), 1px 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.my_files-upload__status-fill--end {
+  display: none;
 }
 .footer {
   position: relative;

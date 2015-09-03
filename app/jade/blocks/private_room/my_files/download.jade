@@ -1,20 +1,19 @@
 -var actualClass = pageSubclass
 
-mixin upload(name, data)
+mixin upload(name_total, name, data)
 	-var title_arr = []
-	p.title--h3(class=name + '__title') Загрузка
-	.clearfix(class=name + '__header')
+	li.clearfix(class=class_name([name_total, name], '__header'))
 		each item in data.header
-			p(class=name + '__header-item' + ' ' + name + '__header-item-' + item.id)=item.name
+			p(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-' + item.id)=item.name
 			-title_arr.push(item.id)
 	each item in data.items
-		.clearfix(class=name + '__items')
+		li.clearfix(class=class_name([name_total, name], '__items'))
 			each elem, i in item
 				case i
 					when 'status'
-						+upload_status((name + '__item' + ' ' + name + '__item-' + i), name + '__' + i, elem)
+						+upload_status((class_name([name_total, name], '__item') + ' ' + name + '__item-' + i), name + '__' + i, elem)
 					default
-						div(class=name + '__item' + ' ' + name + '__item-' + i)=elem
+						div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + i)=elem
 			div(class=name + '__item' + ' ' + name + '__item-delete')
 				span.sprite_private_room.sprite_icon-delete
 
@@ -50,8 +49,10 @@ mixin cloud_selector(name, items)
 					})
 				span(class=name + '__name-text')=item.name
 
-div(class=actualClass + '-upload')
-	+upload(actualClass + '-upload', {
+
+p.title--h3(class=actualClass + '-upload__title') Загрузка
+ul(class=actualClass + '-table' + ' ' + actualClass + '-upload')
+	+upload(actualClass + '-table', actualClass + '-upload', {
 		header: [{
 			id: 'name',
 			name: 'Название'

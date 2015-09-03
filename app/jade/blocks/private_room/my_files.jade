@@ -1,11 +1,18 @@
 -var actualClass = pageSubclass
 
+-function class_name(names, part) {
+	-var res = '';
+	-names.forEach(function(name) {
+		-res = res + name + part + ' ';
+	-});
+	-return res;
+-}
+
 include my_files/header
 
 mixin my_files(items)
 	+my_files_header(actualClass, items)
-	
-
+	include my_files/table
 
 
 +my_files([{
@@ -25,3 +32,4 @@ mixin my_files(items)
 	id: 'approved',
 	name: 'Утвержденные'
 }])
+

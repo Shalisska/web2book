@@ -1,0 +1,121 @@
+mixin my_files_table(name_total, name, data)
+	-var title_arr = []
+	li.clearfix(class=class_name([name_total, name], '__header'))
+		each item in data.header
+			p(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-' + item.id)=item.name
+			-title_arr.push(item.id)
+	+my_files_table_inner(name_total, name, data.items, title_arr)
+
+mixin my_files_table_inner(name_total, name, items, title_arr)
+	each item in items
+		-var file_class = ''
+		if item.file
+			-file_class = ' ' + name + '__items--file'
+		li.clearfix(class=class_name([name_total, name], '__items') + file_class)
+			div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-check')
+				label
+					if item.file
+						input(type='checkbox' id='files_check-' + item.id)
+					else
+						input(type='checkbox' name='files_check' id='files_check-' + item.id)
+			
+			if item.file
+				input(class=name + '__item-file_opener-input' type='checkbox' id='file_opener--' + item.id)
+			div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-file_opener')
+				if item.file
+					label(for='file_opener--' + item.id)
+			
+			each title in title_arr
+				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title)
+					case title
+						when 'name'
+							-var type = '.' + item.type
+							if item.type == 'file'
+								-type = ''
+							=item.name + type
+						when 'size'
+							=item.size
+						when 'manage'
+							=''
+			if item.file
+				ul(class=name_total + '_sub' + ' ' + name + '_sub')
+					+my_files_table_inner(name_total + '_sub', name + '_sub', item.file, title_arr)
+
+ul(class=actualClass + '-table' + ' ' + actualClass + '-docs')
+	+my_files_table(actualClass + '-table', actualClass + '-docs', {
+	header: [{
+		id: 'name',
+		name: 'Название'
+	}, {
+		id: 'size',
+		name: 'Размер'
+	}, {
+		id: 'manage',
+		name: 'Действия / Статусы'
+	}],
+	items: [{
+		id: 'for_print',
+		name: 'Для печати',
+		type: 'file',
+		size: '',
+		file: [{
+			id: 'my_books',
+			name: 'Мои книги',
+			type: 'file',
+			size: '',
+			file: [{
+				id: 'the_roof_is_on_fire_you_fat_beaches.pdf',
+				name: 'The_roof_is_on_fire_you_fat_beaches',
+				type: 'pdf',
+				size: ''
+			}]
+		}]
+	}, {
+		id: 'outline',
+		name: 'Наброски',
+		type: 'file',
+		size: '',
+		file: [{
+			id: 'smth_else',
+			name: 'Smth else',
+			type: 'file',
+			size: '',
+			file: [{
+				id: 'the_roof_is_on_fire.pdf',
+				name: 'The_roof_is_on_fire',
+				type: 'pdf',
+				size: ''
+			}]
+		}]
+	}, {
+		id: '12_obezyan.jpeg',
+		name: '12_obezyan',
+		type: 'jpeg',
+		size: ''
+	}, {
+		id: 'petrovich.png',
+		name: 'Petrovich',
+		type: 'png',
+		size: ''
+	}, {
+		id: 'r2-d2.pdf',
+		name: 'r2-d2',
+		type: 'pdf',
+		size: ''
+	}, {
+		id: 'kniga_12.33.txt',
+		name: 'Kniga_12.33',
+		type: 'txt',
+		size: ''
+	}, {
+		id: 'pitomnik.pdf',
+		name: 'Pitomnik',
+		type: 'pdf',
+		size: ''
+	}, {
+		id: 'ochumet.docx',
+		name: 'Ochumet',
+		type: 'docx',
+		size: ''
+	}]
+})
