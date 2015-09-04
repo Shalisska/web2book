@@ -30,6 +30,12 @@ var images_private = {
 		
         return [name1, name2];
       }
+    }, {
+      name: 'type_file'
+    , class: 'before'
+    }, {
+      name: 'type_folder'
+    , class: 'before'
     }]
 };
 

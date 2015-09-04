@@ -3169,13 +3169,13 @@ th {
 }
 .sprite_icon-add {
   background-position: -38px 0px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-archive {
-  background-position: -76px -54px;
-  background-size: 138px 108px;
+  background-position: -38px -54px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
@@ -3183,44 +3183,44 @@ th {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
   background-position: -114px -97px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 16px;
   height: 9px;
 }
 .sprite_icon-basket {
   background-position: 0px -27px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
 .my_files__checkbox > input[type="checkbox"]:checked ~ label:after {
-  background-position: -82px -81px;
-  background-size: 138px 108px;
+  background-position: 0px -108px;
+  background-size: 138px 121px;
   width: 14px;
   height: 13px;
 }
 .sprite_icon-clean {
   background-position: -76px 0px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-clipboard {
   background-position: 0px 0px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-copy {
   background-position: 0px -54px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-delete {
-  background-position: -114px -48px;
-  background-size: 138px 108px;
+  background-position: -114px -80px;
+  background-size: 138px 121px;
   width: 16px;
   height: 17px;
 }
@@ -3228,35 +3228,35 @@ th {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
   background-position: -66px -81px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 16px;
   height: 16px;
 }
 .sprite_icon-download_load:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -114px -65px;
-  background-size: 138px 108px;
+  background-position: -98px -81px;
+  background-size: 138px 121px;
   width: 16px;
   height: 16px;
 }
 .sprite_icon-expand_off {
   background-position: 0px -81px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-expand_on {
-  background-position: -38px -54px;
-  background-size: 138px 108px;
+  background-position: -76px -54px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-files_refresh:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -114px -81px;
-  background-size: 138px 108px;
+  background-position: -82px -81px;
+  background-size: 138px 121px;
   width: 16px;
   height: 16px;
 }
@@ -3264,33 +3264,49 @@ th {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
   background-position: -38px -81px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 28px;
   height: 23px;
 }
 .sprite_icon-remove {
   background-position: -38px -27px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-rename {
   background-position: -76px -27px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-to_workflow {
   background-position: -114px -26px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 22px;
   height: 22px;
+}
+.sprite_icon-type_file:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -114px -48px;
+  background-size: 138px 121px;
+  width: 18px;
+  height: 16px;
+}
+.sprite_icon-type_folder:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -114px -64px;
+  background-size: 138px 121px;
+  width: 18px;
+  height: 16px;
 }
 .sprite_icon-windows:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
   background-position: -114px 0px;
-  background-size: 138px 108px;
+  background-size: 138px 121px;
   width: 24px;
   height: 26px;
 }
@@ -3300,13 +3316,13 @@ th {
   }
   .sprite_icon-add {
     background-position: -38px 0px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-archive {
-    background-position: -76px -54.66666667px;
-    background-size: 138px 109.33333333333333px;
+    background-position: -38px -54.66666667px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3314,44 +3330,44 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -114px -97.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 16px;
     height: 9.333333333333334px;
   }
   .sprite_icon-basket {
     background-position: 0px -27.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
   .my_files__checkbox > input[type="checkbox"]:checked ~ label:after {
-    background-position: -82px -82px;
-    background-size: 138px 109.33333333333333px;
+    background-position: 0px -109.33333333px;
+    background-size: 138px 122.66666666666667px;
     width: 14px;
     height: 13.333333333333334px;
   }
   .sprite_icon-clean {
     background-position: -76px 0px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-clipboard {
     background-position: 0px 0px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-copy {
     background-position: 0px -54.66666667px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-delete {
-    background-position: -114px -48px;
-    background-size: 138px 109.33333333333333px;
+    background-position: -114px -80px;
+    background-size: 138px 122.66666666666667px;
     width: 16px;
     height: 17.333333333333332px;
   }
@@ -3359,35 +3375,35 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -66px -82px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -114px -65.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-position: -98px -82px;
+    background-size: 138px 122.66666666666667px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
     background-position: 0px -82px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-expand_on {
-    background-position: -38px -54.66666667px;
-    background-size: 138px 109.33333333333333px;
+    background-position: -76px -54.66666667px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -114px -81.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-position: -82px -82px;
+    background-size: 138px 122.66666666666667px;
     width: 16px;
     height: 16px;
   }
@@ -3395,33 +3411,49 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -38px -82px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 28px;
     height: 23.333333333333332px;
   }
   .sprite_icon-remove {
     background-position: -38px -27.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-rename {
     background-position: -76px -27.33333333px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-to_workflow {
     background-position: -114px -26px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 22px;
     height: 22px;
+  }
+  .sprite_icon-type_file:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -114px -48px;
+    background-size: 138px 122.66666666666667px;
+    width: 18px;
+    height: 16px;
+  }
+  .sprite_icon-type_folder:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -114px -64px;
+    background-size: 138px 122.66666666666667px;
+    width: 18px;
+    height: 16px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -114px 0px;
-    background-size: 138px 109.33333333333333px;
+    background-size: 138px 122.66666666666667px;
     width: 24px;
     height: 26px;
   }
@@ -3432,13 +3464,13 @@ th {
   }
   .sprite_icon-add {
     background-position: -38px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-archive {
-    background-position: -76px -54px;
-    background-size: 138px 108px;
+    background-position: -38px -54px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
@@ -3446,44 +3478,44 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
     background-position: -114px -97px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 16px;
     height: 9px;
   }
   .sprite_icon-basket {
     background-position: 0px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
   .my_files__checkbox > input[type="checkbox"]:checked ~ label:after {
-    background-position: -82px -81px;
-    background-size: 138px 108px;
+    background-position: 0px -108px;
+    background-size: 138px 121px;
     width: 14px;
     height: 13px;
   }
   .sprite_icon-clean {
     background-position: -76px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-clipboard {
     background-position: 0px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-copy {
     background-position: 0px -54px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-delete {
-    background-position: -114px -48px;
-    background-size: 138px 108px;
+    background-position: -114px -80px;
+    background-size: 138px 121px;
     width: 16px;
     height: 17px;
   }
@@ -3491,35 +3523,35 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
     background-position: -66px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -114px -65px;
-    background-size: 138px 108px;
+    background-position: -98px -81px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
     background-position: 0px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: -38px -54px;
-    background-size: 138px 108px;
+    background-position: -76px -54px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -114px -81px;
-    background-size: 138px 108px;
+    background-position: -82px -81px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
@@ -3527,33 +3559,49 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
     background-position: -38px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 28px;
     height: 23px;
   }
   .sprite_icon-remove {
     background-position: -38px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-rename {
     background-position: -76px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-to_workflow {
     background-position: -114px -26px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 22px;
     height: 22px;
+  }
+  .sprite_icon-type_file:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -114px -48px;
+    background-size: 138px 121px;
+    width: 18px;
+    height: 16px;
+  }
+  .sprite_icon-type_folder:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -114px -64px;
+    background-size: 138px 121px;
+    width: 18px;
+    height: 16px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
     background-position: -114px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 24px;
     height: 26px;
   }
@@ -3564,13 +3612,13 @@ th {
   }
   .sprite_icon-add {
     background-position: -38px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-archive {
-    background-position: -76px -54px;
-    background-size: 138px 108px;
+    background-position: -38px -54px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
@@ -3578,44 +3626,44 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -114px -97px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 16px;
     height: 9px;
   }
   .sprite_icon-basket {
     background-position: 0px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
   .my_files__checkbox > input[type="checkbox"]:checked ~ label:after {
-    background-position: -82px -81px;
-    background-size: 138px 108px;
+    background-position: 0px -108px;
+    background-size: 138px 121px;
     width: 14px;
     height: 13px;
   }
   .sprite_icon-clean {
     background-position: -76px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-clipboard {
     background-position: 0px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-copy {
     background-position: 0px -54px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-delete {
-    background-position: -114px -48px;
-    background-size: 138px 108px;
+    background-position: -114px -80px;
+    background-size: 138px 121px;
     width: 16px;
     height: 17px;
   }
@@ -3623,35 +3671,35 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -66px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -114px -65px;
-    background-size: 138px 108px;
+    background-position: -98px -81px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
     background-position: 0px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: -38px -54px;
-    background-size: 138px 108px;
+    background-position: -76px -54px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -114px -81px;
-    background-size: 138px 108px;
+    background-position: -82px -81px;
+    background-size: 138px 121px;
     width: 16px;
     height: 16px;
   }
@@ -3659,33 +3707,49 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -38px -81px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 28px;
     height: 23px;
   }
   .sprite_icon-remove {
     background-position: -38px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-rename {
     background-position: -76px -27px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-to_workflow {
     background-position: -114px -26px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 22px;
     height: 22px;
+  }
+  .sprite_icon-type_file:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -114px -48px;
+    background-size: 138px 121px;
+    width: 18px;
+    height: 16px;
+  }
+  .sprite_icon-type_folder:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -114px -64px;
+    background-size: 138px 121px;
+    width: 18px;
+    height: 16px;
   }
   .sprite_icon-windows:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -114px 0px;
-    background-size: 138px 108px;
+    background-size: 138px 121px;
     width: 24px;
     height: 26px;
   }
@@ -10686,7 +10750,8 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   margin-right: 0.3em;
   color: #399ee5;
 }
-.my_files-table {
+.my_files-table__body,
+.my_files-table__header {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -10714,16 +10779,16 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.my_files-table__items:nth-of-type(2) {
-  border-top: 1px solid #b8b8b8;
+.my_files-table__items:first-child {
+  border-top: 1px solid #ccc;
 }
 .my_files-table__items:last-of-type {
-  border-bottom: 1px solid #b8b8b8;
+  border-bottom: 1px solid #ccc;
 }
-.my_files-table__items:nth-of-type(2n) {
+.my_files-table__items--color1 {
   background: #e1e3e6;
 }
-.my_files-table__items:nth-of-type(2n+1) {
+.my_files-table__items--color2 {
   background: #f0f2f5;
 }
 .my_files-table__item {
@@ -11323,13 +11388,9 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 50%;
   margin-left: -14px;
 }
-.my_files-docs__header-item,
-.my_files-docs__item {
-  border-right: 1px solid #ccc;
-}
-.my_files-docs__header-item:last-of-type,
-.my_files-docs__item:last-of-type {
-  border-right: none;
+.my_files-docs__body_sub {
+  display: none;
+  clear: both;
 }
 .my_files-docs__header-item-check,
 .my_files-docs__item-check {
@@ -11340,6 +11401,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   padding-left: 0.6em;
   width: 28px;
   border-right: none;
+  z-index: 5;
 }
 .my_files-docs__header-item-check input,
 .my_files-docs__item-check input {
@@ -11352,22 +11414,105 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__header-item-name,
 .my_files-docs__item-name {
-  padding-left: 28px;
-  width: 65%;
+  padding-left: 55px;
+  padding-right: 35%;
+  width: 100%;
+}
+.my_files-docs__header-item-size,
+.my_files-docs__item-size,
+.my_files-docs__header-item-manage,
+.my_files-docs__item-manage {
+  position: absolute;
+  top: 0;
+  border-left: 1px solid #cccccc;
 }
 .my_files-docs__header-item-size,
 .my_files-docs__item-size {
   width: 10%;
+  right: 25%;
 }
 .my_files-docs__header-item-manage,
 .my_files-docs__item-manage {
   width: 25%;
+  right: 0;
+}
+.my_files-docs__items--folder input[id^='folder_opener'] {
+  display: none;
+}
+.my_files-docs__items--folder input[id^='folder_opener']:checked ~ ul {
+  display: block;
+}
+.my_files-docs__items--folder input[id^='folder_opener']:checked ~ .my_files-docs__item-name label[for^='folder_opener']:before {
+  content: '-';
+  top: -5px;
+  left: 2px;
+  font-size: 18px;
+}
+.my_files-docs__items--folder input[id^='folder_opener']:checked ~ .my_files-docs__item-name label[for^='folder_opener']:after {
+  display: block;
 }
 .my_files-docs__item-name {
   text-align: left;
 }
-.my_files-docs_sub {
+.my_files-docs__item-name:before {
+  content: '';
+  display: inline-block;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+.my_files-docs__item-name label[for^='folder_opener'] {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 30px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #444;
+  z-index: 5;
+}
+.my_files-docs__item-name label[for^='folder_opener']:before {
+  content: '+';
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  font-size: 15px;
+}
+.my_files-docs__item-name label[for^='folder_opener']:after {
+  content: '';
+  position: absolute;
   display: none;
+  top: 2em;
+  left: 5px;
+  width: 10px;
+  height: 1.5em;
+  border-left: 1px dotted #606162;
+  border-bottom: 1px dotted #606162;
+}
+.my_files-docs__item-name--lvl1 {
+  padding-left: 80px;
+}
+.my_files-docs__item-name--lvl1 label[for^='folder_opener'] {
+  left: 55px;
+}
+.my_files-docs__item-name--lvl2 {
+  padding-left: 105px;
+}
+.my_files-docs__item-name--lvl2 label[for^='folder_opener'] {
+  left: 80px;
+}
+.my_files-docs__item-name--lvl3 {
+  padding-left: 130px;
+}
+.my_files-docs__item-name--lvl3 label[for^='folder_opener'] {
+  left: 105px;
+}
+.my_files-docs_sub__items {
+  font-size: 1em;
+  border: none;
+}
+.my_files-docs_sub__items:first-child,
+.my_files-docs_sub__items:last-child {
+  border: none;
 }
 .footer {
   position: relative;

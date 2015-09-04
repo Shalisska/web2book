@@ -1,7 +1,9 @@
 .my_files {
 	&-table {
-		.reset-ul();
-		width: 100%;
+		&__body, &__header {
+			.reset-ul();
+			width: 100%;
+		}
 		
 		&__header-item, &__item {
 			float: left;
@@ -27,11 +29,11 @@
 			border-left: 1px solid #ccc;
 			border-right: 1px solid #ccc;
 			
-			&:nth-of-type(2) {border-top: 1px solid #b8b8b8;}
-			&:last-of-type {border-bottom: 1px solid #b8b8b8;}
+			&:first-child {border-top: 1px solid #ccc;}
+			&:last-of-type {border-bottom: 1px solid #ccc;}
 			
-			&:nth-of-type(2n) {background: #e1e3e6;}
-			&:nth-of-type(2n+1) {background: #f0f2f5;}
+			&--color1 {background: #e1e3e6;}
+			&--color2 {background: #f0f2f5;}
 		}
 		
 		&__item {
@@ -553,9 +555,14 @@
 	}
 	
 	&-docs {
+		&__body {
+			&_sub {
+				display: none;
+				clear: both;
+			}
+		}
+		
 		&__header-item, &__item {
-			border-right: 1px solid #ccc;&:last-of-type {border-right: none;}
-			
 			&-check {
 				position: absolute;
 				top: 0;
@@ -564,6 +571,7 @@
 				padding-left: 0.6em;
 				width: 28px;
 				border-right: none;
+				z-index: 5;
 				
 				input {display: none;}
 				
@@ -574,20 +582,102 @@
 			}
 			
 			&-name {
-				padding-left: 28px;
-				width: 65%;
+				padding-left: 55px;
+				padding-right: 35%;
+				width: 100%;
 			}
 			
-			&-size {width: 10%;}
-			&-manage {width: 25%;}
+			&-size, &-manage {
+				position: absolute;
+				top: 0;
+				border-left: 1px solid #ccc
+			}
+			
+			&-size {
+				width: 10%;
+				right: 25%;
+			}
+			
+			&-manage {
+				width: 25%;
+				right: 0;
+			}
+		}
+		
+		&__items {
+			&--folder {
+				input[id^='folder_opener'] {
+					display: none;
+					&:checked {
+						&~ul {display: block;}
+						&~.my_files-docs__item-name label[for^='folder_opener']{
+							&:before {
+								content: '-';
+								top: -5px;
+								left: 2px;
+								font-size: 18px;
+							}
+							&:after {display: block;}
+						}
+					}
+				}
+			}
 		}
 		
 		&__item {
-			
-			&-name {text-align: left;}
+			&-name {
+				text-align: left;
+				
+				&:before {
+					content: '';
+					display: inline-block;
+					margin-right: 0.5em;
+					vertical-align: bottom;
+				}
+				
+				label[for^='folder_opener'] {
+					position: absolute;
+					@w: 13px;
+					top: 50%;
+					margin-top: -7px;
+					left: 30px;
+					width: @w;
+					height: @w;
+					border: 1px solid #444;
+					z-index: 5;
+					
+					&:before {
+						content: '+';
+						position: absolute;
+						top: -3px;
+						left: 1px;
+						font-size: 15px;
+					}
+					
+					&:after {
+						content: '';
+						position: absolute;
+						display: none;
+						top: 2em;
+						left: 5px;
+						width: 10px;
+						height: 1.5em;
+						border-left: 1px dotted #606162;
+						border-bottom: 1px dotted #606162;
+					}
+				}
+				
+				.my_files_table-padding(3);
+			}
 		}
 		
-		&_sub {display: none;}
+		&_sub {
+			&__items {
+				font-size: 1em;
+				border: none;
+				&:first-child, &:last-child {border: none;}
+			}
+		}
 	}
 }
 
@@ -629,4 +719,17 @@
 	}
 	
 	.my_files_menu(@n, (@i + 1));
+}
+
+.my_files_table-padding(@n, @i: 1) when (@i =< @n) {
+	@step: 25px;
+	@padding: 55px;
+	@left: 30px;
+	
+	&--lvl@{i} {
+		padding-left: @padding + @step * @i;
+		label[for^='folder_opener'] {left: @left + @step * @i;}
+	}
+	
+	.my_files_table-padding(@n, (@i + 1));
 }

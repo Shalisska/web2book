@@ -1,6 +1,6 @@
 mixin my_files_table(name_total, name, data)
 	-var title_arr = []
-	li.clearfix(class=class_name([name_total, name], '__header'))
+	.clearfix(class=class_name([name_total, name], '__header'))
 		div(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-check')
 		-title_arr.push('check')
 		each item in data.header
@@ -9,84 +9,106 @@ mixin my_files_table(name_total, name, data)
 	+my_files_table_inner(name_total, name, data.items, title_arr)
 
 mixin my_files_table_inner(name_total, name, items, title_arr)
-	each item in items
-		-var file_class = ''
-		if item.file
-			-file_class = ' ' + name + '__items--file'
-		li.clearfix(class=class_name([name_total, name], '__items') + file_class)
-			
-			if item.file
-				input(class=name + '__item-file_opener-input' type='checkbox' id='file_opener--' + item.id)
-			
-			each title in title_arr
-				-var check_class = ''
-				if title == 'check'
-					-check_class = ' my_files__checkbox'
-				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + check_class)
-					case title
-						when 'check'
-							if item.file
-								input(type='checkbox' id='files_check-' + item.id)
-							else
-								input(type='checkbox' name='files_check' id='files_check-' + item.id)
-							label.my_files__check(for='files_check-' + item.id)
-						
-						when 'name'
-							if item.file
-								label(for='file_opener--' + item.id)
-							-var type = '.' + item.type
-							if item.type == 'file'
-								-type = ''
-							=item.name + type
-						
-						when 'size'
-							=item.size
-						when 'manage'
-							=''
-			if item.file
-				-var lvl = 1
-				+my_files_table_inner_sub(name_total, name, item.file, title_arr, lvl)
+	-var color
+	-var lvl = 0
+	ul(class=class_name([name_total, name], '__body'))
+		each item, i in items
+			if i%2 == 0
+				-color = 'color1'
+			else
+				-color = 'color2'
+			-var folder_class = ''
+			if item.folder
+				-folder_class = ' ' + name + '__items--folder'
+			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color)
 
-mixin my_files_table_inner_sub(name_total, name, items, title_arr, lvl)
-	ul(class=name_total + ' ' + name + ' ' + name + '_sub')
-		each item in items
-			-var file_class = ''
-			if item.file
-				-file_class = ' ' + name + '__items--file'
-			li.clearfix(class=class_name([name_total, name], '__items') + file_class)
-
-				if item.file
-					input(class=name + '__item-file_opener-input' type='checkbox' id='file_opener--' + item.id)
+				if item.folder
+					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id)
 
 				each title in title_arr
 					-var check_class = ''
+					-var file_type = ''
 					if title == 'check'
 						-check_class = ' my_files__checkbox'
-					div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + check_class)
+					if title == 'name'
+						if item.folder
+							-file_type = ' sprite_icon-type_folder'
+						else
+							-file_type = ' sprite_icon-type_file'
+					div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + file_type)
 						case title
 							when 'check'
-								if item.file
+								if item.folder
+									input(type='checkbox' id='files_check-' + item.id)
+								else
+									input(type='checkbox' name='files_check' id='files_check-' + item.id)
+								label.my_files__check(for='files_check-' + item.id)
+
+							when 'name'
+								if item.folder
+									label(for='folder_opener--' + item.id)
+								-var type = '.' + item.type
+								if item.type == 'folder'
+									-type = ''
+								=item.name + type
+
+							when 'size'
+								=item.size
+							when 'manage'
+								=''
+				if item.folder
+					+my_files_table_inner_sub(name_total, name, item.folder, title_arr, color, lvl)
+
+mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
+	-lvl = lvl + 1
+	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body' + '_sub')
+		each item, i in items
+			if i%2 == 0 && color == 'color2'
+				-color = 'color1'
+			else
+				-color = 'color2'
+			-var folder_class = ''
+			if item.folder
+				-folder_class = ' ' + name + '__items--folder'
+			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color)
+
+				if item.folder
+					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id)
+
+				each title in title_arr
+					-var check_class = ''
+					-var file_type = ''
+					if title == 'check'
+						-check_class = ' my_files__checkbox'
+					if title == 'name'
+						if item.folder
+							-file_type = ' sprite_icon-type_folder'
+						else
+							-file_type = ' sprite_icon-type_file'
+					div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + file_type)
+						case title
+							when 'check'
+								if item.folder
 									input(type='checkbox' id='files_check-' + item.id)
 								else
 									input(type='checkbox' name='files_check' id='files_check-' + item.id)
 								label.my_files__check(for='files_check-' + item.id)
 							when 'name'
 								-var type = '.' + item.type
-								if item.type == 'file'
+								if item.type == 'folder'
 									-type = ''
 								=item.name + type
-								if item.file
-									label(for='file_opener--' + item.id)
+								if item.folder
+									label(for='folder_opener--' + item.id)
 							
 							when 'size'
 								=item.size
 							when 'manage'
 								='manage'
-				if item.file
-					ul(class=name_total + ' ' + name)
-						+my_files_table_inner_sub(name_total, name, item.file, title_arr)
+				if item.folder
+					+my_files_table_inner_sub(name_total, name, item.folder, title_arr, color, lvl)
 
-ul(class=actualClass + '-table' + ' ' + actualClass + '-docs')
+div(class=actualClass + '-table' + ' ' + actualClass + '-docs')
 	+my_files_table(actualClass + '-table', actualClass + '-docs', {
 	header: [{
 		id: 'name',
@@ -101,16 +123,27 @@ ul(class=actualClass + '-table' + ' ' + actualClass + '-docs')
 	items: [{
 		id: 'for_print',
 		name: 'Для печати',
-		type: 'file',
+		type: 'folder',
 		size: '',
-		file: [{
+		folder: [{
 			id: 'my_books',
 			name: 'Мои книги',
-			type: 'file',
+			type: 'folder',
 			size: '',
-			file: [{
+			folder: [{
 				id: 'the_roof_is_on_fire_you_fat_beaches.pdf',
 				name: 'The_roof_is_on_fire_you_fat_beaches',
+				type: 'pdf',
+				size: ''
+			}]
+		}, {
+			id: 'my_books1',
+			name: 'Мои книги1',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'the_roof_is_on_fire_you_fat_beaches1.pdf',
+				name: 'The_roof_is_on_fire_you_fat_beaches1',
 				type: 'pdf',
 				size: ''
 			}]
@@ -118,14 +151,14 @@ ul(class=actualClass + '-table' + ' ' + actualClass + '-docs')
 	}, {
 		id: 'outline',
 		name: 'Наброски',
-		type: 'file',
+		type: 'folder',
 		size: '',
-		file: [{
+		folder: [{
 			id: 'smth_else',
 			name: 'Smth else',
-			type: 'file',
+			type: 'folder',
 			size: '',
-			file: [{
+			folder: [{
 				id: 'the_roof_is_on_fire.pdf',
 				name: 'The_roof_is_on_fire',
 				type: 'pdf',
