@@ -7,12 +7,12 @@ mixin upload(name_total, name, data)
 			p(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-' + item.id)=item.name
 			-title_arr.push(item.id)
 	ul(class=class_name([name_total, name], '__body'))
-		-var color
+		-var color = 'color2'
 		each item, i in data.items
-			if i%2 == 0
-				-color = 'color1'
-			else
+			if color == 'color1'
 				-color = 'color2'
+			else
+				-color = 'color1'
 			li.clearfix(class=class_name([name_total, name], '__items') + ' ' + name_total + '__items--' + color)
 				each elem, i in item
 					case i

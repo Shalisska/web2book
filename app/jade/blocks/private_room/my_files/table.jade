@@ -9,14 +9,14 @@ mixin my_files_table(name_total, name, data)
 	+my_files_table_inner(name_total, name, data.items, title_arr)
 
 mixin my_files_table_inner(name_total, name, items, title_arr)
-	-var color
+	-var color = 'color2'
 	-var lvl = 0
 	ul(class=class_name([name_total, name], '__body'))
 		each item, i in items
-			if i%2 == 0
-				-color = 'color1'
-			else
+			if color == 'color1'
 				-color = 'color2'
+			else
+				-color = 'color1'
 			-var folder_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
@@ -27,15 +27,9 @@ mixin my_files_table_inner(name_total, name, items, title_arr)
 
 				each title in title_arr
 					-var check_class = ''
-					-var file_type = ''
 					if title == 'check'
 						-check_class = ' my_files__checkbox'
-					if title == 'name'
-						if item.folder
-							-file_type = ' sprite_icon-type_folder'
-						else
-							-file_type = ' sprite_icon-type_file'
-					div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + file_type)
+					div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class)
 						case title
 							when 'check'
 								if item.folder
@@ -45,12 +39,14 @@ mixin my_files_table_inner(name_total, name, items, title_arr)
 								label.my_files__check(for='files_check-' + item.id)
 
 							when 'name'
+								-var file_type = ' sprite_icon-type_file'
 								if item.folder
+									-file_type = ' sprite_icon-type_folder'
 									label(for='folder_opener--' + item.id)
 								-var type = '.' + item.type
 								if item.type == 'folder'
 									-type = ''
-								=item.name + type
+								span(class=file_type)=item.name + type
 
 							when 'size'
 								=item.size
@@ -63,10 +59,10 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 	-lvl = lvl + 1
 	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body' + '_sub')
 		each item, i in items
-			if i%2 == 0 && color == 'color2'
-				-color = 'color1'
-			else
+			if color == 'color1'
 				-color = 'color2'
+			else
+				-color = 'color1'
 			-var folder_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
@@ -77,15 +73,9 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 
 				each title in title_arr
 					-var check_class = ''
-					-var file_type = ''
 					if title == 'check'
 						-check_class = ' my_files__checkbox'
-					if title == 'name'
-						if item.folder
-							-file_type = ' sprite_icon-type_folder'
-						else
-							-file_type = ' sprite_icon-type_file'
-					div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + file_type)
+					div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class)
 						case title
 							when 'check'
 								if item.folder
@@ -94,12 +84,14 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 									input(type='checkbox' name='files_check' id='files_check-' + item.id)
 								label.my_files__check(for='files_check-' + item.id)
 							when 'name'
+								-var file_type = ' sprite_icon-type_file'
+								if item.folder
+									-file_type = ' sprite_icon-type_folder'
+									label(for='folder_opener--' + item.id)
 								-var type = '.' + item.type
 								if item.type == 'folder'
 									-type = ''
-								=item.name + type
-								if item.folder
-									label(for='folder_opener--' + item.id)
+								span(class=file_type)=item.name + type
 							
 							when 'size'
 								=item.size

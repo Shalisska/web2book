@@ -557,9 +557,22 @@
 	&-docs {
 		&__body {
 			&_sub {
-				display: none;
+				position: relative;
+				//display: none;
 				clear: both;
+				
+//				&:before {
+//					content: '';
+//					position: absolute;
+//					top: 0;
+//					bottom: 1.5em;
+//					width: 1px;
+//					border-left: 1px dotted #606162;
+//					z-index: 5;
+//				}
 			}
+			
+//			.my_files_table-padding_body(3);
 		}
 		
 		&__header-item, &__item {
@@ -617,7 +630,6 @@
 								left: 2px;
 								font-size: 18px;
 							}
-							&:after {display: block;}
 						}
 					}
 				}
@@ -628,7 +640,16 @@
 			&-name {
 				text-align: left;
 				
-				&:before {
+				&:not([class$='lvl0']):before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					width: 1px;
+					border-left: 1px dotted #606162;
+				}
+				
+				span:before {
 					content: '';
 					display: inline-block;
 					margin-right: 0.5em;
@@ -653,18 +674,6 @@
 						left: 1px;
 						font-size: 15px;
 					}
-					
-					&:after {
-						content: '';
-						position: absolute;
-						display: none;
-						top: 2em;
-						left: 5px;
-						width: 10px;
-						height: 1.5em;
-						border-left: 1px dotted #606162;
-						border-bottom: 1px dotted #606162;
-					}
 				}
 				
 				.my_files_table-padding(3);
@@ -675,7 +684,9 @@
 			&__items {
 				font-size: 1em;
 				border: none;
+				
 				&:first-child, &:last-child {border: none;}
+				&:last-child {background-image: linear-gradient(to top, rgba(3,3,5,0.2) 0%, transparent 0.75em);}
 			}
 		}
 	}
@@ -725,9 +736,11 @@
 	@step: 25px;
 	@padding: 55px;
 	@left: 30px;
+	@left_before: 36px;
 	
 	&--lvl@{i} {
 		padding-left: @padding + @step * @i;
+		&:before {left: @left_before + @step * (@i - 1);}
 		label[for^='folder_opener'] {left: @left + @step * @i;}
 	}
 	

@@ -11389,7 +11389,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   margin-left: -14px;
 }
 .my_files-docs__body_sub {
-  display: none;
+  position: relative;
   clear: both;
 }
 .my_files-docs__header-item-check,
@@ -11448,13 +11448,18 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 2px;
   font-size: 18px;
 }
-.my_files-docs__items--folder input[id^='folder_opener']:checked ~ .my_files-docs__item-name label[for^='folder_opener']:after {
-  display: block;
-}
 .my_files-docs__item-name {
   text-align: left;
 }
-.my_files-docs__item-name:before {
+.my_files-docs__item-name:not([class$='lvl0']):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  border-left: 1px dotted #606162;
+}
+.my_files-docs__item-name span:before {
   content: '';
   display: inline-block;
   margin-right: 0.5em;
@@ -11477,19 +11482,11 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 1px;
   font-size: 15px;
 }
-.my_files-docs__item-name label[for^='folder_opener']:after {
-  content: '';
-  position: absolute;
-  display: none;
-  top: 2em;
-  left: 5px;
-  width: 10px;
-  height: 1.5em;
-  border-left: 1px dotted #606162;
-  border-bottom: 1px dotted #606162;
-}
 .my_files-docs__item-name--lvl1 {
   padding-left: 80px;
+}
+.my_files-docs__item-name--lvl1:before {
+  left: 36px;
 }
 .my_files-docs__item-name--lvl1 label[for^='folder_opener'] {
   left: 55px;
@@ -11497,11 +11494,17 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__item-name--lvl2 {
   padding-left: 105px;
 }
+.my_files-docs__item-name--lvl2:before {
+  left: 61px;
+}
 .my_files-docs__item-name--lvl2 label[for^='folder_opener'] {
   left: 80px;
 }
 .my_files-docs__item-name--lvl3 {
   padding-left: 130px;
+}
+.my_files-docs__item-name--lvl3:before {
+  left: 86px;
 }
 .my_files-docs__item-name--lvl3 label[for^='folder_opener'] {
   left: 105px;
@@ -11513,6 +11516,9 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs_sub__items:first-child,
 .my_files-docs_sub__items:last-child {
   border: none;
+}
+.my_files-docs_sub__items:last-child {
+  background-image: linear-gradient(to top, rgba(3, 3, 5, 0.2) 0%, transparent 0.75em);
 }
 .footer {
   position: relative;
