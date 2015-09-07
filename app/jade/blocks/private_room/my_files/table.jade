@@ -20,7 +20,7 @@ mixin my_files_table_inner(name_total, name, items, title_arr)
 			-var folder_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
-			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color)
+			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl)
 
 				if item.folder
 					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id)
@@ -51,7 +51,8 @@ mixin my_files_table_inner(name_total, name, items, title_arr)
 							when 'size'
 								=item.size
 							when 'manage'
-								=''
+								include manage
+								
 				if item.folder
 					+my_files_table_inner_sub(name_total, name, item.folder, title_arr, color, lvl)
 
@@ -66,7 +67,7 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 			-var folder_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
-			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color)
+			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl)
 
 				if item.folder
 					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id)
@@ -96,9 +97,11 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 							when 'size'
 								=item.size
 							when 'manage'
-								='manage'
+								include manage
 				if item.folder
 					+my_files_table_inner_sub(name_total, name, item.folder, title_arr, color, lvl)
+
+
 
 div(class=actualClass + '-table' + ' ' + actualClass + '-docs')
 	+my_files_table(actualClass + '-table', actualClass + '-docs', {

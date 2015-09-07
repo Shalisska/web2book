@@ -19,7 +19,10 @@ mixin my_files_action_menu(name, items)
 	each item in items
 		li.clearfix(class=name + '-items' + ' ' + name + '-items--' + item.id)
 			each elem in item.items
-				a.sprite_private_room(class=name + '-item' + ' ' + name + '-item--' + elem.id + ' ' + 'sprite_icon-' + elem.id title=elem.hint)
+				-var sprite_name = elem.id
+				if elem.id == 'clipboard'
+					-sprite_name = elem.id + '--active'
+				a.sprite_private_room(class=name + '-item' + ' ' + name + '-item--' + elem.id + ' ' + 'sprite_icon-' + sprite_name title=elem.hint)
 
 mixin my_files_header(actualClass, items)
 	+my_files_menu_inp(actualClass + '-menu', items)

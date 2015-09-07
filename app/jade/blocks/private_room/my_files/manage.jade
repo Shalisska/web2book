@@ -1,0 +1,29 @@
+mixin manage_mix(name, type, activities)
+	each activity in activities
+		each types in activity.type
+			if type == types
+				each action in activity.actions
+					a.my_files__manage.sprite_private_room(class='my_files__manage--' + action + ' ' + 'sprite_icon-' + action href='#')
+
++manage_mix(name, item.type, [{
+	type: ['folder'],
+	actions: [
+		'unzip',
+		'to_test'
+	]}, {
+	type: ['txt', 'jpeg', 'png'],
+	actions: [
+		'file_pdf',
+		'process_manage',
+		'view_1p',
+		'comment',
+		'clipboard'
+	]}, {
+	type: ['pdf', 'docx'],
+	actions: [
+		'process_manage',
+		'view_1p',
+		'comment',
+		'clipboard'
+	]}
+])

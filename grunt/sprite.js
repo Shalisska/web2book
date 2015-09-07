@@ -1,3 +1,13 @@
+function file_manage_sprite_tabl(name_real) {
+	var name = '.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-' + name_real + ', .my_files-docs__item-manage:hover > .sprite_icon-' + name_real;
+	return name;
+};
+
+function file_manage_sprite_tabl_bw(name_real) {
+	var name = '.sprite_icon-' + (name_real).slice(0, name_real.length - 4);
+	return name;
+};
+
 var images_private = {
     retina: [1, 1.5, 2, 3]
   , width: ['']
@@ -36,7 +46,92 @@ var images_private = {
     }, {
       name: 'type_folder'
     , class: 'before'
-    }]
+    }, {
+		name: 'clipboard'
+	,	template: function (r, w) {
+			var name1 = file_manage_sprite_tabl(this.name);
+			var name2 = '.sprite_icon-' + this.name + '--active';
+			return [name1, name2];
+		}
+	}, {
+		name: 'clipboard--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'comment'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'comment--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'file_pdf'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'file_pdf--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'process_manage'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'process_manage--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'to_test'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'to_test--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'unzip'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'unzip--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'view_1p'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'view_1p--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}]
 };
 
 var images_form = {
