@@ -560,7 +560,7 @@
 		&__body {
 			&_sub {
 				position: relative;
-				display: none;
+				//display: none;
 			}
 		}
 		
@@ -615,24 +615,24 @@
 		}
 		
 		&__items {
-			&--folder {
-				input[id^='folder_opener'] {
-					display: none;
-					&:checked {
-						&~ul {display: block;}
-						&~.my_files-docs__item-l label[for^='folder_opener']{
-							&:before {
-								content: '-';
-								top: -5px;
-								left: 2px;
-								font-size: 18px;
-							}
-						}
-					}
+			input[id^='folder_opener'],
+			input[id^='history_opener'] {
+				display: none;
+				&:checked {
+					&~ul {display: block;}
 				}
 			}
 			
-			&:not([class$='lvl0']):before {
+			input[id^='folder_opener']:checked~.my_files-docs__item-l label[for^='folder_opener'] {
+				&:before {
+					content: '-';
+					top: -5px;
+					left: 2px;
+					font-size: 18px;
+				}
+			}
+			
+			&:not([class$='lvl0']):not([class$='history']):before {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -641,10 +641,10 @@
 				z-index: 5;
 			}
 			
-			&:not([class$='lvl0']):not(:last-of-type):before {bottom: 0;}
+			&:not(.my_files-docs__items--lvl0):not(:last-of-type):before {bottom: 0;}
 			&:last-of-type:before {height: 1.5em;}
 			
-			.my_files_table-padding-li(3);
+			.my_files_table-padding-li(10);
 		}
 		
 		&__item {
@@ -660,14 +660,16 @@
 			&-name {
 				text-align: left;
 				
-				&:not([class$='lvl0']):before {
-					content: '';
-					position: absolute;
-					top: 50%;
-					margin-top: -1px;
-					width: 15px;
-					height: 0;
-					border-bottom: 1px dotted #606162;
+				&:not([class$='lvl0']):not([class$='history']) {
+					&:before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						margin-top: -1px;
+						width: 15px;
+						height: 0;
+						border-bottom: 1px dotted #606162;
+					}
 				}
 				
 				span:before {
@@ -677,7 +679,8 @@
 					vertical-align: bottom;
 				}
 				
-				label[for^='folder_opener'] {
+				label[for^='folder_opener'],
+				label[for^='history_opener'] {
 					position: absolute;
 					@w: 13px;
 					top: 50%;
@@ -697,7 +700,7 @@
 					}
 				}
 				
-				.my_files_table-padding(3);
+				.my_files_table-padding(10);
 			}
 			
 			&-manage {
@@ -716,6 +719,8 @@
 				&:last-child {background-image: linear-gradient(to top, rgba(3,3,5,0.2) 0%, transparent 0.75em);}
 			}
 		}
+		
+		&--loaded {display: none;}
 		
 		&--working {
 			
@@ -779,7 +784,7 @@
 	&--lvl@{i} {
 		padding-left: @padding + @step * @i;
 		&:before {left: @left_before + @step * (@i - 1);}
-		label[for^='folder_opener'] {left: @left + @step * @i;}
+		label[for^='folder_opener'], label[for^='history_opener'] {left: @left + @step * @i;}
 	}
 	
 	.my_files_table-padding(@n, (@i + 1));

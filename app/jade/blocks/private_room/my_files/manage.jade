@@ -1,17 +1,50 @@
-mixin manage_mix(name, type, activities)
-	each activity in activities
-		each types in activity.type
-			if type == types
-				each action in activity.actions
-					a.my_files__manage.sprite_private_room(class='my_files__manage--' + action + ' ' + 'sprite_icon-' + action href='#')
+mixin manage_mix(name, obj, stats, activities)
+	if obj.status
+		-var date = ''
+		-var spec_class = ''
+		if obj.status.date
+			-date = ' ' + obj.status.date
+		if obj.status.stat == 4
+			-spec_class = 'my_files__manage--recieved'
+		span.my_files__manage(class = spec_class)=stats[obj.status.stat] + date
+		if obj.dop_stat
+			each item in obj.dop_stat
+				a.my_files__manage.sprite_private_room(class='my_files__manage--' + item + ' ' + 'sprite_icon-' + item href='#')
+	else
+		each activity in activities
+			each types in activity.type
+				if obj.type == types
+					each action in activity.actions
+						a.my_files__manage.sprite_private_room(class='my_files__manage--' + action + ' ' + 'sprite_icon-' + action href='#')
 
-+manage_mix(name, item.type, [{
+-var manage_obj = {}
+mixin manageObj(obj, item)
+	-obj['type'] = item.type
+	if item.status
+		-obj['status'] = item.status
+	if item.dop_stat
+		-obj['dop_stat'] = item.dop_stat
+	if item.history
+		-obj['history'] = item.history
++manageObj(manage_obj, item)
+
+-var stats = {}
+mixin statsObj(obj)
+	-obj['0'] = 'Ожидайте ответа'
+	-obj['1'] = 'Отправлен'
+	-obj['2'] = 'Окончание обработки'
+	-obj['3'] = 'Возврат'
+	-obj['4'] = 'Получен'
+	-obj['5'] = 'Утвержден'
++statsObj(stats)
+
++manage_mix(name, manage_obj, stats, [{
 	type: ['folder'],
 	actions: [
 		'unzip',
-		'to_test'
+		'to_check'
 	]}, {
-	type: ['txt', 'jpeg', 'png'],
+	type: ['txt', 'jpeg', 'png', 'jpg'],
 	actions: [
 		'file_pdf',
 		'process_manage',

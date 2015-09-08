@@ -1,5 +1,28 @@
--var table_loaded = []
-+itemBuild(table_loaded, [{
+-var table_working = []
++itemBuild(table_working, [{
+			id: 'file_list',
+			name: 'Список файлов',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'the_roof.pdf',
+				name: 'The_roof',
+				type: 'pdf',
+				size: ''
+			}]
+		}, {
+			id: 'A31-A100.pdf',
+			name: 'A31-A100',
+			type: 'pdf',
+			size: '',
+			status: {stat: 0}
+		}, {
+			id: 'WTF.txt',
+			name: 'WTF',
+			type: 'txt',
+			size: '',
+			status: {stat: 2, date: '21.12.12'}
+		}, {
 			id: 'for_print',
 			name: 'Для печати',
 			type: 'folder',
@@ -10,9 +33,266 @@
 				type: 'folder',
 				size: '',
 				folder: [{
-					id: 'the_roof_is_on_fire_you_fat_beaches.pdf',
+					id: 'the_roof_is_on_fire_you_fat_beaches.docx',
 					name: 'The_roof_is_on_fire_you_fat_beaches',
+					type: 'docx',
+					size: '',
+					status: {stat: 1, date: '21.10.12'},
+					final: 1,
+					history: [{
+						id: 'the_roof_is_on_fire_you_fat_beaches_1.pdf',
+						name: 'The_roof_is_on_fire_you_fat_beaches_1',
+						type: 'pdf',
+						size: '',
+						status: {stat: 3, date: '11.11.13'},
+						history: [{
+							id: 'the_roof_is_on_fire_you_fat_beaches_last.pdf',
+							name: 'The_roof_is_on_fire_you_fat_beaches_last',
+							type: 'pdf',
+							size: '',
+							status: {stat: 4, date: '14.12.12'},
+							dop_stat: ['info', 'look', 'approve', 'to_check']
+						}]
+					}]
+				}]
+			}, {
+				id: 'my_books1',
+				name: 'Мои книги1',
+				type: 'folder',
+				size: '',
+				folder: [{
+					id: 'the_roof_is_on_fire_you_fat_beaches1.pdf',
+					name: 'The_roof_is_on_fire_you_fat_beaches1',
 					type: 'pdf',
+					size: ''
+				}]
+			}]
+		}, {
+			id: 'outline',
+			name: 'Наброски',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'smth_else',
+				name: 'Smth else',
+				type: 'folder',
+				size: '',
+				folder: [{
+					id: 'the_roof_is_on_fire.pdf',
+					name: 'The_roof_is_on_fire',
+					type: 'pdf',
+					size: ''
+				}]
+			}]
+		}, {
+			id: '12_obezyan.jpeg',
+			name: '12_obezyan',
+			type: 'jpeg',
+			size: ''
+		}, {
+			id: 'petrovich.png',
+			name: 'Petrovich',
+			type: 'png',
+			size: ''
+		}, {
+			id: 'r2-d2.txt',
+			name: 'r2-d2',
+			type: 'txt',
+			size: '',
+			status: {stat: 1, date: '21.10.12'},
+			final: 1,
+			history: [{
+				id: 'r2-d2.pdf',
+				name: 'r2-d2',
+				type: 'pdf',
+				size: '',
+				status: {stat: 4, date: '14.12.12'},
+				dop_stat: ['info', 'look', 'approve', 'to_check']
+			}]
+		}, {
+			id: 'kniga_12.33.txt',
+			name: 'Kniga_12.33',
+			type: 'txt',
+			size: ''
+		}, {
+			id: 'pitomnik.pdf',
+			name: 'Pitomnik',
+			type: 'pdf',
+			size: ''
+		}, {
+			id: 'ochumet.docx',
+			name: 'Ochumet',
+			type: 'docx',
+			size: ''
+		}])
+
+-var table_loaded = []
++itemBuild(table_loaded, [{
+			id: 'file_list',
+			name: 'Список файлов',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'the_roof.pdf',
+				name: 'The_roof',
+				type: 'pdf',
+				size: ''
+			}]
+		}, {
+			id: 'A31-A100.pdf',
+			name: 'A31-A100',
+			type: 'pdf',
+			size: ''
+		}, {
+			id: 'WTF.txt',
+			name: 'WTF',
+			type: 'txt',
+			size: ''
+		}, {
+			id: 'for_print',
+			name: 'Для печати',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'my_books',
+				name: 'Мои книги',
+				type: 'folder',
+				size: '',
+				folder: [{
+					id: 'the_roof_is_on_fire_you_fat_beaches.docx',
+					name: 'The_roof_is_on_fire_you_fat_beaches',
+					type: 'docx',
+					size: ''
+				}, {
+					id: 'the_roof_is_on_fire_you_fat_beaches_1.pdf',
+					name: 'the_roof_is_on_fire_you_fat_beaches_1.pdf',
+					type: 'folder',
+					size: '',
+					folder: [{
+						id: 'the_roof_is_on_fire_you_fat_beaches_last.pdf',
+						name: 'The_roof_is_on_fire_you_fat_beaches_last',
+						type: 'pdf',
+						size: ''
+					}, {
+						id: 'outline',
+						name: 'Наброски',
+						type: 'txt',
+						size: '',
+					}, {
+						id: '12_obezyan.jpeg',
+						name: '12_obezyan',
+						type: 'jpeg',
+						size: ''
+					}]
+				}, {
+					id: 'petrovich.png',
+					name: 'Petrovich',
+					type: 'folder',
+					size: '',
+					folder: [{
+						id: 'petrovich.png',
+						name: 'Petrovich',
+						type: 'png',
+						size: ''
+					}]
+				}]
+			}]
+		}, {
+			id: 'r2-d2.txt',
+			name: 'r2-d2',
+			type: 'txt',
+			size: ''
+		}, {
+			id: 'r2-d2.pdf',
+			name: 'r2-d2',
+			type: 'pdf',
+			size: ''
+		}, {
+			id: 'kniga_12.33.txt',
+			name: 'Kniga_12.33',
+			type: 'txt',
+			size: ''
+		}, {
+			id: 'pitomnik.pdf',
+			name: 'Pitomnik',
+			type: 'pdf',
+			size: ''
+		}, {
+			id: 'jpeg_pages',
+			name: 'JPEG страницы',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'zuzu_1294.jpg',
+				name: 'Zuzu_1294',
+				type: 'jpg',
+				size: ''
+			}, {
+				id: 'provaid_igrus.jpg',
+				name: 'Provaid Igrus',
+				type: 'jpg',
+				size: ''
+			}]
+		}, {
+			id: 'pdf_pages',
+			name: 'PDF страницы',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'zuzu_1294.pdf',
+				name: 'Zuzu_1294',
+				type: 'pdf',
+				size: ''
+			}, {
+				id: 'provaid_igrus.pdf',
+				name: 'Provaid Igrus',
+				type: 'pdf',
+				size: ''
+			}]
+		}, {
+			id: 'ochumet.docx',
+			name: 'Ochumet',
+			type: 'docx',
+			size: ''
+		}])
+		
+		
+-var table_loaded1 = []
++itemBuild(table_loaded1, [{
+			id: 'file_list',
+			name: 'Список файлов',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'the_roof.pdf',
+				name: 'The_roof',
+				type: 'pdf',
+				size: ''
+			}]
+		}, {
+			id: 'A31-A100.pdf',
+			name: 'A31-A100',
+			type: 'pdf',
+			size: ''
+		}, {
+			id: 'WTF.txt',
+			name: 'WTF',
+			type: 'txt',
+			size: ''
+		}, {
+			id: 'for_print',
+			name: 'Для печати',
+			type: 'folder',
+			size: '',
+			folder: [{
+				id: 'my_books',
+				name: 'Мои книги',
+				type: 'folder',
+				size: '',
+				folder: [{
+					id: 'the_roof_is_on_fire_you_fat_beaches.docx',
+					name: 'The_roof_is_on_fire_you_fat_beaches',
+					type: 'docx',
 					size: ''
 				}]
 			}, {
@@ -75,4 +355,3 @@
 			type: 'docx',
 			size: ''
 		}])
-

@@ -96,13 +96,13 @@ var images_private = {
 			return name;
 		}
 	}, {
-		name: 'to_test'
+		name: 'to_check'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl(this.name);
 			return name;
 		}
 	}, {
-		name: 'to_test--bw'
+		name: 'to_check--bw'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl_bw(this.name);
 			return name;
@@ -127,6 +127,42 @@ var images_private = {
 		}
 	}, {
 		name: 'view_1p--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'info'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'info--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'look'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'look--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'approve'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'approve--bw'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl_bw(this.name);
 			return name;
