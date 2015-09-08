@@ -108,4 +108,16 @@ mixin my_files_table_inner_sub(name_total, name, items, title_arr, color, lvl)
 
 
 div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualClass + '-docs--' + name_section)
-	+my_files_table(name_section, actualClass + '-table', actualClass + '-docs', table_loaded)
+	+my_files_table(name_section, actualClass + '-table', actualClass + '-docs', {
+		header: [{
+			id: 'name',
+			name: 'Название'
+		}, {
+			id: 'size',
+			name: 'Размер'
+		}, {
+			id: 'manage',
+			name: 'Действия / Статусы'
+		}],
+		items: table_loaded
+		})
