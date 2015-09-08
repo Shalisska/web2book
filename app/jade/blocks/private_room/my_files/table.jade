@@ -85,11 +85,14 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 			-var history_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
-			if item.history || history == 'history'
+			if item.history
 				if item.final == 1
 					-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
-				else
+				else if history == 'history'
 					-history_class = ' ' + name + '__items--history'
+			else if history == 'history'
+				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_last'
+				
 			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class)
 
 				if item.folder
@@ -105,12 +108,14 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 						if title == 'check'
 							-check_class = ' my_files__checkbox'
 						if title == 'name' && history == 'history'
-							-hist_class = ' ' + name + '__item-' + title + '--history'
+							-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--gray'
 						div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + hist_class)
 							case title
 								when 'check'
 									if item.folder
 										input(type='checkbox' id='files_check-' + item.id + '_' + name_section)
+									if item.status
+										input(type='checkbox' id='files_check-' + item.id + '_' + name_section disabled)
 									else
 										input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + name_section)
 									label.my_files__check(for='files_check-' + item.id + '_' + name_section)

@@ -42,6 +42,12 @@ var sprite_private_arr = [{
 		width: 0,
 		retina: 18
 	}]
+}, {
+	img_dir: 'private_room/sprite/arrow_history',
+	dest: [{
+		width: 0,
+		retina: 8
+	}]
 }];
 
 var sprite_form_arr = [{

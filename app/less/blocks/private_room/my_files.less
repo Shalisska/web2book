@@ -179,6 +179,7 @@
 		&:after {
 			content: '';
 			position: absolute;
+			display: none;
 			left: 0;
 			top: 50%;
 			margin-top: -7px;
@@ -615,6 +616,41 @@
 		}
 		
 		&__items {
+			&--history {
+				background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+				
+				&_final {
+					background-image: none;
+					
+					&>ul {
+						&>li {
+							&:first-child {box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);}
+							&:only-child {
+								box-shadow:
+									inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2),
+									inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+							}
+						}
+					}
+					
+					&>.my_files-docs__item-l > .my_files-docs__item-name {
+						&:after {
+							content: '';
+							position: absolute;
+							@w: 0.84em;
+							width: @w;
+							height: @w;
+							bottom: -(@w / 2);
+							background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
+							transform: rotate(45deg);
+						}
+						.my_files_history_left(11);
+					}
+				}
+				
+				&_last:last-of-type {box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);}
+			}
+			
 			input[id^='folder_opener'],
 			input[id^='history_opener'] {
 				display: none;
@@ -632,7 +668,8 @@
 				}
 			}
 			
-			&:not([class$='lvl0']):not([class$='history']):before {
+			&:not([class$='lvl0']):not(.my_files-docs__items--history):before,
+			&--history_final:before {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -660,7 +697,7 @@
 			&-name {
 				text-align: left;
 				
-				&:not([class$='lvl0']):not([class$='history']) {
+				&:not(.my_files-docs__item-name--lvl0):not(.my_files-docs__item-name--history) {
 					&:before {
 						content: '';
 						position: absolute;
@@ -672,6 +709,14 @@
 					}
 				}
 				
+				&--history {
+					&:before {
+						content: '';
+						position: absolute;
+						
+					}
+				}
+				
 				span:before {
 					content: '';
 					display: inline-block;
@@ -679,8 +724,7 @@
 					vertical-align: bottom;
 				}
 				
-				label[for^='folder_opener'],
-				label[for^='history_opener'] {
+				label[for^='folder_opener'] {
 					position: absolute;
 					@w: 13px;
 					top: 50%;
@@ -700,6 +744,15 @@
 					}
 				}
 				
+				label[for^='history_opener'] {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 27px;
+					right: 0;
+					z-index: 5;
+				}
+				
 				.my_files_table-padding(10);
 			}
 			
@@ -707,6 +760,15 @@
 				padding: 0 0.5%;
 				line-height: 3em;
 				text-align: left;
+				
+				a {
+		&:hover, &:active {background-color: #3e9ade;}
+				}
+				
+				span:not(.my_files__manage--recieved) {
+					width: 100%;
+					text-align: center;
+				}
 			}
 		}
 		
@@ -716,24 +778,39 @@
 				border: none;
 				
 				&:first-child, &:last-child {border: none;}
-				&:last-child {background-image: linear-gradient(to top, rgba(3,3,5,0.2) 0%, transparent 0.75em);}
+				&:not(.my_files-docs__items--history):last-child {box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);}
 			}
 		}
 		
 		&--loaded {display: none;}
-		
-		&--working {
-			
-		}
+//		&--working {display: none;}
 	}
 	
 	&__manage {
 		display: inline-block;
 		vertical-align: middle;
 		
-		&:hover, &:active {background-color: #3e9ade;}
+		&--wait {
+			&:before {
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 8px;
+				margin-right: 6px;
+			}
+		}
+		
+		&--recieved {
+			width: 4.5em;
+			line-height: 1.4;
+		}
 	}
 }
+
+.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
+.my_files__checkbox>input[type="checkbox"]:checked ~ label:after {display: block;}
+
+.private_room--my_files #my_files__check-all:disabled ~ .my_files-header label[for="my_files__check-all"],
+.my_files__checkbox>input[type="checkbox"]:disabled ~ label {opacity: .3;}
 
 .cloud_drives(@n, @i: 1) when (@i =< @n) {
 	@items:
@@ -780,11 +857,13 @@
 	@padding: 28px;
 	@left: 2px;
 	@left_before: 8px;
+	@left_history: 32px;
 	
 	&--lvl@{i} {
 		padding-left: @padding + @step * @i;
 		&:before {left: @left_before + @step * (@i - 1);}
-		label[for^='folder_opener'], label[for^='history_opener'] {left: @left + @step * @i;}
+		&.my_files-docs__item-name--history:before {left: @left_history + @step * (@i - 1);}
+		label[for^='folder_opener'] {left: @left + @step * @i;}
 	}
 	
 	.my_files_table-padding(@n, (@i + 1));
@@ -799,4 +878,15 @@
 	}
 	
 	.my_files_table-padding-li(@n, (@i + 1));
+}
+
+.my_files_history_left(@n, @i: 0) when (@i =< @n) {
+	@step: 25px;
+	@left: 65px;
+	
+	&--lvl@{i} {
+		&:after {left: @left + @step * @i;}
+	}
+	
+	.my_files_history_left(@n, (@i + 1));
 }

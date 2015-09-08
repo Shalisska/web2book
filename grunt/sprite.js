@@ -33,12 +33,13 @@ var images_private = {
       name: 'my_files_search'
     , class: 'before'
     }, {
+      name: 'arrow_history--gray'
+    , class: 'before'
+    }, {
       name: 'checked'
     , template: function (r, w) {
-			var name1 = '.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after';
-			var name2 = '.my_files__checkbox>input[type="checkbox"]:checked ~ label:after';
-		
-        return [name1, name2];
+		var name = '.my_files__check:after';
+        return name;
       }
     }, {
       name: 'type_file'
