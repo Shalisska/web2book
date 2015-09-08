@@ -3212,8 +3212,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-clipboard,
-.my_files-docs__item-manage:hover > .sprite_icon-clipboard,
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
 .sprite_icon-clipboard--active {
   background-position: -38px -54px;
   background-size: 190px 184px;
@@ -3232,8 +3231,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-comment,
-.my_files-docs__item-manage:hover > .sprite_icon-comment {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
   background-position: -38px -81px;
   background-size: 190px 184px;
   width: 38px;
@@ -3285,8 +3283,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-file_pdf,
-.my_files-docs__item-manage:hover > .sprite_icon-file_pdf {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
   background-position: 0px 0px;
   background-size: 190px 184px;
   width: 38px;
@@ -3314,8 +3311,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-process_manage,
-.my_files-docs__item-manage:hover > .sprite_icon-process_manage {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
   background-position: -152px -54px;
   background-size: 190px 184px;
   width: 38px;
@@ -3345,8 +3341,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-to_test,
-.my_files-docs__item-manage:hover > .sprite_icon-to_test {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_test {
   background-position: -114px -54px;
   background-size: 190px 184px;
   width: 38px;
@@ -3380,8 +3375,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-unzip,
-.my_files-docs__item-manage:hover > .sprite_icon-unzip {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-unzip {
   background-position: -114px 0px;
   background-size: 190px 184px;
   width: 38px;
@@ -3393,8 +3387,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-view_1p,
-.my_files-docs__item-manage:hover > .sprite_icon-view_1p {
+.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
   background-position: 0px -27px;
   background-size: 190px 184px;
   width: 38px;
@@ -3457,8 +3450,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-clipboard,
-  .my_files-docs__item-manage:hover > .sprite_icon-clipboard,
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -38px -54.66666667px;
     background-size: 190px 186px;
@@ -3477,8 +3469,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-comment,
-  .my_files-docs__item-manage:hover > .sprite_icon-comment {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -38px -82px;
     background-size: 190px 186px;
     width: 38px;
@@ -3530,8 +3521,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-file_pdf,
-  .my_files-docs__item-manage:hover > .sprite_icon-file_pdf {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: 0px 0px;
     background-size: 190px 186px;
     width: 38px;
@@ -3559,8 +3549,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-process_manage,
-  .my_files-docs__item-manage:hover > .sprite_icon-process_manage {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -152px -54.66666667px;
     background-size: 190px 186px;
     width: 38px;
@@ -3590,8 +3579,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-to_test,
-  .my_files-docs__item-manage:hover > .sprite_icon-to_test {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_test {
     background-position: -114px -54.66666667px;
     background-size: 190px 186px;
     width: 38px;
@@ -3625,8 +3613,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-unzip,
-  .my_files-docs__item-manage:hover > .sprite_icon-unzip {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-unzip {
     background-position: -114px 0px;
     background-size: 190px 186px;
     width: 38px;
@@ -3638,8 +3625,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-view_1p,
-  .my_files-docs__item-manage:hover > .sprite_icon-view_1p {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: 0px -27.33333333px;
     background-size: 190px 186px;
     width: 38px;
@@ -3703,8 +3689,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-clipboard,
-  .my_files-docs__item-manage:hover > .sprite_icon-clipboard,
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -38px -54px;
     background-size: 190px 184px;
@@ -3723,8 +3708,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-comment,
-  .my_files-docs__item-manage:hover > .sprite_icon-comment {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -38px -81px;
     background-size: 190px 184px;
     width: 38px;
@@ -3776,8 +3760,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-file_pdf,
-  .my_files-docs__item-manage:hover > .sprite_icon-file_pdf {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: 0px 0px;
     background-size: 190px 184px;
     width: 38px;
@@ -3805,8 +3788,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-process_manage,
-  .my_files-docs__item-manage:hover > .sprite_icon-process_manage {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -152px -54px;
     background-size: 190px 184px;
     width: 38px;
@@ -3836,8 +3818,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-to_test,
-  .my_files-docs__item-manage:hover > .sprite_icon-to_test {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_test {
     background-position: -114px -54px;
     background-size: 190px 184px;
     width: 38px;
@@ -3871,8 +3852,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-unzip,
-  .my_files-docs__item-manage:hover > .sprite_icon-unzip {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-unzip {
     background-position: -114px 0px;
     background-size: 190px 184px;
     width: 38px;
@@ -3884,8 +3864,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-view_1p,
-  .my_files-docs__item-manage:hover > .sprite_icon-view_1p {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: 0px -27px;
     background-size: 190px 184px;
     width: 38px;
@@ -3949,8 +3928,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-clipboard,
-  .my_files-docs__item-manage:hover > .sprite_icon-clipboard,
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -38px -54px;
     background-size: 190px 184px;
@@ -3969,8 +3947,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-comment,
-  .my_files-docs__item-manage:hover > .sprite_icon-comment {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -38px -81px;
     background-size: 190px 184px;
     width: 38px;
@@ -4022,8 +3999,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-file_pdf,
-  .my_files-docs__item-manage:hover > .sprite_icon-file_pdf {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: 0px 0px;
     background-size: 190px 184px;
     width: 38px;
@@ -4051,8 +4027,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-process_manage,
-  .my_files-docs__item-manage:hover > .sprite_icon-process_manage {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -152px -54px;
     background-size: 190px 184px;
     width: 38px;
@@ -4082,8 +4057,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-to_test,
-  .my_files-docs__item-manage:hover > .sprite_icon-to_test {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_test {
     background-position: -114px -54px;
     background-size: 190px 184px;
     width: 38px;
@@ -4117,8 +4091,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-unzip,
-  .my_files-docs__item-manage:hover > .sprite_icon-unzip {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-unzip {
     background-position: -114px 0px;
     background-size: 190px 184px;
     width: 38px;
@@ -4130,8 +4103,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item:nth-of-type(n):hover ~ .my_files-docs__item-manage .sprite_icon-view_1p,
-  .my_files-docs__item-manage:hover > .sprite_icon-view_1p {
+  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: 0px -27px;
     background-size: 190px 184px;
     width: 38px;
@@ -5123,7 +5095,7 @@ main {
     top: 50%;
     margin-top: -14.8px;
     margin-left: 0;
-    background-size: 56px 29.6px;
+    background-size: 224px 98.4px;
     width: 14.4px;
     height: 29.6px;
   }
@@ -5134,7 +5106,7 @@ main {
 @media (max-width: 980px) {
   .form__counter-minus:before {
     left: 1em;
-    background-position: 1px 0px;
+    background-position: -112px -32.8px;
   }
 }
 @media (max-width: 590px) {
@@ -5153,7 +5125,7 @@ main {
 @media (max-width: 980px) {
   .form__counter-plus:before {
     left: 0.21em;
-    background-position: -14.4px 0px;
+    background-position: -126.4px -32.8px;
   }
 }
 .form__counter-input {
@@ -9092,8 +9064,13 @@ main {
 }
 .calculator__switcher-box--cover_cover-color {
   position: absolute;
-  top: -40px;
+  top: -3em;
   left: 0;
+}
+@media (max-width: 480px) {
+  .calculator__switcher-box--cover_cover-color {
+    top: 0;
+  }
 }
 .calculator__switcher-box--cover_effects-convex,
 .calculator__switcher-box--cover_effects-stamping {
@@ -10272,11 +10249,11 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
 }
 @media (max-width: 980px) {
   .calculator .print_pages-labels--main:after {
-    background-position: -43.2px 0px;
-    background-size: 56px 29.6px;
+    background-position: -155.2px -32.8px;
+    background-size: 224px 98.4px;
     width: 12.8px;
     height: 20px;
-    margin-top: -10px;
+    margin-top: -11px;
   }
 }
 .calculator .print_pages-labels li {
@@ -11780,9 +11757,20 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 50%;
   margin-left: -14px;
 }
+.my_files-docs {
+  margin-bottom: 4.1em;
+}
 .my_files-docs__body_sub {
   position: relative;
-  clear: both;
+  display: none;
+}
+.my_files-docs__header,
+.my_files-docs__item-l {
+  position: relative;
+  width: 100%;
+}
+.my_files-docs__header {
+  height: 3.8em;
 }
 .my_files-docs__header-item-check,
 .my_files-docs__item-check {
@@ -11806,9 +11794,10 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__header-item-name,
 .my_files-docs__item-name {
-  padding-left: 55px;
-  padding-right: 35%;
-  width: 100%;
+  position: absolute;
+  left: 28px;
+  padding-left: 27px;
+  right: 35%;
 }
 .my_files-docs__header-item-size,
 .my_files-docs__item-size,
@@ -11834,7 +11823,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__items--folder input[id^='folder_opener']:checked ~ ul {
   display: block;
 }
-.my_files-docs__items--folder input[id^='folder_opener']:checked ~ .my_files-docs__item-name label[for^='folder_opener']:before {
+.my_files-docs__items--folder input[id^='folder_opener']:checked ~ .my_files-docs__item-l label[for^='folder_opener']:before {
   content: '-';
   top: -5px;
   left: 2px;
@@ -11863,11 +11852,15 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__items--lvl3:before {
   left: 86px;
 }
+.my_files-docs__item-l {
+  height: 3em;
+}
+.my_files-docs__item-l:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
 .my_files-docs__item-name {
   text-align: left;
-}
-.my_files-docs__item-name:hover {
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
 }
 .my_files-docs__item-name:not([class$='lvl0']):before {
   content: '';
@@ -11888,7 +11881,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   position: absolute;
   top: 50%;
   margin-top: -7px;
-  left: 30px;
+  left: 2px;
   width: 13px;
   height: 13px;
   border: 1px solid #444;
@@ -11902,31 +11895,31 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   font-size: 15px;
 }
 .my_files-docs__item-name--lvl1 {
-  padding-left: 80px;
+  padding-left: 53px;
 }
 .my_files-docs__item-name--lvl1:before {
-  left: 36px;
+  left: 8px;
 }
 .my_files-docs__item-name--lvl1 label[for^='folder_opener'] {
-  left: 55px;
+  left: 27px;
 }
 .my_files-docs__item-name--lvl2 {
-  padding-left: 105px;
+  padding-left: 78px;
 }
 .my_files-docs__item-name--lvl2:before {
-  left: 61px;
+  left: 33px;
 }
 .my_files-docs__item-name--lvl2 label[for^='folder_opener'] {
-  left: 80px;
+  left: 52px;
 }
 .my_files-docs__item-name--lvl3 {
-  padding-left: 130px;
+  padding-left: 103px;
 }
 .my_files-docs__item-name--lvl3:before {
-  left: 86px;
+  left: 58px;
 }
 .my_files-docs__item-name--lvl3 label[for^='folder_opener'] {
-  left: 105px;
+  left: 77px;
 }
 .my_files-docs__item-manage {
   padding: 0 0.5%;

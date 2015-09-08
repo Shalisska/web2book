@@ -3,6 +3,7 @@
 @import url('calc-types.less');
 
 @sprite_z980: 0.8;
+@sprite_bg-size: (280px*@sprite_z980) (123px*@sprite_z980);
 
 .calculator {
 	font-size: 14px;
@@ -110,8 +111,10 @@
 		&-box {
 			&--cover_cover-color {
 				position: absolute;
-				top: -40px;
+				top: -3em;
 				left: 0;
+				
+				@media(max-width: 480px) {top: 0;}
 			}
 			
 			&--cover_effects {
@@ -483,11 +486,11 @@
 						background-repeat: no-repeat;
 						
 						@media(max-width: 980px) {
-							background-position: -(54px * @sprite_z980) 0px;
-							background-size: (70px*@sprite_z980) (37px*@sprite_z980);
+							background-position: -(194px * @sprite_z980) -(41px * @sprite_z980);
+							background-size: @sprite_bg-size;
 							width: 16px*@sprite_z980;
 							height: 25px*@sprite_z980;
-							margin-top: -(25px / 2*@sprite_z980);
+							margin-top: -(25px / 2*@sprite_z980 + 1px);
 						}
 					}
 				}

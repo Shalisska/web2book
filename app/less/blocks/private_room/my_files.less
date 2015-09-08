@@ -555,25 +555,21 @@
 	}
 	
 	&-docs {
+		margin-bottom: 4.1em;
+		
 		&__body {
 			&_sub {
 				position: relative;
-				//display: none;
-				clear: both;
-				
-//				&:before {
-//					content: '';
-//					position: absolute;
-//					top: 0;
-//					bottom: 1.5em;
-//					width: 1px;
-//					border-left: 1px dotted #606162;
-//					z-index: 5;
-//				}
+				display: none;
 			}
-			
-//			.my_files_table-padding_body(3);
 		}
+		
+		&__header, &__item-l {
+			position: relative;
+			width: 100%;
+		}
+		
+		&__header {height: 3.8em;}
 		
 		&__header-item, &__item {
 			&-check {
@@ -595,9 +591,10 @@
 			}
 			
 			&-name {
-				padding-left: 55px;
-				padding-right: 35%;
-				width: 100%;
+				position: absolute;
+				left: 28px;
+				padding-left: (55px - 28px);
+				right: 35%;
 			}
 			
 			&-size, &-manage {
@@ -623,7 +620,7 @@
 					display: none;
 					&:checked {
 						&~ul {display: block;}
-						&~.my_files-docs__item-name label[for^='folder_opener']{
+						&~.my_files-docs__item-l label[for^='folder_opener']{
 							&:before {
 								content: '-';
 								top: -5px;
@@ -651,10 +648,17 @@
 		}
 		
 		&__item {
+			&-l {
+				height: 3em;
+				
+				&:hover {
+					box-shadow: 0 0 8px 0 rgba(0, 0, 0, .75);
+					z-index: 10;
+				}
+			}
+			
 			&-name {
 				text-align: left;
-				
-				&:hover {box-shadow: 0 0 8px 0 rgba(0, 0, 0, .75)}
 				
 				&:not([class$='lvl0']):before {
 					content: '';
@@ -678,7 +682,7 @@
 					@w: 13px;
 					top: 50%;
 					margin-top: -7px;
-					left: 30px;
+					left: 2px;
 					width: @w;
 					height: @w;
 					border: 1px solid #444;
@@ -711,6 +715,10 @@
 				&:first-child, &:last-child {border: none;}
 				&:last-child {background-image: linear-gradient(to top, rgba(3,3,5,0.2) 0%, transparent 0.75em);}
 			}
+		}
+		
+		&--working {
+			
 		}
 	}
 	
@@ -764,9 +772,9 @@
 
 .my_files_table-padding(@n, @i: 1) when (@i =< @n) {
 	@step: 25px;
-	@padding: 55px;
-	@left: 30px;
-	@left_before: 36px;
+	@padding: 28px;
+	@left: 2px;
+	@left_before: 8px;
 	
 	&--lvl@{i} {
 		padding-left: @padding + @step * @i;
