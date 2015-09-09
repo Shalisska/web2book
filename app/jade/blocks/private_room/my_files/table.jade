@@ -25,10 +25,7 @@ mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
 			if item.history
-				if item.final == 1
-					-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
-				else
-					-history_class = ' ' + name + '__items--history'
+				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
 			if item.new
 				-spec_class = ' ' + name + '__items--new'
 			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class + spec_class)
@@ -74,9 +71,9 @@ mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
 					+my_files_table_inner_sub(name_section, name_total, name, item.folder, title_arr, color, lvl)
 					
 				if item.history
-					+my_files_table_inner_sub(name_section, name_total, name, item.history, title_arr, color, lvl, 'history')
+					+my_files_table_inner_history(name_section, name_total, name, item.history, title_arr, color, lvl)
 
-mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr, color, lvl, history)
+mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr, color, lvl)
 	-lvl = lvl + 1
 	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body' + '_sub')
 		each item, i in items
@@ -90,12 +87,7 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
 			if item.history
-				if item.final == 1
-					-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
-				else if history == 'history'
-					-history_class = ' ' + name + '__items--history'
-			else if history == 'history'
-				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_last'
+				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
 			if item.new
 				-spec_class = ' ' + name + '__items--new'
 				
@@ -110,15 +102,9 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 				div(class=class_name([name_total, name], '__item-l'))
 					each title in title_arr
 						-var check_class = ''
-						-var hist_class = ''
 						if title == 'check'
 							-check_class = ' my_files__checkbox'
-						if title == 'name' && history == 'history'
-							if name_section == 'working'
-								-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--gray'
-							else
-								-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--white'
-						div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + hist_class)
+						div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class)
 							case title
 								when 'check'
 									if item.folder
@@ -148,11 +134,12 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 					+my_files_table_inner_sub(name_section, name_total, name, item.folder, title_arr, color, lvl)
 				
 				if item.history
-					+my_files_table_inner_sub(name_section, name_total, name, item.history, title_arr, color, lvl, 'history')
+					+my_files_table_inner_history(name_section, name_total, name, item.history, title_arr, color, lvl)
 
-mixin my_files_table_inner_history(name_section, name_total, name, items, title_arr, color)
+mixin my_files_table_inner_history(name_section, name_total, name, items, title_arr, color, lvl)
 	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body_history')
 		each item, i in items
+			-lvl = lvl + 1
 			if color == 'color1'
 				-color = 'color2'
 			else
@@ -164,7 +151,7 @@ mixin my_files_table_inner_history(name_section, name_total, name, items, title_
 			if item.new
 				-spec_class = ' ' + name + '__items--new'
 				
-			li.clearfix(class=class_name([name, name + '_history'], '__items') + ' ' + name_total + '__items--' + color + history_class + spec_class)
+			li.clearfix(class=class_name([name_total, name], '__items') + ' ' + name_total + '__items--' + color + history_class + spec_class)
 
 				div(class=class_name([name_total, name], '__item-l'))
 					each title in title_arr
@@ -172,12 +159,12 @@ mixin my_files_table_inner_history(name_section, name_total, name, items, title_
 						-var hist_class = ' ' + name + '__item-' + title + '--history'
 						if title == 'check'
 							-check_class = ' my_files__checkbox'
-						if title == 'name' && history == 'history'
+						if title == 'name'
 							if name_section == 'working'
 								-hist_class = hist_class + ' sprite_icon-arrow_history--gray'
 							else
 								-hist_class = hist_class + ' sprite_icon-arrow_history--white'
-						div(class=class_name([name, name + '_history'], '__item') + check_class + hist_class)
+						div(class=class_name([name_total, name], '__item') + class_name([name], '__item-' + title) + check_class + hist_class + ' ' + name + '__item-' + title + '--lvl' + lvl)
 							case title
 								when 'check'
 									if item.status
@@ -203,7 +190,7 @@ div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualCla
 		when 'working'
 			-vars = table_working
 		when 'processing'
-			-vars = table_processing
+			-vars = table_working
 		default
 			-vars = table_loaded1
 			

@@ -12013,7 +12013,8 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs {
   margin-bottom: 4.1em;
 }
-.my_files-docs__body_sub {
+.my_files-docs__body_sub,
+.my_files-docs__body_history {
   position: relative;
 }
 .my_files-docs__header,
@@ -12073,14 +12074,20 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
   color: white;
 }
+.my_files-docs__items--history:not(.my_files-docs__items--history_final) {
+  font-size: 1em;
+}
 .my_files-docs__items--history_final {
   background-image: none;
   color: inherit;
 }
-.my_files-docs__items--history_final > ul > li:first-child {
+.my_files-docs__items--history_final ul li:first-child {
   box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
-.my_files-docs__items--history_final > ul > li:only-child {
+.my_files-docs__items--history_final ul li:last-child {
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+}
+.my_files-docs__items--history_final ul li:only-child {
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
 .my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name:after {
@@ -12128,9 +12135,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl11:after {
   left: 340px;
-}
-.my_files-docs__items--history_last:last-of-type {
-  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
 .my_files-docs__items input[id^='folder_opener'],
 .my_files-docs__items input[id^='history_opener'] {
@@ -12393,6 +12397,9 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs--working .my_files-docs__items--history {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   color: inherit;
+}
+.my_files-docs--working .my_files-docs__items--history_final {
+  background-image: none;
 }
 .my_files__manage {
   display: inline-block;
