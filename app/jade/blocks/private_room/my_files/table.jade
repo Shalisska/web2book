@@ -150,7 +150,50 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 				if item.history
 					+my_files_table_inner_sub(name_section, name_total, name, item.history, title_arr, color, lvl, 'history')
 
+mixin my_files_table_inner_history(name_section, name_total, name, items, title_arr, color)
+	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body_history')
+		each item, i in items
+			if color == 'color1'
+				-color = 'color2'
+			else
+				-color = 'color1'
+			-var history_class = ' ' + name + '__items--history'
+			-var spec_class = ''
+			if i == (items.length - 1)
+				-history_class = history_class + history_class + '_last'
+			if item.new
+				-spec_class = ' ' + name + '__items--new'
+				
+			li.clearfix(class=class_name([name, name + '_history'], '__items') + ' ' + name_total + '__items--' + color + history_class + spec_class)
 
+				div(class=class_name([name_total, name], '__item-l'))
+					each title in title_arr
+						-var check_class = ''
+						-var hist_class = ' ' + name + '__item-' + title + '--history'
+						if title == 'check'
+							-check_class = ' my_files__checkbox'
+						if title == 'name' && history == 'history'
+							if name_section == 'working'
+								-hist_class = hist_class + ' sprite_icon-arrow_history--gray'
+							else
+								-hist_class = hist_class + ' sprite_icon-arrow_history--white'
+						div(class=class_name([name, name + '_history'], '__item') + check_class + hist_class)
+							case title
+								when 'check'
+									if item.status
+										input(type='checkbox' id='files_check-' + item.id + '_' + name_section disabled)
+									else
+										input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + name_section)
+									label.my_files__check(for='files_check-' + item.id + '_' + name_section)
+								when 'name'
+									-var file_type = ' sprite_icon-type_file'
+									-var type = '.' + item.type
+									span(class=file_type)=item.name + type
+
+								when 'size'
+									=item.size
+								when 'manage'
+									include manage
 
 div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualClass + '-docs--' + name_section)
 	-var vars = []
