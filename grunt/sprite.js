@@ -64,6 +64,19 @@ var images_private = {
 			return name;
 		}
 	}, {
+		name: 'busket'
+	,	template: function (r, w) {
+			var name1 = file_manage_sprite_tabl(this.name);
+			var name2 = '.sprite_icon-' + this.name + '--active';
+			return [name1, name2];
+		}
+	}, {
+		name: 'busket--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
 		name: 'comment'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl(this.name);
@@ -179,6 +192,30 @@ var images_private = {
 		}
 	}, {
 		name: 'recheck--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'download'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'download--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'convert'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'convert--bw'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl_bw(this.name);
 			return name;
