@@ -21,6 +21,7 @@ mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
 				-color = 'color1'
 			-var folder_class = ''
 			-var history_class = ''
+			-var spec_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
 			if item.history
@@ -28,7 +29,9 @@ mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
 					-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
 				else
 					-history_class = ' ' + name + '__items--history'
-			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class)
+			if item.new
+				-spec_class = ' ' + name + '__items--new'
+			li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class + spec_class)
 
 				if item.folder
 					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id + '_' + name_section)
@@ -83,6 +86,7 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 				-color = 'color1'
 			-var folder_class = ''
 			-var history_class = ''
+			-var spec_class = ''
 			if item.folder
 				-folder_class = ' ' + name + '__items--folder'
 			if item.history
@@ -92,8 +96,10 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 					-history_class = ' ' + name + '__items--history'
 			else if history == 'history'
 				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_last'
+			if item.new
+				-spec_class = ' ' + name + '__items--new'
 				
-			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class)
+			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class + spec_class)
 
 				if item.folder
 					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id + '_' + name_section)
@@ -108,7 +114,10 @@ mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr,
 						if title == 'check'
 							-check_class = ' my_files__checkbox'
 						if title == 'name' && history == 'history'
-							-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--gray'
+							if name_section == 'working'
+								-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--gray'
+							else
+								-hist_class = ' ' + name + '__item-' + title + '--history' + ' sprite_icon-arrow_history--white'
 						div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class + hist_class)
 							case title
 								when 'check'
@@ -150,6 +159,8 @@ div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualCla
 			-vars = table_loaded
 		when 'working'
 			-vars = table_working
+		when 'processing'
+			-vars = table_processing
 		default
 			-vars = table_loaded1
 			

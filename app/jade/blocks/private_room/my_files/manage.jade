@@ -1,4 +1,4 @@
-mixin manage_mix(name, obj, stats, activities)
+mixin manage_mix(name, obj, stats, dealing, activities)
 	if obj.status
 		-var date = ''
 		-var spec_class = ''
@@ -11,13 +11,13 @@ mixin manage_mix(name, obj, stats, activities)
 		span.my_files__manage(class = spec_class)=stats[obj.status.stat] + date
 		if obj.dop_stat
 			each item in obj.dop_stat
-				a.my_files__manage.sprite_private_room(class='my_files__manage--' + item + ' ' + 'sprite_icon-' + item href='#')
+				a.my_files__manage.sprite_private_room(class='my_files__manage--' + dealing[item].id + ' ' + 'sprite_icon-' + dealing[item].id href='#' title=dealing[item].title)
 	else
 		each activity in activities
 			each types in activity.type
 				if obj.type == types
 					each action in activity.actions
-						a.my_files__manage.sprite_private_room(class='my_files__manage--' + action + ' ' + 'sprite_icon-' + action href='#')
+						a.my_files__manage.sprite_private_room(class='my_files__manage--' + dealing[action].id + ' ' + 'sprite_icon-' + dealing[action].id href='#' title=dealing[action].title)
 
 -var manage_obj = {}
 mixin manageObj(obj, item)
@@ -40,25 +40,29 @@ mixin statsObj(obj)
 	-obj['5'] = 'Утвержден'
 +statsObj(stats)
 
-+manage_mix(name, manage_obj, stats, [{
+-var dealing = {}
+mixin dealingObj(obj)
+	-obj['0'] = {id: 'file_pdf', title: 'В pdf'}
+	-obj['1'] = {id: 'process_manage', title: 'Управление процессом'}
+	-obj['2'] = {id: 'clipboard', title: 'Скопировать'}
+	-obj['3'] = {id: 'comment', title: 'Комментировать'}
+	-obj['4'] = {id: 'look', title: 'Просмотр'}
+	-obj['5'] = {id: 'view_1p', title: 'Одностраничный просмотр'}
+	-obj['6'] = {id: 'zip', title: 'Архивировать'}
+	-obj['7'] = {id: 'to_check', title: 'На проверку'}
+	-obj['8'] = {id: 'recheck', title: 'На повторную проверку'}
+	-obj['9'] = {id: 'info', title: 'Информация'}
+	-obj['10'] = {id: 'approve', title: 'Принять'}
++dealingObj(dealing)
+
++manage_mix(name, manage_obj, stats, dealing, [{
 	type: ['folder'],
-	actions: [
-		'unzip',
-		'to_check'
-	]}, {
+	actions: [6, 7]
+	}, {
 	type: ['txt', 'jpeg', 'png', 'jpg'],
-	actions: [
-		'file_pdf',
-		'process_manage',
-		'view_1p',
-		'comment',
-		'clipboard'
-	]}, {
+	actions: [0, 1, 5, 3, 2]
+	}, {
 	type: ['pdf', 'docx'],
-	actions: [
-		'process_manage',
-		'view_1p',
-		'comment',
-		'clipboard'
-	]}
+	actions: [1, 5, 3, 2]
+	}
 ])

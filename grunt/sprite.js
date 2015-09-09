@@ -36,6 +36,9 @@ var images_private = {
       name: 'arrow_history--gray'
     , class: 'before'
     }, {
+      name: 'arrow_history--white'
+    , class: 'before'
+    }, {
       name: 'checked'
     , template: function (r, w) {
 		var name = '.my_files__check:after';
@@ -109,13 +112,13 @@ var images_private = {
 			return name;
 		}
 	}, {
-		name: 'unzip'
+		name: 'zip'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl(this.name);
 			return name;
 		}
 	}, {
-		name: 'unzip--bw'
+		name: 'zip--bw'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl_bw(this.name);
 			return name;
@@ -164,6 +167,18 @@ var images_private = {
 		}
 	}, {
 		name: 'approve--bw'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl_bw(this.name);
+			return name;
+		}
+	}, {
+		name: 'recheck'
+	,	template: function (r, w) {
+			var name = file_manage_sprite_tabl(this.name);
+			return name;
+		}
+	}, {
+		name: 'recheck--bw'
 	,	template: function (r, w) {
 			var name = file_manage_sprite_tabl_bw(this.name);
 			return name;
