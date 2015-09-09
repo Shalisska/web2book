@@ -12076,6 +12076,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__items--history:not(.my_files-docs__items--history_final) {
   font-size: 1em;
+  border: none;
 }
 .my_files-docs__items--history_final {
   background-image: none;
@@ -12089,6 +12090,15 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__items--history_final ul li:only-child {
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+}
+.my_files-docs__items--history_final ul .my_files-docs__items--new:first-child {
+  box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
+}
+.my_files-docs__items--history_final ul .my_files-docs__items--new:last-child {
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
+}
+.my_files-docs__items--history_final ul .my_files-docs__items--new:only-child {
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
 }
 .my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name:after {
   content: '';
@@ -12194,6 +12204,10 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__items--lvl10:before {
   left: 261px;
+}
+.my_files-docs__items--new {
+  background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
+  box-shadow: inset 0 0 0 1px #57bff5;
 }
 .my_files-docs__item-l {
   height: 3em;
@@ -12393,6 +12407,9 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs_sub__items:not(.my_files-docs__items--history):last-child {
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+}
+.my_files-docs_sub__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child {
+  box-shadow: inset 0 0 0 1px #57bff5, inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
 .my_files-docs--working .my_files-docs__items--history {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
