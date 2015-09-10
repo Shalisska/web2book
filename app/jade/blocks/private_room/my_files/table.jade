@@ -23,11 +23,6 @@ mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, ite
 	else
 		-body_type = ''
 	
-	if b_type == 'split'
-		if color == 'color1'
-			-color = 'color1'
-		else
-			-color = 'color2'
 	ul(class=class_name([name_total, name], '__body') + body_type)
 		each item, i in items
 			if color == 'color1'
