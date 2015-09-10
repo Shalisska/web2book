@@ -3179,7 +3179,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-approve {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
   background-position: 0px -27px;
   background-size: 228px 205px;
   width: 38px;
@@ -3245,7 +3245,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
 .sprite_icon-clipboard--active {
   background-position: -114px 0px;
   background-size: 228px 205px;
@@ -3264,7 +3264,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
   background-position: -114px -81px;
   background-size: 228px 205px;
   width: 38px;
@@ -3276,7 +3276,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-convert {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
   background-position: -38px -108px;
   background-size: 228px 205px;
   width: 38px;
@@ -3300,7 +3300,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-download {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
   background-position: -152px -27px;
   background-size: 228px 205px;
   width: 38px;
@@ -3340,7 +3340,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
   background-position: -76px -135px;
   background-size: 228px 205px;
   width: 38px;
@@ -3360,7 +3360,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-info {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
   background-position: 0px -162px;
   background-size: 228px 205px;
   width: 38px;
@@ -3372,7 +3372,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-look {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
   background-position: -76px -162px;
   background-size: 228px 205px;
   width: 38px;
@@ -3392,7 +3392,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
   background-position: -190px 0px;
   background-size: 228px 205px;
   width: 38px;
@@ -3404,7 +3404,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-recheck {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
   background-position: -114px -162px;
   background-size: 228px 205px;
   width: 38px;
@@ -3434,7 +3434,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_check {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
   background-position: 0px -81px;
   background-size: 228px 205px;
   width: 38px;
@@ -3468,7 +3468,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
   background-position: -76px -27px;
   background-size: 228px 205px;
   width: 38px;
@@ -3488,7 +3488,7 @@ th {
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-zip {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
   background-position: -190px -54px;
   background-size: 228px 205px;
   width: 38px;
@@ -3510,7 +3510,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-approve {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
     background-position: 0px -27.33333333px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3576,7 +3576,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -114px 0px;
     background-size: 228px 227.33333333333334px;
@@ -3595,7 +3595,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -114px -82px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3607,7 +3607,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-convert {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
     background-position: -38px -109.33333333px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3631,7 +3631,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-download {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
     background-position: -152px -27.33333333px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3671,7 +3671,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: -76px -136.66666667px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3691,7 +3691,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-info {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: -190px 0px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3703,7 +3703,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-look {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
     background-position: -190px -54.66666667px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3723,7 +3723,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -190px -136.66666667px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3735,7 +3735,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-recheck {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
     background-position: -190px -82px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3765,7 +3765,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_check {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
     background-position: 0px -82px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3799,7 +3799,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: -76px -27.33333333px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3819,7 +3819,7 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-zip {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
     background-position: -38px -164px;
     background-size: 228px 227.33333333333334px;
     width: 38px;
@@ -3842,7 +3842,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-approve {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
     background-position: 0px -27px;
     background-size: 228px 205px;
     width: 38px;
@@ -3908,7 +3908,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -114px 0px;
     background-size: 228px 205px;
@@ -3927,7 +3927,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -114px -81px;
     background-size: 228px 205px;
     width: 38px;
@@ -3939,7 +3939,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-convert {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
     background-position: -38px -108px;
     background-size: 228px 205px;
     width: 38px;
@@ -3963,7 +3963,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-download {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
     background-position: -152px -27px;
     background-size: 228px 205px;
     width: 38px;
@@ -4003,7 +4003,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: -76px -135px;
     background-size: 228px 205px;
     width: 38px;
@@ -4023,7 +4023,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-info {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: 0px -162px;
     background-size: 228px 205px;
     width: 38px;
@@ -4035,7 +4035,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-look {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
     background-position: -76px -162px;
     background-size: 228px 205px;
     width: 38px;
@@ -4055,7 +4055,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -190px 0px;
     background-size: 228px 205px;
     width: 38px;
@@ -4067,7 +4067,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-recheck {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
     background-position: -114px -162px;
     background-size: 228px 205px;
     width: 38px;
@@ -4097,7 +4097,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_check {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
     background-position: 0px -81px;
     background-size: 228px 205px;
     width: 38px;
@@ -4131,7 +4131,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: -76px -27px;
     background-size: 228px 205px;
     width: 38px;
@@ -4151,7 +4151,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-zip {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
     background-position: -190px -54px;
     background-size: 228px 205px;
     width: 38px;
@@ -4174,7 +4174,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-approve {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
     background-position: 0px -27px;
     background-size: 228px 189px;
     width: 38px;
@@ -4240,7 +4240,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-clipboard,
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -114px 0px;
     background-size: 228px 189px;
@@ -4259,7 +4259,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-comment {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -114px -81px;
     background-size: 228px 189px;
     width: 38px;
@@ -4271,7 +4271,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-convert {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
     background-position: -206px -157px;
     background-size: 228px 189px;
     width: 14.333333333333334px;
@@ -4295,7 +4295,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-download {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
     background-position: -152px -27px;
     background-size: 228px 189px;
     width: 38px;
@@ -4335,7 +4335,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: -76px -135px;
     background-size: 228px 189px;
     width: 38px;
@@ -4355,7 +4355,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-info {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: 0px -162px;
     background-size: 228px 189px;
     width: 38px;
@@ -4367,7 +4367,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-look {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
     background-position: -76px -162px;
     background-size: 228px 189px;
     width: 38px;
@@ -4387,7 +4387,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-process_manage {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -190px 0px;
     background-size: 228px 189px;
     width: 38px;
@@ -4399,7 +4399,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-recheck {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
     background-position: -114px -135px;
     background-size: 228px 189px;
     width: 38px;
@@ -4429,7 +4429,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-to_check {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
     background-position: 0px -81px;
     background-size: 228px 189px;
     width: 38px;
@@ -4463,7 +4463,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-view_1p {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: -76px -27px;
     background-size: 228px 189px;
     width: 38px;
@@ -4483,7 +4483,7 @@ th {
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-zip {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
     background-position: -190px -27px;
     background-size: 228px 189px;
     width: 38px;
@@ -12133,24 +12133,30 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs {
   margin-bottom: 4.1em;
 }
-.my_files-docs__body_sub,
-.my_files-docs__body_history {
+.my_files-docs__body--sub,
+.my_files-docs__body--history,
+.my_files-docs__body--split {
   position: relative;
 }
 .my_files-docs__header,
-.my_files-docs__item-l {
+.my_files-docs__item-wrap {
   position: relative;
   width: 100%;
 }
 .my_files-docs__header {
   height: 3.8em;
 }
-.my_files-docs__header-item-check,
-.my_files-docs__item-check {
+.my_files-docs__item-wrap {
+  height: 3em;
+}
+.my_files-docs__header-item,
+.my_files-docs__item {
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+}
+.my_files-docs__header-item-check,
+.my_files-docs__item-check {
   padding-left: 0.6em;
   width: 28px;
   border-right: none;
@@ -12167,7 +12173,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__header-item-name,
 .my_files-docs__item-name {
-  position: absolute;
   left: 28px;
   padding-left: 27px;
   right: 35%;
@@ -12176,8 +12181,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__item-size,
 .my_files-docs__header-item-manage,
 .my_files-docs__item-manage {
-  position: absolute;
-  top: 0;
   border-left: 1px solid rgba(0, 0, 0, 0.14);
 }
 .my_files-docs__header-item-size,
@@ -12190,81 +12193,19 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   width: 25%;
   right: 0;
 }
-.my_files-docs__items--history {
-  background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
-  color: white;
-}
-.my_files-docs__items--history:not(.my_files-docs__items--history_final) {
-  font-size: 1em;
-  border: none;
-}
-.my_files-docs__items--history_final {
-  background-image: none;
-  color: inherit;
-}
-.my_files-docs__items--history_final ul li:first-child {
-  box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
-}
-.my_files-docs__items--history_final ul li:last-child {
-  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
-}
-.my_files-docs__items--history_final ul li:only-child {
-  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
-}
-.my_files-docs__items--history_final ul .my_files-docs__items--new:first-child {
-  box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
-}
-.my_files-docs__items--history_final ul .my_files-docs__items--new:last-child {
-  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
-}
-.my_files-docs__items--history_final ul .my_files-docs__items--new:only-child {
-  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name:after {
+.my_files-docs__items:before {
   content: '';
   position: absolute;
-  width: 0.84em;
-  height: 0.84em;
-  bottom: -0.42em;
-  background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  top: 0;
+  width: 0;
+  border-left: 1px dotted #606162;
+  z-index: 5;
 }
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl0:after {
-  left: 65px;
+.my_files-docs__items:not(:last-of-type):before {
+  bottom: 0;
 }
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl1:after {
-  left: 90px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl2:after {
-  left: 115px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl3:after {
-  left: 140px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl4:after {
-  left: 165px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl5:after {
-  left: 190px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl6:after {
-  left: 215px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl7:after {
-  left: 240px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl8:after {
-  left: 265px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl9:after {
-  left: 290px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl10:after {
-  left: 315px;
-}
-.my_files-docs__items--history_final > .my_files-docs__item-l > .my_files-docs__item-name--lvl11:after {
-  left: 340px;
+.my_files-docs__items:last-of-type:before {
+  height: 1.5em;
 }
 .my_files-docs__items input[id^='folder_opener'],
 .my_files-docs__items input[id^='history_opener'] {
@@ -12274,72 +12215,27 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__items input[id^='history_opener']:checked ~ ul {
   display: block;
 }
-.my_files-docs__items input[id^='folder_opener']:checked ~ .my_files-docs__item-l label[for^='folder_opener']:before {
+.my_files-docs__items input[id^='folder_opener']:checked ~ .my_files-docs__item-wrap label[for^='folder_opener']:before {
   content: '-';
   top: -5px;
   left: 2px;
   font-size: 18px;
 }
-.my_files-docs__items:not([class$='lvl0']):not(.my_files-docs__items--history):before,
-.my_files-docs__items--history_final:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 0;
-  border-left: 1px dotted #606162;
-  z-index: 5;
-}
-.my_files-docs__items:not(.my_files-docs__items--lvl0):not(:last-of-type):before {
-  bottom: 0;
-}
-.my_files-docs__items:last-of-type:before {
-  height: 1.5em;
-}
-.my_files-docs__items--lvl1:before {
-  left: 36px;
-}
-.my_files-docs__items--lvl2:before {
-  left: 61px;
-}
-.my_files-docs__items--lvl3:before {
-  left: 86px;
-}
-.my_files-docs__items--lvl4:before {
-  left: 111px;
-}
-.my_files-docs__items--lvl5:before {
-  left: 136px;
-}
-.my_files-docs__items--lvl6:before {
-  left: 161px;
-}
-.my_files-docs__items--lvl7:before {
-  left: 186px;
-}
-.my_files-docs__items--lvl8:before {
-  left: 211px;
-}
-.my_files-docs__items--lvl9:before {
-  left: 236px;
-}
-.my_files-docs__items--lvl10:before {
-  left: 261px;
-}
 .my_files-docs__items--new {
   background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
   box-shadow: inset 0 0 0 1px #57bff5;
 }
-.my_files-docs__item-l {
+.my_files-docs__item-wrap {
   height: 3em;
 }
-.my_files-docs__item-l:hover {
+.my_files-docs__item-wrap:hover {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.75);
   z-index: 10;
 }
 .my_files-docs__item-name {
   text-align: left;
 }
-.my_files-docs__item-name:not(.my_files-docs__item-name--lvl0):not(.my_files-docs__item-name--history):before {
+.my_files-docs__item-name:not(.sprite_icon-arrow_history--gray):not(.sprite_icon-arrow_history--white):before {
   content: '';
   position: absolute;
   top: 50%;
@@ -12348,25 +12244,24 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   height: 0;
   border-bottom: 1px dotted #606162;
 }
-.my_files-docs__item-name--history:before {
-  content: '';
-  position: absolute;
-}
 .my_files-docs__item-name span:before {
   content: '';
   display: inline-block;
   margin-right: 0.5em;
   vertical-align: bottom;
 }
-.my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__item-name label[for^='folder_opener'],
+.my_files-docs__item-name label[for^='history_opener'] {
   position: absolute;
+  z-index: 5;
+}
+.my_files-docs__item-name label[for^='folder_opener'] {
   top: 50%;
   margin-top: -7px;
   left: 2px;
   width: 13px;
   height: 13px;
   border: 1px solid #444;
-  z-index: 5;
 }
 .my_files-docs__item-name label[for^='folder_opener']:before {
   content: '+';
@@ -12376,132 +12271,10 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   font-size: 15px;
 }
 .my_files-docs__item-name label[for^='history_opener'] {
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 27px;
   right: 0;
-  z-index: 5;
-}
-.my_files-docs__item-name--lvl1 {
-  padding-left: 53px;
-}
-.my_files-docs__item-name--lvl1:before {
-  left: 8px;
-}
-.my_files-docs__item-name--lvl1.my_files-docs__item-name--history:before {
-  left: 32px;
-}
-.my_files-docs__item-name--lvl1 label[for^='folder_opener'] {
-  left: 27px;
-}
-.my_files-docs__item-name--lvl2 {
-  padding-left: 78px;
-}
-.my_files-docs__item-name--lvl2:before {
-  left: 33px;
-}
-.my_files-docs__item-name--lvl2.my_files-docs__item-name--history:before {
-  left: 57px;
-}
-.my_files-docs__item-name--lvl2 label[for^='folder_opener'] {
-  left: 52px;
-}
-.my_files-docs__item-name--lvl3 {
-  padding-left: 103px;
-}
-.my_files-docs__item-name--lvl3:before {
-  left: 58px;
-}
-.my_files-docs__item-name--lvl3.my_files-docs__item-name--history:before {
-  left: 82px;
-}
-.my_files-docs__item-name--lvl3 label[for^='folder_opener'] {
-  left: 77px;
-}
-.my_files-docs__item-name--lvl4 {
-  padding-left: 128px;
-}
-.my_files-docs__item-name--lvl4:before {
-  left: 83px;
-}
-.my_files-docs__item-name--lvl4.my_files-docs__item-name--history:before {
-  left: 107px;
-}
-.my_files-docs__item-name--lvl4 label[for^='folder_opener'] {
-  left: 102px;
-}
-.my_files-docs__item-name--lvl5 {
-  padding-left: 153px;
-}
-.my_files-docs__item-name--lvl5:before {
-  left: 108px;
-}
-.my_files-docs__item-name--lvl5.my_files-docs__item-name--history:before {
-  left: 132px;
-}
-.my_files-docs__item-name--lvl5 label[for^='folder_opener'] {
-  left: 127px;
-}
-.my_files-docs__item-name--lvl6 {
-  padding-left: 178px;
-}
-.my_files-docs__item-name--lvl6:before {
-  left: 133px;
-}
-.my_files-docs__item-name--lvl6.my_files-docs__item-name--history:before {
-  left: 157px;
-}
-.my_files-docs__item-name--lvl6 label[for^='folder_opener'] {
-  left: 152px;
-}
-.my_files-docs__item-name--lvl7 {
-  padding-left: 203px;
-}
-.my_files-docs__item-name--lvl7:before {
-  left: 158px;
-}
-.my_files-docs__item-name--lvl7.my_files-docs__item-name--history:before {
-  left: 182px;
-}
-.my_files-docs__item-name--lvl7 label[for^='folder_opener'] {
-  left: 177px;
-}
-.my_files-docs__item-name--lvl8 {
-  padding-left: 228px;
-}
-.my_files-docs__item-name--lvl8:before {
-  left: 183px;
-}
-.my_files-docs__item-name--lvl8.my_files-docs__item-name--history:before {
-  left: 207px;
-}
-.my_files-docs__item-name--lvl8 label[for^='folder_opener'] {
-  left: 202px;
-}
-.my_files-docs__item-name--lvl9 {
-  padding-left: 253px;
-}
-.my_files-docs__item-name--lvl9:before {
-  left: 208px;
-}
-.my_files-docs__item-name--lvl9.my_files-docs__item-name--history:before {
-  left: 232px;
-}
-.my_files-docs__item-name--lvl9 label[for^='folder_opener'] {
-  left: 227px;
-}
-.my_files-docs__item-name--lvl10 {
-  padding-left: 278px;
-}
-.my_files-docs__item-name--lvl10:before {
-  left: 233px;
-}
-.my_files-docs__item-name--lvl10.my_files-docs__item-name--history:before {
-  left: 257px;
-}
-.my_files-docs__item-name--lvl10 label[for^='folder_opener'] {
-  left: 252px;
 }
 .my_files-docs__item-manage {
   padding: 0 0.5%;
@@ -12517,31 +12290,261 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   width: 100%;
   text-align: center;
 }
-.my_files-docs_sub__items,
-.my_files-docs_split__items {
+.my_files-docs__body--lvl0 > .my_files-docs__items:before,
+.my_files-docs__body--lvl0 > .my_files-docs__items > .my_files-docs__item-wrap > .my_files-docs__item-name:before {
+  display: none;
+}
+.my_files-docs__body--sub .my_files-docs__items,
+.my_files-docs__body--history .my_files-docs__items,
+.my_files-docs__body--split .my_files-docs__items {
   font-size: 1em;
   border: none;
 }
-.my_files-docs_sub__items:first-child,
-.my_files-docs_split__items:first-child,
-.my_files-docs_sub__items:last-child,
-.my_files-docs_split__items:last-child {
-  border: none;
-}
-.my_files-docs_sub__items:not(.my_files-docs__items--history):last-child,
-.my_files-docs_split__items:not(.my_files-docs__items--history):last-child {
+.my_files-docs__body--sub .my_files-docs__items:last-child,
+.my_files-docs__body--history .my_files-docs__items:last-child,
+.my_files-docs__body--split .my_files-docs__items:last-child {
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
-.my_files-docs_sub__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child,
-.my_files-docs_split__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child {
-  box-shadow: inset 0 0 0 1px #57bff5, inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+.my_files-docs__body--sub .my_files-docs__items .my_files-docs__items--new:last-child,
+.my_files-docs__body--history .my_files-docs__items .my_files-docs__items--new:last-child,
+.my_files-docs__body--split .my_files-docs__items .my_files-docs__items--new:last-child {
+  background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
 }
-.my_files-docs--working .my_files-docs__items--history {
+.my_files-docs__body--history:before {
+  content: '';
+  position: absolute;
+  width: 0.84em;
+  height: 0.84em;
+  top: -0.42em;
+  background-image: linear-gradient(135deg, #484849 50%, transparent 50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.my_files-docs__body--history .my_files-docs__items {
+  background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
+  color: white;
+}
+.my_files-docs__body--history .my_files-docs__items:first-child {
+  box-shadow: inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+}
+.my_files-docs__body--history .my_files-docs__items:only-child {
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
+}
+.my_files-docs__body--history .my_files-docs__items.my_files-docs__items--new:only-child {
+  background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
+  box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
+}
+.my_files-docs__body--history .my_files-docs__items:before {
+  display: none;
+}
+.my_files-docs__body--history .my_files-docs__item-name:before {
+  position: absolute;
+}
+.my_files-docs__body--lvl1.my_files-docs__body--history:before {
+  left: 90px;
+}
+.my_files-docs__body--lvl1.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 32px;
+}
+.my_files-docs__body--lvl1 .my_files-docs__items:before {
+  left: 36px;
+}
+.my_files-docs__body--lvl1 .my_files-docs__item-name {
+  padding-left: 52px;
+}
+.my_files-docs__body--lvl1 .my_files-docs__item-name:before {
+  left: 8px;
+}
+.my_files-docs__body--lvl1 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 27px;
+}
+.my_files-docs__body--lvl2.my_files-docs__body--history:before {
+  left: 115px;
+}
+.my_files-docs__body--lvl2.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 57px;
+}
+.my_files-docs__body--lvl2 .my_files-docs__items:before {
+  left: 61px;
+}
+.my_files-docs__body--lvl2 .my_files-docs__item-name {
+  padding-left: 77px;
+}
+.my_files-docs__body--lvl2 .my_files-docs__item-name:before {
+  left: 33px;
+}
+.my_files-docs__body--lvl2 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 52px;
+}
+.my_files-docs__body--lvl3.my_files-docs__body--history:before {
+  left: 140px;
+}
+.my_files-docs__body--lvl3.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 82px;
+}
+.my_files-docs__body--lvl3 .my_files-docs__items:before {
+  left: 86px;
+}
+.my_files-docs__body--lvl3 .my_files-docs__item-name {
+  padding-left: 102px;
+}
+.my_files-docs__body--lvl3 .my_files-docs__item-name:before {
+  left: 58px;
+}
+.my_files-docs__body--lvl3 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 77px;
+}
+.my_files-docs__body--lvl4.my_files-docs__body--history:before {
+  left: 165px;
+}
+.my_files-docs__body--lvl4.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 107px;
+}
+.my_files-docs__body--lvl4 .my_files-docs__items:before {
+  left: 111px;
+}
+.my_files-docs__body--lvl4 .my_files-docs__item-name {
+  padding-left: 127px;
+}
+.my_files-docs__body--lvl4 .my_files-docs__item-name:before {
+  left: 83px;
+}
+.my_files-docs__body--lvl4 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 102px;
+}
+.my_files-docs__body--lvl5.my_files-docs__body--history:before {
+  left: 190px;
+}
+.my_files-docs__body--lvl5.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 132px;
+}
+.my_files-docs__body--lvl5 .my_files-docs__items:before {
+  left: 136px;
+}
+.my_files-docs__body--lvl5 .my_files-docs__item-name {
+  padding-left: 152px;
+}
+.my_files-docs__body--lvl5 .my_files-docs__item-name:before {
+  left: 108px;
+}
+.my_files-docs__body--lvl5 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 127px;
+}
+.my_files-docs__body--lvl6.my_files-docs__body--history:before {
+  left: 215px;
+}
+.my_files-docs__body--lvl6.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 157px;
+}
+.my_files-docs__body--lvl6 .my_files-docs__items:before {
+  left: 161px;
+}
+.my_files-docs__body--lvl6 .my_files-docs__item-name {
+  padding-left: 177px;
+}
+.my_files-docs__body--lvl6 .my_files-docs__item-name:before {
+  left: 133px;
+}
+.my_files-docs__body--lvl6 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 152px;
+}
+.my_files-docs__body--lvl7.my_files-docs__body--history:before {
+  left: 240px;
+}
+.my_files-docs__body--lvl7.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 182px;
+}
+.my_files-docs__body--lvl7 .my_files-docs__items:before {
+  left: 186px;
+}
+.my_files-docs__body--lvl7 .my_files-docs__item-name {
+  padding-left: 202px;
+}
+.my_files-docs__body--lvl7 .my_files-docs__item-name:before {
+  left: 158px;
+}
+.my_files-docs__body--lvl7 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 177px;
+}
+.my_files-docs__body--lvl8.my_files-docs__body--history:before {
+  left: 265px;
+}
+.my_files-docs__body--lvl8.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 207px;
+}
+.my_files-docs__body--lvl8 .my_files-docs__items:before {
+  left: 211px;
+}
+.my_files-docs__body--lvl8 .my_files-docs__item-name {
+  padding-left: 227px;
+}
+.my_files-docs__body--lvl8 .my_files-docs__item-name:before {
+  left: 183px;
+}
+.my_files-docs__body--lvl8 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 202px;
+}
+.my_files-docs__body--lvl9.my_files-docs__body--history:before {
+  left: 290px;
+}
+.my_files-docs__body--lvl9.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 232px;
+}
+.my_files-docs__body--lvl9 .my_files-docs__items:before {
+  left: 236px;
+}
+.my_files-docs__body--lvl9 .my_files-docs__item-name {
+  padding-left: 252px;
+}
+.my_files-docs__body--lvl9 .my_files-docs__item-name:before {
+  left: 208px;
+}
+.my_files-docs__body--lvl9 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 227px;
+}
+.my_files-docs__body--lvl10.my_files-docs__body--history:before {
+  left: 315px;
+}
+.my_files-docs__body--lvl10.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 257px;
+}
+.my_files-docs__body--lvl10 .my_files-docs__items:before {
+  left: 261px;
+}
+.my_files-docs__body--lvl10 .my_files-docs__item-name {
+  padding-left: 277px;
+}
+.my_files-docs__body--lvl10 .my_files-docs__item-name:before {
+  left: 233px;
+}
+.my_files-docs__body--lvl10 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 252px;
+}
+.my_files-docs__body--lvl11.my_files-docs__body--history:before {
+  left: 340px;
+}
+.my_files-docs__body--lvl11.my_files-docs__body--history .my_files-docs__item-name:before {
+  left: 282px;
+}
+.my_files-docs__body--lvl11 .my_files-docs__items:before {
+  left: 286px;
+}
+.my_files-docs__body--lvl11 .my_files-docs__item-name {
+  padding-left: 302px;
+}
+.my_files-docs__body--lvl11 .my_files-docs__item-name:before {
+  left: 258px;
+}
+.my_files-docs__body--lvl11 .my_files-docs__item-name label[for^='folder_opener'] {
+  left: 277px;
+}
+.my_files-docs--working .my_files-docs__body--history:before {
+  background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
+}
+.my_files-docs--working .my_files-docs__body--history .my_files-docs__items {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   color: inherit;
-}
-.my_files-docs--working .my_files-docs__items--history_final {
-  background-image: none;
 }
 .my_files__manage {
   display: inline-block;
