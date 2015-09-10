@@ -12208,11 +12208,13 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   height: 1.5em;
 }
 .my_files-docs__items input[id^='folder_opener'],
-.my_files-docs__items input[id^='history_opener'] {
+.my_files-docs__items input[id^='history_opener'],
+.my_files-docs__items input[id^='split_opener'] {
   display: none;
 }
 .my_files-docs__items input[id^='folder_opener']:checked ~ ul,
-.my_files-docs__items input[id^='history_opener']:checked ~ ul {
+.my_files-docs__items input[id^='history_opener']:checked ~ ul,
+.my_files-docs__items input[id^='split_opener']:checked ~ ul {
   display: block;
 }
 .my_files-docs__items input[id^='folder_opener']:checked ~ .my_files-docs__item-wrap label[for^='folder_opener']:before {
@@ -12255,7 +12257,8 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   vertical-align: bottom;
 }
 .my_files-docs__item-name label[for^='folder_opener'],
-.my_files-docs__item-name label[for^='history_opener'] {
+.my_files-docs__item-name label[for^='history_opener'],
+.my_files-docs__item-name label[for^='split_opener'] {
   position: absolute;
   z-index: 5;
 }
@@ -12274,7 +12277,8 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 1px;
   font-size: 15px;
 }
-.my_files-docs__item-name label[for^='history_opener'] {
+.my_files-docs__item-name label[for^='history_opener'],
+.my_files-docs__item-name label[for^='split_opener'] {
   top: 0;
   bottom: 0;
   left: 27px;
