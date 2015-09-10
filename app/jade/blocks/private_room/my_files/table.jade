@@ -1,193 +1,108 @@
 include section_vars
 
-mixin my_files_table(name_section, name_total, name, data)
+mixin my_files_table(name_total, name, section, data)
 	-var title_arr = []
 	.clearfix(class=class_name([name_total, name], '__header'))
-		div(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-check')
+		div(class=class_name([name_total, name], '__header-item') + name + '__header-item-check')
 		-title_arr.push('check')
 		each item in data.header
-			p(class=class_name([name_total, name], '__header-item') + ' ' + name + '__header-item-' + item.id)=item.name
+			p(class=class_name([name_total, name], '__header-item') + name + '__header-item-' + item.id)=item.name
 			-title_arr.push(item.id)
-	+my_files_table_inner(name_section, name_total, name, data.items, title_arr)
-
-mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
+	
+	
 	-var color = 'color2'
-	-var lvl = 0
-	ul(class=class_name([name_total, name], '__body'))
+	-var lvl = -1
+	+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
+
+mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, items, b_type)
+	if b_type != 'split'
+		-lvl = lvl + 1
+	-var body_type
+	if b_type
+		-body_type = name + '__body--' + b_type
+	else
+		-body_type = ''
+	
+	ul(class=class_name([name_total, name], '__body') + body_type)
 		each item, i in items
 			if color == 'color1'
 				-color = 'color2'
 			else
 				-color = 'color1'
-			+li_build(name_section, name_total, name, item, i, title_arr, color, lvl)
-			if item.split
-				ul(class=class_name([name_total, name], '__body') + ' ' + name + '__body_split')
-					each elem, j in item.split
-						+li_build(name_section, name_total, name, elem, j, title_arr, color, lvl)
+			+li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i)
+			if b_type == 'history'
+				-lvl = lvl + 1
 
-mixin li_build(name_section, name_total, name, item, i, title_arr, color, lvl)
-	-var folder_class = ''
-	-var history_class = ''
+mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i)
 	-var spec_class = ''
-	if item.folder
-		-folder_class = ' ' + name + '__items--folder'
-	if item.history
-		-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
 	if item.new
 		-spec_class = ' ' + name + '__items--new'
-	li.clearfix(class=class_name([name_total, name], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class + spec_class)
-
-		if item.folder
-			input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id + '_' + name_section)
-
+	li(class=class_name([name_total, name], '__items') + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + spec_class)
+	
+		-var opener_name = 'folder'
 		if item.history
-			input(class=name + '__item-history_opener-input' type='checkbox' id='history_opener--' + item.id + '_' + name_section)
-
-		div(class=class_name([name_total, name], '__item-l'))
+			-opener_name = 'history'
+		if item.split
+			-opener_name = 'split'
+		
+		if item.folder || item.history || item.split
+			input(class=name + '__' + opener_name + '_opener-input' type='checkbox' id=opener_name + '_opener--' + item.id + '_' + section)
+		
+		div.clearfix(class=class_name([name_total, name], '__item-wrap'))
 			each title in title_arr
-				-var check_class = ''
+				-var item_class = ''
 				if title == 'check'
-					-check_class = ' my_files__checkbox'
-				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class)
+					-item_class = ' my_files__checkbox'
+				if title == 'name' && b_type == 'history'
+					if section == 'working'
+						-item_class = ' sprite_icon-arrow_history--gray'
+					else
+						-item_class = ' sprite_icon-arrow_history--white'
+				div(class=class_name([name_total, name], '__item') + ' ' + name + '__item-' + title + item_class)
+				
 					case title
 						when 'check'
-							if item.folder
-								input(type='checkbox' id='files_check-' + item.id + '_' + name_section)
+							if item.status
+								input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + section disabled)
 							else
-								input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + name_section)
-							label.my_files__check(for='files_check-' + item.id + '_' + name_section)
+								input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + section)
+							label.my_files__check(for='files_check-' + item.id + '_' + section)
 
 						when 'name'
 							-var file_type = ' sprite_icon-type_file'
+							if item.folder || item.history || item.split
+								label(for=opener_name + '_opener--' + item.id + '_' + section)
 							if item.folder
 								-file_type = ' sprite_icon-type_folder'
-								label(for='folder_opener--' + item.id + '_' + name_section)
-							if item.history
-								label(for='history_opener--' + item.id + '_' + name_section)
+
 							-var type = '.' + item.type
-							if item.type == 'folder'
+							if item.folder || item.split
 								-type = ''
 							span(class=file_type)=item.name + type
 
 						when 'size'
 							=item.size
+
 						when 'manage'
 							include manage
-
+		
+		-var next_stek
 		if item.folder
-			+my_files_table_inner_sub(name_section, name_total, name, item.folder, title_arr, color, lvl)
-
+			-next_stek = item.folder
+			-b_type = 'sub'
 		if item.history
-			+my_files_table_inner_history(name_section, name_total, name, item.history, title_arr, color, lvl)
+			-next_stek = item.history
+			-b_type = 'history'
+		if item.split
+			-next_stek = item.split
+			-b_type = 'split'
+		
+		if item.folder || item.history || item.split
+			+my_files_table_inner(name_total, name, section, title_arr, color, lvl, next_stek, b_type)
 
-mixin my_files_table_inner_sub(name_section, name_total, name, items, title_arr, color, lvl)
-	-lvl = lvl + 1
-	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body' + '_sub')
-		each item, i in items
-			if color == 'color1'
-				-color = 'color2'
-			else
-				-color = 'color1'
-			-var folder_class = ''
-			-var history_class = ''
-			-var spec_class = ''
-			if item.folder
-				-folder_class = ' ' + name + '__items--folder'
-			if item.history
-				-history_class = ' ' + name + '__items--history' + ' ' + name + '__items--history_final'
-			if item.new
-				-spec_class = ' ' + name + '__items--new'
-				
-			li.clearfix(class=class_name([name_total, name, name + '_sub'], '__items') + folder_class + ' ' + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + history_class + spec_class)
 
-				if item.folder
-					input(class=name + '__item-folder_opener-input' type='checkbox' id='folder_opener--' + item.id + '_' + name_section)
-				
-				if item.history
-					input(class=name + '__item-history_opener-input' type='checkbox' id='history_opener--' + item.id + '_' + name_section)
 
-				div(class=class_name([name_total, name], '__item-l'))
-					each title in title_arr
-						-var check_class = ''
-						if title == 'check'
-							-check_class = ' my_files__checkbox'
-						div(class=class_name([name_total, name, name + '_sub'], '__item') + class_name([name, name + '_sub'], '__item-' + title) + ' ' + name + '__item-' + title + '--lvl' + lvl + check_class)
-							case title
-								when 'check'
-									if item.folder
-										input(type='checkbox' id='files_check-' + item.id + '_' + name_section)
-									if item.status
-										input(type='checkbox' id='files_check-' + item.id + '_' + name_section disabled)
-									else
-										input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + name_section)
-									label.my_files__check(for='files_check-' + item.id + '_' + name_section)
-								when 'name'
-									-var file_type = ' sprite_icon-type_file'
-									if item.folder
-										-file_type = ' sprite_icon-type_folder'
-										label(for='folder_opener--' + item.id + '_' + name_section)
-									if item.history
-										label(for='history_opener--' + item.id + '_' + name_section)
-									-var type = '.' + item.type
-									if item.type == 'folder'
-										-type = ''
-									span(class=file_type)=item.name + type
 
-								when 'size'
-									=item.size
-								when 'manage'
-									include manage
-				if item.folder
-					+my_files_table_inner_sub(name_section, name_total, name, item.folder, title_arr, color, lvl)
-				
-				if item.history
-					+my_files_table_inner_history(name_section, name_total, name, item.history, title_arr, color, lvl)
-
-mixin my_files_table_inner_history(name_section, name_total, name, items, title_arr, color, lvl)
-	ul(class=name_total + '__body' + ' ' + name + '__body' + ' ' + name + '__body_history')
-		each item, i in items
-			-lvl = lvl + 1
-			if color == 'color1'
-				-color = 'color2'
-			else
-				-color = 'color1'
-			-var history_class = ' ' + name + '__items--history'
-			-var spec_class = ''
-			if i == (items.length - 1)
-				-history_class = history_class + history_class + '_last'
-			if item.new
-				-spec_class = ' ' + name + '__items--new'
-				
-			li.clearfix(class=class_name([name_total, name], '__items') + ' ' + name_total + '__items--' + color + history_class + spec_class)
-
-				div(class=class_name([name_total, name], '__item-l'))
-					each title in title_arr
-						-var check_class = ''
-						-var hist_class = ' ' + name + '__item-' + title + '--history'
-						if title == 'check'
-							-check_class = ' my_files__checkbox'
-						if title == 'name'
-							if name_section == 'working'
-								-hist_class = hist_class + ' sprite_icon-arrow_history--gray'
-							else
-								-hist_class = hist_class + ' sprite_icon-arrow_history--white'
-						div(class=class_name([name_total, name], '__item') + class_name([name], '__item-' + title) + check_class + hist_class + ' ' + name + '__item-' + title + '--lvl' + lvl)
-							case title
-								when 'check'
-									if item.status
-										input(type='checkbox' id='files_check-' + item.id + '_' + name_section disabled)
-									else
-										input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + name_section)
-									label.my_files__check(for='files_check-' + item.id + '_' + name_section)
-								when 'name'
-									-var file_type = ' sprite_icon-type_file'
-									-var type = '.' + item.type
-									span(class=file_type)=item.name + type
-
-								when 'size'
-									=item.size
-								when 'manage'
-									include manage
 
 div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualClass + '-docs--' + name_section)
 	-var vars = []
@@ -203,7 +118,10 @@ div(class=actualClass + '-table' + ' ' + actualClass + '-docs' + ' ' + actualCla
 		default
 			-vars = table_loaded1
 			
-	+my_files_table(name_section, actualClass + '-table', actualClass + '-docs', {
+	+my_files_table(
+		actualClass + '-table',
+		actualClass + '-docs',
+		name_section, {
 		header: [{
 			id: 'name',
 			name: 'Название'

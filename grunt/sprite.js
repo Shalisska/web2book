@@ -1,5 +1,5 @@
 function file_manage_sprite_tabl(name_real) {
-	var name = '.my_files-docs__item-l:hover .my_files-docs__item-manage .sprite_icon-' + name_real;
+	var name = '.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-' + name_real;
 	return name;
 };
 
