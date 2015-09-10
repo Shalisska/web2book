@@ -12517,18 +12517,23 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   width: 100%;
   text-align: center;
 }
-.my_files-docs_sub__items {
+.my_files-docs_sub__items,
+.my_files-docs_split__items {
   font-size: 1em;
   border: none;
 }
 .my_files-docs_sub__items:first-child,
-.my_files-docs_sub__items:last-child {
+.my_files-docs_split__items:first-child,
+.my_files-docs_sub__items:last-child,
+.my_files-docs_split__items:last-child {
   border: none;
 }
-.my_files-docs_sub__items:not(.my_files-docs__items--history):last-child {
+.my_files-docs_sub__items:not(.my_files-docs__items--history):last-child,
+.my_files-docs_split__items:not(.my_files-docs__items--history):last-child {
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
-.my_files-docs_sub__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child {
+.my_files-docs_sub__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child,
+.my_files-docs_split__items .my_files-docs__items--new:not(.my_files-docs__items--history):last-child {
   box-shadow: inset 0 0 0 1px #57bff5, inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2);
 }
 .my_files-docs--loaded {

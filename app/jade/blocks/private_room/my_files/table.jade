@@ -21,12 +21,9 @@ mixin my_files_table_inner(name_section, name_total, name, items, title_arr)
 				-color = 'color1'
 			+li_build(name_section, name_total, name, item, i, title_arr, color, lvl)
 			if item.split
-				each elem, j in item.split
-					if color == 'color1'
-						-color = 'color2'
-					else
-						-color = 'color1'
-					+li_build(name_section, name_total, name, elem, j, title_arr, color, lvl)
+				ul(class=class_name([name_total, name], '__body') + ' ' + name + '__body_split')
+					each elem, j in item.split
+						+li_build(name_section, name_total, name, elem, j, title_arr, color, lvl)
 
 mixin li_build(name_section, name_total, name, item, i, title_arr, color, lvl)
 	-var folder_class = ''
