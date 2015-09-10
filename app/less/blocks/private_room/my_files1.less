@@ -639,6 +639,11 @@
 				font-size: 18px;
 			}
 			
+			
+			&--lvl0 {
+				&:before, &>.my_files-docs__item-wrap>.my_files-docs__item-name:before {display: none;}
+			}
+			
 			&--new {
 				background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
 				box-shadow: inset 0 0 0 1px #57bff5;
@@ -723,12 +728,6 @@
 		}
 		
 		&__body {
-			&--lvl0 {
-				&>.my_files-docs {
-					&__items:before, &__items>.my_files-docs__item-wrap>.my_files-docs__item-name:before {display: none;}
-				}
-			}
-			
 			&--sub, &--history, &--split {
 				.my_files-docs {
 					&__items {
@@ -747,16 +746,6 @@
 			}
 			
 			&--history {
-				&:before {
-					content: '';
-					position: absolute;
-					@w: 0.84em;
-					width: @w;
-					height: @w;
-					top: -(@w / 2);
-					background-image: linear-gradient(135deg, #484849 50%, transparent 50%);
-					transform: rotate(45deg);
-				}
 				
 				.my_files-docs {
 					&__items {
@@ -780,6 +769,17 @@
 						}
 						
 						&:before {display: none;}
+						
+						&:first-child:after {
+							content: '';
+							position: absolute;
+							@w: 0.84em;
+							width: @w;
+							height: @w;
+							top: -(@w / 2);
+							background-image: linear-gradient(135deg, #484849 50%, transparent 50%);
+							transform: rotate(45deg);
+						}
 					}
 					
 					&__item-name:before {position: absolute;}
@@ -791,11 +791,11 @@
 		
 		&--working {
 			.my_files-docs__body--history {
-				&:before {background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);}
-				
 				.my_files-docs__items {
 					background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
 					color: inherit;
+					
+					&:first-child:after {background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);}
 				}
 			}
 		}
@@ -876,22 +876,20 @@
 	@name_before: -17px;
 	@label: 2px;
 	
-	&--lvl@{i} {
-		&.my_files-docs__body--history {
-			&:before {left: @history + @step * @i;}
-			.my_files-docs__item-name:before {left: @history_arrow + @step * @i;}
-		}
-		
-		.my_files-docs {
-			&__items:before {left: @items + @step * @i;}
-			
-			&__item {
-				&-name {
-					padding-left: @name + @step * @i;
-					&:before {left: @name_before + @step * @i;}
-					label[for^='folder_opener'] {left: @label + @step * @i;}
-				}
+	.my_files-docs {
+		&__items--lvl@{i} {
+			&:before {left: @items + @step * @i;}
+			&:after {left: @history + @step * @i;}
+
+			.my_files-docs__item-name {
+				padding-left: @name + @step * @i;
+				&:before {left: @name_before + @step * @i;}
+				label[for^='folder_opener'] {left: @label + @step * @i;}
 			}
+		}
+
+		&__body--history {
+			.my_files-docs__items--lvl@{i} .my_files-docs__item-name:before {left: @history_arrow + @step * @i;}
 		}
 	}
 	

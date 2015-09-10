@@ -12221,6 +12221,10 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   left: 2px;
   font-size: 18px;
 }
+.my_files-docs__items--lvl0:before,
+.my_files-docs__items--lvl0 > .my_files-docs__item-wrap > .my_files-docs__item-name:before {
+  display: none;
+}
 .my_files-docs__items--new {
   background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
   box-shadow: inset 0 0 0 1px #57bff5;
@@ -12290,10 +12294,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   width: 100%;
   text-align: center;
 }
-.my_files-docs__body--lvl0 > .my_files-docs__items:before,
-.my_files-docs__body--lvl0 > .my_files-docs__items > .my_files-docs__item-wrap > .my_files-docs__item-name:before {
-  display: none;
-}
 .my_files-docs__body--sub .my_files-docs__items,
 .my_files-docs__body--history .my_files-docs__items,
 .my_files-docs__body--split .my_files-docs__items {
@@ -12310,16 +12310,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__body--split .my_files-docs__items .my_files-docs__items--new:last-child {
   background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
   box-shadow: inset 0 -1em 0.6em -0.6em rgba(0, 0, 0, 0.2), inset 0 0 0 1px #57bff5;
-}
-.my_files-docs__body--history:before {
-  content: '';
-  position: absolute;
-  width: 0.84em;
-  height: 0.84em;
-  top: -0.42em;
-  background-image: linear-gradient(135deg, #484849 50%, transparent 50%);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
 }
 .my_files-docs__body--history .my_files-docs__items {
   background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
@@ -12338,213 +12328,223 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__body--history .my_files-docs__items:before {
   display: none;
 }
+.my_files-docs__body--history .my_files-docs__items:first-child:after {
+  content: '';
+  position: absolute;
+  width: 0.84em;
+  height: 0.84em;
+  top: -0.42em;
+  background-image: linear-gradient(135deg, #484849 50%, transparent 50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 .my_files-docs__body--history .my_files-docs__item-name:before {
   position: absolute;
 }
-.my_files-docs__body--lvl1.my_files-docs__body--history:before {
-  left: 90px;
-}
-.my_files-docs__body--lvl1.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 32px;
-}
-.my_files-docs__body--lvl1 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl1:before {
   left: 36px;
 }
-.my_files-docs__body--lvl1 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl1:after {
+  left: 90px;
+}
+.my_files-docs__body .my_files-docs__items--lvl1 .my_files-docs__item-name {
   padding-left: 52px;
 }
-.my_files-docs__body--lvl1 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl1 .my_files-docs__item-name:before {
   left: 8px;
 }
-.my_files-docs__body--lvl1 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl1 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 27px;
 }
-.my_files-docs__body--lvl2.my_files-docs__body--history:before {
-  left: 115px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl1 .my_files-docs__item-name:before {
+  left: 32px;
 }
-.my_files-docs__body--lvl2.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 57px;
-}
-.my_files-docs__body--lvl2 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl2:before {
   left: 61px;
 }
-.my_files-docs__body--lvl2 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl2:after {
+  left: 115px;
+}
+.my_files-docs__body .my_files-docs__items--lvl2 .my_files-docs__item-name {
   padding-left: 77px;
 }
-.my_files-docs__body--lvl2 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl2 .my_files-docs__item-name:before {
   left: 33px;
 }
-.my_files-docs__body--lvl2 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl2 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 52px;
 }
-.my_files-docs__body--lvl3.my_files-docs__body--history:before {
-  left: 140px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl2 .my_files-docs__item-name:before {
+  left: 57px;
 }
-.my_files-docs__body--lvl3.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 82px;
-}
-.my_files-docs__body--lvl3 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl3:before {
   left: 86px;
 }
-.my_files-docs__body--lvl3 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl3:after {
+  left: 140px;
+}
+.my_files-docs__body .my_files-docs__items--lvl3 .my_files-docs__item-name {
   padding-left: 102px;
 }
-.my_files-docs__body--lvl3 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl3 .my_files-docs__item-name:before {
   left: 58px;
 }
-.my_files-docs__body--lvl3 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl3 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 77px;
 }
-.my_files-docs__body--lvl4.my_files-docs__body--history:before {
-  left: 165px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl3 .my_files-docs__item-name:before {
+  left: 82px;
 }
-.my_files-docs__body--lvl4.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 107px;
-}
-.my_files-docs__body--lvl4 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl4:before {
   left: 111px;
 }
-.my_files-docs__body--lvl4 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl4:after {
+  left: 165px;
+}
+.my_files-docs__body .my_files-docs__items--lvl4 .my_files-docs__item-name {
   padding-left: 127px;
 }
-.my_files-docs__body--lvl4 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl4 .my_files-docs__item-name:before {
   left: 83px;
 }
-.my_files-docs__body--lvl4 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl4 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 102px;
 }
-.my_files-docs__body--lvl5.my_files-docs__body--history:before {
-  left: 190px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl4 .my_files-docs__item-name:before {
+  left: 107px;
 }
-.my_files-docs__body--lvl5.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 132px;
-}
-.my_files-docs__body--lvl5 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl5:before {
   left: 136px;
 }
-.my_files-docs__body--lvl5 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl5:after {
+  left: 190px;
+}
+.my_files-docs__body .my_files-docs__items--lvl5 .my_files-docs__item-name {
   padding-left: 152px;
 }
-.my_files-docs__body--lvl5 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl5 .my_files-docs__item-name:before {
   left: 108px;
 }
-.my_files-docs__body--lvl5 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl5 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 127px;
 }
-.my_files-docs__body--lvl6.my_files-docs__body--history:before {
-  left: 215px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl5 .my_files-docs__item-name:before {
+  left: 132px;
 }
-.my_files-docs__body--lvl6.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 157px;
-}
-.my_files-docs__body--lvl6 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl6:before {
   left: 161px;
 }
-.my_files-docs__body--lvl6 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl6:after {
+  left: 215px;
+}
+.my_files-docs__body .my_files-docs__items--lvl6 .my_files-docs__item-name {
   padding-left: 177px;
 }
-.my_files-docs__body--lvl6 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl6 .my_files-docs__item-name:before {
   left: 133px;
 }
-.my_files-docs__body--lvl6 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl6 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 152px;
 }
-.my_files-docs__body--lvl7.my_files-docs__body--history:before {
-  left: 240px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl6 .my_files-docs__item-name:before {
+  left: 157px;
 }
-.my_files-docs__body--lvl7.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 182px;
-}
-.my_files-docs__body--lvl7 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl7:before {
   left: 186px;
 }
-.my_files-docs__body--lvl7 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl7:after {
+  left: 240px;
+}
+.my_files-docs__body .my_files-docs__items--lvl7 .my_files-docs__item-name {
   padding-left: 202px;
 }
-.my_files-docs__body--lvl7 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl7 .my_files-docs__item-name:before {
   left: 158px;
 }
-.my_files-docs__body--lvl7 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl7 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 177px;
 }
-.my_files-docs__body--lvl8.my_files-docs__body--history:before {
-  left: 265px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl7 .my_files-docs__item-name:before {
+  left: 182px;
 }
-.my_files-docs__body--lvl8.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 207px;
-}
-.my_files-docs__body--lvl8 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl8:before {
   left: 211px;
 }
-.my_files-docs__body--lvl8 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl8:after {
+  left: 265px;
+}
+.my_files-docs__body .my_files-docs__items--lvl8 .my_files-docs__item-name {
   padding-left: 227px;
 }
-.my_files-docs__body--lvl8 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl8 .my_files-docs__item-name:before {
   left: 183px;
 }
-.my_files-docs__body--lvl8 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl8 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 202px;
 }
-.my_files-docs__body--lvl9.my_files-docs__body--history:before {
-  left: 290px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl8 .my_files-docs__item-name:before {
+  left: 207px;
 }
-.my_files-docs__body--lvl9.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 232px;
-}
-.my_files-docs__body--lvl9 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl9:before {
   left: 236px;
 }
-.my_files-docs__body--lvl9 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl9:after {
+  left: 290px;
+}
+.my_files-docs__body .my_files-docs__items--lvl9 .my_files-docs__item-name {
   padding-left: 252px;
 }
-.my_files-docs__body--lvl9 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl9 .my_files-docs__item-name:before {
   left: 208px;
 }
-.my_files-docs__body--lvl9 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl9 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 227px;
 }
-.my_files-docs__body--lvl10.my_files-docs__body--history:before {
-  left: 315px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl9 .my_files-docs__item-name:before {
+  left: 232px;
 }
-.my_files-docs__body--lvl10.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 257px;
-}
-.my_files-docs__body--lvl10 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl10:before {
   left: 261px;
 }
-.my_files-docs__body--lvl10 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl10:after {
+  left: 315px;
+}
+.my_files-docs__body .my_files-docs__items--lvl10 .my_files-docs__item-name {
   padding-left: 277px;
 }
-.my_files-docs__body--lvl10 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl10 .my_files-docs__item-name:before {
   left: 233px;
 }
-.my_files-docs__body--lvl10 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl10 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 252px;
 }
-.my_files-docs__body--lvl11.my_files-docs__body--history:before {
-  left: 340px;
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl10 .my_files-docs__item-name:before {
+  left: 257px;
 }
-.my_files-docs__body--lvl11.my_files-docs__body--history .my_files-docs__item-name:before {
-  left: 282px;
-}
-.my_files-docs__body--lvl11 .my_files-docs__items:before {
+.my_files-docs__body .my_files-docs__items--lvl11:before {
   left: 286px;
 }
-.my_files-docs__body--lvl11 .my_files-docs__item-name {
+.my_files-docs__body .my_files-docs__items--lvl11:after {
+  left: 340px;
+}
+.my_files-docs__body .my_files-docs__items--lvl11 .my_files-docs__item-name {
   padding-left: 302px;
 }
-.my_files-docs__body--lvl11 .my_files-docs__item-name:before {
+.my_files-docs__body .my_files-docs__items--lvl11 .my_files-docs__item-name:before {
   left: 258px;
 }
-.my_files-docs__body--lvl11 .my_files-docs__item-name label[for^='folder_opener'] {
+.my_files-docs__body .my_files-docs__items--lvl11 .my_files-docs__item-name label[for^='folder_opener'] {
   left: 277px;
 }
-.my_files-docs--working .my_files-docs__body--history:before {
-  background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
+.my_files-docs__body .my_files-docs__body--history .my_files-docs__items--lvl11 .my_files-docs__item-name:before {
+  left: 282px;
 }
 .my_files-docs--working .my_files-docs__body--history .my_files-docs__items {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   color: inherit;
+}
+.my_files-docs--working .my_files-docs__body--history .my_files-docs__items:first-child:after {
+  background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
 }
 .my_files__manage {
   display: inline-block;

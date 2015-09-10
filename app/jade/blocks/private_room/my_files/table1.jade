@@ -15,25 +15,29 @@ mixin my_files_table(name_total, name, section, data)
 	+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
 
 mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, items, b_type)
-	-lvl = lvl + 1
+	if b_type != 'split'
+		-lvl = lvl + 1
 	-var body_type
 	if b_type
 		-body_type = name + '__body--' + b_type
 	else
 		-body_type = ''
-	ul(class=class_name([name_total, name], '__body') + body_type + ' ' + name + '__body--lvl' + lvl)
+		
+	ul(class=class_name([name_total, name], '__body') + body_type)
 		each item, i in items
 			if color == 'color1'
 				-color = 'color2'
 			else
 				-color = 'color1'
 			+li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i)
+			if b_type == 'history'
+				-lvl = lvl + 1
 
 mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i)
 	-var spec_class = ''
 	if item.new
 		-spec_class = ' ' + name + '__items--new'
-	li.clearfix(class=class_name([name_total, name], '__items') + name_total + '__items--' + color + spec_class)
+	li(class=class_name([name_total, name], '__items') + name_total + '__items--' + color + ' ' + name + '__items--lvl' + lvl + spec_class)
 	
 		-var opener_name = 'folder'
 		if item.history
@@ -42,7 +46,7 @@ mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i
 		if item.folder || item.history || item.split
 			input(class=name + '__' + opener_name + '_opener-input' type='checkbox' id=opener_name + '_opener--' + item.id + '_' + section)
 		
-		div(class=class_name([name_total, name], '__item-wrap'))
+		div.clearfix(class=class_name([name_total, name], '__item-wrap'))
 			each title in title_arr
 				-var item_class = ''
 				if title == 'check'
