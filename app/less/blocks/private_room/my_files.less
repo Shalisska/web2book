@@ -563,7 +563,7 @@
 			&--history,
 			&--split {
 				position: relative;
-				//display: none;
+				display: none;
 			}
 		}
 		
@@ -686,6 +686,7 @@
 				label[for^='split_opener'] {
 					position: absolute;
 					z-index: 5;
+					cursor: pointer;
 				}
 				
 				label[for^='folder_opener'] {
@@ -793,6 +794,18 @@
 					&:not(:last-child) li {
 						box-shadow: none;
 					}
+					
+					&:first-child:after {
+						content: '';
+						position: absolute;
+						@w: 0.84em;
+						width: @w;
+						height: @w;
+						top: -(@w / 2 - 0.05em);
+						left: 90px;
+						background-image: linear-gradient(135deg, #47A7EB 50%, transparent 50%);
+						transform: rotate(45deg);
+					}
 				}
 
 				.my_files-docs {
@@ -830,6 +843,7 @@
 			.my_files-docs__item-manage label {
 				color: #006cb3;
 				text-decoration: underline;
+				cursor: pointer;
 			}
 			
 			span.my_files__manage {

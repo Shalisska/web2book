@@ -62,7 +62,7 @@ mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i
 				
 					case title
 						when 'check'
-							if item.status
+							if item.status && section != 'approved'
 								input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + section disabled)
 							else
 								input(type='checkbox' name='files_check' id='files_check-' + item.id + '_' + section)
@@ -73,6 +73,8 @@ mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i
 							if section != 'approved'
 								if item.folder || item.history || item.split
 									label(for=opener_name + '_opener--' + item.id + '_' + section)
+							else if item.folder
+								label(for=opener_name + '_opener--' + item.id + '_' + section)
 							if item.folder
 								-file_type = ' sprite_icon-type_folder'
 

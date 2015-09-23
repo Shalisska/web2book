@@ -12137,6 +12137,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__body--history,
 .my_files-docs__body--split {
   position: relative;
+  display: none;
 }
 .my_files-docs__header,
 .my_files-docs__item-wrap {
@@ -12259,6 +12260,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__item-name label[for^='split_opener'] {
   position: absolute;
   z-index: 5;
+  cursor: pointer;
 }
 .my_files-docs__item-name label[for^='folder_opener'] {
   top: 50%;
@@ -12345,6 +12347,17 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__body--split > .my_files-docs__items:not(:last-child) li {
   box-shadow: none;
+}
+.my_files-docs__body--split > .my_files-docs__items:first-child:after {
+  content: '';
+  position: absolute;
+  width: 0.84em;
+  height: 0.84em;
+  top: -0.37em;
+  left: 90px;
+  background-image: linear-gradient(135deg, #47a7eb 50%, transparent 50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .my_files-docs__body--split .my_files-docs__items {
   background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
@@ -12565,6 +12578,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs--approved .my_files-docs__item-manage label {
   color: #006cb3;
   text-decoration: underline;
+  cursor: pointer;
 }
 .my_files-docs--approved span.my_files__manage--approved {
   width: 65%;
