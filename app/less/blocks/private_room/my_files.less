@@ -556,6 +556,7 @@
 	}
 	
 	&-docs {
+		display: none;
 		margin-bottom: 4.1em;
 		
 		&__body {
@@ -824,7 +825,6 @@
 					}
 				}
 			}
-			
 			.my_files-docs_left(11);
 		}
 		
@@ -877,6 +877,10 @@
 	}
 }
 
+.private_room--my_files #my_files__check-all,
+.private_room--my_files #my_files__expand--on,
+.private_room--my_files #my_files__expand--off {display: none;}
+
 .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
 .my_files__checkbox>input[type="checkbox"]:checked ~ label:after {display: block;}
 
@@ -913,12 +917,16 @@
 		approved;
 	@item: extract(@items, @i);
 	
+	&-menu__inputs {display: none;}
+	
 	input#my_files-@{item}:checked~&-header label[for='my_files-@{item}'] {
 		color: white;
 		background: linear-gradient(to top, #57bff5 35%, #46a6eb);
 		border: 1px solid #57bff5;
 		border-bottom: none;
 	}
+	
+	input#my_files-@{item}:checked~&-docs--@{item} {display: block;}
 	
 	.my_files_menu(@n, (@i + 1));
 }

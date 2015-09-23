@@ -11909,11 +11909,20 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   margin-top: -12px;
   left: 0.5em;
 }
+.my_files-menu__inputs {
+  display: none;
+}
 input#my_files-loaded:checked ~ .my_files-header label[for='my_files-loaded'] {
   color: white;
   background: linear-gradient(to top, #57bff5 35%, #46a6eb);
   border: 1px solid #57bff5;
   border-bottom: none;
+}
+input#my_files-loaded:checked ~ .my_files-docs--loaded {
+  display: block;
+}
+.my_files-menu__inputs {
+  display: none;
 }
 input#my_files-working:checked ~ .my_files-header label[for='my_files-working'] {
   color: white;
@@ -11921,11 +11930,23 @@ input#my_files-working:checked ~ .my_files-header label[for='my_files-working'] 
   border: 1px solid #57bff5;
   border-bottom: none;
 }
+input#my_files-working:checked ~ .my_files-docs--working {
+  display: block;
+}
+.my_files-menu__inputs {
+  display: none;
+}
 input#my_files-processing:checked ~ .my_files-header label[for='my_files-processing'] {
   color: white;
   background: linear-gradient(to top, #57bff5 35%, #46a6eb);
   border: 1px solid #57bff5;
   border-bottom: none;
+}
+input#my_files-processing:checked ~ .my_files-docs--processing {
+  display: block;
+}
+.my_files-menu__inputs {
+  display: none;
 }
 input#my_files-split:checked ~ .my_files-header label[for='my_files-split'] {
   color: white;
@@ -11933,11 +11954,20 @@ input#my_files-split:checked ~ .my_files-header label[for='my_files-split'] {
   border: 1px solid #57bff5;
   border-bottom: none;
 }
+input#my_files-split:checked ~ .my_files-docs--split {
+  display: block;
+}
+.my_files-menu__inputs {
+  display: none;
+}
 input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'] {
   color: white;
   background: linear-gradient(to top, #57bff5 35%, #46a6eb);
   border: 1px solid #57bff5;
   border-bottom: none;
+}
+input#my_files-approved:checked ~ .my_files-docs--approved {
+  display: block;
 }
 .my_files-menu {
   list-style: none;
@@ -12131,6 +12161,7 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
   margin-left: -14px;
 }
 .my_files-docs {
+  display: none;
   margin-bottom: 4.1em;
 }
 .my_files-docs__body--sub,
@@ -12600,6 +12631,11 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files__manage--recieved {
   width: 4.5em;
   line-height: 1.4;
+}
+.private_room--my_files #my_files__check-all,
+.private_room--my_files #my_files__expand--on,
+.private_room--my_files #my_files__expand--off {
+  display: none;
 }
 .private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
 .my_files__checkbox > input[type="checkbox"]:checked ~ label:after {
