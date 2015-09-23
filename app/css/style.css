@@ -12146,9 +12146,6 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__header {
   height: 3.8em;
 }
-.my_files-docs__item-wrap {
-  height: 3em;
-}
 .my_files-docs__header-item,
 .my_files-docs__item {
   position: absolute;
@@ -12227,7 +12224,8 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 .my_files-docs__items--lvl0 > .my_files-docs__item-wrap > .my_files-docs__item-name:before {
   display: none;
 }
-.my_files-docs__items--new {
+.my_files-docs__items--new,
+.my_files-docs__items .my_files-docs__body--split > li {
   background-image: linear-gradient(to top, #57bff5 35%, #46a6eb 100%);
   box-shadow: inset 0 0 0 1px #57bff5;
 }
@@ -12344,6 +12342,20 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs__body--history .my_files-docs__item-name:before {
   position: absolute;
+}
+.my_files-docs__body--split > .my_files-docs__items:not(:last-child) li {
+  box-shadow: none;
+}
+.my_files-docs__body--split .my_files-docs__items {
+  background-image: linear-gradient(rgba(0, 5, 15, 0.65), rgba(0, 5, 15, 0.65));
+  color: white;
+}
+.my_files-docs__body--split .my_files-docs__items:before {
+  border-color: white;
+}
+.my_files-docs__body--split .my_files-docs__item-name:before,
+.my_files-docs__body--split .my_files-docs__item-name label {
+  border-color: white !important;
 }
 .my_files-docs__body .my_files-docs__items--lvl1:before {
   left: 36px;
@@ -12549,6 +12561,17 @@ input#my_files-approved:checked ~ .my_files-header label[for='my_files-approved'
 }
 .my_files-docs--working .my_files-docs__body--history .my_files-docs__items:first-child:after {
   background-image: linear-gradient(135deg, #bfbfbf 50%, transparent 50%);
+}
+.my_files-docs--approved .my_files-docs__item-manage label {
+  color: #006cb3;
+  text-decoration: underline;
+}
+.my_files-docs--approved span.my_files__manage--approved {
+  width: 65%;
+}
+.my_files-docs--approved span.my_files__manage--recieved {
+  width: 100%;
+  text-align: center;
 }
 .my_files__manage {
   display: inline-block;
