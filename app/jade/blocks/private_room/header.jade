@@ -24,7 +24,8 @@ mixin private_room_menu(name)
 
 
 header(class = pageClass + '-header')
-	div(class = pageClass + '-header-items')
-		img(src=filesPath + '../images/private_room/common/header-disk.png')
+	div.clearfix(class = pageClass + '-header-features')
+		//-img(src=filesPath + '../images/private_room/common/header-disk.png')
+		include header_features
 	nav(class = pageClass + '-header__menu')
 		+private_room_menu(pageClass + '-header__menu')

@@ -6,8 +6,12 @@ mixin form_switcher(pageName, items)
 	-var classes = []
 	each item in items
 		+form_classes(classes, pageName, 'inputs', item.id)
-		input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-off' val=item.obj.off.val)
-		input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-on' val=item.obj.on.val checked)
+		if item.id == 'tarif'
+			input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-off' val=item.obj.off.val checked)
+			input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-on' val=item.obj.on.val)
+		else
+			input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-off' val=item.obj.off.val)
+			input.form__switcher-inputs(class=classes type='radio' name=item.id id=item.id + '-on' val=item.obj.on.val checked)
 
 	if (items.length > 1)
 		div(class=items[0].name_main + '__switcher-container')
@@ -17,7 +21,8 @@ mixin form_switcher(pageName, items)
 						-classes = []
 						+form_classes(classes, pageName, 'box', item.id)
 						.form__switcher-box(class=classes)
-							p.form__switcher-name(class = pageName + '-name')=item.obj.name
+							if item.obj.name
+								p.form__switcher-name(class = pageName + '-name')=item.obj.name
 							block switch_labels
 								-classes = []
 								+form_classes(classes, pageName, 'labels', item.id)

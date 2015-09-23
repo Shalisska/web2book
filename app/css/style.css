@@ -11295,10 +11295,233 @@ input#inset_paper-300:checked ~ .calculator__ruler-labels label[for='inset_paper
   border-top: none;
   border-radius: 0 0 7px 7px;
 }
+.private_room__switcher {
+  position: relative;
+}
+.private_room__switcher-box {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 36px;
+  margin-right: 4.6em;
+}
+.private_room__switcher-labels {
+  margin-left: 0;
+}
+.private_room__switcher__tarif {
+  color: #ccc;
+}
+.private_room__switcher__tarif--on {
+  margin-left: 70px;
+}
+input[id='tarif-off']:checked ~ .private_room__switcher-box label[for='tarif-off'] {
+  opacity: 1;
+}
+input[id='tarif-on']:checked ~ .private_room__switcher-box label[for='tarif-on'] {
+  opacity: 1;
+}
+input[id='tarif-on']:checked ~ .private_room__switcher-box--tarif .private_room__switcher-labels {
+  background: linear-gradient(#86d5fa, #7abfed 99%);
+  box-shadow: inset 0 2px 1px -1px rgba(0, 0, 0, 0.85), inset -1px -2px 0px -1px #ffffff, inset 1px -2px 0px -1px #ffffff, inset 0 0px 5px 0 rgba(0, 0, 0, 0.2), inset 0 0px 7px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), inset 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+input[id='tarif-off']:checked ~ .private_room__switcher__tarif--off,
+input[id='tarif-on']:checked ~ .private_room__switcher__tarif--on {
+  color: #1d7fbd;
+}
+.private_room-tarif {
+  float: right;
+  margin-bottom: 1em;
+}
+.private_room-tarif__info {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 14px;
+  background: linear-gradient(#86d5fa, #46a6eb);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 1px -1px #cceeff, inset 0 -2px 1px -1px #248ad3, inset 0 0 1px 0px #61bdf2, inset 0 0 2px 1px rgba(153, 255, 255, 0.2), 0 0 1px 0 rgba(42, 82, 103, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #399ee5;
+}
+.private_room-tarif__info:hover,
+.private_room-tarif__info:visited {
+  color: white;
+  text-decoration: none;
+}
+.private_room-tarif__info:hover .private_room-tarif__info-text {
+  display: block;
+}
+.private_room-tarif__info-text {
+  display: none;
+  position: absolute;
+  color: black;
+  font-size: 13px;
+  width: 20em;
+  right: 60%;
+  top: 140%;
+  background-color: #F0F2F5;
+  padding: 1em;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  z-index: 50;
+  text-align: justify;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+.private_room-mems {
+  clear: both;
+  margin-bottom: 10px;
+}
+.private_room-message,
+.private_room-memory {
+  float: left;
+  margin-left: 20px;
+}
+.private_room-message {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-top: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px, auto;
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5);
+  color: white;
+  background-image: url('../images/private_room/message/message@26.png'), linear-gradient(to top, #c2c2c2, #ebebeb);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  .private_room-message {
+    background-image: url('../images/private_room/message/message@39.png'), linear-gradient(to top, #c2c2c2, #ebebeb);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .private_room-message {
+    background-image: url('../images/private_room/message/message@52.png'), linear-gradient(to top, #c2c2c2, #ebebeb);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+  .private_room-message {
+    background-image: url('../images/private_room/message/message@78.png'), linear-gradient(to top, #c2c2c2, #ebebeb);
+  }
+}
+.private_room-message:hover,
+.private_room-message:active {
+  border-color: #616161;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.5), inset 0 0px 3px 0 rgba(0, 0, 0, 0.3);
+  background-image: url('../images/private_room/message/message@26.png'), linear-gradient(to top, #c2c2c2, #acacac);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  .private_room-message:hover,
+  .private_room-message:active {
+    background-image: url('../images/private_room/message/message@39.png'), linear-gradient(to top, #c2c2c2, #acacac);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .private_room-message:hover,
+  .private_room-message:active {
+    background-image: url('../images/private_room/message/message@52.png'), linear-gradient(to top, #c2c2c2, #acacac);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 5/2), only screen and (min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+  .private_room-message:hover,
+  .private_room-message:active {
+    background-image: url('../images/private_room/message/message@78.png'), linear-gradient(to top, #c2c2c2, #acacac);
+  }
+}
+.private_room-message span {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  background: #c53417;
+  font-family: 'ArialRegular', 'Arial', sans-serif;
+  text-align: center;
+  color: inherit;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.private_room-message span:hover,
+.private_room-message span:visited {
+  color: inherit;
+}
+.private_room-memory {
+  width: 19.4em;
+}
+.private_room-memory__title {
+  color: #900;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.private_room-memory__top,
+.private_room-memory__bottom {
+  padding: 0.4em;
+  border: 1px solid #cdcece;
+}
+.private_room-memory__top {
+  background: #e1e3e6;
+  border-bottom: none;
+}
+.private_room-memory__bottom {
+  background: #f0f2f5;
+}
+.private_room-memory__granted,
+.private_room-memory__free {
+  float: left;
+  width: 43%;
+}
+.private_room-memory__info,
+.private_room-memory__btn {
+  float: right;
+  width: 57%;
+}
+.private_room-memory__name,
+.private_room-memory__volume {
+  display: inline-block;
+  width: 100%;
+  line-height: 0.9;
+}
+.private_room-memory__name {
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  font-size: 0.78em;
+  color: #444;
+}
+.private_room-memory__volume {
+  margin: 0;
+}
+.private_room-memory__volume span:last-child {
+  font-size: 0.86em;
+}
+.private_room-memory__volume--granted {
+  font-size: 2.8em;
+  color: #900;
+}
+.private_room-memory__volume--free {
+  font-size: 2em;
+  color: #57bff5;
+}
+.private_room-memory__info {
+  margin: 0;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  font-size: 0.78em;
+  color: #666;
+}
+.private_room-memory__btn {
+  margin-top: 0.27em;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+}
 .private_room--profile {
   padding: 2.86em 1.43em 0;
 }
-.private_room-header-items {
+.private_room-header-features {
   float: right;
 }
 .private_room-header__menu {

@@ -139,7 +139,48 @@
             </li>
           </ul>
           <header class="private_room-header">
-            <div class="private_room-header-items"><img src="../../images/private_room/common/header-disk.png"></div>
+            <div class="clearfix private_room-header-features">
+                            <div class="private_room-tarif form__switcher private_room__switcher">
+                              <input type="radio" name="tarif" id="tarif-off" val="standart" checked="checked" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif"/>
+                              <input type="radio" name="tarif" id="tarif-on" val="expert" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif"/>
+                              <div class="form__switcher-box private_room__switcher-box private_room__switcher-box--tarif">
+                                <div class="form__switcher-labels clearfix private_room__switcher-labels private_room__switcher-labels--tarif">
+                                  <label for="tarif-off"></label>
+                                  <label for="tarif-on"></label>
+                                </div>
+                              </div><span class="private_room__switcher__tarif private_room__switcher__tarif--off">Стандарт</span><span class="private_room__switcher__tarif private_room__switcher__tarif--on">Эксперт</span><a href="#" class="private_room-tarif__info">?<span class="private_room-tarif__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa doloremque nostrum, dicta provident dolores explicabo velit iste adipisci, voluptatum a laborum expedita, nisi suscipit est quaerat veniam ex ipsam atque.</span></a>
+                            </div>
+              <div class="private_room-mems clearfix"><a href="#" class="private_room-message"><span>3</span></a>
+                <div class="private_room-memory">
+                  <p class="private_room-memory__title">Общий рабочий объем</p>
+                                <div class="clearfix private_room-memory__top">
+                                  <div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
+                                    <p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p>
+                                  </div>
+                                  <p class="private_room-memory__info">Вам предоставлен объем 2 Gb. Для увеличения пространства, необходимо оформить заказ</p>
+                                </div>
+                                <div class="clearfix private_room-memory__bottom">
+                                  <div class="private_room-memory__free">
+                                    <p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
+                                  </div><a href="#" class="form__btn private_room-memory__btn">Заказать</a>
+                                </div>
+                </div>
+                <div class="private_room-memory">
+                  <p class="private_room-memory__title">Объем архива</p>
+                                <div class="clearfix private_room-memory__top">
+                                  <div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
+                                    <p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p>
+                                  </div>
+                                  <p class="private_room-memory__info">Вам предоставлен объем 20 Gb. Для увеличения пространства, необходимо оформить заказ</p>
+                                </div>
+                                <div class="clearfix private_room-memory__bottom">
+                                  <div class="private_room-memory__free">
+                                    <p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
+                                  </div><a href="#" class="form__btn private_room-memory__btn">В архив</a>
+                                </div>
+                </div>
+              </div>
+            </div>
             <nav class="private_room-header__menu">
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
                           <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>

@@ -12,7 +12,8 @@ mixin my_files_table(name_total, name, section, data)
 	
 	-var color = 'color2'
 	-var lvl = -1
-	+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
+	div(class=name + '__body-wrap')
+		+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
 
 mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, items, b_type)
 	if b_type != 'split'
