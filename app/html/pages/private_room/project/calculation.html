@@ -122,8 +122,8 @@
           <ul class="breadcrumbs clearfix">
             <li class="breadcrumbs__item"><a href="#" class="sprite_icon-home--blue"></a></li>
             <li class="breadcrumbs__item"><a href="#">Личный кабинет<span>⌵</span></a></li>
-            <li class="breadcrumbs__item"><a href="#">Профиль клиента<span>⌵</span></a></li>
-            <li class="breadcrumbs__item"><a href="#">Персональные данные</a></li>
+            <li class="breadcrumbs__item"><a href="#">Создание, редактирование проекта<span>⌵</span></a></li>
+            <li class="breadcrumbs__item"><a href="#">Калькуляция проекта</a></li>
           </ul>
           <header class="private_room-header">
             <div class="clearfix private_room-header-features">
@@ -170,76 +170,18 @@
             </div>
             <nav class="private_room-header__menu">
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Персональные данные</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Реквизиты юр. и физ. лица</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Список проектов</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Калькуляция проекта</a></li>
                         </ul>
             </nav>
           </header>
-          <div class="private_room private_room--personal">
-            <form action="#" method="post" name="personal" class="private_room-profile__form private_room-profile__form--personal">
-              <fieldset class="private_room-profile__form-part private_room-profile__form-part--personal">
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--login">
-                              <label for="private_room-profile_login" class="form__label private_room-profile__label private_room-profile__label--login">Логин:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--login">
-                                <input type="text" id="private_room-profile_login" name="private_room-profile_login" placeholder="IWCcompany">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--email">
-                              <label for="private_room-profile_email" class="form__label private_room-profile__label private_room-profile__label--email">E-mail:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--email">
-                                <input type="email" id="private_room-profile_email" name="private_room-profile_email" placeholder="iwc@gmail.com">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--surname">
-                              <label for="private_room-profile_surname" class="form__label private_room-profile__label private_room-profile__label--surname">Фамилия:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--surname">
-                                <input type="text" id="private_room-profile_surname" name="private_room-profile_surname" placeholder="Хмельнов">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--name">
-                              <label for="private_room-profile_name" class="form__label private_room-profile__label private_room-profile__label--name">Имя:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--name">
-                                <input type="text" id="private_room-profile_name" name="private_room-profile_name" placeholder="Эдуард">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--patronymic">
-                              <label for="private_room-profile_patronymic" class="form__label private_room-profile__label private_room-profile__label--patronymic">Отчество:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--patronymic">
-                                <input type="text" id="private_room-profile_patronymic" name="private_room-profile_patronymic" placeholder="Зигмундович">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--tel">
-                              <label for="private_room-profile_tel" class="form__label private_room-profile__label private_room-profile__label--tel">Телефон:</label>
-                              <div class="form__inputs form__inputs--tel private_room-profile__inputs private_room-profile__inputs--tel">
-                                <input type="hidden" id="private_room-profile_tel" name="private_room-profile_tel"><span>+7 (</span>
-                                <input type="text" id="private_room-profile_tel_1" placeholder="920" pattern="[0-9]{3}"><span>)</span>
-                                <input type="text" id="private_room-profile_tel_2" placeholder="591-34-63" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                              </div>
-                            </div>
-              </fieldset>
-              <fieldset class="private_room-profile__form-part private_room-profile__form-part--personal">
-                <p class="title--h3 private_room-profile__title private_room-profile__title--personal">Изменение пароля</p>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--new_pass">
-                              <label for="private_room-profile_new_pass" class="form__label private_room-profile__label private_room-profile__label--new_pass">Новый пароль:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--new_pass">
-                                <input type="text" id="private_room-profile_new_pass" name="private_room-profile_new_pass">
-                              </div>
-                            </div>
-                            <div class="form__field clearfix private_room-profile__field private_room-profile__field--repeat_pass">
-                              <label for="private_room-profile_repeat_pass" class="form__label private_room-profile__label private_room-profile__label--repeat_pass">Повторите:</label>
-                              <div class="form__inputs private_room-profile__inputs private_room-profile__inputs--repeat_pass">
-                                <input type="text" id="private_room-profile_repeat_pass" name="private_room-profile_repeat_pass" required>
-                              </div>
-                            </div>
-              </fieldset>
-              <button type="submit" class="form__btn private_room-profile__btn">Сохранить изменения</button>
-            </form>
-            <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-personal">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-personal">Далее</a></div>
+          <div class="private_room private_room--calculation">
+            <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-calculation">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-calculation">Далее</a></div>
           </div>
         </div>
       </main>

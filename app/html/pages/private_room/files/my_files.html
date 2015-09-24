@@ -170,12 +170,12 @@
             </div>
             <nav class="private_room-header__menu">
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Мои файлы</a></li>
+                          <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Мои файлы</a></li>
                         </ul>
             </nav>
           </header>
@@ -185,9 +185,6 @@
                                                 <input id="my_files-processing" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
                                                 <input id="my_files-split" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
                                                 <input id="my_files-approved" type="radio" name="my_files-menu__inputs" class="my_files-menu__inputs">
-                                    <input id="my_files__check-all" type="checkbox">
-                                    <input id="my_files__expand--on" type="radio" name="my_files__expand" checked>
-                                    <input id="my_files__expand--off" type="radio" name="my_files__expand">
                                     <header class="my_files-header">
                                       <p class="title--h3 my_files-upload__title">Загрузка</p>
                                       <div class="my_files-table my_files-upload">
@@ -305,36 +302,39 @@
                                                       <label for="my_files-approved" class="my_files-menu__name my_files-menu__name--approved">Утвержденные</label>
                                                     </li>
                                                   </ul>
-                                      <div class="clearfix my_files-refresh">
-                                        <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
-                                      </div>
-                                      <div class="clearfix my_files-actions">
-                                        <div class="clearfix my_files-actions__checking">
-                                          <label for="my_files__check-all" class="my_files-actions__check-all my_files__check">Выделить все</label>
-                                          <label for="my_files__expand--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
-                                          <label for="my_files__expand--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
-                                        </div>
-                                        <div class="clearfix my_files-actions__manage">
-                                          <ul class="clearfix my_files-actions__menu">
-                                                        <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
-                                                        </li>
-                                                        <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
-                                                        </li>
-                                                        <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
-                                                        </li>
-                                                        <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
-                                                        </li>
-                                          </ul>
-                                          <div class="my_files-actions__search">
-                                            <div class="my_files-actions__search-input">
-                                              <input placeholder="Поиск">
-                                              <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
                                     </header>
                         <div class="my_files-table my_files-docs my_files-docs--loaded">
+                          <input id="my_files__check-all_loaded" type="checkbox" class="my_files__check-all_inputs">
+                          <input id="my_files__expand_loaded--on" type="radio" name="my_files__expand_loaded" class="my_files__expand">
+                          <input id="my_files__expand_loaded--off" type="radio" name="my_files__expand_loaded" class="my_files__expand">
+                          <div class="clearfix my_files-refresh">
+                            <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
+                          </div>
+                          <div class="clearfix my_files-actions">
+                            <div class="clearfix my_files-actions__checking">
+                              <label for="my_files__check-all_loaded" class="my_files-actions__check-all my_files__check">Выделить все</label>
+                              <label for="my_files__expand_loaded--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
+                              <label for="my_files__expand_loaded--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
+                            </div>
+                            <div class="clearfix my_files-actions__manage">
+                              <ul class="clearfix my_files-actions__menu">
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
+                                            </li>
+                              </ul>
+                              <div class="my_files-actions__search">
+                                <div class="my_files-actions__search-input">
+                                  <input placeholder="Поиск">
+                                  <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                                       <div class="clearfix my_files-table__header my_files-docs__header ">
                                         <div class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-name">Название</p>
@@ -347,7 +347,7 @@
                                                                     <input type="checkbox" id="folder_opener--file_list_loaded" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-file_list_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -362,7 +362,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-the_roof.pdf_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof.pdf</span>
@@ -378,7 +378,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-A31-A100.pdf_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">A31-A100.pdf</span>
@@ -392,7 +392,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-WTF.txt_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">WTF.txt</span>
@@ -407,7 +407,7 @@
                                                                     <input type="checkbox" id="folder_opener--for_print_loaded" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-for_print_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -423,7 +423,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--my_books_loaded" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-my_books_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -438,7 +438,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl2">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_loaded">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_loaded" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches.docx_loaded" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches.docx</span>
@@ -453,7 +453,7 @@
                                                                                                                             <input type="checkbox" id="folder_opener--the_roof_is_on_fire_you_fat_beaches_1.pdf_loaded" class="my_files-docs__folder_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_loaded">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_loaded" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_loaded" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -468,7 +468,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_loaded">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_loaded" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_loaded" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last.pdf</span>
@@ -482,7 +482,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-outline_loaded">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-outline_loaded" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-outline_loaded" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Наброски.txt</span>
@@ -496,7 +496,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_loaded">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_loaded" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-12_obezyan.jpeg_loaded" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -513,7 +513,7 @@
                                                                                                                             <input type="checkbox" id="folder_opener--petrovich.png_loaded" class="my_files-docs__folder_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-petrovich.png_loaded">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-petrovich.png_loaded" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-petrovich.png_loaded" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -528,7 +528,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-petrovich.png_loaded">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-petrovich.png_loaded" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-petrovich.png_loaded" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -548,7 +548,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-r2-d2.txt_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">r2-d2.txt</span>
@@ -562,7 +562,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-r2-d2.pdf_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">r2-d2.pdf</span>
@@ -576,7 +576,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-kniga_12.33.txt_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -590,7 +590,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik.pdf_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -605,7 +605,7 @@
                                                                     <input type="checkbox" id="folder_opener--jpeg_pages_loaded" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-jpeg_pages_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-jpeg_pages_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-jpeg_pages_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -620,7 +620,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-zuzu_1294.jpg_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-zuzu_1294.jpg_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-zuzu_1294.jpg_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294.jpg</span>
@@ -634,7 +634,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-provaid_igrus.jpg_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-provaid_igrus.jpg_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-provaid_igrus.jpg_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus.jpg</span>
@@ -651,7 +651,7 @@
                                                                     <input type="checkbox" id="folder_opener--pdf_pages_loaded" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pdf_pages_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pdf_pages_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-pdf_pages_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -666,7 +666,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-zuzu_1294.pdf_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-zuzu_1294.pdf_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-zuzu_1294.pdf_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294.pdf</span>
@@ -680,7 +680,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-provaid_igrus.pdf_loaded">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-provaid_igrus.pdf_loaded" class="my_files__check_inputs">
                                                                                                     <label for="files_check-provaid_igrus.pdf_loaded" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus.pdf</span>
@@ -696,7 +696,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_loaded">
+                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_loaded" class="my_files__check_inputs">
                                                                         <label for="files_check-ochumet.docx_loaded" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Ochumet.docx</span>
@@ -711,6 +711,37 @@
                                       </div>
                         </div>
                         <div class="my_files-table my_files-docs my_files-docs--working">
+                          <input id="my_files__check-all_working" type="checkbox" class="my_files__check-all_inputs">
+                          <input id="my_files__expand_working--on" type="radio" name="my_files__expand_working" class="my_files__expand">
+                          <input id="my_files__expand_working--off" type="radio" name="my_files__expand_working" class="my_files__expand">
+                          <div class="clearfix my_files-refresh">
+                            <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
+                          </div>
+                          <div class="clearfix my_files-actions">
+                            <div class="clearfix my_files-actions__checking">
+                              <label for="my_files__check-all_working" class="my_files-actions__check-all my_files__check">Выделить все</label>
+                              <label for="my_files__expand_working--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
+                              <label for="my_files__expand_working--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
+                            </div>
+                            <div class="clearfix my_files-actions__manage">
+                              <ul class="clearfix my_files-actions__menu">
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
+                                            </li>
+                              </ul>
+                              <div class="my_files-actions__search">
+                                <div class="my_files-actions__search-input">
+                                  <input placeholder="Поиск">
+                                  <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                                       <div class="clearfix my_files-table__header my_files-docs__header ">
                                         <div class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-name">Название</p>
@@ -723,7 +754,7 @@
                                                                     <input type="checkbox" id="folder_opener--file_list_working" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_working" class="my_files__check_inputs">
                                                                         <label for="files_check-file_list_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -738,7 +769,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_working">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_working" class="my_files__check_inputs">
                                                                                                     <label for="files_check-the_roof.pdf_working" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof.pdf</span>
@@ -754,7 +785,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_working" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_working" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-A31-A100.pdf_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">A31-A100.pdf</span>
@@ -768,7 +799,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_working" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_working" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-WTF.txt_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">WTF.txt</span>
@@ -783,7 +814,7 @@
                                                                     <input type="checkbox" id="folder_opener--for_print_working" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_working" class="my_files__check_inputs">
                                                                         <label for="files_check-for_print_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -799,7 +830,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--my_books_working" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_working">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_working" class="my_files__check_inputs">
                                                                                                     <label for="files_check-my_books_working" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -815,7 +846,7 @@
                                                                                                                             <input type="checkbox" id="history_opener--the_roof_is_on_fire_you_fat_beaches.docx_working" class="my_files-docs__history_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_working" disabled>
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_working" disabled class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches.docx_working" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -830,7 +861,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_working" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_working" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_working" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--gray"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_1.pdf</span>
@@ -844,7 +875,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl4">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_working" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_working" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_working" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--gray"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last.pdf</span>
@@ -863,7 +894,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--my_books1_working" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books1_working">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books1_working" class="my_files__check_inputs">
                                                                                                     <label for="files_check-my_books1_working" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -878,7 +909,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches1.pdf_working">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches1.pdf_working" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches1.pdf_working" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches1.pdf</span>
@@ -897,7 +928,7 @@
                                                                     <input type="checkbox" id="folder_opener--outline_working" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-outline_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-outline_working" class="my_files__check_inputs">
                                                                         <label for="files_check-outline_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -913,7 +944,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--smth_else_working" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_working">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_working" class="my_files__check_inputs">
                                                                                                     <label for="files_check-smth_else_working" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -928,7 +959,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_working">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_working" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire.pdf_working" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire.pdf</span>
@@ -946,7 +977,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_working" class="my_files__check_inputs">
                                                                         <label for="files_check-12_obezyan.jpeg_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -960,7 +991,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_working" class="my_files__check_inputs">
                                                                         <label for="files_check-petrovich.png_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -975,7 +1006,7 @@
                                                                     <input type="checkbox" id="history_opener--r2-d2.txt_working" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_working" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_working" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-r2-d2.txt_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -990,7 +1021,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_working" disabled>
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_working" disabled class="my_files__check_inputs">
                                                                                                     <label for="files_check-r2-d2.pdf_working" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--gray"><span class=" sprite_icon-type_file">r2-d2.pdf</span>
@@ -1006,7 +1037,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_working" class="my_files__check_inputs">
                                                                         <label for="files_check-kniga_12.33.txt_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -1020,7 +1051,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_working" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik.pdf_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -1034,7 +1065,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_working">
+                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_working" class="my_files__check_inputs">
                                                                         <label for="files_check-ochumet.docx_working" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Ochumet.docx</span>
@@ -1049,6 +1080,37 @@
                                       </div>
                         </div>
                         <div class="my_files-table my_files-docs my_files-docs--processing">
+                          <input id="my_files__check-all_processing" type="checkbox" class="my_files__check-all_inputs">
+                          <input id="my_files__expand_processing--on" type="radio" name="my_files__expand_processing" class="my_files__expand">
+                          <input id="my_files__expand_processing--off" type="radio" name="my_files__expand_processing" class="my_files__expand">
+                          <div class="clearfix my_files-refresh">
+                            <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
+                          </div>
+                          <div class="clearfix my_files-actions">
+                            <div class="clearfix my_files-actions__checking">
+                              <label for="my_files__check-all_processing" class="my_files-actions__check-all my_files__check">Выделить все</label>
+                              <label for="my_files__expand_processing--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
+                              <label for="my_files__expand_processing--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
+                            </div>
+                            <div class="clearfix my_files-actions__manage">
+                              <ul class="clearfix my_files-actions__menu">
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
+                                            </li>
+                              </ul>
+                              <div class="my_files-actions__search">
+                                <div class="my_files-actions__search-input">
+                                  <input placeholder="Поиск">
+                                  <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                                       <div class="clearfix my_files-table__header my_files-docs__header ">
                                         <div class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-name">Название</p>
@@ -1061,7 +1123,7 @@
                                                                     <input type="checkbox" id="folder_opener--file_list_processing" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-file_list_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-file_list_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1076,7 +1138,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_processing">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-the_roof.pdf_processing" class="my_files__check_inputs">
                                                                                                     <label for="files_check-the_roof.pdf_processing" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof.pdf</span>
@@ -1092,7 +1154,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_processing" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-A31-A100.pdf_processing" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-A31-A100.pdf_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">A31-A100.pdf</span>
@@ -1106,7 +1168,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_processing" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-WTF.txt_processing" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-WTF.txt_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">WTF.txt</span>
@@ -1121,7 +1183,7 @@
                                                                     <input type="checkbox" id="folder_opener--for_print_processing" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-for_print_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1137,7 +1199,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--my_books_processing" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_processing">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_processing" class="my_files__check_inputs">
                                                                                                     <label for="files_check-my_books_processing" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1153,7 +1215,7 @@
                                                                                                                             <input type="checkbox" id="history_opener--the_roof_is_on_fire_you_fat_beaches.docx_processing" class="my_files-docs__history_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_processing" disabled>
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.docx_processing" disabled class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches.docx_processing" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1168,7 +1230,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_processing" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_1.pdf_processing" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_1.pdf</span>
@@ -1182,7 +1244,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl4">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_processing" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_processing" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last.pdf</span>
@@ -1196,7 +1258,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl5">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_1.pdf_processing" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_1.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last_1.pdf_processing" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last_1.pdf</span>
@@ -1210,7 +1272,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl6">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_off.pdf_processing" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_off.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last_off.pdf_processing" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last_off.pdf</span>
@@ -1224,7 +1286,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl7 my_files-docs__items--new">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_end.pdf_processing" disabled>
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last_end.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last_end.pdf_processing" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last_end.pdf</span>
@@ -1245,7 +1307,7 @@
                                                                     <input type="checkbox" id="folder_opener--outline_processing" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-outline_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-outline_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-outline_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1261,7 +1323,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--smth_else_processing" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_processing">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_processing" class="my_files__check_inputs">
                                                                                                     <label for="files_check-smth_else_processing" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1276,7 +1338,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_processing">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_processing" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire.pdf_processing" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire.pdf</span>
@@ -1294,7 +1356,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-12_obezyan.jpeg_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -1308,7 +1370,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0 my_files-docs__items--new">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-petrovich.png_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -1323,7 +1385,7 @@
                                                                     <input type="checkbox" id="history_opener--r2-d2.txt_processing" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_processing" disabled>
+                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.txt_processing" disabled class="my_files__check_inputs">
                                                                         <label for="files_check-r2-d2.txt_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1338,7 +1400,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1 my_files-docs__items--new">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_processing" disabled>
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_processing" disabled class="my_files__check_inputs">
                                                                                                     <label for="files_check-r2-d2.pdf_processing" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">r2-d2.pdf</span>
@@ -1354,7 +1416,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-kniga_12.33.txt_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -1368,7 +1430,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik.pdf_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -1382,7 +1444,7 @@
                                                                   <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl0">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_processing">
+                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_processing" class="my_files__check_inputs">
                                                                         <label for="files_check-ochumet.docx_processing" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Ochumet.docx</span>
@@ -1397,6 +1459,37 @@
                                       </div>
                         </div>
                         <div class="my_files-table my_files-docs my_files-docs--split">
+                          <input id="my_files__check-all_split" type="checkbox" class="my_files__check-all_inputs">
+                          <input id="my_files__expand_split--on" type="radio" name="my_files__expand_split" class="my_files__expand">
+                          <input id="my_files__expand_split--off" type="radio" name="my_files__expand_split" class="my_files__expand">
+                          <div class="clearfix my_files-refresh">
+                            <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
+                          </div>
+                          <div class="clearfix my_files-actions">
+                            <div class="clearfix my_files-actions__checking">
+                              <label for="my_files__check-all_split" class="my_files-actions__check-all my_files__check">Выделить все</label>
+                              <label for="my_files__expand_split--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
+                              <label for="my_files__expand_split--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
+                            </div>
+                            <div class="clearfix my_files-actions__manage">
+                              <ul class="clearfix my_files-actions__menu">
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
+                                            </li>
+                              </ul>
+                              <div class="my_files-actions__search">
+                                <div class="my_files-actions__search-input">
+                                  <input placeholder="Поиск">
+                                  <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                                       <div class="clearfix my_files-table__header my_files-docs__header ">
                                         <div class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-name">Название</p>
@@ -1409,7 +1502,7 @@
                                                                     <input type="checkbox" id="split_opener--pitomnik.pdf_split" class="my_files-docs__split_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_split">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_split" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik.pdf_split" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1425,7 +1518,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--pitomnik.pdf_jpeg_pages_split" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_jpeg_pages_split">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_jpeg_pages_split" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik.pdf_jpeg_pages_split" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1440,7 +1533,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294.jpg_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294.jpg_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-zuzu_1294.jpg_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294.jpg</span>
@@ -1454,7 +1547,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus.jpg_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus.jpg_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-provaid_igrus.jpg_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus.jpg</span>
@@ -1471,7 +1564,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--pitomnik.pdf_pdf_pages_split" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_pdf_pages_split">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_pdf_pages_split" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik.pdf_pdf_pages_split" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1486,7 +1579,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294.pdf_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294.pdf_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-zuzu_1294.pdf_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294.pdf</span>
@@ -1500,7 +1593,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus.pdf_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus.pdf_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-provaid_igrus.pdf_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus.pdf</span>
@@ -1519,7 +1612,7 @@
                                                                     <input type="checkbox" id="split_opener--pitomnik_1.pdf_split" class="my_files-docs__split_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_split">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_split" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik_1.pdf_split" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1535,7 +1628,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--pitomnik_1.pdf_jpeg_pages_split" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_jpeg_pages_split">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_jpeg_pages_split" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik_1.pdf_jpeg_pages_split" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1550,7 +1643,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294_1.jpg_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294_1.jpg_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-zuzu_1294_1.jpg_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294_1.jpg</span>
@@ -1564,7 +1657,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus_1.jpg_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus_1.jpg_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-provaid_igrus_1.jpg_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus_1.jpg</span>
@@ -1581,7 +1674,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--pitomnik_1.pdf_pdf_pages_split" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_pdf_pages_split">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik_1.pdf_pdf_pages_split" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik_1.pdf_pdf_pages_split" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1596,7 +1689,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294_1.pdf_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-zuzu_1294_1.pdf_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-zuzu_1294_1.pdf_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Zuzu_1294_1.pdf</span>
@@ -1610,7 +1703,7 @@
                                                                                                                           <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus_1.pdf_split">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-provaid_igrus_1.pdf_split" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-provaid_igrus_1.pdf_split" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Provaid Igrus_1.pdf</span>
@@ -1629,6 +1722,37 @@
                                       </div>
                         </div>
                         <div class="my_files-table my_files-docs my_files-docs--approved">
+                          <input id="my_files__check-all_approved" type="checkbox" class="my_files__check-all_inputs">
+                          <input id="my_files__expand_approved--on" type="radio" name="my_files__expand_approved" class="my_files__expand">
+                          <input id="my_files__expand_approved--off" type="radio" name="my_files__expand_approved" class="my_files__expand">
+                          <div class="clearfix my_files-refresh">
+                            <p class="my_files-refresh__info">При появлениий знака<span class="sprite_private_room sprite_icon-to_workflow"></span>, вы можете перейти по этому файлу к его рабочему разделу</p><a class="sprite_icon-files_refresh my_files-refresh__btn my_files__btn--gray">Обновить список</a>
+                          </div>
+                          <div class="clearfix my_files-actions">
+                            <div class="clearfix my_files-actions__checking">
+                              <label for="my_files__check-all_approved" class="my_files-actions__check-all my_files__check">Выделить все</label>
+                              <label for="my_files__expand_approved--on" class="sprite_private_room sprite_icon-expand_on my_files-actions__expand my_files-actions__expand--on"></label>
+                              <label for="my_files__expand_approved--off" class="sprite_private_room sprite_icon-expand_off my_files-actions__expand my_files-actions__expand--off"></label>
+                            </div>
+                            <div class="clearfix my_files-actions__manage">
+                              <ul class="clearfix my_files-actions__menu">
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--archive"><a title="В архив" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--archive sprite_icon-archive"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--cleaning"><a title="В корзину" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--basket sprite_icon-basket"></a><a title="Очистить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clean sprite_icon-clean"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--files"><a title="Добавить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--add sprite_icon-add"></a><a title="Переместить" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--remove sprite_icon-remove"></a><a title="Переименовать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--rename sprite_icon-rename"></a><a title="Копировать" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--copy sprite_icon-copy"></a>
+                                            </li>
+                                            <li class="clearfix my_files-actions__menu-items my_files-actions__menu-items--clipboard"><a title="Добавить в буфер обмена" class="sprite_private_room my_files-actions__menu-item my_files-actions__menu-item--clipboard sprite_icon-clipboard--active"></a>
+                                            </li>
+                              </ul>
+                              <div class="my_files-actions__search">
+                                <div class="my_files-actions__search-input">
+                                  <input placeholder="Поиск">
+                                  <button class="sprite_icon-my_files_search my_files-actions__search-btn"></button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                                       <div class="clearfix my_files-table__header my_files-docs__header ">
                                         <div class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-check"></div>
                                         <p class="my_files-table__header-item my_files-docs__header-item my_files-docs__header-item-name">Название</p>
@@ -1641,7 +1765,7 @@
                                                                     <input type="checkbox" id="folder_opener--for_print_approved" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-for_print_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-for_print_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1657,7 +1781,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--my_books_approved" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-my_books_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-my_books_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1673,7 +1797,7 @@
                                                                                                                             <input type="checkbox" id="history_opener--the_roof_is_on_fire_you_fat_beaches.pdf_approved" class="my_files-docs__history_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches.pdf</span>
@@ -1688,7 +1812,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches.pdf_approved" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches.pdf</span>
@@ -1702,7 +1826,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl4">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_approved">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_approved" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire_you_fat_beaches_last.pdf_approved" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire_you_fat_beaches_last.pdf</span>
@@ -1723,7 +1847,7 @@
                                                                     <input type="checkbox" id="folder_opener--outline_approved" class="my_files-docs__folder_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-outline_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-outline_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-outline_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1739,7 +1863,7 @@
                                                                                                 <input type="checkbox" id="folder_opener--smth_else_approved" class="my_files-docs__folder_opener-input">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-smth_else_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-smth_else_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name">
@@ -1755,7 +1879,7 @@
                                                                                                                             <input type="checkbox" id="history_opener--the_roof_is_on_fire.pdf_approved" class="my_files-docs__history_opener-input">
                                                                                                                             <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved">
+                                                                                                                                <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check_inputs">
                                                                                                                                 <label for="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check"></label>
                                                                                                                               </div>
                                                                                                                               <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">The_roof_is_on_fire.pdf</span>
@@ -1770,7 +1894,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl3">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire.pdf</span>
@@ -1784,7 +1908,7 @@
                                                                                                                                                       <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl4">
                                                                                                                                                         <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved">
+                                                                                                                                                            <input type="checkbox" name="files_check" id="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check_inputs">
                                                                                                                                                             <label for="files_check-the_roof_is_on_fire.pdf_approved" class="my_files__check"></label>
                                                                                                                                                           </div>
                                                                                                                                                           <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">The_roof_is_on_fire.pdf</span>
@@ -1805,7 +1929,7 @@
                                                                     <input type="checkbox" id="history_opener--12_obezyan.jpeg_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-12_obezyan.jpeg_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -1820,7 +1944,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-12_obezyan.jpeg_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -1834,7 +1958,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-12_obezyan.jpeg_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-12_obezyan.jpeg_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">12_obezyan.jpeg</span>
@@ -1851,7 +1975,7 @@
                                                                     <input type="checkbox" id="history_opener--petrovich.png_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-petrovich.png_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -1866,7 +1990,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-petrovich.png_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -1880,7 +2004,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-petrovich.png_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-petrovich.png_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Petrovich.png</span>
@@ -1897,7 +2021,7 @@
                                                                     <input type="checkbox" id="history_opener--r2-d2.pdf_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-r2-d2.pdf_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-r2-d2.pdf_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">r2-d2.pdf</span>
@@ -1912,7 +2036,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d222.pdf_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d222.pdf_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-r2-d222.pdf_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">r2-d222.pdf</span>
@@ -1926,7 +2050,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d222.pdf_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-r2-d222.pdf_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-r2-d222.pdf_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">r2-d222.pdf</span>
@@ -1943,7 +2067,7 @@
                                                                     <input type="checkbox" id="history_opener--kniga_12.33.txt_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-kniga_12.33.txt_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -1958,7 +2082,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-kniga_12.33.txt_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -1972,7 +2096,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-kniga_12.33.txt_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-kniga_12.33.txt_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Kniga_12.33.txt</span>
@@ -1989,7 +2113,7 @@
                                                                     <input type="checkbox" id="history_opener--pitomnik.pdf_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-pitomnik.pdf_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -2004,7 +2128,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik.pdf_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -2018,7 +2142,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-pitomnik.pdf_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-pitomnik.pdf_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">Pitomnik.pdf</span>
@@ -2035,7 +2159,7 @@
                                                                     <input type="checkbox" id="history_opener--ochumet.docx_approved" class="my_files-docs__history_opener-input">
                                                                     <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved">
+                                                                        <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved" class="my_files__check_inputs">
                                                                         <label for="files_check-ochumet.docx_approved" class="my_files__check"></label>
                                                                       </div>
                                                                       <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name"><span class=" sprite_icon-type_file">Ochumet.docx</span>
@@ -2050,7 +2174,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color1 my_files-docs__items--lvl1">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-ochumet.docx_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">ochumet.docx</span>
@@ -2064,7 +2188,7 @@
                                                                                               <li class="my_files-table__items my_files-docs__items my_files-table__items--color2 my_files-docs__items--lvl2">
                                                                                                 <div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap ">
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-check my_files__checkbox">
-                                                                                                    <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved">
+                                                                                                    <input type="checkbox" name="files_check" id="files_check-ochumet.docx_approved" class="my_files__check_inputs">
                                                                                                     <label for="files_check-ochumet.docx_approved" class="my_files__check"></label>
                                                                                                   </div>
                                                                                                   <div class="my_files-table__item my_files-docs__item  my_files-docs__item-name sprite_icon-arrow_history--white"><span class=" sprite_icon-type_file">ochumet.docx</span>

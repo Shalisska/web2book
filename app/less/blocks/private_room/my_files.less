@@ -877,15 +877,13 @@
 	}
 }
 
-.private_room--my_files #my_files__check-all,
-.private_room--my_files #my_files__expand--on,
-.private_room--my_files #my_files__expand--off {display: none;}
 
-.private_room--my_files #my_files__check-all:checked ~ .my_files-header label[for="my_files__check-all"]:after,
+.my_files_checking(5);
 .my_files__checkbox>input[type="checkbox"]:checked ~ label:after {display: block;}
-
-.private_room--my_files #my_files__check-all:disabled ~ .my_files-header label[for="my_files__check-all"],
 .my_files__checkbox>input[type="checkbox"]:disabled ~ label {opacity: .3;}
+
+#my_files-loaded:checked ~ .private_room-page_controls .private_room-page__btn--prev {display: none;}
+#my_files-approved:checked ~ .private_room-page_controls .private_room-page__btn--next {display: none;}
 
 .cloud_drives(@n, @i: 1) when (@i =< @n) {
 	@items:
@@ -958,4 +956,24 @@
 	}
 	
 	.my_files-docs_left(@n, (@i + 1));
+}
+
+.my_files_checking(@n, @i: 1) when (@i =< @n) {
+	@items:
+		loaded,
+		working,
+		processing,
+		split,
+		approved;
+	@item: extract(@items, @i);
+	
+	.private_room--my_files #my_files__check-all_@{item},
+	.private_room--my_files #my_files__expand_@{item}--on,
+	.private_room--my_files #my_files__expand_@{item}--off {display: none;}
+
+	.private_room--my_files #my_files__check-all_@{item}:checked ~ .my_files-actions label[for="my_files__check-all_@{item}"]:after {display: block;}
+
+	.private_room--my_files #my_files__check-all_@{item}:disabled ~ .my_files-actions label[for="my_files__check-all_@{item}"] {opacity: .3;}
+	
+	.my_files_checking(@n, (@i + 1));
 }

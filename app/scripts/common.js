@@ -267,12 +267,6 @@ function allert_message(elem, rang, text) {
 };
 });
 
-
-
-
-
-
-
 ;$(document).ready(function() {
 	var lines =$('.calculator__counter-input--block_lines').children('input');
 	var insets = $('.calculator__counter-input--inset_vals').children('input');
@@ -312,4 +306,54 @@ function changing(item) {
 
 	var str = form.serialize();
 	var strArr = form.serializeArray();
+});
+
+;$(document).ready(function() {
+	var
+		check_all = $('.my_files__check-all_inputs'),
+		name,
+		inputs;
+	
+	check_all.each(function() {
+		checking($(this));
+	});
+
+	check_all.click(function() {
+		checking($(this));
+	});
+
+	function checking(inp) {
+		name = inp.attr('id').slice(('my_files__check-all_').length);
+		inputs = $('.my_files-docs--' + name).find('.my_files__check_inputs');
+		if (inp.prop('checked')) {
+			inputs.prop('checked','true');
+		} else {
+			inputs.removeAttr('checked');
+		};
+	};
+});
+
+;$(document).ready(function() {
+	var
+		expand = $('.my_files__expand'),
+		stat,
+		name,
+		inputs;
+
+	expand.click(function() {
+		checking($(this));
+	});
+
+	function checking(inp) {
+		stat = inp.attr('id').slice(inp.attr('id').length - 2);
+		if (stat === 'on') {
+			name = inp.attr('id').slice(('my_files__expand_').length, inp.attr('id').length - 4);
+			inputs = $('.my_files-docs--' + name).find('.my_files-docs__folder_opener-input');
+			inputs.prop('checked','true');
+		} else {
+			name = inp.attr('id').slice(('my_files__expand_').length, inp.attr('id').length - 5);
+			inputs = $('.my_files-docs--' + name).find('.my_files-docs__folder_opener-input');
+			inputs.removeAttr('checked');
+		};
+	};
 });

@@ -9,7 +9,7 @@ mixin private_room_menu(name)
 			else
 				-active = ''
 			li(class = name + '-item' + ' ' + name + '-item--top' + active)
-				a(class = name + '-item_name' + ' ' + name + '-item_name--top')=item.name
+				a(class = name + '-item_name' + ' ' + name + '-item_name--top' href='#')=item.name
 	
 	each item, i in tree.next
 		if i === top && item.next
@@ -20,12 +20,11 @@ mixin private_room_menu(name)
 					else
 						-active = ''
 					li(class = name + '-item' + ' ' + name + '-item--bottom' + active)
-						a(class = name + '-item_name' + ' ' + name + '-item_name--bottom')=elem.name
+						a(class = name + '-item_name' + ' ' + name + '-item_name--bottom' href='#')=elem.name
 
 
 header(class = pageClass + '-header')
 	div.clearfix(class = pageClass + '-header-features')
-		//-img(src=filesPath + '../images/private_room/common/header-disk.png')
 		include header_features
 	nav(class = pageClass + '-header__menu')
 		+private_room_menu(pageClass + '-header__menu')
