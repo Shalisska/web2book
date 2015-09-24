@@ -357,3 +357,34 @@ function changing(item) {
 		};
 	};
 });
+
+;$(document).ready(function() {
+	var
+		btn_name = 'private_room-page__btn',
+		btn = $('.' + btn_name),
+		menu = $('.my_files-menu__inputs'),
+		inp;
+
+	btn.click(function(e) {
+		e.preventDefault();
+		moving($(this));
+	});
+
+	function detect_inp() {
+		menu.each(function() {
+			if ($(this).prop('checked')) {
+				inp = $(this);
+			};
+		});
+		return inp;
+	};
+
+	function moving(btn) {
+		inp = detect_inp();
+		if (btn.hasClass(btn_name + '--next')) {
+			inp.next().prop('checked','true');
+		} else {
+			inp.prev().prop('checked','true');
+		};
+	};
+});
