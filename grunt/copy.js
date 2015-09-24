@@ -48,6 +48,12 @@ var sprite_private_arr = [{
 		width: 0,
 		retina: 8
 	}]
+}, {
+	img_dir: 'private_room/sprite/rename',
+	dest: [{
+		width: 0,
+		retina: 12
+	}]
 }];
 
 var sprite_form_arr = [{

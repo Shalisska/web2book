@@ -28,7 +28,7 @@ html.no-svg(lang="ru")
 					+breadcrumbs(private_room_tree)
 					include ../blocks/private_room/header
 					
-					div(class=pageClass + pageSub)
+					div.clearfix(class=pageClass + pageSub)
 						block content
 						.clearfix(class=pageClass + '-page_controls')
 							a.sprite_form.sprite_icon-private_room_arrow--prev(class=pageClass + '-page__btn' + ' ' + pageClass + '-page__btn--prev' + pageBtn_prev href='#') Назад

@@ -3174,7 +3174,7 @@ th {
   height: 27px;
 }
 .sprite_icon-approve {
-  background-position: 0px -135px;
+  background-position: -38px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3329,13 +3329,13 @@ th {
   height: 27px;
 }
 .sprite_icon-expand_on {
-  background-position: 0px 0px;
+  background-position: 0px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-file_pdf {
-  background-position: -38px -135px;
+  background-position: 0px 0px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3422,6 +3422,14 @@ th {
   width: 38px;
   height: 27px;
 }
+.sprite_icon-rename_small:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -214px -117px;
+  background-size: 228px 205px;
+  width: 12px;
+  height: 11px;
+}
 .sprite_icon-test {
   background-position: -152px -54px;
   background-size: 228px 205px;
@@ -3449,7 +3457,7 @@ th {
 .sprite_icon-type_file:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -208px -152px;
+  background-position: -190px -152px;
   background-size: 228px 205px;
   width: 18px;
   height: 16px;
@@ -3457,7 +3465,7 @@ th {
 .sprite_icon-type_folder:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -190px -152px;
+  background-position: -208px -152px;
   background-size: 228px 205px;
   width: 18px;
   height: 16px;
@@ -3500,25 +3508,25 @@ th {
   }
   .sprite_icon-add {
     background-position: -38px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-approve {
-    background-position: 0px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-position: -38px -136.66666667px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
     background-position: 0px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-archive {
     background-position: -38px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3526,114 +3534,114 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -40px -191.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 9.333333333333334px;
   }
   .sprite_icon-arrow_history--gray:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -8px -217.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-position: -228px -21.33333333px;
+    background-size: 240px 217.33333333333334px;
     width: 8px;
     height: 10px;
   }
   .sprite_icon-arrow_history--white:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: 0px -217.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-position: -228px -11.33333333px;
+    background-size: 240px 217.33333333333334px;
     width: 8px;
     height: 10px;
   }
   .sprite_icon-basket--bw {
     background-position: -38px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-basket {
     background-position: -76px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files__check:after {
     background-position: -210px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 14px;
     height: 13.333333333333334px;
   }
   .sprite_icon-clean {
     background-position: -38px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-clipboard {
     background-position: -76px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
     background-position: -114px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-color_correct {
     background-position: -114px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-comment {
     background-position: -114px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -114px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-convert {
     background-position: 0px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
     background-position: -38px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-copy {
     background-position: -76px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-delete {
     background-position: -24px -191.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 17.333333333333332px;
   }
   .sprite_icon-download {
     background-position: -152px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
     background-position: -152px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3641,7 +3649,7 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -178px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
   }
@@ -3649,31 +3657,31 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -194px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
     background-position: -152px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-position: 0px -136.66666667px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-file_pdf {
-    background-position: -38px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-position: 0px 0px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
     background-position: -76px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3681,31 +3689,31 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -162px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-info {
     background-position: -152px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: -190px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-look {
     background-position: -190px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
     background-position: -190px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3713,95 +3721,103 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: -76px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 28px;
     height: 23.333333333333332px;
   }
   .sprite_icon-process_manage {
     background-position: -190px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
     background-position: -190px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-recheck {
     background-position: 0px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
     background-position: -190px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-remove {
     background-position: -114px -136.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-rename {
     background-position: -152px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
+  .sprite_icon-rename_small:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -228px 0px;
+    background-size: 240px 217.33333333333334px;
+    width: 12px;
+    height: 11.333333333333334px;
+  }
   .sprite_icon-test {
     background-position: -152px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-to_check {
     background-position: -114px -109.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
     background-position: 0px -82px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-to_workflow {
     background-position: -104px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 22px;
     height: 22px;
   }
   .sprite_icon-type_file:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -144px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-position: -126px -164px;
+    background-size: 240px 217.33333333333334px;
     width: 18px;
     height: 16px;
   }
   .sprite_icon-type_folder:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -126px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-position: -144px -164px;
+    background-size: 240px 217.33333333333334px;
     width: 18px;
     height: 16px;
   }
   .sprite_icon-view_1p {
     background-position: 0px -54.66666667px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: -76px -27.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3809,19 +3825,19 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
     background-position: 0px -191.33333333px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 24px;
     height: 26px;
   }
   .sprite_icon-zip {
     background-position: -76px 0px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
     background-position: -38px -164px;
-    background-size: 228px 227.33333333333334px;
+    background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
@@ -3837,7 +3853,7 @@ th {
     height: 27px;
   }
   .sprite_icon-approve {
-    background-position: 0px -135px;
+    background-position: -38px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -3992,13 +4008,13 @@ th {
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px 0px;
+    background-position: 0px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-file_pdf {
-    background-position: -38px -135px;
+    background-position: 0px 0px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4085,6 +4101,14 @@ th {
     width: 38px;
     height: 27px;
   }
+  .sprite_icon-rename_small:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -214px -117px;
+    background-size: 228px 205px;
+    width: 12px;
+    height: 11px;
+  }
   .sprite_icon-test {
     background-position: -152px -54px;
     background-size: 228px 205px;
@@ -4112,7 +4136,7 @@ th {
   .sprite_icon-type_file:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -208px -152px;
+    background-position: -190px -152px;
     background-size: 228px 205px;
     width: 18px;
     height: 16px;
@@ -4120,7 +4144,7 @@ th {
   .sprite_icon-type_folder:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -190px -152px;
+    background-position: -208px -152px;
     background-size: 228px 205px;
     width: 18px;
     height: 16px;
@@ -4169,7 +4193,7 @@ th {
     height: 27px;
   }
   .sprite_icon-approve {
-    background-position: 0px -135px;
+    background-position: -38px -135px;
     background-size: 228px 189px;
     width: 38px;
     height: 27px;
@@ -4324,13 +4348,13 @@ th {
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px 0px;
+    background-position: 0px -135px;
     background-size: 228px 189px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-file_pdf {
-    background-position: -38px -135px;
+    background-position: 0px 0px;
     background-size: 228px 189px;
     width: 38px;
     height: 27px;
@@ -4416,6 +4440,14 @@ th {
     background-size: 228px 189px;
     width: 38px;
     height: 27px;
+  }
+  .sprite_icon-rename_small:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -214px -90px;
+    background-size: 228px 189px;
+    width: 12px;
+    height: 11px;
   }
   .sprite_icon-test {
     background-position: -114px -108px;
@@ -11515,7 +11547,7 @@ input[id='tarif-on']:checked ~ .private_room__switcher__tarif--on {
 .private_room-memory__btn {
   margin-top: 0.27em;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.28em;
   text-decoration: none;
 }
 .private_room--profile {
@@ -11641,6 +11673,55 @@ input[id='tarif-on']:checked ~ .private_room__switcher__tarif--on {
 .private_room-header__menu-item--bottom--active a {
   background: white;
   box-shadow: inset 0 1px 0 0 #e5e5e6;
+}
+.private_room-header__project {
+  margin-bottom: 1.5em;
+}
+.private_room-header__project-name {
+  float: left;
+  padding-left: 1em;
+  padding-top: 0.6em;
+}
+.private_room-header__project-name input {
+  width: 7.9em;
+  background: transparent;
+  font-size: 2.1em;
+  color: white;
+  border: none;
+}
+.private_room-header__project-name button {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  font-family: 'Tahoma', 'Arial', sans-serif;
+  font-size: 0.78em;
+  color: white;
+  border: none;
+  outline: none;
+}
+.private_room-header__project-name button:before {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.private_room-header__project-name button:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 7.2em;
+  height: 0;
+  border-bottom: 1px dashed white;
+}
+.private_room-header__project-dealing {
+  float: right;
+  padding-top: 1em;
+}
+.private_room-header__project-dealing_btn {
+  float: left;
+  font-size: 1.28em;
+}
+.private_room-header__project-dealing_btn--new {
+  margin-left: 1.1em;
 }
 .private_room-page_controls {
   padding: 35px 0 50px;

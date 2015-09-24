@@ -51,6 +51,9 @@ var images_private = {
       name: 'type_folder'
     , class: 'before'
     }, {
+      name: 'rename_small'
+    , class: 'before'
+    }, {
 		name: 'clipboard'
 	,	template: function (r, w) {
 			var name1 = file_manage_sprite_tabl(this.name);

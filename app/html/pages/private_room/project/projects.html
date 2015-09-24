@@ -175,12 +175,46 @@
                           <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
+                                    <div class="clearfix private_room-header__project">
+                                      <div class="clearfix private_room-header__project-name">
+                                        <input type="text" value="Новый проект" name="project_name" disabled>
+                                        <button class="sprite_icon-rename_small">Переименовать</button>
+                                      </div>
+                                      <div class="clearfix private_room-header__project-dealing">
+                                        <button class="form__btn private_room-header__project-dealing_btn private_room-header__project-dealing_btn--save">Сохранить проект</button>
+                                        <button class="form__btn private_room-header__project-dealing_btn private_room-header__project-dealing_btn--new">Создать новый проект</button>
+                                      </div>
+                                    </div>
                           <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Список проектов</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Калькуляция проекта</a></li>
                         </ul>
             </nav>
           </header>
-          <div class="private_room private_room--projects">
+          <div class="clearfix private_room private_room--projects">
+            <div class="projects">
+              <nav class="projects__menu">
+                <div class="clearfix projects__menu-top">
+                  <ul class="clearfix projects__menu-top_items">
+                    <li class="projects__menu-top_item"><a href="#">Все</a></li>
+                    <li class="projects__menu-top_item"><a href="#">Опубликованные</a></li>
+                    <li class="projects__menu-top_item"><a href="#">К печати</a></li>
+                    <li class="projects__menu-top_item"><a href="#">Сохраненные</a></li>
+                  </ul>
+                  <div class="projects__menu-top_sort">
+                    <input type="radio" id="projects_sort-date" checked><span>Сортировать</span>
+                    <ul>
+                      <li>
+                        <label for="projects_sort-date">по дате</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav><a href="#" class="my_files__btn--gray projects__create">Создать проект</a>
+            </div>
+            <div class="projects__generate_qr-code">
+              <picture><img src="../../../../images/private_room/qr-code/generate_qr@114.jpg 114w" width="114" srcset="../../../../images/private_room/qr-code/generate_qr@171.jpg 171w, ../../../../images/private_room/qr-code/generate_qr@228.jpg 228w, ../../../../images/private_room/qr-code/generate_qr@342.jpg 342w" alt="generate_qr-code"/>
+              </picture><span class="projects__generate_qr-code__title">Генерировать QR-код</span>
+            </div>
             <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-projects">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-projects">Далее</a></div>
           </div>
         </div>

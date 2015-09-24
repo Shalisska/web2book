@@ -175,12 +175,22 @@
                           <li class="private_room-header__menu-item private_room-header__menu-item--top private_room-header__menu-item--top--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
                         </ul>
                         <ul class="clearfix private_room-header__menu-part private_room-header__menu--bottom">
+                                    <div class="clearfix private_room-header__project">
+                                      <div class="clearfix private_room-header__project-name">
+                                        <input type="text" value="Новый проект" name="project_name" disabled>
+                                        <button class="sprite_icon-rename_small">Переименовать</button>
+                                      </div>
+                                      <div class="clearfix private_room-header__project-dealing">
+                                        <button class="form__btn private_room-header__project-dealing_btn private_room-header__project-dealing_btn--save">Сохранить проект</button>
+                                        <button class="form__btn private_room-header__project-dealing_btn private_room-header__project-dealing_btn--new">Создать новый проект</button>
+                                      </div>
+                                    </div>
                           <li class="private_room-header__menu-item private_room-header__menu-item--bottom"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Список проектов</a></li>
                           <li class="private_room-header__menu-item private_room-header__menu-item--bottom private_room-header__menu-item--bottom--active"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--bottom">Калькуляция проекта</a></li>
                         </ul>
             </nav>
           </header>
-          <div class="private_room private_room--calculation">
+          <div class="clearfix private_room private_room--calculation">
             <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-calculation">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-calculation">Далее</a></div>
           </div>
         </div>

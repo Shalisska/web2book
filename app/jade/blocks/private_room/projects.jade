@@ -1,0 +1,25 @@
+div(class=pageSubclass)
+	nav(class=pageSubclass + '__menu')
+		.clearfix(class=pageSubclass + '__menu-top')
+			ul.clearfix(class=pageSubclass + '__menu-top_items')
+				each item in ['Все', 'Опубликованные', 'К печати', 'Сохраненные']
+					li(class=pageSubclass + '__menu-top_item'): a(href='#')=item
+			div(class=pageSubclass + '__menu-top_sort')
+				input(type='radio' id=pageSubclass + '_sort-date' checked)
+				span Сортировать
+				ul
+					li: label(for=pageSubclass + '_sort-date') по дате
+	a.my_files__btn--gray(href='#' class=pageSubclass + '__create') Создать проект
+div(class=pageSubclass + '__generate_qr-code')
+	+picture({
+		name: 'generate_qr-code',
+		adress: '../images/private_room/qr-code/generate_qr@',
+		ext: 'jpg'
+	}, {
+		main: {
+			width: 114,
+			img: 114
+		}
+	})
+	span(class=pageSubclass + '__generate_qr-code__title') Генерировать QR-код
+
