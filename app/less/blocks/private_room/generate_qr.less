@@ -69,6 +69,7 @@
 				font-family: @font-bold;
 				text-transform: uppercase;
 				border-radius: 6px 6px 0 0;
+				cursor: pointer;
 			}
 		}
 	}
@@ -87,6 +88,8 @@
 		
 		&-wrap {padding: 0 0.8em 0.8em;}
 		
+		&--text, &--site, &--card {display: none;}
+		
 		&__label {
 			float: left;
 			
@@ -98,6 +101,8 @@
 			
 			&--size {
 				float: left;
+				margin: 0;
+				padding-top: 0.6em;
 				width: 18%;
 			}
 		}
@@ -117,6 +122,9 @@
 			&--site_url {width: 84%;}
 			
 			&--size {
+				margin-left: 1.5em;
+				padding-top: 0.7em;
+				
 				input {display: none;}
 				
 				label {
@@ -141,11 +149,13 @@
 							inset 0 -1px 1px 0px rgba(180,181,181,0.9),
 							inset 0 2px 3px 0 rgba(0,0,0,.2),
 							inset 0 0 5px 0 rgba(0,0,0,0.2);
+						cursor: pointer;
 					}
 					
 					&:after {
 						content: '';
 						position: absolute;
+						display: none;
 						@w: 9px;
 						left: -1.5em;
 						margin-left: 3px;
@@ -163,6 +173,8 @@
 							0 1px 2px 0 rgba(0,0,0,.3);
 					}
 				}
+				
+				.generate-qr_size(5);
 			}
 		}
 		
@@ -194,6 +206,12 @@
 			}
 		}
 	}
+	
+	&__btn {
+		float: right;
+		padding: 0.35em 1.2em;
+		font-size: 1.5em;
+	}
 }
 
 .generate-qr_menu(@n, @i: 1) when (@i =< @n) {
@@ -216,7 +234,21 @@
 		}
 	}
 	
-	//input#my_files-@{item}:checked~&-docs--@{item} {display: block;}
+	input#generate_qr--@{item}:checked~&__form--@{item} {display: block;}
 	
 	.generate-qr_menu(@n, (@i + 1));
+}
+
+.generate-qr_size(@n, @i: 1) when (@i =< @n) {
+	@items:
+		1,
+		2,
+		3,
+		4,
+		5;
+	@item: extract(@items, @i);
+	
+	input#generate_qr_size--@{item}:checked ~ label[for='generate_qr_size--@{item}']:after {display: block;}
+	
+	.generate-qr_size(@n, (@i + 1));
 }

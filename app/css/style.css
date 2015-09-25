@@ -13248,6 +13248,9 @@ input#generate_qr--text:checked ~ .generate_qr__menu label[for='generate_qr--tex
 input#generate_qr--text:checked ~ .generate_qr__menu label[for='generate_qr--text']:after {
   display: none;
 }
+input#generate_qr--text:checked ~ .generate_qr__form--text {
+  display: block;
+}
 input#generate_qr--site:checked ~ .generate_qr__menu .generate_qr__menu-item--site:after {
   display: block;
 }
@@ -13260,6 +13263,9 @@ input#generate_qr--site:checked ~ .generate_qr__menu label[for='generate_qr--sit
 input#generate_qr--site:checked ~ .generate_qr__menu label[for='generate_qr--site']:after {
   display: none;
 }
+input#generate_qr--site:checked ~ .generate_qr__form--site {
+  display: block;
+}
 input#generate_qr--card:checked ~ .generate_qr__menu .generate_qr__menu-item--card:after {
   display: block;
 }
@@ -13271,6 +13277,9 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
 }
 input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--card']:after {
   display: none;
+}
+input#generate_qr--card:checked ~ .generate_qr__form--card {
+  display: block;
 }
 .generate_qr__menu {
   list-style: none;
@@ -13300,6 +13309,7 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
   font-family: 'ArialBold', 'Arial', sans-serif;
   text-transform: uppercase;
   border-radius: 6px 6px 0 0;
+  cursor: pointer;
 }
 .generate_qr__form {
   margin: 0;
@@ -13315,6 +13325,11 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
 .generate_qr__form-wrap {
   padding: 0 0.8em 0.8em;
 }
+.generate_qr__form--text,
+.generate_qr__form--site,
+.generate_qr__form--card {
+  display: none;
+}
 .generate_qr__form__label {
   float: left;
 }
@@ -13327,6 +13342,8 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
 }
 .generate_qr__form__label--size {
   float: left;
+  margin: 0;
+  padding-top: 0.6em;
   width: 18%;
 }
 .generate_qr__form__inputs--text_text {
@@ -13341,6 +13358,10 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
 }
 .generate_qr__form__inputs--site_url {
   width: 84%;
+}
+.generate_qr__form__inputs--size {
+  margin-left: 1.5em;
+  padding-top: 0.7em;
 }
 .generate_qr__form__inputs--size input {
   display: none;
@@ -13363,10 +13384,12 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
   background-color: #e9e8e8;
   border-radius: 50%;
   box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.9), inset 0 -1px 1px 0px rgba(180, 181, 181, 0.9), inset 0 2px 3px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .generate_qr__form__inputs--size label:after {
   content: '';
   position: absolute;
+  display: none;
   left: -1.5em;
   margin-left: 3px;
   top: 50%;
@@ -13376,6 +13399,21 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
   background: linear-gradient(#86d5fa, #46a6eb);
   border-radius: 50%;
   box-shadow: inset 0 1px 1px 0px rgba(237, 255, 255, 0.95), inset 0 -1px 1px 0px rgba(19, 130, 220, 0.8), inset 0 0px 2px 0 rgba(153, 255, 255, 0.2), inset 0 0 1px 0 #2a5267, 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.generate_qr__form__inputs--size input#generate_qr_size--1:checked ~ label[for='generate_qr_size--1']:after {
+  display: block;
+}
+.generate_qr__form__inputs--size input#generate_qr_size--2:checked ~ label[for='generate_qr_size--2']:after {
+  display: block;
+}
+.generate_qr__form__inputs--size input#generate_qr_size--3:checked ~ label[for='generate_qr_size--3']:after {
+  display: block;
+}
+.generate_qr__form__inputs--size input#generate_qr_size--4:checked ~ label[for='generate_qr_size--4']:after {
+  display: block;
+}
+.generate_qr__form__inputs--size input#generate_qr_size--5:checked ~ label[for='generate_qr_size--5']:after {
+  display: block;
 }
 .generate_qr__form__items {
   margin-bottom: 0.7em;
@@ -13419,6 +13457,11 @@ input#generate_qr--card:checked ~ .generate_qr__menu label[for='generate_qr--car
 }
 .generate_qr__form__items:last-of-type .form__inputs {
   width: 82%;
+}
+.generate_qr__btn {
+  float: right;
+  padding: 0.35em 1.2em;
+  font-size: 1.5em;
 }
 .footer {
   position: relative;
