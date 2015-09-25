@@ -7,4 +7,216 @@
 	background-color: white;
 	border-radius: 6px;
 	box-shadow: 0 0 7px 0 rgba(0,0,0,.4);
+	
+	&__title {
+		margin: 0;
+		padding: 0.5em 1.6em;
+		
+		&--main {
+			padding: 0.9em 1.4em;
+			background-image: linear-gradient(to top, white 63%, #e5e5e5);
+			font-family: @font-bold;
+			color: #454c5c;
+			border-bottom: 3px solid #900;
+			border-radius: 6px 6px 0 0;
+			box-shadow: inset 0 0px 0 1px white;
+		}
+	}
+	
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 25px;
+		height: 25px;
+		cursor: pointer;
+		
+		&:before {
+			position: absolute;
+			top: 50%;
+			margin-top: -5px;
+			right: 50%;
+			margin-right: -5px;
+		}
+	}
+	
+	input[name='generate_qr__menu'] {display: none;}
+	.generate-qr_menu(3);
+	
+	&__menu {
+		.reset-ul();
+		
+		&-item {
+			position: relative;
+			float: left;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				display: none;
+				background: white;
+				left: 50%;
+				margin-left: -0.25em;
+				bottom: -0.5em;
+				width: 0.5em;
+				height: 0.5em;
+				transform: rotate(45deg);
+			}
+			
+			label {
+				position: relative;
+				display: block;
+				font-family: @font-bold;
+				text-transform: uppercase;
+				border-radius: 6px 6px 0 0;
+			}
+		}
+	}
+	
+	&__form {
+		margin: 0;
+		padding: 2.1em 1.4em;
+		border: none;
+		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;
+		
+		&:last-of-type {
+			border-bottom: 1px solid #ccc;
+			border-radius: 0 0 6px 6px;
+		}
+		
+		&-wrap {padding: 0 0.8em 0.8em;}
+		
+		&__label {
+			float: left;
+			
+			&--text_text {margin-bottom: 0.8em;}
+			&--site_url {
+				margin-top: 0.4em;
+				width: 16%;
+			}
+			
+			&--size {
+				float: left;
+				width: 18%;
+			}
+		}
+		
+		&__inputs {
+			&--text_text {
+				width: 100%;
+				height: 7.6em;
+				
+				textarea {
+					width: 100%;
+					height: 100%;
+					resize: none;
+					outline: none;
+				}
+			}
+			&--site_url {width: 84%;}
+			
+			&--size {
+				input {display: none;}
+				
+				label {
+					position: relative;
+					margin-right: 3.5em;
+					
+					&:last-of-type {margin-right: 0;}
+					
+					&:before {
+						content: '';
+						position: absolute;
+						@w: 15px;
+						left: -1.5em;
+						top: 50%;
+						margin-top: -(@w / 2);
+						width: @w;
+						height: @w;
+						background-color: #e9e8e8;
+						border-radius: 50%;
+						box-shadow:
+							inset 0 1px 1px 0px rgba(0,0,0,0.9),
+							inset 0 -1px 1px 0px rgba(180,181,181,0.9),
+							inset 0 2px 3px 0 rgba(0,0,0,.2),
+							inset 0 0 5px 0 rgba(0,0,0,0.2);
+					}
+					
+					&:after {
+						content: '';
+						position: absolute;
+						@w: 9px;
+						left: -1.5em;
+						margin-left: 3px;
+						top: 50%;
+						margin-top: -(@w / 2);
+						width: @w;
+						height: @w;
+						background: linear-gradient(#86d5fa, #46a6eb);
+						border-radius: 50%;
+						box-shadow:
+							inset 0 1px 1px 0px rgba(237,255,255,0.95),
+							inset 0 -1px 1px 0px rgba(19,130,220,0.8),
+							inset 0 0px 2px 0 rgba(153,255,255,0.2),
+							inset 0 0 1px 0 rgba(42,82,103,1),
+							0 1px 2px 0 rgba(0,0,0,.3);
+					}
+				}
+			}
+		}
+		
+		&__items {
+			margin-bottom: 0.7em;
+			width: 45%;
+			
+			&:nth-of-type(2n + 1) {float: left;}
+			&:nth-of-type(2n) {float: right;}
+			
+			label {
+				margin-top: 0.4em;
+				width: 40%;
+			}
+			
+			.form__inputs {
+				width: 60%;
+				
+				input {
+					font-family: @font-italic;
+					.placeholder_color(#808080);
+				}
+			}
+			
+			&:last-of-type {
+				width: 100%;
+				label {width: 18%;}
+				.form__inputs {width: 82%;}
+			}
+		}
+	}
+}
+
+.generate-qr_menu(@n, @i: 1) when (@i =< @n) {
+	@items:
+		text,
+		site,
+		card;
+	@item: extract(@items, @i);
+	
+	input#generate_qr--@{item}:checked~&__menu {
+		.generate_qr__menu-item--@{item}:after {display: block;}
+		
+		label[for='generate_qr--@{item}'] {
+			color: white;
+			background: linear-gradient(to top, #57bff5 35%, #46a6eb);
+			border: 1px solid #57bff5;
+			border-bottom: none;
+
+			&:after {display: none;}
+		}
+	}
+	
+	//input#my_files-@{item}:checked~&-docs--@{item} {display: block;}
+	
+	.generate-qr_menu(@n, (@i + 1));
 }

@@ -254,89 +254,108 @@
                 <picture><img src="../../../../images/private_room/qr-code/generate_qr@114.jpg 114w" width="114" srcset="../../../../images/private_room/qr-code/generate_qr@171.jpg 171w, ../../../../images/private_room/qr-code/generate_qr@228.jpg 228w, ../../../../images/private_room/qr-code/generate_qr@342.jpg 342w" alt="generate_qr-code"/>
                 </picture></a><span class="projects__generate_qr-code__title">Генерировать QR-код</span></div>
             <form class="form--generate_qr generate_qr">
-              <p class="generate_qr__title generate_qr__title--main">Генератор QR-кода</p>
-              <p class="generate_qr__title">Генерировать</p>
-                                      <input type="radio" id="generate_qr--text" name="generate_qr__menu" checked>
-                                      <input type="radio" id="generate_qr--site" name="generate_qr__menu">
-                                      <input type="radio" id="generate_qr--card" name="generate_qr__menu">
-                                      <ul class="generate_qr__menu">
-                                        <li class="generate_qr__menu-item">
-                                          <label for="generate_qr--text">Любой текст</label>
-                                        </li>
-                                        <li class="generate_qr__menu-item">
-                                          <label for="generate_qr--site">Ссылку на сайт</label>
-                                        </li>
-                                        <li class="generate_qr__menu-item">
-                                          <label for="generate_qr--card">Визитную карточку</label>
-                                        </li>
-                                      </ul>
-                                      <fieldset class="clearfix form__field generate_qr__form generate_qr__form--text">
-                                        <label for="generate_qr__form_text_text" class="generate_qr__form__label generate_qr__form__label--text_text">Введите текст для кодирования:
+              <p class="generate_qr__title generate_qr__title--main">Генератор QR-кода</p><a class="sprite_icon-close--gray form__close generate_qr__close"></a>
+              <p class="title--h3 generate_qr__title">Генерировать</p>
+                          <div class="generate_qr__form-wrap">
+                                        <input type="radio" id="generate_qr--text" name="generate_qr__menu" checked>
+                                        <input type="radio" id="generate_qr--site" name="generate_qr__menu">
+                                        <input type="radio" id="generate_qr--card" name="generate_qr__menu">
+                                        <ul class="private_room-header__menu--top clearfix generate_qr__menu">
+                                          <li class="private_room-header__menu-item--top generate_qr__menu-item generate_qr__menu-item--text">
+                                            <label for="generate_qr--text" class="private_room-header__menu-item_name--top">Любой текст</label>
+                                          </li>
+                                          <li class="private_room-header__menu-item--top generate_qr__menu-item generate_qr__menu-item--site">
+                                            <label for="generate_qr--site" class="private_room-header__menu-item_name--top">Ссылку на сайт</label>
+                                          </li>
+                                          <li class="private_room-header__menu-item--top generate_qr__menu-item generate_qr__menu-item--card">
+                                            <label for="generate_qr--card" class="private_room-header__menu-item_name--top">Визитную карточку</label>
+                                          </li>
+                                        </ul>
+                                        <fieldset class="clearfix form__field generate_qr__form generate_qr__form--text">
+                                          <label for="generate_qr__form_text_text" class="generate_qr__form__label generate_qr__form__label--text_text">Введите текст для кодирования:</label>
                                           <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--text_text">
                                             <textarea id="generate_qr__form_text_text" name="generate_qr__form_text_text"></textarea>
-                                          </div></label>
-                                      </fieldset>
-                                      <fieldset class="clearfix form__field generate_qr__form generate_qr__form--site">
-                                        <label for="generate_qr__form_site_url" class="generate_qr__form__label generate_qr__form__label--site_url">Введите url:
+                                          </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix form__field generate_qr__form generate_qr__form--site">
+                                          <label for="generate_qr__form_site_url" class="generate_qr__form__label generate_qr__form__label--site_url">Введите url:</label>
                                           <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--site_url">
                                             <input type="text" id="generate_qr__form_site_url" name="generate_qr__form_site_url" placeholder="http://">
-                                          </div></label>
-                                      </fieldset>
-                                      <fieldset class="clearfix form__field generate_qr__form generate_qr__form--card">
-                                        <label for="generate_qr__form_card_name" class="generate_qr__form__label generate_qr__form__label--card_name">Имя:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_name">
-                                            <input type="text" id="generate_qr__form_card_name" name="generate_qr__form_card_name" placeholder="Петр">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_surname" class="generate_qr__form__label generate_qr__form__label--card_surname">Фамилия:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_surname">
-                                            <input type="text" id="generate_qr__form_card_surname" name="generate_qr__form_card_surname" placeholder="Иванов">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_tel" class="generate_qr__form__label generate_qr__form__label--card_tel">Телефон:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_tel">
-                                            <input type="text" id="generate_qr__form_card_tel" name="generate_qr__form_card_tel" placeholder="+79603668430">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_email" class="generate_qr__form__label generate_qr__form__label--card_email">E-mail:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_email">
-                                            <input type="email" id="generate_qr__form_card_email" name="generate_qr__form_card_email" placeholder="ivan@krut.off">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_organization" class="generate_qr__form__label generate_qr__form__label--card_organization">Организация:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_organization">
-                                            <input type="text" id="generate_qr__form_card_organization" name="generate_qr__form_card_organization" placeholder="Федерация баранов">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_position" class="generate_qr__form__label generate_qr__form__label--card_position">Должность:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_position">
-                                            <input type="text" id="generate_qr__form_card_position" name="generate_qr__form_card_position" placeholder="Главный в стаде">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_adress" class="generate_qr__form__label generate_qr__form__label--card_adress">Адрес:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_adress">
-                                            <input type="text" id="generate_qr__form_card_adress" name="generate_qr__form_card_adress" placeholder="Москва ул. Скотская 18">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_site" class="generate_qr__form__label generate_qr__form__label--card_site">Адрес сайта:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_site">
-                                            <input type="text" id="generate_qr__form_card_site" name="generate_qr__form_card_site" placeholder="www.ivanbaran.vsem">
-                                          </div></label>
-                                        <label for="generate_qr__form_card_note" class="generate_qr__form__label generate_qr__form__label--card_note">Заметка:
-                                          <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_note">
-                                            <input type="text" id="generate_qr__form_card_note" name="generate_qr__form_card_note" placeholder="icq: 123456789, skype: my.name">
-                                          </div></label>
-                                      </fieldset>
-                          <fieldset class="clearfix form__field generate_qr__form">
-                            <p for="generate_qr_size" class="generate_qr__label generate_qr__label--size">Размер:
-                              <div class="form__inputs generate_qr__inputs generate_qr__inputs--size">
+                                          </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix form__field generate_qr__form generate_qr__form--card">
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_name" class="generate_qr__form__label generate_qr__form__label--card_name">Имя:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_name">
+                                              <input type="text" id="generate_qr__form_card_name" name="generate_qr__form_card_name" placeholder="Петр">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_surname" class="generate_qr__form__label generate_qr__form__label--card_surname">Фамилия:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_surname">
+                                              <input type="text" id="generate_qr__form_card_surname" name="generate_qr__form_card_surname" placeholder="Иванов">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_tel" class="generate_qr__form__label generate_qr__form__label--card_tel">Телефон:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_tel">
+                                              <input type="text" id="generate_qr__form_card_tel" name="generate_qr__form_card_tel" placeholder="+79603668430">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_email" class="generate_qr__form__label generate_qr__form__label--card_email">E-mail:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_email">
+                                              <input type="email" id="generate_qr__form_card_email" name="generate_qr__form_card_email" placeholder="ivan@krut.off">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_organization" class="generate_qr__form__label generate_qr__form__label--card_organization">Организация:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_organization">
+                                              <input type="text" id="generate_qr__form_card_organization" name="generate_qr__form_card_organization" placeholder="Федерация баранов">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_position" class="generate_qr__form__label generate_qr__form__label--card_position">Должность:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_position">
+                                              <input type="text" id="generate_qr__form_card_position" name="generate_qr__form_card_position" placeholder="Главный в стаде">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_adress" class="generate_qr__form__label generate_qr__form__label--card_adress">Адрес:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_adress">
+                                              <input type="text" id="generate_qr__form_card_adress" name="generate_qr__form_card_adress" placeholder="Москва ул. Скотская 18">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_site" class="generate_qr__form__label generate_qr__form__label--card_site">Адрес сайта:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_site">
+                                              <input type="text" id="generate_qr__form_card_site" name="generate_qr__form_card_site" placeholder="www.ivanbaran.vsem">
+                                            </div>
+                                          </div>
+                                          <div class="clearfix generate_qr__form__items">
+                                            <label for="generate_qr__form_card_note" class="generate_qr__form__label generate_qr__form__label--card_note">Заметка:</label>
+                                            <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--card_note">
+                                              <input type="text" id="generate_qr__form_card_note" name="generate_qr__form_card_note" placeholder="icq: 123456789, skype: my.name">
+                                            </div>
+                                          </div>
+                                        </fieldset>
+                            <fieldset class="clearfix form__field generate_qr__form generate_qr__form--size">
+                              <p class="generate_qr__form__label generate_qr__form__label--size">Размер:</p>
+                              <div class="form__inputs generate_qr__form__inputs generate_qr__form__inputs--size">
                                 <input type="radio" id="generate_qr_size--1" name="generate_qr_size">
-                                <label for="generate_qr_size--1"></label>
+                                <label for="generate_qr_size--1">1</label>
                                 <input type="radio" id="generate_qr_size--2" name="generate_qr_size">
-                                <label for="generate_qr_size--2"></label>
+                                <label for="generate_qr_size--2">2</label>
                                 <input type="radio" id="generate_qr_size--3" name="generate_qr_size" checked>
-                                <label for="generate_qr_size--3"></label>
+                                <label for="generate_qr_size--3">3</label>
                                 <input type="radio" id="generate_qr_size--4" name="generate_qr_size">
-                                <label for="generate_qr_size--4"></label>
+                                <label for="generate_qr_size--4">4</label>
                                 <input type="radio" id="generate_qr_size--5" name="generate_qr_size">
-                                <label for="generate_qr_size--5"></label>
+                                <label for="generate_qr_size--5">5</label>
                               </div>
-                            </p>
-                            <button type="submit" class="form__btn generate_qr__btn">Создать код</button>
-                          </fieldset>
+                              <button type="submit" class="form__btn generate_qr__btn">Создать код</button>
+                            </fieldset>
+                          </div>
             </form>
             <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev private_room-page__btn--prev-projects">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next private_room-page__btn--next-projects">Далее</a></div>
           </div>
