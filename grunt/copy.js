@@ -92,6 +92,12 @@ var sprite_form_arr = [{
 		width: 0,
 		retina: 140
 	}]
+}, {
+	img_dir: 'form/sprite/close--gray',
+	dest: [{
+		width: 0,
+		retina: 10
+	}]
 }];
 
 var sprite_arr = [{

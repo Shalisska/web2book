@@ -1,7 +1,20 @@
+mixin top_menu_sort(items)
+	each item, i in items
+		-var active_class = ''
+		if i === 2
+			-active_class = ' ' + pageSubclass + '__menu-top_item--active'
+		li(class=pageSubclass + '__menu-top_item' + active_class)
+			a(href='#')=item
+
 mixin alphabet(items)
-	each item in items
-		li(class=pageSubclass + '__menu-top_item')
-			a(class=pageSubclass + '__menu-top_item--' + item.id href='#')=item.name
+	each item, i in items
+		-var spec_class = ''
+		if i === 12
+			-spec_class = ' ' + pageSubclass + '__menu-bottom_item--active'
+		else if i === 24 || i === 25
+			-spec_class = ' ' + pageSubclass + '__menu-bottom_item--disable'
+		li(class=pageSubclass + '__menu-bottom_item' + spec_class)
+			a(class=pageSubclass + '__menu-bottom_item--' + item.id href='#')=item.name
 
 mixin sort_alphabet()
 	+alphabet([{
@@ -97,30 +110,34 @@ div(class=pageSubclass)
 	nav(class=pageSubclass + '__menu')
 		.clearfix(class=pageSubclass + '__menu-top')
 			ul.clearfix(class=pageSubclass + '__menu-top_items')
-				each item in ['Все', 'Опубликованные', 'К печати', 'Сохраненные']
-					li(class=pageSubclass + '__menu-top_item'): a(href='#')=item
+				+top_menu_sort(['Все', 'Опубликованные', 'К печати', 'Сохраненные'])
 			div(class=pageSubclass + '__menu-top_sort')
 				input(type='radio' id=pageSubclass + '_sort-date' name=pageSubclass + '_sort' checked)
 				input(type='radio' id=pageSubclass + '_sort-alphabet' name=pageSubclass + '_sort')
 				span Сортировать
-				ul
-					li: label(for=pageSubclass + '_sort-date') по дате
-					li: label(for=pageSubclass + '_sort-alphabet') по алфавиту
-			a.my_files__btn--gray(href='#' class=pageSubclass + '__create') Создать проект
-		ul.clearfix(class=pageSubclass + '__menu-bottom')
+				div(class=pageSubclass + '__menu-top_sort_result')
+					input(type='text' name='sort' value='по дате' disabled)
+					ul(class=pageSubclass + '__menu-top_sort_vars')
+						li: label(for=pageSubclass + '_sort-date') по дате
+						li: label(for=pageSubclass + '_sort-alphabet') по алфавиту
+			a.my_files__btn--gray(href='#' class=pageSubclass + '__menu-top_create') Создать проект
+		ul(class=pageSubclass + '__menu-bottom')
 			+sort_alphabet()
 	div(class=pageSubclass + '__list')
 		img(src='../../../../images/private_room/common/project_list.jpg', alt='')
 div(class=pageSubclass + '__generate_qr-code')
-	+picture({
-		name: 'generate_qr-code',
-		adress: '../images/private_room/qr-code/generate_qr@',
-		ext: 'jpg'
-	}, {
-		main: {
-			width: 114,
-			img: 114
-		}
-	})
+	a(class=pageSubclass + '__generate_qr-code_do' href='#')
+		+picture({
+			name: 'generate_qr-code',
+			adress: '../images/private_room/qr-code/generate_qr@',
+			ext: 'jpg'
+		}, {
+			main: {
+				width: 114,
+				img: 114
+			}
+		})
 	span(class=pageSubclass + '__generate_qr-code__title') Генерировать QR-код
+
+include qr-code_generate
 

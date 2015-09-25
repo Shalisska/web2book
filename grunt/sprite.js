@@ -250,6 +250,9 @@ var images_form = {
     }, {
       name: 'captcha_refresh'
     , class: 'before'
+    }, {
+      name: 'close--gray'
+    , class: 'before'
     }]
 };
 
@@ -489,4 +492,4 @@ var sprite_build = sprite_create(images);
 var sprite_form = sprite_create(images_form);
 var sprite_private = sprite_create(images_private);
 
-module.exports = sprite_private;
+module.exports = sprite_form;

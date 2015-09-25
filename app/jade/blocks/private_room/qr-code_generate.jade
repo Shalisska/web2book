@@ -1,0 +1,104 @@
+mixin qr_generate(name, items)
+	+qr_generate_menu(name, items)
+	
+	each item in items
+		case item.id
+			when 'text'
+				+qr_generate_form('generate_qr__form', item.id, [{
+					id: item.id + '_text',
+					name: 'Введите текст для кодирования'
+				}])
+			when 'site'
+				+qr_generate_form('generate_qr__form', item.id, [{
+					id: item.id + '_url',
+					name: 'Введите url',
+					text: 'http://'
+				}])
+			when 'card'
+				+qr_generate_form('generate_qr__form', item.id, [{
+					id: item.id + '_name',
+					name: 'Имя',
+					text: 'Петр'
+				}, {
+					id: item.id + '_surname',
+					name: 'Фамилия',
+					text: 'Иванов'
+				}, {
+					id: item.id + '_tel',
+					name: 'Телефон',
+					text: '+79603668430'
+				}, {
+					id: item.id + '_email',
+					name: 'E-mail',
+					type: 'email',
+					text: 'ivan@krut.off'
+				}, {
+					id: item.id + '_organization',
+					name: 'Организация',
+					text: 'Федерация баранов'
+				}, {
+					id: item.id + '_position',
+					name: 'Должность',
+					text: 'Главный в стаде'
+				}, {
+					id: item.id + '_adress',
+					name: 'Адрес',
+					text: 'Москва ул. Скотская 18'
+				}, {
+					id: item.id + '_site',
+					name: 'Адрес сайта',
+					text: 'www.ivanbaran.vsem'
+				}, {
+					id: item.id + '_note',
+					name: 'Заметка',
+					text: 'icq: 123456789, skype: my.name'
+				}])
+	fieldset.clearfix.form__field(class=name + '__form')
+		p(class=name + '__label' + ' ' + name + '__label--size' for=name + '_size') Размер:
+			div.form__inputs(class=name + '__inputs' + ' ' + name + '__inputs--size')
+				each elem, i in [1, 2, 3, 4, 5]
+					if i === 2
+						input(type='radio' id=name + '_size--' + elem name=name + '_size' checked)
+					else
+						input(type='radio' id=name + '_size--' + elem name=name + '_size')
+					label(for=name + '_size--' + elem)
+		button.form__btn(class=name + '__btn' type='submit') Создать код
+
+mixin qr_generate_menu(name, items)
+	each item, i in items
+		if i === 0
+			input(type='radio' id=name + '--' + item.id name=name + '__menu' checked)
+		else
+			input(type='radio' id=name + '--' + item.id name=name + '__menu')
+			
+	ul(class=name + '__menu')
+		each item in items
+			li(class=name + '__menu-item')
+				label(for=name + '--' + item.id)=item.name
+
+mixin qr_generate_form(name, section, items)
+	fieldset.clearfix.form__field(class=name + ' ' + name + '--' + section)
+		each item in items
+			label(class=name + '__label' + ' ' + name + '__label--' + item.id for=name + '_' + item.id)=item.name + ':'
+				div.form__inputs(class=name + '__inputs' + ' ' + name + '__inputs--' + item.id)
+					if section === 'text'
+						textarea(id=name + '_' + item.id name=name + '_' + item.id)
+					else
+						-var type = 'text'
+						if item.type
+							-type = item.type
+						input(type=type id=name + '_' + item.id name=name + '_' + item.id placeholder=item.text)
+
+form.form--generate_qr.generate_qr
+	p.generate_qr__title.generate_qr__title--main Генератор QR-кода
+	p.generate_qr__title Генерировать
+	+qr_generate('generate_qr', [{
+		id: 'text',
+		name: 'Любой текст'
+	}, {
+		id: 'site',
+		name: 'Ссылку на сайт'
+	}, {
+		id: 'card',
+		name: 'Визитную карточку'
+	}])
