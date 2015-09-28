@@ -33,8 +33,30 @@ mixin project_dealing()
 			button.form__btn(class=pageClass + '-header__project-dealing_btn' + ' ' + pageClass + '-header__project-dealing_btn--save') Сохранить проект
 			button.form__btn(class=pageClass + '-header__project-dealing_btn' + ' ' + pageClass + '-header__project-dealing_btn--new') Создать новый проект
 
+mixin calc_menu(name, items)
+	ul.clearfix(class=name + '-menu')
+		each item in items
+			-var btn_class = ' '
+			if item.id === 'open'
+				-btn_class += 'form__btn'
+			else
+				-btn_class += 'my_files__btn--gray'
+			li(class=name + '-menu__item')
+				a(class=name + '-menu__item-name' + ' ' + name + '-menu__item-' + item.id +btn_class href='#')=item.name
+
 header(class = pageClass + '-header')
 	div.clearfix(class = pageClass + '-header-features')
 		include header_features
 	nav(class = pageClass + '-header__menu')
 		+private_room_menu(pageClass + '-header__menu')
+	if pageSubclass === 'calculation'
+		+calc_menu(pageSubclass, [{
+			id: 'open',
+			name: 'Открыть'
+		}, {
+			id: 'recalc',
+			name: 'Пересчитать'
+		}, {
+			id: 'save',
+			name: 'Сохранить'
+		}])

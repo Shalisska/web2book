@@ -68,7 +68,7 @@ mixin form_counter(pageName, id, val)
 	-classes = []
 	+form_classes(classes, pageName, 'input', id)
 	.form__counter-input(class=classes)
-		input(type='text' name=id value=val)
+		input(type='text' name=id value=val id=id)
 	
 	-classes = []
 	+itemBuild(classes, [

@@ -1,0 +1,264 @@
+mixin calculation(name, data)
+	div(class=name + '__img')
+		+picture({
+			name: data.name,
+			adress: '../images/private_room/content_calculation/' + data.id + '@',
+			ext: 'png'
+		}, {
+			main: {
+				width: 244
+			}
+		})
+	
+	div(class = name + '__block' + ' ' + name + '-title')
+		.clearfix(class = name + '__item' + ' ' + name + '__item--title')
+			span(class = name + '__item-name' + ' ' + name + '__item-name--title') Название проекта:
+			span(class = name + '__item-result' + ' ' + name + '__item-result--title')=data.name
+	div(class = name + '__block' + ' ' + name + '-options')
+		p.title--h3(class=name + '__title') Опции печати
+		each item in data.print
+			block calc_items
+				.clearfix(class = name + '__item' + ' ' + name + '__item--' + item.id)
+					span(class = name + '__item-name')=item.name + ':'
+					span(class = name + '__item-result')=item.res
+	div(class = name + '__block' + ' ' + name + '-material')
+		p.title--h3(class=name + '__title') Материал
+		each item in data.material
+			block calc_items
+	div(class = name + '__block' + ' ' + name + '-additional')
+		p.title--h3(class=name + '__title') Дополнительные услуги
+		each item in data.additional
+			block calc_items
+
+mixin calc_form(name, data)
+	fieldset(class =name + '__block' + ' ' + name + '-options')
+		p.title--h3(class=name + '__title') Опции печати
+		each item in data.print
+			block calc_items_form
+				.clearfix(class = name + '__item' + ' ' + name + '__item--' + item.id)
+					label(class = name + '__item-name' for = pageSubclass + '__' + item.id)=item.name
+					div(class = name + '__item-result')
+						if item.list
+							input(class = name + '__item-input' placeholder='Выбрать' id = pageSubclass + '__' + item.id name = pageSubclass + '__' + item.id)
+							ul(class = name + '__item-dropdown')
+								li: a(href='#')
+								each el in item.list
+									li: a(href='#')=el.name
+						else
+							+form_counter(name, pageSubclass + '__' + item.id, 'Выбрать')
+	fieldset(class =name + '__block' + ' ' + name + '-material')
+		p.title--h3(class=name + '__title') Материал
+		each item in data.material
+			block calc_items_form
+	fieldset(class =name + '__block' + ' ' + name + '-additional')
+		p.title--h3(class=name + '__title') Дополнительные услуги
+		each item in data.additional
+			block calc_items_form
+	
+	fieldset(class =name + '__block' + ' ' + name + '-dealing')
+		a.my_files__btn--gray(class = name + '-dealing__btn' href='#') Пересчитать
+		a.my_files__btn--gray(class = name + '-dealing__btn' href='#') Сохранить
+
+div(class=pageSubclass)
+	+calculation(pageSubclass, {
+		id: 'ikea_2012_ed4',
+		name: 'IKEA_2012_издание4',
+		print: [{
+			id: 'product',
+			name: 'Продукт',
+			res: 'Каталог'
+		}, {
+			id: 'format',
+			name: 'Формат',
+			res: '148х710ммА5'
+		}, {
+			id: 'pages',
+			name: 'Страницы',
+			res: 'Двусторонняя печать'
+		}, {
+			id: 'orientation',
+			name: 'Ориентация страниц',
+			res: 'Вертикальная'
+		}, {
+			id: 'block',
+			name: 'Блок',
+			res: '60'
+		}, {
+			id: 'circulation',
+			name: 'Количество тиража',
+			res: '1000'
+		}],
+		material: [{
+			id: 'cover_color',
+			name: 'Цвет обложки',
+			res: '4/4 color CMYK'
+		}, {
+			id: 'type_cover',
+			name: 'Тип бумаги обложки',
+			res: '250 кв.м. Бумага для печати'
+		}, {
+			id: 'type_block',
+			name: 'Тип бумаги блока',
+			res: '115 кв.м. Бумага для печати'
+		}],
+		additional: []
+	})
+	
+form(class=pageSubclass + '-form')
+	+calc_form(pageSubclass + '-form', {
+		print: [{
+			id: 'product',
+			name: 'Продукт',
+			list: [{
+				id: 'catalog',
+				name: 'Каталог'
+			}, {
+				id: 'catalog1',
+				name: 'Каталог1'
+			}]
+		}, {
+			id: 'format',
+			name: 'Формат',
+			list: [{
+				id: 'A5',
+				name: '148х710ммА5'
+			}, {
+				id: 'A4',
+				name: 'A4'
+			}]
+		}, {
+			id: 'pages',
+			name: 'Страницы',
+			list: [{
+				id: '2-pages',
+				name: 'Двусторонняя печать'
+			}, {
+				id: '1-pages',
+				name: 'Односторонняя печать'
+			}]
+		}, {
+			id: 'orientation',
+			name: 'Ориентация страниц',
+			list: [{
+				id: 'vertical',
+				name: 'Вертикальная'
+			}, {
+				id: 'gorizontal',
+				name: 'Горизонтальная'
+			}]
+		}, {
+			id: 'title_pages',
+			name: 'Титульные страницы',
+			list: [{
+				id: 'title_pages_1',
+				name: 'title_pages_1'
+			}, {
+				id: 'title_pages_2',
+				name: 'title_pages_2'
+			}]
+		}, {
+			id: 'block',
+			name: 'Блок'
+		}, {
+			id: 'inset',
+			name: 'Вставка'
+		}, {
+			id: 'circulation',
+			name: 'Количество тиража'
+		}],
+		material: [{
+			id: 'cover_color',
+			name: 'Цвет обложки',
+			val: '4/4 color CMYK',
+			list: [{
+				id: '4_4_cmyk',
+				name: '4/4 color CMYK'
+			}, {
+				id: '4_4_cmyk_1',
+				name: '4/4 color CMYK_1'
+			}]
+		}, {
+			id: 'block_color',
+			name: 'Цвет блока',
+			list: [{
+				id: 'block_color_1',
+				name: 'block_color_1'
+			}, {
+				id: 'block_color_2',
+				name: 'block_color_2'
+			}]
+		}, {
+			id: 'inset',
+			name: 'Вставка',
+			list: [{
+				id: 'inset_1',
+				name: 'inset_1'
+			}, {
+				id: 'inset_2',
+				name: 'inset_2'
+			}]
+		}, {
+			id: 'type_cover',
+			name: 'Тип бумаги обложки',
+			list: [{
+				id: '250m',
+				name: '250 кв.м. Бумага для печати'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}, {
+			id: 'type_block',
+			name: 'Тип бумаги блока',
+			list: [{
+				id: '115m',
+				name: '115 кв.м. Бумага для печати'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}, {
+			id: 'type_inset',
+			name: 'Тип бумаги вставки',
+			list: [{
+				id: 'type_inset',
+				name: 'type_inset'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}, {
+			id: 'material_cover',
+			name: 'Материал обложки',
+			list: [{
+				id: 'material_cover',
+				name: 'material_cover'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}, {
+			id: 'material_block',
+			name: 'Материал блока',
+			list: [{
+				id: 'material_block',
+				name: 'material_block'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}],
+		additional: [{
+			id: 'decor_cover',
+			name: 'Обработка обложки',
+			list: [{
+				id: 'decor_cover',
+				name: 'decor_cover'
+			}, {
+				id: 'else',
+				name: 'Другой'
+			}]
+		}]
+	})
+	
+	
