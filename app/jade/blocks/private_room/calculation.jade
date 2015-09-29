@@ -12,15 +12,15 @@ mixin calculation(name, data)
 	
 	div(class = name + '__block' + ' ' + name + '-title')
 		.clearfix(class = name + '__item' + ' ' + name + '__item--title')
-			span(class = name + '__item-name' + ' ' + name + '__item-name--title') Название проекта:
-			span(class = name + '__item-result' + ' ' + name + '__item-result--title')=data.name
+			span(class = name + '__name' + ' ' + name + '__name--title') Название проекта:
+			span(class = name + '__result' + ' ' + name + '__result--title')=data.name
 	div(class = name + '__block' + ' ' + name + '-options')
 		p.title--h3(class=name + '__title') Опции печати
 		each item in data.print
 			block calc_items
 				.clearfix(class = name + '__item' + ' ' + name + '__item--' + item.id)
-					span(class = name + '__item-name')=item.name + ':'
-					span(class = name + '__item-result')=item.res
+					span(class = name + '__name')=item.name + ':'
+					span(class = name + '__result')=item.res
 	div(class = name + '__block' + ' ' + name + '-material')
 		p.title--h3(class=name + '__title') Материал
 		each item in data.material
@@ -36,12 +36,15 @@ mixin calc_form(name, data)
 		each item in data.print
 			block calc_items_form
 				.clearfix(class = name + '__item' + ' ' + name + '__item--' + item.id)
-					label(class = name + '__item-name' for = pageSubclass + '__' + item.id)=item.name
-					div(class = name + '__item-result')
+					label(class = name + '__name' for = pageSubclass + '__' + item.id)=item.name
+					-var inp_class = ''
+					if item.list
+						-inp_class = ' ' + name + '__result-select'
+					div(class = name + '__result' + inp_class)
 						if item.list
-							input(class = name + '__item-input' placeholder='Выбрать' id = pageSubclass + '__' + item.id name = pageSubclass + '__' + item.id)
-							ul(class = name + '__item-dropdown')
-								li: a(href='#')
+							input(class = name + '__input' placeholder='Выбрать' id = pageSubclass + '__' + item.id name = pageSubclass + '__' + item.id)
+							ul(class = name + '__dropdown')
+								li: a(href='#') <Выбрать>
 								each el in item.list
 									li: a(href='#')=el.name
 						else

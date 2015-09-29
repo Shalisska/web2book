@@ -3206,7 +3206,7 @@ th {
   height: 27px;
 }
 .sprite_icon-approve {
-  background-position: -38px -135px;
+  background-position: -76px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3223,10 +3223,26 @@ th {
   width: 38px;
   height: 27px;
 }
+.sprite_icon-archive_icons:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -190px -152px;
+  background-size: 228px 205px;
+  width: 18px;
+  height: 18px;
+}
+.sprite_icon-archive_list:before {
+  content: "";
+  background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
+  background-position: -208px -152px;
+  background-size: 228px 205px;
+  width: 18px;
+  height: 18px;
+}
 .sprite_icon-arrow--down:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -16px -189px;
+  background-position: -48px -189px;
   background-size: 228px 205px;
   width: 16px;
   height: 9px;
@@ -3248,13 +3264,13 @@ th {
   height: 10px;
 }
 .sprite_icon-basket--bw {
-  background-position: -38px -54px;
+  background-position: 0px -81px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-basket {
-  background-position: -76px -54px;
+  background-position: -38px -81px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3266,56 +3282,56 @@ th {
   height: 13px;
 }
 .sprite_icon-clean {
-  background-position: -38px -81px;
+  background-position: -114px 0px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-clipboard {
-  background-position: -76px -81px;
+  background-position: -114px -27px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
 .sprite_icon-clipboard--active {
-  background-position: -114px 0px;
-  background-size: 228px 205px;
-  width: 38px;
-  height: 27px;
-}
-.sprite_icon-color_correct {
-  background-position: -114px -27px;
-  background-size: 228px 205px;
-  width: 38px;
-  height: 27px;
-}
-.sprite_icon-comment {
   background-position: -114px -54px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
+.sprite_icon-color_correct {
   background-position: -114px -81px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
-.sprite_icon-convert {
+.sprite_icon-comment {
   background-position: 0px -108px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
   background-position: -38px -108px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
-.sprite_icon-copy {
+.sprite_icon-convert {
   background-position: -76px -108px;
+  background-size: 228px 205px;
+  width: 38px;
+  height: 27px;
+}
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+  background-position: -114px -108px;
+  background-size: 228px 205px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-copy {
+  background-position: -152px 0px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3327,13 +3343,13 @@ th {
   height: 17px;
 }
 .sprite_icon-download {
-  background-position: -152px 0px;
+  background-position: -152px -54px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
-  background-position: -152px -27px;
+  background-position: -152px -81px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3341,7 +3357,7 @@ th {
 .sprite_icon-download_cloud:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -206px -168px;
+  background-position: 0px -189px;
   background-size: 228px 205px;
   width: 16px;
   height: 16px;
@@ -3349,31 +3365,31 @@ th {
 .sprite_icon-download_load:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: 0px -189px;
+  background-position: -16px -189px;
   background-size: 228px 205px;
   width: 16px;
   height: 16px;
 }
 .sprite_icon-expand_off {
-  background-position: -152px -108px;
+  background-position: -38px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-expand_on {
-  background-position: 0px -135px;
-  background-size: 228px 205px;
-  width: 38px;
-  height: 27px;
-}
-.sprite_icon-file_pdf {
   background-position: 0px 0px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
+.sprite_icon-file_pdf {
+  background-position: -114px -135px;
+  background-size: 228px 205px;
+  width: 38px;
+  height: 27px;
+}
 .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
-  background-position: -76px -135px;
+  background-position: -152px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3381,31 +3397,31 @@ th {
 .sprite_icon-files_refresh:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -190px -168px;
+  background-position: -32px -189px;
   background-size: 228px 205px;
   width: 16px;
   height: 16px;
 }
 .sprite_icon-info {
-  background-position: -152px -135px;
-  background-size: 228px 205px;
-  width: 38px;
-  height: 27px;
-}
-.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
-  background-position: 0px -162px;
-  background-size: 228px 205px;
-  width: 38px;
-  height: 27px;
-}
-.sprite_icon-look {
   background-position: -38px -162px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
-.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
   background-position: -76px -162px;
+  background-size: 228px 205px;
+  width: 38px;
+  height: 27px;
+}
+.sprite_icon-look {
+  background-position: -114px -162px;
+  background-size: 228px 205px;
+  width: 38px;
+  height: 27px;
+}
+.my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+  background-position: -152px -162px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3419,7 +3435,7 @@ th {
   height: 23px;
 }
 .sprite_icon-process_manage {
-  background-position: -152px -162px;
+  background-position: -190px -27px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3431,25 +3447,25 @@ th {
   height: 27px;
 }
 .sprite_icon-recheck {
-  background-position: -190px -27px;
+  background-position: 0px -162px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
-  background-position: -114px -162px;
+  background-position: 0px -135px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-remove {
-  background-position: -114px -135px;
+  background-position: -152px -108px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-rename {
-  background-position: -152px -81px;
+  background-position: -152px -27px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3463,19 +3479,19 @@ th {
   height: 11px;
 }
 .sprite_icon-test {
-  background-position: -152px -54px;
+  background-position: -76px -81px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .sprite_icon-to_check {
-  background-position: -114px -108px;
+  background-position: -76px -54px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
 }
 .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
-  background-position: 0px -81px;
+  background-position: -38px -54px;
   background-size: 228px 205px;
   width: 38px;
   height: 27px;
@@ -3489,7 +3505,7 @@ th {
 .sprite_icon-type_file:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -190px -152px;
+  background-position: -190px -170px;
   background-size: 228px 205px;
   width: 18px;
   height: 16px;
@@ -3497,7 +3513,7 @@ th {
 .sprite_icon-type_folder:before {
   content: "";
   background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1w.png);
-  background-position: -208px -152px;
+  background-position: -208px -170px;
   background-size: 228px 205px;
   width: 18px;
   height: 16px;
@@ -3545,7 +3561,7 @@ th {
     height: 27.333333333333332px;
   }
   .sprite_icon-approve {
-    background-position: -38px -136.66666667px;
+    background-position: -76px -136.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3562,10 +3578,26 @@ th {
     width: 38px;
     height: 27.333333333333332px;
   }
+  .sprite_icon-archive_icons:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -126px -164px;
+    background-size: 240px 217.33333333333334px;
+    width: 18px;
+    height: 18px;
+  }
+  .sprite_icon-archive_list:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
+    background-position: -144px -164px;
+    background-size: 240px 217.33333333333334px;
+    width: 18px;
+    height: 18px;
+  }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -40px -191.33333333px;
+    background-position: -72px -191.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 9.333333333333334px;
@@ -3587,74 +3619,74 @@ th {
     height: 10px;
   }
   .sprite_icon-basket--bw {
-    background-position: -38px -54.66666667px;
+    background-position: 0px -82px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-basket {
-    background-position: -76px -54.66666667px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .my_files__check:after {
-    background-position: -210px -164px;
-    background-size: 240px 217.33333333333334px;
-    width: 14px;
-    height: 13.333333333333334px;
-  }
-  .sprite_icon-clean {
     background-position: -38px -82px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
+  .my_files__check:after {
+    background-position: -214px -164px;
+    background-size: 240px 217.33333333333334px;
+    width: 14px;
+    height: 13.333333333333334px;
+  }
+  .sprite_icon-clean {
+    background-position: -114px 0px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
   .sprite_icon-clipboard {
-    background-position: -76px -82px;
+    background-position: -114px -27.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
-    background-position: -114px 0px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .sprite_icon-color_correct {
-    background-position: -114px -27.33333333px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .sprite_icon-comment {
     background-position: -114px -54.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
+  .sprite_icon-color_correct {
     background-position: -114px -82px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
-  .sprite_icon-convert {
+  .sprite_icon-comment {
     background-position: 0px -109.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -38px -109.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
-  .sprite_icon-copy {
+  .sprite_icon-convert {
     background-position: -76px -109.33333333px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+    background-position: -114px -109.33333333px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-copy {
+    background-position: -152px 0px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3666,13 +3698,13 @@ th {
     height: 17.333333333333332px;
   }
   .sprite_icon-download {
-    background-position: -152px 0px;
+    background-position: -152px -54.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
-    background-position: -152px -27.33333333px;
+    background-position: -152px -82px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3680,7 +3712,7 @@ th {
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -178px -164px;
+    background-position: -198px -164px;
     background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
@@ -3688,31 +3720,31 @@ th {
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -194px -164px;
+    background-position: -40px -191.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
-    background-position: -152px -109.33333333px;
+    background-position: -38px -136.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px -136.66666667px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .sprite_icon-file_pdf {
     background-position: 0px 0px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
+  .sprite_icon-file_pdf {
+    background-position: -114px -136.66666667px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
-    background-position: -76px -136.66666667px;
+    background-position: -152px -136.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3720,31 +3752,31 @@ th {
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -162px -164px;
+    background-position: -56px -191.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-info {
-    background-position: -152px -136.66666667px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
-    background-position: -190px 0px;
-    background-size: 240px 217.33333333333334px;
-    width: 38px;
-    height: 27.333333333333332px;
-  }
-  .sprite_icon-look {
     background-position: -190px -27.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: -190px -54.66666667px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .sprite_icon-look {
+    background-position: -190px -82px;
+    background-size: 240px 217.33333333333334px;
+    width: 38px;
+    height: 27.333333333333332px;
+  }
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+    background-position: -190px -109.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3758,7 +3790,7 @@ th {
     height: 23.333333333333332px;
   }
   .sprite_icon-process_manage {
-    background-position: -190px -109.33333333px;
+    background-position: 0px -164px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3770,25 +3802,25 @@ th {
     height: 27.333333333333332px;
   }
   .sprite_icon-recheck {
-    background-position: 0px -164px;
+    background-position: -190px 0px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
-    background-position: -190px -82px;
+    background-position: 0px -136.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-remove {
-    background-position: -114px -136.66666667px;
+    background-position: -152px -109.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-rename {
-    background-position: -152px -82px;
+    background-position: -152px -27.33333333px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3802,19 +3834,19 @@ th {
     height: 11.333333333333334px;
   }
   .sprite_icon-test {
-    background-position: -152px -54.66666667px;
+    background-position: -76px -82px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .sprite_icon-to_check {
-    background-position: -114px -109.33333333px;
+    background-position: -76px -54.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
-    background-position: 0px -82px;
+    background-position: -38px -54.66666667px;
     background-size: 240px 217.33333333333334px;
     width: 38px;
     height: 27.333333333333332px;
@@ -3828,7 +3860,7 @@ th {
   .sprite_icon-type_file:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -126px -164px;
+    background-position: -162px -164px;
     background-size: 240px 217.33333333333334px;
     width: 18px;
     height: 16px;
@@ -3836,7 +3868,7 @@ th {
   .sprite_icon-type_folder:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@1.5w.png);
-    background-position: -144px -164px;
+    background-position: -180px -164px;
     background-size: 240px 217.33333333333334px;
     width: 18px;
     height: 16px;
@@ -3885,7 +3917,7 @@ th {
     height: 27px;
   }
   .sprite_icon-approve {
-    background-position: -38px -135px;
+    background-position: -76px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -3902,10 +3934,26 @@ th {
     width: 38px;
     height: 27px;
   }
+  .sprite_icon-archive_icons:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -190px -152px;
+    background-size: 228px 205px;
+    width: 18px;
+    height: 18px;
+  }
+  .sprite_icon-archive_list:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
+    background-position: -208px -152px;
+    background-size: 228px 205px;
+    width: 18px;
+    height: 18px;
+  }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -16px -189px;
+    background-position: -48px -189px;
     background-size: 228px 205px;
     width: 16px;
     height: 9px;
@@ -3927,13 +3975,13 @@ th {
     height: 10px;
   }
   .sprite_icon-basket--bw {
-    background-position: -38px -54px;
+    background-position: 0px -81px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-basket {
-    background-position: -76px -54px;
+    background-position: -38px -81px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -3945,56 +3993,56 @@ th {
     height: 13px;
   }
   .sprite_icon-clean {
-    background-position: -38px -81px;
+    background-position: -114px 0px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-clipboard {
-    background-position: -76px -81px;
+    background-position: -114px -27px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
-    background-position: -114px 0px;
-    background-size: 228px 205px;
-    width: 38px;
-    height: 27px;
-  }
-  .sprite_icon-color_correct {
-    background-position: -114px -27px;
-    background-size: 228px 205px;
-    width: 38px;
-    height: 27px;
-  }
-  .sprite_icon-comment {
     background-position: -114px -54px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
+  .sprite_icon-color_correct {
     background-position: -114px -81px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
-  .sprite_icon-convert {
+  .sprite_icon-comment {
     background-position: 0px -108px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
     background-position: -38px -108px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
-  .sprite_icon-copy {
+  .sprite_icon-convert {
     background-position: -76px -108px;
+    background-size: 228px 205px;
+    width: 38px;
+    height: 27px;
+  }
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
+    background-position: -114px -108px;
+    background-size: 228px 205px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-copy {
+    background-position: -152px 0px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4006,13 +4054,13 @@ th {
     height: 17px;
   }
   .sprite_icon-download {
-    background-position: -152px 0px;
+    background-position: -152px -54px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
-    background-position: -152px -27px;
+    background-position: -152px -81px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4020,7 +4068,7 @@ th {
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -206px -168px;
+    background-position: 0px -189px;
     background-size: 228px 205px;
     width: 16px;
     height: 16px;
@@ -4028,31 +4076,31 @@ th {
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: 0px -189px;
+    background-position: -16px -189px;
     background-size: 228px 205px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
-    background-position: -152px -108px;
+    background-position: -38px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px -135px;
-    background-size: 228px 205px;
-    width: 38px;
-    height: 27px;
-  }
-  .sprite_icon-file_pdf {
     background-position: 0px 0px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
+  .sprite_icon-file_pdf {
+    background-position: -114px -135px;
+    background-size: 228px 205px;
+    width: 38px;
+    height: 27px;
+  }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
-    background-position: -76px -135px;
+    background-position: -152px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4060,31 +4108,31 @@ th {
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -190px -168px;
+    background-position: -32px -189px;
     background-size: 228px 205px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-info {
-    background-position: -152px -135px;
-    background-size: 228px 205px;
-    width: 38px;
-    height: 27px;
-  }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
-    background-position: 0px -162px;
-    background-size: 228px 205px;
-    width: 38px;
-    height: 27px;
-  }
-  .sprite_icon-look {
     background-position: -38px -162px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
-  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
     background-position: -76px -162px;
+    background-size: 228px 205px;
+    width: 38px;
+    height: 27px;
+  }
+  .sprite_icon-look {
+    background-position: -114px -162px;
+    background-size: 228px 205px;
+    width: 38px;
+    height: 27px;
+  }
+  .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
+    background-position: -152px -162px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4098,7 +4146,7 @@ th {
     height: 23px;
   }
   .sprite_icon-process_manage {
-    background-position: -152px -162px;
+    background-position: -190px -27px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4110,25 +4158,25 @@ th {
     height: 27px;
   }
   .sprite_icon-recheck {
-    background-position: -190px -27px;
+    background-position: 0px -162px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
-    background-position: -114px -162px;
+    background-position: 0px -135px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-remove {
-    background-position: -114px -135px;
+    background-position: -152px -108px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-rename {
-    background-position: -152px -81px;
+    background-position: -152px -27px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4142,19 +4190,19 @@ th {
     height: 11px;
   }
   .sprite_icon-test {
-    background-position: -152px -54px;
+    background-position: -76px -81px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-to_check {
-    background-position: -114px -108px;
+    background-position: -76px -54px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
-    background-position: 0px -81px;
+    background-position: -38px -54px;
     background-size: 228px 205px;
     width: 38px;
     height: 27px;
@@ -4168,7 +4216,7 @@ th {
   .sprite_icon-type_file:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -190px -152px;
+    background-position: -190px -170px;
     background-size: 228px 205px;
     width: 18px;
     height: 16px;
@@ -4176,7 +4224,7 @@ th {
   .sprite_icon-type_folder:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@2w.png);
-    background-position: -208px -152px;
+    background-position: -208px -170px;
     background-size: 228px 205px;
     width: 18px;
     height: 16px;
@@ -4220,33 +4268,49 @@ th {
   }
   .sprite_icon-add {
     background-position: -38px 0px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-approve {
-    background-position: -38px -135px;
-    background-size: 228px 189px;
+    background-position: -76px -135px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-approve {
     background-position: 0px -27px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-archive {
     background-position: -38px -27px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
+  }
+  .sprite_icon-archive_icons:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -190px -125px;
+    background-size: 228px 205px;
+    width: 18px;
+    height: 18px;
+  }
+  .sprite_icon-archive_list:before {
+    content: "";
+    background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
+    background-position: -208px -125px;
+    background-size: 228px 205px;
+    width: 18px;
+    height: 18px;
   }
   .sprite_icon-arrow--down:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -190px -173px;
-    background-size: 228px 189px;
+    background-position: -204.33333333px -175px;
+    background-size: 228px 205px;
     width: 16px;
     height: 9px;
   }
@@ -4254,7 +4318,7 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -218px -64px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 8px;
     height: 10px;
   }
@@ -4262,170 +4326,170 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -218px -54px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 8px;
     height: 10px;
   }
   .sprite_icon-basket--bw {
-    background-position: -38px -54px;
-    background-size: 228px 189px;
+    background-position: 0px -81px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-basket {
-    background-position: -76px -54px;
-    background-size: 228px 189px;
+    background-position: -38px -81px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files__check:after {
     background-position: -214px -77px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 14px;
     height: 13px;
   }
   .sprite_icon-clean {
-    background-position: -38px -81px;
-    background-size: 228px 189px;
+    background-position: -114px 0px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-clipboard {
-    background-position: -76px -81px;
-    background-size: 228px 189px;
+    background-position: -114px -27px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-clipboard,
   .sprite_icon-clipboard--active {
-    background-position: -114px 0px;
-    background-size: 228px 189px;
+    background-position: -114px -54px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-color_correct {
-    background-position: -114px -27px;
-    background-size: 228px 189px;
+    background-position: -114px -81px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-comment {
-    background-position: -114px -54px;
-    background-size: 228px 189px;
+    background-position: 0px -108px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-comment {
-    background-position: -114px -81px;
-    background-size: 228px 189px;
+    background-position: -38px -108px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-convert {
-    background-position: 0px -108px;
-    background-size: 228px 189px;
+    background-position: -76px -108px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-convert {
-    background-position: -206px -157px;
-    background-size: 228px 189px;
+    background-position: -190px -175px;
+    background-size: 228px 205px;
     width: 14.333333333333334px;
     height: 10.333333333333334px;
   }
   .sprite_icon-copy {
-    background-position: -76px -108px;
-    background-size: 228px 189px;
+    background-position: -152px 0px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-delete {
     background-position: -212px -103px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 16px;
     height: 17px;
   }
   .sprite_icon-download {
-    background-position: -152px 0px;
-    background-size: 228px 189px;
+    background-position: -152px -54px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-download {
-    background-position: -152px -27px;
-    background-size: 228px 189px;
+    background-position: -152px -81px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-download_cloud:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -206px -141px;
-    background-size: 228px 189px;
+    background-position: -206px -159px;
+    background-size: 228px 205px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-download_load:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -190px -157px;
-    background-size: 228px 189px;
+    background-position: 0px -189px;
+    background-size: 228px 205px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-expand_off {
-    background-position: -152px -108px;
-    background-size: 228px 189px;
+    background-position: -38px -135px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-expand_on {
-    background-position: 0px -135px;
-    background-size: 228px 189px;
+    background-position: 0px 0px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-file_pdf {
-    background-position: 0px 0px;
-    background-size: 228px 189px;
+    background-position: -114px -135px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-file_pdf {
-    background-position: -76px -135px;
-    background-size: 228px 189px;
+    background-position: -152px -135px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-files_refresh:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -190px -141px;
-    background-size: 228px 189px;
+    background-position: -190px -159px;
+    background-size: 228px 205px;
     width: 16px;
     height: 16px;
   }
   .sprite_icon-info {
-    background-position: -152px -135px;
-    background-size: 228px 189px;
+    background-position: -38px -162px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-info {
-    background-position: 0px -162px;
-    background-size: 228px 189px;
+    background-position: -76px -162px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-look {
-    background-position: -38px -162px;
-    background-size: 228px 189px;
+    background-position: -114px -162px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-look {
-    background-position: -76px -162px;
-    background-size: 228px 189px;
+    background-position: -152px -162px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
@@ -4433,43 +4497,43 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -190px -54px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 28px;
     height: 23px;
   }
   .sprite_icon-process_manage {
-    background-position: -152px -162px;
-    background-size: 228px 189px;
+    background-position: -190px 0px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-process_manage {
-    background-position: -190px 0px;
-    background-size: 228px 189px;
+    background-position: 0px -162px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-recheck {
-    background-position: -114px -162px;
-    background-size: 228px 189px;
+    background-position: 0px -135px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-recheck {
-    background-position: -114px -135px;
-    background-size: 228px 189px;
+    background-position: -152px -108px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-remove {
-    background-position: -152px -81px;
-    background-size: 228px 189px;
+    background-position: -152px -27px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-rename {
-    background-position: -152px -54px;
-    background-size: 228px 189px;
+    background-position: -114px -108px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
@@ -4477,59 +4541,59 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -214px -90px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 12px;
     height: 11px;
   }
   .sprite_icon-test {
-    background-position: -114px -108px;
-    background-size: 228px 189px;
+    background-position: -76px -81px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-to_check {
-    background-position: -38px -108px;
-    background-size: 228px 189px;
+    background-position: -76px -54px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-to_check {
-    background-position: 0px -81px;
-    background-size: 228px 189px;
+    background-position: -38px -54px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .sprite_icon-to_workflow {
     background-position: -190px -103px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 22px;
     height: 22px;
   }
   .sprite_icon-type_file:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -190px -125px;
-    background-size: 228px 189px;
+    background-position: -208px -143px;
+    background-size: 228px 205px;
     width: 18px;
     height: 16px;
   }
   .sprite_icon-type_folder:before {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
-    background-position: -208px -125px;
-    background-size: 228px 189px;
+    background-position: -190px -143px;
+    background-size: 228px 205px;
     width: 18px;
     height: 16px;
   }
   .sprite_icon-view_1p {
     background-position: 0px -54px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-view_1p {
     background-position: -76px -27px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
@@ -4537,19 +4601,19 @@ th {
     content: "";
     background-image: url(../images/spritesheet/sprite_private_room/spritesheet@3w.png);
     background-position: -190px -77px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 24px;
     height: 26px;
   }
   .sprite_icon-zip {
     background-position: -76px 0px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
   .my_files-docs__item-wrap:hover .my_files-docs__item-manage .sprite_icon-zip {
     background-position: -190px -27px;
-    background-size: 228px 189px;
+    background-size: 228px 205px;
     width: 38px;
     height: 27px;
   }
@@ -13543,61 +13607,106 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
   margin-bottom: 2.1em;
   padding-left: 1.4em;
 }
-.calculation__item-name,
-.calculation-form__item-name {
+.calculation__name,
+.calculation-form__name {
   float: left;
   margin-bottom: 1.7em;
   color: #808080;
 }
-.calculation__item-name--title,
-.calculation-form__item-name--title {
+.calculation__name--title,
+.calculation-form__name--title {
   width: 100%;
 }
-.calculation__item-result,
-.calculation-form__item-result {
+.calculation__result,
+.calculation-form__result {
   float: right;
   width: 16em;
   text-align: left;
   color: #444;
 }
-.calculation__item-result--title,
-.calculation-form__item-result--title {
+.calculation__result--title,
+.calculation-form__result--title {
   float: left;
   font-size: 1.43em;
 }
 .calculation-form {
   float: right;
+  padding-top: 1.2em;
+  padding-bottom: 2.6em;
   width: 50%;
   background: #f5f5f5;
   border: 1px solid #ccc;
 }
 .calculation-form__block {
-  border: none;
-}
-.calculation-form {
-  padding-top: 1.2em;
-  padding-bottom: 2.6em;
-}
-.calculation-form__block {
   padding-top: 0;
   padding-bottom: 0;
+  border: none;
 }
 .calculation-form__title {
   margin-top: 0;
 }
-.calculation-form__item-name {
+.calculation-form__name {
   margin-top: 0.4em;
 }
-.calculation-form__item-result {
+.calculation-form__result {
   position: relative;
 }
-.calculation-form__item-input {
+.calculation-form__result input {
+  outline: none;
+}
+.calculation-form__result-select:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: #9f9f9f transparent;
+}
+.calculation-form__result-select--active ul {
+  display: block;
+}
+.calculation-form__input {
   width: 100%;
   padding: 0.43em;
   border: 1px solid #999;
 }
-.calculation-form__item-dropdown {
+.calculation-form__dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: #444;
+  border: 1px solid #999;
+  border-top: none;
+  z-index: 10;
+}
+.calculation-form__dropdown li:first-child {
+  color: #A9A9A9;
+}
+.calculation-form__dropdown a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0.43em;
+}
+.calculation-form__dropdown a:hover,
+.calculation-form__dropdown a:active,
+.calculation-form__dropdown a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.calculation-form__dropdown a:hover,
+.calculation-form__dropdown a:active {
+  background: #BEE3FA;
 }
 .calculation-form-input input {
   padding: 0.43em;
@@ -13637,6 +13746,12 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
 .calculation-form-dealing__btn:last-child {
   float: right;
   margin-right: 1.125em;
+}
+.private_room-archive {
+  position: fixed;
+  top: 15px;
+  left: 5%;
+  width: 90%;
 }
 .footer {
   position: relative;

@@ -388,3 +388,53 @@ function changing(item) {
 		};
 	};
 });
+
+;$(document).ready(function() {
+	function DropDown(el) {
+    this.dd = el;
+    this.placeholder = this.dd.children('input');
+    this.opts = this.dd.find('ul.calculation-form__dropdown > li');
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+}
+DropDown.prototype = {
+    initEvents : function() {
+        var obj = this;
+ 
+        obj.dd.on('click', function(event){
+            $(this).toggleClass('calculation-form__result-select--active');
+            return false;
+        });
+ 
+        obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+          if (obj.val === '<Выбрать>') {
+            obj.placeholder.val('');
+          } else {
+            obj.placeholder.val(obj.val);
+          }
+        });
+    },
+    getValue : function() {
+        return this.val;
+    },
+    getIndex : function() {
+        return this.index;
+    }
+}
+ 
+$(function() {
+  var dd_arr = $('.calculation-form__result-select');
+  
+  dd_arr.each(function() {
+    var dd = new DropDown( $(this) );
+ 
+    $(document).click(function() {
+        $('.calculation-form__result-select').removeClass('calculation-form__result-select--active');
+    });
+  });
+});
+});

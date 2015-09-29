@@ -54,6 +54,12 @@ var images_private = {
       name: 'rename_small'
     , class: 'before'
     }, {
+      name: 'archive_icons'
+    , class: 'before'
+    }, {
+      name: 'archive_list'
+    , class: 'before'
+    }, {
 		name: 'clipboard'
 	,	template: function (r, w) {
 			var name1 = file_manage_sprite_tabl(this.name);
@@ -492,4 +498,4 @@ var sprite_build = sprite_create(images);
 var sprite_form = sprite_create(images_form);
 var sprite_private = sprite_create(images_private);
 
-module.exports = sprite_form;
+module.exports = sprite_private;

@@ -1,0 +1,88 @@
+-var pageName = pageClass + '-archive'
+
+mixin pageMenu(name, items)
+	each item, i in items
+		if i === 0
+			input(class=name + '__inputs' type='radio' name=name id=name + '--' + item.id checked)
+		else
+			input(class=name + '__inputs' type='radio' name=name id=name + '--' + item.id)
+	
+	div(class=name)
+		ul.clearfix(class=name + '__controls')
+			each item in items
+				li(class=name + '__item')
+					label(class=name + '__name' + ' ' + name + '__name--' + item.id + ' ' + 'sprite_icon-archive_' + item.id)
+
+mixin archive_icons(name, items)
+	each item in items
+		li(class = name + '__item' + ' ' + name + '__item--' + item.id)
+			.checkbox checkbox
+			div(class = name + '__img')
+				+picture({
+					name: item.id,
+					adress: '../images/private_room/archive/' + item.id + '/' + item.id + '@',
+					ext: 'jpg'
+				}, {
+					main: {
+						width: 156
+					}
+				})
+			p(class = name + '__title')
+				span(class = name + '__title-author')=item.title.author
+				span(class = name + '__title-name')=item.title.name
+			ul.clearfix(class = name + '__actions')
+				+archive_icons_actions(name, [{
+					id: 'google_disk',
+					href: '#'
+				}, {
+					id: 'drop_box',
+					href: '#'
+				}, {
+					id: 'share',
+					href: '#'
+				}, {
+					id: 'to_archive',
+					href: '#'
+				}])
+
+mixin archive_icons_actions(name, actions)
+	each action in actions
+		li(class = name + '__action')
+			a(class = name + '__act' + ' ' + name + '__act--' + action.id href=action.href)
+
+div(class=pageName)
+	p(class=pageName + '__title') Архив проектов
+		a(class=pageName + '__close' href='#')
+	+pageMenu(pageName + '-nav', [{
+		id: 'icons'
+	}, {
+		id: 'list'
+	}])
+	div(class=pageName + '__block' + ' ' + pageName + '_icons')
+		ul(class=pageName + '_icons__items')
+			+archive_icons(pageName + '_icons', [{
+				id: 'devero',
+				title: {
+					author: 'Джуд Деверо',
+					name: 'Принцесса и Золушка'
+				}
+			}, {
+				id: 'zankovsky',
+				title: {
+					author: 'А. Н. Занковский',
+					name: 'Организационная психология'
+				}
+			}, {
+				id: 'dontsova',
+				title: {
+					author: 'Дарья Донцова',
+					name: 'Яблоко Монте - Кристо'
+				}
+			}, {
+				id: 'ledbiter',
+				title: {
+					author: 'Чарльз Ледбитер',
+					name: 'Жизнь до и после'
+				}
+			}])
+	div(class=pageName + '__block' + ' ' + pageName + '_list')

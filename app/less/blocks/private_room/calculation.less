@@ -71,8 +71,8 @@
 		padding-left: 1.4em;
 	}
 	
-	&__item, &-form__item {
-		&-name {
+	&, &-form {
+		&__name {
 			float: left;
 			margin-bottom: 1.7em;
 			color: #808080;
@@ -80,7 +80,7 @@
 			&--title {width: 100%;}
 		}
 		
-		&-result {
+		&__result {
 			float: right;
 			width: 16em;
 			text-align: left;
@@ -95,38 +95,77 @@
 	
 	&-form {
 		float: right;
+		padding-top: 1.2em;
+		padding-bottom: 2.6em;
 		width: 50%;
 		background: #f5f5f5;
 		border: 1px solid #ccc;
 		
 		&__block {
-			border: none;
-		}
-	}
-	
-	&-form {
-		padding-top: 1.2em;
-		padding-bottom: 2.6em;
-		
-		&__block {
 			padding-top: 0;
 			padding-bottom: 0;
+			border: none;
 		}
 		
 		&__title {margin-top: 0;}
 		
-		&__item {
-			&-name {margin-top: 0.4em;}
-			
-			&-result {position: relative;}
-			
-			&-input {
-				width: 100%;
-				padding: 0.43em;
-				border: 1px solid #999;
+		&__name {margin-top: 0.4em;}
+
+		&__result {
+			position: relative;
+
+			input {outline: none;}
+
+			&-select {
+				&:after {
+					content: "";
+					width: 0;
+					height: 0;
+					position: absolute;
+					right: 15px;
+					top: 50%;
+					margin-top: -3px;
+					border-width: 6px 6px 0 6px;
+					border-style: solid;
+					border-color: #9f9f9f transparent;
+				}
+				
+				&--active {
+					ul {display: block;}
+				}
 			}
-			
-			&-dropdown {display: none;}
+		}
+
+		&__input {
+			width: 100%;
+			padding: 0.43em;
+			border: 1px solid #999;
+		}
+		
+		&__dropdown {
+			.reset-ul();
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: white;
+			color: #444;
+			border: 1px solid #999;
+			border-top: none;
+			z-index: 10;
+
+			li {
+				&:first-child {color: #A9A9A9;}
+			}
+
+			a {
+				.reset-a();
+				display: block;
+				padding: 0.43em;
+
+				&:hover, &:active {background: #BEE3FA;}
+			}
 		}
 		
 		&-input {
