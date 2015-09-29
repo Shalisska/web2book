@@ -99,7 +99,7 @@ var sprite_form_arr = [{
 		retina: 140
 	}]
 }, {
-	img_dir: 'form/sprite/close--gray',
+	img_dir: 'form/sprite/close',
 	dest: [{
 		width: 0,
 		retina: 10

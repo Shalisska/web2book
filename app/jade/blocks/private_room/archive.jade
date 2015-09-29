@@ -8,42 +8,44 @@ mixin pageMenu(name, items)
 			input(class=name + '__inputs' type='radio' name=name id=name + '--' + item.id)
 	
 	div(class=name)
-		ul.clearfix(class=name + '__controls')
+		ul.clearfix(class=name + '__items')
 			each item in items
 				li(class=name + '__item')
-					label(class=name + '__name' + ' ' + name + '__name--' + item.id + ' ' + 'sprite_icon-archive_' + item.id)
+					label.my_files__btn--gray(class=name + '__name' + ' ' + name + '__name--' + item.id + ' ' + 'sprite_icon-archive_' + item.id for=name + '--' + item.id)
 
 mixin archive_icons(name, items)
 	each item in items
 		li(class = name + '__item' + ' ' + name + '__item--' + item.id)
-			.checkbox checkbox
-			div(class = name + '__img')
-				+picture({
-					name: item.id,
-					adress: '../images/private_room/archive/' + item.id + '/' + item.id + '@',
-					ext: 'jpg'
-				}, {
-					main: {
-						width: 156
-					}
-				})
-			p(class = name + '__title')
-				span(class = name + '__title-author')=item.title.author
-				span(class = name + '__title-name')=item.title.name
-			ul.clearfix(class = name + '__actions')
-				+archive_icons_actions(name, [{
-					id: 'google_disk',
-					href: '#'
-				}, {
-					id: 'drop_box',
-					href: '#'
-				}, {
-					id: 'share',
-					href: '#'
-				}, {
-					id: 'to_archive',
-					href: '#'
-				}])
+			input(type='checkbox' id=item.id class = pageName + '__checkbox-input' name=pageName + '__item')
+			label.my_files__check(class = pageName + '__checkbox' for = item.id)
+			div(class = name + '__box')
+				div(class = name + '__img')
+					+picture({
+						name: item.id,
+						adress: '../images/private_room/archive/' + item.id + '/' + item.id + '@',
+						ext: 'jpg'
+					}, {
+						main: {
+							width: 156
+						}
+					})
+				p(class = name + '__title')
+					span(class = name + '__title-author')=item.title.author
+					span(class = name + '__title-name')=item.title.name
+				ul.clearfix(class = name + '__actions')
+					+archive_icons_actions(name, [{
+						id: 'google_disk',
+						href: '#'
+					}, {
+						id: 'drop_box',
+						href: '#'
+					}, {
+						id: 'share',
+						href: '#'
+					}, {
+						id: 'to_archive',
+						href: '#'
+					}])
 
 mixin archive_icons_actions(name, actions)
 	each action in actions
@@ -52,7 +54,7 @@ mixin archive_icons_actions(name, actions)
 
 div(class=pageName)
 	p(class=pageName + '__title') Архив проектов
-		a(class=pageName + '__close' href='#')
+	a.sprite_icon-close--white(class=pageName + '__close' href='#')
 	+pageMenu(pageName + '-nav', [{
 		id: 'icons'
 	}, {
