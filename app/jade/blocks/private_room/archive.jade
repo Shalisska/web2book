@@ -32,7 +32,7 @@ mixin archive_icons(name, items)
 				p(class = name + '__title')
 					span(class = name + '__title-author')=item.title.author
 					span(class = name + '__title-name')=item.title.name
-				ul.clearfix(class = name + '__actions')
+				ul(class = name + '__actions')
 					+archive_icons_actions(name, [{
 						id: 'google_disk',
 						href: '#'
@@ -43,14 +43,72 @@ mixin archive_icons(name, items)
 						id: 'share',
 						href: '#'
 					}, {
-						id: 'to_archive',
+						id: 'archive',
 						href: '#'
 					}])
 
 mixin archive_icons_actions(name, actions)
 	each action in actions
 		li(class = name + '__action')
-			a(class = name + '__act' + ' ' + name + '__act--' + action.id href=action.href)
+			a(class = name + '__act' + ' ' + name + '__act--' + action.id + ' ' + 'sprite_private_room' + ' ' + 'sprite_icon-' + action.id href=action.href)
+
+
+mixin archive_list(name, items)
+	div(class = name + '__table')
+		p(class = name + '__title' + ' ' + name + '__title--table') Название проекта
+		ul.clearfix(class = name + '__items')
+			each item in items
+				li(class = name + '__item')
+					a(class = name + '__name' + ' ' + name + '__name--' + item.id href = '#')=item.name
+
+	div(class = name + '__info')
+		p(class = name + '__title' + ' ' + name + '__title--info') Информация
+		ul.clearfix(class = name + '__actions')
+			li(class = name + '__action')
+				a.sprite_private_room.sprite_icon-to_archive(class = name + '__act' + ' ' + name + '__act--to_archive' href = '#')
+			li(class = name + '__action')
+				a.sprite_private_room.sprite_icon-from_archive(class = name + '__act' + ' ' + name + '__act--from_archive' href = '#')
+		div(class = name + '__info__block')
+			+archive_list_item(name + '__info', {
+				id: 'devero',
+				info: [{
+					name: 'Название',
+					val: [
+						'Джуд Деверо',
+						'Принцесса и золушка'
+					]
+				}, {
+					name: 'Размер',
+					val: '26 MB'
+				}, {
+					name: 'Дата архивирования',
+					val: '14.11.2012'
+				}, {
+					name: 'Дата утверждения',
+					val: '26.07.2012'
+				}]
+			})
+
+mixin archive_list_item(name, elem)
+	div(class = name + '__img')=elem.id
+		+picture({
+			name: elem.id,
+			adress: '../images/private_room/archive/' + elem.id + '/' + elem.id + '@',
+			ext: 'jpg'
+		}, {
+			main: {
+				width: 156
+			}
+		})
+	ul(class = name + '__items')
+		each el in elem.info
+			li.clearfix(class = name + '__item')
+				span(class = name + '__name')=el.name
+				if typeof el.val !== string
+					each e in el.val
+						span(class = name + '__val')=e
+				else
+					span(class = name + '__val')=el.val
 
 div(class=pageName)
 	p(class=pageName + '__title') Архив проектов
@@ -61,8 +119,56 @@ div(class=pageName)
 		id: 'list'
 	}])
 	div(class=pageName + '__block' + ' ' + pageName + '_icons')
-		ul(class=pageName + '_icons__items')
+		ul.clearfix(class=pageName + '_icons__items')
 			+archive_icons(pageName + '_icons', [{
+				id: 'devero',
+				title: {
+					author: 'Джуд Деверо',
+					name: 'Принцесса и Золушка'
+				}
+			}, {
+				id: 'zankovsky',
+				title: {
+					author: 'А. Н. Занковский',
+					name: 'Организационная психология'
+				}
+			}, {
+				id: 'dontsova',
+				title: {
+					author: 'Дарья Донцова',
+					name: 'Яблоко Монте - Кристо'
+				}
+			}, {
+				id: 'ledbiter',
+				title: {
+					author: 'Чарльз Ледбитер',
+					name: 'Жизнь до и после'
+				}
+			}, {
+				id: 'devero',
+				title: {
+					author: 'Джуд Деверо',
+					name: 'Принцесса и Золушка'
+				}
+			}, {
+				id: 'zankovsky',
+				title: {
+					author: 'А. Н. Занковский',
+					name: 'Организационная психология'
+				}
+			}, {
+				id: 'dontsova',
+				title: {
+					author: 'Дарья Донцова',
+					name: 'Яблоко Монте - Кристо'
+				}
+			}, {
+				id: 'ledbiter',
+				title: {
+					author: 'Чарльз Ледбитер',
+					name: 'Жизнь до и после'
+				}
+			}, {
 				id: 'devero',
 				title: {
 					author: 'Джуд Деверо',
@@ -88,3 +194,46 @@ div(class=pageName)
 				}
 			}])
 	div(class=pageName + '__block' + ' ' + pageName + '_list')
+		+archive_list(pageName + '_list', [{
+			id: 'a31-a100',
+			name: 'А31—А100'
+		}, {
+			id: 'wtf',
+			name: 'WTF'
+		}, {
+			id: 'the_roof_is_on_fire_you_fat_beaches',
+			name: 'The_roof_is_on_fire_you_fat_beaches'
+		}, {
+			id: 'the_roof_is_on_fire_you_fat_beaches_1',
+			name: 'The_roof_is_on_fire_you_fat_beaches_1'
+		}, {
+			id: 'the_roof_is_on_fire_you_fat_beaches_last',
+			name: 'The_roof_is_on_fire_you_fat_beaches_last'
+		}, {
+			id: '12_obezyan',
+			name: '12_obezyan'
+		}, {
+			id: 'petrovich',
+			name: 'Petrovich'
+		}, {
+			id: 'r2-d2',
+			name: 'r2-d2'
+		}, {
+			id: 'r2-d2_1',
+			name: 'r2-d2'
+		}, {
+			id: 'kniga_12.33',
+			name: 'Kniga_12.33'
+		}, {
+			id: 'pitomnik',
+			name: 'Pitomnik'
+		}, {
+			id: 'zuzu_1294',
+			name: 'Zuzu_1294'
+		}, {
+			id: 'provaid_igrus',
+			name: 'Provaid Igrus'
+		}, {
+			id: 'ochumet',
+			name: 'Ochumet'
+		}])

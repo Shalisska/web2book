@@ -1,5 +1,5 @@
 .private_room-archive {
-	position: fixed;
+	position: absolute;
 	top: 25px;
 	left: 8%;
 	width: 84%;
@@ -74,22 +74,143 @@
 	&__block {}
 	
 	&_icons {
+		display: none;
+		
 		&__items {
 			.reset-ul();
+			padding: 1.1em 0.7em;
+		}
+		
+		&__box {
+			position: relative;
+			margin: 0 2.1%;
+			padding: 1.3em 0.5em 0.7em;
+			height: 360px;
+			text-align: center;
+			border-radius: 5px;
 		}
 		
 		&__item {
+			position: relative;
 			float: left;
 			width: 25%;
+			cursor: pointer;
+		}
+		
+		&__img {
+			position: relative;
+			display: inline-block;
+			padding-bottom: 52px;
+			border-radius: 5px;
+			box-shadow: inset 0 0 14px 0 rgba(255, 255, 255, .75);
+			
+			&:before, &:after {
+				content: '';
+				position: absolute;
+				left: 50%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			
+			&:before {
+				width: 150px;
+				height: 62px;
+				margin-left: -(150px / 2);
+				top: -10px;
+				background-size: 150px;
+				z-index: -1;
+				.retina('../images/private_room/archive/box/archive_back@', 150);
+			}
+			
+			&:after {
+				width: 174px;
+				height: 88px;
+				margin-left: -(174px / 2);
+				background-size: 174px;
+				bottom: -5px;
+				.retina('../images/private_room/archive/box/archive_box@', 174);
+			}
+			
+			img {
+				position: relative;
+				display: block;
+				border: 1px solid #8c8c8c;
+				border-radius: 5px;
+				z-index: -1;
+			}
+		}
+		
+		&__title {
+			padding: 0 1em;
+			color: #333;
+			
+			span {
+				display: block;
+				line-height: 1.42;
+			}
+		}
+		
+		&__actions {
+			.reset-ul();
+			position: absolute;
+			display: none;
+			padding-top: 17px;
+			width: 105.4%;
+			height: 61px;
+			top: 208px;
+			left: -(5.4% / 2);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			.retina('../images/private_room/archive/box/archive_actions@', 240);
+		}
+		
+		&__action {
+			display: inline-block;
+		}
+		
+		&__act:hover {
+			background-color: #97bee2;
 		}
 	}
 	
 	&__checkbox {
+		position: absolute;
+		right: 5%;
+		top: 3%;
+		width: 13px;
+		height: 13px;
+		z-index: 5;
+		
 		&-input {
 			display: none;
 			&:checked ~ label:after {display: block;}
 		}
 	}
 	
+	&_icons__item:hover &__checkbox:before {border-color: #353535;}
 	
+	&_icons__item:hover &_icons__box {
+			background-color: rgba(0, 0, 0, .5);
+			border: 1px solid #959595;
+			box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .5);
+		}
+	
+	&_icons__item:hover &_icons__actions {display: block;}
+	
+	&_list {
+		position: relative;
+		padding: 1.7em 1em 2.8em;
+		
+		&__table {
+			margin-right: 20.8em;
+		}
+		
+		&__info {
+			position: absolute;
+			top: 1.7em;
+			right: 1em;
+			width: 20.8em;
+		}
+	}
 }
