@@ -54,15 +54,20 @@ mixin archive_icons_actions(name, actions)
 
 
 mixin archive_list(name, items)
-	div(class = name + '__table')
-		p(class = name + '__title' + ' ' + name + '__title--table') Название проекта
-		ul.clearfix(class = name + '__items')
-			each item in items
-				li(class = name + '__item')
-					a(class = name + '__name' + ' ' + name + '__name--' + item.id href = '#')=item.name
+	div.my_files-table(class = name + '__table')
+		.my_files-table__header.clearfix
+			p.my_files-table__header-item(class = name + '__title' + ' ' + name + '__title--table') Название проекта
+		ul.my_files-table__body.clearfix(class = name + '__items')
+			each item, i in items
+				-var color = 'color1'
+				if i%2 !== 0
+					-color = 'color2'
+				li.my_files-table__items.clearfix(class = name + '__item' + ' ' + 'my_files-table__items--' + color)
+					a.my_files-table__item(class = name + '__name' + ' ' + name + '__name--' + item.id href = '#')=item.name
 
 	div(class = name + '__info')
-		p(class = name + '__title' + ' ' + name + '__title--info') Информация
+		.my_files-table__header.clearfix
+			p.my_files-table__header-item(class = name + '__title' + ' ' + name + '__title--info') Информация
 		ul.clearfix(class = name + '__actions')
 			li(class = name + '__action')
 				a.sprite_private_room.sprite_icon-to_archive(class = name + '__act' + ' ' + name + '__act--to_archive' href = '#')
@@ -72,25 +77,29 @@ mixin archive_list(name, items)
 			+archive_list_item(name + '__info', {
 				id: 'devero',
 				info: [{
+					id: 'name',
 					name: 'Название',
 					val: [
 						'Джуд Деверо',
 						'Принцесса и золушка'
 					]
 				}, {
+					id: 'size',
 					name: 'Размер',
 					val: '26 MB'
 				}, {
+					id: 'archive',
 					name: 'Дата архивирования',
 					val: '14.11.2012'
 				}, {
+					id: 'approve',
 					name: 'Дата утверждения',
 					val: '26.07.2012'
 				}]
 			})
 
 mixin archive_list_item(name, elem)
-	div(class = name + '__img')=elem.id
+	div(class = name + '__img')
 		+picture({
 			name: elem.id,
 			adress: '../images/private_room/archive/' + elem.id + '/' + elem.id + '@',
@@ -104,9 +113,10 @@ mixin archive_list_item(name, elem)
 		each el in elem.info
 			li.clearfix(class = name + '__item')
 				span(class = name + '__name')=el.name
-				if typeof el.val !== string
-					each e in el.val
-						span(class = name + '__val')=e
+				if el.id === 'name'
+					div(class = name + '__val')
+						each e in el.val
+							span=e
 				else
 					span(class = name + '__val')=el.val
 
