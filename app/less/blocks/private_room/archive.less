@@ -57,6 +57,7 @@
 			@w: 25px;
 			width: @w;
 			height: @w;
+			cursor: pointer;
 			
 			&:before {
 				position: absolute;
@@ -78,7 +79,7 @@
 		
 		&__items {
 			.reset-ul();
-			padding: 1.1em 0.7em;
+			padding: 1.1em 0.7em 1.8em;
 		}
 		
 		&__box {
@@ -172,6 +173,39 @@
 		&__act:hover {
 			background-color: #97bee2;
 		}
+		
+		&__nav {
+			margin-bottom: 6em;
+			
+			&__items {
+				.reset-ul();
+				text-align: center;
+			}
+			
+			&__item {
+				display: inline-block;
+				
+				a {
+					display: block;
+					margin: 0 0.5em;
+					padding: 0.3em;
+					
+					&:hover, &:active {
+						background: #900;
+						color: white;
+					}
+				}
+				
+				&--active a {
+					background: #900;
+					color: white;
+					text-decoration: none;
+				}
+				
+				&--next a {margin-right: 0.2em;}
+				&--last a {margin-left: -0.1em;}
+			}
+		}
 	}
 	
 	&__checkbox {
@@ -199,6 +233,7 @@
 	&_icons__item:hover &_icons__actions {display: block;}
 	
 	&_list {
+		display: none;
 		position: relative;
 		padding: 1.7em 1em 2.8em;
 		
@@ -272,4 +307,26 @@
 			}
 		}
 	}
+	
+	.private_room-archive-nav(2);
+}
+
+
+.private_room-archive-nav(@n, @i: 1) when (@i =< @n) {
+	@items:
+		icons,
+		list;
+	@item: extract(@items, @i);
+	
+	input#private_room-archive-nav--@{item}:checked ~ &-nav label[for='private_room-archive-nav--@{item}'] {
+		background: linear-gradient(to top, #c2c2c2, #acacac);
+		border-color: #616161;
+		box-shadow:
+			inset 0 2px 2px 0 rgba(0, 0, 0, 0.5),
+			inset 0 0px 3px 0 rgba(0, 0, 0, 0.3);
+	}
+		
+	input#private_room-archive-nav--@{item}:checked ~ .private_room-archive_@{item} {display: block;}
+	
+	.private_room-archive-nav(@n, (@i + 1));
 }

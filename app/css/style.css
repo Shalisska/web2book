@@ -13955,6 +13955,7 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
 .private_room-archive-nav__name {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 .private_room-archive-nav__name:before {
   position: absolute;
@@ -13976,7 +13977,7 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding: 1.1em 0.7em;
+  padding: 1.1em 0.7em 1.8em;
 }
 .private_room-archive_icons__box {
   position: relative;
@@ -14106,6 +14107,39 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
 .private_room-archive_icons__act:hover {
   background-color: #97bee2;
 }
+.private_room-archive_icons__nav {
+  margin-bottom: 6em;
+}
+.private_room-archive_icons__nav__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.private_room-archive_icons__nav__item {
+  display: inline-block;
+}
+.private_room-archive_icons__nav__item a {
+  display: block;
+  margin: 0 0.5em;
+  padding: 0.3em;
+}
+.private_room-archive_icons__nav__item a:hover,
+.private_room-archive_icons__nav__item a:active {
+  background: #900;
+  color: white;
+}
+.private_room-archive_icons__nav__item--active a {
+  background: #900;
+  color: white;
+  text-decoration: none;
+}
+.private_room-archive_icons__nav__item--next a {
+  margin-right: 0.2em;
+}
+.private_room-archive_icons__nav__item--last a {
+  margin-left: -0.1em;
+}
 .private_room-archive__checkbox {
   position: absolute;
   right: 5%;
@@ -14132,6 +14166,7 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
   display: block;
 }
 .private_room-archive_list {
+  display: none;
   position: relative;
   padding: 1.7em 1em 2.8em;
 }
@@ -14206,6 +14241,22 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
   float: right;
 }
 .private_room-archive_list__info__val span {
+  display: block;
+}
+input#private_room-archive-nav--icons:checked ~ .private_room-archive-nav label[for='private_room-archive-nav--icons'] {
+  background: linear-gradient(to top, #c2c2c2, #acacac);
+  border-color: #616161;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.5), inset 0 0px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.private_room-archive input#private_room-archive-nav--icons:checked ~ .private_room-archive_icons {
+  display: block;
+}
+input#private_room-archive-nav--list:checked ~ .private_room-archive-nav label[for='private_room-archive-nav--list'] {
+  background: linear-gradient(to top, #c2c2c2, #acacac);
+  border-color: #616161;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.5), inset 0 0px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.private_room-archive input#private_room-archive-nav--list:checked ~ .private_room-archive_list {
   display: block;
 }
 .footer {

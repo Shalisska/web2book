@@ -98,6 +98,26 @@ mixin archive_list(name, items)
 				}]
 			})
 
+mixin archive_icons_nav(name)
+	nav(class = name)
+		ul.clearfix(class = name + '__items')
+			li(class = name + '__item' + ' ' + name + '__item--first')
+				a(class = name + '__name' href = '#') 1
+			li(class = name + '__item' + ' ' + name + '__item--prev')
+				a(class = name + '__name' href = '#') 11—20
+			-var num = 21
+			while num < 31
+				-var active_class = ''
+				if num === 23
+					-active_class = ' ' + name + '__item--active'
+				li(class = name + '__item' + ' ' + name + '__item--stek' + active_class)
+					a(class = name + '__name' href = '#')= num++
+			li(class = name + '__item' + ' ' + name + '__item--next')
+				a(class = name + '__name' href = '#') 31—40
+			span из
+			li(class = name + '__item' + ' ' + name + '__item--last')
+				a(class = name + '__name' href = '#') 176
+
 mixin archive_list_item(name, elem)
 	div(class = name + '__img')
 		+picture({
@@ -203,6 +223,9 @@ div(class=pageName)
 					name: 'Жизнь до и после'
 				}
 			}])
+		+archive_icons_nav(pageName + '_icons__nav')
+			
+		
 	div(class=pageName + '__block' + ' ' + pageName + '_list')
 		+archive_list(pageName + '_list', [{
 			id: 'a31-a100',
