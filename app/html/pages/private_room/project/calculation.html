@@ -560,8 +560,8 @@
     </div><a href="#" class="scrollTop">Наверх</a>
     <div class="private_room-archive">
       <p class="private_room-archive__title">Архив проектов</p><a href="#" class="sprite_icon-close--white private_room-archive__close"></a>
-          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--icons" checked class="private_room-archive-nav__inputs">
-          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--list" class="private_room-archive-nav__inputs">
+          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--icons" class="private_room-archive-nav__inputs">
+          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--list" checked class="private_room-archive-nav__inputs">
           <div class="private_room-archive-nav">
             <ul class="clearfix private_room-archive-nav__items">
               <li class="private_room-archive-nav__item">
@@ -573,7 +573,7 @@
             </ul>
           </div>
       <div class="private_room-archive__block private_room-archive_icons">
-        <ul class="clearfix private_room-archive_icons__items">
+            <ul class="clearfix private_room-archive_icons__items">
               <li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
                 <input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
                 <label for="devero" class="my_files__check private_room-archive__checkbox"></label>
@@ -778,7 +778,7 @@
                   </ul>
                 </div>
               </li>
-        </ul>
+            </ul>
             <nav class="private_room-archive_icons__nav">
               <ul class="clearfix private_room-archive_icons__nav__items">
                 <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--first"><a href="#" class="private_room-archive_icons__nav__name">1</a></li>
@@ -803,22 +803,31 @@
               <div class="my_files-table__header clearfix">
                 <p class="my_files-table__header-item private_room-archive_list__title private_room-archive_list__title--table">Название проекта</p>
               </div>
-              <ul class="my_files-table__body clearfix private_room-archive_list__items">
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--a31-a100">А31—А100</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--wtf">WTF</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches">The_roof_is_on_fire_you_fat_beaches</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_1">The_roof_is_on_fire_you_fat_beaches_1</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_last">The_roof_is_on_fire_you_fat_beaches_last</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--12_obezyan">12_obezyan</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--petrovich">Petrovich</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2">r2-d2</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2_1">r2-d2</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--kniga_12.33">Kniga_12.33</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--pitomnik">Pitomnik</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--zuzu_1294">Zuzu_1294</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--provaid_igrus">Provaid Igrus</a></li>
-                <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--ochumet">Ochumet</a></li>
-              </ul>
+              <div class="private_room-archive_list__slider">
+                <div class="viewport private_room-archive_list__slider-box">
+                  <ul class="my_files-table__body overview clearfix private_room-archive_list__items">
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--a31-a100">А31—А100</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--wtf">WTF</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches">The_roof_is_on_fire_you_fat_beaches</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_1">The_roof_is_on_fire_you_fat_beaches_1</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_last">The_roof_is_on_fire_you_fat_beaches_last</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--12_obezyan">12_obezyan</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--petrovich">Petrovich</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2">r2-d2</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2_1">r2-d2</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--kniga_12.33">Kniga_12.33</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--pitomnik">Pitomnik</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--zuzu_1294">Zuzu_1294</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--provaid_igrus">Provaid Igrus</a></li>
+                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--ochumet">Ochumet</a></li>
+                  </ul>
+                </div>
+                <div class="scrollbar private_room-archive_list__slider-scrollbar">
+                  <div class="track private_room-archive_list__slider-track">
+                    <div class="thumb private_room-archive_list__slider-thumb"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="private_room-archive_list__info">
               <div class="my_files-table__header clearfix">

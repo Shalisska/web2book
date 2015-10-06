@@ -189,6 +189,7 @@
 					display: block;
 					margin: 0 0.5em;
 					padding: 0.3em;
+					color: #06c;
 					
 					&:hover, &:active {
 						background: #900;
@@ -249,6 +250,51 @@
 		
 		&__table {margin-right: 20.8em;}
 		
+		&__slider {
+			position: relative;
+			height: 42.1em;
+			font-size: 0.86em;
+			border: 1px solid rgba(0, 0, 0, 0.14);
+			
+			&-box {
+				position: relative;
+				overflow: hidden;
+				margin-right: 11px;
+				height: 100%;
+			}
+			
+			&-scrollbar {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 11px;
+				border-left: 1px solid rgba(0, 0, 0, 0.14);
+			}
+			
+			&-track {
+				position: relative;
+				height: 100%;
+			}
+			
+			&-thumb {
+				position: absolute;
+				width: 6px;
+				left: 50%;
+				margin-left: -3px;
+				background: #808080;
+				border-radius: 5px;
+			}
+		}
+		
+		&__items {
+			position: absolute;
+		}
+		
+		&__item {
+			font-size: 1em;
+			border: none !important;
+		}
+		
 		&__name {
 			.reset-a();
 			padding-left: 3.9em;
@@ -274,7 +320,7 @@
 			
 			&__block {
 				padding: 1.6em;
-				height: 39em;
+				height: 38.95em;
 				font-size: 0.86em;
 				border-right: 1px solid rgba(0, 0, 0, 0.14);
 				border-bottom: 1px solid rgba(0, 0, 0, 0.14);

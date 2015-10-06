@@ -30,31 +30,6 @@ jQuery(document).ready(function($){
 
 });
 
-////скроллинг offers
-//;$(document).ready(function() {
-//  var sliders = $('.offers-item-slider');
-//  
-//  function sizing_track(num, size) {
-//    if (num[(num.length - 1)] === '%') {
-//       num = num.slice(0, -1) / 100;
-//    } else {
-//      num = num.slice(0, -2) / size.slice(0, -2);
-//    }
-//    return num;
-//  }
-//  
-//  for(var i = 0; i < sliders.length; i++) {
-//    var slider = $(sliders[i]);
-//    
-//    slider.tinyscrollbar({
-//        axis: "x"
-//      ,	trackSizePer: sizing_track(slider.find('.scrollbar').css('width'), slider.css('width'))
-//      ,	thumbSize: 80
-//      , mainContainer: $('.offers-slider__box')
-//    });
-//  };
-//});
-
 //всплывающие описания offers
 ;$(document).ready(function() {
 var slide = $('.offers-item__item');
@@ -187,28 +162,6 @@ slide.hover(function () {
 		after: 'a.offers-products__info-more'
 	});
 });
-
-
-//
-//$(document).ready(function(){
-//	// плавное перемещение страницы к нужному блоку
-//	$('.header-menu .nav-item a').click(function () {
-//		elementClick = $(this).attr("href");
-//		destination = $(elementClick).offset().top;
-//		$("body,html").animate({scrollTop: destination }, 800);
-//	});
-//});
-//
-//$(document).ready(function() {
-//	var arr = [$('.popular'), $('.features'), $('.workmap'), $('.services'), $('.equipment')];
-//	
-//	for(var i=0; i<arr.length; i++) {
-//		$(arr[i]).addClass("scrolling_hidden").viewportChecker({
-//			classToAdd: 'scrolling_visible animation',
-//			offset: 100
-//		});
-//	};
-//});
 
 ;$(document).ready(function() {
 function clicking (name) {
@@ -437,4 +390,38 @@ $(function() {
     });
   });
 });
+});
+
+//cкролл личный кабинет
+;$(document).ready(function() {
+	var list = $('.private_room-archive_list__items');
+	var items = list.children('li');
+	var len = items.length;
+	var val = 20;
+
+	while (len < val) {
+	  list.append('<li class = "my_files-table__items clearfix private_room-archive_list__item"></li>');
+	  items = list.children('li');
+		len = items.length;
+	  if ($(items[(len - 2)]).hasClass('my_files-table__items--color1')) {
+		$(items[(len - 1)]).addClass('my_files-table__items--color2')
+	  } else {
+		$(items[(len - 1)]).addClass('my_files-table__items--color1')
+	  }
+	  $(items[(len - 1)]).attr('style', 'height: 3em');
+	};
+	
+	function scroll(slide) {
+	  slide.tinyscrollbar({
+		axis: "y"
+		,	thumbSize: 120
+	  });
+
+	  var scrollbar = slide.data("plugin_tinyscrollbar")
+	  scrollbar.update();
+	};
+
+	if (len === val) {
+		scroll($('.private_room-archive_list__slider'));
+	};
 });
