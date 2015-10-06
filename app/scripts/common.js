@@ -392,24 +392,70 @@ $(function() {
 });
 });
 
-//cкролл личный кабинет
-;$(document).ready(function() {
-	var list = $('.private_room-archive_list__items');
-	var items = list.children('li');
-	var len = items.length;
-	var val = 20;
+//минимальное количество рядов в таблице
+(function($, window, undefined){
+$.fn.emptyRows = function(opts) {
+   var defaults = {
+     value: 30
+   , height: '3em'
+   , child: 'li'
+   , classes: ['my_files-table__items', 'private_room-archive_list__item', 'clearfix']
+   , inner: ''
+   };
+ 
+  var options = $.extend(defaults, opts || {});
+  
+  var items = this.children('li');
+  var leng = items.length;
+  
+ 
+   return this.each(function(){ // jQuery chainability
+     while (leng < options.value) {
+		var classes = '"' + options.classes.join(' ') + '"';
+       $(this).append('<li class = ' + classes + '>' + options.inner + '</li>');
+       items = $(this).children(options.child);
+       leng = items.length;
 
-	while (len < val) {
-	  list.append('<li class = "my_files-table__items clearfix private_room-archive_list__item"></li>');
-	  items = list.children('li');
-		len = items.length;
-	  if ($(items[(len - 2)]).hasClass('my_files-table__items--color1')) {
-		$(items[(len - 1)]).addClass('my_files-table__items--color2')
-	  } else {
-		$(items[(len - 1)]).addClass('my_files-table__items--color1')
-	  }
-	  $(items[(len - 1)]).attr('style', 'height: 3em');
-	};
+       if ($(items[(leng - 2)]).hasClass('my_files-table__items--color1')) {
+         $(items[(leng - 1)]).addClass('my_files-table__items--color2')
+       } else {
+         $(items[(leng - 1)]).addClass('my_files-table__items--color1')
+       };
+
+       $(items[(leng - 1)]).attr('style', 'height: ' + options.height);
+     };
+   });
+};
+})(jQuery, window);
+
+//личный кабинет-работа с файлами
+var val = 20;
+var cont = $('.my_files-docs__body-wrap > .my_files-docs__body');
+
+cont.each(function () {
+  $(this).emptyRows({
+      value: val
+    , child: '.my_files-docs__items--lvl0'
+    , classes: [  'my_files-table__items'
+                , 'my_files-docs__items'
+                , 'my_files-docs__items--lvl0'
+                , 'clearfix']
+    , inner: '<div class="clearfix my_files-table__item-wrap my_files-docs__item-wrap">'
+           + '<div class="my_files-table__item my_files-docs__item  my_files-docs__item-size">'
+           + '</div>'
+           + '<div class="my_files-table__item my_files-docs__item  my_files-docs__item-manage">'
+           + '</div>'
+           + '</div>'
+	});
+});
+
+//cкролл архив
+;$(document).ready(function() {
+	var val = 15;
+	
+	$('.private_room-archive_list__items').emptyRows({
+		value: val
+	});
 	
 	function scroll(slide) {
 	  slide.tinyscrollbar({
@@ -421,7 +467,31 @@ $(function() {
 	  scrollbar.update();
 	};
 
-	if (len === val) {
+	if ($('.private_room-archive_list__items').children('li').length === val) {
 		scroll($('.private_room-archive_list__slider'));
+		
+		//height of right part
+		var list = $('.private_room-archive_list__slider');
+		var right_top = $('.private_room-archive_list__actions');
+		var right_bottom = $('.private_room-archive_list__info__block');
+
+		var height_l = list.outerHeight();
+		var height_r = right_top.outerHeight() + right_bottom.outerHeight();
+		var right_delta = right_bottom.outerHeight() - right_bottom.innerHeight();
+
+		if (height_l !== height_r) {
+			var height_r_new = Math.round(height_l - right_top.outerHeight() - right_delta);
+			right_bottom.innerHeight(height_r_new - 1);
+		}
 	};
+});
+
+//open/close archive
+;$(document).ready(function() {
+	var close = $('.private_room-archive__close');
+	
+	close.click(function(e) {
+		e.preventDefault();
+		$('.private_room-archive').toggle();
+	});
 });
