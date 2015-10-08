@@ -82,10 +82,10 @@ mixin faq_more(name, items)
 					a(class = name + '__item-name' href = '#')=item
 
 .popup.faq
-	p.popup__title
-	a.popup__close(href='#')
-	+faq_header('faq-header')
+	p.popup__title FAQ
+	a.popup__close.sprite_icon-close--white(href='#')
 	.faq-block
+		+faq_header('faq-header')
 		aside.faq-sidebar
 			+faq_menu('faq-menu', [{
 				name: 'Управление файлами',

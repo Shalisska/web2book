@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 	});
 	
 	grunt.registerTask('default', [
-		'imagemin',
+//		'imagemin',
 		'clean:build',
 		'copy:build',
 		'copy:build_html',

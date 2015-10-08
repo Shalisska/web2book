@@ -13956,6 +13956,7 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
   margin-right: 1.125em;
 }
 .private_room-archive {
+  display: none;
   position: absolute;
   top: 25px;
   left: 8%;
@@ -14322,6 +14323,126 @@ input#private_room-archive-nav--list:checked ~ .private_room-archive-nav label[f
 }
 .private_room-archive input#private_room-archive-nav--list:checked ~ .private_room-archive_list {
   display: block;
+}
+.popup {
+  position: absolute;
+  top: 25px;
+  left: 8%;
+  width: 84%;
+  background: white;
+  border: 1px solid #bcbdbd;
+  border-radius: 6px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+  z-index: 50;
+}
+.popup__title {
+  margin: 0;
+  padding: 0.9em 0.7em;
+  background-image: linear-gradient(to top, #57bff5 35%, #46a6eb);
+  font-family: 'ArialBold', 'Arial', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border: 1px solid #57bff5;
+  border-radius: 6px 6px 0 0;
+}
+.popup__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+}
+.popup__close:before {
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  top: 50%;
+  margin-top: -5px;
+}
+.faq {
+  background: #e1e3e6;
+}
+.faq-block {
+  padding: 0.7em;
+}
+.faq-header {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.9em;
+  color: #444;
+  border-bottom: 3px solid #47a7eb;
+}
+.faq-header__title {
+  float: left;
+  padding-top: 0.6em;
+  padding-left: 0.8em;
+  font-size: 1.86em;
+}
+.faq-header__info {
+  float: right;
+}
+.faq-header__phone {
+  margin-bottom: 1em;
+}
+.faq-header__phone-text {
+  margin-right: 0.4em;
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  font-size: 0.86em;
+  color: #808080;
+}
+.faq-header__phone-num {
+  font-size: 1.15em;
+}
+.faq-sidebar {
+  float: left;
+  width: 33%;
+}
+.faq-main {
+  float: right;
+  width: 67%;
+}
+.search {
+  position: relative;
+}
+.search__input {
+  width: 100%;
+  padding: 0.21em 26px 0.21em 0.5em;
+  border: 1px solid #ccc;
+  outline: none;
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.search__input::-webkit-input-placeholder {
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.search__input::-moz-placeholder {
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.search__input:-moz-placeholder {
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.search__input:-ms-input-placeholder {
+  font-family: 'ArialItalic', 'Arial', sans-serif;
+  color: #808080;
+}
+.search__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.search__btn:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -11.5px;
+  left: 50%;
+  margin-left: -14px;
 }
 .footer {
   position: relative;

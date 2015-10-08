@@ -1,869 +1,889 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-svg">
-  <head>
-    <title>web2book</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/style.css" rel="stylesheet">
-    <script src="../../scripts/libs/modernizr.custom.05259.js"></script>
-    <script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
-    <script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
-    <script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
-    <script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
-  </head>
-  <body>
-    <svg width="0" height="0" class="svg-container">
-      <defs></defs>
-    </svg>
-    <div class="body-wrapper body-index">
-      <header class="header">
-        <div class="container--header">
-          <div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
-            <div class="header-row clearfix">
-              <div class="header-contacts">
-                <p class="header-contacts__name">Контактный телефон:</p>
-                <p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
-              </div>
-              <div class="header-logo"><a href="#">
-                  <picture>
-                    <source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w"/><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book"/>
-                  </picture></a></div>
-                        <nav class="header-autorization">
-                          <ul class="clearfix">
-                            <li class="header-autorization-item header-autorization-item--search"><a href="/" class="header-autorization__search "></a></li>
-                            <li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
-                            <li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
-                          </ul>
-                        </nav>
-            </div>
-            <div class="header-menu-bar">
-              <div class="header-menu__open">
-                <button><span>&#8943;</span></button>
-              </div>
-              <nav class="header-menu">
-                <ul class="clearfix header-menu--lvl0">
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
-                    <ul class="header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
-                        <ul class="header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
-                    </ul>
-                  </li>
-                  <li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
-                    <ul class="header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Каталог продукции</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Онлайн издательство</a></li>
-                      <li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Оперативная печать</a>
-                        <ul class="header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
-                            <ul class="header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
-                              <li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Калькулятор стоимости</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Полезно знать</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Контакты</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Оперативная печать</a>
-                        <ul class="header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
-                            <ul class="header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
-                              <li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">О компании</a></li>
-                      <li class="header-menu__item "><a href="/" class="header-menu__item-name">Вакансии</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <div class="header-cart"></div>
-            </div>
-          </div>
-          <div class="header-slider">
-                      <input type="radio" name="header-slider" id="header-slider--slide1" checked class="header-slider__input">
-                      <input type="radio" name="header-slider" id="header-slider--slide2" class="header-slider__input">
-                      <input type="radio" name="header-slider" id="header-slider--slide3" class="header-slider__input">
-                      <input type="radio" name="header-slider" id="header-slider--slide4" class="header-slider__input">
-                      <input type="radio" name="header-slider" id="header-slider--slide5" class="header-slider__input">
-                      <div class="header-slider__box">
-                        <div class="clearfix header-slider__inner">
-                          <div class="clearfix header-slider__item header-slide1">
-                                      <div class="header-slide1__content">
-                                                  <h4 class="header-slide1__title">Личный кабинет</h4>
-                                                  <ul class="header-slide1__features">
-                                                    <li class="header-slide1__features_item">Покупка товара</li>
-                                                    <li class="header-slide1__features_item">Онлай редактор</li>
-                                                    <li class="header-slide1__features_item">Мониторинг заказов</li>
-                                                    <li class="header-slide1__features_item">Калькуляция</li>
-                                                    <li class="header-slide1__features_item">Поддержка всех систем</li>
-                                                  </ul><a href="/" class="header-slide1__btn">Личный кабинет</a>
-                                      </div>
-                                      <div class="header-slide1__img">
-                                        <picture>
-                                          <source media="(max-width: 730px)" srcset="../../images/header/header_slider/header_slide1@288.png 288w, ../../images/header/header_slider/header_slide1@432.png 432w, ../../images/header/header_slider/header_slide1@576.png 576w, ../../images/header/header_slider/header_slide1@864.png 864w"/><img src="../../images/header/header_slider/header_slide1@560.png 560w" width="560" srcset="../../images/header/header_slider/header_slide1@840.png 840w, ../../images/header/header_slider/header_slide1@1120.png 1120w, ../../images/header/header_slider/header_slide1@1680.png 1680w" alt="slide1"/>
-                                        </picture>
-                                      </div>
-                          </div>
-                          <div class="clearfix header-slider__item header-slide2"><img src="../images/header/header_slide.png" alt="slide1">
-                          </div>
-                          <div class="clearfix header-slider__item header-slide3"><img src="../images/header/header_slide.png" alt="slide1">
-                          </div>
-                          <div class="clearfix header-slider__item header-slide4"><img src="../images/header/header_slide.png" alt="slide1">
-                          </div>
-                          <div class="clearfix header-slider__item header-slide5"><img src="../images/header/header_slide.png" alt="slide1">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="header-slider__controls">
-                        <div class="header-slider__controls--arrows"><a href="/" class="header-slider__controls--arrows-prev sprite sprite_icon-header-slider_controls--prev"></a><a href="/" class="header-slider__controls--arrows-next sprite sprite_icon-header-slider_controls--next"></a></div>
-                        <div class="header-slider__controls--buttons">
-                          <label for="header-slider--slide1" class="sprite sprite_icon-header-slider_controls--btn"></label>
-                          <label for="header-slider--slide2" class="sprite sprite_icon-header-slider_controls--btn"></label>
-                          <label for="header-slider--slide3" class="sprite sprite_icon-header-slider_controls--btn"></label>
-                          <label for="header-slider--slide4" class="sprite sprite_icon-header-slider_controls--btn"></label>
-                          <label for="header-slider--slide5" class="sprite sprite_icon-header-slider_controls--btn"></label>
-                        </div>
-                      </div>
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="container container--main">
-          <div class="offers">
-                      <input type="radio" name="offers-slider" id="offers-slider--services" checked class="offers-slider__input">
-                      <input type="radio" name="offers-slider" id="offers-slider--products" class="offers-slider__input">
-                      <input type="radio" name="offers-slider" id="offers-slider--skreplenie" class="offers-slider__input">
-                      <div class="offers-title clearfix">
-                        <p class="offers-title__text">Мы предлагаем:</p>
-                        <div class="offers-slider__controls">
-                          <label for="offers-slider--services">Наши услуги</label>
-                          <label for="offers-slider--products">Наша продукция</label>
-                          <label for="offers-slider--skreplenie">Типы скрепления</label>
-                        </div>
-                      </div>
-                      <div class="offers-slider__box">
-                        <div class="offers-slider__inner">
-                          <div class="clearfix offers-slider__item offers-services">
-                                                <div class="offers-item-slider offers-item-slider--services">
-                                                  <div class="offers-item__box viewport offers-services__box">
-                                                    <div class="offers-item__inner clearfix overview offers-services__inner">
-                                                      <div class="offers-item__item offers-services__item offers-services__value">
-                                                        <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="value"></div>
-                                                        <h3 class="offers-item__title">Калькулятор стоимости</h3>
-                                                        <p class="offers-item__text">Рассчитайте стоимость печати</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__cover">
-                                                        <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="cover"></div>
-                                                        <h3 class="offers-item__title">Раскладка обложки</h3>
-                                                        <p class="offers-item__text">Скачать технические шаблоны обложки</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__width">
-                                                        <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="width"></div>
-                                                        <h3 class="offers-item__title">Калькулятор толщины</h3>
-                                                        <p class="offers-item__text">Толщина корешка при количестве полос</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__profile">
-                                                        <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="profile"></div>
-                                                        <h3 class="offers-item__title">Личный кабинет</h3>
-                                                        <p class="offers-item__text">Работа с файлами и проектами</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__lib">
-                                                        <div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="lib"></div>
-                                                        <h3 class="offers-item__title">Онлайн библиотека</h3>
-                                                        <p class="offers-item__text">Публикуйте свои книги и получайте с них прибыль</p>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-services__box--pops">
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__value--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Калькулятор стоимости</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__cover--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Раскладка обложки</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__width--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Калькулятор толщины</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__profile--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Личный кабинет</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__lib--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Онлайн библиотека</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-services__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-services__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-services__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                          </div>
-                          <div class="clearfix offers-slider__item offers-products">
-                                                <div class="offers-item-slider offers-item-slider--products">
-                                                  <div class="offers-item__box viewport offers-products__box">
-                                                    <div class="offers-item__inner clearfix overview offers-products__inner">
-                                                      <div class="offers-item__item offers-products__item offers-products__booklet">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="booklet"></div>
-                                                        <h3 class="offers-item__title">Буклеты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__notepad">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="notepad"></div>
-                                                        <h3 class="offers-item__title">Блокноты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__report">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="report"></div>
-                                                        <h3 class="offers-item__title">Отчеты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__album">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="album"></div>
-                                                        <h3 class="offers-item__title">Альбомы</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__magazine">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="magazine"></div>
-                                                        <h3 class="offers-item__title">Журналы</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__encyclopedia">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="encyclopedia"></div>
-                                                        <h3 class="offers-item__title">Энциклопедии</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__catalog">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="catalog"></div>
-                                                        <h3 class="offers-item__title">Каталоги</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__instruction">
-                                                        <div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="instruction"></div>
-                                                        <h3 class="offers-item__title">Инструкции</h3>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-products__box--pops">
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-products__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-products__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-products__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                      <div class="offers-products__info">
-                                        <h4 class="offers-products__info-title">Печать по требованию</h4>
-                                        <p class="offers-products__info-text">Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...</p><a href="/" class="offers-products__info-more">Узнать больше</a>
-                                      </div>
-                          </div>
-                          <div class="clearfix offers-slider__item offers-skreplenie">
-                                                <div class="offers-item-slider offers-item-slider--skreplenie">
-                                                  <div class="offers-item__box viewport offers-skreplenie__box">
-                                                    <div class="offers-item__inner clearfix overview offers-skreplenie__inner">
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__spiral">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="spiral"></div>
-                                                        <h3 class="offers-item__title">Spiral</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__twin_loop">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="twin_loop"></div>
-                                                        <h3 class="offers-item__title">Twin Loop Wire</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__comb">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="comb"></div>
-                                                        <h3 class="offers-item__title">Comb</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__ring">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="ring"></div>
-                                                        <h3 class="offers-item__title">Ring</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__tape">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="tape"></div>
-                                                        <h3 class="offers-item__title">Tape</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__velo">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="velo"></div>
-                                                        <h3 class="offers-item__title">Velo</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__saddle">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="saddle"></div>
-                                                        <h3 class="offers-item__title">Saddle Stitch</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__perfect">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="perfect"></div>
-                                                        <h3 class="offers-item__title">Perfect</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__stapled">
-                                                        <div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="stapled"></div>
-                                                        <h3 class="offers-item__title">Stapled</h3>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-skreplenie__box--pops">
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-skreplenie__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-skreplenie__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-skreplenie__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                          </div>
-                        </div>
-                      </div>
-          </div>
-          <div class="news">
-            <div class="news__block clearfix">
-                        <div class="news__item">
-                          <div class="news-header">
-                            <div class="news-header__date"><span class="news-header__date--day">09</span><span class="news-header__date--month">сен</span></div><a href="/" class="news-header__title">Офис компании Дениса Олейникова Prostoprint.com захватил УБОП</a>
-                          </div>
-                          <div class="news-content">
-                            <p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
-                          </div>
-                        </div>
-                        <div class="news__item">
-                          <div class="news-header">
-                            <div class="news-header__date"><span class="news-header__date--day">30</span><span class="news-header__date--month">авг</span></div><a href="/" class="news-header__title">Первые в мире книги со спецэффектами</a>
-                          </div>
-                          <div class="news-content">
-                            <p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
-                          </div>
-                        </div>
-                        <div class="news__item">
-                          <div class="news-header">
-                            <div class="news-header__date"><span class="news-header__date--day">27</span><span class="news-header__date--month">авг</span></div><a href="/" class="news-header__title">Женщины предпочитают ридеры, а мужчины больше любят планшеты</a>
-                          </div>
-                          <div class="news-content">
-                            <p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
-                          </div>
-                        </div>
-            </div><a href="/" class="news__all">Все новости</a>
-          </div>
-          <div class="main-content clearfix">
-            <div class="formates">
-                          <input type="radio" name="formates-slider" id="formates-slider--formates" checked class="formates-slider__input">
-                          <input type="radio" name="formates-slider" id="formates-slider--paper" class="formates-slider__input">
-                          <input type="radio" name="formates-slider" id="formates-slider--templates" class="formates-slider__input">
-                          <div class="clearfix formates-slider__controls">
-                            <label for="formates-slider--formates">
-                              <picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="formates"/>
-                              </picture><span>Форматы</span>
-                            </label>
-                            <label for="formates-slider--paper">
-                              <picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="paper"/>
-                              </picture><span>Бумага</span>
-                            </label>
-                            <label for="formates-slider--templates">
-                              <picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="templates"/>
-                              </picture><span>Шаблоны</span>
-                            </label>
-                            <div class="formates-slider__controls_scroll">
-                              <div class="formates-slider__controls_scroll-bar">
-                                <div class="formates-slider__controls_scroll-control sprite sprite_icon-formates-slider-control"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="formates-slider__box">
-                            <div class="formates-slider__inner">
-                              <div class="clearfix formates-slider__item formates-formates">
-                                                        <div class="formates-item-slider formates-item-slider--formates">
-                                                          <div class="formates-item__box viewport formates-formates__box">
-                                                            <div class="formates-item__inner clearfix overview formates-formates__inner">
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a0">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А0 – 841Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a1">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А1 – 594Х841 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a2">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А2 – 420Х594 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a3">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А3 – 297Х420 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a4">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А4 – Х297 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a5">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А5 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a6">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А6 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a7">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А7 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-formates__item formates-formates__a8">
-                                                                <div class="formates-item__img formates-formates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А8 – Х мм</p>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          <div class="formates-item__box--pops clearfix formates-formates__box--pops">
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-formates__item--pops formates-formates__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                          </div>
-                                                          <div class="formates-item__scroll scrollbar formates-formates__scroll">
-                                                            <div class="formates-item__scroll_bar track formates-formates__scroll_bar">
-                                                              <div class="formates-item__scroll_control thumb formates-formates__scroll_control"></div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                              </div>
-                              <div class="clearfix formates-slider__item formates-paper">
-                                                        <div class="formates-item-slider formates-item-slider--paper">
-                                                          <div class="formates-item__box viewport formates-paper__box">
-                                                            <div class="formates-item__inner clearfix overview formates-paper__inner">
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a0">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А0 – 841Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a1">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А1 – 594Х841 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a2">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А2 – 420Х594 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a3">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А3 – 297Х420 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a4">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А4 – Х297 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a5">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А5 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a6">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А6 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a7">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А7 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-paper__item formates-paper__a8">
-                                                                <div class="formates-item__img formates-paper__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А8 – Х мм</p>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          <div class="formates-item__box--pops clearfix formates-paper__box--pops">
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-paper__item--pops formates-paper__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                          </div>
-                                                          <div class="formates-item__scroll scrollbar formates-paper__scroll">
-                                                            <div class="formates-item__scroll_bar track formates-paper__scroll_bar">
-                                                              <div class="formates-item__scroll_control thumb formates-paper__scroll_control"></div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                              </div>
-                              <div class="clearfix formates-slider__item formates-templates">
-                                                        <div class="formates-item-slider formates-item-slider--templates">
-                                                          <div class="formates-item__box viewport formates-templates__box">
-                                                            <div class="formates-item__inner clearfix overview formates-templates__inner">
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a0">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А0 – 841Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a1">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А1 – 594Х841 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a2">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А2 – 420Х594 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a3">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А3 – 297Х420 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a4">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А4 – Х297 мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a5">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А5 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a6">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А6 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a7">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А7 – Х мм</p>
-                                                              </div>
-                                                              <div class="formates-item__item formates-templates__item formates-templates__a8">
-                                                                <div class="formates-item__img formates-templates__img">
-                                                                  <picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8"/>
-                                                                  </picture>
-                                                                </div>
-                                                                <p class="formates-item__text">А8 – Х мм</p>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                          <div class="formates-item__box--pops clearfix formates-templates__box--pops">
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                                        <div class="formates-item__item--pops formates-templates__item--pops formates-templates__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
-                                                                          <p class="formates-item__text formates-item__text--pops"></p>
-                                                                        </div>
-                                                          </div>
-                                                          <div class="formates-item__scroll scrollbar formates-templates__scroll">
-                                                            <div class="formates-item__scroll_bar track formates-templates__scroll_bar">
-                                                              <div class="formates-item__scroll_control thumb formates-templates__scroll_control"></div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                              </div>
-                            </div>
-                          </div>
-            </div>
-            <div class="descriptions">
-                          <div class="descriptions__block">
-                            <h2 class="descriptions__title">Печать книг малым тиражом</h2>
-                            <p class="descriptions__text">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной малотиражной печати издать книгу сегодня по бюджету любому начинающему автору. Компания «Новые Печатные Технологии» с удовольствием готова посодействовать начинающим писателям, поэтам и авторам научных работ, если им необходимо напечатать книгу малым тиражом.</p>
-                            <p class="descriptions__text">Такая услуга может быть полезной в нескольких случаях. Печать книг малыми тиражами актуальна для молодых авторов в качестве «пробы пера». Для них это возможность увидеть свое произведение глазами читателя, облачить его в осязаемую форму. Авторам небольших сборников малотиражная полиграфия позволяет издавать подарочные издания в небольшом количестве экземпляров. Типография печатает книги малым тиражом, если речь идет об издании научно-практической литературы.</p>
-                          </div>
-                          <div class="descriptions__block">
-                            <h2 class="descriptions__title">Оперативная малотиражная полиграфия</h2>
-                            <p class="descriptions__text">Для нашей типографии малые тиражи – это особая область работы. Помимо печати книг типография предлагает оперативную малотиражную полиграфическую продукцию для нужд бизнеса. Благодаря работе с цифровым печатным оборудованием премиум-класса выполнение заказа возможно в самые кратчайшие сроки. Ассортимент малостраничной полиграфии для бизнеса включает визитные карточки, карманные и перекидные календари, брошюры и рекламные буклеты, флаеры для маркетинговых акций, POS-материалы, полиграфические бизнес-сувениры и любую печатную продукцию для фирменного стиля вашей компании.</p>
-                            <p class="descriptions__text">Наша типография выполнит заказ любой сложности, не экономя на качестве. Мы сделаем все, чтобы ваша задумка получила яркое воплощение!</p>
-                          </div>
-            </div>
-          </div>
-          <div class="teasers"><a href="/" class="teasers__item teasers__item--books">Книги по требованию<span class="teasers__item-sub">От покупателя</span></a><a href="/" class="teasers__item teasers__item--print">Печать по требованию<span class="teasers__item-sub">«Быстрая» печать</span></a><a href="/" class="teasers__item teasers__item--questions">Вопросы и ответы<span class="teasers__item-sub">Задайте вопрос</span></a><a href="/" class="teasers__item teasers__item--consultation">Online консультант<span class="teasers__item-sub teasers__item-sub--online">В сети</span><span class="teasers__item-sub teasers__item-sub--offline">Не в сети</span></a>
-          </div>
-        </div>
-      </main>
-      <div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
-        <footer class="footer">
-          <div class="footer-parts clearfix">
-                        <nav class="footer-menu__block">
-                          <ul class="footer-menu">
-                            <li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                          </ul>
-                        </nav>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-parts clearfix">
-            <div class="footer-phone">
-              <div class="footer__title">Телефон</div>
-              <p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
-            </div>
-            <div class="footer-pay">
-              <div class="footer__title">Принимаем к оплате</div>
-              <div class="footer__block"><a href="/" class="footer-pay__item footer-pay__item--maestro">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--mastercard">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--visa">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa"/>
-                              </picture></a>
-                            <div class="footer-pay__item-row"></div><a href="/" class="footer-pay__item footer-pay__item--paypal">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--webmoney">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--qiwi">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi"/>
-                              </picture></a>
-              </div>
-            </div>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-            <div class="footer-qr">
-              <div class="footer__title">QR-код</div>
-              <div class="footer__block">
-                <picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
-                </picture>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
-      </div>
-    </div><a href="#" class="scrollTop">Наверх</a>
-  </body>
-  <script src="../../scripts/common.js"></script>
-  <script src="../scripts/scrolls-index.js"></script>
+	<head>
+		<title>web2book</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../../css/style.css" rel="stylesheet">
+		<script src="../../scripts/libs/modernizr.custom.05259.js"></script>
+		<script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
+		<script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
+		<script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
+		<script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
+	</head>
+	<body>
+		<svg width="0" height="0" class="svg-container">
+			<defs></defs>
+		</svg>
+		<div class="body-wrapper body-index">
+			<header class="header">
+				<div class="container--header">
+					<div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
+						<div class="header-row clearfix">
+							<div class="header-contacts">
+								<p class="header-contacts__name">Контактный телефон:</p>
+								<p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
+							</div>
+							<div class="header-logo">
+								<a href="#">
+									<picture>
+										<source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w" /><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book" />
+									</picture>
+								</a>
+							</div>
+							<nav class="header-autorization">
+								<ul class="clearfix">
+									<li class="header-autorization-item header-autorization-item--search">
+										<a href="/" class="header-autorization__search "></a>
+									</li>
+									<li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
+									<li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header-menu-bar">
+							<div class="header-menu__open">
+								<button><span>&#8943;</span></button>
+							</div>
+							<nav class="header-menu">
+								<ul class="clearfix header-menu--lvl0">
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
+										<ul class="header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
+												<ul class="header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
+										</ul>
+									</li>
+									<li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
+										<ul class="header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Каталог продукции</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Онлайн издательство</a></li>
+											<li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Оперативная печать</a>
+												<ul class="header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
+														<ul class="header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
+															<li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Калькулятор стоимости</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Полезно знать</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Контакты</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Оперативная печать</a>
+												<ul class="header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item header-menu__item--next"><a href="/" class="header-menu__item-name">Корпоративная продукция</a>
+														<ul class="header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item "><a href="/" class="header-menu__item-name">Фирменные бланки</a></li>
+															<li class="header-menu__item "><a href="/" class="header-menu__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item "><a href="/" class="header-menu__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">О компании</a></li>
+											<li class="header-menu__item "><a href="/" class="header-menu__item-name">Вакансии</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<div class="header-cart"></div>
+						</div>
+					</div>
+					<div class="header-slider">
+						<input type="radio" name="header-slider" id="header-slider--slide1" checked class="header-slider__input">
+						<input type="radio" name="header-slider" id="header-slider--slide2" class="header-slider__input">
+						<input type="radio" name="header-slider" id="header-slider--slide3" class="header-slider__input">
+						<input type="radio" name="header-slider" id="header-slider--slide4" class="header-slider__input">
+						<input type="radio" name="header-slider" id="header-slider--slide5" class="header-slider__input">
+						<div class="header-slider__box">
+							<div class="clearfix header-slider__inner">
+								<div class="clearfix header-slider__item header-slide1">
+									<div class="header-slide1__content">
+										<h4 class="header-slide1__title">Личный кабинет</h4>
+										<ul class="header-slide1__features">
+											<li class="header-slide1__features_item">Покупка товара</li>
+											<li class="header-slide1__features_item">Онлай редактор</li>
+											<li class="header-slide1__features_item">Мониторинг заказов</li>
+											<li class="header-slide1__features_item">Калькуляция</li>
+											<li class="header-slide1__features_item">Поддержка всех систем</li>
+										</ul><a href="/" class="header-slide1__btn">Личный кабинет</a>
+									</div>
+									<div class="header-slide1__img">
+										<picture>
+											<source media="(max-width: 730px)" srcset="../../images/header/header_slider/header_slide1@288.png 288w, ../../images/header/header_slider/header_slide1@432.png 432w, ../../images/header/header_slider/header_slide1@576.png 576w, ../../images/header/header_slider/header_slide1@864.png 864w" /><img src="../../images/header/header_slider/header_slide1@560.png 560w" width="560" srcset="../../images/header/header_slider/header_slide1@840.png 840w, ../../images/header/header_slider/header_slide1@1120.png 1120w, ../../images/header/header_slider/header_slide1@1680.png 1680w" alt="slide1" />
+										</picture>
+									</div>
+								</div>
+								<div class="clearfix header-slider__item header-slide2"><img src="../images/header/header_slide.png" alt="slide1">
+								</div>
+								<div class="clearfix header-slider__item header-slide3"><img src="../images/header/header_slide.png" alt="slide1">
+								</div>
+								<div class="clearfix header-slider__item header-slide4"><img src="../images/header/header_slide.png" alt="slide1">
+								</div>
+								<div class="clearfix header-slider__item header-slide5"><img src="../images/header/header_slide.png" alt="slide1">
+								</div>
+							</div>
+						</div>
+						<div class="header-slider__controls">
+							<div class="header-slider__controls--arrows">
+								<a href="/" class="header-slider__controls--arrows-prev sprite sprite_icon-header-slider_controls--prev"></a>
+								<a href="/" class="header-slider__controls--arrows-next sprite sprite_icon-header-slider_controls--next"></a>
+							</div>
+							<div class="header-slider__controls--buttons">
+								<label for="header-slider--slide1" class="sprite sprite_icon-header-slider_controls--btn"></label>
+								<label for="header-slider--slide2" class="sprite sprite_icon-header-slider_controls--btn"></label>
+								<label for="header-slider--slide3" class="sprite sprite_icon-header-slider_controls--btn"></label>
+								<label for="header-slider--slide4" class="sprite sprite_icon-header-slider_controls--btn"></label>
+								<label for="header-slider--slide5" class="sprite sprite_icon-header-slider_controls--btn"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="container container--main">
+					<div class="offers">
+						<input type="radio" name="offers-slider" id="offers-slider--services" checked class="offers-slider__input">
+						<input type="radio" name="offers-slider" id="offers-slider--products" class="offers-slider__input">
+						<input type="radio" name="offers-slider" id="offers-slider--skreplenie" class="offers-slider__input">
+						<div class="offers-title clearfix">
+							<p class="offers-title__text">Мы предлагаем:</p>
+							<div class="offers-slider__controls">
+								<label for="offers-slider--services">Наши услуги</label>
+								<label for="offers-slider--products">Наша продукция</label>
+								<label for="offers-slider--skreplenie">Типы скрепления</label>
+							</div>
+						</div>
+						<div class="offers-slider__box">
+							<div class="offers-slider__inner">
+								<div class="clearfix offers-slider__item offers-services">
+									<div class="offers-item-slider offers-item-slider--services">
+										<div class="offers-item__box viewport offers-services__box">
+											<div class="offers-item__inner clearfix overview offers-services__inner">
+												<div class="offers-item__item offers-services__item offers-services__value">
+													<div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="value"></div>
+													<h3 class="offers-item__title">Калькулятор стоимости</h3>
+													<p class="offers-item__text">Рассчитайте стоимость печати</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__cover">
+													<div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="cover"></div>
+													<h3 class="offers-item__title">Раскладка обложки</h3>
+													<p class="offers-item__text">Скачать технические шаблоны обложки</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__width">
+													<div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="width"></div>
+													<h3 class="offers-item__title">Калькулятор толщины</h3>
+													<p class="offers-item__text">Толщина корешка при количестве полос</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__profile">
+													<div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="profile"></div>
+													<h3 class="offers-item__title">Личный кабинет</h3>
+													<p class="offers-item__text">Работа с файлами и проектами</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__lib">
+													<div class="offers-item__img offers-services__img"><img src="../images/offers/services/offers-services@2400.png" alt="lib"></div>
+													<h3 class="offers-item__title">Онлайн библиотека</h3>
+													<p class="offers-item__text">Публикуйте свои книги и получайте с них прибыль</p>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-services__box--pops">
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__value--pops">
+												<p class="offers-item__title offers-item__title--pops">Калькулятор стоимости</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__cover--pops">
+												<p class="offers-item__title offers-item__title--pops">Раскладка обложки</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__width--pops">
+												<p class="offers-item__title offers-item__title--pops">Калькулятор толщины</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__profile--pops">
+												<p class="offers-item__title offers-item__title--pops">Личный кабинет</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__lib--pops">
+												<p class="offers-item__title offers-item__title--pops">Онлайн библиотека</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+										</div>
+										<div class="offers-item__scroll scrollbar offers-services__scroll">
+											<div class="offers-item__scroll_bar track offers-services__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-services__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix offers-slider__item offers-products">
+									<div class="offers-item-slider offers-item-slider--products">
+										<div class="offers-item__box viewport offers-products__box">
+											<div class="offers-item__inner clearfix overview offers-products__inner">
+												<div class="offers-item__item offers-products__item offers-products__booklet">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="booklet"></div>
+													<h3 class="offers-item__title">Буклеты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__notepad">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="notepad"></div>
+													<h3 class="offers-item__title">Блокноты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__report">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="report"></div>
+													<h3 class="offers-item__title">Отчеты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__album">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="album"></div>
+													<h3 class="offers-item__title">Альбомы</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__magazine">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="magazine"></div>
+													<h3 class="offers-item__title">Журналы</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__encyclopedia">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="encyclopedia"></div>
+													<h3 class="offers-item__title">Энциклопедии</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__catalog">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="catalog"></div>
+													<h3 class="offers-item__title">Каталоги</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__instruction">
+													<div class="offers-item__img offers-products__img"><img src="../images/offers/products/offers-products@3200.png" alt="instruction"></div>
+													<h3 class="offers-item__title">Инструкции</h3>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-products__box--pops">
+										</div>
+										<div class="offers-item__scroll scrollbar offers-products__scroll">
+											<div class="offers-item__scroll_bar track offers-products__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-products__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+									<div class="offers-products__info">
+										<h4 class="offers-products__info-title">Печать по требованию</h4>
+										<p class="offers-products__info-text">Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...</p><a href="/" class="offers-products__info-more">Узнать больше</a>
+									</div>
+								</div>
+								<div class="clearfix offers-slider__item offers-skreplenie">
+									<div class="offers-item-slider offers-item-slider--skreplenie">
+										<div class="offers-item__box viewport offers-skreplenie__box">
+											<div class="offers-item__inner clearfix overview offers-skreplenie__inner">
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__spiral">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="spiral"></div>
+													<h3 class="offers-item__title">Spiral</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__twin_loop">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="twin_loop"></div>
+													<h3 class="offers-item__title">Twin Loop Wire</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__comb">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="comb"></div>
+													<h3 class="offers-item__title">Comb</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__ring">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="ring"></div>
+													<h3 class="offers-item__title">Ring</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__tape">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="tape"></div>
+													<h3 class="offers-item__title">Tape</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__velo">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="velo"></div>
+													<h3 class="offers-item__title">Velo</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__saddle">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="saddle"></div>
+													<h3 class="offers-item__title">Saddle Stitch</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__perfect">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="perfect"></div>
+													<h3 class="offers-item__title">Perfect</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__stapled">
+													<div class="offers-item__img offers-skreplenie__img"><img src="../images/offers/skreplenie/offers-skreplenie@2432.png" alt="stapled"></div>
+													<h3 class="offers-item__title">Stapled</h3>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-skreplenie__box--pops">
+										</div>
+										<div class="offers-item__scroll scrollbar offers-skreplenie__scroll">
+											<div class="offers-item__scroll_bar track offers-skreplenie__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-skreplenie__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news">
+						<div class="news__block clearfix">
+							<div class="news__item">
+								<div class="news-header">
+									<div class="news-header__date"><span class="news-header__date--day">09</span><span class="news-header__date--month">сен</span></div><a href="/" class="news-header__title">Офис компании Дениса Олейникова Prostoprint.com захватил УБОП</a>
+								</div>
+								<div class="news-content">
+									<p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
+								</div>
+							</div>
+							<div class="news__item">
+								<div class="news-header">
+									<div class="news-header__date"><span class="news-header__date--day">30</span><span class="news-header__date--month">авг</span></div><a href="/" class="news-header__title">Первые в мире книги со спецэффектами</a>
+								</div>
+								<div class="news-content">
+									<p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
+								</div>
+							</div>
+							<div class="news__item">
+								<div class="news-header">
+									<div class="news-header__date"><span class="news-header__date--day">27</span><span class="news-header__date--month">авг</span></div><a href="/" class="news-header__title">Женщины предпочитают ридеры, а мужчины больше любят планшеты</a>
+								</div>
+								<div class="news-content">
+									<p>От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной...</p>
+								</div>
+							</div>
+						</div><a href="/" class="news__all">Все новости</a>
+					</div>
+					<div class="main-content clearfix">
+						<div class="formates">
+							<input type="radio" name="formates-slider" id="formates-slider--formates" checked class="formates-slider__input">
+							<input type="radio" name="formates-slider" id="formates-slider--paper" class="formates-slider__input">
+							<input type="radio" name="formates-slider" id="formates-slider--templates" class="formates-slider__input">
+							<div class="clearfix formates-slider__controls">
+								<label for="formates-slider--formates">
+									<picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="formates" />
+									</picture><span>Форматы</span>
+								</label>
+								<label for="formates-slider--paper">
+									<picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="paper" />
+									</picture><span>Бумага</span>
+								</label>
+								<label for="formates-slider--templates">
+									<picture><img src="../../images/formates/formates-header/formates-header@620.png 620w" width="620" srcset="../../images/formates/formates-header/formates-header@930.png 930w, ../../images/formates/formates-header/formates-header@1240.png 1240w, ../../images/formates/formates-header/formates-header@1860.png 1860w" alt="templates" />
+									</picture><span>Шаблоны</span>
+								</label>
+								<div class="formates-slider__controls_scroll">
+									<div class="formates-slider__controls_scroll-bar">
+										<div class="formates-slider__controls_scroll-control sprite sprite_icon-formates-slider-control"></div>
+									</div>
+								</div>
+							</div>
+							<div class="formates-slider__box">
+								<div class="formates-slider__inner">
+									<div class="clearfix formates-slider__item formates-formates">
+										<div class="formates-item-slider formates-item-slider--formates">
+											<div class="formates-item__box viewport formates-formates__box">
+												<div class="formates-item__inner clearfix overview formates-formates__inner">
+													<div class="formates-item__item formates-formates__item formates-formates__a0">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А0 – 841Х мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a1">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А1 – 594Х841 мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a2">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А2 – 420Х594 мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a3">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А3 – 297Х420 мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a4">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А4 – Х297 мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a5">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А5 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a6">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А6 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a7">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А7 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-formates__item formates-formates__a8">
+														<div class="formates-item__img formates-formates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А8 – Х мм</p>
+													</div>
+												</div>
+											</div>
+											<div class="formates-item__box--pops clearfix formates-formates__box--pops">
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-formates__item--pops formates-formates__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+											</div>
+											<div class="formates-item__scroll scrollbar formates-formates__scroll">
+												<div class="formates-item__scroll_bar track formates-formates__scroll_bar">
+													<div class="formates-item__scroll_control thumb formates-formates__scroll_control"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix formates-slider__item formates-paper">
+										<div class="formates-item-slider formates-item-slider--paper">
+											<div class="formates-item__box viewport formates-paper__box">
+												<div class="formates-item__inner clearfix overview formates-paper__inner">
+													<div class="formates-item__item formates-paper__item formates-paper__a0">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А0 – 841Х мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a1">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А1 – 594Х841 мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a2">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А2 – 420Х594 мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a3">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А3 – 297Х420 мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a4">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А4 – Х297 мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a5">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А5 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a6">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А6 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a7">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А7 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-paper__item formates-paper__a8">
+														<div class="formates-item__img formates-paper__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А8 – Х мм</p>
+													</div>
+												</div>
+											</div>
+											<div class="formates-item__box--pops clearfix formates-paper__box--pops">
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-paper__item--pops formates-paper__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+											</div>
+											<div class="formates-item__scroll scrollbar formates-paper__scroll">
+												<div class="formates-item__scroll_bar track formates-paper__scroll_bar">
+													<div class="formates-item__scroll_control thumb formates-paper__scroll_control"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix formates-slider__item formates-templates">
+										<div class="formates-item-slider formates-item-slider--templates">
+											<div class="formates-item__box viewport formates-templates__box">
+												<div class="formates-item__inner clearfix overview formates-templates__inner">
+													<div class="formates-item__item formates-templates__item formates-templates__a0">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a0" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А0 – 841Х мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a1">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a1" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А1 – 594Х841 мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a2">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a2" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А2 – 420Х594 мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a3">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a3" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А3 – 297Х420 мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a4">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a4" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А4 – Х297 мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a5">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a5" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А5 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a6">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a6" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А6 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a7">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a7" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А7 – Х мм</p>
+													</div>
+													<div class="formates-item__item formates-templates__item formates-templates__a8">
+														<div class="formates-item__img formates-templates__img">
+															<picture><img src="../../images/formates/formates/format@4680.png 4680w" width="4680" srcset="../../images/formates/formates/format@7020.png 7020w, ../../images/formates/formates/format@9360.png 9360w, ../../images/formates/formates/format@14040.png 14040w" alt="a8" />
+															</picture>
+														</div>
+														<p class="formates-item__text">А8 – Х мм</p>
+													</div>
+												</div>
+											</div>
+											<div class="formates-item__box--pops clearfix formates-templates__box--pops">
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a0--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a1--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А1 имеет размер 594Х841 мм.</p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a2--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops">А2 имеет размер 420х594 мм. Предназначен для печати календарей и постеров. Так же для упаковочной бумаги.</p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a3--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a4--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a5--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a6--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a7--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+												<div class="formates-item__item--pops formates-templates__item--pops formates-templates__a8--pops"><a href="#" class="formates-item__item--pops-close">x</a>
+													<p class="formates-item__text formates-item__text--pops"></p>
+												</div>
+											</div>
+											<div class="formates-item__scroll scrollbar formates-templates__scroll">
+												<div class="formates-item__scroll_bar track formates-templates__scroll_bar">
+													<div class="formates-item__scroll_control thumb formates-templates__scroll_control"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="descriptions">
+							<div class="descriptions__block">
+								<h2 class="descriptions__title">Печать книг малым тиражом</h2>
+								<p class="descriptions__text">От автора книга попадает к издателю, а от него – в типографию. Таков путь литературных произведений к читателям. Благодаря технологиям оперативной малотиражной печати издать книгу сегодня по бюджету любому начинающему автору. Компания «Новые Печатные Технологии» с удовольствием готова посодействовать начинающим писателям, поэтам и авторам научных работ, если им необходимо напечатать книгу малым тиражом.</p>
+								<p class="descriptions__text">Такая услуга может быть полезной в нескольких случаях. Печать книг малыми тиражами актуальна для молодых авторов в качестве «пробы пера». Для них это возможность увидеть свое произведение глазами читателя, облачить его в осязаемую форму. Авторам небольших сборников малотиражная полиграфия позволяет издавать подарочные издания в небольшом количестве экземпляров. Типография печатает книги малым тиражом, если речь идет об издании научно-практической литературы.</p>
+							</div>
+							<div class="descriptions__block">
+								<h2 class="descriptions__title">Оперативная малотиражная полиграфия</h2>
+								<p class="descriptions__text">Для нашей типографии малые тиражи – это особая область работы. Помимо печати книг типография предлагает оперативную малотиражную полиграфическую продукцию для нужд бизнеса. Благодаря работе с цифровым печатным оборудованием премиум-класса выполнение заказа возможно в самые кратчайшие сроки. Ассортимент малостраничной полиграфии для бизнеса включает визитные карточки, карманные и перекидные календари, брошюры и рекламные буклеты, флаеры для маркетинговых акций, POS-материалы, полиграфические бизнес-сувениры и любую печатную продукцию для фирменного стиля вашей компании.</p>
+								<p class="descriptions__text">Наша типография выполнит заказ любой сложности, не экономя на качестве. Мы сделаем все, чтобы ваша задумка получила яркое воплощение!</p>
+							</div>
+						</div>
+					</div>
+					<div class="teasers"><a href="/" class="teasers__item teasers__item--books">Книги по требованию<span class="teasers__item-sub">От покупателя</span></a><a href="/" class="teasers__item teasers__item--print">Печать по требованию<span class="teasers__item-sub">«Быстрая» печать</span></a><a href="/" class="teasers__item teasers__item--questions">Вопросы и ответы<span class="teasers__item-sub">Задайте вопрос</span></a><a href="/" class="teasers__item teasers__item--consultation">Online консультант<span class="teasers__item-sub teasers__item-sub--online">В сети</span><span class="teasers__item-sub teasers__item-sub--offline">Не в сети</span></a>
+					</div>
+				</div>
+			</main>
+			<div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
+				<footer class="footer">
+					<div class="footer-parts clearfix">
+						<nav class="footer-menu__block">
+							<ul class="footer-menu">
+								<li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-parts clearfix">
+						<div class="footer-phone">
+							<div class="footer__title">Телефон</div>
+							<p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
+						</div>
+						<div class="footer-pay">
+							<div class="footer__title">Принимаем к оплате</div>
+							<div class="footer__block">
+								<a href="/" class="footer-pay__item footer-pay__item--maestro">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--mastercard">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--visa">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa" />
+									</picture>
+								</a>
+								<div class="footer-pay__item-row"></div>
+								<a href="/" class="footer-pay__item footer-pay__item--paypal">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--webmoney">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--qiwi">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi" />
+									</picture>
+								</a>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+						<div class="footer-qr">
+							<div class="footer__title">QR-код</div>
+							<div class="footer__block">
+								<picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
+			</div>
+		</div><a href="#" class="scrollTop">Наверх</a>
+	</body>
+	<script src="../../scripts/common.js"></script>
+	<script src="../scripts/scrolls-index.js"></script>
 </html>
