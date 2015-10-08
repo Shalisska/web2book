@@ -82,6 +82,30 @@
 		width: 33%;
 	}
 	
+	&-menu {
+		padding-right: 1.45em;
+		
+		&__items {
+			.reset-ul();
+			padding: 0.7em;
+			background: #f9f9f9;
+		}
+		
+		&__item {
+			margin-bottom: 0.7em;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			&-name {
+				.reset-a();
+				display: block;
+				background: #727272;
+			}
+		}
+	}
+	
 	&-main {
 		float: right;
 		width: (100% - 33%);

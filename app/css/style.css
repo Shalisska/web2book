@@ -14396,6 +14396,34 @@ input#private_room-archive-nav--list:checked ~ .private_room-archive-nav label[f
   float: left;
   width: 33%;
 }
+.faq-menu {
+  padding-right: 1.45em;
+}
+.faq-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 0.7em;
+  background: #f9f9f9;
+}
+.faq-menu__item {
+  margin-bottom: 0.7em;
+}
+.faq-menu__item:last-child {
+  margin-bottom: 0;
+}
+.faq-menu__item-name {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  background: #727272;
+}
+.faq-menu__item-name:hover,
+.faq-menu__item-name:active,
+.faq-menu__item-name:visited {
+  text-decoration: none;
+  color: inherit;
+}
 .faq-main {
   float: right;
   width: 67%;
