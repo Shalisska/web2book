@@ -17,12 +17,14 @@ mixin my_files_table(name_total, name, section, data)
 		each item in data.header
 			p(class=class_name([name_total, name], '__header-item') + name + '__header-item-' + item.id)=item.name
 			-title_arr.push(item.id)
-	
-	
-	-var color = 'color2'
-	-var lvl = -1
-	div(class=name + '__body-wrap')
-		+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
+	div(class = pageClass + '__slider' + ' ' + name + '__slider')
+		.viewport(class=name + '__body-wrap' + ' ' + pageClass + '__slider-viewport')
+			-var color = 'color2'
+			-var lvl = -1
+			+my_files_table_inner(name_total, name, section, title_arr, color, lvl, data.items)
+		.scrollbar(class = pageClass + '__slider-scrollbar' + ' ' + name + '__slider-scrollbar')
+			.track(class = pageClass + '__slider-track')
+				.thumb(class = pageClass + '__slider-thumb')
 
 mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, items, b_type)
 	if b_type != 'split'
@@ -33,7 +35,11 @@ mixin my_files_table_inner(name_total, name, section, title_arr, color, lvl, ite
 	else
 		-body_type = ''
 	
-	ul(class=class_name([name_total, name], '__body') + body_type)
+	-var slider_class = ''
+	if lvl === 0
+		-slider_class = ' overview' + ' ' + name + '__slider-overview'
+	
+	ul(class=class_name([name_total, name], '__body') + body_type + slider_class)
 		each item, i in items
 			if color == 'color1'
 				-color = 'color2'
@@ -82,9 +88,9 @@ mixin li_build(name_total, name, section, title_arr, color, lvl, b_type, item, i
 							-var file_type = ' sprite_icon-type_file'
 							if section != 'approved'
 								if item.folder || item.history || item.split
-									label(for=opener_name + '_opener--' + item.id + '_' + section)
+									label(for=opener_name + '_opener--' + item.id + '_' + section class = name + '__expand')
 							else if item.folder
-								label(for=opener_name + '_opener--' + item.id + '_' + section)
+								label(for=opener_name + '_opener--' + item.id + '_' + section class = name + '__expand')
 							if item.folder
 								-file_type = ' sprite_icon-type_folder'
 

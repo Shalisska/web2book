@@ -486,6 +486,44 @@
 	&--calculation {
 		padding: 1.42em;
 	}
+	
+	&__slider {
+		position: relative;
+		height: 42.1em;
+		font-size: 0.86em;
+		border: 1px solid rgba(0, 0, 0, 0.14);
+
+		&-viewport {
+			position: relative;
+			overflow: hidden;
+			margin-right: 11px;
+			height: 100%;
+		}
+
+		&-scrollbar {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 11px;
+			background: white;
+			border-left: 1px solid rgba(0, 0, 0, 0.14);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+		}
+
+		&-track {
+			position: relative;
+			height: 100%;
+		}
+
+		&-thumb {
+			position: absolute;
+			width: 6px;
+			left: 50%;
+			margin-left: -3px;
+			background: #808080;
+			border-radius: 5px;
+		}
+	}
 }
 
 .private_room-switcher(@id) {

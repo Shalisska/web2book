@@ -12048,6 +12048,39 @@ input[id='tarif-on']:checked ~ .private_room__switcher__tarif--on {
 .private_room--calculation {
   padding: 1.42em;
 }
+.private_room__slider {
+  position: relative;
+  height: 42.1em;
+  font-size: 0.86em;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+}
+.private_room__slider-viewport {
+  position: relative;
+  overflow: hidden;
+  margin-right: 11px;
+  height: 100%;
+}
+.private_room__slider-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 11px;
+  background: white;
+  border-left: 1px solid rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+.private_room__slider-track {
+  position: relative;
+  height: 100%;
+}
+.private_room__slider-thumb {
+  position: absolute;
+  width: 6px;
+  left: 50%;
+  margin-left: -3px;
+  background: #808080;
+  border-radius: 5px;
+}
 .my_files-table__body,
 .my_files-table__header {
   list-style: none;
@@ -12721,6 +12754,9 @@ input#my_files-approved:checked ~ .my_files-docs--approved {
   display: none;
   margin-bottom: 4.1em;
 }
+.my_files-docs__body-wrap {
+  margin-right: 0;
+}
 .my_files-docs__body--sub,
 .my_files-docs__body--history,
 .my_files-docs__body--split {
@@ -12778,6 +12814,26 @@ input#my_files-approved:checked ~ .my_files-docs--approved {
 .my_files-docs__item-manage {
   width: 25%;
   right: 0;
+}
+.my_files-docs__slider {
+  height: 60em;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+.my_files-docs__slider-overview {
+  position: absolute;
+}
+.my_files-docs__slider-scrollbar {
+  width: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-bottom: none;
+  z-index: 10;
+}
+.my_files-docs__items {
+  font-size: 1em;
+}
+.my_files-docs__items:last-of-type {
+  border-bottom: none;
 }
 .my_files-docs__items:before {
   content: '';
@@ -14181,37 +14237,6 @@ input#generate_qr--card:checked ~ .generate_qr__form--card {
 }
 .private_room-archive_list__table {
   margin-right: 20.8em;
-}
-.private_room-archive_list__slider {
-  position: relative;
-  height: 42.1em;
-  font-size: 0.86em;
-  border: 1px solid rgba(0, 0, 0, 0.14);
-}
-.private_room-archive_list__slider-box {
-  position: relative;
-  overflow: hidden;
-  margin-right: 11px;
-  height: 100%;
-}
-.private_room-archive_list__slider-scrollbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 11px;
-  border-left: 1px solid rgba(0, 0, 0, 0.14);
-}
-.private_room-archive_list__slider-track {
-  position: relative;
-  height: 100%;
-}
-.private_room-archive_list__slider-thumb {
-  position: absolute;
-  width: 6px;
-  left: 50%;
-  margin-left: -3px;
-  background: #808080;
-  border-radius: 5px;
 }
 .private_room-archive_list__items {
   position: absolute;

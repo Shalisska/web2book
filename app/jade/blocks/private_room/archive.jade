@@ -57,8 +57,8 @@ mixin archive_list(name, items)
 	div.my_files-table(class = name + '__table')
 		.my_files-table__header.clearfix
 			p.my_files-table__header-item(class = name + '__title' + ' ' + name + '__title--table') Название проекта
-		div(class = name + '__slider')
-			.viewport(class = name + '__slider-box')
+		div(class = pageClass + '__slider' + ' ' + name + '__slider')
+			.viewport(class = pageClass + '__slider-viewport')
 				ul.my_files-table__body.overview.clearfix(class = name + '__items')
 					each item, i in items
 						-var color = 'color1'
@@ -66,9 +66,9 @@ mixin archive_list(name, items)
 							-color = 'color2'
 						li.my_files-table__items.clearfix(class = name + '__item' + ' ' + 'my_files-table__items--' + color)
 							a.my_files-table__item(class = name + '__name' + ' ' + name + '__name--' + item.id href = '#')=item.name
-			.scrollbar(class = name + '__slider-scrollbar')
-				.track(class = name + '__slider-track')
-					.thumb(class = name + '__slider-thumb')
+			.scrollbar(class = pageClass + '__slider-scrollbar')
+				.track(class = pageClass + '__slider-track')
+					.thumb(class = pageClass + '__slider-thumb')
 
 	div(class = name + '__info')
 		.my_files-table__header.clearfix

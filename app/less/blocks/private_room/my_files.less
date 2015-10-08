@@ -560,6 +560,8 @@
 		margin-bottom: 4.1em;
 		
 		&__body {
+			&-wrap {margin-right: 0;}
+			
 			&--sub,
 			&--history,
 			&--split {
@@ -613,7 +615,26 @@
 			}
 		}
 		
+		&__slider {
+			height: (3em * 20);
+			border: none;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+			
+			&-overview {position: absolute;}
+			
+			&-scrollbar {
+				width: 12px;
+				border: 1px solid rgba(0, 0, 0, 0.14);
+				border-bottom: none;
+				z-index: 10;
+			}
+		}
+		
 		&__items {
+			font-size: 1em;
+			
+			&:last-of-type {border-bottom: none;}
+			
 			&:before {
 				content: '';
 				position: absolute;

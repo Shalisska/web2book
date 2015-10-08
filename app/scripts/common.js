@@ -430,10 +430,23 @@ $.fn.emptyRows = function(opts) {
 
 //личный кабинет-работа с файлами
 var val = 20;
-var cont = $('.my_files-docs__body-wrap > .my_files-docs__body');
+var slider = $('.my_files-docs__slider');
+var cont;
 
-cont.each(function () {
-  $(this).emptyRows({
+function scroll(slide) {
+  slide.tinyscrollbar({
+	axis: "y"
+  ,	thumbSize: 120
+  });
+
+  var scrollbar = slide.data("plugin_tinyscrollbar")
+  scrollbar.update();
+};
+
+slider.each(function () {
+	
+cont = $(this).find('.my_files-docs__body-wrap > .my_files-docs__body');
+  cont.emptyRows({
       value: val
     , child: '.my_files-docs__items--lvl0'
     , classes: [  'my_files-table__items'
@@ -447,6 +460,20 @@ cont.each(function () {
            + '</div>'
            + '</div>'
 	});
+	
+	if (cont.children('.my_files-docs__items--lvl0').length === val) {
+		scroll($(this));
+		var slider_item = $(this);
+		var controls = [$('.my_files-menu__name'), $('.my_files-actions__expand'), $('.my_files-docs__expand')];
+		
+		for (var i = 0; i < controls.length; i++) {
+			controls[i].click(function() {
+				setTimeout(function() {
+					scroll(slider_item);
+				}, 1);
+			});
+		};
+	};
 });
 
 //cкролл архив
