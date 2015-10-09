@@ -1,712 +1,834 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-svg">
-  <head>
-    <title>web2book</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/style.css" rel="stylesheet">
-    <script src="../../scripts/libs/modernizr.custom.05259.js"></script>
-    <script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
-    <script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
-    <script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
-    <script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
-  </head>
-  <body>
-    <svg width="0" height="0" class="svg-container">
-      <defs></defs>
-    </svg>
-    <div class="body-wrapper">
-      <header class="header">
-        <div class="container--header">
-          <div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
-            <div class="header-row clearfix">
-              <div class="header-contacts">
-                <p class="header-contacts__name">Контактный телефон:</p>
-                <p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
-              </div>
-              <div class="header-logo"><a href="#">
-                  <picture>
-                    <source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w"/><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book"/>
-                  </picture></a></div>
-                        <nav class="header-autorization">
-                          <ul class="clearfix">
-                            <li class="header-autorization-item header-autorization-item--search"><a href="/" class="header-autorization__search "></a></li>
-                            <li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
-                            <li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
-                          </ul>
-                        </nav>
-            </div>
-            <div class="header-menu-bar">
-              <div class="header-menu__open">
-                <button><span>&#8943;</span></button>
-              </div>
-              <nav class="header-menu">
-                <ul class="clearfix header-menu--lvl0">
-                  <li class="header-menu__item header-menu__item--active "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
-                    <ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                    </ul>
-                  </li>
-                  <li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
-                    <ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Каталог продукции</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Онлайн издательство</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
-                                <ul class="menu_inner menu_inner--lvl4 header-menu_inner header-menu--lvl4">
-                                  <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
-                                  <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
-                                </ul>
-                              </li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="calculator/calculator.html" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Калькулятор стоимости</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Полезно знать</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Контакты</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a></li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">О компании</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Вакансии</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <div class="header-cart"></div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="container container--main container--private_room">
-          <ul class="breadcrumbs clearfix">
-            <li class="breadcrumbs__item"><a href="#" class="sprite_icon-home--blue"></a></li>
-            <li class="breadcrumbs__item breadcrumbs__item--next"><a href="#">Личный кабинет<span>⌵</span></a>
-              <ul class="menu_inner menu_inner--lvl1 breadcrumbs_inner breadcrumbs--lvl1">
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Профиль клиента</a>
-                  <ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Персональные данные</a></li>
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Реквизиты юр. и физ. лица</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Управление файлами</a>
-                  <ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Мои файлы</a></li>
-                  </ul>
-                </li>
-                <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Создание, редактирование проекта</a>
-                  <ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Список проектов</a></li>
-                    <li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Калькуляция проекта</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <header class="private_room-header">
-            <div class="clearfix private_room-header-features">
-                            <div class="private_room-tarif form__switcher private_room__switcher">
-                              <input type="radio" name="tarif" id="tarif-off" val="standart" checked="checked" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif"/>
-                              <input type="radio" name="tarif" id="tarif-on" val="expert" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif"/>
-                              <div class="form__switcher-box private_room__switcher-box private_room__switcher-box--tarif">
-                                <div class="form__switcher-labels clearfix private_room__switcher-labels private_room__switcher-labels--tarif">
-                                  <label for="tarif-off"></label>
-                                  <label for="tarif-on"></label>
-                                </div>
-                              </div><span class="private_room__switcher__tarif private_room__switcher__tarif--off">Стандарт</span><span class="private_room__switcher__tarif private_room__switcher__tarif--on">Эксперт</span><a href="#" class="private_room-tarif__info">?<span class="private_room-tarif__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa doloremque nostrum, dicta provident dolores explicabo velit iste adipisci, voluptatum a laborum expedita, nisi suscipit est quaerat veniam ex ipsam atque.</span></a>
-                            </div>
-              <div class="private_room-mems clearfix"><a href="#" class="private_room-message"><span>3</span></a>
-                <div class="private_room-memory">
-                  <p class="private_room-memory__title">Общий рабочий объем</p>
-                                <div class="clearfix private_room-memory__top">
-                                  <div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
-                                    <p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p>
-                                  </div>
-                                  <p class="private_room-memory__info">Вам предоставлен объем 2 Gb. Для увеличения пространства, необходимо оформить заказ</p>
-                                </div>
-                                <div class="clearfix private_room-memory__bottom">
-                                  <div class="private_room-memory__free">
-                                    <p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
-                                  </div><a href="#" class="form__btn private_room-memory__btn">Заказать</a>
-                                </div>
-                </div>
-                <div class="private_room-memory">
-                  <p class="private_room-memory__title">Объем архива</p>
-                                <div class="clearfix private_room-memory__top">
-                                  <div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
-                                    <p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p>
-                                  </div>
-                                  <p class="private_room-memory__info">Вам предоставлен объем 20 Gb. Для увеличения пространства, необходимо оформить заказ</p>
-                                </div>
-                                <div class="clearfix private_room-memory__bottom">
-                                  <div class="private_room-memory__free">
-                                    <p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
-                                  </div><a href="#" class="form__btn private_room-memory__btn">В архив</a>
-                                </div>
-                </div>
-              </div>
-            </div>
-            <nav class="private_room-header__menu">
-                        <ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
-                          <li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
-                        </ul>
-            </nav>
-          </header>
-          <div class="clearfix private_room">
-            <div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next">Далее</a></div>
-          </div>
-        </div>
-      </main>
-      <div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
-        <footer class="footer">
-          <div class="footer-parts clearfix">
-                        <nav class="footer-menu__block">
-                          <ul class="footer-menu">
-                            <li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                          </ul>
-                        </nav>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-parts clearfix">
-            <div class="footer-phone">
-              <div class="footer__title">Телефон</div>
-              <p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
-            </div>
-            <div class="footer-pay">
-              <div class="footer__title">Принимаем к оплате</div>
-              <div class="footer__block"><a href="/" class="footer-pay__item footer-pay__item--maestro">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--mastercard">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--visa">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa"/>
-                              </picture></a>
-                            <div class="footer-pay__item-row"></div><a href="/" class="footer-pay__item footer-pay__item--paypal">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--webmoney">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--qiwi">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi"/>
-                              </picture></a>
-              </div>
-            </div>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-            <div class="footer-qr">
-              <div class="footer__title">QR-код</div>
-              <div class="footer__block">
-                <picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
-                </picture>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
-      </div>
-    </div><a href="#" class="scrollTop">Наверх</a>
-    <div class="private_room-archive">
-      <p class="private_room-archive__title">Архив проектов</p><a href="#" class="sprite_icon-close--white private_room-archive__close"></a>
-          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--icons" class="private_room-archive-nav__inputs">
-          <input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--list" checked class="private_room-archive-nav__inputs">
-          <div class="private_room-archive-nav">
-            <ul class="clearfix private_room-archive-nav__items">
-              <li class="private_room-archive-nav__item">
-                <label for="private_room-archive-nav--icons" class="my_files__btn--gray private_room-archive-nav__name private_room-archive-nav__name--icons sprite_icon-archive_icons"></label>
-              </li>
-              <li class="private_room-archive-nav__item">
-                <label for="private_room-archive-nav--list" class="my_files__btn--gray private_room-archive-nav__name private_room-archive-nav__name--list sprite_icon-archive_list"></label>
-              </li>
-            </ul>
-          </div>
-      <div class="private_room-archive__block private_room-archive_icons">
-            <ul class="clearfix private_room-archive_icons__items">
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
-                <input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="devero" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
-                <input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
-                <input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
-                <input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
-                <input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="devero" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
-                <input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
-                <input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
-                <input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
-                <input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="devero" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
-                <input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
-                <input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
-                <input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
-                <label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
-                <div class="private_room-archive_icons__box">
-                  <div class="private_room-archive_icons__img">
-                    <picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter"/>
-                    </picture>
-                  </div>
-                  <p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
-                  <ul class="private_room-archive_icons__actions">
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a></li>
-                        <li class="private_room-archive_icons__action"><a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-            <nav class="private_room-archive_icons__nav">
-              <ul class="clearfix private_room-archive_icons__nav__items">
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--first"><a href="#" class="private_room-archive_icons__nav__name">1</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--prev"><a href="#" class="private_room-archive_icons__nav__name">11—20</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">21</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">22</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek private_room-archive_icons__nav__item--active"><a href="#" class="private_room-archive_icons__nav__name">23</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">24</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">25</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">26</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">27</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">28</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">29</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">30</a></li>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--next"><a href="#" class="private_room-archive_icons__nav__name">31—40</a></li><span>из</span>
-                <li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--last"><a href="#" class="private_room-archive_icons__nav__name">176</a></li>
-              </ul>
-            </nav>
-      </div>
-      <div class="private_room-archive__block private_room-archive_list">
-            <div class="my_files-table private_room-archive_list__table">
-              <div class="my_files-table__header clearfix">
-                <p class="my_files-table__header-item private_room-archive_list__title private_room-archive_list__title--table">Название проекта</p>
-              </div>
-              <div class="private_room__slider private_room-archive_list__slider">
-                <div class="viewport private_room__slider-viewport">
-                  <ul class="my_files-table__body overview clearfix private_room-archive_list__items">
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--a31-a100">А31—А100</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--wtf">WTF</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches">The_roof_is_on_fire_you_fat_beaches</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_1">The_roof_is_on_fire_you_fat_beaches_1</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_last">The_roof_is_on_fire_you_fat_beaches_last</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--12_obezyan">12_obezyan</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--petrovich">Petrovich</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2">r2-d2</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2_1">r2-d2</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--kniga_12.33">Kniga_12.33</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--pitomnik">Pitomnik</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--zuzu_1294">Zuzu_1294</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--provaid_igrus">Provaid Igrus</a></li>
-                    <li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--ochumet">Ochumet</a></li>
-                  </ul>
-                </div>
-                <div class="scrollbar private_room__slider-scrollbar">
-                  <div class="track private_room__slider-track">
-                    <div class="thumb private_room__slider-thumb"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="private_room-archive_list__info">
-              <div class="my_files-table__header clearfix">
-                <p class="my_files-table__header-item private_room-archive_list__title private_room-archive_list__title--info">Информация</p>
-              </div>
-              <ul class="clearfix private_room-archive_list__actions">
-                <li class="private_room-archive_list__action"><a href="#" class="sprite_private_room sprite_icon-to_archive private_room-archive_list__act private_room-archive_list__act--to_archive"></a></li>
-                <li class="private_room-archive_list__action"><a href="#" class="sprite_private_room sprite_icon-from_archive private_room-archive_list__act private_room-archive_list__act--from_archive"></a></li>
-              </ul>
-              <div class="private_room-archive_list__info__block">
-                    <div class="private_room-archive_list__info__img">
-                      <picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero"/>
-                      </picture>
-                    </div>
-                    <ul class="private_room-archive_list__info__items">
-                      <li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Название</span>
-                        <div class="private_room-archive_list__info__val"><span>Джуд Деверо</span><span>Принцесса и золушка</span>
-                        </div>
-                      </li>
-                      <li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Размер</span><span class="private_room-archive_list__info__val">26 MB</span>
-                      </li>
-                      <li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Дата архивирования</span><span class="private_room-archive_list__info__val">14.11.2012</span>
-                      </li>
-                      <li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Дата утверждения</span><span class="private_room-archive_list__info__val">26.07.2012</span>
-                      </li>
-                    </ul>
-              </div>
-            </div>
-      </div>
-    </div>
-    <div class="popup faq">
-      <p class="popup__title">FAQ</p><a href="#" class="popup__close sprite_icon-close--white"></a>
-      <div class="faq-block">
-            <div class="clearfix faq-header">
-              <div class="faq-header__title">Справка по Web2Book</div>
-              <div class="faq-header__info">
-                <div class="faq-header__phone"><span class="faq-header__phone-text">Телефон Тех.поддержки</span><span class="faq-header__phone-num">(495) 223-92-00</span></div>
-                <form action="/" method="get" class="search clearfix faq-header__search">
-                  <input type="text" placeholder="Поиск по справке" class="search__input">
-                  <button class="search__btn sprite_icon-my_files_search"></button>
-                </form>
-              </div>
-            </div>
-        <aside class="faq-sidebar">
-              <nav class="faq-menu">
-                <ul class="faq-menu__items">
-                  <li class="faq-menu__item"><a class="faq-menu__item-name">Управление файлами (<span class="faq-menu__item--num">12</span>)</a></li>
-                  <li class="faq-menu__item"><a class="faq-menu__item-name">Настройка аккаунта (<span class="faq-menu__item--num">22</span>)</a></li>
-                  <li class="faq-menu__item faq-menu__item--active"><a class="faq-menu__item-name">Калькуляция проекта (<span class="faq-menu__item--num">5</span>)</a></li>
-                  <li class="faq-menu__item"><a class="faq-menu__item-name">Оформление заказа (<span class="faq-menu__item--num">9</span>)</a></li>
-                  <li class="faq-menu__item"><a class="faq-menu__item-name">Оплата (<span class="faq-menu__item--num">17</span>)</a></li>
-                </ul>
-              </nav>
-        </aside>
-        <div class="faq-main">
-              <h3 class="faq__title"></h3><a class="btn btn__sprite faq__btn--back"></a>
-              <div class="scroller faq-scroller">
-                <div class="viewport faq-scroller__viewport">
-                  <div class="overview faq-scroller__overview">
-                            <div class="faq-keywords"><span class="faq-keywords__text"></span>
-                              <ul class="clearfix faq-keywords__items">
-                                <li class="faq-keywords__item"><a href="#" class="faq-keywords__item-name">Корешок обложки</a>,
-                                </li>
-                                <li class="faq-keywords__item"><a href="#" class="faq-keywords__item-name">тип скрепления</a>
-                                </li>
-                              </ul>
-                            </div>
-                        <p class="faq-desc">Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.</p>
-                        <p class="faq-desc">*Оператор мобильной связи может взимать плату за трафик.</p>
-                        <p class="faq-desc">Чтобы отправить файл, выполните следующие действия:</p>
-                            <ul class="faq-list__items">
-                              <li class="faq-list__item">Войдите в Skype.</li>
-                              <li class="faq-list__item">Выберите вкладку Контакты.</li>
-                              <li class="faq-list__item">Выберите абонента, которому хотите отправить файл, и выберите Дополнительно &gt; Отправить файл.</li>
-                              <li class="faq-list__item">Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.</li>
-                            </ul>
-                        <p class="faq-desc">Чтобы принять файл, выполните следующие действия:</p>
-                            <ul class="faq-list__items">
-                              <li class="faq-list__item">Войдите в Skype.</li>
-                              <li class="faq-list__item">Выберите вкладку Контакты.</li>
-                              <li class="faq-list__item">Выберите абонента, которому хотите отправить файл, и выберите Дополнительно &gt; Отправить файл.</li>
-                              <li class="faq-list__item">Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.</li>
-                            </ul>
-                        <p class="faq-desc">Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.</p>
-                  </div>
-                </div>
-                <div class="scrollbar faq-scroller__scrollbar">
-                  <div class="track faq-scroller__track">
-                    <div class="thumb faq__thumb"></div>
-                  </div>
-                </div>
-              </div>
-                  <div class="faqundefined">
-                    <p class="faqundefined__title"></p>
-                    <ul class="faqundefined__items">
-                      <li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Принцип заполнения граф в калькуляции проекта</a></li>
-                      <li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Генерация QR кода</a></li>
-                      <li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Отправка менеждеру резыльтаты изменения калькуляции</a></li>
-                    </ul>
-                  </div>
-        </div>
-      </div>
-    </div>
-  </body>
-  <script src="../../scripts/common.js"></script>
+	<head>
+		<title>web2book</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../../css/style.css" rel="stylesheet">
+		<script src="../../scripts/libs/modernizr.custom.05259.js"></script>
+		<script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
+		<script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
+		<script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
+		<script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
+	</head>
+	<body>
+		<svg width="0" height="0" class="svg-container">
+			<defs></defs>
+		</svg>
+		<div class="body-wrapper">
+			<header class="header">
+				<div class="container--header">
+					<div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
+						<div class="header-row clearfix">
+							<div class="header-contacts">
+								<p class="header-contacts__name">Контактный телефон:</p>
+								<p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
+							</div>
+							<div class="header-logo">
+								<a href="#">
+									<picture>
+										<source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w" /><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book" />
+									</picture>
+								</a>
+							</div>
+							<nav class="header-autorization">
+								<ul class="clearfix">
+									<li class="header-autorization-item header-autorization-item--search">
+										<a href="/" class="header-autorization__search "></a>
+									</li>
+									<li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
+									<li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header-menu-bar">
+							<div class="header-menu__open">
+								<button><span>&#8943;</span></button>
+							</div>
+							<nav class="header-menu">
+								<ul class="clearfix header-menu--lvl0">
+									<li class="header-menu__item header-menu__item--active "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
+										<ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+										</ul>
+									</li>
+									<li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
+										<ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Каталог продукции</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Онлайн издательство</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
+																<ul class="menu_inner menu_inner--lvl4 header-menu_inner header-menu--lvl4">
+																	<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
+																	<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
+																</ul>
+															</li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="calculator/calculator.html" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Калькулятор стоимости</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Полезно знать</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Контакты</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a></li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">О компании</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Вакансии</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<div class="header-cart"></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="container container--main container--private_room">
+					<ul class="breadcrumbs clearfix">
+						<li class="breadcrumbs__item">
+							<a href="#" class="sprite_icon-home--blue"></a>
+						</li>
+						<li class="breadcrumbs__item breadcrumbs__item--next"><a href="#">Личный кабинет<span>⌵</span></a>
+							<ul class="menu_inner menu_inner--lvl1 breadcrumbs_inner breadcrumbs--lvl1">
+								<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Профиль клиента</a>
+									<ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
+										<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Персональные данные</a></li>
+										<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Реквизиты юр. и физ. лица</a></li>
+									</ul>
+								</li>
+								<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Управление файлами</a>
+									<ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
+										<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Мои файлы</a></li>
+									</ul>
+								</li>
+								<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item breadcrumbs__item--next menu_inner__item--next"><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Создание, редактирование проекта</a>
+									<ul class="menu_inner menu_inner--lvl2 breadcrumbs_inner breadcrumbs--lvl2">
+										<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Список проектов</a></li>
+										<li class="breadcrumbs__item menu_inner__item breadcrumbs_inner__item "><a class="breadcrumbs__item-name menu_inner__item-name breadcrumbs_inner__item-name">Калькуляция проекта</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<header class="private_room-header">
+						<div class="clearfix private_room-header-features">
+							<div class="private_room-tarif form__switcher private_room__switcher">
+								<input type="radio" name="tarif" id="tarif-off" val="standart" checked="checked" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif" />
+								<input type="radio" name="tarif" id="tarif-on" val="expert" class="form__switcher-inputs private_room__switcher-inputs private_room__switcher-inputs--tarif" />
+								<div class="form__switcher-box private_room__switcher-box private_room__switcher-box--tarif">
+									<div class="form__switcher-labels clearfix private_room__switcher-labels private_room__switcher-labels--tarif">
+										<label for="tarif-off"></label>
+										<label for="tarif-on"></label>
+									</div>
+								</div><span class="private_room__switcher__tarif private_room__switcher__tarif--off">Стандарт</span><span class="private_room__switcher__tarif private_room__switcher__tarif--on">Эксперт</span><a href="#" class="private_room-tarif__info">?<span class="private_room-tarif__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa doloremque nostrum, dicta provident dolores explicabo velit iste adipisci, voluptatum a laborum expedita, nisi suscipit est quaerat veniam ex ipsam atque.</span></a>
+							</div>
+							<div class="private_room-mems clearfix"><a href="#" class="private_room-message"><span>3</span></a>
+								<div class="private_room-memory">
+									<p class="private_room-memory__title">Общий рабочий объем</p>
+									<div class="clearfix private_room-memory__top">
+										<div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
+											<p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p>
+										</div>
+										<p class="private_room-memory__info">Вам предоставлен объем 2 Gb. Для увеличения пространства, необходимо оформить заказ</p>
+									</div>
+									<div class="clearfix private_room-memory__bottom">
+										<div class="private_room-memory__free">
+											<p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">2 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
+										</div><a href="#" class="form__btn private_room-memory__btn">Заказать</a>
+									</div>
+								</div>
+								<div class="private_room-memory">
+									<p class="private_room-memory__title">Объем архива</p>
+									<div class="clearfix private_room-memory__top">
+										<div class="private_room-memory__granted"><span class="private_room-memory__name">Предоставленно</span>
+											<p class="private_room-memory__volume private_room-memory__volume--granted"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p>
+										</div>
+										<p class="private_room-memory__info">Вам предоставлен объем 20 Gb. Для увеличения пространства, необходимо оформить заказ</p>
+									</div>
+									<div class="clearfix private_room-memory__bottom">
+										<div class="private_room-memory__free">
+											<p class="private_room-memory__volume private_room-memory__volume--free"><span class="private_room-memory__volume--num">20 </span><span class="private_room-memory__volume--unit">GB</span></p><span class="private_room-memory__name">Свободно</span>
+										</div><a href="#" class="form__btn private_room-memory__btn">В архив</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<nav class="private_room-header__menu">
+							<ul class="clearfix private_room-header__menu-part private_room-header__menu--top">
+								<li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Профиль клиента</a></li>
+								<li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Управление файлами</a></li>
+								<li class="private_room-header__menu-item private_room-header__menu-item--top"><a href="#" class="private_room-header__menu-item_name private_room-header__menu-item_name--top">Создание, редактирование проекта</a></li>
+							</ul>
+						</nav>
+					</header>
+					<div class="clearfix private_room">
+						<div class="clearfix private_room-page_controls"><a href="#" class="sprite_form sprite_icon-private_room_arrow--prev private_room-page__btn private_room-page__btn--prev">Назад</a><a href="#" class="sprite_form sprite_icon-private_room_arrow--next private_room-page__btn private_room-page__btn--next">Далее</a></div>
+					</div>
+				</div>
+			</main>
+			<div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
+				<footer class="footer">
+					<div class="footer-parts clearfix">
+						<nav class="footer-menu__block">
+							<ul class="footer-menu">
+								<li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-parts clearfix">
+						<div class="footer-phone">
+							<div class="footer__title">Телефон</div>
+							<p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
+						</div>
+						<div class="footer-pay">
+							<div class="footer__title">Принимаем к оплате</div>
+							<div class="footer__block">
+								<a href="/" class="footer-pay__item footer-pay__item--maestro">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--mastercard">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--visa">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa" />
+									</picture>
+								</a>
+								<div class="footer-pay__item-row"></div>
+								<a href="/" class="footer-pay__item footer-pay__item--paypal">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--webmoney">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--qiwi">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi" />
+									</picture>
+								</a>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+						<div class="footer-qr">
+							<div class="footer__title">QR-код</div>
+							<div class="footer__block">
+								<picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
+			</div>
+		</div><a href="#" class="scrollTop">Наверх</a>
+		<div class="private_room-archive">
+			<p class="private_room-archive__title">Архив проектов</p>
+			<a href="#" class="sprite_icon-close--white private_room-archive__close"></a>
+			<input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--icons" class="private_room-archive-nav__inputs">
+			<input type="radio" name="private_room-archive-nav" id="private_room-archive-nav--list" checked class="private_room-archive-nav__inputs">
+			<div class="private_room-archive-nav">
+				<ul class="clearfix private_room-archive-nav__items">
+					<li class="private_room-archive-nav__item">
+						<label for="private_room-archive-nav--icons" class="my_files__btn--gray private_room-archive-nav__name private_room-archive-nav__name--icons sprite_icon-archive_icons"></label>
+					</li>
+					<li class="private_room-archive-nav__item">
+						<label for="private_room-archive-nav--list" class="my_files__btn--gray private_room-archive-nav__name private_room-archive-nav__name--list sprite_icon-archive_list"></label>
+					</li>
+				</ul>
+			</div>
+			<div class="private_room-archive__block private_room-archive_icons">
+				<ul class="clearfix private_room-archive_icons__items">
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
+						<input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="devero" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
+						<input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
+						<input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
+						<input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
+						<input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="devero" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
+						<input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
+						<input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
+						<input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--devero">
+						<input type="checkbox" id="devero" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="devero" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Джуд Деверо</span><span class="private_room-archive_icons__title-name">Принцесса и Золушка</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--zankovsky">
+						<input type="checkbox" id="zankovsky" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="zankovsky" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/zankovsky/zankovsky@156.jpg 156w" width="156" srcset="../../images/private_room/archive/zankovsky/zankovsky@234.jpg 234w, ../../images/private_room/archive/zankovsky/zankovsky@312.jpg 312w, ../../images/private_room/archive/zankovsky/zankovsky@468.jpg 468w" alt="zankovsky" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">А. Н. Занковский</span><span class="private_room-archive_icons__title-name">Организационная психология</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--dontsova">
+						<input type="checkbox" id="dontsova" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="dontsova" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/dontsova/dontsova@156.jpg 156w" width="156" srcset="../../images/private_room/archive/dontsova/dontsova@234.jpg 234w, ../../images/private_room/archive/dontsova/dontsova@312.jpg 312w, ../../images/private_room/archive/dontsova/dontsova@468.jpg 468w" alt="dontsova" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Дарья Донцова</span><span class="private_room-archive_icons__title-name">Яблоко Монте - Кристо</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="private_room-archive_icons__item private_room-archive_icons__item--ledbiter">
+						<input type="checkbox" id="ledbiter" name="private_room-archive__item" class="private_room-archive__checkbox-input">
+						<label for="ledbiter" class="my_files__check private_room-archive__checkbox"></label>
+						<div class="private_room-archive_icons__box">
+							<div class="private_room-archive_icons__img">
+								<picture><img src="../../images/private_room/archive/ledbiter/ledbiter@156.jpg 156w" width="156" srcset="../../images/private_room/archive/ledbiter/ledbiter@234.jpg 234w, ../../images/private_room/archive/ledbiter/ledbiter@312.jpg 312w, ../../images/private_room/archive/ledbiter/ledbiter@468.jpg 468w" alt="ledbiter" />
+								</picture>
+							</div>
+							<p class="private_room-archive_icons__title"><span class="private_room-archive_icons__title-author">Чарльз Ледбитер</span><span class="private_room-archive_icons__title-name">Жизнь до и после</span></p>
+							<ul class="private_room-archive_icons__actions">
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--google_disk sprite_private_room sprite_icon-google_disk"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--drop_box sprite_private_room sprite_icon-drop_box"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--share sprite_private_room sprite_icon-share"></a>
+								</li>
+								<li class="private_room-archive_icons__action">
+									<a href="#" class="private_room-archive_icons__act private_room-archive_icons__act--archive sprite_private_room sprite_icon-archive"></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<nav class="private_room-archive_icons__nav">
+					<ul class="clearfix private_room-archive_icons__nav__items">
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--first"><a href="#" class="private_room-archive_icons__nav__name">1</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--prev"><a href="#" class="private_room-archive_icons__nav__name">11—20</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">21</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">22</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek private_room-archive_icons__nav__item--active"><a href="#" class="private_room-archive_icons__nav__name">23</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">24</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">25</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">26</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">27</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">28</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">29</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--stek"><a href="#" class="private_room-archive_icons__nav__name">30</a></li>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--next"><a href="#" class="private_room-archive_icons__nav__name">31—40</a></li><span>из</span>
+						<li class="private_room-archive_icons__nav__item private_room-archive_icons__nav__item--last"><a href="#" class="private_room-archive_icons__nav__name">176</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="private_room-archive__block private_room-archive_list">
+				<div class="my_files-table private_room-archive_list__table">
+					<div class="my_files-table__header clearfix">
+						<p class="my_files-table__header-item private_room-archive_list__title private_room-archive_list__title--table">Название проекта</p>
+					</div>
+					<div class="private_room__slider private_room-archive_list__slider">
+						<div class="viewport private_room__slider-viewport">
+							<ul class="my_files-table__body overview clearfix private_room-archive_list__items">
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--a31-a100">А31—А100</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--wtf">WTF</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches">The_roof_is_on_fire_you_fat_beaches</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_1">The_roof_is_on_fire_you_fat_beaches_1</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--the_roof_is_on_fire_you_fat_beaches_last">The_roof_is_on_fire_you_fat_beaches_last</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--12_obezyan">12_obezyan</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--petrovich">Petrovich</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2">r2-d2</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--r2-d2_1">r2-d2</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--kniga_12.33">Kniga_12.33</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--pitomnik">Pitomnik</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--zuzu_1294">Zuzu_1294</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color1"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--provaid_igrus">Provaid Igrus</a></li>
+								<li class="my_files-table__items clearfix private_room-archive_list__item my_files-table__items--color2"><a href="#" class="my_files-table__item private_room-archive_list__name private_room-archive_list__name--ochumet">Ochumet</a></li>
+							</ul>
+						</div>
+						<div class="scrollbar private_room__slider-scrollbar">
+							<div class="track private_room__slider-track">
+								<div class="thumb private_room__slider-thumb"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="private_room-archive_list__info">
+					<div class="my_files-table__header clearfix">
+						<p class="my_files-table__header-item private_room-archive_list__title private_room-archive_list__title--info">Информация</p>
+					</div>
+					<ul class="clearfix private_room-archive_list__actions">
+						<li class="private_room-archive_list__action">
+							<a href="#" class="sprite_private_room sprite_icon-to_archive private_room-archive_list__act private_room-archive_list__act--to_archive"></a>
+						</li>
+						<li class="private_room-archive_list__action">
+							<a href="#" class="sprite_private_room sprite_icon-from_archive private_room-archive_list__act private_room-archive_list__act--from_archive"></a>
+						</li>
+					</ul>
+					<div class="private_room-archive_list__info__block">
+						<div class="private_room-archive_list__info__img">
+							<picture><img src="../../images/private_room/archive/devero/devero@156.jpg 156w" width="156" srcset="../../images/private_room/archive/devero/devero@234.jpg 234w, ../../images/private_room/archive/devero/devero@312.jpg 312w, ../../images/private_room/archive/devero/devero@468.jpg 468w" alt="devero" />
+							</picture>
+						</div>
+						<ul class="private_room-archive_list__info__items">
+							<li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Название</span>
+								<div class="private_room-archive_list__info__val"><span>Джуд Деверо</span><span>Принцесса и золушка</span>
+								</div>
+							</li>
+							<li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Размер</span><span class="private_room-archive_list__info__val">26 MB</span>
+							</li>
+							<li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Дата архивирования</span><span class="private_room-archive_list__info__val">14.11.2012</span>
+							</li>
+							<li class="clearfix private_room-archive_list__info__item"><span class="private_room-archive_list__info__name">Дата утверждения</span><span class="private_room-archive_list__info__val">26.07.2012</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup faq">
+			<p class="popup__title">FAQ</p>
+			<a href="#" class="popup__close sprite_icon-close--white"></a>
+			<div class="faq-block">
+				<div class="clearfix faq-header">
+					<div class="faq-header__title">Справка по Web2Book</div>
+					<div class="faq-header__info">
+						<div class="faq-header__phone"><span class="faq-header__phone-text">Телефон Тех.поддержки</span><span class="faq-header__phone-num">(495) 223-92-00</span></div>
+						<form action="/" method="get" class="search clearfix faq-header__search">
+							<input type="text" placeholder="Поиск по справке" class="search__input">
+							<button class="search__btn sprite_icon-my_files_search"></button>
+						</form>
+					</div>
+				</div>
+				<aside class="faq-sidebar">
+					<nav class="faq-menu">
+						<ul class="faq-menu__items">
+							<li class="faq-menu__item"><a class="faq-menu__item-name">Управление файлами (<span class="faq-menu__item--num">12</span>)</a></li>
+							<li class="faq-menu__item"><a class="faq-menu__item-name">Настройка аккаунта (<span class="faq-menu__item--num">22</span>)</a></li>
+							<li class="faq-menu__item faq-menu__item--active"><a class="faq-menu__item-name">Калькуляция проекта (<span class="faq-menu__item--num">5</span>)</a></li>
+							<li class="faq-menu__item"><a class="faq-menu__item-name">Оформление заказа (<span class="faq-menu__item--num">9</span>)</a></li>
+							<li class="faq-menu__item"><a class="faq-menu__item-name">Оплата (<span class="faq-menu__item--num">17</span>)</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<div class="faq-main">
+					<h3 class="faq__title"></h3>
+					<a class="btn btn__sprite faq__btn--back"></a>
+					<div class="scroller faq-scroller">
+						<div class="viewport faq-scroller__viewport">
+							<div class="overview faq-scroller__overview">
+								<div class="faq-keywords"><span class="faq-keywords__text"></span>
+									<ul class="clearfix faq-keywords__items">
+										<li class="faq-keywords__item"><a href="#" class="faq-keywords__item-name">Корешок обложки</a>,
+										</li>
+										<li class="faq-keywords__item"><a href="#" class="faq-keywords__item-name">тип скрепления</a>
+										</li>
+									</ul>
+								</div>
+								<p class="faq-desc">Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.</p>
+								<p class="faq-desc">*Оператор мобильной связи может взимать плату за трафик.</p>
+								<p class="faq-desc">Чтобы отправить файл, выполните следующие действия:</p>
+								<ul class="faq-list__items">
+									<li class="faq-list__item">Войдите в Skype.</li>
+									<li class="faq-list__item">Выберите вкладку Контакты.</li>
+									<li class="faq-list__item">Выберите абонента, которому хотите отправить файл, и выберите Дополнительно &gt; Отправить файл.</li>
+									<li class="faq-list__item">Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.</li>
+								</ul>
+								<p class="faq-desc">Чтобы принять файл, выполните следующие действия:</p>
+								<ul class="faq-list__items">
+									<li class="faq-list__item">Войдите в Skype.</li>
+									<li class="faq-list__item">Выберите вкладку Контакты.</li>
+									<li class="faq-list__item">Выберите абонента, которому хотите отправить файл, и выберите Дополнительно &gt; Отправить файл.</li>
+									<li class="faq-list__item">Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.</li>
+								</ul>
+								<p class="faq-desc">Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.</p>
+							</div>
+						</div>
+						<div class="scrollbar faq-scroller__scrollbar">
+							<div class="track faq-scroller__track">
+								<div class="thumb faq__thumb"></div>
+							</div>
+						</div>
+					</div>
+					<div class="faqundefined">
+						<p class="faqundefined__title"></p>
+						<ul class="faqundefined__items">
+							<li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Принцип заполнения граф в калькуляции проекта</a></li>
+							<li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Генерация QR кода</a></li>
+							<li class="faqundefined__item"><a href="#" class="faqundefined__item-name">Отправка менеждеру резыльтаты изменения калькуляции</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/common.js"></script>
 </html>

@@ -404,7 +404,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			cwd: 'app/html/',
-			src:['*.html'],
+			src:['**/*.html'],
 			dest: 'build'
 		}]
 	},

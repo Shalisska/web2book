@@ -1,552 +1,571 @@
 <!DOCTYPE html>
 <html lang="ru" class="no-svg">
-  <head>
-    <title>web2book</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../css/style.css" rel="stylesheet">
-    <script src="../../scripts/libs/modernizr.custom.05259.js"></script>
-    <script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
-    <script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
-    <script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
-    <script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
-  </head>
-  <body>
-    <svg width="0" height="0" class="svg-container">
-      <defs></defs>
-    </svg>
-    <div class="body-wrapper body-online-lib">
-      <header class="header">
-        <div class="container--header">
-          <div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
-            <div class="header-row clearfix">
-              <div class="header-contacts">
-                <p class="header-contacts__name">Контактный телефон:</p>
-                <p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
-              </div>
-              <div class="header-logo"><a href="#">
-                  <picture>
-                    <source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w"/><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book"/>
-                  </picture></a></div>
-                        <nav class="header-autorization">
-                          <ul class="clearfix">
-                            <li class="header-autorization-item header-autorization-item--search"><a href="/" class="header-autorization__search "></a></li>
-                            <li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
-                            <li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
-                          </ul>
-                        </nav>
-            </div>
-            <div class="header-menu-bar">
-              <div class="header-menu__open">
-                <button><span>&#8943;</span></button>
-              </div>
-              <nav class="header-menu">
-                <ul class="clearfix header-menu--lvl0">
-                  <li class="header-menu__item header-menu__item--active "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
-                    <ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                    </ul>
-                  </li>
-                  <li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
-                  <li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
-                  <li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
-                    <ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Каталог продукции</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Онлайн издательство</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
-                                <ul class="menu_inner menu_inner--lvl4 header-menu_inner header-menu--lvl4">
-                                  <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
-                                  <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
-                                </ul>
-                              </li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="calculator/calculator.html" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Калькулятор стоимости</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Полезно знать</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Контакты</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
-                        <ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
-                            <ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a></li>
-                              <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
-                            </ul>
-                          </li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
-                          <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
-                        </ul>
-                      </li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">О компании</a></li>
-                      <li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Вакансии</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <div class="header-cart"></div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main class="online-lib__main">
-        <div class="container container--main clearfix">
-          <div class="offers offers--online-lib">
-                      <input type="radio" name="offers-slider" id="offers-slider--services" checked class="offers-slider__input">
-                      <input type="radio" name="offers-slider" id="offers-slider--products" class="offers-slider__input">
-                      <input type="radio" name="offers-slider" id="offers-slider--skreplenie" class="offers-slider__input">
-                      <div class="offers-title clearfix">
-                        <p class="offers-title__text">Мы предлагаем:</p>
-                        <div class="offers-slider__controls">
-                          <label for="offers-slider--services">Наши услуги</label>
-                          <label for="offers-slider--products">Наша продукция</label>
-                          <label for="offers-slider--skreplenie">Типы скрепления</label>
-                        </div>
-                      </div>
-                      <div class="offers-slider__box">
-                        <div class="offers-slider__inner">
-                          <div class="clearfix offers-slider__item offers-services">
-                                                <div class="offers-item-slider offers-item-slider--services">
-                                                  <div class="offers-item__box viewport offers-services__box">
-                                                    <div class="offers-item__inner clearfix overview offers-services__inner">
-                                                      <div class="offers-item__item offers-services__item offers-services__value">
-                                                        <div class="offers-item__img offers-services__img">
-                                                          <picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="value"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Калькулятор стоимости</h3>
-                                                        <p class="offers-item__text">Рассчитайте стоимость печати</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__cover">
-                                                        <div class="offers-item__img offers-services__img">
-                                                          <picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="cover"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Раскладка обложки</h3>
-                                                        <p class="offers-item__text">Скачать технические шаблоны обложки</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__width">
-                                                        <div class="offers-item__img offers-services__img">
-                                                          <picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="width"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Калькулятор толщины</h3>
-                                                        <p class="offers-item__text">Толщина корешка при количестве полос</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__profile">
-                                                        <div class="offers-item__img offers-services__img">
-                                                          <picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="profile"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Личный кабинет</h3>
-                                                        <p class="offers-item__text">Работа с файлами и проектами</p>
-                                                      </div>
-                                                      <div class="offers-item__item offers-services__item offers-services__lib">
-                                                        <div class="offers-item__img offers-services__img">
-                                                          <picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="lib"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Онлайн библиотека</h3>
-                                                        <p class="offers-item__text">Публикуйте свои книги и получайте с них прибыль</p>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-services__box--pops">
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__value--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Калькулятор стоимости</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__cover--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Раскладка обложки</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__width--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Калькулятор толщины</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__profile--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Личный кабинет</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                              <div class="offers-item__item--pops offers-services__item--pops offers-services__lib--pops">
-                                                                <p class="offers-item__title offers-item__title--pops">Онлайн библиотека</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
-                                                                <p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
-                                                              </div>
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-services__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-services__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-services__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                          </div>
-                          <div class="clearfix offers-slider__item offers-products">
-                                                <div class="offers-item-slider offers-item-slider--products">
-                                                  <div class="offers-item__box viewport offers-products__box">
-                                                    <div class="offers-item__inner clearfix overview offers-products__inner">
-                                                      <div class="offers-item__item offers-products__item offers-products__booklet">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="booklet"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Буклеты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__notepad">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="notepad"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Блокноты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__report">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="report"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Отчеты</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__album">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="album"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Альбомы</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__magazine">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="magazine"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Журналы</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__encyclopedia">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="encyclopedia"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Энциклопедии</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__catalog">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="catalog"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Каталоги</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-products__item offers-products__instruction">
-                                                        <div class="offers-item__img offers-products__img">
-                                                          <picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="instruction"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Инструкции</h3>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-products__box--pops">
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-products__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-products__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-products__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                      <div class="offers-products__info">
-                                        <h4 class="offers-products__info-title">Печать по требованию</h4>
-                                        <p class="offers-products__info-text">Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...</p><a href="/" class="offers-products__info-more">Узнать больше</a>
-                                      </div>
-                          </div>
-                          <div class="clearfix offers-slider__item offers-skreplenie">
-                                                <div class="offers-item-slider offers-item-slider--skreplenie">
-                                                  <div class="offers-item__box viewport offers-skreplenie__box">
-                                                    <div class="offers-item__inner clearfix overview offers-skreplenie__inner">
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__spiral">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="spiral"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Spiral</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__twin_loop">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="twin_loop"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Twin Loop Wire</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__comb">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="comb"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Comb</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__ring">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="ring"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Ring</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__tape">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="tape"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Tape</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__velo">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="velo"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Velo</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__saddle">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="saddle"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Saddle Stitch</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__perfect">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="perfect"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Perfect</h3>
-                                                      </div>
-                                                      <div class="offers-item__item offers-skreplenie__item offers-skreplenie__stapled">
-                                                        <div class="offers-item__img offers-skreplenie__img">
-                                                          <picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="stapled"/>
-                                                          </picture>
-                                                        </div>
-                                                        <h3 class="offers-item__title">Stapled</h3>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="offers-item__box--pops clearfix offers-skreplenie__box--pops">
-                                                  </div>
-                                                  <div class="offers-item__scroll scrollbar offers-skreplenie__scroll">
-                                                    <div class="offers-item__scroll_bar track offers-skreplenie__scroll_bar">
-                                                      <div class="offers-item__scroll_control thumb offers-skreplenie__scroll_control"></div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                          </div>
-                        </div>
-                      </div>
-          </div>
-          <header class="clearfix online-lib__header">
-            <div class="online-lib__header-logo"><a href="#" class="online-lib__header-logo__img">
-                <picture><img src="../../images/online-lib/logo/online-lib-logo@66.png 66w" width="66" srcset="../../images/online-lib/logo/online-lib-logo@99.png 99w, ../../images/online-lib/logo/online-lib-logo@132.png 132w, ../../images/online-lib/logo/online-lib-logo@198.png 198w" alt="Online libruary"/>
-                </picture></a>
-              <p class="online-lib__header-logo__text"><span class="online-lib__header-logo__text--main">Онлайн библиотека</span><span class="online-lib__header-logo__text--sub">Web2Book technology</span></p>
-            </div>
-            <div class="online-lib__header-right-side"><img src="../../images/online-lib/common/header-right.png" alt=""></div>
-          </header>
-          <aside class="column--left">
-            <!--include ../blocks/right-column/right-column-->
-            <nav class="online-lib-left">
-                          <ul class="online-lib-left-menu">
-                            <p class="online-lib-left-menu__title">Книги</p>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Бизнес</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Детская литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Журналы, периодика</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Иностранная литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Искусство. Религия</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Компьютерная литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Красота, здоровье, секс</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Научная литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Подарочные издания</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Право</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Семья. Быт. Досуг</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Спорт. Туризм. Карты и атласы</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Универсальная справочная литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Учебная литература: подготовка к школе, школа, ВУЗ</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Художественная литература</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Эзотерика. Парапсихология. Тайны</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Прочие издания</a></li>
-                          </ul>
-                          <ul class="online-lib-left-menu">
-                            <p class="online-lib-left-menu__title">Журналы</p>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Научные</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Развлекательные</a></li>
-                            <li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Музыкальные</a></li>
-                          </ul>
-            </nav>
-          </aside>
-          <div class="column--central column--central-left"></div>
-        </div>
-      </main>
-      <div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
-        <footer class="footer">
-          <div class="footer-parts clearfix">
-                        <nav class="footer-menu__block">
-                          <ul class="footer-menu">
-                            <li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
-                            </li>
-                            <li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
-                                          <ul class="footer-menu_sub">
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
-                                            </li>
-                                            <li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
-                                            </li>
-                                          </ul>
-                            </li>
-                          </ul>
-                        </nav>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-parts clearfix">
-            <div class="footer-phone">
-              <div class="footer__title">Телефон</div>
-              <p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
-            </div>
-            <div class="footer-pay">
-              <div class="footer__title">Принимаем к оплате</div>
-              <div class="footer__block"><a href="/" class="footer-pay__item footer-pay__item--maestro">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--mastercard">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--visa">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa"/>
-                              </picture></a>
-                            <div class="footer-pay__item-row"></div><a href="/" class="footer-pay__item footer-pay__item--paypal">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--webmoney">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney"/>
-                              </picture></a><a href="/" class="footer-pay__item footer-pay__item--qiwi">
-                              <picture>
-                                <source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w"/><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi"/>
-                              </picture></a>
-              </div>
-            </div>
-            <div class="footer-contacts">
-              <div class="footer__title">Контакты</div>
-              <div class="footer__block">
-                            <p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
-                            </p>
-                            <p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
-                            </p>
-              </div>
-            </div>
-            <div class="footer-qr">
-              <div class="footer__title">QR-код</div>
-              <div class="footer__block">
-                <picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code"/>
-                </picture>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
-      </div>
-    </div><a href="#" class="scrollTop">Наверх</a>
-  </body>
-  <script src="../../scripts/common.js"></script>
-  <script src="../../scripts/scrolls-index.js"></script>
+	<head>
+		<title>web2book</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../../css/style.css" rel="stylesheet">
+		<script src="../../scripts/libs/modernizr.custom.05259.js"></script>
+		<script src="../../scripts/libs/jquery-1.11.3.min.js"></script>
+		<script src="../../scripts/libs/jquery.viewportchecker.min.js"></script>
+		<script src="../../scripts/libs/tinyscrollbar-2.4.2/lib/jquery.tinyscrollbar.js"></script>
+		<script src="../../scripts/libs/jqueryDotdotdot/jquery.dotdotdot.min.js"></script>
+	</head>
+	<body>
+		<svg width="0" height="0" class="svg-container">
+			<defs></defs>
+		</svg>
+		<div class="body-wrapper body-online-lib">
+			<header class="header">
+				<div class="container--header">
+					<div class="header--upper sprite_icon-hook--left sprite_icon-hook--right">
+						<div class="header-row clearfix">
+							<div class="header-contacts">
+								<p class="header-contacts__name">Контактный телефон:</p>
+								<p class="header-contacts__phone">(495) <span class="header-contacts__phone--grand">223-92-00</span></p>
+							</div>
+							<div class="header-logo">
+								<a href="#">
+									<picture>
+										<source media="(max-width: 460px)" srcset="../../images/logo/logo@152.png 152w, ../../images/logo/logo@228.png 228w, ../../images/logo/logo@304.png 304w, ../../images/logo/logo@456.png 456w" /><img src="../../images/logo/logo@210.png 210w" width="210" srcset="../../images/logo/logo@315.png 315w, ../../images/logo/logo@420.png 420w, ../../images/logo/logo@630.png 630w" alt="web2book" />
+									</picture>
+								</a>
+							</div>
+							<nav class="header-autorization">
+								<ul class="clearfix">
+									<li class="header-autorization-item header-autorization-item--search">
+										<a href="/" class="header-autorization__search "></a>
+									</li>
+									<li class="header-autorization-item header-autorization-item--profile"><a href="/" class="header-autorization__profile sprite_icon-lock">Личный кабинет</a></li>
+									<li class="header-autorization-item header-autorization-item--registration"><a href="/" class="header-autorization__registration ">Регистрация</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="header-menu-bar">
+							<div class="header-menu__open">
+								<button><span>&#8943;</span></button>
+							</div>
+							<nav class="header-menu">
+								<ul class="clearfix header-menu--lvl0">
+									<li class="header-menu__item header-menu__item--active "><a href="/" class="header-menu__item-name"><span>Каталог продукции</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Онлайн издательство</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>Оперативная печать</span></a>
+										<ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+										</ul>
+									</li>
+									<li class="header-menu__item  "><a href="calculator/calculator.html" class="header-menu__item-name"><span>Калькулятор стоимости</span></a></li>
+									<li class="header-menu__item  "><a href="/" class="header-menu__item-name"><span>Полезно знать</span></a></li>
+									<li class="header-menu__item  header-menu__item--next"><a href="/" class="header-menu__item-name"><span>&#8943;</span></a>
+										<ul class="menu_inner menu_inner--lvl1 header-menu_inner header-menu--lvl1">
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Каталог продукции</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Онлайн издательство</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a>
+																<ul class="menu_inner menu_inner--lvl4 header-menu_inner header-menu--lvl4">
+																	<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">vip</a></li>
+																	<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">reg</a></li>
+																</ul>
+															</li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="calculator/calculator.html" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Калькулятор стоимости</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Полезно знать</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Контакты</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Оперативная печать</a>
+												<ul class="menu_inner menu_inner--lvl2 header-menu_inner header-menu--lvl2">
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Книга малыми тиражами</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Печать брошюр</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item header-menu__item--next menu_inner__item--next"><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Корпоративная продукция</a>
+														<ul class="menu_inner menu_inner--lvl3 header-menu_inner header-menu--lvl3">
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Фирменные бланки</a></li>
+															<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Конверты</a></li>
+														</ul>
+													</li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Продукция для записей</a></li>
+													<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Многолистовая продукция</a></li>
+												</ul>
+											</li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">О компании</a></li>
+											<li class="header-menu__item menu_inner__item header-menu_inner__item "><a href="/" class="header-menu__item-name menu_inner__item-name header-menu_inner__item-name">Вакансии</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<div class="header-cart"></div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="online-lib__main">
+				<div class="container container--main clearfix">
+					<div class="offers offers--online-lib">
+						<input type="radio" name="offers-slider" id="offers-slider--services" checked class="offers-slider__input">
+						<input type="radio" name="offers-slider" id="offers-slider--products" class="offers-slider__input">
+						<input type="radio" name="offers-slider" id="offers-slider--skreplenie" class="offers-slider__input">
+						<div class="offers-title clearfix">
+							<p class="offers-title__text">Мы предлагаем:</p>
+							<div class="offers-slider__controls">
+								<label for="offers-slider--services">Наши услуги</label>
+								<label for="offers-slider--products">Наша продукция</label>
+								<label for="offers-slider--skreplenie">Типы скрепления</label>
+							</div>
+						</div>
+						<div class="offers-slider__box">
+							<div class="offers-slider__inner">
+								<div class="clearfix offers-slider__item offers-services">
+									<div class="offers-item-slider offers-item-slider--services">
+										<div class="offers-item__box viewport offers-services__box">
+											<div class="offers-item__inner clearfix overview offers-services__inner">
+												<div class="offers-item__item offers-services__item offers-services__value">
+													<div class="offers-item__img offers-services__img">
+														<picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="value" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Калькулятор стоимости</h3>
+													<p class="offers-item__text">Рассчитайте стоимость печати</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__cover">
+													<div class="offers-item__img offers-services__img">
+														<picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="cover" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Раскладка обложки</h3>
+													<p class="offers-item__text">Скачать технические шаблоны обложки</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__width">
+													<div class="offers-item__img offers-services__img">
+														<picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="width" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Калькулятор толщины</h3>
+													<p class="offers-item__text">Толщина корешка при количестве полос</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__profile">
+													<div class="offers-item__img offers-services__img">
+														<picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="profile" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Личный кабинет</h3>
+													<p class="offers-item__text">Работа с файлами и проектами</p>
+												</div>
+												<div class="offers-item__item offers-services__item offers-services__lib">
+													<div class="offers-item__img offers-services__img">
+														<picture><img src="../../images/offers/services/offers-services@2400.png 2400w" width="2400" srcset="../../images/offers/services/offers-services@3600.png 3600w, ../../images/offers/services/offers-services@4800.png 4800w, ../../images/offers/services/offers-services@7200.png 7200w" alt="lib" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Онлайн библиотека</h3>
+													<p class="offers-item__text">Публикуйте свои книги и получайте с них прибыль</p>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-services__box--pops">
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__value--pops">
+												<p class="offers-item__title offers-item__title--pops">Калькулятор стоимости</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__cover--pops">
+												<p class="offers-item__title offers-item__title--pops">Раскладка обложки</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__width--pops">
+												<p class="offers-item__title offers-item__title--pops">Калькулятор толщины</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__profile--pops">
+												<p class="offers-item__title offers-item__title--pops">Личный кабинет</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+											<div class="offers-item__item--pops offers-services__item--pops offers-services__lib--pops">
+												<p class="offers-item__title offers-item__title--pops">Онлайн библиотека</p>
+												<p class="offers-item__text offers-item__text--pops">Мы не требуем обязательной верстки альбомов в нашей программе. Если Вам привычней и удобней пользоваться другими программами (в данном случае Photoshop), то продолжайте им пользоваться и создавать альбомы так, как Вы привыкли.</p>
+												<p class="offers-item__text offers-item__text--pops">Однако Вам следует учитывать, что полученные от Вас файлы (в формате JPG) будут собираться нашими сотрудниками с использованием нашей программы. Соответственно данный раздел предназначен для того, что бы и Вам и нам было удобней работать и при этом мы смогли бы</p>
+											</div>
+										</div>
+										<div class="offers-item__scroll scrollbar offers-services__scroll">
+											<div class="offers-item__scroll_bar track offers-services__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-services__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix offers-slider__item offers-products">
+									<div class="offers-item-slider offers-item-slider--products">
+										<div class="offers-item__box viewport offers-products__box">
+											<div class="offers-item__inner clearfix overview offers-products__inner">
+												<div class="offers-item__item offers-products__item offers-products__booklet">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="booklet" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Буклеты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__notepad">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="notepad" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Блокноты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__report">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="report" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Отчеты</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__album">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="album" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Альбомы</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__magazine">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="magazine" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Журналы</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__encyclopedia">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="encyclopedia" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Энциклопедии</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__catalog">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="catalog" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Каталоги</h3>
+												</div>
+												<div class="offers-item__item offers-products__item offers-products__instruction">
+													<div class="offers-item__img offers-products__img">
+														<picture><img src="../../images/offers/products/offers-products@3200.png 3200w" width="3200" srcset="../../images/offers/products/offers-products@4800.png 4800w, ../../images/offers/products/offers-products@6400.png 6400w, ../../images/offers/products/offers-products@9600.png 9600w" alt="instruction" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Инструкции</h3>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-products__box--pops">
+										</div>
+										<div class="offers-item__scroll scrollbar offers-products__scroll">
+											<div class="offers-item__scroll_bar track offers-products__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-products__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+									<div class="offers-products__info">
+										<h4 class="offers-products__info-title">Печать по требованию</h4>
+										<p class="offers-products__info-text">Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...Применяется для «быстрых» тиражей, под оперативные задачи Вашего бизнеса. Скоростное выполнение возможно с использованием цифрового оборудования премиум-класса. Если Вам нужно отличное...</p><a href="/" class="offers-products__info-more">Узнать больше</a>
+									</div>
+								</div>
+								<div class="clearfix offers-slider__item offers-skreplenie">
+									<div class="offers-item-slider offers-item-slider--skreplenie">
+										<div class="offers-item__box viewport offers-skreplenie__box">
+											<div class="offers-item__inner clearfix overview offers-skreplenie__inner">
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__spiral">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="spiral" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Spiral</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__twin_loop">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="twin_loop" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Twin Loop Wire</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__comb">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="comb" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Comb</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__ring">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="ring" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Ring</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__tape">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="tape" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Tape</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__velo">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="velo" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Velo</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__saddle">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="saddle" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Saddle Stitch</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__perfect">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="perfect" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Perfect</h3>
+												</div>
+												<div class="offers-item__item offers-skreplenie__item offers-skreplenie__stapled">
+													<div class="offers-item__img offers-skreplenie__img">
+														<picture><img src="../../images/offers/skreplenie/offers-skreplenie@2432.png 2432w" width="2432" srcset="../../images/offers/skreplenie/offers-skreplenie@3648.png 3648w, ../../images/offers/skreplenie/offers-skreplenie@4864.png 4864w, ../../images/offers/skreplenie/offers-skreplenie@7296.png 7296w" alt="stapled" />
+														</picture>
+													</div>
+													<h3 class="offers-item__title">Stapled</h3>
+												</div>
+											</div>
+										</div>
+										<div class="offers-item__box--pops clearfix offers-skreplenie__box--pops">
+										</div>
+										<div class="offers-item__scroll scrollbar offers-skreplenie__scroll">
+											<div class="offers-item__scroll_bar track offers-skreplenie__scroll_bar">
+												<div class="offers-item__scroll_control thumb offers-skreplenie__scroll_control"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<header class="clearfix online-lib__header">
+						<div class="online-lib__header-logo">
+							<a href="#" class="online-lib__header-logo__img">
+								<picture><img src="../../images/online-lib/logo/online-lib-logo@66.png 66w" width="66" srcset="../../images/online-lib/logo/online-lib-logo@99.png 99w, ../../images/online-lib/logo/online-lib-logo@132.png 132w, ../../images/online-lib/logo/online-lib-logo@198.png 198w" alt="Online libruary" />
+								</picture>
+							</a>
+							<p class="online-lib__header-logo__text"><span class="online-lib__header-logo__text--main">Онлайн библиотека</span><span class="online-lib__header-logo__text--sub">Web2Book technology</span></p>
+						</div>
+						<div class="online-lib__header-right-side"><img src="../../images/online-lib/common/header-right.png" alt=""></div>
+					</header>
+					<aside class="column--left">
+						<!--include ../blocks/right-column/right-column-->
+						<nav class="online-lib-left">
+							<ul class="online-lib-left-menu">
+								<p class="online-lib-left-menu__title">Книги</p>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Бизнес</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Детская литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Журналы, периодика</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Иностранная литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Искусство. Религия</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Компьютерная литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Красота, здоровье, секс</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Научная литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Подарочные издания</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Право</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Семья. Быт. Досуг</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Спорт. Туризм. Карты и атласы</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Универсальная справочная литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Учебная литература: подготовка к школе, школа, ВУЗ</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Художественная литература</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Эзотерика. Парапсихология. Тайны</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Прочие издания</a></li>
+							</ul>
+							<ul class="online-lib-left-menu">
+								<p class="online-lib-left-menu__title">Журналы</p>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Научные</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Развлекательные</a></li>
+								<li class="online-lib-left-menu__item"><a href="#" class="online-lib-left-menu__item-name">Музыкальные</a></li>
+							</ul>
+						</nav>
+					</aside>
+					<div class="column--central column--central-left"></div>
+				</div>
+			</main>
+			<div class="footer-wrapper sprite_icon-footer-clip--left sprite_icon-footer-clip--right">
+				<footer class="footer">
+					<div class="footer-parts clearfix">
+						<nav class="footer-menu__block">
+							<ul class="footer-menu">
+								<li class="footer__title footer-menu__item footer-menu__item--profile"><a href="/" class="footer-menu__item-name sprite_icon-lock--red">Личный кабинет</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Проекты</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Финансы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Документы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Аккаунт</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корзина(<span class="footer-menu__cart">0</span>)</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item footer-menu__item--home"><a href="/" class="footer-menu__item-name sprite_icon-home">На главную</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">О проекте</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Форум</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Как нас найти</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Написать нам</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Карта сайта</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Онлайн издательство</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Издать книгу</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Онлайн полиграфия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Архив изданий</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Оперативная печать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Продукция для записей</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Многолистовая продукция</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Корпоративная продукция</a>
+										</li>
+									</ul>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Калькулятор стоимости</a>
+								</li>
+								<li class="footer__title footer-menu__item "><a href="/" class="footer-menu__item-name ">Полезно знать</a>
+									<ul class="footer-menu_sub">
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Вопросы и ответы</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Энциклопедия</a>
+										</li>
+										<li class="footer-menu__item"><a href="/" class="footer-menu__item-name">Новости</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-parts clearfix">
+						<div class="footer-phone">
+							<div class="footer__title">Телефон</div>
+							<p class="footer__block"><span class="footer-phone__number">(495)<strong>223-92-00</strong></span><a href="/" class="footer-phone__recall sprite_icon-mobile">Перезвоните мне</a></p>
+						</div>
+						<div class="footer-pay">
+							<div class="footer__title">Принимаем к оплате</div>
+							<div class="footer__block">
+								<a href="/" class="footer-pay__item footer-pay__item--maestro">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="maestro" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--mastercard">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="mastercard" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--visa">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="visa" />
+									</picture>
+								</a>
+								<div class="footer-pay__item-row"></div>
+								<a href="/" class="footer-pay__item footer-pay__item--paypal">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="paypal" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--webmoney">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="webmoney" />
+									</picture>
+								</a>
+								<a href="/" class="footer-pay__item footer-pay__item--qiwi">
+									<picture>
+										<source media="(max-width: 650px)" srcset="../../images/footer/pay/footer-pay@540.png 540w, ../../images/footer/pay/footer-pay@810.png 810w, ../../images/footer/pay/footer-pay@1080.png 1080w, ../../images/footer/pay/footer-pay@1620.png 1620w" /><img src="../../images/footer/pay/footer-pay@768.png 768w" width="768" srcset="../../images/footer/pay/footer-pay@1152.png 1152w, ../../images/footer/pay/footer-pay@1536.png 1536w, ../../images/footer/pay/footer-pay@2304.png 2304w" alt="qiwi" />
+									</picture>
+								</a>
+							</div>
+						</div>
+						<div class="footer-contacts">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__block">
+								<p class="footer-contacts__item footer-contacts__item--company sprite_icon-company">ЗАО “Новые Печатные Технологии”
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--adress sprite_icon-adress">г. Москва 2-й Котляковский переулок, д.18
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--phone sprite_icon-phone">(495) 223-92-00
+								</p>
+								<p class="footer-contacts__item footer-contacts__item--mail"><a href="mailto: info@web2book.ru" class="sprite_icon-mail">info@web2book.ru</a><a href="mailto: sale@web2book.ru" class="sprite_icon-mail">sale@web2book.ru</a>
+								</p>
+							</div>
+						</div>
+						<div class="footer-qr">
+							<div class="footer__title">QR-код</div>
+							<div class="footer__block">
+								<picture><img src="../../images/footer/qr-code/qr-code@88.jpg 88w" width="88" srcset="../../images/footer/qr-code/qr-code@132.jpg 132w, ../../images/footer/qr-code/qr-code@176.jpg 176w, ../../images/footer/qr-code/qr-code@264.jpg 264w" alt="qr-code" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<p class="footer-copyright">© 2010—2013 <a href="/">web2book.ru </a>Все права защищены</p>
+			</div>
+		</div><a href="#" class="scrollTop">Наверх</a>
+	</body>
+	<script src="../../scripts/common.js"></script>
+	<script src="../../scripts/scrolls-index.js"></script>
 </html>
