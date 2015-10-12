@@ -52,9 +52,9 @@ mixin faq_content(name)
 mixin faq_more(name, items)
 	div(class = name)
 		p.title.title--pop Похожие темы:
-		ul.list__items.list--reset__items
+		ul.list__items.list--style__items
 			each item in items
-				li.list__item.list--reset__item.list__item--arrow
+				li.list__item.list--style__item.list__item--arrow
 					a.list__item-name.link.link--hover--line(href = '#')=item
 
 .popup.faq
