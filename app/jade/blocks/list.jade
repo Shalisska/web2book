@@ -1,0 +1,4 @@
+mixin list_reset_marg(name, items)
+	ul.list__items.desc.desc--marg(class = name + '__items')
+		each item in items
+			li.list__item(class = name + '__item')=item

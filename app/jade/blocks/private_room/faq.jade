@@ -1,6 +1,10 @@
+include ../menu/menu
+include ../keywords
+include ../list
+
 mixin faq_header(name)
 	.clearfix(class = name)
-		div(class = name + '__title') Справка по Web2Book
+		div.title.title--pop.title--pop--grand Справка по Web2Book
 		div(class = name + '__info')
 			div(class = name + '__phone')
 				span(class = name + '__phone-text') Телефон Тех.поддержки
@@ -9,21 +13,8 @@ mixin faq_header(name)
 				input.search__input(type = 'text' placeholder = 'Поиск по справке')
 				button.search__btn.sprite_icon-my_files_search
 
-mixin faq_menu(name, items)
-	nav(class = name)
-		ul(class = name + '__items')
-			each item, i in items
-				-var active_class = ''
-				if i === 2
-					-active_class = ' ' + name + '__item--active'
-				li(class = name + '__item' + active_class)
-					a(class = name + '__item-name')
-						=item.name + ' ('
-						span(class = name + '__item--num')=item.num
-						| )
-
 mixin faq_main(name)
-	h3(class = name + '__title')
+	h3.title.title--pop Выбор корешка обложки и типов скрепления
 	a.btn.btn__sprite(class = name + '__btn--back')
 	div.scroller(class = name + '-scroller')
 		.viewport(class = name + '-scroller__viewport')
@@ -32,62 +23,47 @@ mixin faq_main(name)
 		.scrollbar(class = name + '-scroller__scrollbar')
 			.track(class = name + '-scroller__track')
 				.thumb(class = name + '__thumb')
-	+faq_more(name + more, [
+	+faq_more(name + '-more', [
 		'Принцип заполнения граф в калькуляции проекта',
 		'Генерация QR кода',
 		'Отправка менеждеру резыльтаты изменения калькуляции'
 	])
 
 mixin faq_content(name)
-	+faq_keywords(name + '-keywords', ['Корешок обложки', 'тип скрепления'])
-	p(class = name + '-desc') Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.
-	p(class = name + '-desc') *Оператор мобильной связи может взимать плату за трафик.
-	p(class = name + '-desc') Чтобы отправить файл, выполните следующие действия:
-	+faq_list(name + '-list', [
+	+keywords('keywords', ['Корешок обложки', 'тип скрепления'])
+	p.desc.desc--marg Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.
+	p.desc.desc--marg *Оператор мобильной связи может взимать плату за трафик.
+	p.desc.desc--marg Чтобы отправить файл, выполните следующие действия:
+	+list_reset_marg('list--reset', [
 		'Войдите в Skype.',
 		'Выберите вкладку Контакты.',
 		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
 		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
 	])
-	p(class = name + '-desc') Чтобы принять файл, выполните следующие действия:
-	+faq_list(name + '-list', [
+	p.desc.desc--marg Чтобы принять файл, выполните следующие действия:
+	+list_reset_marg('list--reset', [
 		'Войдите в Skype.',
 		'Выберите вкладку Контакты.',
 		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
 		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
 	])
-	p(class = name + '-desc') Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.
-
-mixin faq_keywords(name, words)
-	div(class = name)
-		span(class = name + '__text')
-		ul.clearfix(class = name + '__items')
-			each word, i in words
-				li(class = name + '__item')
-					a(class = name + '__item-name' href = '#')=word
-					if i !== (words.length - 1)
-						| ,
-
-mixin faq_list(name, items)
-	ul(class = name + '__items')
-		each item in items
-			li(class = name + '__item')=item
+	p.desc.desc--marg Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.
 
 mixin faq_more(name, items)
 	div(class = name)
-		p(class = name + '__title')
-		ul(class = name + '__items')
+		p.title.title--pop Похожие темы:
+		ul.list__items.list--reset__items
 			each item in items
-				li(class = name + '__item')
-					a(class = name + '__item-name' href = '#')=item
+				li.list__item.list--reset__item.list__item--arrow
+					a.list__item-name.link.link--hover--line(href = '#')=item
 
 .popup.faq
 	p.popup__title FAQ
 	a.popup__close.sprite_icon-close--white(href='#')
-	.faq-block
+	.faq-block.clearfix
 		+faq_header('faq-header')
 		aside.faq-sidebar
-			+faq_menu('faq-menu', [{
+			+faq_menu('vert--private', 1, [{
 				name: 'Управление файлами',
 				num: '12'
 			}, {

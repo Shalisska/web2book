@@ -1,0 +1,9 @@
+mixin keywords(name, words)
+	div(class = name)
+		span(class = name + '__name') Ключевые слова:
+		ul.clearfix(class = name + '__items')
+			each word, i in words
+				li(class = name + '__item')
+					a.link.link--hover--line(class = name + '__item-name' href = '#')=word
+					if i !== (words.length - 1)
+						| ,
