@@ -71,10 +71,53 @@
 	}
 	
 	&-main {
+		position: relative;
 		float: right;
 		padding: 0.72em;
+		padding-bottom: 6em;
 		width: (100% - 33%);
+		min-height: 54em;
 		background: #f9f9f9;
+		
+		&__header {
+			margin-bottom: 1em;
+			
+			.title {
+				margin-top: 0.4em;
+				margin-right: 90px;
+			}
+		}
+		
+		&__block {
+			padding: 0.5em 0;
+			border-top: 1px solid #ccc;
+		}
+	}
+	
+	&__btn_prev {
+		position: absolute;
+		right: 0.72em;
+		
+		&_top {top: 0.9em;}
+		&_bottom {bottom: 0.72em;}
+	}
+	
+	&-list {
+		margin-top: -0.5em;
+		
+		.list__item {
+			margin-bottom: 0;
+			border-bottom: 1px dashed #aeaeae;
+
+			&:active, &:hover {background: #e1e3e6;}
+			
+			&:before {top: 1.3em;}
+			
+			&-name {
+				display: block;
+				padding: 1em 0 0.9em;
+			}
+		}
 	}
 }
 

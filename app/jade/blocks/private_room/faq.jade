@@ -1,83 +1,40 @@
-include ../menu/menu
-include ../keywords
-include ../list
+extends faq_templ
 
-mixin faq_header(name)
-	.clearfix(class = name)
-		div.title.title--pop.title--pop--grand Справка по Web2Book
-		div(class = name + '__info')
-			div(class = name + '__phone')
-				span(class = name + '__phone-text') Телефон Тех.поддержки
-				span(class = name + '__phone-num') (495) 223-92-00
-			form.search.clearfix(class = name + '__search' action = '/' method = 'get')
-				input.search__input(type = 'text' placeholder = 'Поиск по справке')
-				button.search__btn.sprite_icon-my_files_search
-
-mixin faq_main(name)
-	h3.title.title--pop Выбор корешка обложки и типов скрепления
-	a.btn.btn__sprite(class = name + '__btn--back')
-	div.scroller(class = name + '-scroller')
-		.viewport(class = name + '-scroller__viewport')
-			.overview(class = name + '-scroller__overview')
-				+faq_content(name)
-		.scrollbar(class = name + '-scroller__scrollbar')
-			.track(class = name + '-scroller__track')
-				.thumb(class = name + '__thumb')
-	+faq_more(name + '-more', [
-		'Принцип заполнения граф в калькуляции проекта',
-		'Генерация QR кода',
-		'Отправка менеждеру резыльтаты изменения калькуляции'
-	])
-
-mixin faq_content(name)
-	+keywords('keywords', ['Корешок обложки', 'тип скрепления'])
-	p.desc.desc--marg Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.
-	p.desc.desc--marg *Оператор мобильной связи может взимать плату за трафик.
-	p.desc.desc--marg Чтобы отправить файл, выполните следующие действия:
-	+list_reset_marg('list--reset', [
-		'Войдите в Skype.',
-		'Выберите вкладку Контакты.',
-		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
-		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
-	])
-	p.desc.desc--marg Чтобы принять файл, выполните следующие действия:
-	+list_reset_marg('list--reset', [
-		'Войдите в Skype.',
-		'Выберите вкладку Контакты.',
-		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
-		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
-	])
-	p.desc.desc--marg Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.
-
-mixin faq_more(name, items)
+mixin faq_list(name, items)
 	div(class = name)
-		p.title.title--pop Похожие темы:
 		ul.list__items.list--style__items
 			each item in items
 				li.list__item.list--style__item.list__item--arrow
 					a.list__item-name.link.link--hover--line(href = '#')=item
+					
+mixin faq_nav_page(name)
+	.nav-page.nav-page_faq
+		.nav-page__controls.nav-page_faq__controls.clearfix
+			button&attributes({'class': [name + '__btn', name + '__btn_prev']})
+			ul&attributes({'class': [name + '__items', name + '_faq__items', 'clearfix']})
+				-var i = 1
+				while i < 5
+					li&attributes({'class': [name + '__item', name + '_faq__item']})(class={'active': i === 1})
+						a&attributes({'class': [name + '__item-name', name + '_faq__item-name']})(href = '#')=i++
+			button&attributes({'class': [name + '__btn', name + '__btn_next']})
+		.nav-page__sign.nav-page_faq__sign
+			span Показаны результаты с
+			span.nav-page__sign-range.nav-page_faq__sign-range 1 по 10
+			span.nav-page__sign-summ.nav-page_faq__sign-summ (всего 43)
 
-.popup.faq
-	p.popup__title FAQ
-	a.popup__close.sprite_icon-close--white(href='#')
-	.faq-block.clearfix
-		+faq_header('faq-header')
-		aside.faq-sidebar
-			+faq_menu('vert_private', 1, [{
-				name: 'Управление файлами',
-				num: '12'
-			}, {
-				name: 'Настройка аккаунта',
-				num: '22'
-			}, {
-				name: 'Калькуляция проекта',
-				num: '5'
-			}, {
-				name: 'Оформление заказа',
-				num: '9'
-			}, {
-				name: 'Оплата',
-				num: '17'
-			}])
-		.faq-main
-			+faq_main('faq')
+block faq_main
+	.faq-main__header
+		.title.title_pop Калькуляция проекта
+	.faq-main__block
+		+faq_list('faq-list', [
+			'Принцип заполнения граф в калькуляции проекта',
+			'Форматы поддерживающие редактирование в обложке, так же общей текстовой части с элементами тиснения',
+			'Выбор корешка обложки и типов скрепления',
+			'Генерация QR кода',
+			'Отправка менеждеру резыльтаты изменения калькуляции'
+		])
+		+faq_nav_page('nav-page')
+
+
+
+

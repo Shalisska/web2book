@@ -104,6 +104,12 @@ var sprite_form_arr = [{
 		width: 0,
 		retina: 10
 	}]
+}, {
+	img_dir: 'form/sprite/btn_gray_prev',
+	dest: [{
+		width: 0,
+		retina: 76
+	}]
 }];
 
 var sprite_arr = [{

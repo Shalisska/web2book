@@ -432,8 +432,12 @@ function template_name(sprite_name, data, templates, r, w) {
   } else {
     if(item_name.slice(item_name.length - hover.length) == hover) {
       item_name = item_name.slice(0, (item_name.length - hover.length)) + ':hover';
+    } else if(item_name.slice(item_name.length - '_hover'.length) == '_hover') {
+      item_name = item_name.slice(0, (item_name.length - '_hover'.length)) + ':hover';
     } else if(item_name.slice(item_name.length - active.length) == active) {
       item_name = item_name.slice(0, (item_name.length - active.length)) + ':active';
+    } else if(item_name.slice(item_name.length - '_active'.length) == '_active') {
+      item_name = item_name.slice(0, (item_name.length - '_active'.length)) + ':active';
     }
     name = '.sprite_icon-' + item_name;
   };
@@ -501,4 +505,4 @@ var sprite_build = sprite_create(images);
 var sprite_form = sprite_create(images_form);
 var sprite_private = sprite_create(images_private);
 
-module.exports = sprite_private;
+module.exports = sprite_form;

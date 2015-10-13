@@ -429,6 +429,7 @@ $.fn.emptyRows = function(opts) {
 })(jQuery, window);
 
 //личный кабинет-работа с файлами
+;$(document).ready(function() {
 var val = 20;
 var slider = $('.my_files-docs__slider');
 var cont;
@@ -474,6 +475,7 @@ cont = $(this).find('.my_files-docs__body-wrap > .my_files-docs__body');
 			});
 		};
 	};
+});
 });
 
 //cкролл архив
@@ -521,4 +523,20 @@ cont = $(this).find('.my_files-docs__body-wrap > .my_files-docs__body');
 		e.preventDefault();
 		$('.private_room-archive').toggle();
 	});
+});
+
+;$(document).ready(function() {
+	var slider = $('.scroller_vert_faq');
+
+	function scroll(slide) {
+	  slide.tinyscrollbar({
+		axis: "y"
+	  ,	thumbSize: 120
+	  });
+
+	  var scrollbar = slide.data("plugin_tinyscrollbar")
+	  scrollbar.update();
+	};
+
+	scroll(slider);
 });

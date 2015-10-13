@@ -1,0 +1,52 @@
+extends faq_templ
+
+mixin faq_main(name)
+	.faq-main__header
+		h3.title.title_pop Выбор корешка обложки и типов скрепления
+		a.btn.btn_gray_arrow.btn_gray_arrow_prev.sprite_form.sprite_icon-btn_gray_prev(class = name + '__btn_prev' + ' ' + name + '__btn_prev_top') Назад
+	.faq-main__block
+		div.scroller.scroller_vert(class = 'scroller_vert_' + name)
+			.viewport.scroller__viewport.scroller_vert__viewport(class = 'scroller_vert_' + name + '__viewport')
+				.overview.scroller__overview.scroller_vert__overview(class = 'scroller_vert_' + name + '__overview')
+					+faq_content(name)
+			.scrollbar.scroller__scrollbar.scroller_vert__scrollbar(class = 'scroller_vert_' + name + '__scrollbar')
+				.track.scroller__track.scroller_vert__track(class = 'scroller_vert_' + name + '__track')
+					.thumb.scroller__thumb.scroller_vert__thumb(class = 'scroller_vert_' + name + '__thumb')
+	.faq-main__block
+		+faq_more(name + '-more', [
+			'Принцип заполнения граф в калькуляции проекта',
+			'Генерация QR кода',
+			'Отправка менеждеру результатов изменения калькуляции'
+		])
+	a.btn.btn_gray_arrow.btn_gray_arrow_prev.sprite_form.sprite_icon-btn_gray_prev(class = name + '__btn_prev' + ' ' + name + '__btn_prev_bottom') Назад
+
+mixin faq_content(name)
+	+keywords('keywords', ['Корешок обложки', 'тип скрепления'])
+	p.desc.desc--marg Используя Skype для телефонов Android, вы можете бесплатно* отправлять фотографии, видео и другие файлы любому абоненту Skype, а также принимать файлы от других абонентов и сохранять их.
+	p.desc.desc--marg *Оператор мобильной связи может взимать плату за трафик.
+	p.desc.desc--marg Чтобы отправить файл, выполните следующие действия:
+	+list_reset_marg('list--reset', [
+		'Войдите в Skype.',
+		'Выберите вкладку Контакты.',
+		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
+		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
+	])
+	p.desc.desc--marg Чтобы принять файл, выполните следующие действия:
+	+list_reset_marg('list--reset', [
+		'Войдите в Skype.',
+		'Выберите вкладку Контакты.',
+		'Выберите абонента, которому хотите отправить файл, и выберите Дополнительно > Отправить файл.',
+		'Выберите приложение, которое должно использоваться для поиска или создания файла (например, диспетчер файлов, галерея или средство записи звука). Файл будет отправлен, как только получатель примет передачу.'
+	])
+	p.desc.desc--marg Запрос на прием файла, отправленного контактом, будет отображаться там же, где история звонков и поступившие голосовые и мгновенные сообщения.
+
+mixin faq_more(name, items)
+	div(class = name)
+		p.title.title_pop Похожие темы:
+		ul.list__items.list--style__items
+			each item in items
+				li.list__item.list--style__item.list__item--arrow
+					a.list__item-name.link.link--hover--line(href = '#')=item
+					
+block faq_main
+	+faq_main('faq')

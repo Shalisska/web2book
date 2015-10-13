@@ -1,0 +1,50 @@
+.scroller {
+	position: relative;
+	
+	&__viewport {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
+	
+	&__overview {
+		position: absolute;
+	}
+	
+	&__scrollbar {
+		position: absolute;
+		z-index: 10;
+	}
+	
+	&__track {position: relative;}
+	&__thumb {position: absolute;}
+	
+	&_vert {
+		
+		&__scrollbar {
+			top: 0;
+			right: 0;
+		}
+		
+		&_faq {
+			height: 29.5em;
+			
+			&__overview {
+				padding: 0 0.7em;
+			}
+			
+			&__scrollbar {
+				width: 3px;
+				background: #ccc;
+			}
+			
+			&__thumb {
+				width: 100%;
+				background: #444;
+				border-radius: 1px;
+			}
+		}
+		
+	}
+	
+}
