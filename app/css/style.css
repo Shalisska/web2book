@@ -5308,7 +5308,7 @@ main {
     display: none;
   }
 }
-.menu--vert--private {
+.menu_vert_private {
   padding-right: 1.45em;
 }
 .menu__items {
@@ -5317,13 +5317,13 @@ main {
   padding: 0;
   padding: 0.7em;
 }
-.menu__items--vert--private {
+.menu__items_vert_private {
   background: #f9f9f9;
 }
-.menu__item--vert--private {
+.menu__item_vert_private {
   margin-bottom: 0.7em;
 }
-.menu__item--vert--private:last-child {
+.menu__item_vert_private:last-child {
   margin-bottom: 0;
 }
 .menu__item-name {
@@ -5340,22 +5340,22 @@ main {
   text-decoration: none;
   color: inherit;
 }
-.menu__item-name--vert--private {
+.menu__item-name_vert_private {
   height: 36px;
   background: #727272;
   color: white;
   border-radius: 2px;
 }
-.menu__item-name--vert--private:hover,
-.menu__item-name--vert--private:active {
+.menu__item-name_vert_private:hover,
+.menu__item-name_vert_private:active {
   color: white;
   text-decoration: underline;
 }
-.menu__item--active--vert--private a {
+.menu__item_active_vert_private a {
   background: #4aaced;
   border-radius: 2px 0 0 2px;
 }
-.menu__item--active--vert--private a:before {
+.menu__item_active_vert_private a:before {
   content: '';
   position: absolute;
   width: 0;
@@ -7347,6 +7347,10 @@ main {
 }
 .list__item--arrow {
   padding-left: 18px;
+  margin-bottom: 1em;
+}
+.list__item--arrow:last-child {
+  margin-bottom: 0;
 }
 .list__item--arrow:before {
   top: 50%;

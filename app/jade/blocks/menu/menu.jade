@@ -1,15 +1,15 @@
 mixin faq_menu(name, id, items)
-	nav.menu(class = 'menu--' + name)
-		ul.menu__items(class = 'menu__items--' + name)
+	nav.menu(class = 'menu_' + name)
+		ul.menu__items(class = 'menu__items_' + name)
 			each item, i in items
 				-var active_class = ''
 				if i === id
-					-active_class = ' ' + 'menu__item--active--' + name
-				li.menu__item(class = 'menu__item--' + name + active_class)
-					a.menu__item-name(class = 'menu__item-name--' + name)
+					-active_class = ' ' + 'menu__item_active_' + name
+				li.menu__item(class = 'menu__item_' + name + active_class)
+					a.menu__item-name(class = 'menu__item-name_' + name)
 						if item.num
 							=item.name + ' ('
-							span(class = 'menu__item--' + name + '-num')=item.num
+							span(class = 'menu__item_' + name + '-num')=item.num
 							| )
 						else
 							=item.name
